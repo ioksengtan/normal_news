@@ -1,0 +1,16 @@
+{
+  "name": "normal-news",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "去偏見新聞：把新聞拆成事實與情緒/立場用語，只留下可查證的部分",
+  "scripts": {
+    "process": "node scripts/process.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
+    "@mozilla/readability": "^0.5.0",
+    "jsdom": "^25.0.0",
+    "rss-parser": "^3.13.0"
+  }
+}

@@ -1,0 +1,4 @@
+[
+  { "source": "範例媒體 B", "articleCount": 1, "avgBiasRatio": 0.34, "isExample": true },
+  { "source": "範例媒體 A", "articleCount": 1, "avgBiasRatio": 0.18, "isExample": true }
+]
