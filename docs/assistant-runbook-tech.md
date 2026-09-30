@@ -4,7 +4,9 @@
 
 這個流程不呼叫模型。摘要由助手自己寫。不要把模型金鑰放進工作流程。
 
-報紙順序是科技．GitHub、科技．Hacker News，然後國際版。GitHub 第一則是頭條。國際版讀 `data/international.json`，目前維持空陣列，頁面顯示「今日國際版尚無新聞」。科技版這份步驟不填國際版。
+報紙順序是科技．GitHub、科技．Hacker News，然後國際版。GitHub 第一則是頭條。國際版讀 `data/international.json`。科技版這份步驟不填國際版。
+
+Lobsters 與 Product Hunt 在 2026-09-30 檢查後不收錄，每天的抓取不要加這兩版。原因寫在 [crawling-policy.md](crawling-policy.md) 的「科技版候選來源」。
 
 ## 每天執行的指令
 

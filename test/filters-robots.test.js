@@ -145,6 +145,23 @@ test('robots.txt 401 and 403 disallow every path; other 4xx still allow', async 
   assert.equal(down.blocked, true);
 });
 
+test('Lobsters allows named search crawlers and disallows everyone else, including the project bot', () => {
+  const lobsters = `
+User-agent: GoogleBot
+Allow: /
+Disallow: /search
+Content-Signal: ai-input=no, ai-train=no, search=yes
+
+User-agent: *
+Crawl-delay: 1
+Disallow: /
+`;
+  const hottest = aiAgentBlocks(lobsters, 'https://lobste.rs/hottest.json');
+  assert.equal(hottest.blocked, true);
+  assert.match(hottest.reason, /\*/);
+  assert.equal(aiAgentBlocks(lobsters, 'https://lobste.rs/rss').blocked, true);
+});
+
 test('robots checks the project agent and the wildcard group, after tracking parameters are removed', () => {
   const aljazeera = `
 User-agent: GPTBot

@@ -2,7 +2,7 @@
 
 公開頁面只顯示我們自己寫的中性標題與摘要，以及「媒體名稱　閱讀原文」連結。不顯示原標題，不刊出被標記的原文，也不做來源排行。
 
-首頁是一份報紙，版面由 `data/sections.json` 決定：科技．GitHub、科技．Hacker News，然後國際版。科技版沒有模型金鑰，步驟見 [docs/assistant-runbook-tech.md](docs/assistant-runbook-tech.md)。國際版每天台北時間 06:48 由助手跑一輪，步驟見 [docs/assistant-runbook.md](docs/assistant-runbook.md)。抓取規範見 [docs/crawling-policy.md](docs/crawling-policy.md)。
+首頁是一份報紙，版面由 `data/sections.json` 決定：科技．GitHub、科技．Hacker News，然後國際版。Lobsters 與 Product Hunt 依抓取規範不收錄，見 [docs/crawling-policy.md](docs/crawling-policy.md)。科技版沒有模型金鑰，步驟見 [docs/assistant-runbook-tech.md](docs/assistant-runbook-tech.md)。國際版每天台北時間 06:48 由助手跑一輪，步驟見 [docs/assistant-runbook.md](docs/assistant-runbook.md)。抓取規範見 [docs/crawling-policy.md](docs/crawling-policy.md)。
 
 ## 國際版來源
 
