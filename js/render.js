@@ -71,7 +71,8 @@ function renderTech(item, lead) {
     ? `<p class="original-title">${escapeHtml(item.title)}</p>`
     : '';
   const meta = item.source === 'hackernews' ? hackerNewsMeta(item) : githubMeta(item);
-  return `<article class="item${lead ? ' is-lead' : ''}" data-source="${escapeHtml(item.source)}">
+  const anchor = /^story-[A-Za-z0-9_-]+$/.test(item.anchor || '') ? ` id="${item.anchor}"` : '';
+  return `<article${anchor} class="item${lead ? ' is-lead' : ''}" data-source="${escapeHtml(item.source)}">
     ${sourceTag(item)}
     <h3>${escapeHtml(title)}</h3>
     ${original}
@@ -124,6 +125,27 @@ function renderFilters(section) {
   return `<div class="source-filters" role="group" aria-label="依來源篩選">${buttons.join('')}</div>`;
 }
 
+function humorUrl(src) {
+  const text = String(src || '');
+  if (!/^data\/humor\/\d{4}-\d{2}-\d{2}\/[A-Za-z0-9][A-Za-z0-9._-]*\.svg$/.test(text)) return '';
+  if (text.split('/').includes('..')) return '';
+  return text;
+}
+
+function renderHumor(section) {
+  const panels = (section.humor || []).map((panel) => {
+    const src = humorUrl(panel.src);
+    if (!src) return '';
+    return `<figure class="humor-panel">
+      <img src="${escapeHtml(src)}" alt="${escapeHtml(panel.alt)}" />
+      <figcaption>${escapeHtml(panel.caption)}</figcaption>
+      <p class="humor-link-line"><a class="humor-link" href="#${escapeHtml(panel.relatedAnchor)}">相關新聞：${escapeHtml(panel.relatedTitle)}</a></p>
+    </figure>`;
+  }).join('');
+  if (!panels) return '';
+  return `<aside class="humor-box" aria-label="今日一笑"><h3>今日一笑</h3>${panels}</aside>`;
+}
+
 function renderGrid(section, items, { lead = false, id = '' } = {}) {
   if (!items.length) return '';
   const columns = section.columns === 3 ? 'cols-3' : 'cols-2';
@@ -147,6 +169,7 @@ export function renderSections(model) {
       ${section.notice ? `<p class="section-notice">${escapeHtml(section.notice)}</p>` : ''}
       ${section.emptyText ? `<p class="empty">${escapeHtml(section.emptyText)}</p>` : ''}
       ${renderGrid(section, section.items, { lead: section.lead })}
+      ${renderHumor(section)}
       ${more}
     </section>`;
   }).join('');
@@ -193,6 +216,9 @@ export function bindPaper(root) {
     };
     section.querySelectorAll('.source-filter, .source-tag').forEach((button) => {
       button.addEventListener('click', () => choose(button.dataset.source || ''));
+    });
+    section.querySelectorAll('.humor-link').forEach((link) => {
+      link.addEventListener('click', () => applySourceFilter(section, ''));
     });
   });
 }

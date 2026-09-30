@@ -142,6 +142,30 @@ test('a section added only in config appears in the paper and the navigation', (
   assert.match(html, /測試標題/);
 });
 
+test('humor sits in its own box and links to the related story', () => {
+  const model = buildPaper({
+    config,
+    issue: {
+      issueNumber: 3,
+      items: [techItem('github', 'octo/lead', { name: 'octo/lead', url: 'https://github.com/octo/lead' })],
+      humor: [{
+        src: 'data/humor/2026-09-30/sweat.svg',
+        alt: '一台流汗的電腦，旁邊是小點。',
+        caption: '背景還在載入。',
+        relatedItemId: 'octo/lead',
+      }],
+    },
+    now,
+  });
+  const html = renderSections(model);
+  assert.match(html, /今日一笑/);
+  assert.match(html, /class="humor-box"/);
+  assert.match(html, /href="#story-octo-lead"/);
+  assert.match(html, /id="story-octo-lead"/);
+  assert.ok(html.indexOf('class="item') < html.indexOf('humor-box'));
+  assert.equal(html.includes('class="diagram"'), false);
+});
+
 test('the public page does not read removed international files', () => {
   const files = ['js/home.js', 'js/paper.js', 'js/render.js', 'index.html'];
   for (const file of files) {

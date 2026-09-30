@@ -3,7 +3,7 @@ import path from 'path';
 import { parseArgs } from './lib/args.js';
 import { readJson } from './lib/jsonio.js';
 import { TECH_SOURCES } from './tech/combine.js';
-import { diagramProblems } from './lib/svg.js';
+import { diagramProblems, humorProblems } from './lib/svg.js';
 
 const USAGE = `用法：npm run validate-data -- [--data-dir data]
 
@@ -86,6 +86,14 @@ function main() {
       })) {
         problems.push(`${label} ${problem}`);
       }
+    }
+    for (const problem of humorProblems({
+      humor: issue.humor,
+      date: issue.date,
+      itemIds: issue.items.map((item) => item.id),
+      dataDir,
+    })) {
+      problems.push(`${issue.date} ${problem}`);
     }
   }
   if (problems.length) throw new Error(problems.join('\n'));

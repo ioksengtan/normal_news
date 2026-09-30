@@ -49,6 +49,13 @@ export function svgContentProblems(text) {
   return problems;
 }
 
+function storedSvgProblems(file, label) {
+  if (!fs.existsSync(file)) return [`找不到${label}檔案`];
+  const size = fs.statSync(file).size;
+  if (size > DIAGRAM_MAX_BYTES) return [`${label}超過 ${DIAGRAM_MAX_BYTES} bytes`];
+  return svgContentProblems(fs.readFileSync(file, 'utf8')).map((problem) => `${label}${problem}`);
+}
+
 export function diagramProblems({ diagram, date, id, dataDir }) {
   if (diagram == null) return [];
   const problems = [];
@@ -69,13 +76,40 @@ export function diagramProblems({ diagram, date, id, dataDir }) {
     problems.push('圖解路徑超出該期目錄');
     return problems;
   }
-  if (!fs.existsSync(file)) {
-    problems.push('找不到圖解檔案');
-    return problems;
-  }
-  const size = fs.statSync(file).size;
-  if (size > DIAGRAM_MAX_BYTES) problems.push(`圖解超過 ${DIAGRAM_MAX_BYTES} bytes`);
-  const text = fs.readFileSync(file, 'utf8');
-  for (const problem of svgContentProblems(text)) problems.push(`圖解${problem}`);
+  problems.push(...storedSvgProblems(file, '圖解'));
+  return problems;
+}
+
+export function humorProblems({ humor, date, itemIds, dataDir }) {
+  if (humor == null) return [];
+  if (!Array.isArray(humor)) return ['今日一笑必須是陣列'];
+  if (humor.length > 2) return ['今日一笑最多兩則'];
+  const ids = new Set((itemIds || []).map((id) => String(id)));
+  const seen = new Set();
+  const problems = [];
+  humor.forEach((panel, index) => {
+    const label = `今日一笑第 ${index + 1} 則`;
+    if (!panel || typeof panel !== 'object' || Array.isArray(panel)) {
+      problems.push(`${label}必須是物件`);
+      return;
+    }
+    const src = String(panel.src || '');
+    if (!new RegExp(`^data/humor/${date}/[A-Za-z0-9][A-Za-z0-9._-]*\\.svg$`).test(src)) {
+      problems.push(`${label}路徑必須在 data/humor/${date}/`);
+      return;
+    }
+    if (seen.has(src)) problems.push(`${label}重複使用同一張圖`);
+    seen.add(src);
+    if (typeof panel.alt !== 'string' || !panel.alt.trim()) problems.push(`${label}缺少 alt`);
+    if (typeof panel.caption !== 'string' || !panel.caption.trim()) problems.push(`${label}缺少 caption`);
+    if (!ids.has(String(panel.relatedItemId))) problems.push(`${label}找不到相關新聞`);
+    const file = path.resolve(dataDir, '..', src);
+    const root = path.resolve(dataDir, 'humor', date);
+    if (file !== root && !file.startsWith(`${root}${path.sep}`)) {
+      problems.push(`${label}路徑超出該期目錄`);
+      return;
+    }
+    problems.push(...storedSvgProblems(file, label));
+  });
   return problems;
 }

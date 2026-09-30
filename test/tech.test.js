@@ -153,6 +153,12 @@ test('ingest requires real summaries and still publishes a failed section', () =
         },
       },
     },
+    humor: [{
+      src: 'data/humor/2026-09-30/sweat.svg',
+      alt: '一台流汗的電腦',
+      caption: '背景還在載入。',
+      relatedItemId: 42,
+    }],
   };
   assert.throws(() => buildIssue({ candidates, summaries, allowPlaceholders: false }), /占位/);
   const { issue, index } = buildIssue({
@@ -169,6 +175,7 @@ test('ingest requires real summaries and still publishes a failed section', () =
   assert.equal(issue.items[0].rank, 0);
   assert.equal(issue.items[0].titleZh.includes('待譯'), true);
   assert.equal(issue.items[0].diagram.caption, '圖說只重複摘要裡的事實。');
+  assert.equal(issue.humor[0].relatedItemId, 42);
   assert.equal(JSON.stringify(issue).includes('raw post'), false);
   assert.equal(issue.sections, undefined);
   assert.equal(index.issues.at(-1).path, 'data/issues/2026-09-30.json');

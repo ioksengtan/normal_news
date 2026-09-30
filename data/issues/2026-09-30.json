@@ -307,5 +307,19 @@
       "sourceLabel": "Hacker News",
       "rank": 9
     }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-09-30/one-plus-one.svg",
+      "alt": "圓頭的小人說 1+1，旁邊疊著算式、二元樹和垃圾回收三個方塊。",
+      "caption": "作業把算式做成二元樹，後來又加上垃圾回收。",
+      "relatedItemId": 49895864
+    },
+    {
+      "src": "data/humor/2026-09-30/background-load.svg",
+      "alt": "一台電腦螢幕上有小點，旁邊滴著一滴汗，對話框寫著背景載入中。",
+      "caption": "瀏覽器在背景載入小行星資料。",
+      "relatedItemId": 49898778
+    }
   ]
 }

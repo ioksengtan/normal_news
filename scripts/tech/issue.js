@@ -69,6 +69,7 @@ export function buildIssue({ candidates, summaries, existingIndex = { issues: []
     sources,
     items,
   };
+  if (Array.isArray(summaries.humor) && summaries.humor.length) issue.humor = summaries.humor;
   const issues = (existingIndex.issues || []).filter((entry) => entry.date !== candidates.date);
   issues.push({
     date: candidates.date,

@@ -24,7 +24,13 @@ function presentTech(item) {
     links: Array.isArray(item.links) ? item.links : [],
     placeholder: item.placeholder === true,
     diagram: presentDiagram(item.diagram),
+    anchor: storyAnchor(item.id),
   };
+}
+
+function storyAnchor(id) {
+  const slug = String(id ?? '').replace(/[^A-Za-z0-9_-]+/g, '-').replace(/^-+|-+$/g, '');
+  return `story-${slug || 'item'}`;
 }
 
 function presentDiagram(diagram) {
@@ -54,9 +60,29 @@ function techSection(section, issue) {
     fallbackNote: githubFallback ? (section.fallbackNote || '') : '',
     notice: placeholder ? '本版摘要尚未由內容長撰寫，以下為占位。' : '',
     items: failed ? [] : items,
+    humor: failed ? [] : presentHumor(issue?.humor, items),
     moreItems: [],
     moreLabel: '',
   };
+}
+
+function presentHumor(humor, items) {
+  if (!Array.isArray(humor)) return [];
+  const byId = new Map(items.map((item) => [String(item.id), item]));
+  return humor.slice(0, 2).flatMap((panel) => {
+    const related = byId.get(String(panel?.relatedItemId));
+    const src = String(panel?.src || '');
+    const alt = String(panel?.alt || '');
+    const caption = String(panel?.caption || '');
+    if (!related || !src || !alt || !caption) return [];
+    return [{
+      src,
+      alt,
+      caption,
+      relatedAnchor: related.anchor,
+      relatedTitle: related.titleZh || related.name || related.title || '相關新聞',
+    }];
+  });
 }
 
 function inlineSection(section) {

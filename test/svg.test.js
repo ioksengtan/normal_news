@@ -4,7 +4,7 @@ import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
-import { DIAGRAM_MAX_BYTES, diagramProblems, svgContentProblems } from '../scripts/lib/svg.js';
+import { DIAGRAM_MAX_BYTES, diagramProblems, humorProblems, svgContentProblems } from '../scripts/lib/svg.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -64,4 +64,38 @@ test('a diagram must sit beside its own item and stay under the size limit', () 
     id: 42,
     dataDir,
   }).some((problem) => /超過/.test(problem)));
+});
+
+test('humor allows at most two original panels tied to a story', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'humor-'));
+  const dataDir = path.join(dir, 'data');
+  const src = 'data/humor/2026-09-30/sweat.svg';
+  fs.mkdirSync(path.dirname(path.join(dir, src)), { recursive: true });
+  fs.writeFileSync(path.join(dir, src), '<svg xmlns="http://www.w3.org/2000/svg"></svg>');
+  const panel = { src, alt: '一台流汗的電腦', caption: '背景還在載入。', relatedItemId: 42 };
+  assert.deepEqual(humorProblems({
+    humor: [panel],
+    date: '2026-09-30',
+    itemIds: [42],
+    dataDir,
+  }), []);
+  assert.ok(humorProblems({
+    humor: [panel, panel, panel],
+    date: '2026-09-30',
+    itemIds: [42],
+    dataDir,
+  }).some((problem) => /最多兩則/.test(problem)));
+  assert.ok(humorProblems({
+    humor: [{ ...panel, relatedItemId: 99 }],
+    date: '2026-09-30',
+    itemIds: [42],
+    dataDir,
+  }).some((problem) => /找不到相關新聞/.test(problem)));
+  fs.writeFileSync(path.join(dir, src), '<svg onload="x"></svg>');
+  assert.ok(humorProblems({
+    humor: [panel],
+    date: '2026-09-30',
+    itemIds: [42],
+    dataDir,
+  }).some((problem) => /事件/.test(problem)));
 });

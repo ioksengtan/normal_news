@@ -5,6 +5,7 @@
   --rule: rgba(28, 25, 21, 0.82);
   --rule-soft: rgba(28, 25, 21, 0.28);
   --max: 1120px;
+  --humor: #efe4c8;
   color-scheme: light dark;
 }
 
@@ -15,6 +16,7 @@
     --muted: #c9c1b3;
     --rule: rgba(244, 240, 230, 0.82);
     --rule-soft: rgba(244, 240, 230, 0.32);
+    --humor: #2c2822;
   }
 }
 
@@ -239,6 +241,49 @@ a { color: inherit; }
   font-size: 13px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+}
+
+.humor-box {
+  margin: 28px 0 8px;
+  padding: 16px 16px 8px;
+  border: 3px double var(--rule);
+  background: var(--humor);
+}
+
+.humor-box h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-align: center;
+}
+
+.humor-panel {
+  margin: 0 0 16px;
+}
+
+.humor-panel img {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 1px dashed var(--rule);
+}
+
+.humor-panel figcaption,
+.humor-link-line {
+  margin: 8px auto 0;
+  max-width: 420px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.humor-link {
+  color: inherit;
+  text-underline-offset: 3px;
 }
 
 .clamp {
