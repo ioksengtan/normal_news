@@ -4,230 +4,322 @@
   "timezone": "Asia/Taipei",
   "publishedAt": "2026-09-30T07:00:00+08:00",
   "fetchedAt": "2026-09-30T02:37:18.634Z",
-  "sections": {
+  "sources": {
     "github": {
       "status": "ok",
       "fallback": false,
-      "error": null,
-      "items": [
-        {
-          "id": "debpalash/VoiceStudio",
-          "name": "debpalash/VoiceStudio",
-          "url": "https://github.com/debpalash/VoiceStudio",
-          "language": "Python",
-          "starsToday": 4758,
-          "stars": 48352,
-          "summary": "VoiceStudio 是一套開源的語音製作軟體，專案說明將它定位為可完全在本機執行、用來替代 ElevenLabs 的工具，功能包括聲音複製、聲音設計、影片配音、語音輸入、語音轉文字與有聲書製作，專案表示支援 646 種語言。它以 Electron 桌面應用程式發布，可安裝在 macOS、Windows 與 Linux，也可用 Docker 部署，預設語音引擎是 k2-fsa/OmniVoice，本機工作流程在使用者自己的硬體上執行，遠端服務為選用。它另提供本機應用程式介面與模型上下文協定伺服器，適合製作配音或旁白的內容創作者，以及想讓代理程式呼叫語音功能的開發者。",
-          "placeholder": false
-        },
-        {
-          "id": "NVIDIA/OpenShell",
-          "name": "NVIDIA/OpenShell",
-          "url": "https://github.com/NVIDIA/OpenShell",
-          "language": "Rust",
-          "starsToday": 990,
-          "stars": 10714,
-          "summary": "OpenShell 是 NVIDIA 以 Apache 2.0 授權釋出的執行環境，讓自主運作的人工智慧代理程式在隔離的沙箱中讀取檔案、安裝套件與呼叫外部服務，同時限制它們能接觸的資料、密鑰與網路。使用者以政策檔宣告每個代理程式可存取的範圍，OpenShell 在作業系統核心層檢查檔案存取、系統呼叫與網路連線，政策變更生效前會以形式化驗證標出新增的存取權限交由人工審核，代理程式也看不到真正的憑證。它支援 Linux、Apple 晶片的 macOS，以及實驗階段的 Windows Linux 子系統，並提供 Python、TypeScript、Go、Rust 開發套件，適合要部署多個代理程式的平台與資訊安全團隊。",
-          "placeholder": false
-        },
-        {
-          "id": "vectorize-io/hindsight",
-          "name": "vectorize-io/hindsight",
-          "url": "https://github.com/vectorize-io/hindsight",
-          "language": "Python",
-          "starsToday": 2575,
-          "stars": 42941,
-          "summary": "Hindsight 是 Vectorize 開發的人工智慧代理程式記憶系統，設計目標不只是讓代理程式回想對話紀錄，而是依過去的經驗調整行為。它把記憶分成世界事實、代理程式自身經驗、由多筆記憶整合出的觀察與心智模型等類型，可用 Docker、pip 或 Kubernetes 部署成伺服器，也可嵌入 Python 程式使用，並能接上 OpenAI、Anthropic、Ollama 等二十五個以上的語言模型供應商。專案說明列出它在 LongMemEval 長期記憶測試的成績，並表示成績已由維吉尼亞理工大學與《華盛頓郵報》的研究合作者重現；適用對象是開發對話或自動化代理程式、需要讓代理程式記住使用者回饋的團隊。",
-          "placeholder": false
-        },
-        {
-          "id": "paperclipai/paperclip",
-          "name": "paperclipai/paperclip",
-          "url": "https://github.com/paperclipai/paperclip",
-          "language": "TypeScript",
-          "starsToday": 2458,
-          "stars": 94550,
-          "summary": "Paperclip 是一套開源的人工智慧代理程式協作管理軟體，由 Node.js 伺服器與 React 網頁介面組成，使用者可以設定目標、指派代理程式，並在同一個儀表板追蹤工作進度與費用。它以公司組織的方式管理代理程式，提供組織圖、角色與權限、每個代理程式的每月預算上限（達到上限即停止）、任務審核關卡、工具呼叫追蹤與不可修改的稽核紀錄，一次部署可管理多個資料互相隔離的組織。專案說明列出可接入的代理程式包括 OpenClaw、Claude Code、Codex、Cursor，以及能接收定時喚醒訊號的命令列腳本或網路服務，適合同時執行多個代理程式、需要控管成本與稽核工作的團隊。",
-          "placeholder": false
-        },
-        {
-          "id": "t8y2/dbx",
-          "name": "t8y2/dbx",
-          "url": "https://github.com/t8y2/dbx",
-          "language": "Rust",
-          "starsToday": 232,
-          "stars": 22176,
-          "summary": "DBX 是一套跨平台的資料庫管理工具，安裝檔約 25 百萬位元組，專案表示支援 MySQL、PostgreSQL、SQLite、Redis、MongoDB、達夢等一百種以上資料庫，另有 Kafka、RabbitMQ 等訊息佇列的管理介面。它提供 macOS、Windows、Linux 桌面版，以及 Docker 自架版、網頁版與命令列工具，內建查詢編輯器、資料表格檢視與人工智慧助手，可用自然語言產生查詢語句並在執行前做安全檢查，也能作為模型上下文協定伺服器，讓 Claude Code、Cursor 等程式設計代理程式透過已設定的連線查詢資料庫。它適合需要同時管理多種資料庫的開發者與資料庫管理人員。",
-          "placeholder": false
-        },
-        {
-          "id": "mvschwarz/openrig",
-          "name": "mvschwarz/openrig",
-          "url": "https://github.com/mvschwarz/openrig",
-          "language": "TypeScript",
-          "starsToday": 737,
-          "stars": 2479,
-          "summary": "OpenRig 是一套多代理程式管理工具，可把 Claude Code 與 Codex 等程式設計代理程式組成一個團隊，以 YAML 檔定義成員，並用一個指令啟動。使用者向主導的代理程式說明想要的結果，由它協調其他專責代理程式，再回報成果與需要人決定的事項；團隊的工作內容與上下文會保留下來，終端機介面可檢視每個代理程式的執行環境、模型與狀態。它需要 Node.js 22 或 24 與 tmux，在 macOS 或 Linux 上執行，尚不支援原生 Windows，啟動時會寫入代理程式的掛鉤與工作區信任設定，適合已在使用 Claude Code 或 Codex、想同時管理多個代理程式的開發者。",
-          "placeholder": false
-        },
-        {
-          "id": "oblien/openship",
-          "name": "oblien/openship",
-          "url": "https://github.com/oblien/openship",
-          "language": "TypeScript",
-          "starsToday": 437,
-          "stars": 13882,
-          "summary": "Openship 是一套開源、可自行架設的應用程式部署平台，內建持續整合與持續部署功能；指定程式碼儲存庫後，它會負責建置、部署、網址路由與加密連線憑證。使用者可透過桌面應用程式、網頁儀表板或命令列工具操作：個人使用者可用桌面版經由遠端連線把應用程式部署到自己的伺服器或 Openship Cloud，團隊則可在伺服器上以 openship up 指令安裝常駐服務，在裝有 Docker 的 Linux 上會啟動 Postgres、Redis、網頁伺服器等整套元件，並自動申請 Let's Encrypt 憑證。它適合想用自己的伺服器部署網站與服務、不使用代管平台的開發者與團隊。",
-          "placeholder": false
-        },
-        {
-          "id": "averygan/reclip",
-          "name": "averygan/reclip",
-          "url": "https://github.com/averygan/reclip",
-          "language": "HTML",
-          "starsToday": 113,
-          "stars": 10187,
-          "summary": "ReClip 是一套開源、可自行架設的影片與音訊下載工具，提供網頁操作介面，使用者貼上 YouTube、TikTok、Instagram、X 等網站的連結，就能下載成 MP4 影片或 MP3 音訊。它以 yt-dlp 與 ffmpeg 作為下載與轉檔引擎，支援 yt-dlp 可處理的一千多個網站，可選擇畫質、一次貼上多個網址批次下載並自動去除重複網址；後端是約 150 行的 Python Flask 程式，前端是單一網頁檔案，可直接執行或用 Docker 啟動。專案聲明此工具僅供個人使用，使用者須遵守著作權法與各平台的服務條款。",
-          "placeholder": false
-        },
-        {
-          "id": "cs341-illinois/coursebook",
-          "name": "cs341-illinois/coursebook",
-          "url": "https://github.com/cs341-illinois/coursebook",
-          "language": "TeX",
-          "starsToday": 572,
-          "stars": 3142,
-          "summary": "這是美國伊利諾大學香檳分校「CS 341：系統程式設計」課程使用的開源入門教科書，範例程式全部使用 C 語言，說明文件指出 C 是 Linux 核心實際使用的語言。教材假設讀者已修過程式語言課程並熟悉組合語言指令，以 TeX 撰寫並自動輸出成 PDF、網頁、維基與 EPUB 等版本；它延續 Angrave 早期的維基教科書，目標是加入引用、註腳、延伸閱讀與詞彙表，讓內容更正確、更嚴謹。它適合修習系統程式設計或作業系統相關課程的大學生，以及想自學 C 語言系統程式的讀者。",
-          "placeholder": false
-        },
-        {
-          "id": "rohitg00/ai-engineering-from-scratch",
-          "name": "rohitg00/ai-engineering-from-scratch",
-          "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
-          "language": "Python",
-          "starsToday": 786,
-          "stars": 61496,
-          "summary": "這是一套免費、以 MIT 授權開源的人工智慧工程課程，專案說明列出共 523 堂課、分為 20 個階段、約需 342 小時，使用 Python、TypeScript、Rust 與 Julia。課程從開發環境設定與數學基礎開始，延伸到機器學習、大型語言模型應用、代理程式開發、模型上下文協定與代理程式技能，每堂課都要產出一項可重複使用的成果，例如提示詞、技能、代理程式或模型上下文協定伺服器，並提供依學習目標挑選的學習路線與網站版本。它適合想從基礎動手實作、學習建構人工智慧應用的學生與工程師。",
-          "placeholder": false
-        }
-      ]
+      "error": null
     },
     "hackernews": {
       "status": "ok",
       "fallback": false,
-      "error": null,
-      "items": [
-        {
-          "id": 49901736,
-          "title": "Livenerf: Has Opus 5.5 been nerfed yet?",
-          "titleZh": "Livenerf：Opus 5.5 被暗中降級了嗎？",
-          "url": "https://github.com/ninjahawk/livenerf",
-          "hnUrl": "https://news.ycombinator.com/item?id=49901736",
-          "score": 266,
-          "comments": 124,
-          "summary": "livenerf 是一個開源的長期測試專案，用來檢查前沿語言模型發布後是否悄悄變差，目前追蹤 Anthropic 在 2026 年 9 月 22 日發布的 Claude Opus 5.5。作者表示，專案透過固定版本的 Claude Code 每天執行一次，使用英國人工智慧安全研究所的 Inspect 評測框架，從 GPQA Diamond、MMLU-Pro 等題庫的 2,336 道題目篩出 78 道「有時答對」的題目取樣，前 10 天為基準期，之後以兩個 10 天區間比較正確率與輸出詞元數，最早約在 10 月 24 日得出判定。作者也說明限制：驗證時把模型換成 Opus 5，無法在 99% 信心水準下與 Opus 5.5 區分；截至 9 月 29 日已收集 30 天中的 6 天。",
-          "placeholder": false
-        },
-        {
-          "id": 49899090,
-          "title": "U.S. postal inspectors shut down website selling counterfeit postage labels",
-          "titleZh": "美國郵政稽查人員關閉販售偽造郵資標籤的網站",
-          "url": "https://postalemployeenetwork.com/news/2026/09/26/u-s-postal-inspectors-shut-down-website-selling-millions-of-counterfeit-postage-labels/",
-          "hnUrl": "https://news.ycombinator.com/item?id=49899090",
-          "score": 177,
-          "comments": 104,
-          "summary": "美國郵政稽查局與其他聯邦機構查封了 LabelsBank.com 的網域，並起訴 33 歲的巴基斯坦籍男子 Faheem Akram，指控他經營該網站。法院文件顯示，該網站未經授權，以每張通常 2 美元的固定價格販售偽造的美國郵政署郵資標籤，不論包裹重量、尺寸或目的地；稽查人員表示有超過 5,000 名顧客透過該網站購買超過 510 萬張標籤，起訴書指稱造成超過 1.26 億美元損失。Akram 被控一項共謀詐欺美國政府及製售偽造郵票、五項製售偽造郵資標籤與四項電信詐欺罪名，文中註明刑事指控僅是指控，被告在定罪前推定無罪。",
-          "placeholder": false
-        },
-        {
-          "id": 49897993,
-          "title": "Vermont replacing power plants with home batteries",
-          "titleZh": "美國佛蒙特州以家用電池取代發電廠",
-          "url": "https://www.bbc.com/future/article/20260928-a-virtual-power-plant-hidden-in-vermont-homes-is-keeping-the-lights-on-during-storms",
-          "hnUrl": "https://news.ycombinator.com/item?id=49897993",
-          "score": 104,
-          "comments": 79,
-          "summary": "原文刊於英國廣播公司網站，該網站的 robots.txt 禁止人工智慧代理程式抓取，因此本則依 Hacker News 討論整理，未直接閱讀原文。留言引述的原文段落指出，電力公司 Green Mountain Power 以住戶的家用電池組成虛擬電廠，已成為佛蒙特州最大的電力來源，計畫中裝有家用電池的住戶約一半也裝有太陽能板；原文並引述 Wood Mackenzie 的內部分析，稱美國虛擬電廠容量已超過 40 吉瓦。留言者討論了建築法規對電池安裝位置的限制、電池費用由用戶負擔的問題，以及加州與德州的類似做法。",
-          "placeholder": false
-        },
-        {
-          "id": 49893509,
-          "title": "America.gov",
-          "titleZh": "美國政府網站 America.gov",
-          "url": "https://america.gov/",
-          "hnUrl": "https://news.ycombinator.com/item?id=49893509",
-          "score": 376,
-          "comments": 300,
-          "summary": "America.gov 是美國政府的新網站，該網站的 robots.txt 禁止人工智慧代理程式抓取，因此本則依 Hacker News 討論整理，內容未經本站直接查證。根據留言，網站以一個聊天機器人為主，協助民眾找到可申請的政府服務與公共資源；一名留言者引用 Google 部落格指出，Google 是這項計畫的技術合作夥伴，以 Gemini 協助超過 1 億人取得公共資源。留言者意見分歧，有人認為這類工具可減少民眾在政府網頁間查找的時間，也有人回報網站上線初期樣式與圖片無法載入、部分按鈕無法使用。",
-          "placeholder": false
-        },
-        {
-          "id": 49898778,
-          "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
-          "titleZh": "作品展示：即時太陽系模型，含 52.6 萬顆小行星與所有追蹤中的人造衛星",
-          "url": "https://space.bl2.net/",
-          "hnUrl": "https://news.ycombinator.com/item?id=49898778",
-          "score": 121,
-          "comments": 32,
-          "summary": "這是一個在瀏覽器中執行的網站，依實際比例顯示太陽系目前的狀態，以及 CelesTrak 目錄中環繞地球的物體。網站內容由程式動態產生，本則主要依作者在 Hacker News 的說明整理：人造衛星位置以 CelesTrak 的雙行軌道根數與 SGP4 模型推算，小行星與彗星資料來自美國噴射推進實驗室的小天體資料庫，太空船位置來自該實驗室的 Horizons 系統，資料每日更新。畫面以 WebGL2 繪製，軌道計算在瀏覽器背景執行緒進行，約 30 百萬位元組的小行星資料在背景載入，時間軸可前後拖動，人造衛星會依發射日期出現或消失。",
-          "placeholder": false
-        },
-        {
-          "id": 49896586,
-          "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-          "titleZh": "OpenAI 發表 GPT-6.1 Sol：公司稱能力接近 Astra，價格為五分之一",
-          "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
-          "hnUrl": "https://news.ycombinator.com/item?id=49896586",
-          "score": 807,
-          "comments": 743,
-          "summary": "OpenAI 發表 GPT-6 Sol 的升級版 GPT-6.1 Sol，並表示它在程式開發代理任務、電腦操作與專業工作上接近 GPT-6 Astra，標準輸入與輸出價格約為 Astra 的五分之一。依 OpenAI 自行公布的成績，它在 DeepSWE v1.1 軟體工程測試中與 Astra 相當、比 GPT-6 Sol 最佳成績高 6.4 個百分點；公司也表示科學研究測試中 Astra 得分 68.1%，高於 GPT-6.1 Sol。GPT-6.1 Sol 即日起開放 ChatGPT Work 與 Codex 的付費方案使用者，開發者可透過應用程式介面使用，每百萬輸入詞元 2 美元、快取輸入 0.10 美元、輸出 10 美元。",
-          "placeholder": false
-        },
-        {
-          "id": 49888182,
-          "title": "When oil prices spike, where does the money go?",
-          "titleZh": "油價短期大幅上漲時，錢流向哪裡？",
-          "url": "https://theconversation.com/when-oil-prices-spike-where-does-the-money-go-280763",
-          "hnUrl": "https://news.ycombinator.com/item?id=49888182",
-          "score": 41,
-          "comments": 31,
-          "summary": "原文刊於 The Conversation，該網站的 robots.txt 禁止人工智慧代理程式抓取，本站未閱讀原文，以下僅依標題與 Hacker News 討論整理。文章標題提出的問題是：油價短期大幅上漲時，多出來的收入流向哪些人或機構。討論中，一名留言者指出澳洲、加拿大與美國的退休基金大量投資於資本市場，若基金持有石油相關資產，部分收入會回到基金持有人；另有留言者指出文章沒有提到加拿大亞伯達省，其餘留言多為簡短意見，沒有補充原文內容。",
-          "placeholder": false
-        },
-        {
-          "id": 49892245,
-          "title": "How Delhi cut electricity loss from 50 to 5 percent",
-          "titleZh": "德里如何把電力損失從五成降到百分之五",
-          "url": "https://spectrum.ieee.org/delhi-electricity-loss",
-          "hnUrl": "https://news.ycombinator.com/item?id=49892245",
-          "score": 445,
-          "comments": 261,
-          "summary": "這篇刊於 IEEE Spectrum 的文章由德里賈米亞米利亞伊斯蘭大學一位電機工程教授撰寫，回顧德里配電網的改革。作者指出，2002 年德里因設備老舊、無功功率造成電壓下降與線路發熱，加上竊電與收費不全，電力損失超過 50%；原配電機構拆分後由 Tata Power 與 BSES 兩家民營公司接手，配合 2003 年《電力法》，導入監控與資料擷取系統、汰換變壓器、加裝電容器組與絕緣電纜、改用數位電表與線上繳費，並在竊電嚴重的社區聘請當地婦女收取電費。文章表示，2026 年損失已降至 5% 至 6%，供電可靠度指數由約 70% 提高到 99.9% 以上。",
-          "placeholder": false
-        },
-        {
-          "id": 49891203,
-          "title": "Language models for text classification: From bag-of-words to Jev",
-          "titleZh": "用於文字分類的語言模型：從詞袋模型到 Jev",
-          "url": "https://magazine.sebastianraschka.com/p/classifier-history-and-jev",
-          "hnUrl": "https://news.ycombinator.com/item?id=49891203",
-          "score": 35,
-          "comments": 0,
-          "summary": "機器學習研究者 Sebastian Raschka 在電子報 Ahead of AI 撰文，回顧文字分類從詞袋表示法搭配單純貝氏與邏輯迴歸，演變到詞嵌入、遞迴神經網路與 BERT 類模型的過程。接著他介紹 TypeSafe AI 近期發表的專有分類模型 Jev 及其 Choice、Noul、Score 三種應用程式介面，並以 IMDb 影評資料集的 25,000 則測試資料實測，Choice 正確率 96.47%、費用約 0.65 美元，與他微調的 ModernBERT 相近，但他註明無法確認測試資料是否曾用於 Jev 的訓練。作者表示與 Jev 沒有任何關係，結論是 Jev 沒有提出根本上的新方法，但可直接用於多種任務，減少為單一任務微調專用模型的需要。",
-          "placeholder": false
-        },
-        {
-          "id": 49895864,
-          "title": "Needed 1+1, built a functional programming language",
-          "titleZh": "只需要算 1+1，卻做出了一個函數式程式語言",
-          "url": "https://hereticpleb.vercel.app/blog/needed-one-plus-one/",
-          "hnUrl": "https://news.ycombinator.com/item?id=49895864",
-          "score": 34,
-          "comments": 8,
-          "summary": "作者在部落格記錄一項資料結構作業：把算式轉成二元樹並求出 1+1+1 的值。實作過程中，他把加減乘除統一視為「函式」節點、加入變數，接著用 C 語言陸續寫出雜湊表、自訂的區塊記憶體配置器、以樹狀結構儲存的閉包，以及標記清除式垃圾回收器，最後成為名為 graphLang 的圖歸約求值器。作者列出的數據是，加入垃圾回收後，計算費氏數列第 40 項的記憶體用量從約 12 吉位元組降到約 1.7 百萬位元組，但耗時 6 分鐘；詞法與語法解析、外部函式介面、互動式命令列環境與效能改善將在後續文章介紹。",
-          "placeholder": false
-        }
-      ]
+      "error": null
     }
-  }
+  },
+  "items": [
+    {
+      "id": "debpalash/VoiceStudio",
+      "name": "debpalash/VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "language": "Python",
+      "starsToday": 4758,
+      "stars": 48352,
+      "summary": "VoiceStudio 是一套開源的語音製作軟體，專案說明將它定位為可完全在本機執行、用來替代 ElevenLabs 的工具，功能包括聲音複製、聲音設計、影片配音、語音輸入、語音轉文字與有聲書製作，專案表示支援 646 種語言。它以 Electron 桌面應用程式發布，可安裝在 macOS、Windows 與 Linux，也可用 Docker 部署，預設語音引擎是 k2-fsa/OmniVoice，本機工作流程在使用者自己的硬體上執行，遠端服務為選用。它另提供本機應用程式介面與模型上下文協定伺服器，適合製作配音或旁白的內容創作者，以及想讓代理程式呼叫語音功能的開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0,
+      "diagram": {
+        "src": "data/diagrams/2026-09-30/debpalash/VoiceStudio.svg",
+        "alt": "自己的電腦連到 VoiceStudio，再連到本機引擎 OmniVoice。遠端服務以虛線標成可以不開。下方是配音、語音轉文字與有聲書。",
+        "caption": "VoiceStudio 在自己的電腦上處理聲音，遠端服務可以不開。"
+      }
+    },
+    {
+      "id": 49901736,
+      "title": "Livenerf: Has Opus 5.5 been nerfed yet?",
+      "titleZh": "Livenerf：Opus 5.5 被暗中降級了嗎？",
+      "url": "https://github.com/ninjahawk/livenerf",
+      "hnUrl": "https://news.ycombinator.com/item?id=49901736",
+      "score": 266,
+      "comments": 124,
+      "summary": "livenerf 是一個開源的長期測試專案，用來檢查前沿語言模型發布後是否悄悄變差，目前追蹤 Anthropic 在 2026 年 9 月 22 日發布的 Claude Opus 5.5。作者表示，專案透過固定版本的 Claude Code 每天執行一次，使用英國人工智慧安全研究所的 Inspect 評測框架，從 GPQA Diamond、MMLU-Pro 等題庫的 2,336 道題目篩出 78 道「有時答對」的題目取樣，前 10 天為基準期，之後以兩個 10 天區間比較正確率與輸出詞元數，最早約在 10 月 24 日得出判定。作者也說明限制：驗證時把模型換成 Opus 5，無法在 99% 信心水準下與 Opus 5.5 區分；截至 9 月 29 日已收集 30 天中的 6 天。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "NVIDIA/OpenShell",
+      "name": "NVIDIA/OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "language": "Rust",
+      "starsToday": 990,
+      "stars": 10714,
+      "summary": "OpenShell 是 NVIDIA 以 Apache 2.0 授權釋出的執行環境，讓自主運作的人工智慧代理程式在隔離的沙箱中讀取檔案、安裝套件與呼叫外部服務，同時限制它們能接觸的資料、密鑰與網路。使用者以政策檔宣告每個代理程式可存取的範圍，OpenShell 在作業系統核心層檢查檔案存取、系統呼叫與網路連線，政策變更生效前會以形式化驗證標出新增的存取權限交由人工審核，代理程式也看不到真正的憑證。它支援 Linux、Apple 晶片的 macOS，以及實驗階段的 Windows Linux 子系統，並提供 Python、TypeScript、Go、Rust 開發套件，適合要部署多個代理程式的平台與資訊安全團隊。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1,
+      "diagram": {
+        "src": "data/diagrams/2026-09-30/NVIDIA/OpenShell.svg",
+        "alt": "代理程式放在隔離的沙箱裡。政策檔指向沙箱，旁邊是核心層檢查。下方寫著新增權限先由人審核，以及看不到真正的憑證。",
+        "caption": "代理程式只能碰到政策允許的範圍，新增權限先由人審核。"
+      }
+    },
+    {
+      "id": 49899090,
+      "title": "U.S. postal inspectors shut down website selling counterfeit postage labels",
+      "titleZh": "美國郵政稽查人員關閉販售偽造郵資標籤的網站",
+      "url": "https://postalemployeenetwork.com/news/2026/09/26/u-s-postal-inspectors-shut-down-website-selling-millions-of-counterfeit-postage-labels/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49899090",
+      "score": 177,
+      "comments": 104,
+      "summary": "美國郵政稽查局與其他聯邦機構查封了 LabelsBank.com 的網域，並起訴 33 歲的巴基斯坦籍男子 Faheem Akram，指控他經營該網站。法院文件顯示，該網站未經授權，以每張通常 2 美元的固定價格販售偽造的美國郵政署郵資標籤，不論包裹重量、尺寸或目的地；稽查人員表示有超過 5,000 名顧客透過該網站購買超過 510 萬張標籤，起訴書指稱造成超過 1.26 億美元損失。Akram 被控一項共謀詐欺美國政府及製售偽造郵票、五項製售偽造郵資標籤與四項電信詐欺罪名，文中註明刑事指控僅是指控，被告在定罪前推定無罪。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "vectorize-io/hindsight",
+      "name": "vectorize-io/hindsight",
+      "url": "https://github.com/vectorize-io/hindsight",
+      "language": "Python",
+      "starsToday": 2575,
+      "stars": 42941,
+      "summary": "Hindsight 是 Vectorize 開發的人工智慧代理程式記憶系統，設計目標不只是讓代理程式回想對話紀錄，而是依過去的經驗調整行為。它把記憶分成世界事實、代理程式自身經驗、由多筆記憶整合出的觀察與心智模型等類型，可用 Docker、pip 或 Kubernetes 部署成伺服器，也可嵌入 Python 程式使用，並能接上 OpenAI、Anthropic、Ollama 等二十五個以上的語言模型供應商。專案說明列出它在 LongMemEval 長期記憶測試的成績，並表示成績已由維吉尼亞理工大學與《華盛頓郵報》的研究合作者重現；適用對象是開發對話或自動化代理程式、需要讓代理程式記住使用者回饋的團隊。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2,
+      "diagram": {
+        "src": "data/diagrams/2026-09-30/vectorize-io/hindsight.svg",
+        "alt": "世界事實、自身經驗、觀察與心智模型四個方塊，箭頭指向依過去的經驗調整行為。",
+        "caption": "Hindsight 把記憶分成四類，用來調整之後的行為。"
+      }
+    },
+    {
+      "id": 49897993,
+      "title": "Vermont replacing power plants with home batteries",
+      "titleZh": "美國佛蒙特州以家用電池取代發電廠",
+      "url": "https://www.bbc.com/future/article/20260928-a-virtual-power-plant-hidden-in-vermont-homes-is-keeping-the-lights-on-during-storms",
+      "hnUrl": "https://news.ycombinator.com/item?id=49897993",
+      "score": 104,
+      "comments": 79,
+      "summary": "原文刊於英國廣播公司網站，該網站的 robots.txt 禁止人工智慧代理程式抓取，因此本則依 Hacker News 討論整理，未直接閱讀原文。留言引述的原文段落指出，電力公司 Green Mountain Power 以住戶的家用電池組成虛擬電廠，已成為佛蒙特州最大的電力來源，計畫中裝有家用電池的住戶約一半也裝有太陽能板；原文並引述 Wood Mackenzie 的內部分析，稱美國虛擬電廠容量已超過 40 吉瓦。留言者討論了建築法規對電池安裝位置的限制、電池費用由用戶負擔的問題，以及加州與德州的類似做法。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "paperclipai/paperclip",
+      "name": "paperclipai/paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "language": "TypeScript",
+      "starsToday": 2458,
+      "stars": 94550,
+      "summary": "Paperclip 是一套開源的人工智慧代理程式協作管理軟體，由 Node.js 伺服器與 React 網頁介面組成，使用者可以設定目標、指派代理程式，並在同一個儀表板追蹤工作進度與費用。它以公司組織的方式管理代理程式，提供組織圖、角色與權限、每個代理程式的每月預算上限（達到上限即停止）、任務審核關卡、工具呼叫追蹤與不可修改的稽核紀錄，一次部署可管理多個資料互相隔離的組織。專案說明列出可接入的代理程式包括 OpenClaw、Claude Code、Codex、Cursor，以及能接收定時喚醒訊號的命令列腳本或網路服務，適合同時執行多個代理程式、需要控管成本與稽核工作的團隊。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 49893509,
+      "title": "America.gov",
+      "titleZh": "美國政府網站 America.gov",
+      "url": "https://america.gov/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49893509",
+      "score": 376,
+      "comments": 300,
+      "summary": "America.gov 是美國政府的新網站，該網站的 robots.txt 禁止人工智慧代理程式抓取，因此本則依 Hacker News 討論整理，內容未經本站直接查證。根據留言，網站以一個聊天機器人為主，協助民眾找到可申請的政府服務與公共資源；一名留言者引用 Google 部落格指出，Google 是這項計畫的技術合作夥伴，以 Gemini 協助超過 1 億人取得公共資源。留言者意見分歧，有人認為這類工具可減少民眾在政府網頁間查找的時間，也有人回報網站上線初期樣式與圖片無法載入、部分按鈕無法使用。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "t8y2/dbx",
+      "name": "t8y2/dbx",
+      "url": "https://github.com/t8y2/dbx",
+      "language": "Rust",
+      "starsToday": 232,
+      "stars": 22176,
+      "summary": "DBX 是一套跨平台的資料庫管理工具，安裝檔約 25 百萬位元組，專案表示支援 MySQL、PostgreSQL、SQLite、Redis、MongoDB、達夢等一百種以上資料庫，另有 Kafka、RabbitMQ 等訊息佇列的管理介面。它提供 macOS、Windows、Linux 桌面版，以及 Docker 自架版、網頁版與命令列工具，內建查詢編輯器、資料表格檢視與人工智慧助手，可用自然語言產生查詢語句並在執行前做安全檢查，也能作為模型上下文協定伺服器，讓 Claude Code、Cursor 等程式設計代理程式透過已設定的連線查詢資料庫。它適合需要同時管理多種資料庫的開發者與資料庫管理人員。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 49898778,
+      "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
+      "titleZh": "作品展示：即時太陽系模型，含 52.6 萬顆小行星與所有追蹤中的人造衛星",
+      "url": "https://space.bl2.net/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49898778",
+      "score": 121,
+      "comments": 32,
+      "summary": "這是一個在瀏覽器中執行的網站，依實際比例顯示太陽系目前的狀態，以及 CelesTrak 目錄中環繞地球的物體。網站內容由程式動態產生，本則主要依作者在 Hacker News 的說明整理：人造衛星位置以 CelesTrak 的雙行軌道根數與 SGP4 模型推算，小行星與彗星資料來自美國噴射推進實驗室的小天體資料庫，太空船位置來自該實驗室的 Horizons 系統，資料每日更新。畫面以 WebGL2 繪製，軌道計算在瀏覽器背景執行緒進行，約 30 百萬位元組的小行星資料在背景載入，時間軸可前後拖動，人造衛星會依發射日期出現或消失。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    },
+    {
+      "id": "mvschwarz/openrig",
+      "name": "mvschwarz/openrig",
+      "url": "https://github.com/mvschwarz/openrig",
+      "language": "TypeScript",
+      "starsToday": 737,
+      "stars": 2479,
+      "summary": "OpenRig 是一套多代理程式管理工具，可把 Claude Code 與 Codex 等程式設計代理程式組成一個團隊，以 YAML 檔定義成員，並用一個指令啟動。使用者向主導的代理程式說明想要的結果，由它協調其他專責代理程式，再回報成果與需要人決定的事項；團隊的工作內容與上下文會保留下來，終端機介面可檢視每個代理程式的執行環境、模型與狀態。它需要 Node.js 22 或 24 與 tmux，在 macOS 或 Linux 上執行，尚不支援原生 Windows，啟動時會寫入代理程式的掛鉤與工作區信任設定，適合已在使用 Claude Code 或 Codex、想同時管理多個代理程式的開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 5
+    },
+    {
+      "id": 49896586,
+      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+      "titleZh": "OpenAI 發表 GPT-6.1 Sol：公司稱能力接近 Astra，價格為五分之一",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49896586",
+      "score": 807,
+      "comments": 743,
+      "summary": "OpenAI 發表 GPT-6 Sol 的升級版 GPT-6.1 Sol，並表示它在程式開發代理任務、電腦操作與專業工作上接近 GPT-6 Astra，標準輸入與輸出價格約為 Astra 的五分之一。依 OpenAI 自行公布的成績，它在 DeepSWE v1.1 軟體工程測試中與 Astra 相當、比 GPT-6 Sol 最佳成績高 6.4 個百分點；公司也表示科學研究測試中 Astra 得分 68.1%，高於 GPT-6.1 Sol。GPT-6.1 Sol 即日起開放 ChatGPT Work 與 Codex 的付費方案使用者，開發者可透過應用程式介面使用，每百萬輸入詞元 2 美元、快取輸入 0.10 美元、輸出 10 美元。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 5
+    },
+    {
+      "id": "oblien/openship",
+      "name": "oblien/openship",
+      "url": "https://github.com/oblien/openship",
+      "language": "TypeScript",
+      "starsToday": 437,
+      "stars": 13882,
+      "summary": "Openship 是一套開源、可自行架設的應用程式部署平台，內建持續整合與持續部署功能；指定程式碼儲存庫後，它會負責建置、部署、網址路由與加密連線憑證。使用者可透過桌面應用程式、網頁儀表板或命令列工具操作：個人使用者可用桌面版經由遠端連線把應用程式部署到自己的伺服器或 Openship Cloud，團隊則可在伺服器上以 openship up 指令安裝常駐服務，在裝有 Docker 的 Linux 上會啟動 Postgres、Redis、網頁伺服器等整套元件，並自動申請 Let's Encrypt 憑證。它適合想用自己的伺服器部署網站與服務、不使用代管平台的開發者與團隊。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 6
+    },
+    {
+      "id": 49888182,
+      "title": "When oil prices spike, where does the money go?",
+      "titleZh": "油價短期大幅上漲時，錢流向哪裡？",
+      "url": "https://theconversation.com/when-oil-prices-spike-where-does-the-money-go-280763",
+      "hnUrl": "https://news.ycombinator.com/item?id=49888182",
+      "score": 41,
+      "comments": 31,
+      "summary": "原文刊於 The Conversation，該網站的 robots.txt 禁止人工智慧代理程式抓取，本站未閱讀原文，以下僅依標題與 Hacker News 討論整理。文章標題提出的問題是：油價短期大幅上漲時，多出來的收入流向哪些人或機構。討論中，一名留言者指出澳洲、加拿大與美國的退休基金大量投資於資本市場，若基金持有石油相關資產，部分收入會回到基金持有人；另有留言者指出文章沒有提到加拿大亞伯達省，其餘留言多為簡短意見，沒有補充原文內容。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 6
+    },
+    {
+      "id": "averygan/reclip",
+      "name": "averygan/reclip",
+      "url": "https://github.com/averygan/reclip",
+      "language": "HTML",
+      "starsToday": 113,
+      "stars": 10187,
+      "summary": "ReClip 是一套開源、可自行架設的影片與音訊下載工具，提供網頁操作介面，使用者貼上 YouTube、TikTok、Instagram、X 等網站的連結，就能下載成 MP4 影片或 MP3 音訊。它以 yt-dlp 與 ffmpeg 作為下載與轉檔引擎，支援 yt-dlp 可處理的一千多個網站，可選擇畫質、一次貼上多個網址批次下載並自動去除重複網址；後端是約 150 行的 Python Flask 程式，前端是單一網頁檔案，可直接執行或用 Docker 啟動。專案聲明此工具僅供個人使用，使用者須遵守著作權法與各平台的服務條款。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 7
+    },
+    {
+      "id": 49892245,
+      "title": "How Delhi cut electricity loss from 50 to 5 percent",
+      "titleZh": "德里如何把電力損失從五成降到百分之五",
+      "url": "https://spectrum.ieee.org/delhi-electricity-loss",
+      "hnUrl": "https://news.ycombinator.com/item?id=49892245",
+      "score": 445,
+      "comments": 261,
+      "summary": "這篇刊於 IEEE Spectrum 的文章由德里賈米亞米利亞伊斯蘭大學一位電機工程教授撰寫，回顧德里配電網的改革。作者指出，2002 年德里因設備老舊、無功功率造成電壓下降與線路發熱，加上竊電與收費不全，電力損失超過 50%；原配電機構拆分後由 Tata Power 與 BSES 兩家民營公司接手，配合 2003 年《電力法》，導入監控與資料擷取系統、汰換變壓器、加裝電容器組與絕緣電纜、改用數位電表與線上繳費，並在竊電嚴重的社區聘請當地婦女收取電費。文章表示，2026 年損失已降至 5% 至 6%，供電可靠度指數由約 70% 提高到 99.9% 以上。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 7,
+      "diagram": {
+        "src": "data/diagrams/2026-09-30/49892245.svg",
+        "alt": "左側是 2002 年損失超過 50%，中間是監控、數位電表與當地收費，右側是 2026 年損失降到 5% 至 6%。",
+        "caption": "德里的配電改革把電力損失從超過 50% 降到 5% 至 6%。"
+      }
+    },
+    {
+      "id": "cs341-illinois/coursebook",
+      "name": "cs341-illinois/coursebook",
+      "url": "https://github.com/cs341-illinois/coursebook",
+      "language": "TeX",
+      "starsToday": 572,
+      "stars": 3142,
+      "summary": "這是美國伊利諾大學香檳分校「CS 341：系統程式設計」課程使用的開源入門教科書，範例程式全部使用 C 語言，說明文件指出 C 是 Linux 核心實際使用的語言。教材假設讀者已修過程式語言課程並熟悉組合語言指令，以 TeX 撰寫並自動輸出成 PDF、網頁、維基與 EPUB 等版本；它延續 Angrave 早期的維基教科書，目標是加入引用、註腳、延伸閱讀與詞彙表，讓內容更正確、更嚴謹。它適合修習系統程式設計或作業系統相關課程的大學生，以及想自學 C 語言系統程式的讀者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 8
+    },
+    {
+      "id": 49891203,
+      "title": "Language models for text classification: From bag-of-words to Jev",
+      "titleZh": "用於文字分類的語言模型：從詞袋模型到 Jev",
+      "url": "https://magazine.sebastianraschka.com/p/classifier-history-and-jev",
+      "hnUrl": "https://news.ycombinator.com/item?id=49891203",
+      "score": 35,
+      "comments": 0,
+      "summary": "機器學習研究者 Sebastian Raschka 在電子報 Ahead of AI 撰文，回顧文字分類從詞袋表示法搭配單純貝氏與邏輯迴歸，演變到詞嵌入、遞迴神經網路與 BERT 類模型的過程。接著他介紹 TypeSafe AI 近期發表的專有分類模型 Jev 及其 Choice、Noul、Score 三種應用程式介面，並以 IMDb 影評資料集的 25,000 則測試資料實測，Choice 正確率 96.47%、費用約 0.65 美元，與他微調的 ModernBERT 相近，但他註明無法確認測試資料是否曾用於 Jev 的訓練。作者表示與 Jev 沒有任何關係，結論是 Jev 沒有提出根本上的新方法，但可直接用於多種任務，減少為單一任務微調專用模型的需要。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 8
+    },
+    {
+      "id": "rohitg00/ai-engineering-from-scratch",
+      "name": "rohitg00/ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "language": "Python",
+      "starsToday": 786,
+      "stars": 61496,
+      "summary": "這是一套免費、以 MIT 授權開源的人工智慧工程課程，專案說明列出共 523 堂課、分為 20 個階段、約需 342 小時，使用 Python、TypeScript、Rust 與 Julia。課程從開發環境設定與數學基礎開始，延伸到機器學習、大型語言模型應用、代理程式開發、模型上下文協定與代理程式技能，每堂課都要產出一項可重複使用的成果，例如提示詞、技能、代理程式或模型上下文協定伺服器，並提供依學習目標挑選的學習路線與網站版本。它適合想從基礎動手實作、學習建構人工智慧應用的學生與工程師。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 9
+    },
+    {
+      "id": 49895864,
+      "title": "Needed 1+1, built a functional programming language",
+      "titleZh": "只需要算 1+1，卻做出了一個函數式程式語言",
+      "url": "https://hereticpleb.vercel.app/blog/needed-one-plus-one/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49895864",
+      "score": 34,
+      "comments": 8,
+      "summary": "作者在部落格記錄一項資料結構作業：把算式轉成二元樹並求出 1+1+1 的值。實作過程中，他把加減乘除統一視為「函式」節點、加入變數，接著用 C 語言陸續寫出雜湊表、自訂的區塊記憶體配置器、以樹狀結構儲存的閉包，以及標記清除式垃圾回收器，最後成為名為 graphLang 的圖歸約求值器。作者列出的數據是，加入垃圾回收後，計算費氏數列第 40 項的記憶體用量從約 12 吉位元組降到約 1.7 百萬位元組，但耗時 6 分鐘；詞法與語法解析、外部函式介面、互動式命令列環境與效能改善將在後續文章介紹。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 9
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-09-30/one-plus-one.svg",
+      "alt": "圓頭的小人說 1+1，旁邊疊著算式、二元樹和垃圾回收三個方塊。",
+      "caption": "作業把算式做成二元樹，後來又加上垃圾回收。",
+      "relatedItemId": 49895864
+    },
+    {
+      "src": "data/humor/2026-09-30/background-load.svg",
+      "alt": "一台電腦螢幕上有小點，旁邊滴著一滴汗，對話框寫著背景載入中。",
+      "caption": "瀏覽器在背景載入小行星資料。",
+      "relatedItemId": 49898778
+    }
+  ]
 }

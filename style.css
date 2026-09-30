@@ -5,6 +5,7 @@
   --rule: rgba(28, 25, 21, 0.82);
   --rule-soft: rgba(28, 25, 21, 0.28);
   --max: 1120px;
+  --humor: #efe4c8;
   color-scheme: light dark;
 }
 
@@ -15,6 +16,7 @@
     --muted: #c9c1b3;
     --rule: rgba(244, 240, 230, 0.82);
     --rule-soft: rgba(244, 240, 230, 0.32);
+    --humor: #2c2822;
   }
 }
 
@@ -65,18 +67,6 @@ a { color: inherit; }
   white-space: nowrap;
 }
 
-.front-updated {
-  max-width: var(--max);
-  margin: 8px auto 0;
-  padding: 0 16px;
-  text-align: center;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.front-updated:empty { display: none; }
-
 .section-nav {
   position: sticky;
   top: 0;
@@ -124,6 +114,39 @@ a { color: inherit; }
   font-size: 22px;
   font-weight: 700;
   line-height: 1.4;
+}
+
+.source-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.source-filter,
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 10px;
+  border: 1px solid var(--rule);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.source-tag {
+  min-height: 28px;
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+
+.source-filter.is-active {
+  background: var(--ink);
+  color: var(--paper);
 }
 
 .fallback-note,
@@ -187,6 +210,80 @@ a { color: inherit; }
   font-size: 18px;
   line-height: 1.8;
   overflow-wrap: anywhere;
+}
+
+.diagram {
+  margin: 12px 0 0;
+  max-width: 100%;
+}
+
+.diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 168px;
+  object-fit: contain;
+  object-position: center;
+  background: var(--paper);
+  border: 1px solid var(--rule-soft);
+}
+
+.diagram.is-lead img {
+  max-height: 240px;
+}
+
+.diagram figcaption {
+  margin: 0;
+  padding-top: 6px;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.humor-box {
+  margin: 28px 0 8px;
+  padding: 16px 16px 8px;
+  border: 3px double var(--rule);
+  background: var(--humor);
+}
+
+.humor-box h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-align: center;
+}
+
+.humor-panel {
+  margin: 0 0 16px;
+}
+
+.humor-panel img {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 1px dashed var(--rule);
+}
+
+.humor-panel figcaption,
+.humor-link-line {
+  margin: 8px auto 0;
+  max-width: 420px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.humor-link {
+  color: inherit;
+  text-underline-offset: 3px;
 }
 
 .clamp {
@@ -306,6 +403,10 @@ button:focus-visible {
     font-size: 34px;
     line-height: 1.35;
   }
+
+  .diagram img { max-height: 200px; }
+
+  .diagram.is-lead img { max-height: none; }
 }
 
 @media (min-width: 1024px) {

@@ -1,3 +1,5 @@
+import { TECH_SOURCES, interleaveByRank } from './combine.js';
+
 const PLACEHOLDER_RE = /【(?:占位摘要|待譯)/u;
 
 function hanCount(value) {
@@ -32,56 +34,30 @@ export function buildIssue({ candidates, summaries, existingIndex = { issues: []
   }
   if (errors.length) fail(errors);
 
-  const github = publicSection('github', candidates.github, summaries.github, {
-    allowPlaceholders,
-    errors,
-    toPublic(item, entry) {
-      const summary = summaryText(entry);
-      validateSummary(summary, item.description, `GitHub ${item.id}`, errors, allowPlaceholders);
-      return {
-        id: item.id,
-        name: item.name,
-        url: item.url,
-        language: item.language || null,
-        starsToday: item.starsToday ?? null,
-        stars: item.stars ?? null,
-        summary,
-        placeholder: PLACEHOLDER_RE.test(summary),
-      };
-    },
-  });
-  const hackernews = publicSection('hackernews', candidates.hackernews, summaries.hackernews, {
-    allowPlaceholders,
-    errors,
-    toPublic(item, entry) {
-      const summary = summaryText(entry);
-      const titleZh = entry && typeof entry === 'object' ? String(entry.titleZh || '').trim() : '';
-      validateSummary(summary, item.title, `Hacker News ${item.id}`, errors, allowPlaceholders);
-      if (!titleZh) errors.push(`Hacker News ${item.id} 缺少中文標題`);
-      else if (titleZh === item.title) errors.push(`Hacker News ${item.id} 的中文標題不能照抄原文`);
-      else if (hanCount(titleZh) < 1) errors.push(`Hacker News ${item.id} 的中文標題需要中文`);
-      if (!allowPlaceholders && PLACEHOLDER_RE.test(titleZh)) {
-        errors.push(`Hacker News ${item.id} 的標題仍是占位`);
-      }
-      if (item.url && !/^https?:\/\//.test(item.url)) errors.push(`Hacker News ${item.id} 的原文連結無效`);
-      if (!/^https:\/\/news\.ycombinator\.com\/item\?id=\d+$/.test(item.hnUrl || '')) {
-        errors.push(`Hacker News ${item.id} 的討論連結無效`);
-      }
-      return {
-        id: item.id,
-        title: item.title,
-        titleZh,
-        url: item.url || null,
-        hnUrl: item.hnUrl,
-        score: item.score ?? 0,
-        comments: item.comments ?? 0,
-        summary,
-        placeholder: PLACEHOLDER_RE.test(summary) || PLACEHOLDER_RE.test(titleZh),
-      };
-    },
+  const blocks = TECH_SOURCES.map((source) => {
+    const built = publicSection(source.id, candidates[source.id], summaries[source.id], {
+      allowPlaceholders,
+      errors,
+      toPublic: source.id === 'hackernews' ? toHackerNews : toGithub,
+    });
+    return { source, built };
   });
 
   if (errors.length) fail(errors);
+
+  const items = interleaveByRank(blocks.map(({ source, built }) => ({
+    id: source.id,
+    label: source.label,
+    items: built.items,
+  })));
+  const sources = {};
+  for (const { source, built } of blocks) {
+    sources[source.id] = {
+      status: built.status,
+      fallback: built.fallback,
+      error: built.error,
+    };
+  }
 
   const issueNumber = nextIssueNumber(existingIndex, candidates.date);
   const issue = {
@@ -90,8 +66,10 @@ export function buildIssue({ candidates, summaries, existingIndex = { issues: []
     timezone: 'Asia/Taipei',
     publishedAt: `${candidates.date}T07:00:00+08:00`,
     fetchedAt: candidates.fetchedAt || null,
-    sections: { github, hackernews },
+    sources,
+    items,
   };
+  if (Array.isArray(summaries.humor) && summaries.humor.length) issue.humor = summaries.humor;
   const issues = (existingIndex.issues || []).filter((entry) => entry.date !== candidates.date);
   issues.push({
     date: candidates.date,
@@ -102,7 +80,54 @@ export function buildIssue({ candidates, summaries, existingIndex = { issues: []
   return { issue, index: { issues } };
 }
 
-function publicSection(name, block, summaryTable, { toPublic, errors }) {
+function toGithub(item, entry, errors, allowPlaceholders) {
+  const summary = summaryText(entry);
+  validateSummary(summary, item.description, `GitHub ${item.id}`, errors, allowPlaceholders);
+  return withDiagram({
+    id: item.id,
+    name: item.name,
+    url: item.url,
+    language: item.language || null,
+    starsToday: item.starsToday ?? null,
+    stars: item.stars ?? null,
+    summary,
+    placeholder: PLACEHOLDER_RE.test(summary),
+  }, entry);
+}
+
+function toHackerNews(item, entry, errors, allowPlaceholders) {
+  const summary = summaryText(entry);
+  const titleZh = entry && typeof entry === 'object' ? String(entry.titleZh || '').trim() : '';
+  validateSummary(summary, item.title, `Hacker News ${item.id}`, errors, allowPlaceholders);
+  if (!titleZh) errors.push(`Hacker News ${item.id} 缺少中文標題`);
+  else if (titleZh === item.title) errors.push(`Hacker News ${item.id} 的中文標題不能照抄原文`);
+  else if (hanCount(titleZh) < 1) errors.push(`Hacker News ${item.id} 的中文標題需要中文`);
+  if (!allowPlaceholders && PLACEHOLDER_RE.test(titleZh)) {
+    errors.push(`Hacker News ${item.id} 的標題仍是占位`);
+  }
+  if (item.url && !/^https?:\/\//.test(item.url)) errors.push(`Hacker News ${item.id} 的原文連結無效`);
+  if (!/^https:\/\/news\.ycombinator\.com\/item\?id=\d+$/.test(item.hnUrl || '')) {
+    errors.push(`Hacker News ${item.id} 的討論連結無效`);
+  }
+  return withDiagram({
+    id: item.id,
+    title: item.title,
+    titleZh,
+    url: item.url || null,
+    hnUrl: item.hnUrl,
+    score: item.score ?? 0,
+    comments: item.comments ?? 0,
+    summary,
+    placeholder: PLACEHOLDER_RE.test(summary) || PLACEHOLDER_RE.test(titleZh),
+  }, entry);
+}
+
+function withDiagram(item, entry) {
+  if (!entry || typeof entry !== 'object' || entry.diagram == null) return item;
+  return { ...item, diagram: entry.diagram };
+}
+
+function publicSection(name, block, summaryTable, { toPublic, errors, allowPlaceholders }) {
   if (!block || (block.status !== 'ok' && block.status !== 'failed')) {
     errors.push(`${name} 候選資料缺少 status`);
     return { status: 'failed', fallback: false, error: '候選資料不完整', items: [] };
@@ -127,7 +152,7 @@ function publicSection(name, block, summaryTable, { toPublic, errors }) {
     if (name === 'github' && !/^https:\/\/github\.com\/[^/]+\/[^/]+\/?$/.test(item.url || '')) {
       errors.push(`GitHub ${item.id} 的專案連結無效`);
     }
-    items.push(toPublic(item, entry));
+    items.push(toPublic(item, entry, errors, allowPlaceholders));
   }
   const extra = summaryKeys(summaryTable).filter((id) => !seen.has(String(id)));
   for (const id of extra) errors.push(`${name} 摘要多了候選檔沒有的項目 ${id}`);

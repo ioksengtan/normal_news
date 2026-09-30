@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 210">
+  <rect width="360" height="210" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="118" y="16" width="124" height="58" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="40" text-anchor="middle">開源程式庫</text>
+  <text x="180" y="60" text-anchor="middle">共用的積木</text>
+  <line x1="150" y1="74" x2="70" y2="108" stroke="#1c1915" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="180" y1="74" x2="180" y2="108" stroke="#1c1915" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="210" y1="74" x2="290" y2="108" stroke="#1c1915" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="16" y="116" width="108" height="72" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="28" y="128" width="22" height="14" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5" stroke-width="1"/>
+  <rect x="54" y="128" width="22" height="14" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5" stroke-width="1"/>
+  <rect x="40" y="146" width="22" height="14" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5" stroke-width="1"/>
+  <text x="70" y="178" text-anchor="middle">作品甲</text>
+  <rect x="126" y="116" width="108" height="72" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="148" y="130" width="18" height="18" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5" stroke-width="1"/>
+  <rect x="170" y="142" width="18" height="18" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5" stroke-width="1"/>
+  <text x="180" y="178" text-anchor="middle">作品乙</text>
+  <rect x="236" y="116" width="108" height="72" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="258" y="128" width="64" height="14" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5" stroke-width="1"/>
+  <rect x="270" y="146" width="40" height="14" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5" stroke-width="1"/>
+  <text x="290" y="178" text-anchor="middle">作品丙</text>
+</svg>

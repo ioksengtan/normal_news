@@ -107,9 +107,10 @@ export async function fetchHnSection({ seenIds, limit }) {
 
 async function main() {
   const root = process.cwd();
-  const config = readJson(path.join(root, 'data/sections.json'), { sections: [] });
-  const githubConfig = (config.sections || []).find((section) => section.id === 'github') || {};
-  const hnConfig = (config.sections || []).find((section) => section.id === 'hackernews') || {};
+  const config = readJson(path.join(root, 'data/sections.json'), { techSources: [] });
+  const techSources = Array.isArray(config.techSources) ? config.techSources : [];
+  const githubConfig = techSources.find((source) => source.id === 'github') || {};
+  const hnConfig = techSources.find((source) => source.id === 'hackernews') || {};
   const date = arg('--date', taipeiDateString(new Date()));
   const issuesDir = path.resolve(root, arg('--issues-dir', 'data/issues'));
   const outPath = path.resolve(root, arg('--out', 'data/tech/candidates.json'));

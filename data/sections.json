@@ -3,45 +3,31 @@
   "repository": "https://github.com/ioksengtan/normal_news",
   "issueForm": "article-report.yml",
   "timezone": "Asia/Taipei",
-  "sections": [
+  "techSources": [
     {
       "id": "github",
-      "name": "科技．GitHub",
-      "navLabel": "GitHub",
-      "source": "issue",
-      "presentation": "github",
-      "columns": 2,
+      "label": "GitHub",
       "dailyCount": 10,
-      "lead": true,
-      "skipPreviousIssues": 3,
-      "treatment": "zh-summary",
-      "emptyText": "今日未能取得",
-      "fallbackNote": "今日改用近 7 天新專案"
+      "skipPreviousIssues": 3
     },
     {
       "id": "hackernews",
-      "name": "科技．Hacker News",
-      "navLabel": "Hacker News",
-      "source": "issue",
-      "presentation": "hackernews",
-      "columns": 2,
+      "label": "Hacker News",
       "dailyCount": 10,
-      "skipPreviousIssues": 1,
-      "treatment": "zh-summary",
-      "emptyText": "今日未能取得"
-    },
+      "skipPreviousIssues": 1
+    }
+  ],
+  "sections": [
     {
-      "id": "international",
-      "name": "國際版",
-      "navLabel": "國際",
-      "source": "international",
-      "presentation": "article",
-      "columns": 3,
-      "dailyCount": 12,
+      "id": "tech",
+      "name": "科技",
+      "navLabel": "科技",
+      "source": "issue",
+      "presentation": "tech",
+      "columns": 2,
       "lead": true,
-      "rank": "sourceCount24h",
-      "treatment": "neutral-rewrite",
-      "emptyText": "今日國際版尚無新聞"
+      "emptyText": "今日未能取得",
+      "fallbackNote": "GitHub 今日改用近 7 天新專案"
     }
   ]
 }

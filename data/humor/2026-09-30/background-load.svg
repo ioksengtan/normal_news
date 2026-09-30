@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200">
+  <rect width="360" height="200" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 15px; }
+  </style>
+
+  <rect x="28" y="48" width="132" height="96" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="40" y="60" width="108" height="60" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="70" cy="84" r="3" fill="#1c1915"/>
+  <circle cx="88" cy="96" r="2.5" fill="#1c1915"/>
+  <circle cx="104" cy="78" r="3" fill="#1c1915"/>
+  <circle cx="122" cy="100" r="2" fill="#1c1915"/>
+  <rect x="78" y="144" width="32" height="10" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="176" cy="58" r="8" fill="none" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="186" cy="72" r="4" fill="#1c1915"/>
+  <rect x="196" y="36" width="148" height="52" rx="8" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <polygon points="210,88 228,88 216,104" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="270" y="68" text-anchor="middle">背景載入中</text>
+  <circle cx="250" cy="140" r="6" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="278" cy="156" r="4" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="304" cy="136" r="7" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="330" cy="160" r="3" fill="#ebe4d4" stroke="#1c1915"/>
+
+</svg>

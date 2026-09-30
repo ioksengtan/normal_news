@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 210">
+  <rect width="360" height="210" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="8" y="16" width="80" height="64" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="48" y="44" text-anchor="middle">世界</text>
+  <text x="48" y="62" text-anchor="middle">事實</text>
+  <rect x="96" y="16" width="80" height="64" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="136" y="44" text-anchor="middle">自身</text>
+  <text x="136" y="62" text-anchor="middle">經驗</text>
+  <rect x="184" y="16" width="80" height="64" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="224" y="52" text-anchor="middle">觀察</text>
+  <rect x="272" y="16" width="80" height="64" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="312" y="44" text-anchor="middle">心智</text>
+  <text x="312" y="62" text-anchor="middle">模型</text>
+  <line x1="48" y1="80" x2="160" y2="124" stroke="#1c1915" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="136" y1="80" x2="170" y2="124" stroke="#1c1915" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="224" y1="80" x2="190" y2="124" stroke="#1c1915" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="312" y1="80" x2="200" y2="124" stroke="#1c1915" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="70" y="132" width="220" height="56" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="165" text-anchor="middle">依過去的經驗調整行為</text>
+</svg>

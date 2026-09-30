@@ -4,7 +4,9 @@
 
 這個流程不呼叫模型。摘要由助手自己寫。不要把模型金鑰放進工作流程。
 
-報紙順序是科技．GitHub、科技．Hacker News，然後國際版。GitHub 第一則是頭條。國際版讀 `data/international.json`，目前維持空陣列，頁面顯示「今日國際版尚無新聞」。科技版這份步驟不填國際版。
+報紙只有一個科技版。GitHub trending 與 Hacker News 的項目合在同一份清單，每則帶來源標籤「GitHub」或「Hacker News」。頭條是 GitHub 當日第一名；其餘依來源名次交錯排列（Hacker News 第一名、GitHub 第二名、Hacker News 第二名，以此類推）。某一來源當天沒有項目時，頭條改用另一個來源的第一名。頁面上可以點來源標籤，只看該來源。
+
+Lobsters 與 Product Hunt 在 2026-09-30 檢查後不收錄。每天的抓取不要加這兩個來源，摘要檔也不要為它們寫項目。原因寫在 [crawling-policy.md](crawling-policy.md) 的「科技版候選來源」。
 
 ## 每天執行的指令
 
@@ -14,9 +16,9 @@
 node scripts/fetch-tech.js
 ```
 
-抓取使用與國際版相同的使用者代理字串 `normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。
+抓取使用使用者代理字串 `normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。
 
-這會寫出 `data/tech/candidates.json`。GitHub 先解析 https://github.com/trending?since=daily ，失敗或少於 10 則時改走搜尋介面（過去 7 天新建、依星數排序），並在候選檔標記備援。Hacker News 讀官方的 `topstories.json` 與 `item/{id}.json`。過去 3 期出現過的 GitHub 專案、前一期出現過的 Hacker News 討論、以及徵才貼文會自動跳過。
+這會寫出 `data/tech/candidates.json`，裡面仍分 `github` 與 `hackernews` 兩組候選，方便對照撰寫摘要。入庫時才合併成一份 `items`。GitHub 先解析 https://github.com/trending?since=daily ，失敗或少於 10 則時改走搜尋介面（過去 7 天新建、依星數排序），並在候選檔標記備援。Hacker News 讀官方的 `topstories.json` 與 `item/{id}.json`。每個來源每天最多 10 則。過去 3 期出現過的 GitHub 專案、前一期出現過的 Hacker News 討論、以及徵才貼文會自動跳過。
 
 若備援搜尋遇到未登入的每小時次數上限，用 GitHub CLI 的權杖再抓一次。在 GitHub Actions 裡則帶工作流程內建的 `GITHUB_TOKEN`：
 
@@ -33,11 +35,15 @@ git commit -m "issue: YYYY-MM-DD 科技版"
 git push
 ```
 
-把 `YYYY-MM-DD` 換成候選檔裡的 `date`。某一版抓取失敗時仍然執行入庫，該版會顯示「今日未能取得」，其他版照常出刊。
+把 `YYYY-MM-DD` 換成候選檔裡的 `date`。某一個來源抓取失敗時仍然執行入庫，該來源不出現在清單裡；兩個來源都失敗時，版面顯示「今日未能取得」。
 
 ## 摘要規則
 
-用平實、可查證的中文，只寫候選資料與原文裡已經有的事實。不要情緒用語，不要評價好壞，不要加上原文沒有的推論。每則摘要長度 150 至 300 字（內容長訂的建議值），並遵守下方「科技版摘要不使用情緒用語」條文。
+讀者是國中生以上。用白話，句子要短。每個專門用語第一次出現時，用日常生活的比喻說明，例如：開源程式庫就像一盒大家都能拿來組東西的樂高積木。比喻只能幫助理解，不能改變事實，也不能添上原文沒有的資訊。
+
+用繁體中文。縮寫第一次出現要寫出全稱，例如先寫「應用程式介面」，再附上英文縮寫。專案名稱保留原文。
+
+只寫候選資料與原文裡已經有的事實。不要情緒用語，不要評價好壞，不要加上原文沒有的推論。每則摘要長度 150 至 300 字（內容長訂的建議值），並遵守下方「科技版摘要不使用情緒用語」條文。
 
 - GitHub：兩到三句，依專案描述與說明文件（README）撰寫：它是什麼、做什麼、給誰用。專案名稱保留原文。
 - Hacker News：中文標題另寫，原文標題保留。摘要兩到三句，摘要所連結的文章。沒有連結的「問 Hacker News」就摘要貼文本身。原文無法取得，或該網站的 robots.txt 禁止人工智慧代理程式抓取時，不抓原文，改依 Hacker News 討論整理，並在摘要中註明。
@@ -48,7 +54,14 @@ git push
 {
   "date": "2026-09-30",
   "github": {
-    "owner/repo": "兩到三句中文。"
+    "owner/repo": {
+      "summary": "兩到三句中文。",
+      "diagram": {
+        "src": "data/diagrams/2026-09-30/owner/repo.svg",
+        "alt": "用一句話說明這張圖在畫什麼。",
+        "caption": "報紙圖說，只重複摘要裡的事實。"
+      }
+    }
   },
   "hackernews": {
     "12345": {
@@ -58,6 +71,8 @@ git push
   }
 }
 ```
+
+沒有圖的項目維持字串，或只放 `summary`，不要留空的 `diagram`。
 
 `date` 必須和候選檔相同。正式出刊不要使用 `--allow-placeholders`。預覽用的占位字樣是「【占位摘要」和「【待譯」。
 
@@ -137,4 +152,46 @@ git push
 | cutting-edge、state-of-the-art | 誇大或絕對化用語 | 刪除，改寫具體技術規格 |
 | unprecedented | 誇大或絕對化用語 | 刪除；若原文有可查證的比較基準，改寫為具體比較 |
 
-國際版以後寫進 `data/international.json`。`events` 每一則有 `id`、`title`、`summary`、`neutralText`、`updatedAt`，以及 `sources`（`name`、`url`、`publishedAt`）。頁面依過去 24 小時的來源數取前 12 則，第一則當頭條；只有一家來源的事件用來補滿 12 則。前一期已刊出、且這期沒有新報導的事件會跳過。
+## 圖解
+
+每一期為頭條，以及另外大約 2 到 3 則「有圖會比較懂」的項目，手寫一張簡單的向量圖。格式是 SVG（用文字描述圖形的檔案）。其餘項目不加圖。
+
+- 只用方框、箭頭，以及圓、矩形這類基本形狀組成的小圖示。
+- 標籤用繁體中文。字型用系統字型：`"Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif`。
+- 底色用報紙的淺色 `#f4f0e6`，線與字用 `#1c1915`，次要說明用 `#5e584e`。
+- 圖要說明該則摘要裡的做法，或摘要已經寫過的比喻。不能畫出摘要沒有的事實，比喻也不能把事實畫歪。
+- 手機寬度大約 360 也要讀得懂：字要大，方塊不要擠在一起。
+- 檔案放在 `data/diagrams/YYYY-MM-DD/<id>.svg`。GitHub 項目的 `<id>` 是 `擁有者/專案`，所以路徑會多一層目錄。
+- 項目加上 `diagram`：`src`、`alt`（看不見圖的人讀的一句話）、`caption`（印在圖下的圖說）。
+- 圖檔只能是 SVG，不大於 60 KB。不可以有 `script`、外部網址、事件處理屬性（例如 `onload`）。內部箭頭用 `url(#箭頭)` 可以。
+
+## 今日一笑
+
+每一期可以加 1 到 2 張原創的小漫畫，放在新聞清單後面的「今日一笑」框，不跟新聞或圖解混在一起。每一張都要連到當天的某一則。沒有合適的題材就不要加。
+
+- 自己用基本形狀畫：圓、矩形、線。人物只是圓頭和方身體，不要畫真人的樣子。
+- 不要用現成的迷因模板、照片、螢幕截圖、商標，也不要畫公司標誌。
+- 幽默要溫和。不要嘲笑任何人或公司，也不要嘲笑一個族群。
+- 對話框和圖說只能重複該則摘要裡已經有的事，不能多加事實。
+- 標籤用繁體中文，字型與配色跟圖解相同。
+- 檔案放在 `data/humor/YYYY-MM-DD/短名.svg`。檢查規則與圖解相同：只能是向量圖、不大於 60 KB、沒有 `script`、沒有外部網址、沒有事件處理屬性。
+- 寫在摘要檔最外層的 `humor`，入庫時會抄進該期：
+
+```json
+"humor": [
+  {
+    "src": "data/humor/2026-09-30/background-load.svg",
+    "alt": "一台流汗的電腦，旁邊是正在載入的小點。",
+    "caption": "瀏覽器在背景載入小行星資料。",
+    "relatedItemId": "49898778"
+  }
+]
+```
+
+`relatedItemId` 必須是這一期 `items` 裡的 `id`。最多兩則。
+
+寫作範例（說明「開源程式庫像共用的積木」，不是某一則新聞）：
+
+![開源程式庫像一盒大家都能拿來組東西的積木](diagrams/example-library.svg)
+
+入庫後的 `data/issues/YYYY-MM-DD.json` 是網站讀的那一份。`items` 已經依名次交錯排好，第一則是頭條。每一則有 `source`（`github` 或 `hackernews`）、`sourceLabel`（「GitHub」或「Hacker News」）、`rank`（該來源當天的名次，從 0 起算）與摘要。有圖的項目另外帶 `diagram`。頭條的圖在頁面上較大，其他圖較小，放在摘要下面。不要再拆成 `sections.github` 與 `sections.hackernews`。
