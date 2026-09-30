@@ -5,6 +5,8 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
+import { USER_AGENT } from '../scripts/lib/http.js';
+import { fetchGithubSection } from '../scripts/fetch-tech.js';
 import { chooseGithub, createdAfterDate, parseTrendingHtml, searchUrl } from '../scripts/tech/github.js';
 import { isHiringPost, selectHnStories } from '../scripts/tech/hn.js';
 import { buildIssue } from '../scripts/tech/issue.js';
@@ -21,6 +23,29 @@ function trendingArticle(name, { starsToday = 10, stars = 100, language = 'Pytho
     <span>${starsToday.toLocaleString('en-US')} stars today</span>
   </article>`;
 }
+
+test('tech fetcher uses the same user agent as the international fetcher', async () => {
+  const agents = [];
+  const original = globalThis.fetch;
+  globalThis.fetch = async (url, options = {}) => {
+    agents.push(options.headers?.['User-Agent']);
+    const href = String(url);
+    if (href.includes('trending')) {
+      return { ok: true, status: 200, text: async () => '<html></html>', json: async () => ({}) };
+    }
+    return { ok: true, status: 200, text: async () => '', json: async () => ({ items: [] }) };
+  };
+  try {
+    await fetchGithubSection({ seenIds: [], date: '2026-09-30', token: '', limit: 10 });
+  } finally {
+    globalThis.fetch = original;
+  }
+  assert.ok(agents.length >= 1);
+  assert.equal(agents.every((agent) => agent === USER_AGENT), true);
+  assert.equal(USER_AGENT, 'normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)');
+  const source = fs.readFileSync(path.join(root, 'scripts/fetch-tech.js'), 'utf8');
+  assert.equal(source.includes('normal-news/1.0'), false);
+});
 
 test('trending HTML keeps page order, today stars, and language', () => {
   const html = [trendingArticle('octo/hello', { starsToday: 56, stars: 1234, language: 'Go' }), trendingArticle('octo/next')].join('');
