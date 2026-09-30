@@ -1,3 +1,4 @@
+import { createHash } from 'crypto';
 import {
   ARTICLE_TYPES,
   EVENT_ID_RE,
@@ -16,8 +17,9 @@ import { criteriaFromRubric } from './rubric.js';
 import { buildSourceStats } from './stats.js';
 import { charLength, compactWhitespace, sharesLongRun } from './text.js';
 
+// 用連結的 SHA-256 雜湊當 id。直接取連結 base64 的前 16 字時，所有 https://www. 開頭的連結都會得到同一個 id。
 export function articleIdFromLink(link) {
-  return Buffer.from(link).toString('base64url').slice(0, 16);
+  return createHash('sha256').update(String(link)).digest('base64url').slice(0, 16);
 }
 
 export function normalizeRewrites(raw) {

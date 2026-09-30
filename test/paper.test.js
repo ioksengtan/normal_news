@@ -206,6 +206,12 @@ test('the public page does not read the Taiwan article file', () => {
     assert.equal(source.includes('removedSpans'), false, file);
     assert.equal(source.includes('biasRatio'), false, file);
   }
+  // 國際版出刊後 events 不再是空陣列；這裡只確認公開檔不帶原文或已停用的欄位。
   const committed = JSON.parse(fs.readFileSync(path.join(root, 'data/international.json'), 'utf8'));
-  assert.deepEqual(committed.events, []);
+  assert.ok(Array.isArray(committed.events));
+  for (const event of committed.events) {
+    for (const key of ['text', 'originalTitle', 'removedSpans', 'biasRatio']) {
+      assert.equal(key in event, false, `${event.id} 不應有 ${key}`);
+    }
+  }
 });

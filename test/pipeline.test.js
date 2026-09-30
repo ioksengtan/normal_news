@@ -593,3 +593,12 @@ test('fetch command keeps going after one feed fails and exits non-zero when all
 
   await closeServer(server, sockets);
 });
+
+test('article ids differ for links on the same host', async () => {
+  const { articleIdFromLink } = await import('../scripts/lib/ingest.js');
+  const a = articleIdFromLink('https://www.bbc.com/zhongwen/articles/aaa/trad');
+  const b = articleIdFromLink('https://www.bbc.com/zhongwen/articles/bbb/trad');
+  assert.notEqual(a, b);
+  assert.match(a, /^[A-Za-z0-9_-]{16}$/);
+  assert.equal(a, articleIdFromLink('https://www.bbc.com/zhongwen/articles/aaa/trad'));
+});

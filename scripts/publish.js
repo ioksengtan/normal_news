@@ -36,6 +36,7 @@ async function main() {
     articles: readJson(path.join(dataDir, 'articles.json')),
     events: readJson(path.join(dataDir, 'events.json')),
     home: readJson(path.join(dataDir, 'home.json')),
+    international: readJson(path.join(dataDir, 'international.json')),
     stats: readJson(path.join(dataDir, 'source_stats.json')),
     criteria: readJson(path.join(dataDir, 'criteria.json')),
     rubric,
