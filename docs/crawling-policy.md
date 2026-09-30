@@ -2,7 +2,7 @@
 
 抓取程式每天台北時間 06:48 由助手執行一次。不在 GitHub Actions 排程，也不呼叫模型 API。
 
-1. 所有請求使用固定的使用者代理字串：`normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。不偽裝成瀏覽器。
+1. 所有請求使用固定的使用者代理字串：`normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。國際版與科技版抓取都用這一個字串。不偽裝成瀏覽器。
 2. 任何抓取之前先讀該主機的 `/robots.txt`，包括新聞訂閱源本身。
 3. 規則只看兩組：有 `normal-news-bot` 具名群組就用該群組，沒有就用 `*`；`*` 群組一律另外檢查。兩者任一禁止，就不抓。只針對訓練爬蟲（例如 GPTBot、ClaudeBot、anthropic-ai）的群組不適用。
 4. robots.txt 回傳 401 或 403 視為全部禁止。其他 4xx 視為允許。5xx、逾時或連線失敗視為全部禁止。

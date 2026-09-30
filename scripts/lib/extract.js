@@ -16,17 +16,44 @@ export async function extractArticleText(url, { timeoutMs = 20000, fetchImpl } =
   return extractFromHtml(html, url);
 }
 
+const VIDEO_EMBED_MARKER = '代码已经复制到剪贴板';
+
+export function isVideoPage({ ogType = '', pageText = '', html = '' } = {}) {
+  const type = String(ogType || '').trim().toLowerCase();
+  if (type === 'video' || type.startsWith('video.')) return true;
+  return String(pageText).includes(VIDEO_EMBED_MARKER) || String(html).includes(VIDEO_EMBED_MARKER);
+}
+
 export function extractFromHtml(html, url) {
   const dom = new JSDOM(html, { url });
-  const reader = new Readability(dom.window.document);
+  const document = dom.window.document;
+  const ogType = document.querySelector('meta[property="og:type"], meta[name="og:type"]')?.getAttribute('content') || '';
+  // Readability 會拿掉文末出處。標記要比對整頁文字，所以先留一份。
+  const pageText = document.body?.textContent || '';
+  const videoPage = isVideoPage({ ogType, pageText, html });
+  const reader = new Readability(document);
   const article = reader.parse();
 
   if (!article || !article.textContent) {
-    throw new Error('無法從頁面擷取可讀內文（可能是動態渲染頁面或付費牆）');
+    if (videoPage) {
+      return {
+        title: document.title || null,
+        text: '',
+        pageText,
+        ogType,
+        videoPage,
+      };
+    }
+    const error = new Error('無法從頁面擷取可讀內文（可能是動態渲染頁面或付費牆）');
+    error.page = { pageText, ogType, videoPage };
+    throw error;
   }
 
   return {
     title: article.title || null,
     text: article.textContent.trim(),
+    pageText,
+    ogType,
+    videoPage,
   };
 }

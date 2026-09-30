@@ -15,7 +15,7 @@
 
 德國之聲停用，因為 robots.txt 的註解禁止未經書面許可以自動化方式探勘或抓取內容。英國廣播公司中文網停用，因為 robots.txt 的註解反對以人工智慧摘要其內容。半島電視台停用，因為使用條款禁止爬蟲與文字探勘。日本時報與韓國先驅報在設定裡但停用。不收台灣國內新聞。每天每個來源最多 6 篇，整輪最多 30 篇。
 
-抓取前先讀 robots.txt。只遵守 `normal-news-bot` 與 `*` 的規則。訓練爬蟲的規則不適用。robots.txt 回傳 401 或 403 視為全部禁止。重新導向到新主機時，先檢查該主機的 robots.txt。內容請求若收到 403，不換 User-Agent、不換 IP。啟用來源前會由人閱讀 robots.txt 註解與使用條款，明確反對就停用。
+國際版與科技版抓取都使用 `normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。抓取前先讀 robots.txt。只遵守 `normal-news-bot` 與 `*` 的規則。訓練爬蟲的規則不適用。robots.txt 回傳 401 或 403 視為全部禁止。重新導向到新主機時，先檢查該主機的 robots.txt。內容請求若收到 403，不換 User-Agent、不換 IP。啟用來源前會由人閱讀 robots.txt 註解與使用條款，明確反對就停用。
 
 ## 資料
 

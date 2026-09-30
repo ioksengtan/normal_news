@@ -14,6 +14,8 @@
 node scripts/fetch-tech.js
 ```
 
+抓取使用與國際版相同的使用者代理字串 `normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。
+
 這會寫出 `data/tech/candidates.json`。GitHub 先解析 https://github.com/trending?since=daily ，失敗或少於 10 則時改走搜尋介面（過去 7 天新建、依星數排序），並在候選檔標記備援。Hacker News 讀官方的 `topstories.json` 與 `item/{id}.json`。過去 3 期出現過的 GitHub 專案、前一期出現過的 Hacker News 討論、以及徵才貼文會自動跳過。
 
 若備援搜尋遇到未登入的每小時次數上限，用 GitHub CLI 的權杖再抓一次。在 GitHub Actions 裡則帶工作流程內建的 `GITHUB_TOKEN`：

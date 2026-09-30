@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { applySourceFilters } from '../scripts/lib/filters.js';
+import { extractFromHtml, isVideoPage } from '../scripts/lib/extract.js';
+import { applySourceFilters, markerInText, pageTail } from '../scripts/lib/filters.js';
 import { aiAgentBlocks, fetchRobots } from '../scripts/lib/robots.js';
 import { normalizeOffsetDate } from '../scripts/lib/rss.js';
 import { sharesLongRun } from '../scripts/lib/text.js';
@@ -68,6 +69,44 @@ test('source filters drop old DW items, Al Jazeera liveblogs, and CNA Asia busin
     excludeBylineMarkers: ['RNZ', 'Radio New Zealand', 'RNZ Pacific', 'republished from', 'reprinted from', 'originally published'],
   }, now);
   assert.deepEqual(apr.map((item) => item.title), ['Original']);
+});
+
+test('page credits dropped by the readable-text step still match markers in the tail', () => {
+  const story = '<p>市政府說明預算程序已經完成，各方說法分開轉述。</p>'.repeat(12);
+  const html = `<!doctype html><html><head><title>預算</title>
+    <meta property="og:type" content="article"></head><body>
+    <article>${story}</article>
+    <footer>Source: AFP/staff writer</footer>
+    </body></html>`;
+  const extracted = extractFromHtml(html, 'https://www.channelnewsasia.com/world/story');
+  assert.equal(extracted.text.includes('Source: AFP'), false);
+  assert.match(extracted.pageText, /Source: AFP/);
+  assert.equal(markerInText(pageTail(extracted.pageText), 'Source: AFP'), true);
+  assert.equal(markerInText(pageTail(extracted.pageText), 'Source: AP'), false);
+
+  const early = `AFP ${'字'.repeat(2000)}結尾沒有通訊社`;
+  assert.equal(markerInText(pageTail(early), 'AFP'), false);
+  assert.equal(markerInText(pageTail(`${'字'.repeat(2000)} Republished by Radio Desk`), 'Republished by'), true);
+  assert.equal(markerInText(pageTail(`${'字'.repeat(2000)} Republished from RNZ`), 'Republished from'), true);
+  assert.equal(markerInText(pageTail(`${'字'.repeat(2000)} Source: Reuters`), 'Source: Reuters'), true);
+});
+
+test('Voice of America video pages are detected when the url is not under /video/', () => {
+  const story = '<p>這是一段足夠長的報導文字，用來通過可讀性萃取。</p>'.repeat(8);
+  const og = extractFromHtml(`<!doctype html><html><head>
+    <meta property="og:type" content="video.other"><title>片</title></head>
+    <body><article>${story}</article></body></html>`,
+  'https://www.voachinese.com/a/123.html');
+  assert.equal(og.videoPage, true);
+  assert.equal(isVideoPage({ ogType: 'video' }), true);
+  assert.equal(isVideoPage({ ogType: 'article' }), false);
+
+  const embed = extractFromHtml(`<!doctype html><html><head>
+    <meta property="og:type" content="article"><title>片</title></head>
+    <body><article>${story}</article><div>代码已经复制到剪贴板</div></body></html>`,
+  'https://www.voachinese.com/a/456.html');
+  assert.equal(embed.videoPage, true);
+  assert.match(embed.pageText, /代码已经复制到剪贴板/);
 });
 
 test('robots.txt 401 and 403 disallow every path; other 4xx still allow', async () => {

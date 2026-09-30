@@ -160,6 +160,12 @@ test('source config is international news and tech only', () => {
     ['Wall Street', 'stocks', 'oil prices', 'bond yields'],
   );
   assert.ok(sources.find((source) => source.id === 'channel-news-asia').excludeBylineMarkers.includes('AFP'));
+  assert.ok(sources.find((source) => source.id === 'channel-news-asia').excludeBylineMarkers.includes('Source: AFP'));
+  assert.ok(sources.find((source) => source.id === 'channel-news-asia').excludeBylineMarkers.includes('Source: AP'));
+  assert.ok(sources.find((source) => source.id === 'channel-news-asia').excludeBylineMarkers.includes('Source: Reuters'));
+  assert.ok(sources.find((source) => source.id === 'voa-chinese').excludeBylineMarkers.includes('Source: Reuters'));
+  assert.ok(sources.find((source) => source.id === 'asiapacific-report').excludeBylineMarkers.includes('Republished from'));
+  assert.ok(sources.find((source) => source.id === 'asiapacific-report').excludeBylineMarkers.includes('Republished by'));
   assert.ok(sources.find((source) => source.id === 'voa-chinese').excludeUrlSubstrings.includes('/video/'));
   assert.equal(rubric.humanSummary.includes('公法國際廣播'), false);
   assert.match(rubric.humanSummary, /德國之聲、法國國際廣播電台都沒有收錄/);
@@ -609,6 +615,66 @@ test('feed items keep bylines so wire copy can be filtered', async () => {
   }, { timeoutMs: 2000, limit: 5 });
   assert.equal(fetched.ok, true);
   assert.equal(fetched.items[0].author, 'AFP');
+  await closeServer(server, sockets);
+});
+
+test('a page-level wire credit does not consume the per-source quota', async () => {
+  const story = '<p>Council members described the budget vote and the replies from each office.</p>'.repeat(8);
+  const page = (credit) => `<!doctype html><html><head><title>Budget vote</title></head><body>
+    <article><h1>Budget vote</h1>${story}</article>
+    ${credit ? `<footer>${credit}</footer>` : ''}
+  </body></html>`;
+  const server = http.createServer((req, res) => {
+    const port = server.address().port;
+    if (req.url.startsWith('/robots.txt')) {
+      res.writeHead(200, { 'content-type': 'text/plain' });
+      res.end('User-agent: *\nAllow: /\n');
+      return;
+    }
+    if (req.url.startsWith('/feed')) {
+      res.writeHead(200, { 'content-type': 'application/rss+xml' });
+      res.end(`<?xml version="1.0" encoding="UTF-8"?>
+        <rss version="2.0"><channel><title>desk</title>
+          <item><title>Wire</title><link>http://127.0.0.1:${port}/wire</link><pubDate>Wed, 30 Sep 2026 01:00:00 GMT</pubDate></item>
+          <item><title>Original</title><link>http://127.0.0.1:${port}/clean</link><pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate></item>
+        </channel></rss>`);
+      return;
+    }
+    res.writeHead(200, { 'content-type': 'text/html' });
+    res.end(page(req.url.startsWith('/wire') ? 'Source: AFP/staff writer' : ''));
+  });
+  const sockets = trackSockets(server);
+  const port = await listen(server);
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'normal-news-marker-'));
+  const dataDir = path.join(dir, 'data');
+  fs.mkdirSync(dataDir);
+  fs.writeFileSync(path.join(dataDir, 'articles.json'), '[]\n');
+  fs.writeFileSync(path.join(dataDir, 'events.json'), '[]\n');
+  const sourcesPath = path.join(dir, 'sources.json');
+  const outFile = path.join(dir, 'candidates.json');
+  fs.writeFileSync(sourcesPath, JSON.stringify({
+    sources: [{
+      id: 'desk',
+      source: '測試台',
+      url: `http://127.0.0.1:${port}/feed`,
+      enabled: true,
+      excludeBylineMarkers: ['Source: AFP', 'Source: AP', 'Source: Reuters'],
+    }],
+  }));
+  const result = await runNode([
+    path.join(root, 'scripts', 'fetch-candidates.js'),
+    '--sources', sourcesPath,
+    '--data-dir', dataDir,
+    '--out', outFile,
+    '--per-source', '1',
+    '--timeout', '2000',
+  ]);
+  assert.equal(result.status, 0, result.stderr);
+  const output = JSON.parse(fs.readFileSync(outFile, 'utf8'));
+  assert.equal(output.feeds[0].markerSkipped, 1);
+  assert.equal(output.candidates.length, 1);
+  assert.match(output.candidates[0].link, /\/clean$/);
+  assert.equal(output.candidates[0].text.includes('Source: AFP'), false);
   await closeServer(server, sockets);
 });
 

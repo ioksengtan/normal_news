@@ -4,11 +4,11 @@ import { MIN_ARTICLE_TEXT_CHARS } from './lib/constants.js';
 import { extractArticleText } from './lib/extract.js';
 import { fetchResponse, MIN_REQUEST_GAP_MS, taipeiStamp, waitForSlot } from './lib/http.js';
 import { stripTracking } from './lib/url.js';
-import { applySourceFilters } from './lib/filters.js';
+import { applySourceFilters, markerInText, pageTail } from './lib/filters.js';
 import { articleIdFromLink } from './lib/ingest.js';
 import { readJson, writeJson } from './lib/jsonio.js';
 import { aiAgentBlocks, fetchRobots } from './lib/robots.js';
-import { countUnseen, feedFailureSummary, fetchFeed, selectByQuota } from './lib/rss.js';
+import { countUnseen, feedFailureSummary, fetchFeed } from './lib/rss.js';
 import { fetchLimitsFromConfig, loadSources } from './lib/sources.js';
 import { charLength } from './lib/text.js';
 
@@ -53,7 +53,17 @@ function emptyFeed(source, status, error) {
     selectedCount: 0,
     extractedCount: 0,
     robotsSkipped: 0,
+    markerSkipped: 0,
   };
+}
+
+function pageRejection(extracted, sourceConfig) {
+  const markers = sourceConfig?.excludeBylineMarkers || [];
+  const tail = pageTail(extracted?.pageText || '');
+  const hit = markers.find((marker) => marker && markerInText(tail, marker));
+  if (hit) return `頁面末段含有排除標記 ${hit}`;
+  if (sourceConfig?.id === 'voa-chinese' && extracted?.videoPage) return '影片頁';
+  return '';
 }
 
 function fetchChecked(timeoutMs) {
@@ -192,15 +202,19 @@ async function main() {
     }
   }
 
-  const selected = selectByQuota(pooled, seenLinks, perSource).slice(0, total);
-  for (const item of selected) {
-    const report = feedReports.find((entry) => entry.id === item.feedId);
-    if (report) report.selectedCount += 1;
-  }
-
   const candidates = [];
-  for (const item of selected) {
+  const acceptedByFeed = new Map();
+  let acceptedTotal = 0;
+  let extractAttempts = 0;
+  let extractFailures = 0;
+  for (const item of pooled) {
+    if (!item.link || seenLinks.has(item.link)) continue;
+    if (acceptedTotal >= total) break;
+    const used = acceptedByFeed.get(item.feedId) || 0;
+    if (used >= perSource) continue;
+
     const report = feedReports.find((entry) => entry.id === item.feedId);
+    const sourceConfig = sources.find((entry) => entry.id === item.feedId);
     let articleUrl = item.link;
     try {
       articleUrl = stripTracking(item.link);
@@ -222,16 +236,22 @@ async function main() {
     }
     try {
       await pauseForCrawlDelay(articleUrl, Math.max(5, articleGate.crawlDelaySeconds));
+      extractAttempts += 1;
       const loadArticle = fetchChecked(timeoutMs);
       const extracted = await extractArticleText(articleUrl, {
         timeoutMs,
         fetchImpl: async (pageUrl, options) => (await loadArticle(pageUrl, options)).text,
       });
+      const reason = pageRejection(extracted, sourceConfig);
+      if (reason) {
+        if (report) report.markerSkipped += 1;
+        console.error(`[略過] ${taipeiStamp()} ${item.source} ${articleUrl}：${reason}`);
+        continue;
+      }
       const text = extracted.text || '';
       if (charLength(text) < MIN_ARTICLE_TEXT_CHARS) {
         throw new Error(`內文過短（${charLength(text)} 字，可能是動態渲染或萃取失敗）`);
       }
-      const sourceConfig = sources.find((entry) => entry.id === item.feedId);
       const candidate = {
         id: articleIdFromLink(item.link),
         url: articleUrl,
@@ -244,9 +264,22 @@ async function main() {
       };
       if (sourceConfig?.license) candidate.license = sourceConfig.license;
       candidates.push(candidate);
-      if (report) report.extractedCount += 1;
+      acceptedByFeed.set(item.feedId, used + 1);
+      acceptedTotal += 1;
+      seenLinks.add(item.link);
+      if (report) {
+        report.selectedCount += 1;
+        report.extractedCount += 1;
+      }
       console.log(`[萃取] ${item.source} ${extracted.title || item.title}`);
     } catch (err) {
+      const reason = pageRejection(err.page, sourceConfig);
+      if (reason) {
+        if (report) report.markerSkipped += 1;
+        console.error(`[略過] ${taipeiStamp()} ${item.source} ${articleUrl}：${reason}`);
+        continue;
+      }
+      extractFailures += 1;
       console.error(`[萃取失敗] ${item.source} ${item.link}：${err.message}`);
     }
   }
@@ -254,7 +287,7 @@ async function main() {
   for (const report of feedReports) {
     if (report.status !== 'ok') continue;
     console.log(
-      `[選取] ${report.source} (${report.id}) 新 ${report.newCount}，選取 ${report.selectedCount}，萃取 ${report.extractedCount}，robots 略過 ${report.robotsSkipped}`,
+      `[選取] ${report.source} (${report.id}) 新 ${report.newCount}，選取 ${report.selectedCount}，萃取 ${report.extractedCount}，標記略過 ${report.markerSkipped}，robots 略過 ${report.robotsSkipped}`,
     );
   }
 
@@ -291,7 +324,7 @@ async function main() {
     if (summary.blockedCount > 0) parts.push(`${summary.blockedCount} 個來源被 robots.txt 擋下`);
     console.error(`警告：${parts.join('，')}，已用其餘來源繼續。`);
   }
-  if (selected.length > 0 && candidates.length === 0) {
+  if (extractAttempts > 0 && candidates.length === 0 && extractFailures > 0) {
     console.error('有新文章但全部萃取失敗。');
     code = 1;
   }

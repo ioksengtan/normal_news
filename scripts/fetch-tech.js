@@ -5,10 +5,10 @@ import { chooseGithub, mapSearchItem, parseTrendingHtml, searchUrl, trendingSele
 import { selectHnStories } from './tech/hn.js';
 import { previousSectionIds } from './tech/select.js';
 import { taipeiDateString } from '../js/time.js';
+import { USER_AGENT } from './lib/http.js';
 
 const HN_TOP = 'https://hacker-news.firebaseio.com/v0/topstories.json';
 const HN_ITEM = 'https://hacker-news.firebaseio.com/v0/item';
-const USER_AGENT = 'normal-news/1.0 (+https://github.com/ioksengtan/normal_news)';
 
 function arg(name, fallback) {
   const index = process.argv.indexOf(name);
