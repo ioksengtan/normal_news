@@ -28,7 +28,12 @@
       "placeholder": false,
       "source": "github",
       "sourceLabel": "GitHub",
-      "rank": 0
+      "rank": 0,
+      "diagram": {
+        "src": "data/diagrams/2026-09-30/debpalash/VoiceStudio.svg",
+        "alt": "自己的電腦連到 VoiceStudio，再連到本機引擎 OmniVoice。遠端服務以虛線標成可以不開。下方是配音、語音轉文字與有聲書。",
+        "caption": "VoiceStudio 在自己的電腦上處理聲音，遠端服務可以不開。"
+      }
     },
     {
       "id": 49901736,
@@ -55,7 +60,12 @@
       "placeholder": false,
       "source": "github",
       "sourceLabel": "GitHub",
-      "rank": 1
+      "rank": 1,
+      "diagram": {
+        "src": "data/diagrams/2026-09-30/NVIDIA/OpenShell.svg",
+        "alt": "代理程式放在隔離的沙箱裡。政策檔指向沙箱，旁邊是核心層檢查。下方寫著新增權限先由人審核，以及看不到真正的憑證。",
+        "caption": "代理程式只能碰到政策允許的範圍，新增權限先由人審核。"
+      }
     },
     {
       "id": 49899090,
@@ -82,7 +92,12 @@
       "placeholder": false,
       "source": "github",
       "sourceLabel": "GitHub",
-      "rank": 2
+      "rank": 2,
+      "diagram": {
+        "src": "data/diagrams/2026-09-30/vectorize-io/hindsight.svg",
+        "alt": "世界事實、自身經驗、觀察與心智模型四個方塊，箭頭指向依過去的經驗調整行為。",
+        "caption": "Hindsight 把記憶分成四類，用來調整之後的行為。"
+      }
     },
     {
       "id": 49897993,
@@ -231,7 +246,12 @@
       "placeholder": false,
       "source": "hackernews",
       "sourceLabel": "Hacker News",
-      "rank": 7
+      "rank": 7,
+      "diagram": {
+        "src": "data/diagrams/2026-09-30/49892245.svg",
+        "alt": "左側是 2002 年損失超過 50%，中間是監控、數位電表與當地收費，右側是 2026 年損失降到 5% 至 6%。",
+        "caption": "德里的配電改革把電力損失從超過 50% 降到 5% 至 6%。"
+      }
     },
     {
       "id": "cs341-illinois/coursebook",

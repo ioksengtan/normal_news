@@ -3,6 +3,7 @@ import path from 'path';
 import { parseArgs } from './lib/args.js';
 import { readJson } from './lib/jsonio.js';
 import { TECH_SOURCES } from './tech/combine.js';
+import { diagramProblems } from './lib/svg.js';
 
 const USAGE = `用法：npm run validate-data -- [--data-dir data]
 
@@ -76,6 +77,14 @@ function main() {
       }
       for (const key of FORBIDDEN_KEYS) {
         if (key in item) problems.push(`${label} 含有 ${key}`);
+      }
+      for (const problem of diagramProblems({
+        diagram: item.diagram,
+        date: issue.date,
+        id: item.id,
+        dataDir,
+      })) {
+        problems.push(`${label} ${problem}`);
       }
     }
   }

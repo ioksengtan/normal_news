@@ -29,6 +29,7 @@ function techItem(source, id, extra = {}) {
     comments: extra.comments ?? 0,
     summary: extra.summary || '這是一則中文摘要，說明這則科技消息的事實。',
     placeholder: extra.placeholder === true,
+    diagram: extra.diagram || null,
   };
 }
 
@@ -58,6 +59,11 @@ test('one tech section leads with the top story and tags each item', () => {
           stars: 100,
           summary: '【占位摘要，尚未撰寫】這是占位說明，不是正式摘要，用來預覽版面。',
           placeholder: true,
+          diagram: {
+            src: 'data/diagrams/2026-09-30/octo/lead.svg',
+            alt: '自己的電腦連到本機引擎',
+            caption: '在自己的電腦上處理聲音。',
+          },
         }),
         techItem('hackernews', 7, {
           rank: 0,
@@ -69,6 +75,11 @@ test('one tech section leads with the top story and tags each item', () => {
           comments: 2,
           summary: '這是一段比較長的中文說明，'.repeat(8),
           placeholder: true,
+          diagram: {
+            src: 'data/diagrams/2026-09-30/7.svg',
+            alt: '四種記憶指向調整行為',
+            caption: '其他項目的圖比較小。',
+          },
         }),
       ],
     },
@@ -88,6 +99,10 @@ test('one tech section leads with the top story and tags each item', () => {
   assert.match(html, /class="summary clamp"/);
   assert.match(html, /展開/);
   assert.match(html, /本版摘要尚未由內容長撰寫/);
+  assert.match(html, /<figure class="diagram is-lead">/);
+  assert.match(html, /<figure class="diagram">/);
+  assert.match(html, /在自己的電腦上處理聲音。/);
+  assert.match(html, /其他項目的圖比較小。/);
   assert.equal(html.includes('國際版'), false);
   assert.equal(html.includes('articles.json'), false);
 });

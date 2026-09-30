@@ -23,7 +23,17 @@ function presentTech(item) {
     comments: item.comments ?? 0,
     links: Array.isArray(item.links) ? item.links : [],
     placeholder: item.placeholder === true,
+    diagram: presentDiagram(item.diagram),
   };
+}
+
+function presentDiagram(diagram) {
+  if (!diagram || typeof diagram !== 'object') return null;
+  const src = String(diagram.src || '');
+  const alt = String(diagram.alt || '');
+  const caption = String(diagram.caption || '');
+  if (!src || !alt || !caption) return null;
+  return { src, alt, caption };
 }
 
 function techSection(section, issue) {

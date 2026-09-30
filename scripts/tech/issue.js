@@ -82,7 +82,7 @@ export function buildIssue({ candidates, summaries, existingIndex = { issues: []
 function toGithub(item, entry, errors, allowPlaceholders) {
   const summary = summaryText(entry);
   validateSummary(summary, item.description, `GitHub ${item.id}`, errors, allowPlaceholders);
-  return {
+  return withDiagram({
     id: item.id,
     name: item.name,
     url: item.url,
@@ -91,7 +91,7 @@ function toGithub(item, entry, errors, allowPlaceholders) {
     stars: item.stars ?? null,
     summary,
     placeholder: PLACEHOLDER_RE.test(summary),
-  };
+  }, entry);
 }
 
 function toHackerNews(item, entry, errors, allowPlaceholders) {
@@ -108,7 +108,7 @@ function toHackerNews(item, entry, errors, allowPlaceholders) {
   if (!/^https:\/\/news\.ycombinator\.com\/item\?id=\d+$/.test(item.hnUrl || '')) {
     errors.push(`Hacker News ${item.id} 的討論連結無效`);
   }
-  return {
+  return withDiagram({
     id: item.id,
     title: item.title,
     titleZh,
@@ -118,7 +118,12 @@ function toHackerNews(item, entry, errors, allowPlaceholders) {
     comments: item.comments ?? 0,
     summary,
     placeholder: PLACEHOLDER_RE.test(summary) || PLACEHOLDER_RE.test(titleZh),
-  };
+  }, entry);
+}
+
+function withDiagram(item, entry) {
+  if (!entry || typeof entry !== 'object' || entry.diagram == null) return item;
+  return { ...item, diagram: entry.diagram };
 }
 
 function publicSection(name, block, summaryTable, { toPublic, errors, allowPlaceholders }) {

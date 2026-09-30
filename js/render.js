@@ -46,6 +46,23 @@ function techLinks(item) {
   return links.length ? `<p class="tech-links">${links.join('')}</p>` : '';
 }
 
+function diagramUrl(src) {
+  const text = String(src || '');
+  if (!/^data\/diagrams\/\d{4}-\d{2}-\d{2}\/[A-Za-z0-9][A-Za-z0-9._/-]*\.svg$/.test(text)) return '';
+  if (text.split('/').some((part) => part === '..' || part === '.')) return '';
+  return text;
+}
+
+function renderDiagram(item, lead) {
+  const diagram = item.diagram;
+  const src = diagramUrl(diagram?.src);
+  if (!src) return '';
+  return `<figure class="diagram${lead ? ' is-lead' : ''}">
+    <img src="${escapeHtml(src)}" alt="${escapeHtml(diagram.alt)}" />
+    <figcaption>${escapeHtml(diagram.caption)}</figcaption>
+  </figure>`;
+}
+
 function renderTech(item, lead) {
   const title = item.source === 'hackernews'
     ? (item.titleZh || item.title)
@@ -59,6 +76,7 @@ function renderTech(item, lead) {
     <h3>${escapeHtml(title)}</h3>
     ${original}
     ${expandableSummary(item.summary, lead)}
+    ${renderDiagram(item, lead)}
     <p class="meta">${escapeHtml(meta)}</p>
     ${techLinks(item)}
   </article>`;

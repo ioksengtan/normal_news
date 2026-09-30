@@ -143,7 +143,15 @@ test('ingest requires real summaries and still publishes a failed section', () =
   const summaries = {
     date: '2026-09-30',
     hackernews: {
-      42: { titleZh: '【待譯，尚未翻譯】', summary: '【占位摘要，尚未撰寫】此處將由內容長改寫成事實摘要。' },
+      42: {
+        titleZh: '【待譯，尚未翻譯】',
+        summary: '【占位摘要，尚未撰寫】此處將由內容長改寫成事實摘要。',
+        diagram: {
+          src: 'data/diagrams/2026-09-30/42.svg',
+          alt: '一張說明流程的圖',
+          caption: '圖說只重複摘要裡的事實。',
+        },
+      },
     },
   };
   assert.throws(() => buildIssue({ candidates, summaries, allowPlaceholders: false }), /占位/);
@@ -160,6 +168,7 @@ test('ingest requires real summaries and still publishes a failed section', () =
   assert.equal(issue.items[0].sourceLabel, 'Hacker News');
   assert.equal(issue.items[0].rank, 0);
   assert.equal(issue.items[0].titleZh.includes('待譯'), true);
+  assert.equal(issue.items[0].diagram.caption, '圖說只重複摘要裡的事實。');
   assert.equal(JSON.stringify(issue).includes('raw post'), false);
   assert.equal(issue.sections, undefined);
   assert.equal(index.issues.at(-1).path, 'data/issues/2026-09-30.json');

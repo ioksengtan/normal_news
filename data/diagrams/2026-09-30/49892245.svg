@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200">
+  <rect width="360" height="200" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="12" y="36" width="96" height="88" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="60" y="68" text-anchor="middle">2002 年</text>
+  <text x="60" y="90" text-anchor="middle">損失超過</text>
+  <text x="60" y="110" text-anchor="middle">50%</text>
+  <line x1="108" y1="80" x2="132" y2="80" stroke="#1c1915" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="140" y="24" width="88" height="120" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="184" y="52" text-anchor="middle">監控</text>
+  <text x="184" y="78" text-anchor="middle">數位電表</text>
+  <text x="184" y="104" text-anchor="middle">當地收費</text>
+  <line x1="228" y1="80" x2="252" y2="80" stroke="#1c1915" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="260" y="36" width="88" height="88" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="304" y="68" text-anchor="middle">2026 年</text>
+  <text x="304" y="90" text-anchor="middle">損失降到</text>
+  <text x="304" y="110" text-anchor="middle">5% 至 6%</text>
+</svg>

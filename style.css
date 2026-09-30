@@ -210,6 +210,37 @@ a { color: inherit; }
   overflow-wrap: anywhere;
 }
 
+.diagram {
+  margin: 12px 0 0;
+  max-width: 100%;
+}
+
+.diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 168px;
+  object-fit: contain;
+  object-position: center;
+  background: var(--paper);
+  border: 1px solid var(--rule-soft);
+}
+
+.diagram.is-lead img {
+  max-height: 240px;
+}
+
+.diagram figcaption {
+  margin: 0;
+  padding-top: 6px;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
 .clamp {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -327,6 +358,10 @@ button:focus-visible {
     font-size: 34px;
     line-height: 1.35;
   }
+
+  .diagram img { max-height: 200px; }
+
+  .diagram.is-lead img { max-height: none; }
 }
 
 @media (min-width: 1024px) {
