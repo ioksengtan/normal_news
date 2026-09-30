@@ -24,16 +24,20 @@ export function normalizeEvents(data) {
     const reports = sources
       .filter((source) => source.publishedAt && !Number.isNaN(Date.parse(source.publishedAt)))
       .map((source) => ({ source: source.name, at: source.publishedAt }));
-    const neutralText = String(event.neutralText || '').trim();
-    const head = headlineAndSummary(neutralText, event.title || event.neutralTitle);
-    const title = String(event.title || head.title || '').trim();
+    const neutralTitle = String(event.neutralTitle || event.title || '').trim();
+    const neutralSummary = String(event.neutralSummary || event.summary || event.neutralText || '').trim();
+    const head = headlineAndSummary(neutralSummary, neutralTitle);
+    const title = neutralTitle || head.title;
     if (!title) return null;
     return {
       id: String(event.id),
       title,
-      summary: String(event.summary || head.summary || '').trim(),
-      neutralText,
+      summary: neutralSummary || head.summary,
+      neutralText: neutralSummary,
       neutralTitle: title,
+      sourceLanguage: event.sourceLanguage || '',
+      articleType: event.articleType || '',
+      balanceNotes: Array.isArray(event.balanceNotes) ? event.balanceNotes : [],
       updatedAt: event.updatedAt || maxIso(reports.map((report) => report.at)),
       sources,
       reports,
@@ -48,5 +52,8 @@ export function presentEvent(event) {
     summary: event.summary,
     sources: event.sources,
     updatedAt: event.updatedAt,
+    sourceLanguage: event.sourceLanguage || '',
+    articleType: event.articleType || '',
+    balanceNotes: event.balanceNotes || [],
   };
 }

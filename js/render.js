@@ -1,22 +1,38 @@
 import { escapeHtml, headlineAndSummary, safeUrl } from './html.js';
 import { formatHM } from './time.js';
 
+function languageLine(language) {
+  const text = {
+    英文: '本摘要根據英文原文撰寫。',
+    簡體中文: '本摘要根據簡體中文原文撰寫。',
+    繁體中文: '本摘要根據繁體中文原文撰寫。',
+  }[language];
+  return text ? `<p class="meta">${escapeHtml(text)}</p>` : '';
+}
+
+function commentaryLine(articleType) {
+  return articleType === '評論' ? '<p class="meta">評論</p>' : '';
+}
+
 function sourceLine(sources, updatedAt) {
   const links = (sources || []).map((source) => {
     const url = safeUrl(source.url);
-    const name = escapeHtml(source.name || '未知來源');
+    const name = escapeHtml(source.name || '來源');
+    const label = `${name}　閱讀原文`;
     return url
-      ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${name}</a>`
-      : name;
+      ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`
+      : label;
   });
   const time = updatedAt && !Number.isNaN(Date.parse(updatedAt)) ? formatHM(new Date(updatedAt)) : '';
   if (links.length === 0 && !time) return '';
-  const sourceText = links.length ? `來源：${links.join('、')}` : '';
+  const sourceText = links.length ? links.join('、') : '';
   return `<p class="meta">${sourceText}${sourceText && time ? ' · ' : ''}${escapeHtml(time)}</p>`;
 }
 
 function renderArticleCard(item, lead) {
   return `<article class="item${lead ? ' is-lead' : ''}">
+    ${languageLine(item.sourceLanguage)}
+    ${commentaryLine(item.articleType)}
     <h3><a href="article.html?id=${encodeURIComponent(item.id)}">${escapeHtml(item.title)}</a></h3>
     ${item.summary ? `<p class="summary">${escapeHtml(item.summary)}</p>` : ''}
     ${sourceLine(item.sources, item.updatedAt)}
@@ -164,18 +180,24 @@ function paragraphs(text) {
 
 export function renderArticle(event, config, pageUrl) {
   if (!event) return '<p class="empty">找不到這則新聞。</p>';
-  const { title } = headlineAndSummary(event.neutralText, event.neutralTitle);
-  const body = paragraphs(event.neutralText).map((part) => `<p>${escapeHtml(part)}</p>`).join('');
+  const summary = event.neutralSummary || event.neutralText || event.summary || '';
+  const { title } = headlineAndSummary(summary, event.neutralTitle || event.title);
+  const body = paragraphs(summary).map((part) => `<p>${escapeHtml(part)}</p>`).join('');
+  const notes = (event.balanceNotes || []).map((note) => `<p>${escapeHtml(note)}</p>`).join('');
   const sources = (event.sources || []).map((source) => {
     const url = safeUrl(source.url);
     const name = escapeHtml(source.name || '來源');
+    const label = `${name}　閱讀原文`;
     return url
-      ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${name}</a>`
-      : name;
+      ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`
+      : label;
   }).join('、');
   const report = reportUrl(config?.repository, config?.issueForm, pageUrl, title || '新聞');
-  return `<h2>${escapeHtml(title || '新聞')}</h2>
+  return `${languageLine(event.sourceLanguage)}
+    ${commentaryLine(event.articleType)}
+    <h2>${escapeHtml(title || '新聞')}</h2>
     <div class="article-body">${body}</div>
-    ${sources ? `<p class="source-list">原文：${sources}</p>` : ''}
+    ${notes}
+    ${sources ? `<p class="source-list">${sources}</p>` : ''}
     <p class="report"><a href="${escapeHtml(report)}">回報問題</a></p>`;
 }
