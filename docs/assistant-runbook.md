@@ -18,18 +18,16 @@ npm run publish
 
 ## 來源
 
-啟用中的只有這四個，都在 `config/sources.json`：
+啟用中的來源在 `config/sources.json`：
 
 | id | 來源 | 篩選 |
 | --- | --- | --- |
-| `bbc-chinese-trad` | 英國廣播公司中文網 | 無 |
 | `dw-chinese` | 德國之聲 | 超過 3 天的項目不收 |
-| `al-jazeera` | 半島電視台 | 去掉追蹤參數，網址含 `/liveblog/` 的不收 |
-| `channel-news-asia` | 亞洲新聞台 | 分類含 business 或 commentary 的不收 |
+| `channel-news-asia` | 亞洲新聞台 | 分類含 business 或 commentary 的不收；標題或摘要含 Wall Street、stocks、oil prices、bond yields 的行情稿不收 |
 
-日本時報與韓國先驅報在設定裡，`enabled` 為 false，等書面許可。不要把台灣媒體加回來。
+英國廣播公司中文網已停用：robots.txt 的註解反對以人工智慧摘要其內容。半島電視台已停用：使用條款禁止爬蟲與文字探勘。日本時報與韓國先驅報在設定裡，`enabled` 為 false，等書面許可。不要把台灣媒體加回來，也不要重新啟用已表明反對的來源。
 
-每個來源預設最多 2 篇，整輪最多 8 篇。已在 `data/articles.json` 的連結會跳過。抓取前先查 robots.txt。單一來原始失敗或被擋下只警告；全部啟用中的來源都沒成功時，結束碼是 1。
+每個來源預設最多 6 篇，整輪最多 30 篇，數字在設定檔的 `perSource` 與 `total`。已在 `data/articles.json` 的連結會跳過。抓取前先查 robots.txt。單一來原始失敗或被擋下只警告；全部啟用中的來源都沒成功時，結束碼是 1。
 
 ## 改寫 JSON
 

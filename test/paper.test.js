@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
-import { buildPaper, selectByCoverage } from '../js/paper.js';
+import { buildPaper, eventIdsFromIssue, previousIssueEntry, selectByCoverage } from '../js/paper.js';
 import { renderArticle, renderNav, renderSections } from '../js/render.js';
 import { formatDateline, publicationStart, taipeiDateString } from '../js/time.js';
 
@@ -129,7 +129,7 @@ test('a previously printed international story waits for a new report', () => {
     sources: [],
     reports,
   });
-  const ids = selectByCoverage([
+  const events = [
     event('repeated', [
       { source: '甲', at: '2026-09-29T20:00:00.000Z' },
       { source: '乙', at: '2026-09-29T20:10:00.000Z' },
@@ -142,10 +142,44 @@ test('a previously printed international story waits for a new report', () => {
       { source: '甲', at: '2026-09-30T01:00:00.000Z' },
       { source: '乙', at: '2026-09-30T01:00:00.000Z' },
     ]),
-  ], now, 12).map((item) => item.id);
+  ];
+  const withoutArchive = selectByCoverage(events, now, 12).map((item) => item.id);
+  assert.equal(withoutArchive.includes('repeated'), true);
+  assert.equal(withoutArchive.includes('developed'), true);
+  assert.equal(withoutArchive.includes('fresh'), true);
+
+  const ids = selectByCoverage(events, now, 12, ['repeated', 'developed']).map((item) => item.id);
   assert.equal(ids.includes('repeated'), false);
   assert.equal(ids.includes('developed'), true);
   assert.equal(ids.includes('fresh'), true);
+
+  const issues = [
+    { date: '2026-09-29', path: 'data/issues/2026-09-29.json', internationalEventIds: ['repeated'] },
+    { date: '2026-09-30', path: 'data/issues/2026-09-30.json' },
+  ];
+  assert.equal(previousIssueEntry(issues, '2026-09-30').date, '2026-09-29');
+  assert.equal(previousIssueEntry(issues, '2026-09-29'), null);
+  assert.deepEqual(eventIdsFromIssue({
+    sections: { international: { items: [{ id: 'from-archive' }, { title: '沒有 id' }] } },
+  }), ['from-archive']);
+  const model = buildPaper({
+    config,
+    international: {
+      events: events.map((item) => ({
+        ...item,
+        sources: item.reports.map((report) => ({
+          name: report.source,
+          url: 'https://example.com/story',
+          publishedAt: report.at,
+        })),
+      })),
+    },
+    issue: null,
+    now,
+    previousEventIds: ['repeated'],
+  });
+  const shown = model.sections.find((item) => item.id === 'international').items.map((item) => item.id);
+  assert.equal(shown.includes('repeated'), false);
 });
 
 test('a long tech summary stays collapsed until it is expanded', () => {
@@ -212,6 +246,10 @@ test('the public page does not read the Taiwan article file', () => {
   for (const event of committed.events) {
     for (const key of ['text', 'originalTitle', 'removedSpans', 'biasRatio']) {
       assert.equal(key in event, false, `${event.id} 不應有 ${key}`);
+    }
+    for (const source of event.sources || []) {
+      const label = `${source.name || ''} ${source.url || ''}`;
+      assert.equal(/bbc\.com|aljazeera\.com|英國廣播公司|半島電視台/.test(label), false, event.id);
     }
   }
 });

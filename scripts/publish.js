@@ -7,7 +7,7 @@ import { loadRubric } from './lib/rubric.js';
 
 const USAGE = `用法：npm run publish -- [選項]
 
-用 GitHub API 把 data/ 的五個公開檔案做成 main 上的一個 commit。
+用 GitHub API 把 data/ 的六個公開檔案做成 main 上的一個 commit。
 Token 取自 GITHUB_TOKEN，否則取 \`gh auth token\`。不需要 git push。
 失敗會以非 0 結束，不會吞掉 API 錯誤。
 

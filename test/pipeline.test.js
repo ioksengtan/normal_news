@@ -11,7 +11,7 @@ import { ingestBatch, rebuildDerived, validateStoredData } from '../scripts/lib/
 import { publishDataFiles } from '../scripts/lib/publish.js';
 import { parseRubric, loadRubric } from '../scripts/lib/rubric.js';
 import { countUnseen, feedFailureSummary, fetchFeed, selectByQuota } from '../scripts/lib/rss.js';
-import { loadSources } from '../scripts/lib/sources.js';
+import { fetchLimitsFromConfig, loadSources } from '../scripts/lib/sources.js';
 import { buildSourceStats } from '../scripts/lib/stats.js';
 import { buildHome } from '../scripts/lib/ingest.js';
 
@@ -127,11 +127,13 @@ test('source config is international news and tech only', () => {
     'korea-herald',
   ]);
   assert.equal(sources.filter((source) => source.enabled).map((source) => source.id).join(','), [
-    'bbc-chinese-trad',
     'dw-chinese',
-    'al-jazeera',
     'channel-news-asia',
   ].join(','));
+  assert.equal(sources.find((source) => source.id === 'bbc-chinese-trad').enabled, false);
+  assert.match(sources.find((source) => source.id === 'bbc-chinese-trad').disabledReason, /人工智慧摘要/);
+  assert.equal(sources.find((source) => source.id === 'al-jazeera').enabled, false);
+  assert.match(sources.find((source) => source.id === 'al-jazeera').disabledReason, /爬蟲/);
   assert.equal(sources.find((source) => source.id === 'japan-times').enabled, false);
   assert.equal(sources.find((source) => source.id === 'korea-herald').enabled, false);
   assert.equal(sources.find((source) => source.id === 'dw-chinese').maxAgeDays, 3);
@@ -140,6 +142,13 @@ test('source config is international news and tech only', () => {
     sources.find((source) => source.id === 'channel-news-asia').excludeCategories,
     ['business', 'commentary'],
   );
+  assert.deepEqual(
+    sources.find((source) => source.id === 'channel-news-asia').excludeKeywords,
+    ['Wall Street', 'stocks', 'oil prices', 'bond yields'],
+  );
+  const config = JSON.parse(fs.readFileSync(file, 'utf8'));
+  assert.deepEqual(fetchLimitsFromConfig(config), { perSource: 6, total: 30 });
+  assert.deepEqual(fetchLimitsFromConfig({}), { perSource: 6, total: 30 });
   const disabled = loadSources(file, { disabled: ['英國廣播公司中文網'] });
   assert.equal(disabled.find((source) => source.id === 'bbc-chinese-trad').enabled, false);
 
