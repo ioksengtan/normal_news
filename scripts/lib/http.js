@@ -28,11 +28,43 @@ export async function waitForSlot(url, gapMs = MIN_REQUEST_GAP_MS) {
   lastRequestAt.set(origin, Date.now());
 }
 
-export async function fetchResponse(url, { timeoutMs = 20000, headers = {} } = {}) {
-  let res;
+export async function fetchResponse(url, {
+  timeoutMs = 20000,
+  headers = {},
+  beforeRequest,
+  normalizeUrl,
+  maxRedirects = 5,
+} = {}) {
+  if (!beforeRequest && !normalizeUrl) {
+    const res = await request(url, { timeoutMs, headers, redirect: 'follow' });
+    return readBody(res);
+  }
+
+  let current = applyNormalize(url, normalizeUrl);
+  for (let hop = 0; hop <= maxRedirects; hop += 1) {
+    if (beforeRequest) await beforeRequest(current, { hop });
+    const res = await request(current, { timeoutMs, headers, redirect: 'manual' });
+    const location = res.headers.get('location');
+    if (location && res.status >= 300 && res.status < 400 && res.status !== 304) {
+      await res.body?.cancel?.().catch(() => {});
+      if (hop === maxRedirects) throw new Error('重新導向次數過多');
+      current = applyNormalize(new URL(location, current).toString(), normalizeUrl);
+      continue;
+    }
+    return readBody(res);
+  }
+  throw new Error('重新導向次數過多');
+}
+
+function applyNormalize(url, normalizeUrl) {
+  if (typeof normalizeUrl !== 'function') return url;
+  return normalizeUrl(url);
+}
+
+async function request(url, { timeoutMs, headers, redirect }) {
   try {
-    res = await fetch(url, {
-      redirect: 'follow',
+    return await fetch(url, {
+      redirect,
       headers: {
         'User-Agent': USER_AGENT,
         ...headers,
@@ -43,6 +75,9 @@ export async function fetchResponse(url, { timeoutMs = 20000, headers = {} } = {
     const timedOut = err?.name === 'TimeoutError' || err?.name === 'AbortError';
     throw new Error(timedOut ? `逾時（${timeoutMs}ms）` : (err?.message || String(err)));
   }
+}
+
+async function readBody(res) {
   const retryAfter = res.headers.get('retry-after');
   if (!res.ok && res.status !== 304) {
     await res.body?.cancel?.().catch(() => {});

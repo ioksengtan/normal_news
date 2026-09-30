@@ -5,8 +5,10 @@
 1. 所有請求使用固定的使用者代理字串：`normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。不偽裝成瀏覽器。
 2. 任何抓取之前先讀該主機的 `/robots.txt`，包括新聞訂閱源本身。
 3. 規則只看兩組：有 `normal-news-bot` 具名群組就用該群組，沒有就用 `*`；`*` 群組一律另外檢查。兩者任一禁止，就不抓。只針對訓練爬蟲（例如 GPTBot、ClaudeBot、anthropic-ai）的群組不適用。
-4. robots.txt 回傳 4xx 視為允許。5xx、逾時或連線失敗視為全部禁止。
-5. 抓取前先移除 `traffic_source`、`utm_*`、`at_medium`、`at_campaign`、`maca`，再用移除後的網址檢查 robots.txt 並抓取。
-6. 同一網域兩次請求至少間隔 5 秒。robots.txt 的 Crawl-delay 更大時，以 Crawl-delay 為準。
-7. 收到 401、403 或 429 就記錄台北時間、網址與狀態碼，不換 User-Agent、不換 IP、不重試。
-8. 不追蹤文章內的其他連結。原文只留在本地候選檔，不進公開 repo。
+4. robots.txt 回傳 401 或 403 視為全部禁止。其他 4xx 視為允許。5xx、逾時或連線失敗視為全部禁止。
+5. 若網址被重新導向到另一個主機，必須先讀取新主機的 robots.txt，確認允許之後才向該主機抓取。
+6. 抓取前先移除 `traffic_source`、`utm_*`、`at_medium`、`at_campaign`、`maca`，再用移除後的網址檢查 robots.txt 並抓取。重新導向後的網址也先移除這些參數。
+7. 同一網域兩次請求至少間隔 5 秒。robots.txt 的 Crawl-delay 更大時，以 Crawl-delay 為準。
+8. 收到 401、403 或 429 就記錄台北時間、網址與狀態碼，不換 User-Agent、不換 IP、不重試。
+9. 不追蹤文章內的其他連結。原文只留在本地候選檔，不進公開 repo。
+10. 啟用來源之前，由人閱讀該站 robots.txt 的註解與使用條款。註解或條款明確反對摘要、人工智慧處理、文字與資料探勘、抓取或自動收集時，該來源不得啟用。只有一般著作權聲明或範圍很寬的限制時，標記為不明確，由專案經理決定。

@@ -69,9 +69,13 @@ export async function fetchRobots(origin, { timeoutMs = 20000, fetchImpl } = {})
       timeoutMs,
       headers: { Accept: 'text/plain,*/*' },
     });
+    if (response?.status === 401 || response?.status === 403) {
+      return robotsDenied(response.status);
+    }
     return { ok: true, text: response.text || '', blocked: false };
   } catch (err) {
     const status = err?.status;
+    if (status === 401 || status === 403) return robotsDenied(status);
     if (status >= 400 && status < 500) {
       return { ok: true, text: '', blocked: false };
     }
@@ -82,6 +86,15 @@ export async function fetchRobots(origin, { timeoutMs = 20000, fetchImpl } = {})
       error: err?.message || String(err),
     };
   }
+}
+
+function robotsDenied(status) {
+  return {
+    ok: false,
+    blocked: true,
+    text: '',
+    error: `robots.txt HTTP ${status}，視為全部禁止`,
+  };
 }
 
 function emptyGroup() {

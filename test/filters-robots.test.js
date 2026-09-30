@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { applySourceFilters } from '../scripts/lib/filters.js';
-import { aiAgentBlocks } from '../scripts/lib/robots.js';
+import { aiAgentBlocks, fetchRobots } from '../scripts/lib/robots.js';
 import { normalizeOffsetDate } from '../scripts/lib/rss.js';
 import { sharesLongRun } from '../scripts/lib/text.js';
 import { stripTracking } from '../scripts/lib/url.js';
@@ -36,6 +36,74 @@ test('source filters drop old DW items, Al Jazeera liveblogs, and CNA Asia busin
     { title: 'Airline stocks jump', link: 'https://www.channelnewsasia.com/world/stocks', summary: 'Shares rose.' },
   ], { excludeKeywords: ['Wall Street', 'stocks', 'oil prices', 'bond yields'] }, now);
   assert.deepEqual(markets.map((item) => item.title), ['World leaders meet']);
+
+  const wires = applySourceFilters([
+    { title: 'Leaders meet in Asia Pacific', link: 'https://www.channelnewsasia.com/world/asia', summary: 'Talks on capital projects.' },
+    { title: 'Markets', link: 'https://www.channelnewsasia.com/world/afp', summary: 'AFP - shares moved.', author: 'Channel NewsAsia' },
+    { title: 'Talks', link: 'https://www.channelnewsasia.com/world/ap', summary: 'Officials spoke.', author: 'AP' },
+    { title: '法新社稿', link: 'https://www.channelnewsasia.com/world/agence', summary: 'A report.', author: '法新社' },
+    { title: 'Wire desk', link: 'https://www.channelnewsasia.com/world/presse', summary: 'A report.', byline: 'Agence France-Presse' },
+  ], { excludeBylineMarkers: ['AFP', 'AP', 'Agence France-Presse', 'Associated Press', '法新社', '美聯社'] }, now);
+  assert.deepEqual(wires.map((item) => item.title), ['Leaders meet in Asia Pacific']);
+
+  const voa = applySourceFilters([
+    { title: '報導', link: 'https://www.voachinese.com/a/story.html', categories: ['國際'] },
+    { title: '影片', link: 'https://www.voachinese.com/video/clip.html', categories: ['國際'] },
+    { title: '分類影片', link: 'https://www.voachinese.com/a/clip.html', categories: ['Video'] },
+    { title: '路透稿', link: 'https://www.voachinese.com/a/wire.html', author: 'Reuters' },
+  ], {
+    excludeUrlSubstrings: ['/video/', '/videos/'],
+    excludeCategories: ['video', 'videos'],
+    excludeBylineMarkers: ['Reuters', 'AP', 'AFP'],
+  }, now);
+  assert.deepEqual(voa.map((item) => item.title), ['報導']);
+
+  const apr = applySourceFilters([
+    { title: 'Original', link: 'https://asiapacificreport.nz/2026/09/30/original/', categories: ['Pacific'], author: 'Pacific Media Watch' },
+    { title: 'From RNZ', link: 'https://asiapacificreport.nz/2026/09/29/rnz/', categories: ['RNZ Pacific'] },
+    { title: 'Republished', link: 'https://asiapacificreport.nz/2026/09/28/other/', summary: 'This item was republished from another desk.' },
+    { title: 'Radio credit', link: 'https://asiapacificreport.nz/2026/09/27/radio/', author: 'Radio New Zealand' },
+  ], {
+    excludeCategories: ['RNZ Pacific'],
+    excludeBylineMarkers: ['RNZ', 'Radio New Zealand', 'RNZ Pacific', 'republished from', 'reprinted from', 'originally published'],
+  }, now);
+  assert.deepEqual(apr.map((item) => item.title), ['Original']);
+});
+
+test('robots.txt 401 and 403 disallow every path; other 4xx still allow', async () => {
+  for (const status of [401, 403]) {
+    const result = await fetchRobots('https://example.com', {
+      fetchImpl: async () => {
+        const error = new Error(`HTTP ${status}`);
+        error.status = status;
+        throw error;
+      },
+    });
+    assert.equal(result.ok, false);
+    assert.equal(result.blocked, true);
+    assert.match(result.error, new RegExp(`HTTP ${status}`));
+    assert.match(result.error, /全部禁止/);
+  }
+
+  const missing = await fetchRobots('https://example.com', {
+    fetchImpl: async () => {
+      const error = new Error('HTTP 404');
+      error.status = 404;
+      throw error;
+    },
+  });
+  assert.equal(missing.ok, true);
+  assert.equal(missing.blocked, false);
+
+  const down = await fetchRobots('https://example.com', {
+    fetchImpl: async () => {
+      const error = new Error('HTTP 503');
+      error.status = 503;
+      throw error;
+    },
+  });
+  assert.equal(down.ok, false);
+  assert.equal(down.blocked, true);
 });
 
 test('robots checks the project agent and the wildcard group, after tracking parameters are removed', () => {

@@ -4,10 +4,11 @@ import { fetchResponse } from './http.js';
 // rss-parser 的 parseURL 在非 2xx 時不會關掉 response，Node 會再空等約 240 秒。
 // 改用 fetch + AbortSignal.timeout，成功後才把字串交給 parseString。
 // HTTP 403 直接失敗，不換 User-Agent、不換 IP。
-export async function fetchFeed(feed, { timeoutMs = 20000, limit = 30, headers = {} } = {}) {
+export async function fetchFeed(feed, { timeoutMs = 20000, limit = 30, headers = {}, fetchImpl } = {}) {
   const parser = new Parser();
+  const load = fetchImpl || fetchResponse;
   try {
-    const response = await fetchResponse(feed.url, {
+    const response = await load(feed.url, {
       timeoutMs,
       headers: {
         Accept: 'application/rss+xml, application/xml, text/xml, */*',
@@ -36,6 +37,7 @@ export async function fetchFeed(feed, { timeoutMs = 20000, limit = 30, headers =
         publishedAt: publishedAtFromItem(item),
         categories: item.categories || [],
         summary: item.contentSnippet || item.summary || '',
+        author: item.creator || item.author || item['dc:creator'] || '',
       });
     }
     return {
@@ -52,6 +54,7 @@ export async function fetchFeed(feed, { timeoutMs = 20000, limit = 30, headers =
       notModified: false,
       error: err?.message || String(err),
       status: err?.status || null,
+      blocked: Boolean(err?.blocked),
       retryAfter: err?.retryAfter || null,
       items: [],
     };

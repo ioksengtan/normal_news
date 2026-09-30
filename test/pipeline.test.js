@@ -10,7 +10,9 @@ import { HOME_MAX_BYTES, MIN_ARTICLES_FOR_RANK, SAMPLE_TOO_SMALL_NOTE } from '..
 import { ingestBatch, rebuildDerived, validateStoredData } from '../scripts/lib/ingest.js';
 import { publishDataFiles } from '../scripts/lib/publish.js';
 import { parseRubric, loadRubric } from '../scripts/lib/rubric.js';
+import { fetchResponse } from '../scripts/lib/http.js';
 import { countUnseen, feedFailureSummary, fetchFeed, selectByQuota } from '../scripts/lib/rss.js';
+import { stripTracking } from '../scripts/lib/url.js';
 import { fetchLimitsFromConfig, loadSources } from '../scripts/lib/sources.js';
 import { buildSourceStats } from '../scripts/lib/stats.js';
 import { buildHome } from '../scripts/lib/ingest.js';
@@ -123,20 +125,31 @@ test('source config is international news and tech only', () => {
     'dw-chinese',
     'al-jazeera',
     'channel-news-asia',
+    'voa-chinese',
+    'agencia-brasil',
+    'asiapacific-report',
     'japan-times',
     'korea-herald',
   ]);
   assert.equal(sources.filter((source) => source.enabled).map((source) => source.id).join(','), [
-    'dw-chinese',
     'channel-news-asia',
+    'voa-chinese',
+    'agencia-brasil',
+    'asiapacific-report',
   ].join(','));
   assert.equal(sources.find((source) => source.id === 'bbc-chinese-trad').enabled, false);
   assert.match(sources.find((source) => source.id === 'bbc-chinese-trad').disabledReason, /人工智慧摘要/);
+  assert.equal(sources.find((source) => source.id === 'dw-chinese').enabled, false);
+  assert.match(sources.find((source) => source.id === 'dw-chinese').disabledReason, /探勘或抓取/);
   assert.equal(sources.find((source) => source.id === 'al-jazeera').enabled, false);
   assert.match(sources.find((source) => source.id === 'al-jazeera').disabledReason, /爬蟲/);
   assert.equal(sources.find((source) => source.id === 'japan-times').enabled, false);
   assert.equal(sources.find((source) => source.id === 'korea-herald').enabled, false);
   assert.equal(sources.find((source) => source.id === 'dw-chinese').maxAgeDays, 3);
+  assert.equal(sources.find((source) => source.id === 'channel-news-asia').termsStatus, 'unclear');
+  assert.equal(sources.find((source) => source.id === 'asiapacific-report').license, 'CC BY-NC-SA 4.0');
+  assert.match(sources.find((source) => source.id === 'voa-chinese').fundingNote, /美國全球媒體署/);
+  assert.match(sources.find((source) => source.id === 'agencia-brasil').fundingNote, /公營/);
   assert.deepEqual(sources.find((source) => source.id === 'al-jazeera').excludeUrlSubstrings, ['/liveblog/']);
   assert.deepEqual(
     sources.find((source) => source.id === 'channel-news-asia').excludeCategories,
@@ -146,6 +159,15 @@ test('source config is international news and tech only', () => {
     sources.find((source) => source.id === 'channel-news-asia').excludeKeywords,
     ['Wall Street', 'stocks', 'oil prices', 'bond yields'],
   );
+  assert.ok(sources.find((source) => source.id === 'channel-news-asia').excludeBylineMarkers.includes('AFP'));
+  assert.ok(sources.find((source) => source.id === 'voa-chinese').excludeUrlSubstrings.includes('/video/'));
+  assert.equal(rubric.humanSummary.includes('公法國際廣播'), false);
+  assert.match(rubric.humanSummary, /德國之聲、法國國際廣播電台都沒有收錄/);
+  assert.match(rubric.humanSummary, /也沒有歐洲、非洲、中東、南亞/);
+  assert.match(rubric.humanSummary, /美國之音中文/);
+  assert.match(rubric.humanSummary, /https:\/\/github.com\/ioksengtan\/normal_news\/issues/);
+  assert.match(rubric.systemPrompt, /event/);
+  assert.equal(rubric.systemPrompt.includes('removed_spans'), true);
   const config = JSON.parse(fs.readFileSync(file, 'utf8'));
   assert.deepEqual(fetchLimitsFromConfig(config), { perSource: 6, total: 30 });
   assert.deepEqual(fetchLimitsFromConfig({}), { perSource: 6, total: 30 });
@@ -286,7 +308,7 @@ test('ingest validates rewrites, drops examples, and keeps same-event links', ()
     articles: existingArticles,
     events: existingEvents,
     candidates: [
-      candidate('late', { publishedAt: '2026-08-01T00:00:00+08:00', text }),
+      candidate('late', { publishedAt: '2026-08-01T00:00:00+08:00', text, license: 'CC BY-NC-SA 4.0' }),
       candidate('other', { text, publishedAt: '2026-09-29T00:00:00+08:00' }),
     ],
     rewrites: [
@@ -309,6 +331,12 @@ test('ingest validates rewrites, drops examples, and keeps same-event links', ()
   assert.equal(late.neutralTitle, '議會完成預算表決');
   assert.equal(late.sourceLanguage, '繁體中文');
   assert.equal(late.eventId, 'evt_old');
+  assert.equal(late.license, 'CC BY-NC-SA 4.0');
+  const licensedSource = merged.international.events
+    .find((event) => event.id === 'evt_old')
+    .sources.find((source) => source.license);
+  assert.equal(licensedSource.license, 'CC BY-NC-SA 4.0');
+  assert.equal(licensedSource.name, '測試報');
   const oldEvent = merged.events.find((event) => event.id === 'evt_old');
   assert.equal(oldEvent.summary, '既有事件短述');
   assert.equal(oldEvent.representativeArticleId, 'late');
@@ -519,6 +547,69 @@ test('fetchFeed reports HTTP 403 and aborts a feed that never responds', async (
   assert.match(hung.error, /逾時/);
   assert.ok(Date.now() - hungStarted < 3000);
   await closeServer(hanging, hangingSockets);
+});
+
+test('a redirect is checked on the next host before that host is fetched', async () => {
+  const order = [];
+  const target = http.createServer((req, res) => {
+    order.push(`target ${req.url}`);
+    res.writeHead(200, { 'content-type': 'text/plain' });
+    res.end('article');
+  });
+  const targetSockets = trackSockets(target);
+  const targetPort = await listen(target);
+  const source = http.createServer((req, res) => {
+    order.push(`source ${req.url}`);
+    res.writeHead(302, { Location: `http://127.0.0.1:${targetPort}/article?utm_source=rss` });
+    res.end();
+  });
+  const sourceSockets = trackSockets(source);
+  const sourcePort = await listen(source);
+  const gates = [];
+  const response = await fetchResponse(`http://127.0.0.1:${sourcePort}/from`, {
+    timeoutMs: 2000,
+    normalizeUrl: stripTracking,
+    beforeRequest: async (url) => {
+      gates.push(url);
+      order.push(`gate ${url}`);
+    },
+  });
+  assert.equal(response.text, 'article');
+  assert.equal(gates[0], `http://127.0.0.1:${sourcePort}/from`);
+  assert.equal(gates[1], `http://127.0.0.1:${targetPort}/article`);
+  const targetFetch = order.indexOf('target /article');
+  const targetGate = order.findIndex((entry) => entry === `gate http://127.0.0.1:${targetPort}/article`);
+  assert.ok(targetGate !== -1 && targetGate < targetFetch);
+  await closeServer(source, sourceSockets);
+  await closeServer(target, targetSockets);
+});
+
+test('feed items keep bylines so wire copy can be filtered', async () => {
+  const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'content-type': 'application/rss+xml' });
+    res.end(`<?xml version="1.0" encoding="UTF-8"?>
+      <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <channel><title>wires</title>
+          <item>
+            <title>Desk story</title>
+            <link>http://127.0.0.1/story</link>
+            <dc:creator>AFP</dc:creator>
+            <category>World</category>
+            <description>A short note.</description>
+          </item>
+        </channel>
+      </rss>`);
+  });
+  const sockets = trackSockets(server);
+  const port = await listen(server);
+  const fetched = await fetchFeed({
+    id: 'wires',
+    source: '測試',
+    url: `http://127.0.0.1:${port}/rss`,
+  }, { timeoutMs: 2000, limit: 5 });
+  assert.equal(fetched.ok, true);
+  assert.equal(fetched.items[0].author, 'AFP');
+  await closeServer(server, sockets);
 });
 
 test('fetch command keeps going after one feed fails and exits non-zero when all fail', async () => {

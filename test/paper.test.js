@@ -120,6 +120,37 @@ test('international coverage ranking keeps twelve stories and a single lead', ()
   assert.match(articleHtml, /https:\/\/github\.com\/ioksengtan\/normal_news\/issues\/new/);
 });
 
+test('a licensed source shows CC BY-NC-SA 4.0 and attribution under the summary', () => {
+  const event = {
+    id: 'licensed',
+    title: '太平洋報導',
+    summary: '這是一則中性摘要。',
+    neutralSummary: '這是一則中性摘要。',
+    neutralTitle: '太平洋報導',
+    updatedAt: '2026-09-30T01:00:00.000Z',
+    sources: [{
+      name: 'Asia Pacific Report',
+      url: 'https://asiapacificreport.nz/2026/09/30/story/',
+      publishedAt: '2026-09-30T01:00:00.000Z',
+      license: 'CC BY-NC-SA 4.0',
+    }],
+  };
+  const articleHtml = renderArticle(event, config, 'https://example.com/article');
+  assert.match(articleHtml, /CC BY-NC-SA 4\.0/);
+  assert.match(articleHtml, /出處：Asia Pacific Report/);
+  const model = buildPaper({
+    config,
+    international: { updatedAt: event.updatedAt, events: [event] },
+    issue: null,
+    now,
+  });
+  const html = renderSections(model);
+  const summaryAt = html.indexOf('這是一則中性摘要');
+  const licenseAt = html.indexOf('CC BY-NC-SA 4.0');
+  assert.ok(summaryAt !== -1 && licenseAt > summaryAt);
+  assert.match(html, /出處：Asia Pacific Report/);
+});
+
 test('a previously printed international story waits for a new report', () => {
   const event = (id, reports) => ({
     id,
@@ -241,6 +272,14 @@ test('the public page does not read the Taiwan article file', () => {
     assert.equal(source.includes('biasRatio'), false, file);
   }
   // 國際版出刊後 events 不再是空陣列；這裡只確認公開檔不帶原文或已停用的欄位。
+  for (const file of ['data/articles.json', 'data/events.json', 'data/home.json', 'data/international.json']) {
+    const text = fs.readFileSync(path.join(root, file), 'utf8');
+    assert.equal(text.includes('dw.com'), false, file);
+    assert.equal(text.includes('德國之聲'), false, file);
+  }
+  const criteriaJs = fs.readFileSync(path.join(root, 'js/criteria.js'), 'utf8');
+  assert.match(criteriaJs, /fundingNote/);
+  assert.match(criteriaJs, /config\/sources\.json/);
   const committed = JSON.parse(fs.readFileSync(path.join(root, 'data/international.json'), 'utf8'));
   assert.ok(Array.isArray(committed.events));
   for (const event of committed.events) {
@@ -249,7 +288,7 @@ test('the public page does not read the Taiwan article file', () => {
     }
     for (const source of event.sources || []) {
       const label = `${source.name || ''} ${source.url || ''}`;
-      assert.equal(/bbc\.com|aljazeera\.com|英國廣播公司|半島電視台/.test(label), false, event.id);
+      assert.equal(/bbc\.com|aljazeera\.com|dw\.com|英國廣播公司|半島電視台|德國之聲/.test(label), false, event.id);
     }
   }
 });

@@ -1,27 +1,5 @@
 [
   {
-    "id": "evt_lHzs5h9YtbTOLb3V",
-    "summary": "德國《商報》報導，德國聯邦政府以安全疑慮為由，計劃禁止中遠海運收購物流業者 Zippel 的80%股份。",
-    "representativeArticleId": "lHzs5h9YtbTOLb3V",
-    "articleIds": [
-      "lHzs5h9YtbTOLb3V"
-    ],
-    "uncertain": false,
-    "publishedAt": "2026-09-29T14:41:00.000Z",
-    "updatedAt": "2026-09-30T03:22:06.860Z"
-  },
-  {
-    "id": "evt_LRFSN122sVvQDU-_",
-    "summary": "世界智慧財產權組織公布2026年全球創新指數，瑞士居首，中國第10，德國第11。",
-    "representativeArticleId": "LRFSN122sVvQDU-_",
-    "articleIds": [
-      "LRFSN122sVvQDU-_"
-    ],
-    "uncertain": false,
-    "publishedAt": "2026-09-29T14:18:00.000Z",
-    "updatedAt": "2026-09-30T03:22:06.860Z"
-  },
-  {
     "id": "evt_dLUg6-HyN_HJ7tV8",
     "summary": "OpenAI 在年度開發者大會推出 GPT-6.1 Sol 與常駐代理程式 dots，並讓其他公司在 ChatGPT 內提供軟體。",
     "representativeArticleId": "dLUg6-HyN_HJ7tV8",
