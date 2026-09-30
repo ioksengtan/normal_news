@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
+  <rect width="360" height="300" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">Netlify 邊緣函式的執行路徑</text>
+  <rect x="24" y="48" width="100" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="74" y="72" text-anchor="middle">訪客請求</text>
+  <text x="74" y="92" text-anchor="middle" class="sub">到邊緣節點</text>
+  <line x1="124" y1="76" x2="148" y2="76" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="150" y="48" width="100" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="200" y="72" text-anchor="middle">計算節點</text>
+  <text x="200" y="92" text-anchor="middle" class="sub">網路內部</text>
+  <line x1="250" y1="76" x2="274" y2="76" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="276" y="48" width="64" height="56" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="308" y="72" text-anchor="middle">微型</text>
+  <text x="308" y="92" text-anchor="middle">虛擬機</text>
+  <rect x="30" y="130" width="140" height="70" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="100" y="158" text-anchor="middle">舊做法</text>
+  <text x="100" y="182" text-anchor="middle" class="sub">中位數約 25–40 毫秒</text>
+  <rect x="190" y="130" width="140" height="70" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="260" y="158" text-anchor="middle">新做法</text>
+  <text x="260" y="182" text-anchor="middle" class="sub">中位數約 5–6 毫秒</text>
+  <text x="180" y="230" text-anchor="middle">文章表示暖啟動約快五倍</text>
+  <text x="180" y="258" text-anchor="middle" class="sub">像把代工工廠搬回自家倉庫旁，少跑一趟外送</text>
+  <text x="180" y="282" text-anchor="middle" class="sub">寫法與用法不變</text>
+</svg>

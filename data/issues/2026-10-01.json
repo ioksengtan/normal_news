@@ -1,0 +1,325 @@
+{
+  "date": "2026-10-01",
+  "issueNumber": 2,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-01T07:00:00+08:00",
+  "fetchedAt": "2026-09-30T22:49:19.790Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    }
+  },
+  "items": [
+    {
+      "id": "mksglu/context-mode",
+      "name": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "language": "TypeScript",
+      "starsToday": 88,
+      "stars": 24469,
+      "summary": "Context Mode 是一套開源的模型上下文協定（Model Context Protocol）伺服器，用來幫寫程式的人工智慧代理程式節省對話空間。對話空間就像課桌桌面，東西堆滿就沒地方寫作業。專案說明表示，工具回傳的原始資料會先放進沙箱整理，例如 315 千位元組可縮成約 5.4 千位元組，約減少 98%。它也把檔案修改、工作與使用者決定記在 SQLite 資料庫；對話被壓縮後，再用搜尋只取回相關事件。做法還要求代理程式用腳本先算出結果，再把數字寫進對話，而不是把整份資料塞進去。專案表示支援 17 個平台，並用掛鉤強制走這套路由。它適合常常呼叫工具、又容易把對話塞滿的開發者。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-01/mksglu/context-mode.svg",
+        "alt": "左側是工具原始輸出 315 千位元組，箭頭指向右側沙箱整理後 5.4 千位元組約減少 98%；下方是工作紀錄存進資料庫，以及用腳本算結果再回報。",
+        "caption": "Context Mode 先把工具輸出放進沙箱整理，再把必要結果寫進對話，就像請助理先清點雜物。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 49913571,
+      "title": "Gemini 4 Argon",
+      "titleZh": "Google 發表 Gemini 4 Argon",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49913571",
+      "score": 757,
+      "comments": 500,
+      "summary": "Google 在官方部落格宣布推出大型語言模型 Gemini 4 Argon。大型語言模型是能讀寫文字、協助完成工作的人工智慧程式。文章表示，它著重軟體工程、法律與財務等知識工作，以及資安防禦等較長流程。為了支援較長任務，輸出詞元上限提到 100 萬，先前為 6.4 萬；詞元是模型計算文字的單位，像把句子切成的小積木。Google 寫道，目前先透過 Fairwind 計畫提供給受信任的資安測試者，並參與美國政府的自願預先存取流程，之後再擴大。公司標示的介紹價是每百萬輸入詞元 2 美元、輸出 10 美元，快取輸入再打折。文中也舉出公司內部用它做程式遷移與記憶體優化的例子。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-01/49913571.svg",
+        "alt": "上方是 Gemini 4 Argon，左右比較輸出上限 100 萬詞元與先前 6.4 萬詞元，下方說明先給 Fairwind 計畫的資安測試者，像新車先給少數試車員。",
+        "caption": "Gemini 4 Argon 把輸出上限提到 100 萬詞元，並先以 Fairwind 計畫小範圍釋出。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "DietrichGebert/ponytail",
+      "name": "DietrichGebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "language": "JavaScript",
+      "starsToday": 865,
+      "stars": 149124,
+      "summary": "Ponytail 是一套給人工智慧寫程式代理程式用的技能套件，目標是讓代理程式像最懶的資深工程師：能少寫就少寫。代理程式是會自己改程式的助手。專案說明表示，寫程式前要先爬階梯：這件事不必做就跳過、專案裡已有做法就重用、標準函式庫夠用就用它，還不夠才新寫。作者用 Claude Code 在真實的 FastAPI 與 React 專案上測 12 項功能，對照沒有這套技能的同一代理程式，平均程式碼行數少約 54%、花費少約 20%、時間少約 27%，安全檢查仍全部保留。作者也註明，數字是相對該基準的結果，不是保證每一項任務都一樣。它適合想減少代理程式多寫無用程式的開發者。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-01/DietrichGebert/ponytail.svg",
+        "alt": "四層階梯：不必做就跳過、重用現成做法、先用標準函式庫、最後才新寫必要程式；下方說明像最懶的資深工程師。",
+        "caption": "Ponytail 要求代理程式先爬階梯，能少寫就少寫，但安全檢查不砍。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 49915082,
+      "title": "The top secret URSALA, RAQUEL, and FARRAH satellites",
+      "titleZh": "解密的 URSALA、RAQUEL 與 FARRAH 衛星",
+      "url": "https://www.thespacereview.com/article/4951/1",
+      "hnUrl": "https://news.ycombinator.com/item?id=49915082",
+      "score": 46,
+      "comments": 1,
+      "summary": "The Space Review 刊登 Dwayne A. Day 的文章，整理美國近年解密的小型電子情報衛星，名稱包括 URSALA、RAQUEL、FARRAH、GLORIA 與 CARRIE。電子情報是蒐集雷達等電子訊號的情報工作，像用耳朵聽對方無線電，而不是用眼睛拍照。文章說，這類衛星約手提箱大小，1960 年代起常掛在較大衛星旁邊發射，早期稱為「搭便車」；1970 年代由國家偵察局管理，並逐漸改為支援部隊戰術需求。文中提到它們常與 HEXAGON 照相偵察衛星一起部署，並說明 Program 989 與 Mission 7300 等代號。文章日期為 2025 年 3 月 10 日，依據新近解密資料寫成。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "harry0703/MoneyPrinterTurbo",
+      "name": "harry0703/MoneyPrinterTurbo",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "language": "Python",
+      "starsToday": 464,
+      "stars": 127519,
+      "summary": "MoneyPrinterTurbo 是一套開源的短影片製作工具，用 Python 寫成，可在 Windows、macOS 與 Linux 上執行。使用者只要提供主題或關鍵詞，程式就自動產生腳本、找素材、做字幕與背景音樂，再合成高清短影片，像一條自動流水線：丟進題目，另一頭出來成片。它提供網頁操作介面，也提供應用程式介面（Application Programming Interface），方便其他程式呼叫。專案說明列出需要 Python 3.11 或更新版本，並有安裝檔可下載。它適合想從文字題目快速做出短影片草稿的創作者與開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 49912955,
+      "title": "Surprisingly complex waves reveal the brain's inner workings",
+      "titleZh": "複雜的腦波型態與大腦如何處理資訊",
+      "url": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49912955",
+      "score": 91,
+      "comments": 29,
+      "summary": "Quanta Magazine 報導神經科學對「行進波」的新研究。行進波是大腦活動像波浪一樣移動的現象，以前常被看成引擎運轉的聲音，只表示大腦有在工作。文章引述麻省理工學院認知神經科學家 Earl K. Miller 的說法，研究正把問題從「它們有沒有用」轉成「這是大腦皮質處理資訊的重要方式」。2026 年 4 月發表在《自然通訊》的研究中，芝加哥大學的 Joshua Jacobs、Anup Das 等人用顱內電極觀察到源波、匯聚波與螺旋波等型態，並發現不同行為任務對應不同波形。研究者認為，這類大尺度波形可能在幾秒內重組大腦，以應付當下行為需求。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "openclaw/openclaw",
+      "name": "openclaw/openclaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "language": "TypeScript",
+      "starsToday": 136,
+      "stars": 390970,
+      "summary": "OpenClaw 是一套開源的人工智慧助理，裝在自己的電腦上使用。它會出現在你本來就在用的聊天軟體裡，例如 Discord、Slack、Telegram、WhatsApp，也有 macOS、Windows、Linux、iOS 與 Android 的程式。狀態、記憶與登入用的憑證都放在自己的硬體上，就像把筆記本與鑰匙留在自家抽屜，而不是放在別人店裡。模型與代理程式框架可以換成外掛。說明文件表示，預設只會做每日版本檢查；匿名功能統計要自行開啟，也可關掉啟動時的更新檢查。它由獨立的 OpenClaw Foundation 管理，沒有付費方案或代管服務。它適合想在自己的裝置上跑助理、又要接到既有聊天軟體的人。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 49913192,
+      "title": "EDG C++ front-end goes public",
+      "titleZh": "EDG 的 C++ 前端改為開源",
+      "url": "https://edgcpp.org/#transition",
+      "hnUrl": "https://news.ycombinator.com/item?id=49913192",
+      "score": 109,
+      "comments": 38,
+      "summary": "EDG 的 C++ 前端在 2026 年 9 月 30 日公開原始碼，改由非營利組織 The C++ Alliance 接手維護。前端是編譯器先讀程式、再交給後段產生機器碼的那一層，像餐廳先由點菜口把菜單整理好。網站說明，這是更換管理者，不是改掉原本引擎與標準支援；John Spicer 主持交接。之後開發分三條路：社群用合併請求貢獻、聯盟維護人員持續修補，以及由社群集資開發較大功能；程式進入同一份公開儲存庫，沒有誰先拿到。財政贊助委員會監督流程。它適合使用或研究 C++ 編譯器前端的開發者與組織。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "ComposioHQ/awesome-claude-skills",
+      "name": "ComposioHQ/awesome-claude-skills",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "language": "Python",
+      "starsToday": 118,
+      "stars": 76108,
+      "summary": "這是一份整理過的清單，收集給 Claude 等寫程式代理程式使用的「技能」與外掛。技能就像一本本工作手冊：告訴代理程式某類工作要照什麼步驟做、有哪些注意事項。說明文件寫道，Anthropic 在 2025 年 10 月提出這種格式，2025 年 12 月以開放標準公開，現在也可用在 Claude Code、Codex、Cursor、Gemini CLI 等工具。一開始代理程式只看到每個技能的名稱與簡短說明；真的需要時才載入完整內容，比較不會把對話空間塞滿。清單也介紹如何用外掛把代理程式接到電子郵件、議題追蹤與 Slack 等服務。它適合想替代理程式加可重用工作流程的開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 49911995,
+      "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
+      "titleZh": "發表 Magnitude：為代理程式自調優的推論引擎",
+      "url": "https://github.com/magnitudedev/magnitude",
+      "hnUrl": "https://news.ycombinator.com/item?id=49911995",
+      "score": 111,
+      "comments": 47,
+      "summary": "Magnitude 的創辦人在 Hacker News 發表開源推論引擎 Magnitude，並附上 GitHub 儲存庫。推論引擎是在電腦上實際跑開源語言模型的軟體，像讓模型「開口說話」的馬達。他們表示，引擎會在使用者的裝置上編譯並調整核心程式，以配合實際硬體；公司稱可比 llama.cpp 快到約兩倍，並在 Metal 與 CUDA 上公布相對數字。它做成桌面應用程式，支援 macOS、Linux 與 Windows，可接 Pi、OpenCode、Hermes、Codex 等代理程式。作者強調用途是在本機跑代理程式：工作階段長、常同時開好幾個，又還要做別的事。授權為 Apache 2.0。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    },
+    {
+      "id": "mattpocock/skills",
+      "name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "language": "Shell",
+      "starsToday": 908,
+      "stars": 272960,
+      "summary": "mattpocock/skills 是一套給寫程式代理程式用的技能集合，作者說內容直接來自自己的代理程式設定目錄。技能是一組可安裝的說明與腳本，教代理程式怎麼處理某類任務，像給助手幾本專門的操作手冊。說明文件表示，可在 Claude Code 用外掛市集安裝，也可用指令列工具裝到 Codex 等其他代理程式；安裝時可挑選要帶走的技能。作者提醒，若同時用兩種安裝方式，同一個技能可能出現兩份。它適合已經在用 Claude Code 或 Codex、想直接套用作者整理好的工作流程的工程師。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 5
+    },
+    {
+      "id": 49913458,
+      "title": "CS240 AI Cheating Retrospective",
+      "titleZh": "CS 240 課程的人工智慧作弊事後檢討",
+      "url": "https://turkeyland.net/thoughts/ai.php",
+      "hnUrl": "https://news.ycombinator.com/item?id=49913458",
+      "score": 51,
+      "comments": 29,
+      "summary": "美國一所大學的教師在 turkeyland.net 撰文，回顧 2026 年春季 CS 240（C 語言程式設計）課上，學生使用人工智慧完成作業的事件。課綱明文禁止用 ChatGPT 等工具產生作業、測驗或考試的解答，教師並說至少在五堂課提醒過。作者寫道，自己處理方式不夠好，所以違規者最後幾乎沒有實質後果；寫這篇是因為傳言很多。他們使用的 Argus 工具做靜態分析，尋找學生程式裡很難用合理理由解釋的特徵，並不是另外訓練一個語言模型來抓人。作者也提到暑假已為此工具寫了論文。文章同時說明，當學期仍以既有的相似程式碼比對處理抄襲。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 5
+    },
+    {
+      "id": "heygen-com/hyperframes",
+      "name": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "language": "TypeScript",
+      "starsToday": 352,
+      "stars": 54689,
+      "summary": "HyperFrames 是 HeyGen 公司開源的影格框架，用 Apache 2.0 授權。它讓使用者或代理程式用超文字標記語言（HyperText Markup Language）與樣式表寫畫面，再渲染成可重現結果的 MP4 影片。渲染的意思是把設計稿變成實際影片檔，就像把劇本拍成成片。專案說明表示可在本機用命令列操作，也可裝成寫程式代理程式的技能或外掛；需要 Node.js 22 或更新版本。文件列出快速入門、展示與區塊目錄。它適合要用程式或代理程式批次做出說明影片、圖表動畫的開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 6
+    },
+    {
+      "id": 49912444,
+      "title": "5x faster Edge Functions: V8 isolates to Firecracker MicroVMs",
+      "titleZh": "Netlify 邊緣函式改用 Firecracker 微型虛擬機",
+      "url": "https://www.netlify.com/blog/edge-functions-firecracker-microvms/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49912444",
+      "score": 86,
+      "comments": 33,
+      "summary": "Netlify 工程部落格寫道，邊緣函式的執行環境已從 V8 isolate 改成自家邊緣網路內的 Firecracker 微型虛擬機，並與 Unikraft 合作。邊緣函式是網站請求一進來就先跑的一小段程式，像門口先檢查門票的管理員。文章表示，暖啟動時從進節點到產出回應標頭，中位數由約 25 至 40 毫秒降到約 5 至 6 毫秒，約快五倍；寫法與用法不變。舊架構要把請求送到外部代管執行服務再回來；新架構在網路內部的計算節點啟動微型虛擬機。冷啟動約占 1.2% 的呼叫，平均約 9 毫秒。文章也列出可用性與日誌傳送的內部量測數字。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-01/49912444.svg",
+        "alt": "請求到邊緣節點、再到計算節點、進入微型虛擬機；下方對照舊做法中位數 25 至 40 毫秒與新做法 5 至 6 毫秒。",
+        "caption": "Netlify 把邊緣函式搬進網路內部的微型虛擬機，文章表示暖啟動中位數約快五倍。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 6
+    },
+    {
+      "id": "firebase/firebase-ios-sdk",
+      "name": "firebase/firebase-ios-sdk",
+      "url": "https://github.com/firebase/firebase-ios-sdk",
+      "language": "C++",
+      "starsToday": 4,
+      "stars": 6752,
+      "summary": "這是 Firebase 在 Apple 平台上的開源軟體開發套件，給 iOS、iPadOS、macOS 等蘋果系統的應用程式使用。軟體開發套件就像一盒現成零件，讓應用程式較快接上登入、資料庫、推播等服務。儲存庫包含身分驗證、Cloud Firestore、遠端設定等產品的原始碼，但不包含 Firebase Analytics。說明文件提醒，2026 年 10 月之後，Firebase Apple 軟體開發套件的新版本不再發布到 CocoaPods，既有版本仍可安裝；另有遷移說明。它也提到 Firebase AI Logic 的 Gemini 基礎模型轉接層目前為預覽。它適合開發蘋果平台應用程式、並使用 Firebase 服務的工程師。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 7
+    },
+    {
+      "id": 49890732,
+      "title": "Why the Bronze Age Collapsed",
+      "titleZh": "青銅時代諸帝國為何崩潰後難以重建",
+      "url": "https://www.worksinprogress.news/p/why-really-caused-the-bronze-age",
+      "hnUrl": "https://news.ycombinator.com/item?id=49890732",
+      "score": 28,
+      "comments": 23,
+      "summary": "Works in Progress 刊登 Patrick Fitzsimmons 的文章，討論三千多年前東地中海青銅時代諸帝國為何崩潰，而且之後很久都沒有再出現類似的大帝國。常見說法提到乾旱、海民入侵、飢荒與內部動亂；作者認為這些災難可以造成政權更迭，卻不足以解釋為何帝國秩序長期回不來。文章把重點放在兵器材料：青銅需要來自遠方的錫，多半掌握在軍事與菁英手中；鐵可以就地生產後，一般人也較容易取得武器，中央對地方的優勢下降。文章以卡迭石之戰等歷史例子說明帝國動員能力，並把鐵器普及比成改變遊戲規則的新道具。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 7
+    },
+    {
+      "id": "modelcontextprotocol/servers",
+      "name": "modelcontextprotocol/servers",
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "language": "TypeScript",
+      "starsToday": 48,
+      "stars": 90796,
+      "summary": "這個儲存庫收集模型上下文協定（Model Context Protocol）的參考伺服器實作。模型上下文協定就像統一的插座規格，讓大型語言模型用受控的方式使用工具與資料。說明文件強調，這裡主要放協定指導小組維護的少數參考伺服器，用來示範功能與軟體開發套件用法，不是要直接當正式上線方案；若要找可安裝的伺服器清單，應改看模型上下文協定登錄站。參考伺服器包括讀取網頁、操作檔案系統、操作 Git、以知識圖譜做記憶，以及循序思考等。它適合正在學習如何實作模型上下文協定伺服器的開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 8
+    },
+    {
+      "id": 49906432,
+      "title": "Singapore govt dating app uses Gale-Shapley stable marriage algorithm",
+      "titleZh": "新加坡公部門交友服務使用 Gale-Shapley 演算法",
+      "url": "https://twitter.com/tuakdotsol/status/2105105417760391258",
+      "hnUrl": "https://news.ycombinator.com/item?id=49906432",
+      "score": 91,
+      "comments": 28,
+      "summary": "原始連結指向 X（舊稱 Twitter）。該網站的 robots.txt 對一般爬蟲設為全部禁止，所以本則沒有抓取該則貼文，只依 Hacker News 的標題、留言與討論整理。討論指出，新加坡政府為公務人員推出交友配對服務，並宣稱使用 Gale-Shapley 穩定配對演算法。這個演算法會依雙方偏好找出一組「穩定」的配對，常被拿來比喻成班上兩組人互相選隊友的規則。留言者討論「提出者」一方通常較有利，以及把穩定婚姻問題套到真實交友是否合理。相關的英國廣播公司報導連結也出現在討論裡，但本站未改抓該文作為依據。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 8
+    },
+    {
+      "id": "byoungd/up",
+      "name": "byoungd/up",
+      "url": "https://github.com/byoungd/up",
+      "language": "JavaScript",
+      "starsToday": 714,
+      "stars": 66369,
+      "summary": "《人生進階指南》是韓先凱（筆名離譜）持續更新的開源書稿，副標題是人工智慧時代的終身學習指南。書稿從英語學習寫起，再寫到人工智慧學習、真實專案、創業失敗與身體恢復。作者說，人工智慧讓答案變便宜，但更稀缺的是判斷哪些問題值得問、哪些證據可信，以及把建議做成真實作品。正文採創用 CC 姓名標示—非商業性 4.0 授權，並提供中英文的電子書與可攜式文件格式下載。它適合想在人工智慧時代持續學習、並留下實作紀錄的一般讀者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 9
+    },
+    {
+      "id": 49913350,
+      "title": "Halfspace experimental IDE for solid modeling with distance fields",
+      "titleZh": "Halfspace：用距離場做實體建模的實驗編輯器",
+      "url": "https://www.mattkeeter.com/projects/halfspace/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49913350",
+      "score": 45,
+      "comments": 6,
+      "summary": "Matt Keeter 介紹實驗性編輯器 Halfspace，用來做距離場實體建模。實體建模是做出有明確「內部」與「外部」的立體，方便之後 3D 列印，不像有些遊戲模型只有薄薄的一面牆。距離場則用數字描述每個點離物體表面有多遠，像地圖上的等高線。Halfspace 包在作者的 Fidget 核心之上，可即時把模型畫成影像，也可匯出三角網格；並提供一小套基本形狀與轉換，也支援把大模型拆成可分別調整的小塊。作者註明從 2025 年 4 月起亲手撰寫，並提供電腦版示範；他提醒行動版 Safari 的 WebGPU 仍有問題。它適合對隱式曲面與電腦輔助設計感興趣的開發者。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 9
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-10-01/context-box.svg",
+      "alt": "圓頭小人看著塞滿日誌與網頁快照的對話空間，下方寫著先放進沙箱整理。",
+      "caption": "工具輸出先放進沙箱整理，不要整箱塞進對話。",
+      "relatedItemId": "mksglu/context-mode"
+    },
+    {
+      "src": "data/humor/2026-10-01/one-line.svg",
+      "alt": "上方有人要求做日期選擇器，下方 Ponytail 回覆改用瀏覽器內建的日期欄位。",
+      "caption": "Ponytail 的例子：能用內建欄位，就不必再包一層元件。",
+      "relatedItemId": "DietrichGebert/ponytail"
+    }
+  ]
+}

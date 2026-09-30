@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
+  <rect width="360" height="300" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 15px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="20" y="20" width="140" height="100" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="90" y="48" text-anchor="middle">工具原始輸出</text>
+  <text x="90" y="72" text-anchor="middle" class="sub">315 千位元組</text>
+  <text x="90" y="96" text-anchor="middle" class="sub">像整箱雜物</text>
+  <line x1="160" y1="70" x2="198" y2="70" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="200" y="20" width="140" height="100" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="270" y="48" text-anchor="middle">沙箱整理後</text>
+  <text x="270" y="72" text-anchor="middle" class="sub">5.4 千位元組</text>
+  <text x="270" y="96" text-anchor="middle" class="sub">約減少 98%</text>
+  <rect x="40" y="150" width="280" height="56" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="174" text-anchor="middle">工作紀錄存進資料庫</text>
+  <text x="180" y="196" text-anchor="middle" class="sub">對話壓縮後仍可查回相關事件</text>
+  <rect x="40" y="226" width="280" height="52" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="248" text-anchor="middle">用腳本算結果，不把整份資料塞進對話</text>
+  <text x="180" y="268" text-anchor="middle" class="sub">像請助理先清點，再回報數字</text>
+</svg>

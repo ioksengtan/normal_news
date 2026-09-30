@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
+  <rect width="360" height="300" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">寫程式前先爬階梯</text>
+  <rect x="50" y="44" width="260" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="70" text-anchor="middle">1. 這件事一定要做嗎？不必就跳過</text>
+  <line x1="180" y1="84" x2="180" y2="98" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="50" y="100" width="260" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="126" text-anchor="middle">2. 專案裡已有現成做法？就重用</text>
+  <line x1="180" y1="140" x2="180" y2="154" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="50" y="156" width="260" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="182" text-anchor="middle">3. 標準函式庫夠用？就用它</text>
+  <line x1="180" y1="196" x2="180" y2="210" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="50" y="212" width="260" height="40" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="238" text-anchor="middle">4. 還不夠才新寫必要的程式</text>
+  <text x="180" y="278" text-anchor="middle" class="sub">像最懶的資深工程師：能少寫就少寫，安全檢查不砍</text>
+</svg>

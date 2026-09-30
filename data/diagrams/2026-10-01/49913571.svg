@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
+  <rect width="360" height="300" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="30" y="24" width="300" height="52" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="46" text-anchor="middle">Gemini 4 Argon</text>
+  <text x="180" y="66" text-anchor="middle" class="sub">Google 宣布的下一款大型語言模型</text>
+  <rect x="30" y="96" width="140" height="70" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="100" y="124" text-anchor="middle">輸出上限</text>
+  <text x="100" y="148" text-anchor="middle">100 萬詞元</text>
+  <rect x="190" y="96" width="140" height="70" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="260" y="124" text-anchor="middle">先前上限</text>
+  <text x="260" y="148" text-anchor="middle">6.4 萬詞元</text>
+  <line x1="180" y1="176" x2="180" y2="198" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="40" y="200" width="280" height="72" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="228" text-anchor="middle">先給 Fairwind 計畫的資安測試者</text>
+  <text x="180" y="252" text-anchor="middle" class="sub">像新車先給少數試車員，再逐步開放</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <rect width="360" height="240" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <circle cx="80" cy="70" r="20" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="64" y="90" width="32" height="40" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="130" y="40" width="200" height="70" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="230" y="70" text-anchor="middle">請做一個日期選擇器</text>
+  <text x="230" y="96" text-anchor="middle" class="sub">（還附上時區討論……）</text>
+  <circle cx="80" cy="170" r="20" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="64" y="190" width="32" height="30" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="130" y="150" width="200" height="50" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="230" y="180" text-anchor="middle">改用瀏覽器內建的日期欄位</text>
+  <text x="80" y="148" text-anchor="middle" class="sub">Ponytail</text>
+</svg>

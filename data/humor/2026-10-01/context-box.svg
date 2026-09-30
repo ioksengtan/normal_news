@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <rect width="360" height="240" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <circle cx="70" cy="90" r="22" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="52" y="112" width="36" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="120" y="50" width="200" height="120" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="220" y="78" text-anchor="middle">對話空間</text>
+  <rect x="140" y="90" width="70" height="28" fill="#ebe4d4" stroke="#1c1915" stroke-width="1"/>
+  <text x="175" y="109" text-anchor="middle" class="sub">日誌</text>
+  <rect x="220" y="90" width="70" height="28" fill="#ebe4d4" stroke="#1c1915" stroke-width="1"/>
+  <text x="255" y="109" text-anchor="middle" class="sub">網頁快照</text>
+  <rect x="140" y="128" width="150" height="28" fill="#ebe4d4" stroke="#1c1915" stroke-width="1"/>
+  <text x="215" y="147" text-anchor="middle" class="sub">還有更多原始輸出……</text>
+  <text x="70" y="180" text-anchor="middle" class="sub">助手</text>
+  <rect x="40" y="190" width="280" height="36" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="213" text-anchor="middle">先放進沙箱整理，不要整箱塞進對話。</text>
+</svg>
