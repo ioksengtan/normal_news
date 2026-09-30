@@ -250,7 +250,7 @@ function buildArticle(result, candidate, rubric, now, errors, where) {
     }
   }
 
-  return {
+  const article = {
     id: candidate.id,
     neutralTitle,
     neutralSummary,
@@ -265,6 +265,9 @@ function buildArticle(result, candidate, rubric, now, errors, where) {
     rubricVersion: rubric.version,
     eventId: null,
   };
+  const license = typeof candidate.license === 'string' ? candidate.license.trim() : '';
+  if (license) article.license = license;
+  return article;
 }
 
 function planEvent(event, eventById, where) {
@@ -334,6 +337,9 @@ function serializeArticle(article) {
     rubricVersion: article.rubricVersion,
     eventId: article.eventId,
   };
+  if (typeof article.license === 'string' && article.license.trim()) {
+    stored.license = article.license.trim();
+  }
   if (article.isExample) stored.isExample = true;
   return stored;
 }
@@ -408,11 +414,15 @@ export function buildInternational(events, articles, updatedAt) {
       .filter((article) => article && !article.isExample);
     if (members.length === 0) continue;
     const representative = members.slice().sort(comparePublished)[0];
-    const sources = members.map((article) => ({
-      name: article.source,
-      url: article.link,
-      publishedAt: article.publishedAt || null,
-    }));
+    const sources = members.map((article) => {
+      const source = {
+        name: article.source,
+        url: article.link,
+        publishedAt: article.publishedAt || null,
+      };
+      if (article.license) source.license = article.license;
+      return source;
+    });
     list.push({
       id: event.id,
       neutralTitle: representative.neutralTitle || '',

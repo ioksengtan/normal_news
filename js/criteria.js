@@ -32,16 +32,33 @@ function renderMarkdown(text) {
   }).join('\n');
 }
 
+function renderFunding(sources) {
+  const enabled = (Array.isArray(sources) ? sources : []).filter((source) => source && source.enabled !== false && source.fundingNote);
+  if (enabled.length === 0) return '';
+  const items = enabled.map((source) => (
+    `<li><strong>${inline(source.source || source.id || '來源')}</strong>：${inline(source.fundingNote)}</li>`
+  )).join('');
+  return `<h2>各來源的出資與所有權</h2>\n<ul>${items}</ul>`;
+}
+
 async function main() {
   const body = document.getElementById('criteria-body');
   const meta = document.getElementById('criteria-meta');
   if (!body) return;
   try {
-    const response = await fetch('data/criteria.json', { cache: 'no-store' });
-    if (!response.ok) throw new Error('criteria');
-    const criteria = await response.json();
+    const [criteriaResponse, sourcesResponse] = await Promise.all([
+      fetch('data/criteria.json', { cache: 'no-store' }),
+      fetch('config/sources.json', { cache: 'no-store' }),
+    ]);
+    if (!criteriaResponse.ok) throw new Error('criteria');
+    const criteria = await criteriaResponse.json();
+    let funding = '';
+    if (sourcesResponse.ok) {
+      const config = await sourcesResponse.json();
+      funding = renderFunding(config.sources);
+    }
     if (meta) meta.textContent = `版本 ${criteria.version || '—'} · 最後更新 ${criteria.updatedAt || '未知'}`;
-    body.innerHTML = renderMarkdown(criteria.summary || '');
+    body.innerHTML = `${renderMarkdown(criteria.summary || '')}\n${funding}`;
   } catch {
     body.innerHTML = '<p class="empty">準則資料還沒有產生。</p>';
   }

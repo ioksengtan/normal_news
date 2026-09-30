@@ -16,11 +16,15 @@ export function normalizeEvents(data) {
   const list = Array.isArray(data) ? data : (data?.events || []);
   return list.map((event) => {
     if (!event || event.id == null) return null;
-    const sources = (event.sources || []).map((source) => ({
-      name: source.name || source.source || '來源',
-      url: source.url || source.link || '',
-      publishedAt: source.publishedAt || source.at || null,
-    }));
+    const sources = (event.sources || []).map((source) => {
+      const mapped = {
+        name: source.name || source.source || '來源',
+        url: source.url || source.link || '',
+        publishedAt: source.publishedAt || source.at || null,
+      };
+      if (source.license) mapped.license = source.license;
+      return mapped;
+    });
     const reports = sources
       .filter((source) => source.publishedAt && !Number.isNaN(Date.parse(source.publishedAt)))
       .map((source) => ({ source: source.name, at: source.publishedAt }));

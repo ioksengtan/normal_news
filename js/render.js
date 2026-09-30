@@ -14,6 +14,13 @@ function commentaryLine(articleType) {
   return articleType === '評論' ? '<p class="meta">評論</p>' : '';
 }
 
+function licenseLine(sources) {
+  return (sources || []).filter((source) => source.license).map((source) => {
+    const name = escapeHtml(source.name || '來源');
+    return `<p class="meta license">授權 ${escapeHtml(source.license)}，出處：${name}</p>`;
+  }).join('');
+}
+
 function sourceLine(sources, updatedAt) {
   const links = (sources || []).map((source) => {
     const url = safeUrl(source.url);
@@ -35,6 +42,7 @@ function renderArticleCard(item, lead) {
     ${commentaryLine(item.articleType)}
     <h3><a href="article.html?id=${encodeURIComponent(item.id)}">${escapeHtml(item.title)}</a></h3>
     ${item.summary ? `<p class="summary">${escapeHtml(item.summary)}</p>` : ''}
+    ${licenseLine(item.sources)}
     ${sourceLine(item.sources, item.updatedAt)}
   </article>`;
 }
@@ -197,6 +205,7 @@ export function renderArticle(event, config, pageUrl) {
     ${commentaryLine(event.articleType)}
     <h2>${escapeHtml(title || '新聞')}</h2>
     <div class="article-body">${body}</div>
+    ${licenseLine(event.sources)}
     ${notes}
     ${sources ? `<p class="source-list">${sources}</p>` : ''}
     <p class="report"><a href="${escapeHtml(report)}">回報問題</a></p>`;

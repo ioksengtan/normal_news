@@ -54,6 +54,10 @@ export function loadSources(filePath = DEFAULT_SOURCES_PATH, { disabled = [] } =
       excludeCategories: stringList(entry.excludeCategories, `${where}.excludeCategories`),
       includeKeywords: stringList(entry.includeKeywords, `${where}.includeKeywords`),
       excludeKeywords: stringList(entry.excludeKeywords, `${where}.excludeKeywords`),
+      excludeBylineMarkers: stringList(entry.excludeBylineMarkers, `${where}.excludeBylineMarkers`),
+      fundingNote: optionalString(entry.fundingNote, `${where}.fundingNote`),
+      license: optionalString(entry.license, `${where}.license`),
+      termsStatus: optionalString(entry.termsStatus, `${where}.termsStatus`),
     };
   });
 }
@@ -74,6 +78,12 @@ function reasonText(entry) {
   if (typeof entry.reason === 'string' && entry.reason.trim()) return entry.reason.trim();
   if (typeof entry.note === 'string' && entry.note.trim()) return entry.note.trim();
   return '';
+}
+
+function optionalString(value, label) {
+  if (value == null || value === '') return '';
+  if (typeof value !== 'string') throw new Error(`${label} 必須是字串`);
+  return value.trim();
 }
 
 function requiredString(value, label) {

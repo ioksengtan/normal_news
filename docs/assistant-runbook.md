@@ -22,10 +22,14 @@ npm run publish
 
 | id | 來源 | 篩選 |
 | --- | --- | --- |
-| `dw-chinese` | 德國之聲 | 超過 3 天的項目不收 |
-| `channel-news-asia` | 亞洲新聞台 | 分類含 business 或 commentary 的不收；標題或摘要含 Wall Street、stocks、oil prices、bond yields 的行情稿不收 |
+| `channel-news-asia` | 亞洲新聞台 | 分類含 business 或 commentary 的不收；標題或摘要含 Wall Street、stocks、oil prices、bond yields 的行情稿不收；署名或來源標記為 AFP、AP、法新社、美聯社的供稿不收。條款不明確，仍依決定維持啟用 |
+| `voa-chinese` | 美國之音中文 | 簡體中文。網址含 `/video/` 或分類為 video 的不收；美聯社、法新社、路透等第三方通訊社供稿不收 |
+| `agencia-brasil` | 巴西通訊社 | 英文版。注明出處即可轉載 |
+| `asiapacific-report` | Asia Pacific Report | 只收原創。分類或標記為 RNZ、Radio New Zealand，或其他媒體轉載的不收。授權為 CC BY-NC-SA 4.0，摘要下顯示授權與出處 |
 
-英國廣播公司中文網已停用：robots.txt 的註解反對以人工智慧摘要其內容。半島電視台已停用：使用條款禁止爬蟲與文字探勘。日本時報與韓國先驅報在設定裡，`enabled` 為 false，等書面許可。不要把台灣媒體加回來，也不要重新啟用已表明反對的來源。
+每個來源的 `fundingNote` 寫出資與所有權，準則頁會顯示啟用中來源的這段文字。Asia Pacific Report 的 `license` 是 `CC BY-NC-SA 4.0`。
+
+德國之聲已停用：robots.txt 的註解禁止未經書面許可以自動化方式探勘或抓取內容。英國廣播公司中文網已停用：robots.txt 的註解反對以人工智慧摘要其內容。半島電視台已停用：使用條款禁止爬蟲與文字探勘。日本時報與韓國先驅報在設定裡，`enabled` 為 false，等書面許可。不要把台灣媒體加回來，也不要重新啟用已表明反對的來源。Daily Maverick 與國際新聞社條款不明確，不要加入。
 
 每個來源預設最多 6 篇，整輪最多 30 篇，數字在設定檔的 `perSource` 與 `total`。已在 `data/articles.json` 的連結會跳過。抓取前先查 robots.txt。單一來原始失敗或被擋下只警告；全部啟用中的來源都沒成功時，結束碼是 1。
 

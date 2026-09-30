@@ -2,7 +2,7 @@ import path from 'path';
 import { flag, parseArgs, parseList, positiveInt } from './lib/args.js';
 import { MIN_ARTICLE_TEXT_CHARS } from './lib/constants.js';
 import { extractArticleText } from './lib/extract.js';
-import { MIN_REQUEST_GAP_MS, taipeiStamp, waitForSlot } from './lib/http.js';
+import { fetchResponse, MIN_REQUEST_GAP_MS, taipeiStamp, waitForSlot } from './lib/http.js';
 import { stripTracking } from './lib/url.js';
 import { applySourceFilters } from './lib/filters.js';
 import { articleIdFromLink } from './lib/ingest.js';
@@ -56,10 +56,38 @@ function emptyFeed(source, status, error) {
   };
 }
 
+function fetchChecked(timeoutMs) {
+  return (url, options = {}) => fetchResponse(url, {
+    ...options,
+    timeoutMs: options.timeoutMs || timeoutMs,
+    normalizeUrl: (nextUrl) => {
+      try {
+        return stripTracking(nextUrl);
+      } catch {
+        return nextUrl;
+      }
+    },
+    beforeRequest: async (nextUrl, { hop }) => {
+      const decision = await gate(nextUrl, options.timeoutMs || timeoutMs);
+      if (decision.blocked) {
+        const error = new Error(decision.reason);
+        error.blocked = true;
+        throw error;
+      }
+      if (hop > 0) {
+        await waitForSlot(
+          nextUrl,
+          Math.max(MIN_REQUEST_GAP_MS, (decision.crawlDelaySeconds || 0) * 1000),
+        );
+      }
+    },
+  });
+}
+
 async function gate(url, timeoutMs) {
   const origin = new URL(url).origin;
-  await waitForSlot(`${origin}/robots.txt`, MIN_REQUEST_GAP_MS);
   if (!robotsCache.has(origin)) {
+    await waitForSlot(`${origin}/robots.txt`, MIN_REQUEST_GAP_MS);
     robotsCache.set(origin, fetchRobots(origin, { timeoutMs }));
   }
   const robots = await robotsCache.get(origin);
@@ -131,7 +159,8 @@ async function main() {
     }
 
     await waitForSlot(feedUrl, Math.max(MIN_REQUEST_GAP_MS, feedGate.crawlDelaySeconds * 1000));
-    const fetched = await fetchFeed({ ...source, url: feedUrl }, { timeoutMs, limit });
+    const load = fetchChecked(timeoutMs);
+    const fetched = await fetchFeed({ ...source, url: feedUrl }, { timeoutMs, limit, fetchImpl: load });
     const items = (fetched.items || []).map((item) => {
       try {
         return { ...item, link: stripTracking(item.link) };
@@ -144,8 +173,9 @@ async function main() {
     for (const item of filtered) {
       if (item.link) seenForNew.add(item.link);
     }
+    const feedStatus = fetched.ok ? 'ok' : (fetched.blocked ? 'blocked' : 'error');
     const report = {
-      ...emptyFeed(source, fetched.ok ? 'ok' : 'error', fetched.error),
+      ...emptyFeed(source, feedStatus, fetched.error),
       itemCount: items.length,
       keptCount: filtered.length,
       newCount: freshCount,
@@ -154,6 +184,8 @@ async function main() {
     if (fetched.ok) {
       pooled.push(...filtered);
       console.log(`[成功] ${source.source} (${source.id}) 讀取 ${items.length}，留下 ${filtered.length}，新 ${freshCount}`);
+    } else if (fetched.blocked) {
+      console.error(`[略過] ${taipeiStamp()} ${source.source} (${source.id}) ${fetched.error}`);
     } else {
       const blockedStatus = fetched.status === 401 || fetched.status === 403 || fetched.status === 429;
       console.error(`[${blockedStatus ? '封鎖' : '失敗'}] ${taipeiStamp()} ${source.source} (${source.id}) ${fetched.error} ${feedUrl} — 不換 User-Agent、不換 IP、不重試。`);
@@ -190,12 +222,17 @@ async function main() {
     }
     try {
       await pauseForCrawlDelay(articleUrl, Math.max(5, articleGate.crawlDelaySeconds));
-      const extracted = await extractArticleText(articleUrl, { timeoutMs });
+      const loadArticle = fetchChecked(timeoutMs);
+      const extracted = await extractArticleText(articleUrl, {
+        timeoutMs,
+        fetchImpl: async (pageUrl, options) => (await loadArticle(pageUrl, options)).text,
+      });
       const text = extracted.text || '';
       if (charLength(text) < MIN_ARTICLE_TEXT_CHARS) {
         throw new Error(`內文過短（${charLength(text)} 字，可能是動態渲染或萃取失敗）`);
       }
-      candidates.push({
+      const sourceConfig = sources.find((entry) => entry.id === item.feedId);
+      const candidate = {
         id: articleIdFromLink(item.link),
         url: articleUrl,
         link: articleUrl,
@@ -204,7 +241,9 @@ async function main() {
         title: extracted.title || item.title,
         publishedAt: item.publishedAt,
         text,
-      });
+      };
+      if (sourceConfig?.license) candidate.license = sourceConfig.license;
+      candidates.push(candidate);
       if (report) report.extractedCount += 1;
       console.log(`[萃取] ${item.source} ${extracted.title || item.title}`);
     } catch (err) {
