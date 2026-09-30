@@ -1,11 +1,14 @@
 {
-  "description": "這個專案只做國際新聞與科技。台灣媒體不在來源裡。新增或調整來源只改這個檔：maxAgeDays 丟掉太舊的項目，excludeUrlSubstrings 依網址排除，excludeCategories 依分類排除。遇到 403 或 robots.txt 針對 AI 代理的禁令時，不換 User-Agent、不換 IP。",
+  "description": "這個專案只做國際新聞與科技。台灣媒體不在來源裡。新增或調整來源只改這個檔：maxAgeDays 丟掉太舊的項目，excludeUrlSubstrings 依網址排除，excludeCategories 依分類排除，excludeKeywords 依標題或摘要排除。perSource 與 total 是每天抓取的名額。遇到 403、robots.txt 禁令或使用條款禁止爬蟲與改作時，停用該來源，不換 User-Agent、不換 IP。",
+  "perSource": 6,
+  "total": 30,
   "sources": [
     {
       "id": "bbc-chinese-trad",
       "source": "英國廣播公司中文網",
       "url": "https://feeds.bbci.co.uk/zhongwen/trad/rss.xml",
-      "enabled": true
+      "enabled": false,
+      "reason": "robots.txt 的註解反對以人工智慧摘要其內容"
     },
     {
       "id": "dw-chinese",
@@ -18,7 +21,8 @@
       "id": "al-jazeera",
       "source": "半島電視台",
       "url": "https://www.aljazeera.com/xml/rss/all.xml",
-      "enabled": true,
+      "enabled": false,
+      "reason": "使用條款禁止爬蟲與文字探勘",
       "excludeUrlSubstrings": ["/liveblog/"]
     },
     {
@@ -26,7 +30,8 @@
       "source": "亞洲新聞台",
       "url": "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=6311",
       "enabled": true,
-      "excludeCategories": ["business", "commentary"]
+      "excludeCategories": ["business", "commentary"],
+      "excludeKeywords": ["Wall Street", "stocks", "oil prices", "bond yields"]
     },
     {
       "id": "japan-times",

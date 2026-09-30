@@ -1,4 +1,5 @@
 import path from 'path';
+import { DEFAULT_FETCH_TOTAL, DEFAULT_PER_SOURCE } from './constants.js';
 import { readJson } from './jsonio.js';
 
 export const DEFAULT_SOURCES_PATH = path.join(process.cwd(), 'config', 'sources.json');
@@ -36,9 +37,7 @@ export function loadSources(filePath = DEFAULT_SOURCES_PATH, { disabled = [] } =
     let disabledReason = null;
     if (!enabledInConfig) {
       status = 'disabled';
-      disabledReason = typeof entry.note === 'string' && entry.note.trim()
-        ? entry.note.trim()
-        : '設定檔 enabled 為 false';
+      disabledReason = reasonText(entry) || '設定檔 enabled 為 false';
     } else if (disabledByFlag) {
       status = 'disabled';
       disabledReason = '本次以 --disable 或 DISABLED_SOURCES 停用';
@@ -54,8 +53,27 @@ export function loadSources(filePath = DEFAULT_SOURCES_PATH, { disabled = [] } =
       excludeUrlSubstrings: stringList(entry.excludeUrlSubstrings, `${where}.excludeUrlSubstrings`),
       excludeCategories: stringList(entry.excludeCategories, `${where}.excludeCategories`),
       includeKeywords: stringList(entry.includeKeywords, `${where}.includeKeywords`),
+      excludeKeywords: stringList(entry.excludeKeywords, `${where}.excludeKeywords`),
     };
   });
+}
+
+export function fetchLimitsFromConfig(raw) {
+  const config = raw && typeof raw === 'object' ? raw : {};
+  return {
+    perSource: config.perSource == null
+      ? DEFAULT_PER_SOURCE
+      : optionalPositiveInt(config.perSource, 'perSource'),
+    total: config.total == null
+      ? DEFAULT_FETCH_TOTAL
+      : optionalPositiveInt(config.total, 'total'),
+  };
+}
+
+function reasonText(entry) {
+  if (typeof entry.reason === 'string' && entry.reason.trim()) return entry.reason.trim();
+  if (typeof entry.note === 'string' && entry.note.trim()) return entry.note.trim();
+  return '';
 }
 
 function requiredString(value, label) {

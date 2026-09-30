@@ -27,6 +27,15 @@ test('source filters drop old DW items, Al Jazeera liveblogs, and CNA Asia busin
     { title: '評論', link: 'https://www.channelnewsasia.com/commentary/c', categories: ['Commentary ,World'] },
   ], { excludeCategories: ['business', 'commentary'] }, now);
   assert.deepEqual(cna.map((item) => item.title), ['世界']);
+
+  const markets = applySourceFilters([
+    { title: 'World leaders meet', link: 'https://www.channelnewsasia.com/world/meet', summary: 'Talks continue.' },
+    { title: 'Wall Street closes higher', link: 'https://www.channelnewsasia.com/world/street', summary: 'Indexes rose.' },
+    { title: 'Oil prices fall', link: 'https://www.channelnewsasia.com/world/oil', summary: 'Crude slipped.' },
+    { title: 'Bond yields climb', link: 'https://www.channelnewsasia.com/world/bonds', summary: 'Treasuries moved.' },
+    { title: 'Airline stocks jump', link: 'https://www.channelnewsasia.com/world/stocks', summary: 'Shares rose.' },
+  ], { excludeKeywords: ['Wall Street', 'stocks', 'oil prices', 'bond yields'] }, now);
+  assert.deepEqual(markets.map((item) => item.title), ['World leaders meet']);
 });
 
 test('robots checks the project agent and the wildcard group, after tracking parameters are removed', () => {
@@ -78,4 +87,9 @@ test('a summary that copies more than 10 characters of the source is rejected', 
   const source = '市議會今日通過預算案，官員說明法定程序已經完成。';
   assert.equal(sharesLongRun('議會完成預算表決。各方說法已轉述。', source), false);
   assert.equal(sharesLongRun(`開頭${source}結尾補充說明。`, source), true);
+
+  const original = 'Mindgard said Moonshot AI Holdings built the model after Donald Trump spoke.';
+  const summary = '檢測業者（Mindgard）表示月之暗面（Moonshot AI Holdings）開發了模型。川普（Donald Trump）另有說法。各方主張已分開轉述。';
+  assert.equal(sharesLongRun(summary, original), false);
+  assert.equal(sharesLongRun('這句（市議會今日通過預算案，官員說明法定程序已經完成）仍是抄錄。', source), true);
 });

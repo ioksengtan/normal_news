@@ -9,7 +9,7 @@ import { articleIdFromLink } from './lib/ingest.js';
 import { readJson, writeJson } from './lib/jsonio.js';
 import { aiAgentBlocks, fetchRobots } from './lib/robots.js';
 import { countUnseen, feedFailureSummary, fetchFeed, selectByQuota } from './lib/rss.js';
-import { loadSources } from './lib/sources.js';
+import { fetchLimitsFromConfig, loadSources } from './lib/sources.js';
 import { charLength } from './lib/text.js';
 
 const USAGE = `用法：npm run fetch -- [選項]
@@ -19,7 +19,8 @@ const USAGE = `用法：npm run fetch -- [選項]
 
 選項：
   --out <檔案>         預設 tmp/candidates.json
-  --per-source <n>     每個來源最多幾篇，預設 4（也可用環境變數 MAX_PER_SOURCE）
+  --per-source <n>     每個來源最多幾篇，預設 6（設定檔 perSource，或環境變數 MAX_PER_SOURCE）
+  --total <n>          整輪最多幾篇，預設 30（設定檔 total，或環境變數 MAX_TOTAL）
   --limit <n>          每個 feed 最多讀幾則，預設 30（LIMIT_PER_FEED）
   --disable <id或名稱> 這次停用的來源，可重複，或用逗號分隔（DISABLED_SOURCES）
   --timeout <ms>       單次抓取逾時，預設 20000（FEED_TIMEOUT_MS）
@@ -88,14 +89,21 @@ async function main() {
   const outFile = path.resolve(args.out || path.join('tmp', 'candidates.json'));
   outsideDataDir(outFile, dataDir);
 
-  const perSource = positiveInt(args['per-source'] ?? process.env.MAX_PER_SOURCE, '--per-source', 2);
+  const sourceFile = args.sources || undefined;
+  const limits = fetchLimitsFromConfig(readJson(sourceFile || 'config/sources.json'));
+  const perSource = positiveInt(
+    args['per-source'] ?? process.env.MAX_PER_SOURCE,
+    '--per-source',
+    limits.perSource,
+  );
+  const total = positiveInt(args.total ?? process.env.MAX_TOTAL, '--total', limits.total);
   const limit = positiveInt(args.limit ?? process.env.LIMIT_PER_FEED, '--limit', 30);
   const timeoutMs = positiveInt(args.timeout ?? process.env.FEED_TIMEOUT_MS, '--timeout', 20000);
   const disabled = [
     ...parseList(args.disable),
     ...parseList(process.env.DISABLED_SOURCES),
   ];
-  const sources = loadSources(args.sources, { disabled });
+  const sources = loadSources(sourceFile, { disabled });
   const articles = readJson(path.join(dataDir, 'articles.json'));
   const events = readJson(path.join(dataDir, 'events.json'));
   if (!Array.isArray(articles)) throw new Error('articles.json 必須是陣列');
@@ -152,7 +160,7 @@ async function main() {
     }
   }
 
-  const selected = selectByQuota(pooled, seenLinks, perSource).slice(0, 8);
+  const selected = selectByQuota(pooled, seenLinks, perSource).slice(0, total);
   for (const item of selected) {
     const report = feedReports.find((entry) => entry.id === item.feedId);
     if (report) report.selectedCount += 1;
@@ -215,6 +223,7 @@ async function main() {
   const output = {
     fetchedAt: new Date().toISOString(),
     perSourceQuota: perSource,
+    totalQuota: total,
     notes: '改寫時用 publishedAt 把「今日」「昨日」換成絕對日期。同一事件才填 same_as；不確定就用 unsure，不要併。此檔含原文，不要提交。',
     feeds: feedReports,
     existingEvents: events

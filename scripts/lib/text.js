@@ -15,7 +15,8 @@ export function compactWhitespace(str) {
   return String(str ?? '').replace(/\s+/g, '');
 }
 
-// 摘要不得和原文共用超過 10 個連續字。數字與「（原文為…）」括注先拿掉，避免日期與附註原文被誤判。
+// 摘要不得和原文共用超過 10 個連續字。數字、「（原文為…）」與括號裡的原文拼寫先拿掉，
+// 避免日期、附註，以及人名、組織名的原文拼寫被誤判成抄襲。
 export function sharesLongRun(summary, source, limit = 10) {
   const left = overlapText(summary);
   const right = overlapText(source);
@@ -30,6 +31,13 @@ export function sharesLongRun(summary, source, limit = 10) {
 function overlapText(value) {
   return String(value ?? '')
     .replace(/（原文為[^）]{0,80}）/g, '')
+    .replace(/[（(]([^（）()]{1,80})[）)]/g, (match, inner) => (isOriginalSpelling(inner) ? '' : match))
     .replace(/\s+/g, '')
     .replace(/[0-9０-９]/g, '');
+}
+
+function isOriginalSpelling(inner) {
+  const text = String(inner).trim();
+  if (!text || /[\p{Script=Han}]/u.test(text)) return false;
+  return /\p{L}/u.test(text);
 }

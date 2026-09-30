@@ -1,4 +1,4 @@
-import { buildPaper } from './paper.js';
+import { buildPaper, eventIdsFromIssue, previousIssueEntry } from './paper.js';
 import { bindPaper, renderNav, renderSections } from './render.js';
 import { taipeiDateString } from './time.js';
 
@@ -28,7 +28,19 @@ async function main() {
     } catch {
       index = { issues: [] };
     }
-    const entry = pickIssue(index.issues, taipeiDateString(new Date()));
+    const today = taipeiDateString(new Date());
+    const entry = pickIssue(index.issues, today);
+    const previous = previousIssueEntry(index.issues, today);
+    let previousEventIds = Array.isArray(previous?.internationalEventIds)
+      ? previous.internationalEventIds.filter((id) => typeof id === 'string' && id)
+      : [];
+    if (previousEventIds.length === 0 && previous?.path && !Array.isArray(previous?.internationalEventIds)) {
+      try {
+        previousEventIds = eventIdsFromIssue(await fetchJson(previous.path));
+      } catch {
+        previousEventIds = [];
+      }
+    }
     let issue = null;
     if (entry?.path) {
       try {
@@ -43,7 +55,13 @@ async function main() {
     } catch {
       international = { events: [] };
     }
-    const model = buildPaper({ config, international, issue, now: new Date() });
+    const model = buildPaper({
+      config,
+      international,
+      issue,
+      now: new Date(),
+      previousEventIds,
+    });
     if (dateline) dateline.textContent = model.dateline;
     if (frontUpdated) frontUpdated.textContent = model.frontUpdated;
     if (nav) nav.innerHTML = renderNav(model);

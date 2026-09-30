@@ -16,6 +16,13 @@ function keepItem(item, source, now) {
     const haystack = `${item.title || ''}\n${item.summary || ''}`;
     if (!keywords.some((keyword) => keyword && haystack.includes(keyword))) return false;
   }
+  const excluded = source.excludeKeywords || [];
+  if (excluded.length > 0) {
+    const haystack = `${item.title || ''}\n${item.summary || ''}`.toLowerCase();
+    if (excluded.some((keyword) => keyword && haystack.includes(String(keyword).toLowerCase()))) {
+      return false;
+    }
+  }
   if (source.maxAgeDays) {
     const published = Date.parse(item.publishedAt || '');
     if (Number.isNaN(published)) return false;

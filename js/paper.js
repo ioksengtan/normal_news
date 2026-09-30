@@ -20,24 +20,6 @@ function sourcesBetween(event, startMs, endMs) {
   return names.size;
 }
 
-function clipEvent(event, asOfMs) {
-  const reports = (event.reports || []).filter((report) => {
-    const time = Date.parse(report.at);
-    return !Number.isNaN(time) && time <= asOfMs;
-  });
-  if (reports.length === 0) return null;
-  let updatedAt = reports[0].at;
-  let updatedMs = Date.parse(updatedAt);
-  for (const report of reports) {
-    const time = Date.parse(report.at);
-    if (time >= updatedMs) {
-      updatedMs = time;
-      updatedAt = report.at;
-    }
-  }
-  return { ...event, reports, updatedAt };
-}
-
 function hasReportSince(event, startMs) {
   return (event.reports || []).some((report) => {
     const time = Date.parse(report.at);
@@ -45,16 +27,26 @@ function hasReportSince(event, startMs) {
   });
 }
 
-export function selectByCoverage(events, now, limit = 12, depth = 0) {
-  const startMs = publicationStart(now).getTime();
-  let printed = new Set();
-  if (depth < 14 && events.length > 0) {
-    const asOf = startMs - 1;
-    const historical = events.map((event) => clipEvent(event, asOf)).filter(Boolean);
-    if (historical.length > 0) {
-      printed = new Set(selectByCoverage(historical, new Date(asOf), limit, depth + 1).map((event) => event.id));
-    }
+export function previousIssueEntry(issues, today) {
+  const list = Array.isArray(issues) ? issues : [];
+  return list
+    .filter((issue) => typeof issue?.date === 'string' && issue.date < today)
+    .sort((a, b) => (a.date < b.date ? 1 : -1))[0] || null;
+}
+
+export function eventIdsFromIssue(issue) {
+  if (!issue || typeof issue !== 'object') return [];
+  if (Array.isArray(issue.internationalEventIds)) {
+    return issue.internationalEventIds.filter((id) => typeof id === 'string' && id);
   }
+  const items = issue.sections?.international?.items;
+  if (!Array.isArray(items)) return [];
+  return items.map((item) => item?.id).filter((id) => typeof id === 'string' && id);
+}
+
+export function selectByCoverage(events, now, limit = 12, previousEventIds = []) {
+  const startMs = publicationStart(now).getTime();
+  const printed = new Set(Array.isArray(previousEventIds) ? previousEventIds : []);
   const dayAgo = now.getTime() - 24 * 60 * 60 * 1000;
   return events
     .filter((event) => !(printed.has(event.id) && !hasReportSince(event, startMs)))
@@ -155,13 +147,13 @@ function inlineSection(section) {
   };
 }
 
-export function buildPaper({ config, international, issue, now = new Date() }) {
+export function buildPaper({ config, international, issue, now = new Date(), previousEventIds = [] }) {
   const events = normalizeEvents(international);
   const sections = (config?.sections || []).map((section, index) => {
     const ready = { ...section, domId: domId(section.id, index) };
     if (Array.isArray(section.items) || section.source === 'inline') return inlineSection(ready);
     if (section.source === 'international') {
-      const selected = selectByCoverage(events, now, section.dailyCount || 12).map(presentEvent);
+      const selected = selectByCoverage(events, now, section.dailyCount || 12, previousEventIds).map(presentEvent);
       return articleSection(ready, selected);
     }
     if (section.source === 'issue') return issueSection(ready, issue);
