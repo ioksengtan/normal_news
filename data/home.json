@@ -1,6 +1,70 @@
 {
-  "generatedAt": "2026-09-30T02:55:44.067Z",
+  "generatedAt": "2026-09-30T03:22:06.860Z",
   "maxEvents": 30,
   "maxBytes": 307200,
-  "events": []
+  "events": [
+    {
+      "id": "evt_ZRmaSpvJDTc8eErA",
+      "title": "索馬利亞海盜殺害遭劫油輪五名船員",
+      "summary": "索馬利亞邦特蘭當局表示，救援行動奪回遭劫油輪，但行動前海盜殺害五名船員。",
+      "publishedAt": "2026-09-30T02:39:06+00:00",
+      "articleCount": 1,
+      "representativeArticleId": "ZRmaSpvJDTc8eErA",
+      "uncertain": false
+    },
+    {
+      "id": "evt_kXGDYZ4_w3TKmuRo",
+      "title": "美參議院否決西岸美國公民死亡案報告決議",
+      "summary": "美國參議院以47票對53票否決要求就約旦河西岸九名美國公民死亡提出報告的決議。",
+      "publishedAt": "2026-09-30T02:26:20+00:00",
+      "articleCount": 1,
+      "representativeArticleId": "kXGDYZ4_w3TKmuRo",
+      "uncertain": false
+    },
+    {
+      "id": "evt_p8ShAjMLjlOstBeB",
+      "title": "資安公司稱月之暗面Kimi模型遭越獄後講解生物武器",
+      "summary": "資安公司 Mindgard 表示，中國月之暗面的 Kimi 模型遭越獄後可繞過安全限制；月之暗面稱正進行內部審查。",
+      "publishedAt": "2026-09-30T02:20:26.000Z",
+      "articleCount": 1,
+      "representativeArticleId": "p8ShAjMLjlOstBeB",
+      "uncertain": false
+    },
+    {
+      "id": "evt_dLUg6-HyN_HJ7tV8",
+      "title": "OpenAI開發者大會推出新模型與常駐代理程式",
+      "summary": "OpenAI 在年度開發者大會推出 GPT-6.1 Sol 與常駐代理程式 dots，並讓其他公司在 ChatGPT 內提供軟體。",
+      "publishedAt": "2026-09-30T09:55:00+08:00",
+      "articleCount": 1,
+      "representativeArticleId": "dLUg6-HyN_HJ7tV8",
+      "uncertain": false
+    },
+    {
+      "id": "evt_JZp6MU7W8SBO4vbu",
+      "title": "美軍預定9月30日前撤離伊拉克，專家評價分歧",
+      "summary": "美國計劃在2026年9月30日前撤出駐伊拉克剩餘部隊，結束自2003年以來的駐軍。",
+      "publishedAt": "2026-09-30T00:18:50.000Z",
+      "articleCount": 1,
+      "representativeArticleId": "JZp6MU7W8SBO4vbu",
+      "uncertain": false
+    },
+    {
+      "id": "evt_lHzs5h9YtbTOLb3V",
+      "title": "德媒稱德國政府擬禁止中遠海運收購物流業者Zippel",
+      "summary": "德國《商報》報導，德國聯邦政府以安全疑慮為由，計劃禁止中遠海運收購物流業者 Zippel 的80%股份。",
+      "publishedAt": "2026-09-29T14:41:00.000Z",
+      "articleCount": 1,
+      "representativeArticleId": "lHzs5h9YtbTOLb3V",
+      "uncertain": false
+    },
+    {
+      "id": "evt_LRFSN122sVvQDU-_",
+      "title": "世界智慧財產權組織創新指數：中國第10、德國第11",
+      "summary": "世界智慧財產權組織公布2026年全球創新指數，瑞士居首，中國第10，德國第11。",
+      "publishedAt": "2026-09-29T14:18:00.000Z",
+      "articleCount": 1,
+      "representativeArticleId": "LRFSN122sVvQDU-_",
+      "uncertain": false
+    }
+  ]
 }

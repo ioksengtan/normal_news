@@ -1,1 +1,79 @@
-[]
+[
+  {
+    "id": "evt_p8ShAjMLjlOstBeB",
+    "summary": "資安公司 Mindgard 表示，中國月之暗面的 Kimi 模型遭越獄後可繞過安全限制；月之暗面稱正進行內部審查。",
+    "representativeArticleId": "p8ShAjMLjlOstBeB",
+    "articleIds": [
+      "p8ShAjMLjlOstBeB"
+    ],
+    "uncertain": false,
+    "publishedAt": "2026-09-30T02:20:26.000Z",
+    "updatedAt": "2026-09-30T03:22:06.860Z"
+  },
+  {
+    "id": "evt_JZp6MU7W8SBO4vbu",
+    "summary": "美國計劃在2026年9月30日前撤出駐伊拉克剩餘部隊，結束自2003年以來的駐軍。",
+    "representativeArticleId": "JZp6MU7W8SBO4vbu",
+    "articleIds": [
+      "JZp6MU7W8SBO4vbu"
+    ],
+    "uncertain": false,
+    "publishedAt": "2026-09-30T00:18:50.000Z",
+    "updatedAt": "2026-09-30T03:22:06.860Z"
+  },
+  {
+    "id": "evt_lHzs5h9YtbTOLb3V",
+    "summary": "德國《商報》報導，德國聯邦政府以安全疑慮為由，計劃禁止中遠海運收購物流業者 Zippel 的80%股份。",
+    "representativeArticleId": "lHzs5h9YtbTOLb3V",
+    "articleIds": [
+      "lHzs5h9YtbTOLb3V"
+    ],
+    "uncertain": false,
+    "publishedAt": "2026-09-29T14:41:00.000Z",
+    "updatedAt": "2026-09-30T03:22:06.860Z"
+  },
+  {
+    "id": "evt_LRFSN122sVvQDU-_",
+    "summary": "世界智慧財產權組織公布2026年全球創新指數，瑞士居首，中國第10，德國第11。",
+    "representativeArticleId": "LRFSN122sVvQDU-_",
+    "articleIds": [
+      "LRFSN122sVvQDU-_"
+    ],
+    "uncertain": false,
+    "publishedAt": "2026-09-29T14:18:00.000Z",
+    "updatedAt": "2026-09-30T03:22:06.860Z"
+  },
+  {
+    "id": "evt_ZRmaSpvJDTc8eErA",
+    "summary": "索馬利亞邦特蘭當局表示，救援行動奪回遭劫油輪，但行動前海盜殺害五名船員。",
+    "representativeArticleId": "ZRmaSpvJDTc8eErA",
+    "articleIds": [
+      "ZRmaSpvJDTc8eErA"
+    ],
+    "uncertain": false,
+    "publishedAt": "2026-09-30T02:39:06+00:00",
+    "updatedAt": "2026-09-30T03:22:06.860Z"
+  },
+  {
+    "id": "evt_kXGDYZ4_w3TKmuRo",
+    "summary": "美國參議院以47票對53票否決要求就約旦河西岸九名美國公民死亡提出報告的決議。",
+    "representativeArticleId": "kXGDYZ4_w3TKmuRo",
+    "articleIds": [
+      "kXGDYZ4_w3TKmuRo"
+    ],
+    "uncertain": false,
+    "publishedAt": "2026-09-30T02:26:20+00:00",
+    "updatedAt": "2026-09-30T03:22:06.860Z"
+  },
+  {
+    "id": "evt_dLUg6-HyN_HJ7tV8",
+    "summary": "OpenAI 在年度開發者大會推出 GPT-6.1 Sol 與常駐代理程式 dots，並讓其他公司在 ChatGPT 內提供軟體。",
+    "representativeArticleId": "dLUg6-HyN_HJ7tV8",
+    "articleIds": [
+      "dLUg6-HyN_HJ7tV8"
+    ],
+    "uncertain": false,
+    "publishedAt": "2026-09-30T09:55:00+08:00",
+    "updatedAt": "2026-09-30T03:22:06.860Z"
+  }
+]
