@@ -1,18 +1,21 @@
 import { JSDOM } from 'jsdom';
 import { Readability } from '@mozilla/readability';
+import { fetchText } from './http.js';
 
-// 只在處理當下把原始頁面讀進記憶體、萃取可讀文字，
-// 呼叫端用完即丟，不寫進 data/ 也不進 git，避免整篇原文被落地保存。
-export async function extractArticleText(url) {
-  const res = await fetch(url, {
-    redirect: 'follow',
-    headers: { 'User-Agent': 'Mozilla/5.0 (compatible; normal-news-bot/0.1)' },
-  });
-  if (!res.ok) {
-    throw new Error(`抓取頁面失敗：HTTP ${res.status}`);
+// 只在處理當下把原始頁面讀進記憶體、萃取可讀文字。
+// 呼叫端寫進本地候選檔，不進 data/，也不要提交到公開 repo。
+// 403 時不換 User-Agent、不換 IP。
+export async function extractArticleText(url, { timeoutMs = 20000 } = {}) {
+  let html;
+  try {
+    html = await fetchText(url, { timeoutMs });
+  } catch (err) {
+    throw new Error(`抓取頁面失敗：${err.message}`);
   }
+  return extractFromHtml(html, url);
+}
 
-  const html = await res.text();
+export function extractFromHtml(html, url) {
   const dom = new JSDOM(html, { url });
   const reader = new Readability(dom.window.document);
   const article = reader.parse();

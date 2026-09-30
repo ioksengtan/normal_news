@@ -1,0 +1,28 @@
+name: 驗證資料
+
+# 不排程。改寫改由本機助手完成，GitHub Actions 不再呼叫任何模型 API。
+# 公開 repo 若連續 60 天沒有活動，GitHub 會停用排程 workflow，所以這裡也不留 cron。
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm test
+
+      - run: npm run validate-data
