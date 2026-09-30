@@ -1,0 +1,47 @@
+{
+  "siteName": "正常新聞",
+  "repository": "https://github.com/ioksengtan/normal_news",
+  "issueForm": "article-report.yml",
+  "timezone": "Asia/Taipei",
+  "sections": [
+    {
+      "id": "github",
+      "name": "科技．GitHub",
+      "navLabel": "GitHub",
+      "source": "issue",
+      "presentation": "github",
+      "columns": 2,
+      "dailyCount": 10,
+      "lead": true,
+      "skipPreviousIssues": 3,
+      "treatment": "zh-summary",
+      "emptyText": "今日未能取得",
+      "fallbackNote": "今日改用近 7 天新專案"
+    },
+    {
+      "id": "hackernews",
+      "name": "科技．Hacker News",
+      "navLabel": "Hacker News",
+      "source": "issue",
+      "presentation": "hackernews",
+      "columns": 2,
+      "dailyCount": 10,
+      "skipPreviousIssues": 1,
+      "treatment": "zh-summary",
+      "emptyText": "今日未能取得"
+    },
+    {
+      "id": "international",
+      "name": "國際版",
+      "navLabel": "國際",
+      "source": "international",
+      "presentation": "article",
+      "columns": 3,
+      "dailyCount": 12,
+      "lead": true,
+      "rank": "sourceCount24h",
+      "treatment": "neutral-rewrite",
+      "emptyText": "今日國際版尚無新聞"
+    }
+  ]
+}

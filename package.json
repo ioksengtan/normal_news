@@ -5,7 +5,10 @@
   "type": "module",
   "description": "去偏見新聞：把新聞拆成事實與情緒/立場用語，只留下可查證的部分",
   "scripts": {
-    "process": "node scripts/process.js"
+    "process": "node scripts/process.js",
+    "fetch-tech": "node scripts/fetch-tech.js",
+    "ingest-tech": "node scripts/ingest-tech.js",
+    "test": "node --test"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.0",

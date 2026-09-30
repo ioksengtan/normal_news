@@ -3,30 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>準則頁 · 去偏見新聞</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" />
+  <title>準則 · 正常新聞</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" /></noscript>
 </head>
 <body>
-  <div class="page">
-    <header class="site">
-      <a class="brand" href="index.html">去偏見新聞</a>
-      <nav class="site">
-        <a href="index.html">新聞列表</a>
-        <a href="ranking.html">來源排行榜</a>
-        <a href="criteria.html" aria-current="page">準則頁</a>
-      </nav>
-    </header>
-
-    <h1 class="page-title">目前生效的處理準則</h1>
-    <p class="page-lede">
-      這份說明跟餵給 LLM 的系統提示詞來自同一份 <code>rubric-spec.md</code>，兩邊不會脫鉤。
-    </p>
-
-    <div id="criteria-meta" class="criteria-meta">載入中…</div>
-    <div id="criteria-body" class="criteria-body"></div>
-  </div>
-
-  <script src="app.js"></script>
+  <header class="masthead">
+    <h1><a href="index.html">正常新聞</a></h1>
+    <p class="dateline">準則</p>
+  </header>
+  <main class="newspaper prose">
+    <p id="criteria-meta" class="meta"></p>
+    <div id="criteria-body"></div>
+  </main>
+  <footer class="site-footer">
+    <a href="index.html">回首頁</a>
+  </footer>
+  <script type="module" src="js/criteria.js"></script>
 </body>
 </html>
