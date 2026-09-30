@@ -3,15 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "正常新聞：把新聞拆成事實與情緒/立場用語，只留下可查證的部分",
+  "description": "正常新聞：國際新聞與科技版只刊出中性摘要",
   "scripts": {
-    "process": "node scripts/process.js",
+    "fetch": "node scripts/fetch-candidates.js",
+    "ingest": "node scripts/ingest.js",
+    "publish": "node scripts/publish.js",
+    "validate-data": "node scripts/validate-data.js",
     "fetch-tech": "node scripts/fetch-tech.js",
     "ingest-tech": "node scripts/ingest-tech.js",
     "test": "node --test"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.32.0",
     "@mozilla/readability": "^0.5.0",
     "jsdom": "^25.0.0",
     "rss-parser": "^3.13.0"

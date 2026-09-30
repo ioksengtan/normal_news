@@ -1,38 +1,133 @@
 import Parser from 'rss-parser';
+import { fetchResponse } from './http.js';
 
-// 直接用各媒體自己的 RSS，不透過 Google News：
-// Google News 的文章連結現在要靠前端 JS 才能解析出真正的發布頁網址，
-// 單純 fetch() 拿到的是 Google News 自己的 SPA 頁面，抓不到全文，整條擷取管線會失敗。
-// 改抓各家媒體自己的 feed，連結直接指向發布頁，穩定得多。
-// 每個 feed 用前都手動用 curl 驗證過會回傳非空的 <item>，之後想加新來源，
-// 也請先確認一下，不然 fetchHeadlines() 會默默跳過整個來源（例如聯合新聞網的
-// RSS endpoint 雖然回應 200，但每個 <item> 欄位都是空字串，已經先排除掉）。
-const FEEDS = [
-  { source: '自由時報', url: 'https://news.ltn.com.tw/rss/all.xml' },
-  { source: '中央社', url: 'https://feeds.feedburner.com/rsscna/politics' },
-  { source: 'Yahoo新聞', url: 'https://tw.news.yahoo.com/rss/politics' },
-];
-
-export async function fetchHeadlines(limitPerFeed = 10) {
+// rss-parser 的 parseURL 在非 2xx 時不會關掉 response，Node 會再空等約 240 秒。
+// 改用 fetch + AbortSignal.timeout，成功後才把字串交給 parseString。
+// HTTP 403 直接失敗，不換 User-Agent、不換 IP。
+export async function fetchFeed(feed, { timeoutMs = 20000, limit = 30, headers = {} } = {}) {
   const parser = new Parser();
-  const results = [];
-
-  for (const feed of FEEDS) {
-    try {
-      const parsed = await parser.parseURL(feed.url);
-      for (const item of parsed.items.slice(0, limitPerFeed)) {
-        if (!item.link) continue;
-        results.push({
-          title: item.title,
-          link: item.link,
-          source: feed.source,
-          publishedAt: item.pubDate || null,
-        });
-      }
-    } catch (err) {
-      console.error(`RSS 讀取失敗（${feed.source}）：${err.message}`);
+  try {
+    const response = await fetchResponse(feed.url, {
+      timeoutMs,
+      headers: {
+        Accept: 'application/rss+xml, application/xml, text/xml, */*',
+        ...headers,
+      },
+    });
+    if (response.status === 304) {
+      return {
+        ok: true,
+        notModified: true,
+        error: null,
+        items: [],
+        etag: response.etag,
+        lastModified: response.lastModified,
+      };
     }
+    const parsed = await parser.parseString(response.text);
+    const items = [];
+    for (const item of (parsed.items || []).slice(0, limit)) {
+      if (!item.link) continue;
+      items.push({
+        title: item.title || '',
+        link: item.link,
+        source: feed.source,
+        feedId: feed.id,
+        publishedAt: publishedAtFromItem(item),
+        categories: item.categories || [],
+        summary: item.contentSnippet || item.summary || '',
+      });
+    }
+    return {
+      ok: true,
+      notModified: false,
+      error: null,
+      items,
+      etag: response.etag,
+      lastModified: response.lastModified,
+    };
+  } catch (err) {
+    return {
+      ok: false,
+      notModified: false,
+      error: err?.message || String(err),
+      status: err?.status || null,
+      retryAfter: err?.retryAfter || null,
+      items: [],
+    };
   }
+}
 
-  return results;
+// 保留原始時區。+09:00 與 +0900 都是韓國時間，不能改讀成台北時間。
+export function publishedAtFromItem(item) {
+  const values = [item?.pubDate, item?.isoDate, item?.published].filter(Boolean).map((value) => String(value).trim());
+  const withOffset = values.find((value) => /(?:Z|[+-]\d{2}:?\d{2})\s*$/i.test(value));
+  return normalizeOffsetDate(withOffset || values[0] || null);
+}
+
+export function normalizeOffsetDate(value) {
+  if (!value) return null;
+  const text = String(value).trim();
+  const iso = text.match(/^(\d{4}-\d{2}-\d{2})[T ](\d{2}:\d{2}(?::\d{2})?(?:\.\d+)?)(Z|[+-]\d{2}:?\d{2})$/i);
+  if (iso) {
+    const seconds = iso[2].length === 5 ? `${iso[2]}:00` : iso[2];
+    const offset = formatOffset(iso[3]);
+    const normalized = `${iso[1]}T${seconds}${offset}`;
+    return Number.isNaN(Date.parse(normalized)) ? null : normalized;
+  }
+  const parsed = Date.parse(text);
+  if (Number.isNaN(parsed)) return null;
+  const rfc = text.match(/([+-])(\d{2}):?(\d{2})\s*$/);
+  if (!rfc) return new Date(parsed).toISOString();
+  const sign = rfc[1] === '-' ? -1 : 1;
+  const offsetMin = sign * (Number(rfc[2]) * 60 + Number(rfc[3]));
+  const shifted = new Date(parsed + offsetMin * 60 * 1000);
+  const pad = (n) => String(n).padStart(2, '0');
+  return `${shifted.getUTCFullYear()}-${pad(shifted.getUTCMonth() + 1)}-${pad(shifted.getUTCDate())}T${pad(shifted.getUTCHours())}:${pad(shifted.getUTCMinutes())}:${pad(shifted.getUTCSeconds())}${rfc[1]}${rfc[2]}:${rfc[3]}`;
+}
+
+function formatOffset(offset) {
+  if (/^Z$/i.test(offset)) return 'Z';
+  const match = offset.match(/^([+-])(\d{2}):?(\d{2})$/);
+  if (!match) return offset;
+  return `${match[1]}${match[2]}:${match[3]}`;
+}
+
+// 每個 feed 各自有名額。舊流程是全來源加總後取前 N 篇，排在前面的來源會佔滿名額。
+export function selectByQuota(items, seenLinks, maxPerSource) {
+  const seen = new Set(seenLinks);
+  const counts = new Map();
+  const selected = [];
+  for (const item of items) {
+    if (!item.link || seen.has(item.link)) continue;
+    const used = counts.get(item.feedId) || 0;
+    if (used >= maxPerSource) continue;
+    counts.set(item.feedId, used + 1);
+    seen.add(item.link);
+    selected.push(item);
+  }
+  return selected;
+}
+
+export function countUnseen(items, seenLinks) {
+  const seen = new Set(seenLinks);
+  let count = 0;
+  for (const item of items) {
+    if (!item.link || seen.has(item.link)) continue;
+    seen.add(item.link);
+    count += 1;
+  }
+  return count;
+}
+
+export function feedFailureSummary(feeds) {
+  const enabled = feeds.filter((feed) => feed.status !== 'disabled');
+  const failed = enabled.filter((feed) => feed.status === 'error');
+  const blocked = enabled.filter((feed) => feed.status === 'blocked');
+  return {
+    enabledCount: enabled.length,
+    failedCount: failed.length,
+    blockedCount: blocked.length,
+    allFailed: enabled.length === 0 || enabled.every((feed) => feed.status !== 'ok' && feed.status !== 'rate_limited'),
+  };
 }

@@ -1,0 +1,46 @@
+{
+  "description": "這個專案只做國際新聞與科技。台灣媒體不在來源裡。新增或調整來源只改這個檔：maxAgeDays 丟掉太舊的項目，excludeUrlSubstrings 依網址排除，excludeCategories 依分類排除。遇到 403 或 robots.txt 針對 AI 代理的禁令時，不換 User-Agent、不換 IP。",
+  "sources": [
+    {
+      "id": "bbc-chinese-trad",
+      "source": "英國廣播公司中文網",
+      "url": "https://feeds.bbci.co.uk/zhongwen/trad/rss.xml",
+      "enabled": true
+    },
+    {
+      "id": "dw-chinese",
+      "source": "德國之聲",
+      "url": "https://rss.dw.com/rdf/rss-chi-all",
+      "enabled": true,
+      "maxAgeDays": 3
+    },
+    {
+      "id": "al-jazeera",
+      "source": "半島電視台",
+      "url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "enabled": true,
+      "excludeUrlSubstrings": ["/liveblog/"]
+    },
+    {
+      "id": "channel-news-asia",
+      "source": "亞洲新聞台",
+      "url": "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=6311",
+      "enabled": true,
+      "excludeCategories": ["business", "commentary"]
+    },
+    {
+      "id": "japan-times",
+      "source": "日本時報",
+      "url": "https://www.japantimes.co.jp/news/feed/",
+      "enabled": false,
+      "note": "待確認使用條款，並避免未授權的通訊社供稿"
+    },
+    {
+      "id": "korea-herald",
+      "source": "韓國先驅報",
+      "url": "https://www.koreaherald.com/rss/newsAll",
+      "enabled": false,
+      "note": "使用條款要求事先書面許可，確認前停用"
+    }
+  ]
+}
