@@ -1,0 +1,233 @@
+{
+  "date": "2026-09-30",
+  "issueNumber": 1,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-09-30T07:00:00+08:00",
+  "fetchedAt": "2026-09-30T02:37:18.634Z",
+  "sections": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null,
+      "items": [
+        {
+          "id": "debpalash/VoiceStudio",
+          "name": "debpalash/VoiceStudio",
+          "url": "https://github.com/debpalash/VoiceStudio",
+          "language": "Python",
+          "starsToday": 4758,
+          "stars": 48352,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依專案描述與說明文件，用平實中文寫一到兩句事實說明。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": "NVIDIA/OpenShell",
+          "name": "NVIDIA/OpenShell",
+          "url": "https://github.com/NVIDIA/OpenShell",
+          "language": "Rust",
+          "starsToday": 990,
+          "stars": 10714,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依專案描述與說明文件，用平實中文寫一到兩句事實說明。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": "vectorize-io/hindsight",
+          "name": "vectorize-io/hindsight",
+          "url": "https://github.com/vectorize-io/hindsight",
+          "language": "Python",
+          "starsToday": 2575,
+          "stars": 42941,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依專案描述與說明文件，用平實中文寫一到兩句事實說明。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": "paperclipai/paperclip",
+          "name": "paperclipai/paperclip",
+          "url": "https://github.com/paperclipai/paperclip",
+          "language": "TypeScript",
+          "starsToday": 2458,
+          "stars": 94550,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依專案描述與說明文件，用平實中文寫一到兩句事實說明。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": "t8y2/dbx",
+          "name": "t8y2/dbx",
+          "url": "https://github.com/t8y2/dbx",
+          "language": "Rust",
+          "starsToday": 232,
+          "stars": 22176,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依專案描述與說明文件，用平實中文寫一到兩句事實說明。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": "mvschwarz/openrig",
+          "name": "mvschwarz/openrig",
+          "url": "https://github.com/mvschwarz/openrig",
+          "language": "TypeScript",
+          "starsToday": 737,
+          "stars": 2479,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依專案描述與說明文件，用平實中文寫一到兩句事實說明。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": "oblien/openship",
+          "name": "oblien/openship",
+          "url": "https://github.com/oblien/openship",
+          "language": "TypeScript",
+          "starsToday": 437,
+          "stars": 13882,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依專案描述與說明文件，用平實中文寫一到兩句事實說明。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": "averygan/reclip",
+          "name": "averygan/reclip",
+          "url": "https://github.com/averygan/reclip",
+          "language": "HTML",
+          "starsToday": 113,
+          "stars": 10187,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依專案描述與說明文件，用平實中文寫一到兩句事實說明。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": "cs341-illinois/coursebook",
+          "name": "cs341-illinois/coursebook",
+          "url": "https://github.com/cs341-illinois/coursebook",
+          "language": "TeX",
+          "starsToday": 572,
+          "stars": 3142,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依專案描述與說明文件，用平實中文寫一到兩句事實說明。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": "rohitg00/ai-engineering-from-scratch",
+          "name": "rohitg00/ai-engineering-from-scratch",
+          "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+          "language": "Python",
+          "starsToday": 786,
+          "stars": 61496,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依專案描述與說明文件，用平實中文寫一到兩句事實說明。這不是正式摘要。",
+          "placeholder": true
+        }
+      ]
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null,
+      "items": [
+        {
+          "id": 49901736,
+          "title": "Livenerf: Has Opus 5.5 been nerfed yet?",
+          "titleZh": "【待譯，尚未翻譯】",
+          "url": "https://github.com/ninjahawk/livenerf",
+          "hnUrl": "https://news.ycombinator.com/item?id=49901736",
+          "score": 266,
+          "comments": 124,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依原文寫兩到三句事實摘要。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": 49899090,
+          "title": "U.S. postal inspectors shut down website selling counterfeit postage labels",
+          "titleZh": "【待譯，尚未翻譯】",
+          "url": "https://postalemployeenetwork.com/news/2026/09/26/u-s-postal-inspectors-shut-down-website-selling-millions-of-counterfeit-postage-labels/",
+          "hnUrl": "https://news.ycombinator.com/item?id=49899090",
+          "score": 177,
+          "comments": 104,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依原文寫兩到三句事實摘要。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": 49897993,
+          "title": "Vermont replacing power plants with home batteries",
+          "titleZh": "【待譯，尚未翻譯】",
+          "url": "https://www.bbc.com/future/article/20260928-a-virtual-power-plant-hidden-in-vermont-homes-is-keeping-the-lights-on-during-storms",
+          "hnUrl": "https://news.ycombinator.com/item?id=49897993",
+          "score": 104,
+          "comments": 79,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依原文寫兩到三句事實摘要。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": 49893509,
+          "title": "America.gov",
+          "titleZh": "【待譯，尚未翻譯】",
+          "url": "https://america.gov/",
+          "hnUrl": "https://news.ycombinator.com/item?id=49893509",
+          "score": 376,
+          "comments": 300,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依原文寫兩到三句事實摘要。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": 49898778,
+          "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
+          "titleZh": "【待譯，尚未翻譯】",
+          "url": "https://space.bl2.net/",
+          "hnUrl": "https://news.ycombinator.com/item?id=49898778",
+          "score": 121,
+          "comments": 32,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依原文寫兩到三句事實摘要。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": 49896586,
+          "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+          "titleZh": "【待譯，尚未翻譯】",
+          "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+          "hnUrl": "https://news.ycombinator.com/item?id=49896586",
+          "score": 807,
+          "comments": 743,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依原文寫兩到三句事實摘要。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": 49888182,
+          "title": "When oil prices spike, where does the money go?",
+          "titleZh": "【待譯，尚未翻譯】",
+          "url": "https://theconversation.com/when-oil-prices-spike-where-does-the-money-go-280763",
+          "hnUrl": "https://news.ycombinator.com/item?id=49888182",
+          "score": 41,
+          "comments": 31,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依原文寫兩到三句事實摘要。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": 49892245,
+          "title": "How Delhi cut electricity loss from 50 to 5 percent",
+          "titleZh": "【待譯，尚未翻譯】",
+          "url": "https://spectrum.ieee.org/delhi-electricity-loss",
+          "hnUrl": "https://news.ycombinator.com/item?id=49892245",
+          "score": 445,
+          "comments": 261,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依原文寫兩到三句事實摘要。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": 49891203,
+          "title": "Language models for text classification: From bag-of-words to Jev",
+          "titleZh": "【待譯，尚未翻譯】",
+          "url": "https://magazine.sebastianraschka.com/p/classifier-history-and-jev",
+          "hnUrl": "https://news.ycombinator.com/item?id=49891203",
+          "score": 35,
+          "comments": 0,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依原文寫兩到三句事實摘要。這不是正式摘要。",
+          "placeholder": true
+        },
+        {
+          "id": 49895864,
+          "title": "Needed 1+1, built a functional programming language",
+          "titleZh": "【待譯，尚未翻譯】",
+          "url": "https://hereticpleb.vercel.app/blog/needed-one-plus-one/",
+          "hnUrl": "https://news.ycombinator.com/item?id=49895864",
+          "score": 34,
+          "comments": 8,
+          "summary": "【占位摘要，尚未撰寫】此處將由內容長依原文寫兩到三句事實摘要。這不是正式摘要。",
+          "placeholder": true
+        }
+      ]
+    }
+  }
+}
