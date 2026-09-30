@@ -1,8 +1,8 @@
 # 正常新聞抓取規範
 
-抓取程式每天台北時間 06:48 由助手執行一次。不在 GitHub Actions 排程，也不呼叫模型 API。
+抓取由助手執行，不在 GitHub Actions 排程，也不呼叫模型 API。科技版每天台北時間 07:00 抓一次。下面的規則在啟用任何來源之前都適用。
 
-1. 所有請求使用固定的使用者代理字串：`normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。國際版與科技版抓取都用這一個字串。不偽裝成瀏覽器。
+1. 所有請求使用固定的使用者代理字串：`normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。科技版抓取用這一個字串。不偽裝成瀏覽器。
 2. 任何抓取之前先讀該主機的 `/robots.txt`，包括新聞訂閱源本身。
 3. 規則只看兩組：有 `normal-news-bot` 具名群組就用該群組，沒有就用 `*`；`*` 群組一律另外檢查。兩者任一禁止，就不抓。只針對訓練爬蟲（例如 GPTBot、ClaudeBot、anthropic-ai）的群組不適用。
 4. robots.txt 回傳 401 或 403 視為全部禁止。其他 4xx 視為允許。5xx、逾時或連線失敗視為全部禁止。
@@ -15,7 +15,7 @@
 
 ## 科技版候選來源（2026-09-30）
 
-檢查時使用 `normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。同一主機先讀 robots.txt，通過之後才讀其他網址。兩個候選都沒有通過，所以沒有加版、也沒有寫抓取程式。
+檢查時使用 `normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。同一主機先讀 robots.txt，通過之後才讀其他網址。2026-09-30 17:54 與 17:59（台北時間）各查一次，結果相同。兩個候選都沒有通過，所以沒有寫進合併後的科技版，也沒有寫抓取程式。科技版目前只收 GitHub trending 與 Hacker News。
 
 ### Lobsters（lobste.rs）
 

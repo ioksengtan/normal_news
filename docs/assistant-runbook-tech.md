@@ -4,9 +4,9 @@
 
 這個流程不呼叫模型。摘要由助手自己寫。不要把模型金鑰放進工作流程。
 
-報紙順序是科技．GitHub、科技．Hacker News，然後國際版。GitHub 第一則是頭條。國際版讀 `data/international.json`。科技版這份步驟不填國際版。
+報紙只有一個科技版。GitHub trending 與 Hacker News 的項目合在同一份清單，每則帶來源標籤「GitHub」或「Hacker News」。頭條是 GitHub 當日第一名；其餘依來源名次交錯排列（Hacker News 第一名、GitHub 第二名、Hacker News 第二名，以此類推）。某一來源當天沒有項目時，頭條改用另一個來源的第一名。頁面上可以點來源標籤，只看該來源。
 
-Lobsters 與 Product Hunt 在 2026-09-30 檢查後不收錄，每天的抓取不要加這兩版。原因寫在 [crawling-policy.md](crawling-policy.md) 的「科技版候選來源」。
+Lobsters 與 Product Hunt 在 2026-09-30 檢查後不收錄。每天的抓取不要加這兩個來源，摘要檔也不要為它們寫項目。原因寫在 [crawling-policy.md](crawling-policy.md) 的「科技版候選來源」。
 
 ## 每天執行的指令
 
@@ -16,9 +16,9 @@ Lobsters 與 Product Hunt 在 2026-09-30 檢查後不收錄，每天的抓取不
 node scripts/fetch-tech.js
 ```
 
-抓取使用與國際版相同的使用者代理字串 `normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。
+抓取使用使用者代理字串 `normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。
 
-這會寫出 `data/tech/candidates.json`。GitHub 先解析 https://github.com/trending?since=daily ，失敗或少於 10 則時改走搜尋介面（過去 7 天新建、依星數排序），並在候選檔標記備援。Hacker News 讀官方的 `topstories.json` 與 `item/{id}.json`。過去 3 期出現過的 GitHub 專案、前一期出現過的 Hacker News 討論、以及徵才貼文會自動跳過。
+這會寫出 `data/tech/candidates.json`，裡面仍分 `github` 與 `hackernews` 兩組候選，方便對照撰寫摘要。入庫時才合併成一份 `items`。GitHub 先解析 https://github.com/trending?since=daily ，失敗或少於 10 則時改走搜尋介面（過去 7 天新建、依星數排序），並在候選檔標記備援。Hacker News 讀官方的 `topstories.json` 與 `item/{id}.json`。每個來源每天最多 10 則。過去 3 期出現過的 GitHub 專案、前一期出現過的 Hacker News 討論、以及徵才貼文會自動跳過。
 
 若備援搜尋遇到未登入的每小時次數上限，用 GitHub CLI 的權杖再抓一次。在 GitHub Actions 裡則帶工作流程內建的 `GITHUB_TOKEN`：
 
@@ -35,7 +35,7 @@ git commit -m "issue: YYYY-MM-DD 科技版"
 git push
 ```
 
-把 `YYYY-MM-DD` 換成候選檔裡的 `date`。某一版抓取失敗時仍然執行入庫，該版會顯示「今日未能取得」，其他版照常出刊。
+把 `YYYY-MM-DD` 換成候選檔裡的 `date`。某一個來源抓取失敗時仍然執行入庫，該來源不出現在清單裡；兩個來源都失敗時，版面顯示「今日未能取得」。
 
 ## 摘要規則
 
@@ -139,4 +139,4 @@ git push
 | cutting-edge、state-of-the-art | 誇大或絕對化用語 | 刪除，改寫具體技術規格 |
 | unprecedented | 誇大或絕對化用語 | 刪除；若原文有可查證的比較基準，改寫為具體比較 |
 
-國際版以後寫進 `data/international.json`。`events` 每一則有 `id`、`title`、`summary`、`neutralText`、`updatedAt`，以及 `sources`（`name`、`url`、`publishedAt`）。頁面依過去 24 小時的來源數取前 12 則，第一則當頭條；只有一家來源的事件用來補滿 12 則。前一期已刊出、且這期沒有新報導的事件會跳過。
+入庫後的 `data/issues/YYYY-MM-DD.json` 是網站讀的那一份。`items` 已經依名次交錯排好，第一則是頭條。每一則有 `source`（`github` 或 `hackernews`）、`sourceLabel`（「GitHub」或「Hacker News」）、`rank`（該來源當天的名次，從 0 起算）與摘要。不要再拆成 `sections.github` 與 `sections.hackernews`。

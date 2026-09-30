@@ -1,4 +1,4 @@
-import { buildPaper, eventIdsFromIssue, previousIssueEntry } from './paper.js';
+import { buildPaper } from './paper.js';
 import { bindPaper, renderNav, renderSections } from './render.js';
 import { taipeiDateString } from './time.js';
 
@@ -17,7 +17,6 @@ function pickIssue(issues, today) {
 
 async function main() {
   const dateline = document.getElementById('dateline');
-  const frontUpdated = document.getElementById('front-updated');
   const nav = document.getElementById('section-nav');
   const sections = document.getElementById('sections');
   try {
@@ -30,17 +29,6 @@ async function main() {
     }
     const today = taipeiDateString(new Date());
     const entry = pickIssue(index.issues, today);
-    const previous = previousIssueEntry(index.issues, today);
-    let previousEventIds = Array.isArray(previous?.internationalEventIds)
-      ? previous.internationalEventIds.filter((id) => typeof id === 'string' && id)
-      : [];
-    if (previousEventIds.length === 0 && previous?.path && !Array.isArray(previous?.internationalEventIds)) {
-      try {
-        previousEventIds = eventIdsFromIssue(await fetchJson(previous.path));
-      } catch {
-        previousEventIds = [];
-      }
-    }
     let issue = null;
     if (entry?.path) {
       try {
@@ -49,21 +37,8 @@ async function main() {
         issue = null;
       }
     }
-    let international = { events: [] };
-    try {
-      international = await fetchJson('data/international.json');
-    } catch {
-      international = { events: [] };
-    }
-    const model = buildPaper({
-      config,
-      international,
-      issue,
-      now: new Date(),
-      previousEventIds,
-    });
+    const model = buildPaper({ config, issue, now: new Date() });
     if (dateline) dateline.textContent = model.dateline;
-    if (frontUpdated) frontUpdated.textContent = model.frontUpdated;
     if (nav) nav.innerHTML = renderNav(model);
     if (sections) {
       sections.innerHTML = renderSections(model);

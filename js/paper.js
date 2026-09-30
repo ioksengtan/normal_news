@@ -1,87 +1,15 @@
-import { normalizeEvents, presentEvent } from './international.js';
-import { formatDateline, formatHM, publicationStart } from './time.js';
-
-function timeOf(event) {
-  const time = Date.parse(event?.updatedAt || '');
-  return Number.isNaN(time) ? 0 : time;
-}
-
-function byUpdatedDesc(a, b) {
-  return timeOf(b) - timeOf(a);
-}
-
-function sourcesBetween(event, startMs, endMs) {
-  const names = new Set();
-  for (const report of event.reports || []) {
-    const time = Date.parse(report.at);
-    if (Number.isNaN(time) || time < startMs || time > endMs) continue;
-    names.add(report.source);
-  }
-  return names.size;
-}
-
-function hasReportSince(event, startMs) {
-  return (event.reports || []).some((report) => {
-    const time = Date.parse(report.at);
-    return !Number.isNaN(time) && time >= startMs;
-  });
-}
-
-export function previousIssueEntry(issues, today) {
-  const list = Array.isArray(issues) ? issues : [];
-  return list
-    .filter((issue) => typeof issue?.date === 'string' && issue.date < today)
-    .sort((a, b) => (a.date < b.date ? 1 : -1))[0] || null;
-}
-
-export function eventIdsFromIssue(issue) {
-  if (!issue || typeof issue !== 'object') return [];
-  if (Array.isArray(issue.internationalEventIds)) {
-    return issue.internationalEventIds.filter((id) => typeof id === 'string' && id);
-  }
-  const items = issue.sections?.international?.items;
-  if (!Array.isArray(items)) return [];
-  return items.map((item) => item?.id).filter((id) => typeof id === 'string' && id);
-}
-
-export function selectByCoverage(events, now, limit = 12, previousEventIds = []) {
-  const startMs = publicationStart(now).getTime();
-  const printed = new Set(Array.isArray(previousEventIds) ? previousEventIds : []);
-  const dayAgo = now.getTime() - 24 * 60 * 60 * 1000;
-  return events
-    .filter((event) => !(printed.has(event.id) && !hasReportSince(event, startMs)))
-    .map((event) => ({ event, count: sourcesBetween(event, dayAgo, now.getTime()) }))
-    .filter((entry) => entry.count >= 1)
-    .sort((a, b) => b.count - a.count || byUpdatedDesc(a.event, b.event))
-    .slice(0, limit)
-    .map((entry) => entry.event);
-}
+import { formatDateline } from './time.js';
 
 function domId(id, index) {
   return /^[A-Za-z0-9_-]+$/.test(String(id || '')) ? String(id) : `s${index}`;
 }
 
-function articleSection(section, items) {
-  return {
-    id: section.id,
-    domId: section.domId,
-    name: section.name,
-    navLabel: section.navLabel || section.name,
-    columns: section.columns === 2 ? 2 : 3,
-    lead: Boolean(section.lead) && items.length > 0,
-    presentation: 'article',
-    emptyText: items.length ? '' : (section.emptyText || ''),
-    fallbackNote: '',
-    notice: '',
-    items,
-    moreItems: [],
-    moreLabel: '',
-  };
-}
-
 function presentTech(item) {
   return {
     id: item.id,
+    source: item.source || '',
+    sourceLabel: item.sourceLabel || '',
+    rank: item.rank ?? 0,
     name: item.name || '',
     title: item.title || item.name || '',
     titleZh: item.titleZh || '',
@@ -98,24 +26,24 @@ function presentTech(item) {
   };
 }
 
-function issueSection(section, issue) {
-  const block = issue?.sections?.[section.id];
-  const rawItems = Array.isArray(block?.items) ? block.items : [];
-  const failed = !block || block.status === 'failed' || rawItems.length === 0;
-  const items = failed ? [] : rawItems.map(presentTech);
+function techSection(section, issue) {
+  const rawItems = Array.isArray(issue?.items) ? issue.items : [];
+  const items = rawItems.map(presentTech);
+  const failed = !issue || items.length === 0;
   const placeholder = items.length > 0 && items.every((item) => item.placeholder);
+  const githubFallback = issue?.sources?.github?.fallback === true;
   return {
     id: section.id,
     domId: section.domId,
     name: section.name,
     navLabel: section.navLabel || section.name,
-    columns: section.columns === 2 ? 2 : 3,
+    columns: section.columns === 3 ? 3 : 2,
     lead: Boolean(section.lead) && items.length > 0,
-    presentation: section.presentation || 'generic',
+    presentation: 'tech',
     emptyText: failed ? (section.emptyText || '今日未能取得') : '',
-    fallbackNote: !failed && block?.fallback ? (section.fallbackNote || '') : '',
+    fallbackNote: githubFallback ? (section.fallbackNote || '') : '',
     notice: placeholder ? '本版摘要尚未由內容長撰寫，以下為占位。' : '',
-    items,
+    items: failed ? [] : items,
     moreItems: [],
     moreLabel: '',
   };
@@ -124,6 +52,8 @@ function issueSection(section, issue) {
 function inlineSection(section) {
   const items = (Array.isArray(section.items) ? section.items : []).map((item) => ({
     id: item.id || item.title || '',
+    source: item.source || '',
+    sourceLabel: item.sourceLabel || '',
     title: item.title || '',
     summary: item.summary || '',
     url: item.url || '',
@@ -147,23 +77,16 @@ function inlineSection(section) {
   };
 }
 
-export function buildPaper({ config, international, issue, now = new Date(), previousEventIds = [] }) {
-  const events = normalizeEvents(international);
+export function buildPaper({ config, issue, now = new Date() }) {
   const sections = (config?.sections || []).map((section, index) => {
     const ready = { ...section, domId: domId(section.id, index) };
     if (Array.isArray(section.items) || section.source === 'inline') return inlineSection(ready);
-    if (section.source === 'international') {
-      const selected = selectByCoverage(events, now, section.dailyCount || 12, previousEventIds).map(presentEvent);
-      return articleSection(ready, selected);
-    }
-    if (section.source === 'issue') return issueSection(ready, issue);
+    if (section.source === 'issue' || section.presentation === 'tech') return techSection(ready, issue);
     return inlineSection(ready);
   });
-  const updated = Date.parse(international?.updatedAt || '');
   return {
     siteName: config?.siteName || '正常新聞',
     dateline: formatDateline(now, Number.isInteger(issue?.issueNumber) ? issue.issueNumber : null),
-    frontUpdated: Number.isNaN(updated) ? '' : `國際版更新於 ${formatHM(new Date(updated))}`,
     sections,
   };
 }

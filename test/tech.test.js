@@ -10,6 +10,7 @@ import { fetchGithubSection } from '../scripts/fetch-tech.js';
 import { chooseGithub, createdAfterDate, parseTrendingHtml, searchUrl } from '../scripts/tech/github.js';
 import { isHiringPost, selectHnStories } from '../scripts/tech/hn.js';
 import { buildIssue } from '../scripts/tech/issue.js';
+import { interleaveByRank } from '../scripts/tech/combine.js';
 import { previousSectionIds, selectFresh } from '../scripts/tech/select.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -24,7 +25,7 @@ function trendingArticle(name, { starsToday = 10, stars = 100, language = 'Pytho
   </article>`;
 }
 
-test('tech fetcher uses the same user agent as the international fetcher', async () => {
+test('tech fetcher uses the project user agent', async () => {
   const agents = [];
   const original = globalThis.fetch;
   globalThis.fetch = async (url, options = {}) => {
@@ -88,10 +89,10 @@ test('GitHub uses trending until dedupe leaves fewer than ten, then switches to 
 
 test('previous issues supply the dedupe window, and hiring posts are skipped', () => {
   const issues = [
-    { date: '2026-09-27', sections: { github: { items: [{ id: 'old/three' }] }, hackernews: { items: [{ id: 3 }] } } },
-    { date: '2026-09-28', sections: { github: { items: [{ id: 'old/two' }] }, hackernews: { items: [{ id: 2 }] } } },
-    { date: '2026-09-29', sections: { github: { items: [{ id: 'old/one' }] }, hackernews: { items: [{ id: 1 }] } } },
-    { date: '2026-09-30', sections: { github: { items: [{ id: 'today/repo' }] }, hackernews: { items: [{ id: 9 }] } } },
+    { date: '2026-09-27', items: [{ source: 'github', id: 'old/three' }, { source: 'hackernews', id: 3 }] },
+    { date: '2026-09-28', items: [{ source: 'github', id: 'old/two' }, { source: 'hackernews', id: 2 }] },
+    { date: '2026-09-29', items: [{ source: 'github', id: 'old/one' }, { source: 'hackernews', id: 1 }] },
+    { date: '2026-09-30', items: [{ source: 'github', id: 'today/repo' }, { source: 'hackernews', id: 9 }] },
   ];
   assert.deepEqual(previousSectionIds(issues, 'github', 3, '2026-09-30'), ['old/one', 'old/two', 'old/three']);
   assert.deepEqual(previousSectionIds(issues, 'hackernews', 1, '2026-09-30'), ['1']);
@@ -153,10 +154,14 @@ test('ingest requires real summaries and still publishes a failed section', () =
     allowPlaceholders: true,
   });
   assert.equal(issue.issueNumber, 5);
-  assert.equal(issue.sections.github.status, 'failed');
-  assert.equal(issue.sections.github.items.length, 0);
-  assert.equal(issue.sections.hackernews.items[0].titleZh.includes('待譯'), true);
+  assert.equal(issue.sources.github.status, 'failed');
+  assert.equal(issue.items.length, 1);
+  assert.equal(issue.items[0].source, 'hackernews');
+  assert.equal(issue.items[0].sourceLabel, 'Hacker News');
+  assert.equal(issue.items[0].rank, 0);
+  assert.equal(issue.items[0].titleZh.includes('待譯'), true);
   assert.equal(JSON.stringify(issue).includes('raw post'), false);
+  assert.equal(issue.sections, undefined);
   assert.equal(index.issues.at(-1).path, 'data/issues/2026-09-30.json');
 
   const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'normal-news-'));
@@ -173,5 +178,19 @@ test('ingest requires real summaries and still publishes a failed section', () =
   ], { cwd: root, encoding: 'utf8' });
   assert.equal(result.status, 0, result.stderr);
   const written = JSON.parse(fs.readFileSync(path.join(directory, '2026-09-30.json'), 'utf8'));
-  assert.equal(written.sections.hackernews.items[0].score, 8);
+  assert.equal(written.items[0].score, 8);
+  assert.equal(written.items[0].sourceLabel, 'Hacker News');
+});
+
+test('the combined feed leads with the first source and then alternates by rank', () => {
+  const items = interleaveByRank([
+    { id: 'github', label: 'GitHub', items: [{ id: 'g0' }, { id: 'g1' }, { id: 'g2' }] },
+    { id: 'hackernews', label: 'Hacker News', items: [{ id: 'h0' }, { id: 'h1' }] },
+  ]);
+  assert.deepEqual(items.map((item) => item.id), ['g0', 'h0', 'g1', 'h1', 'g2']);
+  assert.equal(items[0].sourceLabel, 'GitHub');
+  assert.equal(items[0].rank, 0);
+  assert.equal(items[1].source, 'hackernews');
+  assert.equal(items[1].rank, 0);
+  assert.equal(items[2].rank, 1);
 });

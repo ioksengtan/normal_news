@@ -1,51 +1,4 @@
-import { escapeHtml, headlineAndSummary, safeUrl } from './html.js';
-import { formatHM } from './time.js';
-
-function languageLine(language) {
-  const text = {
-    英文: '本摘要根據英文原文撰寫。',
-    簡體中文: '本摘要根據簡體中文原文撰寫。',
-    繁體中文: '本摘要根據繁體中文原文撰寫。',
-  }[language];
-  return text ? `<p class="meta">${escapeHtml(text)}</p>` : '';
-}
-
-function commentaryLine(articleType) {
-  return articleType === '評論' ? '<p class="meta">評論</p>' : '';
-}
-
-function licenseLine(sources) {
-  return (sources || []).filter((source) => source.license).map((source) => {
-    const name = escapeHtml(source.name || '來源');
-    return `<p class="meta license">授權 ${escapeHtml(source.license)}，出處：${name}</p>`;
-  }).join('');
-}
-
-function sourceLine(sources, updatedAt) {
-  const links = (sources || []).map((source) => {
-    const url = safeUrl(source.url);
-    const name = escapeHtml(source.name || '來源');
-    const label = `${name}　閱讀原文`;
-    return url
-      ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`
-      : label;
-  });
-  const time = updatedAt && !Number.isNaN(Date.parse(updatedAt)) ? formatHM(new Date(updatedAt)) : '';
-  if (links.length === 0 && !time) return '';
-  const sourceText = links.length ? links.join('、') : '';
-  return `<p class="meta">${sourceText}${sourceText && time ? ' · ' : ''}${escapeHtml(time)}</p>`;
-}
-
-function renderArticleCard(item, lead) {
-  return `<article class="item${lead ? ' is-lead' : ''}">
-    ${languageLine(item.sourceLanguage)}
-    ${commentaryLine(item.articleType)}
-    <h3><a href="article.html?id=${encodeURIComponent(item.id)}">${escapeHtml(item.title)}</a></h3>
-    ${item.summary ? `<p class="summary">${escapeHtml(item.summary)}</p>` : ''}
-    ${licenseLine(item.sources)}
-    ${sourceLine(item.sources, item.updatedAt)}
-  </article>`;
-}
+import { escapeHtml, safeUrl } from './html.js';
 
 function expandableSummary(summary, lead = false) {
   if (!summary) return '';
@@ -62,33 +15,52 @@ function githubMeta(item) {
   return `${language} · ${today}${total}`;
 }
 
-function renderGithub(item, lead) {
-  const url = safeUrl(item.url);
-  const link = url
-    ? `<p class="tech-links"><a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">專案連結</a></p>`
-    : '';
-  return `<article class="item${lead ? ' is-lead' : ''}">
-    <h3>${escapeHtml(item.name || item.title)}</h3>
-    ${expandableSummary(item.summary, lead)}
-    <p class="meta">${escapeHtml(githubMeta(item))}</p>
-    ${link}
-  </article>`;
-}
-
-function renderHackerNews(item) {
-  const links = [];
-  const source = safeUrl(item.url);
-  const discussion = safeUrl(item.hnUrl);
-  if (source) links.push(`<a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">原文</a>`);
-  if (discussion) links.push(`<a href="${escapeHtml(discussion)}" target="_blank" rel="noopener noreferrer">討論</a>`);
+function hackerNewsMeta(item) {
   const score = Number(item.score || 0).toLocaleString('zh-TW');
   const comments = Number(item.comments || 0).toLocaleString('zh-TW');
-  return `<article class="item">
-    <h3>${escapeHtml(item.titleZh || item.title)}</h3>
-    ${item.title ? `<p class="original-title">${escapeHtml(item.title)}</p>` : ''}
-    ${expandableSummary(item.summary)}
-    <p class="meta">分數 ${score} · 留言 ${comments}</p>
-    ${links.length ? `<p class="tech-links">${links.join('')}</p>` : ''}
+  return `分數 ${score} · 留言 ${comments}`;
+}
+
+function sourceTag(item) {
+  const label = item.sourceLabel || item.source;
+  if (!label) return '';
+  return `<button type="button" class="source-tag" data-source="${escapeHtml(item.source)}">${escapeHtml(label)}</button>`;
+}
+
+function techLinks(item) {
+  const links = [];
+  const url = safeUrl(item.url);
+  const discussion = safeUrl(item.hnUrl);
+  if (item.source === 'github' && url) {
+    links.push(`<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">專案連結</a>`);
+  }
+  if (item.source === 'hackernews') {
+    if (url) links.push(`<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">原文</a>`);
+    if (discussion) links.push(`<a href="${escapeHtml(discussion)}" target="_blank" rel="noopener noreferrer">討論</a>`);
+  }
+  for (const link of item.links || []) {
+    const href = safeUrl(link.url);
+    if (!href) continue;
+    links.push(`<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label || '連結')}</a>`);
+  }
+  return links.length ? `<p class="tech-links">${links.join('')}</p>` : '';
+}
+
+function renderTech(item, lead) {
+  const title = item.source === 'hackernews'
+    ? (item.titleZh || item.title)
+    : (item.name || item.title);
+  const original = item.source === 'hackernews' && item.title
+    ? `<p class="original-title">${escapeHtml(item.title)}</p>`
+    : '';
+  const meta = item.source === 'hackernews' ? hackerNewsMeta(item) : githubMeta(item);
+  return `<article class="item${lead ? ' is-lead' : ''}" data-source="${escapeHtml(item.source)}">
+    ${sourceTag(item)}
+    <h3>${escapeHtml(title)}</h3>
+    ${original}
+    ${expandableSummary(item.summary, lead)}
+    <p class="meta">${escapeHtml(meta)}</p>
+    ${techLinks(item)}
   </article>`;
 }
 
@@ -102,7 +74,8 @@ function renderGeneric(item, lead) {
     if (!href) return '';
     return `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label || '連結')}</a>`;
   }).filter(Boolean);
-  return `<article class="item${lead ? ' is-lead' : ''}">
+  return `<article class="item${lead ? ' is-lead' : ''}" data-source="${escapeHtml(item.source || '')}">
+    ${sourceTag(item)}
     <h3>${title}</h3>
     ${item.summary ? `<p class="summary">${escapeHtml(item.summary)}</p>` : ''}
     ${links.length ? `<p class="tech-links">${links.join('')}</p>` : ''}
@@ -111,15 +84,31 @@ function renderGeneric(item, lead) {
 
 function renderItem(section, item, index) {
   const lead = section.lead && index === 0;
-  if (section.presentation === 'github') return renderGithub(item, lead);
-  if (section.presentation === 'hackernews') return renderHackerNews(item);
-  if (section.presentation === 'article') return renderArticleCard(item, lead);
+  if (section.presentation === 'tech') return renderTech(item, lead);
   return renderGeneric(item, lead);
+}
+
+function renderFilters(section) {
+  const sources = [];
+  const seen = new Set();
+  for (const item of section.items || []) {
+    if (!item.source || seen.has(item.source)) continue;
+    seen.add(item.source);
+    sources.push({ id: item.source, label: item.sourceLabel || item.source });
+  }
+  if (sources.length < 2) return '';
+  const buttons = [
+    '<button type="button" class="source-filter is-active" data-source="" aria-pressed="true">全部</button>',
+    ...sources.map((source) => (
+      `<button type="button" class="source-filter" data-source="${escapeHtml(source.id)}" aria-pressed="false">${escapeHtml(source.label)}</button>`
+    )),
+  ];
+  return `<div class="source-filters" role="group" aria-label="依來源篩選">${buttons.join('')}</div>`;
 }
 
 function renderGrid(section, items, { lead = false, id = '' } = {}) {
   if (!items.length) return '';
-  const columns = section.columns === 2 ? 'cols-2' : 'cols-3';
+  const columns = section.columns === 3 ? 'cols-3' : 'cols-2';
   const attrs = `${id ? ` id="${id}"` : ''}${id ? ' hidden' : ''}`;
   return `<div${attrs} class="grid ${columns}${lead ? ' has-lead' : ''}">${
     items.map((item, index) => renderItem({ ...section, lead }, item, index)).join('')
@@ -135,6 +124,7 @@ export function renderSections(model) {
       : '';
     return `<section id="section-${section.domId}" class="paper-section" data-section="${escapeHtml(section.domId)}" aria-labelledby="heading-${section.domId}">
       <div class="section-head"><h2 id="heading-${section.domId}">${escapeHtml(section.name)}</h2></div>
+      ${renderFilters(section)}
       ${section.fallbackNote ? `<p class="fallback-note">${escapeHtml(section.fallbackNote)}</p>` : ''}
       ${section.notice ? `<p class="section-notice">${escapeHtml(section.notice)}</p>` : ''}
       ${section.emptyText ? `<p class="empty">${escapeHtml(section.emptyText)}</p>` : ''}
@@ -148,6 +138,18 @@ export function renderNav(model) {
   return model.sections.map((section) => (
     `<a href="#section-${section.domId}">${escapeHtml(section.navLabel)}</a>`
   )).join('');
+}
+
+function applySourceFilter(section, source) {
+  section.dataset.filter = source;
+  section.querySelectorAll('.item').forEach((item) => {
+    item.hidden = Boolean(source) && item.dataset.source !== source;
+  });
+  section.querySelectorAll('.source-filter').forEach((button) => {
+    const on = (button.dataset.source || '') === source;
+    button.classList.toggle('is-active', on);
+    button.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
 }
 
 export function bindPaper(root) {
@@ -166,47 +168,13 @@ export function bindPaper(root) {
       button.textContent = collapsed ? '展開' : '收合';
     });
   });
-}
-
-export function reportUrl(repository, template, pageUrl, title) {
-  const base = String(repository || '').replace(/\/$/, '');
-  const params = new URLSearchParams({
-    template: template || 'article-report.yml',
-    title: `回報問題：${title || ''}`.slice(0, 80),
-    body: `頁面：${pageUrl || ''}\n\n`,
+  root.querySelectorAll('.paper-section').forEach((section) => {
+    const choose = (source) => {
+      const current = section.dataset.filter || '';
+      applySourceFilter(section, source && source === current ? '' : source);
+    };
+    section.querySelectorAll('.source-filter, .source-tag').forEach((button) => {
+      button.addEventListener('click', () => choose(button.dataset.source || ''));
+    });
   });
-  return `${base}/issues/new?${params.toString()}`;
-}
-
-function paragraphs(text) {
-  return String(text || '')
-    .trim()
-    .split(/\n{2,}/)
-    .map((part) => part.trim())
-    .filter(Boolean);
-}
-
-export function renderArticle(event, config, pageUrl) {
-  if (!event) return '<p class="empty">找不到這則新聞。</p>';
-  const summary = event.neutralSummary || event.neutralText || event.summary || '';
-  const { title } = headlineAndSummary(summary, event.neutralTitle || event.title);
-  const body = paragraphs(summary).map((part) => `<p>${escapeHtml(part)}</p>`).join('');
-  const notes = (event.balanceNotes || []).map((note) => `<p>${escapeHtml(note)}</p>`).join('');
-  const sources = (event.sources || []).map((source) => {
-    const url = safeUrl(source.url);
-    const name = escapeHtml(source.name || '來源');
-    const label = `${name}　閱讀原文`;
-    return url
-      ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`
-      : label;
-  }).join('、');
-  const report = reportUrl(config?.repository, config?.issueForm, pageUrl, title || '新聞');
-  return `${languageLine(event.sourceLanguage)}
-    ${commentaryLine(event.articleType)}
-    <h2>${escapeHtml(title || '新聞')}</h2>
-    <div class="article-body">${body}</div>
-    ${licenseLine(event.sources)}
-    ${notes}
-    ${sources ? `<p class="source-list">${sources}</p>` : ''}
-    <p class="report"><a href="${escapeHtml(report)}">回報問題</a></p>`;
 }
