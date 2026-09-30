@@ -1,6 +1,4 @@
-import { buildPaper } from './paper.js';
-import { bindPaper, renderNav, renderSections } from './render.js';
-import { taipeiDateString } from './time.js';
+import { renderEventList, updateLabel } from './reading.js';
 
 async function fetchJson(path) {
   const response = await fetch(path, { cache: 'no-store' });
@@ -8,51 +6,46 @@ async function fetchJson(path) {
   return response.json();
 }
 
-function pickIssue(issues, today) {
-  const list = Array.isArray(issues) ? issues : [];
-  return list.find((issue) => issue.date === today)
-    || list.filter((issue) => issue.date <= today).sort((a, b) => (a.date < b.date ? 1 : -1))[0]
-    || null;
-}
-
 async function main() {
-  const dateline = document.getElementById('dateline');
-  const frontUpdated = document.getElementById('front-updated');
-  const nav = document.getElementById('section-nav');
-  const sections = document.getElementById('sections');
-  try {
-    const config = await fetchJson('data/sections.json');
-    let index = { issues: [] };
+  const note = document.getElementById('update-note');
+  const root = document.getElementById('events');
+  const now = new Date();
+  let events = [];
+
+  function paint(more) {
+    if (note) note.textContent = updateLabel(events, now);
+    if (!root) return;
+    root.innerHTML = renderEventList(events, now, { more });
+    const button = document.getElementById('load-more');
+    if (button) button.addEventListener('click', loadMore);
+  }
+
+  async function loadMore() {
+    const button = document.getElementById('load-more');
+    if (button) button.disabled = true;
     try {
-      index = await fetchJson('data/issues/index.json');
-    } catch {
-      index = { issues: [] };
-    }
-    const entry = pickIssue(index.issues, taipeiDateString(new Date()));
-    let issue = null;
-    if (entry?.path) {
-      try {
-        issue = await fetchJson(entry.path);
-      } catch {
-        issue = null;
+      const extra = await fetchJson('data/home-more.json');
+      const seen = new Set(events.map((event) => event.id));
+      for (const event of extra.events || []) {
+        if (event?.id && !seen.has(event.id)) events.push(event);
       }
+      paint(false);
+    } catch (error) {
+      if (button) {
+        button.disabled = false;
+        button.textContent = '載入失敗，再試一次';
+      }
+      console.error(error);
     }
-    let international = { events: [] };
-    try {
-      international = await fetchJson('data/international.json');
-    } catch {
-      international = { events: [] };
-    }
-    const model = buildPaper({ config, international, issue, now: new Date() });
-    if (dateline) dateline.textContent = model.dateline;
-    if (frontUpdated) frontUpdated.textContent = model.frontUpdated;
-    if (nav) nav.innerHTML = renderNav(model);
-    if (sections) {
-      sections.innerHTML = renderSections(model);
-      bindPaper(sections);
-    }
+  }
+
+  try {
+    const home = await fetchJson('data/home.json');
+    events = Array.isArray(home.events) ? home.events.slice() : [];
+    paint(Boolean(home.hasMore));
   } catch (error) {
-    if (sections) sections.innerHTML = '<p class="empty">報紙載入失敗。</p>';
+    if (note) note.textContent = '最近 12 小時沒有新文章';
+    if (root) root.innerHTML = '<p class="empty">首頁載入失敗。</p>';
     console.error(error);
   }
 }

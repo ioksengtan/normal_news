@@ -1,8 +1,8 @@
 # 正常新聞
 
-公開頁面只顯示我們自己寫的中性標題與摘要，以及「媒體名稱　閱讀原文」連結。不顯示原標題，不刊出被標記的原文，也不做來源排行。
+首頁只顯示中性改寫：標題、摘要、來源名稱與時間。點進文章才載入全文，底部有原文連結。被移除片段、分類、情緒密度與來源統計留在資料檔，頁面上不顯示、也不連結。
 
-首頁是一份報紙，版面由 `data/sections.json` 決定：科技．GitHub、科技．Hacker News，然後國際版。科技版沒有模型金鑰，步驟見 [docs/assistant-runbook-tech.md](docs/assistant-runbook-tech.md)。國際版每天台北時間 06:48 由助手跑一輪，步驟見 [docs/assistant-runbook.md](docs/assistant-runbook.md)。抓取規範見 [docs/crawling-policy.md](docs/crawling-policy.md)。
+科技版資料仍由另一套流程產生，步驟見 [docs/assistant-runbook-tech.md](docs/assistant-runbook-tech.md)。國際版每天台北時間 06:48 由助手跑一輪，步驟見 [docs/assistant-runbook.md](docs/assistant-runbook.md)。抓取規範見 [docs/crawling-policy.md](docs/crawling-policy.md)。
 
 ## 國際版來源
 
@@ -19,7 +19,11 @@
 
 ## 資料
 
-- `data/international.json`：網站讀的國際版。每則有中性標題、中性摘要、原文語言、文章類型與來源連結。
+- `data/home.json`：首頁最新 30 個事件的標題與摘要，小於 300 KB。
+- `data/home-more.json`：「載入更多」用的其餘事件，同樣只有標題與摘要。
+- `data/international/events/`：文章頁才下載的全文。
+- `data/events.json`：事件 id、代表文章、成員文章。
+- `data/articles.json` 與 `data/source_stats.json`：內容長檢查用，網站不讀。
 - `data/criteria.json`：準則頁文字，來自 `rubric-spec.md` 的使用者可讀說明。
 - 原文只留在本地 `tmp/candidates.json`，不進公開 repo。
 

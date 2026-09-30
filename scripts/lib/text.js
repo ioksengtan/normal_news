@@ -15,6 +15,12 @@ export function compactWhitespace(str) {
   return String(str ?? '').replace(/\s+/g, '');
 }
 
+export function clipChars(str, max) {
+  const chars = [...String(str ?? '')];
+  if (chars.length <= max) return chars.join('');
+  return `${chars.slice(0, max).join('')}…`;
+}
+
 // 摘要不得和原文共用超過 10 個連續字。數字與「（原文為…）」括注先拿掉，避免日期與附註原文被誤判。
 export function sharesLongRun(summary, source, limit = 10) {
   const left = overlapText(summary);

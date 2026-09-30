@@ -8,6 +8,7 @@ export const MAX_OVERLAP_CHARS = 10;
 export const MAX_NOTE_CHARS = 80;
 export const MIN_ARTICLE_TEXT_CHARS = 200;
 export const HOME_EVENT_LIMIT = 30;
+export const HOME_CARD_SUMMARY_CHARS = 120;
 export const HOME_MAX_BYTES = 300 * 1024;
 export const MIN_ARTICLES_FOR_RANK = 20;
 export const MAX_STORED_ARTICLES = 300;
@@ -19,6 +20,7 @@ export const PUBLISHED_DATA_FILES = [
   'articles.json',
   'events.json',
   'home.json',
+  'home-more.json',
   'international.json',
   'source_stats.json',
   'criteria.json',

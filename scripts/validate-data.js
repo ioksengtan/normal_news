@@ -9,7 +9,8 @@ import { loadRubric } from './lib/rubric.js';
 const USAGE = `用法：npm run validate-data -- [--data-dir data] [--rubric rubric-spec.md]
 
 檢查已提交的公開資料：中性標題與摘要、事件參照、
-international.json、準則頁沒有漏出系統提示詞。不檢查來源排行。
+首頁與文章全文拆檔、準則頁沒有漏出系統提示詞。
+來源統計留在 source_stats.json，網站不顯示。
 `;
 
 function main() {
@@ -25,11 +26,20 @@ function main() {
   if (homeBytesOnDisk > HOME_MAX_BYTES) {
     throw new Error(`home.json 檔案大小 ${homeBytesOnDisk} bytes，超過 ${HOME_MAX_BYTES}`);
   }
+  const eventsDir = path.join(dataDir, 'international', 'events');
+  const eventFiles = fs.existsSync(eventsDir)
+    ? fs.readdirSync(eventsDir)
+      .filter((name) => /^evt_[A-Za-z0-9_-]+\.json$/.test(name))
+      .sort()
+      .map((name) => readJson(path.join(eventsDir, name)))
+    : [];
   const stored = {
     articles: readJson(path.join(dataDir, 'articles.json')),
     events: readJson(path.join(dataDir, 'events.json')),
     home: readJson(homePath),
+    homeMore: readJson(path.join(dataDir, 'home-more.json')),
     international: readJson(path.join(dataDir, 'international.json')),
+    eventFiles,
     stats: readJson(path.join(dataDir, 'source_stats.json')),
     criteria: readJson(path.join(dataDir, 'criteria.json')),
     rubric,

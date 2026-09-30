@@ -43,7 +43,7 @@ function assertRepo(value) {
 }
 
 export function readPublishFiles(dataDir) {
-  return PUBLISHED_DATA_FILES.map((name) => {
+  const files = PUBLISHED_DATA_FILES.map((name) => {
     const localPath = path.join(dataDir, name);
     if (!fs.existsSync(localPath)) {
       throw new Error(`找不到要發布的檔案：${localPath}`);
@@ -53,6 +53,19 @@ export function readPublishFiles(dataDir) {
       content: fs.readFileSync(localPath, 'utf8'),
     };
   });
+  const eventsDir = path.join(dataDir, 'international', 'events');
+  if (fs.existsSync(eventsDir)) {
+    const names = fs.readdirSync(eventsDir)
+      .filter((name) => /^evt_[A-Za-z0-9_-]+\.json$/.test(name))
+      .sort();
+    for (const name of names) {
+      files.push({
+        path: `data/international/events/${name}`,
+        content: fs.readFileSync(path.join(eventsDir, name), 'utf8'),
+      });
+    }
+  }
+  return files;
 }
 
 export async function githubRequest(token, route, { method = 'GET', body, timeoutMs = 30000 } = {}) {

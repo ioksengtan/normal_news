@@ -37,7 +37,9 @@ updated: 2026-09-30
 
 section 填「國際版」。source_language 只能是「繁體中文」「簡體中文」「英文」。
 
-同一事件才用 event.decision = same_as。不確定用 unsure，不要併入。
+同一事件才用 event.decision = same_as，或 decision 寫成 "same event as existing event evt_既有編號"。新事件可自訂 event_id。不確定用 unsure。拿不準就不合併。
+
+removed_spans 與 bias_ratio 可省略。若要留給內容長檢查，removed_spans 每項含 original 與 category，bias_ratio 是 0 到 1。這兩欄只進文章資料檔，不要寫進標題或摘要。
 
 只回傳一個 JSON 物件，不要加其他文字或程式碼區塊：
 
@@ -49,11 +51,13 @@ section 填「國際版」。source_language 只能是「繁體中文」「簡�
   "neutral_title": "自己撰寫的標題，30字以內",
   "neutral_summary": "150到300字的中性摘要",
   "balance_notes": [],
+  "removed_spans": [{ "original": "原文裡的評價片段", "category": "分類" }],
+  "bias_ratio": 0.1,
   "event": {
-    "decision": "new 或 same_as 或 unsure",
+    "decision": "new 或 same_as 或 unsure，或 same event as existing event evt_既有編號",
     "event_id": "新事件可省略",
-    "same_as": "只有 same_as 才填",
-    "summary": "new 或 unsure 時必填，200字以內"
+    "same_as": "只有 same_as 才填既有事件 id",
+    "summary": "new 或 unsure 時必填，200字以內的事件短述"
   }
 }
 ```

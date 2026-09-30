@@ -50,12 +50,30 @@ npm run publish
 
 `source_language` 只能是 `繁體中文`、`簡體中文`、`英文`。`article_type` 只能是 `新聞報導`、`評論`、`新聞稿`、`其他`。
 
-同一事件才用 `same_as`。不確定用 `unsure`，不要併。摘要若和原文有超過 10 個連續相同字，ingest 會拒絕。不要輸出 `removed_spans` 或 `metric_spans`，公開資料不保存它們。
+摘要若和原文有超過 10 個連續相同字，ingest 會拒絕。語言揭露句和「評論」標示由網站依 `source_language`、`article_type` 顯示，不要寫進摘要。
 
-語言揭露句和「評論」標示由網站依 `source_language`、`article_type` 顯示，不要寫進摘要。
+### 事件
+
+改寫時同時寫事件短述，並決定要不要併入既有事件。先看 `data/events.json` 裡過去 36 小時更新過的事件。
+
+- 新事件：`{ "decision": "new", "summary": "200 字以內的事件短述" }`。可以加 `event_id`（`evt_` 開頭）。省略時用這篇文章的 id 產生。
+- 同一件事：`{ "decision": "same_as", "same_as": "evt_既有編號" }`。也可以把 decision 寫成 `same event as existing event evt_既有編號`。
+- 拿不準就不合併。用 `{ "decision": "unsure", "summary": "事件短述" }`，不要填 `same_as`。分成兩則的代價只是多讀一則；把兩件不同的事合成一則會讀錯。
+
+合併後，卡片和文章頁只顯示一篇代表內文：中性摘要最長的那篇。其他來源只留名稱和原文連結。代表文章由 ingest 決定，瀏覽器不算。
+
+`removed_spans` 與 `bias_ratio` 可以不寫。若要留給內容長檢查改寫品質，`removed_spans` 的每一項要有 `original`（必須是原文裡的片段）和 `category`，`bias_ratio` 是 0 到 1。它們只寫進 `data/articles.json`。`data/source_stats.json` 繼續計算來源統計。網站不顯示被移除片段、分類、情緒密度，也不連結來源統計。
 
 ## 公開資料
 
-`data/international.json` 是網站讀的國際版。每則有中性標題、中性摘要、語言、文章類型，以及來源連結。沒有原標題，沒有標記摘錄，沒有來源比率。範例文章不會寫進這個檔。
+瀏覽器只讀結果，不讀 `articles.json`。
+
+- `data/home.json`：最新 30 個事件的標題、摘要（中性內文截到約 120 字）、更新時間、來源名稱。小於 300 KB。範例文章不會出現。
+- `data/home-more.json`：第 31 則以後，同樣只有標題與摘要。首頁的「載入更多」才下載。
+- `data/international/events/<事件 id>.json`：點進文章才下載的全文，含來源原文連結。
+- `data/events.json`：事件 id、事件短述、代表文章、成員文章。
+- `data/articles.json`：每篇文章的中性標題與摘要，以及可選的 `removedSpans`、`biasRatio`。
+- `data/source_stats.json`：來源統計。未滿 20 篇不排名。
+- `data/international.json`：給舊的報紙組版用的國際版清單。首頁不下載這個檔。
 
 `npm run publish` 用 `GITHUB_TOKEN` 或 `gh auth token` 在 `main` 上建一個 commit。不要用 git push 發布資料。`--dry-run` 只列出會提交的檔案。

@@ -150,12 +150,25 @@ test('source config is international news and tech only', () => {
   assert.throws(() => loadSources(bad), /http/);
 });
 
-test('public source ranking is not produced', () => {
-  const stats = buildSourceStats([
+test('source stats stay in the data file and are not ranked below 20 articles', () => {
+  const few = buildSourceStats([
     { source: '甲', biasRatio: 0.2, isExample: false },
     { source: '範例', biasRatio: 0.5, isExample: true },
   ]);
-  assert.deepEqual(stats, []);
+  assert.equal(few.length, 2);
+  assert.equal(few.every((row) => row.rank === null && row.sampleTooSmall), true);
+  assert.equal(few.find((row) => row.source === '範例').isExample, true);
+  assert.equal(few.find((row) => row.source === '範例').sampleNote, SAMPLE_TOO_SMALL_NOTE);
+
+  const many = Array.from({ length: MIN_ARTICLES_FOR_RANK }, () => ({
+    source: '甲',
+    biasRatio: 0.2,
+    isExample: false,
+  }));
+  const ranked = buildSourceStats(many);
+  assert.equal(ranked[0].rank, 1);
+  assert.equal(ranked[0].sampleTooSmall, false);
+  assert.equal(ranked[0].sampleNote, '');
 });
 
 function candidate(id, overrides = {}) {
@@ -344,13 +357,14 @@ test('homepage keeps 30 event titles and summaries under 300KB', () => {
   }
   const home = buildHome(events, articles, '2026-09-30T00:00:00.000Z');
   assert.equal(home.events.length, 30);
+  assert.equal(home.hasMore, true);
   assert.equal(Buffer.byteLength(`${JSON.stringify(home, null, 2)}\n`) <= HOME_MAX_BYTES, true);
   assert.equal(home.events.some((event) => event.summary === '短述 0' && event.title.includes('0')), false);
-  const huge = [{
-    ...events[0],
-    summary: '長'.repeat(200000),
-  }];
-  assert.throws(() => buildHome(huge, articles, '2026-09-30T00:00:00.000Z'), /超過/);
+  assert.equal(JSON.stringify(home).includes('https://'), false);
+  const hugeArticles = articles.map((article) => (
+    article.id === 'a00' ? { ...article, source: '名'.repeat(120000) } : article
+  ));
+  assert.throws(() => buildHome(events, hugeArticles, '2026-09-30T00:00:00.000Z'), /超過/);
 });
 
 test('ingest command exits non-zero and does not write when validation fails', () => {
@@ -418,6 +432,7 @@ test('publish dry-run does not create a commit, and a real run sends one non-for
     'articles.json',
     'events.json',
     'home.json',
+    'home-more.json',
     'international.json',
     'source_stats.json',
     'criteria.json',

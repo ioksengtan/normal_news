@@ -1,6 +1,6 @@
-import { headlineAndSummary } from './html.js';
-import { normalizeEvents } from './international.js';
-import { renderArticle } from './render.js';
+import { renderReadingArticle } from './reading.js';
+
+const EVENT_ID = /^evt_[A-Za-z0-9_-]{1,80}$/;
 
 async function fetchJson(path) {
   const response = await fetch(path, { cache: 'no-store' });
@@ -8,35 +8,20 @@ async function fetchJson(path) {
   return response.json();
 }
 
-async function loadEvent(id) {
-  let listed = null;
-  try {
-    const data = await fetchJson('data/international.json');
-    listed = normalizeEvents(data).find((event) => event.id === id) || null;
-  } catch {
-    listed = null;
-  }
-  if (listed?.neutralText) return listed;
-  try {
-    const full = normalizeEvents({ events: [await fetchJson(`data/international/events/${encodeURIComponent(id)}.json`)] })[0];
-    return full ? { ...listed, ...full, sources: full.sources?.length ? full.sources : listed?.sources } : listed;
-  } catch {
-    return listed;
-  }
-}
-
 async function main() {
   const root = document.getElementById('article');
   if (!root) return;
-  const id = new URLSearchParams(location.search).get('id');
+  const id = new URLSearchParams(location.search).get('id') || '';
+  if (!EVENT_ID.test(id)) {
+    root.innerHTML = '<p class="empty">找不到這則新聞。</p>';
+    return;
+  }
   try {
     const config = await fetchJson('data/sections.json');
-    const event = id ? await loadEvent(id) : null;
-    root.innerHTML = renderArticle(event, config, location.href);
-    if (event) {
-      const { title } = headlineAndSummary(event.neutralText, event.neutralTitle || event.title);
-      document.title = `${title || event.title || '新聞'} · 正常新聞`;
-    }
+    const event = await fetchJson(`data/international/events/${encodeURIComponent(id)}.json`);
+    root.innerHTML = renderReadingArticle(event, config, location.href);
+    const title = String(event.neutralTitle || event.title || '').trim();
+    if (title) document.title = `${title} · 正常新聞`;
   } catch (error) {
     root.innerHTML = '<p class="empty">這則新聞載入失敗。</p>';
     console.error(error);

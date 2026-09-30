@@ -2,6 +2,7 @@ import {
   ARTICLE_TYPES,
   EVENT_ID_RE,
   FORBIDDEN_TEXT_KEYS,
+  HOME_CARD_SUMMARY_CHARS,
   HOME_EVENT_LIMIT,
   HOME_MAX_BYTES,
   MAX_ARTICLE_SUMMARY_CHARS,
@@ -14,7 +15,7 @@ import {
 } from './constants.js';
 import { criteriaFromRubric } from './rubric.js';
 import { buildSourceStats } from './stats.js';
-import { charLength, compactWhitespace, sharesLongRun } from './text.js';
+import { charLength, clipChars, compactWhitespace, sharesLongRun } from './text.js';
 
 export function articleIdFromLink(link) {
   return Buffer.from(link).toString('base64url').slice(0, 16);
@@ -159,15 +160,23 @@ export function ingestBatch({
     if (refreshed) storedEvents.push(refreshed);
   }
 
-  const home = buildHome(storedEvents, storedArticles, now);
+  const { home, homeMore } = buildHomeFeeds(storedEvents, storedArticles, now);
   const international = buildInternational(storedEvents, storedArticles, hasReal ? now : null);
+  const eventFiles = buildEventFiles(storedEvents, storedArticles);
   const stats = buildSourceStats(storedArticles);
   const criteria = criteriaFromRubric(rubric);
   const leaked = [
     ...findLeakedOriginalFields(storedArticles, '$.articles'),
     ...findLeakedOriginalFields(storedEvents, '$.events'),
     ...findLeakedOriginalFields(home, '$.home'),
+    ...findLeakedOriginalFields(homeMore, '$.homeMore'),
     ...findLeakedOriginalFields(international, '$.international'),
+    ...findLeakedOriginalFields(eventFiles, '$.eventFiles'),
+    ...findPublicAuditFields(home, '$.home'),
+    ...findPublicAuditFields(homeMore, '$.homeMore'),
+    ...findPublicAuditFields(international, '$.international'),
+    ...findPublicAuditFields(eventFiles, '$.eventFiles'),
+    ...findPublicAuditFields(storedEvents, '$.events'),
   ];
   if (leaked.length) {
     throw new Error(leaked.join('\n'));
@@ -177,7 +186,9 @@ export function ingestBatch({
     articles: storedArticles,
     events: storedEvents,
     home,
+    homeMore,
     international,
+    eventFiles,
     stats,
     criteria,
     addedCount: created.filter((article) => keptIds.has(article.id)).length,
@@ -235,6 +246,7 @@ function buildArticle(result, candidate, rubric, now, errors, where) {
   if (neutralSummary && leaksOriginal(neutralSummary, candidate.text || '')) {
     errors.push(`${where}：neutral_summary 含有完整原文，不能寫進公開資料`);
   }
+  const audit = readAudit(result, candidate, errors, where);
   const balanceNotes = [];
   if (result.balance_notes != null && !Array.isArray(result.balance_notes)) {
     errors.push(`${where}：balance_notes 必須是陣列`);
@@ -248,7 +260,7 @@ function buildArticle(result, candidate, rubric, now, errors, where) {
     }
   }
 
-  return {
+  const article = {
     id: candidate.id,
     neutralTitle,
     neutralSummary,
@@ -263,18 +275,70 @@ function buildArticle(result, candidate, rubric, now, errors, where) {
     rubricVersion: rubric.version,
     eventId: null,
   };
+  if (audit.removedSpans) article.removedSpans = audit.removedSpans;
+  if (typeof audit.biasRatio === 'number') article.biasRatio = audit.biasRatio;
+  return article;
+}
+
+function readAudit(result, candidate, errors, where) {
+  const raw = result.removed_spans ?? result.removedSpans;
+  let removedSpans;
+  if (raw != null) {
+    if (!Array.isArray(raw)) {
+      errors.push(`${where}：removed_spans 必須是陣列`);
+    } else {
+      removedSpans = [];
+      for (const span of raw) {
+        const original = span && typeof span === 'object' ? String(span.original ?? span.text ?? '').trim() : '';
+        const category = span && typeof span === 'object' ? String(span.category ?? '').trim() : '';
+        if (!original || charLength(original) > 80) {
+          errors.push(`${where}：removed_spans 的 original 必須是 1 到 80 個字`);
+          continue;
+        }
+        if (!category || charLength(category) > 20) {
+          errors.push(`${where}：removed_spans 的 category 必須是 1 到 20 個字`);
+          continue;
+        }
+        if (!(candidate.text || '').includes(original)) {
+          errors.push(`${where}：removed_spans 必須是原文裡的片段`);
+          continue;
+        }
+        removedSpans.push({ original, category });
+      }
+    }
+  }
+  const biasRaw = result.bias_ratio ?? result.biasRatio;
+  let biasRatio;
+  if (biasRaw != null && biasRaw !== '') {
+    const value = Number(biasRaw);
+    if (!Number.isFinite(value) || value < 0 || value > 1) {
+      errors.push(`${where}：bias_ratio 必須是 0 到 1`);
+    } else {
+      biasRatio = Math.round(value * 1000) / 1000;
+    }
+  } else if (removedSpans && removedSpans.length && candidate.text) {
+    const removed = removedSpans.reduce((sum, span) => sum + charLength(span.original), 0);
+    const total = charLength(candidate.text);
+    if (total > 0) biasRatio = Math.round((removed / total) * 1000) / 1000;
+  }
+  return { removedSpans, biasRatio };
 }
 
 function planEvent(event, eventById, where) {
   if (!event || typeof event !== 'object') {
-    return { error: `${where}：缺少 event（decision、summary 或 same_as）` };
+    return { error: `${where}：缺少 event（decision、event_id，或 same event as existing event）` };
   }
-  const decision = event.decision;
+  let decision = typeof event.decision === 'string' ? event.decision.trim() : '';
+  let sameAs = typeof event.same_as === 'string' ? event.same_as.trim() : '';
+  const phrase = /^same event as existing event\s+(\S+)$/i.exec(decision);
+  if (phrase) {
+    decision = 'same_as';
+    sameAs = sameAs || phrase[1].replace(/[。.，,]$/, '');
+  }
   if (decision !== 'new' && decision !== 'same_as' && decision !== 'unsure') {
-    return { error: `${where}：event.decision 必須是 new、same_as 或 unsure` };
+    return { error: `${where}：event.decision 必須是 new、same_as、unsure，或 same event as existing event <事件 id>` };
   }
   if (decision === 'same_as') {
-    const sameAs = typeof event.same_as === 'string' ? event.same_as.trim() : '';
     if (!sameAs || !eventById.has(sameAs)) {
       return { error: `${where}：same_as 必須是已經存在的事件 id。不確定時用 unsure，不要併入` };
     }
@@ -333,6 +397,8 @@ function serializeArticle(article) {
     eventId: article.eventId,
   };
   if (article.isExample) stored.isExample = true;
+  if (Array.isArray(article.removedSpans)) stored.removedSpans = article.removedSpans;
+  if (typeof article.biasRatio === 'number') stored.biasRatio = article.biasRatio;
   return stored;
 }
 
@@ -342,7 +408,7 @@ function refreshEvent(event, keptIds, articles) {
     .map((id) => articles.find((article) => article.id === id))
     .filter(Boolean);
   if (members.length === 0) return null;
-  const representative = members.slice().sort(comparePublished)[0];
+  const representative = members.slice().sort(compareComplete)[0];
   const stored = {
     id: event.id,
     summary: event.summary,
@@ -363,38 +429,95 @@ function comparePublished(a, b) {
   return String(a.id).localeCompare(String(b.id));
 }
 
-export function buildHome(events, articles, generatedAt) {
+function compareComplete(a, b) {
+  const len = charLength(b.neutralSummary || '') - charLength(a.neutralSummary || '');
+  if (len !== 0) return len;
+  return comparePublished(a, b);
+}
+
+function compareEventsDesc(a, b) {
+  const ta = Date.parse(a.updatedAt || '') || 0;
+  const tb = Date.parse(b.updatedAt || '') || 0;
+  if (ta !== tb) return tb - ta;
+  return String(a.id).localeCompare(String(b.id));
+}
+
+function publicMembers(event, articleById) {
+  return (event.articleIds || [])
+    .map((id) => articleById.get(id))
+    .filter((article) => article && !article.isExample);
+}
+
+function listPublicEvents(events, articles) {
   const articleById = new Map(articles.map((article) => [article.id, article]));
-  const sorted = events.slice().sort((a, b) => {
-    const ta = Date.parse(a.publishedAt || '') || 0;
-    const tb = Date.parse(b.publishedAt || '') || 0;
-    if (ta !== tb) return tb - ta;
-    return String(a.id).localeCompare(String(b.id));
-  });
-  const payload = {
+  return events
+    .filter((event) => !event.isExample)
+    .map((event) => ({ event, members: publicMembers(event, articleById) }))
+    .filter((item) => item.members.length > 0)
+    .sort((a, b) => compareEventsDesc(a.event, b.event));
+}
+
+function cardFor(event, members) {
+  const representative = members.find((article) => article.id === event.representativeArticleId)
+    || members.slice().sort(compareComplete)[0];
+  return {
+    id: event.id,
+    title: clipChars(representative.neutralTitle || '', MAX_TITLE_CHARS),
+    summary: clipChars(representative.neutralSummary || '', HOME_CARD_SUMMARY_CHARS),
+    updatedAt: event.updatedAt,
+    sources: members.map((article) => ({ name: article.source || '' })),
+  };
+}
+
+export function buildHomeFeeds(events, articles, generatedAt) {
+  const cards = listPublicEvents(events, articles).map(({ event, members }) => cardFor(event, members));
+  const home = {
     generatedAt,
     maxEvents: HOME_EVENT_LIMIT,
     maxBytes: HOME_MAX_BYTES,
-    events: sorted.slice(0, HOME_EVENT_LIMIT).map((event) => {
-      const representative = articleById.get(event.representativeArticleId);
-      const homeEvent = {
-        id: event.id,
-        title: representative?.neutralTitle || '',
-        summary: event.summary,
-        publishedAt: event.publishedAt,
-        articleCount: event.articleIds.length,
-        representativeArticleId: event.representativeArticleId,
-        uncertain: Boolean(event.uncertain),
-      };
-      if (event.isExample) homeEvent.isExample = true;
-      return homeEvent;
-    }),
+    hasMore: cards.length > HOME_EVENT_LIMIT,
+    events: cards.slice(0, HOME_EVENT_LIMIT),
   };
-  const bytes = Buffer.byteLength(`${JSON.stringify(payload, null, 2)}\n`);
+  const homeMore = {
+    generatedAt,
+    events: cards.slice(HOME_EVENT_LIMIT),
+  };
+  const bytes = jsonBytes(home);
   if (bytes > HOME_MAX_BYTES) {
-    throw new Error(`首頁資料 ${bytes} bytes，超過 ${HOME_MAX_BYTES} bytes。summary 只能是事件短述，不能放文章全文`);
+    throw new Error(`首頁資料 ${bytes} bytes，超過 ${HOME_MAX_BYTES} bytes。首頁只放最新 ${HOME_EVENT_LIMIT} 則的標題與摘要`);
   }
-  return payload;
+  return { home, homeMore };
+}
+
+export function buildHome(events, articles, generatedAt) {
+  return buildHomeFeeds(events, articles, generatedAt).home;
+}
+
+export function buildEventFiles(events, articles) {
+  const articleById = new Map(articles.map((article) => [article.id, article]));
+  const files = [];
+  for (const event of events) {
+    if (event.isExample) continue;
+    const members = publicMembers(event, articleById);
+    if (members.length === 0) continue;
+    const representative = members.find((article) => article.id === event.representativeArticleId)
+      || members.slice().sort(compareComplete)[0];
+    files.push({
+      id: event.id,
+      neutralTitle: representative.neutralTitle || '',
+      neutralSummary: representative.neutralSummary || '',
+      sourceLanguage: representative.sourceLanguage || '',
+      articleType: representative.articleType || '',
+      updatedAt: event.updatedAt,
+      sources: members.map((article) => ({
+        name: article.source || '',
+        url: article.link || '',
+        publishedAt: article.publishedAt || null,
+      })),
+    });
+  }
+  files.sort((a, b) => String(a.id).localeCompare(String(b.id)));
+  return files;
 }
 
 export function buildInternational(events, articles, updatedAt) {
@@ -405,7 +528,8 @@ export function buildInternational(events, articles, updatedAt) {
       .map((id) => articleById.get(id))
       .filter((article) => article && !article.isExample);
     if (members.length === 0) continue;
-    const representative = members.slice().sort(comparePublished)[0];
+    const representative = members.find((article) => article.id === event.representativeArticleId)
+      || members.slice().sort(compareComplete)[0];
     const sources = members.map((article) => ({
       name: article.source,
       url: article.link,
@@ -463,19 +587,64 @@ function walk(value, label, problems) {
   if (!value || typeof value !== 'object') return;
   for (const [key, child] of Object.entries(value)) {
     const here = `${label}.${key}`;
-    if (FORBIDDEN_TEXT_KEYS.has(key) || key === 'removedSpans' || key === 'removed_spans' || key === 'metricSpans' || key === 'metric_spans' || key === 'biasRatio') {
-      problems.push(`${here}：公開資料不可含原文、標記摘錄或來源比率`);
+    if (FORBIDDEN_TEXT_KEYS.has(key)) {
+      problems.push(`${here}：公開資料不可含原文`);
     }
     walk(child, here, problems);
   }
 }
 
-export function validateStoredData({ articles, events, home, international, stats, criteria, rubric }) {
+const AUDIT_KEYS = new Set([
+  'removedSpans',
+  'removed_spans',
+  'metricSpans',
+  'metric_spans',
+  'biasRatio',
+  'bias_ratio',
+  'emotionalDensity',
+  'emotional_density',
+  'category',
+]);
+
+export function findPublicAuditFields(value, label = '$') {
+  const problems = [];
+  walkAudit(value, label, problems);
+  return problems;
+}
+
+function walkAudit(value, label, problems) {
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => walkAudit(item, `${label}[${index}]`, problems));
+    return;
+  }
+  if (!value || typeof value !== 'object') return;
+  for (const [key, child] of Object.entries(value)) {
+    const here = `${label}.${key}`;
+    if (AUDIT_KEYS.has(key)) {
+      problems.push(`${here}：網站讀的資料不可含被移除片段、分類或情緒密度`);
+    }
+    walkAudit(child, here, problems);
+  }
+}
+
+export function validateStoredData({
+  articles,
+  events,
+  home,
+  homeMore,
+  international,
+  eventFiles,
+  stats,
+  criteria,
+  rubric,
+}) {
   const problems = [];
   if (!Array.isArray(articles)) problems.push('articles.json 必須是陣列');
   if (!Array.isArray(events)) problems.push('events.json 必須是陣列');
   if (!home || !Array.isArray(home.events)) problems.push('home.json 必須包含 events 陣列');
+  if (!homeMore || !Array.isArray(homeMore.events)) problems.push('home-more.json 必須包含 events 陣列');
   if (!international || !Array.isArray(international.events)) problems.push('international.json 必須包含 events 陣列');
+  if (eventFiles != null && !Array.isArray(eventFiles)) problems.push('文章全文必須是陣列');
   if (!Array.isArray(stats)) problems.push('source_stats.json 必須是陣列');
   if (problems.length) throw new Error(problems.join('\n'));
 
@@ -487,7 +656,7 @@ export function validateStoredData({ articles, events, home, international, stat
         problems.push(`${where}.${key} 必須是非空字串`);
       }
     }
-    if ('scope' in article || 'removedSpans' in article || 'biasRatio' in article || 'neutralText' in article) {
+    if ('scope' in article || 'neutralText' in article) {
       problems.push(`${where} 含有已停用的公開欄位`);
     }
     if (!article.isExample && !SOURCE_LANGUAGES.includes(article.sourceLanguage)) {
@@ -536,8 +705,17 @@ export function validateStoredData({ articles, events, home, international, stat
   if (JSON.stringify(expected.home) !== JSON.stringify(home)) {
     problems.push('home.json 與事件、文章不一致，或超過最新 30 則事件');
   }
+  if (JSON.stringify(expected.homeMore) !== JSON.stringify(homeMore)) {
+    problems.push('home-more.json 與事件、文章不一致');
+  }
   if (JSON.stringify(expected.international) !== JSON.stringify(international)) {
     problems.push('international.json 與事件、文章不一致');
+  }
+  if (eventFiles) {
+    const storedFiles = eventFiles.slice().sort((a, b) => String(a.id).localeCompare(String(b.id)));
+    if (JSON.stringify(storedFiles) !== JSON.stringify(expected.eventFiles)) {
+      problems.push('文章全文檔與事件、代表文章不一致');
+    }
   }
   if (JSON.stringify(expected.stats) !== JSON.stringify(stats)) {
     problems.push('source_stats.json 與文章不一致（名次只給至少 20 篇的來源，並保留 isExample）');
@@ -564,7 +742,16 @@ export function validateStoredData({ articles, events, home, international, stat
   problems.push(...findLeakedOriginalFields(articles, '$.articles'));
   problems.push(...findLeakedOriginalFields(events, '$.events'));
   problems.push(...findLeakedOriginalFields(home, '$.home'));
+  problems.push(...findLeakedOriginalFields(homeMore, '$.homeMore'));
   problems.push(...findLeakedOriginalFields(international, '$.international'));
+  problems.push(...findPublicAuditFields(home, '$.home'));
+  problems.push(...findPublicAuditFields(homeMore, '$.homeMore'));
+  problems.push(...findPublicAuditFields(international, '$.international'));
+  problems.push(...findPublicAuditFields(events, '$.events'));
+  if (eventFiles) {
+    problems.push(...findLeakedOriginalFields(eventFiles, '$.eventFiles'));
+    problems.push(...findPublicAuditFields(eventFiles, '$.eventFiles'));
+  }
   for (const event of international.events) {
     if (!event?.id || !event?.title || !Array.isArray(event.sources)) {
       problems.push('international.json 的事件要有 id、title 與 sources');
