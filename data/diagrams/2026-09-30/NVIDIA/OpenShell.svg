@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220">
-  <rect width="360" height="220" fill="#f4f0e6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 248">
+  <rect width="360" height="248" fill="#f4f0e6"/>
   <style>
     text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
   </style>
@@ -21,4 +21,5 @@
   <text x="96" y="183" text-anchor="middle">新增權限先由人審核</text>
   <rect x="188" y="156" width="156" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
   <text x="266" y="183" text-anchor="middle">看不到真正的憑證</text>
+  <text x="180" y="236" text-anchor="middle" style="fill:#5e584e;font-size:13px">沙箱就像圍起來的沙坑，沙子不會撒到外面</text>
 </svg>
