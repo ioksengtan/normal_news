@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T03:22:06.860Z",
+  "generatedAt": "2026-09-30T04:21:41.449Z",
   "maxEvents": 30,
   "maxBytes": 307200,
   "events": [
@@ -10,6 +10,114 @@
       "publishedAt": "2026-09-30T09:55:00+08:00",
       "articleCount": 1,
       "representativeArticleId": "dLUg6-HyN_HJ7tV8",
+      "uncertain": false
+    },
+    {
+      "id": "evt_5M5r4nIaWeT0IJSP",
+      "title": "川習會落幕，美議員要求加快對台軍售",
+      "summary": "川習峰會後，美國兩黨議員促請川普政府加快對台軍售，眾議院議長強生稱美國對台支持不變。",
+      "publishedAt": "2026-09-30T05:28:25+08:00",
+      "articleCount": 1,
+      "representativeArticleId": "5M5r4nIaWeT0IJSP",
+      "uncertain": false
+    },
+    {
+      "id": "evt_UrSK1dMIqtbqdzjY",
+      "title": "香港團體赴英首相官邸請願，籲BNO簽證特例處理",
+      "summary": "香港人權團體到英國首相官邸請願，要求對因反修例被定罪而遭拒發BNO簽證的港人特例處理。",
+      "publishedAt": "2026-09-30T05:26:16+08:00",
+      "articleCount": 1,
+      "representativeArticleId": "UrSK1dMIqtbqdzjY",
+      "uncertain": false
+    },
+    {
+      "id": "evt_IbmtS4yuxEZyeGR2",
+      "title": "美司法部起訴兩名中國公民冒用他人美國護照",
+      "summary": "美國司法部起訴兩名中國公民，指他們在加州約翰韋恩機場入境時冒用他人美國護照。",
+      "publishedAt": "2026-09-30T03:30:11+08:00",
+      "articleCount": 1,
+      "representativeArticleId": "IbmtS4yuxEZyeGR2",
+      "uncertain": false
+    },
+    {
+      "id": "evt__fW4UtARYP-EjKkW",
+      "title": "巴西禁網路博弈後下架506個涉非法投注網站",
+      "summary": "巴西禁止網路博弈後，政府聯合小組下架506個涉非法投注網站，並監控社群平台上的博弈廣告與群組。",
+      "publishedAt": "2026-09-29T15:19:00-03:00",
+      "articleCount": 1,
+      "representativeArticleId": "_fW4UtARYP-EjKkW",
+      "uncertain": false
+    },
+    {
+      "id": "evt_EDD2oM_UtJ5SHiGq",
+      "title": "美參院無異議通過制裁強摘器官法案",
+      "summary": "美國參議院無異議通過法案，擬制裁在中國參與強摘器官的人士，仍待眾議院通過與總統簽署。",
+      "publishedAt": "2026-09-30T01:19:10+08:00",
+      "articleCount": 1,
+      "representativeArticleId": "EDD2oM_UtJ5SHiGq",
+      "uncertain": false
+    },
+    {
+      "id": "evt_Wz_ye_Zt-Joca1gY",
+      "title": "魯比歐稱英國空軍基地事件涉「外國行為者」",
+      "summary": "英國一座供美軍使用的空軍基地發生疑似攻擊事件，五名英國男子被捕後獲保釋，美國國務卿魯比歐稱涉及外國行為者。",
+      "publishedAt": "2026-09-30T01:04:54+08:00",
+      "articleCount": 1,
+      "representativeArticleId": "Wz_ye_Zt-Joca1gY",
+      "uncertain": false
+    },
+    {
+      "id": "evt_6FpZFRic1tcg6iIV",
+      "title": "巴西截至8月的三個月失業率5.3%，同期新低",
+      "summary": "巴西截至2026年8月的三個月失業率降至5.3%，為2012年有統計以來同期最低，就業人口創新高。",
+      "publishedAt": "2026-09-29T12:23:00-03:00",
+      "articleCount": 1,
+      "representativeArticleId": "6FpZFRic1tcg6iIV",
+      "uncertain": false
+    },
+    {
+      "id": "evt_x73Z98PBGr8B6yCc",
+      "title": "巴西立法訂定女子足球長期發展準則",
+      "summary": "巴西總統魯拉簽署法律，訂定女子足球發展的永久性全國準則，要求培訓青年球員的俱樂部設女子隊。",
+      "publishedAt": "2026-09-29T12:19:00-03:00",
+      "articleCount": 1,
+      "representativeArticleId": "x73Z98PBGr8B6yCc",
+      "uncertain": false
+    },
+    {
+      "id": "evt_xRxZuECAVVB12Ae2",
+      "title": "書評：龐森比人民聯盟與1970年代社區運動",
+      "summary": "紐西蘭新書記錄1970年代奧克蘭龐森比人民聯盟的社區運動，亞太報導主編發表書評。",
+      "publishedAt": "2026-09-29T07:24:41+00:00",
+      "articleCount": 1,
+      "representativeArticleId": "xRxZuECAVVB12Ae2",
+      "uncertain": false
+    },
+    {
+      "id": "evt__LNsov9TwFYJv9bL",
+      "title": "近百萬旅外巴西選民可在2026年大選投票",
+      "summary": "巴西高等選舉法院表示，2026年大選有918,876名旅外選民登記，分布在134個國家。",
+      "publishedAt": "2026-09-28T16:25:00-03:00",
+      "articleCount": 1,
+      "representativeArticleId": "_LNsov9TwFYJv9bL",
+      "uncertain": false
+    },
+    {
+      "id": "evt_tuPh0KOHHMi_f8l8",
+      "title": "巴西以臨時措施禁止網路博弈，賭客可取回餘額",
+      "summary": "巴西政府以臨時措施禁止線上博弈，平台須於2026年10月6日起下線，賭客帳戶餘額將退還。",
+      "publishedAt": "2026-09-28T16:25:00-03:00",
+      "articleCount": 1,
+      "representativeArticleId": "tuPh0KOHHMi_f8l8",
+      "uncertain": false
+    },
+    {
+      "id": "evt_Oqp17pvRjMQ8D6v2",
+      "title": "巴西報導網路博弈造成民眾負債與成癮",
+      "summary": "巴西通訊社以當事人與專家訪談，報導線上博弈造成的負債與成癮問題，以及監管不足的情形。",
+      "publishedAt": "2026-09-28T16:24:00-03:00",
+      "articleCount": 1,
+      "representativeArticleId": "Oqp17pvRjMQ8D6v2",
       "uncertain": false
     }
   ]
