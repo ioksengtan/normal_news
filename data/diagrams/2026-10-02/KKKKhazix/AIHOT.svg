@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
+  <rect width="360" height="300" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="20" y="24" width="100" height="70" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="70" y="52" text-anchor="middle">多個信源</text>
+  <text x="70" y="74" text-anchor="middle" class="sub">像多份報紙</text>
+  <line x1="120" y1="59" x2="148" y2="59" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="150" y="24" width="100" height="70" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="200" y="52" text-anchor="middle">預篩與評分</text>
+  <text x="200" y="74" text-anchor="middle" class="sub">過門檻才留下</text>
+  <line x1="250" y1="59" x2="278" y2="59" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="280" y="24" width="60" height="70" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="310" y="52" text-anchor="middle">寫</text>
+  <text x="310" y="74" text-anchor="middle" class="sub">摘要</text>
+  <rect x="40" y="120" width="280" height="56" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="144" text-anchor="middle">同一件事的報導聚成一個事件</text>
+  <text x="180" y="166" text-anchor="middle" class="sub">像把同一則新聞的剪報釘在一起</text>
+  <rect x="40" y="196" width="280" height="72" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="226" text-anchor="middle">算出熱度，早上出一份日報</text>
+  <text x="180" y="250" text-anchor="middle" class="sub">換信源與精選標準，就成你的產業站</text>
+</svg>

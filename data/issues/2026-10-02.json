@@ -1,0 +1,325 @@
+{
+  "date": "2026-10-02",
+  "issueNumber": 3,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-02T07:00:00+08:00",
+  "fetchedAt": "2026-10-01T22:53:40.844Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": true,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    }
+  },
+  "items": [
+    {
+      "id": "KKKKhazix/AIHOT",
+      "name": "KKKKhazix/AIHOT",
+      "url": "https://github.com/KKKKhazix/AIHOT",
+      "language": "TypeScript",
+      "starsToday": null,
+      "stars": 4627,
+      "summary": "AIHOT 是一套開源的產業熱點網站框架，用 TypeScript 寫成，示範站在 aihot.news。它每天從多個信源收資料，先去重與預篩，再對可能重要的項目獨立打兩次分數，過門檻才寫中文標題與摘要；同一件事的不同報導會聚成事件，再依熱度排進早上的日報。流程像先把多份報紙的剪報分堆，再挑出值得釘在布告欄的那幾則。儲存庫含網站、後台、精選流程與提示詞，授權為 MIT；說明寫需要 Node.js 24、PostgreSQL 17，並可用 Docker Compose 啟動。範例帶了 18 個公開的海外人工智慧資訊源，真正的信源要換成自己產業的。作者提醒這是線上程式的快照，不是精打細磨的通用產品。它適合想自建產業熱點站的人。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-02/KKKKhazix/AIHOT.svg",
+        "alt": "左側多個信源，箭頭指向預篩與評分，再寫摘要；下方說明同一事件聚合，以及早上出日報。",
+        "caption": "AIHOT 從多個信源篩選、寫摘要、聚成事件，再出一份早上日報。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 49926069,
+      "title": "Pi 1.0",
+      "titleZh": "Earendil 釋出 Pi 1.0 代理程式框架",
+      "url": "https://earendil.com/posts/pi-1-0/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49926069",
+      "score": 541,
+      "comments": 186,
+      "summary": "Earendil 在部落格宣布推出 Pi 1.0，這是可自行改造的代理程式框架，也就是一套幫人工智慧助手呼叫工具、完成任務的外殼。文章寫道，全球每週有數十萬人使用 Pi，1.0 加入原生支援模型上下文協定的 Codemode、虛擬模型擴充、延遲載入工具、Anthropic 模型快取預熱、對話中途可改系統訊息，以及新的終端機主題與預設全螢幕。同日也推出實驗套件 Pi Durable，用來做較長時間的代理程式應用。安裝可用官方安裝腳本；Pi Durable 以 npm 套件提供。兩者皆為 MIT 授權，文件在 pi.dev，程式在 GitHub 的 earendil-works/pi。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "Louis-CFM/coucou",
+      "name": "Louis-CFM/coucou",
+      "url": "https://github.com/Louis-CFM/coucou",
+      "language": "Swift",
+      "starsToday": null,
+      "stars": 2445,
+      "summary": "Coucou 是開源的桌面小程式，在 macOS 住在螢幕上方缺口，在 Windows 則待在螢幕頂端，用來監看人工智慧寫程式代理程式的工作階段。代理程式是會自己讀檔、改檔與執行指令的助手。說明寫道，使用者可在小視窗裡看它讀了什麼、改了什麼，並對權限請求按允許或拒絕，不必切到別的視窗；也可把檔案拖到缺口上，或在 macOS 把某個視窗附成對話脈絡。角色叫 Mochi，閒置時會收起來。專案用 Swift 與 SwiftUI，也支援 Windows 10 與 11；說明強調沒有遙測、不必開帳號，金鑰放在系統鑰匙圈或 Windows 憑證管理員。它適合常開 Claude Code、Gemini CLI 等代理程式、又想少切視窗的人。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-02/Louis-CFM/coucou.svg",
+        "alt": "螢幕上方缺口有小角色，下方分兩邊：監看代理程式與一鍵允許或拒絕。",
+        "caption": "Coucou 待在螢幕上方，幫你監看代理程式，並就地處理允許或拒絕。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 49923692,
+      "title": "Clef: Open-source decision models, and new RL fine-tuning platform",
+      "titleZh": "Cloudflare 發表開源決策模型 Clef",
+      "url": "https://blog.cloudflare.com/clef-decision-models/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49923692",
+      "score": 372,
+      "comments": 148,
+      "summary": "Cloudflare 在部落格介紹自家訓練的決策模型 Clef 與 Clef-flash，並托管在 Workers AI。決策模型會對輸入做分類，並輸出帶機率的結構化答案，像客服單是否緊急、該給哪一組處理。文章寫道，模型在 Hugging Face 以 Apache 2.0 開源，並相容 Jev 的應用程式介面；Clef 有影像編碼器與 64k 上下文視窗。公司公布的延遲表顯示，Clef 中位延遲 209.3 毫秒、Clef-flash 38.8 毫秒。另宣布強化式學習微調服務，先由工程師協助，之後再做成自助平台。文章也舉威脅情報分類網域的內部例子，同一流程下 Clef 約 2.2 秒、某通用模型約 4.7 秒。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-02/49923692.svg",
+        "alt": "輸入進到 Clef 或較快的 Clef-flash，再輸出帶機率的結構化選項。",
+        "caption": "Clef 把輸入變成帶機率的選項；文章公布 Clef-flash 中位延遲 38.8 毫秒。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "feder-cr/dots",
+      "name": "feder-cr/dots",
+      "url": "https://github.com/feder-cr/dots",
+      "language": "Python",
+      "starsToday": null,
+      "stars": 2340,
+      "summary": "dots 是開源的網頁代理程式介面，左邊是對話，右邊是即時瀏覽器畫面，本機預設開在 127.0.0.1:8765。作者說，網頁代理程式失敗時常不是模型不夠聰明，而是頁面沒載好、登入過期或點擊沒生效，所以專案把重點放在自帶的瀏覽器。說明寫道，瀏覽器以修改過的 Firefox 引擎為核心，可依種子固定一組瀏覽器特徵，並可用設定檔目錄保存登入狀態；模型則透過 OpenRouter 更換。它也提供模型上下文協定伺服器，讓 Claude Code、Codex、Gemini CLI 等客戶端接上同一套瀏覽器。授權為 MIT。它適合要在本機觀察代理程式如何操作網頁的開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 49926773,
+      "title": "Show HN: Janus – Go binary that runs GGUF models via Vulkan on AMD/Intel/Nvidia",
+      "titleZh": "Show Hacker News：Janus 用單一 Go 程式跑 GGUF 模型",
+      "url": "https://github.com/Vibra-Ingenn/Janus",
+      "hnUrl": "https://news.ycombinator.com/item?id=49926773",
+      "score": 34,
+      "comments": 4,
+      "summary": "開發者在 Hacker News 展示 Janus：一個用 Go 寫成的本機大型語言模型伺服器，可載入 GGUF 格式模型，並提供相容 OpenAI 的應用程式介面。說明寫道，推論走 llama.cpp，可透過 Vulkan 在 AMD、Intel、NVIDIA 顯示卡上跑，也支援中央處理器備援；不必安裝 Python、Docker 或 Ollama。功能包括熱更換模型、把思考標籤拆成 reasoning_content，以及依模型中繼資料自動選對話模板。主要目標平台是 Windows 10 與 11，也支援 Linux 與 macOS；需要 Go 1.22 或更新版本。預設監聽 127.0.0.1:8990。它適合想用單一執行檔在本機接 Cursor 等客戶端的開發者。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "dzhng/jevgrep",
+      "name": "dzhng/jevgrep",
+      "url": "https://github.com/dzhng/jevgrep",
+      "language": "TypeScript",
+      "starsToday": null,
+      "stars": 1997,
+      "summary": "jevgrep 是給寫程式代理程式用的命令列工具，用問題找相關程式碼，而不是只靠關鍵字搜尋。安裝後指令叫 jg：你問「遙測事件怎麼送出」，它回傳相關檔案、閱讀線索與原文片段。它使用名為 Jev 的決策模型判斷資料夾、檔案與宣告是否相關，再把結果一次印到標準輸出，讓代理程式接著改程式與跑測試。作者在十項 SWE-bench 對照裡寫道，與基準同樣完成 8 項，成本約低三成；原文未把每一次任務都寫成保證數字。需要 Node.js 22 或更新版本，並有 Vercel AI Gateway、OpenRouter 等金鑰；另需執行 jg skill 才會把用法教給代理程式。它適合常在陌生儲存庫裡找起點的開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 49926628,
+      "title": "Automatic Transmission – a data-privacy study of connected vehicles",
+      "titleZh": "Automatic Transmission：連網汽車的資料隱私研究",
+      "url": "https://automatictransmission.khoury.northeastern.edu/index.html",
+      "hnUrl": "https://news.ycombinator.com/item?id=49926628",
+      "score": 118,
+      "comments": 104,
+      "summary": "原始連結指向美國東北大學 Khoury 學院的研究頁。該主機的 robots.txt 對所有爬蟲設為全部禁止，所以本則沒有抓取該站內容，只依 Hacker News 的標題、分數與留言整理。討論圍繞連網汽車會記錄並外傳駕駛相關資料，以及車主若不同意條款時的選擇：接受、停用含遠端啟動等連網功能，或乾脆不用車。留言提到 Mozilla 基金會先前對車廠隱私的評比，也有人希望市場出現可關閉遙測的方案。因未讀原文，研究樣本、車款名單與方法細節無法在此核對。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "rehan-remade/universal-modder",
+      "name": "rehan-remade/universal-modder",
+      "url": "https://github.com/rehan-remade/universal-modder",
+      "language": "Python",
+      "starsToday": null,
+      "stars": 1518,
+      "summary": "universal-modder 是一套給寫程式代理程式用的技能與工具包，目標是協助使用者修改自己擁有的電腦遊戲。說明寫道，代理程式會先查知識庫、確認遊戲引擎與可行路線、備份存檔，再讀實際程式、做出一小段可運作的修改，並用 fal 產生美術、立體模型或音效，最後在遊戲裡驗證、錄影與打包，再寫下田野筆記給下一輪使用。它支援 Claude Code、Codex、Cursor、Gemini CLI、GitHub Copilot 等，並提供 um 命令列。需要 Python 3.10 或更新版本與 ffmpeg；做立體轉點陣圖時需要 Blender。授權為 MIT。它適合想用代理程式協助改自己遊戲的玩家與模組作者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 49927212,
+      "title": "CSS Bed: Classless CSS themes to use as starting points in web development",
+      "titleZh": "CSS Bed：無類別名稱的樣式表起點主題",
+      "url": "https://www.cssbed.com",
+      "hnUrl": "https://news.ycombinator.com/item?id=49927212",
+      "score": 24,
+      "comments": 4,
+      "summary": "CSS Bed 是一個收集「無類別名稱」層疊樣式表主題的網站。無類別名稱的意思是：樣式直接寫在標題、段落、表格等元素上，網頁不必再加一堆 class 名稱，像先選一套預設字型與間距，再慢慢加自己的規則。頁面展示多套主題範例，涵蓋標題、清單、表格、表單與字型樣本，方便開發者比較起點風格。網站本身以靜態頁呈現各主題效果。它適合剛開始做網站、想先有一份可讀預設樣式的前端開發者。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    },
+    {
+      "id": "kaankiziltug/logo-design-skill",
+      "name": "kaankiziltug/logo-design-skill",
+      "url": "https://github.com/kaankiziltug/logo-design-skill",
+      "language": "HTML",
+      "starsToday": null,
+      "stars": 1342,
+      "summary": "這是給 Claude、Gemini CLI、Codex、Cursor 等代理程式用的標誌設計技能，採開放的 Agent Skills 格式。技能是一本工作手冊：從簡報與研究、概念、幾何構造、顏色與字體，做到可交付的向量圖與品牌指南。附有超過一千四百個真實世界標誌的向量圖參考庫，可依類型、技法與產業搜尋，用來研究結構與產業慣例，說明強調不是拿來抄襲。另有不需額外依賴的 Python 工具，可檢查向量圖、做十六像素測試、單色與貨架對照，並匯出網站圖示組。流程會在檢查點停住，先展示概念與建議，等你選定方向才做完整套件。它適合要用代理程式協助做標誌草稿的設計者與創業者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 5
+    },
+    {
+      "id": 49926536,
+      "title": "SvelteKit 3",
+      "titleZh": "SvelteKit 3 正式推出",
+      "url": "https://svelte.dev/blog/sveltekit-3-is-here",
+      "hnUrl": "https://news.ycombinator.com/item?id=49926536",
+      "score": 39,
+      "comments": 6,
+      "summary": "Svelte 團隊在官方部落格宣布 SvelteKit 3.0 可用。SvelteKit 是 Svelte 的官方應用程式框架，用來組路由、伺服器端與前端。文章寫道，整體使用感受相近，並提供 sv migrate 指令協助遷移，也可用 sv create 建立新專案。重點變更包括：設定改放在 vite.config.ts、原本的 $lib 別名改成標準的 #lib 子路徑匯入、環境變數更好用、服務工作者樣板變少，以及錯誤處理改進。遠端函式仍需實驗旗標與 Async Svelte，團隊寫道這是目前優先項目。文末提醒 11 月 19 至 20 日將在斯洛維尼亞盧比安納舉辦 Svelte Summit。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 5
+    },
+    {
+      "id": "firelex/jeff",
+      "name": "firelex/jeff",
+      "url": "https://github.com/firelex/jeff",
+      "language": "Python",
+      "starsToday": null,
+      "stars": 1263,
+      "summary": "Jeff 是參數量約八億的開源「系統一」決策模型，用來在許多選項裡快速挑選，並輸出校準過的機率。系統一像人的直覺反應：先給答案，不確定才交給較慢的思考。作者建議把它放在較大本機模型前面；說明以八個配接器的平均結果寫道，正確率由單獨用 Qwen3.8-27B 的 86.6% 升到 95.3%，平均決策時間由 8.1 秒降到 0.25 秒，額外記憶體約 1.96 GB。測試環境為 Apple M4 Max、128 GB、兩模型以 MLX 輪流載入。社群預覽為 v1.2，附九個可更換的低秩配接器，涵蓋分診、工具選擇、垃圾郵件等；官網寫 v1.3 預計約三十六小時後推出。它適合要在本機做高速分類決策的開發者。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-02/firelex/jeff.svg",
+        "alt": "問題先到 Jeff 快速作答；有把握就直接用，不確定才交給大型模型。",
+        "caption": "Jeff 先快速決策並給機率，不確定時才把問題交給大型模型。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 6
+    },
+    {
+      "id": 49923466,
+      "title": "RIP, vector database",
+      "titleZh": "turbopuffer：向量索引不再當主索引",
+      "url": "https://turbopuffer.com/blog/rip-vector-database",
+      "hnUrl": "https://news.ycombinator.com/item?id=49923466",
+      "score": 254,
+      "comments": 70,
+      "summary": "turbopuffer 工程師 Dan Harrison 在公司部落格說明，儲存架構將改版為 v3。文章回顧：v1 是以物件儲存為真相來源的無伺服器向量資料庫；v2 強化文字與正規表示式搜尋。作者寫道，近似最近鄰向量索引長期是主索引，限制了分組與聚合等查詢計畫，因此要改成新的主索引，並把近似最近鄰變成眾多次要索引之一。文中說改版目標包含讓文字、正規表示式與向量搜尋都更快，並為更多類似結構化查詢語言的查詢打底。文章日期為 2026 年 9 月 30 日，屬於進行中的架構說明，不是單一功能上線公告。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 6
+    },
+    {
+      "id": "yihui-dev/awesome-opus5-5-videos",
+      "name": "yihui-dev/awesome-opus5-5-videos",
+      "url": "https://github.com/yihui-dev/awesome-opus5-5-videos",
+      "language": null,
+      "starsToday": null,
+      "stars": 1235,
+      "summary": "這是一份整理清單，收集用 Claude Opus 5.5 做出來的動畫影片，以及創作者公開的提示詞。說明寫道，這些影片多半是請模型把動畫寫成程式，例如超文字標記語言、畫布、可縮放向量圖形或 Three.js。清單目前標示有 475 則提示詞，並在頁面上精選約一百則，分成動態圖形、解說、立體場景與遊戲互動等類別；每一則連到原作者貼文。網站 Skillry 可並排觀看原作與現場重製。2026 年 9 月 29 日更新寫道新增大約 86 則，多為動態圖形與解說。它適合想研究「用程式做動畫」提示詞的創作者與開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 7
+    },
+    {
+      "id": 49926512,
+      "title": "ArXiv's Updated Rate Limit Policy",
+      "titleZh": "arXiv 更新投稿數量上限政策",
+      "url": "https://blog.arxiv.org/2026/10/01/updated-rate-limit-policy/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49926512",
+      "score": 40,
+      "comments": 12,
+      "summary": "預印本網站 arXiv 在 2026 年 10 月 1 日宣布更新所有投稿者的速率限制。文章寫道，2026 年 9 月收到 40,363 件投稿，約產生九千張支援工單；近兩年投稿量約翻倍，部分與人工智慧寫作工具有關。新政策規定：每位投稿者每個曆月最多兩件投稿，同一時間進行中的投稿最多三件；被退回的投稿仍計入當月額度。主席 Thomas Dietterich 表示，少數人大量投低品質稿件占用志工審稿時間。arXiv 仍允許在披露的前提下用人工智慧輔助研究，但稿件須符合學術標準。此為暫時措施，同時改進審稿工具。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 7
+    },
+    {
+      "id": "wy51ai/floorplan-3d",
+      "name": "wy51ai/floorplan-3d",
+      "url": "https://github.com/wy51ai/floorplan-3d",
+      "language": "HTML",
+      "starsToday": null,
+      "stars": 1158,
+      "summary": "這是純前端的戶型裝修設計工具：整個應用是一個 index.html，不必建置，用瀏覽器打開即可。使用者可在二維平面圖上依比例擺家具、測量尺寸、拆改非承重牆，再一鍵切到 Three.js 立體場景，可鳥瞰或第一人稱漫遊。家具庫有六十多種；平面用可縮放向量圖形繪製，立體用 Three.js r160。方案自動存在瀏覽器本機儲存，可匯出圖片或方案的 JSON，也可估地面材料造價。介面支援中文與英文。Three.js 透過內容傳遞網路載入，第一次開立體場景需要連線。授權為 MIT。它適合想快速試家具配置與空間感受的一般使用者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 8
+    },
+    {
+      "id": 49920160,
+      "title": "StreetComplete on iOS is now in public beta",
+      "titleZh": "StreetComplete 的 iOS 版進入公開測試",
+      "url": "https://github.com/streetcomplete/StreetComplete/issues/5421",
+      "hnUrl": "https://news.ycombinator.com/item?id=49920160",
+      "score": 495,
+      "comments": 113,
+      "summary": "開源地圖編輯應用程式 StreetComplete 的維護者在 GitHub 議題 5421 宣布，第一個 iOS 建置已上架 Apple TestFlight，並附加入連結。StreetComplete 用來在實地補完開放街圖缺少的細節，例如巷弄名稱或無障礙資訊。專案以 Kotlin Multiplatform 與 Compose Multiplatform 共用邏輯與介面，目標是維持單一程式碼庫。公告列出目前限制：表單多半要用返回手勢取消、在 iOS 15 地圖無法運作，以及既有錯誤追蹤中的問題。維護者寫道，在正式公開發行前會保持該議題開啟。想試用的人可經 TestFlight 安裝測試版。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 8
+    },
+    {
+      "id": "feitangyuan/onetake",
+      "name": "feitangyuan/onetake",
+      "url": "https://github.com/feitangyuan/onetake",
+      "language": "Python",
+      "starsToday": null,
+      "stars": 1133,
+      "summary": "onetake 是給 Claude 用的代理程式技能，用來做產品發布片、預告與功能示範。重點是「一鏡到底」：每一個畫面要從前一個畫面裡長出來，像同一條連續鏡頭，而不是一張張投影片輪流淡入淡出。說明寫道，會用程式檢查連貫性，在畫面交界處看有沒有東西被帶過去；表格舉例，連貫分數 0.00 或 0.40 的版本會被判定為不合格，0.75 與 0.83 才通過。產品介面會用超文字標記語言依截圖重建，讓鏡頭可以飛進畫面。授權為 PolyForm Noncommercial 1.0.0，並附案例影片。它適合想用代理程式做連貫動效展示片的產品與行銷人員。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 9
+    },
+    {
+      "id": 49925742,
+      "title": "Oxygen-deprived underwater zones may not be \"dead zones\" but clue to early life",
+      "titleZh": "缺氧水域或許不是死區，而是早期生命線索",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026AV002570",
+      "hnUrl": "https://news.ycombinator.com/item?id=49925742",
+      "score": 62,
+      "comments": 3,
+      "summary": "原始連結指向美國地球物理聯盟期刊網站上的論文頁。抓取時該頁要求啟用 Cookie 才能瀏覽全文，本站未能取得正文，因此只依 Hacker News 標題與留言整理，並在此註明。標題指出，缺氧的水下區域或許不該只被看成「死區」，而可能提供早期生命的線索。留言提到缺氧鹽水池等現象，並分享探索影片與照片連結。因未讀論文，研究方法、樣本地點與結論細節無法在此核對；若需引用科學論點，應直接閱讀期刊原文。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 9
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-10-02/notch-friend.svg",
+      "alt": "螢幕上方有圓頭小角色，對話框寫代理程式想改檔請允許。",
+      "caption": "小角色探頭問：代理程式想改檔，按一下允許就好。",
+      "relatedItemId": "Louis-CFM/coucou"
+    },
+    {
+      "src": "data/humor/2026-10-02/two-papers.svg",
+      "alt": "小人面前兩份論文，下方寫本月額度用完下個月再見。",
+      "caption": "arXiv 新政：一個月兩件投稿，額度用完就等下個月。",
+      "relatedItemId": "49926512"
+    }
+  ]
+}

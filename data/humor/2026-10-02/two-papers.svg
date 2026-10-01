@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <rect width="360" height="240" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <circle cx="70" cy="80" r="22" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="52" y="102" width="36" height="40" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="130" y="40" width="80" height="100" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="170" y="90" text-anchor="middle">論文 1</text>
+  <rect x="230" y="40" width="80" height="100" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="270" y="90" text-anchor="middle">論文 2</text>
+  <rect x="40" y="170" width="280" height="50" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="200" text-anchor="middle">本月額度用完，下個月再見。</text>
+</svg>

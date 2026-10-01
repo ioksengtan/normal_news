@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
+  <rect width="360" height="300" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="30" y="30" width="120" height="90" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="90" y="60" text-anchor="middle">問題進來</text>
+  <text x="90" y="84" text-anchor="middle" class="sub">要選哪個選項？</text>
+  <line x1="150" y1="75" x2="178" y2="75" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="180" y="20" width="150" height="110" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="255" y="50" text-anchor="middle">Jeff（0.8B）</text>
+  <text x="255" y="74" text-anchor="middle" class="sub">先快速作答</text>
+  <text x="255" y="98" text-anchor="middle" class="sub">並給出機率</text>
+  <line x1="255" y1="130" x2="255" y2="158" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="40" y="162" width="280" height="50" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="192" text-anchor="middle">有把握就直接用答案</text>
+  <line x1="180" y1="212" x2="180" y2="232" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="40" y="236" width="280" height="48" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="266" text-anchor="middle">不確定才交給大型模型</text>
+</svg>
