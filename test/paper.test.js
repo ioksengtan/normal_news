@@ -41,6 +41,7 @@ test('masthead uses the Taipei calendar date, weekday, and issue number', () => 
 });
 
 test('one tech section leads with the top story and tags each item', () => {
+  const longSummary = '這是一段比較長的中文說明，'.repeat(8);
   const model = buildPaper({
     config,
     issue: {
@@ -73,7 +74,7 @@ test('one tech section leads with the top story and tags each item', () => {
           hnUrl: 'https://news.ycombinator.com/item?id=7',
           score: 10,
           comments: 2,
-          summary: '這是一段比較長的中文說明，'.repeat(8),
+          summary: longSummary,
           placeholder: true,
           diagram: {
             src: 'data/diagrams/2026-09-30/7.svg',
@@ -96,8 +97,9 @@ test('one tech section leads with the top story and tags each item', () => {
   assert.match(html, />GitHub</);
   assert.match(html, />Hacker News</);
   assert.match(html, /依來源篩選/);
-  assert.match(html, /class="summary clamp"/);
-  assert.match(html, /展開/);
+  assert.doesNotMatch(html, /class="summary clamp"/);
+  assert.doesNotMatch(html, /<button[^>]*class="expand"/);
+  assert.ok(html.includes(longSummary), 'long summaries render in full, not truncated');
   assert.match(html, /本版摘要尚未由內容長撰寫/);
   assert.match(html, /<figure class="diagram is-lead">/);
   assert.match(html, /<figure class="diagram">/);

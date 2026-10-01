@@ -1,9 +1,8 @@
 import { escapeHtml, safeUrl } from './html.js';
 
-function expandableSummary(summary, lead = false) {
+function renderSummary(summary) {
   if (!summary) return '';
-  if (lead || [...summary].length <= 72) return `<p class="summary">${escapeHtml(summary)}</p>`;
-  return `<p class="summary clamp">${escapeHtml(summary)}</p><button type="button" class="expand">展開</button>`;
+  return `<p class="summary">${escapeHtml(summary)}</p>`;
 }
 
 function githubMeta(item) {
@@ -76,7 +75,7 @@ function renderTech(item, lead) {
     ${sourceTag(item)}
     <h3>${escapeHtml(title)}</h3>
     ${original}
-    ${expandableSummary(item.summary, lead)}
+    ${renderSummary(item.summary)}
     ${renderDiagram(item, lead)}
     <p class="meta">${escapeHtml(meta)}</p>
     ${techLinks(item)}
@@ -199,14 +198,6 @@ export function bindPaper(root) {
       const panel = root.querySelector(`#${CSS.escape(button.dataset.more)}`);
       if (panel) panel.hidden = false;
       button.hidden = true;
-    });
-  });
-  root.querySelectorAll('.expand').forEach((button) => {
-    button.addEventListener('click', () => {
-      const summary = button.parentElement.querySelector('.summary');
-      if (!summary) return;
-      const collapsed = summary.classList.toggle('clamp');
-      button.textContent = collapsed ? '展開' : '收合';
     });
   });
   root.querySelectorAll('.paper-section').forEach((section) => {

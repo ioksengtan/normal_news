@@ -8,6 +8,20 @@ async function fetchJson(path) {
   return response.json();
 }
 
+function bindScrollProgress() {
+  const bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+  const update = () => {
+    const doc = document.documentElement;
+    const scrollable = doc.scrollHeight - doc.clientHeight;
+    const progress = scrollable > 0 ? (doc.scrollTop / scrollable) * 100 : 0;
+    bar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+  };
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+}
+
 function pickIssue(issues, today) {
   const list = Array.isArray(issues) ? issues : [];
   return list.find((issue) => issue.date === today)
@@ -44,6 +58,7 @@ async function main() {
       sections.innerHTML = renderSections(model);
       bindPaper(sections);
     }
+    bindScrollProgress();
   } catch (error) {
     if (sections) sections.innerHTML = '<p class="empty">報紙載入失敗。</p>';
     console.error(error);
