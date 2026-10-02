@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280">
+  <rect width="360" height="280" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="40" y="28" width="280" height="50" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="58" text-anchor="middle">Zig 0.17.0 發行說明</text>
+  <line x1="180" y1="78" x2="180" y2="100" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="24" y="104" width="150" height="70" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="99" y="132" text-anchor="middle">建置系統重做</text>
+  <text x="99" y="154" text-anchor="middle" class="sub">含建置伺服器協定</text>
+  <rect x="186" y="104" width="150" height="70" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="261" y="132" text-anchor="middle">ELF 連結器加強</text>
+  <text x="261" y="154" text-anchor="middle" class="sub">增量編譯（x86_64 Linux）</text>
+  <rect x="30" y="196" width="300" height="56" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="222" text-anchor="middle">約五個月、206 名貢獻者、925 次提交</text>
+  <text x="180" y="242" text-anchor="middle" class="sub">數字出自官方發行說明</text>
+</svg>

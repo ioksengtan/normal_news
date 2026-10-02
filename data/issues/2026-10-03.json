@@ -1,0 +1,325 @@
+{
+  "date": "2026-10-03",
+  "issueNumber": 4,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-03T07:00:00+08:00",
+  "fetchedAt": "2026-10-02T22:58:08.845Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    }
+  },
+  "items": [
+    {
+      "id": "Panniantong/Agent-Reach",
+      "name": "Panniantong/Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "language": "Python",
+      "starsToday": 683,
+      "stars": 88557,
+      "summary": "Agent Reach 是用 Python 寫成的開源命令列工具，給寫程式代理程式加上讀網與搜尋能力。說明寫道，代理程式常能改程式，卻讀不了推特、Reddit、YouTube、小紅書、Bilibili 等，因為各平台要登入、付費介面或擋伺服器位址。這個專案把安裝、更新與體檢收成幾句指令，並為各平台準備「首選加備選」接法，某一條失效就換下一條；Cookie 只存在本機。相容 Claude Code、Cursor 等能跑命令列的代理程式，並可用 agent-reach doctor 檢查哪個通路通、哪個不通。授權為 MIT。它適合想讓代理程式讀公開網頁與社群內容的開發者。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-03/Panniantong/Agent-Reach.svg",
+        "alt": "代理程式先經過 Agent Reach，再連到推特、Reddit 等平台；下方說明像戴上眼鏡與通行證。",
+        "caption": "Agent Reach 幫代理程式接上多個網站，並用 doctor 檢查通路是否可用。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 49938521,
+      "title": "Zig v0.17.0",
+      "titleZh": "Zig 釋出 0.17.0",
+      "url": "https://ziglang.org/download/0.17.0/release-notes.html",
+      "hnUrl": "https://news.ycombinator.com/item?id=49938521",
+      "score": 151,
+      "comments": 75,
+      "summary": "Zig 語言官方發布 0.17.0 發行說明。Zig 是通用程式語言與工具鏈；開發由 Zig Software Foundation 非營利組織資助。說明寫道，這個週期約五個月，有 206 名貢獻者、925 次提交。重點包含建置系統重做並引入建置伺服器協定，以及 ELF 連結器加強，官方預期在 x86_64-linux 上增量編譯可普遍使用。文中也列出語言變更、標準函式庫調整與目標平台支援層級。數字與功能範圍皆出自官方說明頁。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-03/49938521.svg",
+        "alt": "Zig 0.17.0 分出建置系統重做與 ELF 連結器兩塊，下方標註貢獻者與提交次數。",
+        "caption": "Zig 0.17.0 重點包含建置系統與 ELF 連結器；統計出自官方發行說明。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "JuliusBrussee/caveman",
+      "name": "JuliusBrussee/caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "language": "Go",
+      "starsToday": 271,
+      "stars": 109074,
+      "summary": "Caveman 是給寫程式代理程式用的技能與代理層，目標是讓回覆變短，少花按用量計費的文字單位。說明用對照寫道，同一則「元件為何重繪」的診斷，平常回覆約 69 個單位，改成簡短句子後約 19 個單位，診斷與 useMemo 建議相同；程式、路徑與錯誤訊息不縮短，安全確認會先用完整句子。安裝可用 npx skills add JuliusBrussee/caveman；說明寫支援三十多種代理程式，也提供代理層套件。Adobe Research 的 CAVEWOMAN 論文與 JetBrains 的測試被 README 引用為外部參考。授權為 Apache-2.0。它適合常付代理程式文字費用、想先試短回覆的開發者。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-03/JuliusBrussee/caveman.svg",
+        "alt": "左側長回覆約六十九個單位，右側短回覆約十九個單位；下方說明程式碼維持原文。",
+        "caption": "Caveman 縮短說明文字；程式、路徑與錯誤訊息保持完整。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 49937276,
+      "title": "Apple Pass Designer",
+      "titleZh": "Apple 推出 Pass Designer 測試版",
+      "url": "https://developer.apple.com/pass-designer/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49937276",
+      "score": 253,
+      "comments": 176,
+      "summary": "Apple 開發者網站介紹 Pass Designer，用來設計並預覽 Apple Wallet 票卡。說明寫道，可從 Apple 或自備範本開始，匯入標誌、背景或長條圖，編輯時即時預覽 iPhone 與 Apple Watch 上的樣子，預覽使用與系統相同的繪製。可調背景、前景與標籤顏色，並支援較新的 Wallet 版面與向後相容票卡。登機證與活動票可編輯語意標籤，供 Siri 建議、日曆與地圖等功能使用，也可自動產生不含語意標籤的相容結構。測試版需 macOS 27 或更新，下載要登入 Apple 帳號。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "obra/superpowers",
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "language": "Shell",
+      "starsToday": 561,
+      "stars": 294433,
+      "summary": "Superpowers 是一套給寫程式代理程式用的技能與工作方法。說明寫道，代理程式一開始不要直接寫程式，而是先問清楚目標，把規格拆成短段給你確認；你同意後再寫實作計畫，強調紅綠測試驅動開發、YAGNI（你不會需要它）與 DRY（不要重複自己）。接著用子代理程式依任務推進，並檢查與複審；說明提到代理程式有時可連續工作數小時仍依計畫前進。安裝指引涵蓋 Claude Code、Cursor、Codex、Gemini CLI、GitHub Copilot CLI、OpenCode 等。它適合想把代理程式流程固定成「先規格、再計畫、再實作」的開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 49938616,
+      "title": "The Harness Is the Company",
+      "titleZh": "Harness 才是公司：談模型外的整套外殼",
+      "url": "https://blog.sshh.io/p/the-harness-is-the-company",
+      "hnUrl": "https://news.ycombinator.com/item?id=49938616",
+      "score": 46,
+      "comments": 34,
+      "summary": "作者在 blog.sshh.io 發文，標題為 The Harness Is the Company。文章把 harness（外殼）廣義定義成包住無狀態大型語言模型的基礎建設、介面、脈絡與狀態，不只 LangGraph 或 Codex、Claude Code 這類框架。作者寫道，軟體工廠可視為多層外殼：寫規格、寫程式、做審查，再由上層決定何時跑哪一段。文中描繪服務業路徑：先賣傳統軟體服務，再到工程師與代理程式協作，再到產品與銷售也搭配代理程式。本則依原文整理，未另加產業預測。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "pbakaus/impeccable",
+      "name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "language": "JavaScript",
+      "starsToday": 717,
+      "stars": 74280,
+      "summary": "Impeccable 是給人工智慧寫前端用的設計技能與命令列工具。說明寫道，它從 Anthropic 的 frontend-design 技能延伸，提供一項技能、二十四個命令，以及六十一條不需模型的偵測規則，用來檢查常見樣板感版面，例如同一套字型與紫藍漸層。先執行 npx impeccable install，再跑 /impeccable init，把受眾與用途寫進 PRODUCT.md；視覺方向另記在 DESIGN.md。命令列與瀏覽器擴充可只跑規則、不必金鑰。文件在 impeccable.style。它適合要用代理程式做介面、又想先固定產品事實的前端開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 49927754,
+      "title": "Court agrees with EFF: Utah's VPN law demands a technical impossibility",
+      "titleZh": "法院同意電子前哨基金會：猶他州虛擬私人網路法要求技術上不可能的事",
+      "url": "https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility",
+      "hnUrl": "https://news.ycombinator.com/item?id=49927754",
+      "score": 423,
+      "comments": 190,
+      "summary": "電子前哨基金會（Electronic Frontier Foundation）於 2026 年 10 月 1 日發文，寫道聯邦法官已對猶他州 SB 73 發出初步禁制令，擋下反虛擬私人網路（Virtual Private Network）年齡驗證相關條款。文章說明，該法要求成人網站封鎖虛擬私人網路使用者，或辨識其實際位置，並曾禁止網站提供如何用虛擬私人網路繞過檢查的說明。法院認為這實務上會迫使業者對全球訪客做年齡驗證，可能違反憲法對域外負擔的限制。電子前哨基金會並向猶他州商務部提交意見。本則依該文整理。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "coreyhaines31/marketingskills",
+      "name": "coreyhaines31/marketingskills",
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "language": "JavaScript",
+      "starsToday": 139,
+      "stars": 52388,
+      "summary": "marketingskills 是一組給寫程式代理程式用的行銷技能，採 Agent Skills 規格。作者 Corey Haines 寫道，對象是技術行銷與創辦人，範圍涵蓋轉換率優化、文案、搜尋引擎優化、分析與成長工程。技能分成內容與搜尋引擎優化、轉換率優化、文案、廣告與測量、留存、銷售與上市、策略等區塊，例如 seo-audit、cro、copywriting、ads、analytics。相容 Claude Code、OpenAI Codex、Cursor、Windsurf 等。函式庫為 MIT 授權；說明另列經披露的合作夥伴工具，並寫明不影響核心技能建議。它適合想在終端機裡用代理程式協助行銷任務的人。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 49932147,
+      "title": "A 12-year sequence of telescope images of a star and four planets orbiting",
+      "titleZh": "十二年望遠鏡影像：一顆恆星與四顆行星繞行",
+      "url": "https://bsky.app/profile/theplanetaryguy.com/post/3mwucf5ert22f",
+      "hnUrl": "https://news.ycombinator.com/item?id=49932147",
+      "score": 144,
+      "comments": 32,
+      "summary": "原始連結是 Bluesky 上 Paul Byrne（theplanetaryguy.com）的貼文。貼文寫道，這是長達十二年、對距離約一百三十三光年一顆恆星拍攝的真實望遠鏡影像序列，可見四顆質量都大於木星的系外行星繞行。本站已讀取該貼文文字；貼文本身是影像說明，不是學術論文正文。因此摘要只保留貼文已寫的距離、行星數量與「比木星更重」等陳述，觀測儀器、論文出處與軌道參數需另查原始研究。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    },
+    {
+      "id": "google/skills",
+      "name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "language": "Python",
+      "starsToday": 78,
+      "stars": 20726,
+      "summary": "google/skills 是 Google 維護的代理程式技能集合，涵蓋 Google 產品與 Google Cloud。安裝指令是 npx skills add google/skills，安裝時可勾選要裝哪些技能。說明列出入門類（例如驗證與上線）、多產品解法（例如在 Google Cloud 建置與部署代理程式、混合搜尋、檢索增強生成企業搜尋），以及人工智慧與機器學習相關條目。技能採 agentskills.io 的格式，讓支援該規格的代理程式讀取工作步驟。它適合要在 Google Cloud 上組解法、又想用技能檔引導代理程式的工程師。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 5
+    },
+    {
+      "id": 49933740,
+      "title": "With most information hidden, the game Stratego had stumped AI until now",
+      "titleZh": "隱藏資訊很多的 Stratego，人工智慧對局有新結果",
+      "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49933740",
+      "score": 134,
+      "comments": 58,
+      "summary": "Hacker News 討論指向 Ars Technica 報導與預印本 arXiv:2511.07312，以及 Nature 論文連結。因本則主要依討論與預印本摘要整理：Stratego 是資訊大量隱藏的棋類，過去即便高成本訓練也難達頂尖人類水準。預印本寫道，研究提出不完美資訊下的自我對弈強化式學習與測試時搜尋，可用約數千美元規模達到遠超人類的表現。討論留言引述報導數字：名為 Ataraxos 的系統對曾被稱為史上最佳玩家之一的 Pim Niemeijer 戰績為十五勝一負四和，並用約十六張圖形處理器訓練。詳細方法以論文為準。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 5
+    },
+    {
+      "id": "getsentry/sentry",
+      "name": "getsentry/sentry",
+      "url": "https://github.com/getsentry/sentry",
+      "language": "Python",
+      "starsToday": 12,
+      "stars": 45022,
+      "summary": "Sentry 是開源的錯誤追蹤與效能監看平台，用 Python 等語言寫成，說明定位為協助開發者偵測、追蹤與修正問題。官方提供多語言軟體開發套件，涵蓋 JavaScript、Python、Go、Rust、Java、Swift、.NET、Flutter、Unity、Unreal Engine 等。本儲存庫是平台本體；文件在 docs.sentry.io，也有討論區與貢獻指引。候選描述寫「以開發者為先的錯誤追蹤與效能監看」。它適合要自架或了解 Sentry 伺服端的開發與維運人員；若只用雲端服務，多半透過各語言套件接入即可。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 6
+    },
+    {
+      "id": 49937504,
+      "title": "Muse Gadgets",
+      "titleZh": "Muse Gadgets：開源硬體接上 Muse",
+      "url": "https://gadgets.muse.ai",
+      "hnUrl": "https://news.ycombinator.com/item?id=49937504",
+      "score": 70,
+      "comments": 38,
+      "summary": "Muse Gadgets 網站介紹可自行組裝的開源硬體，用來連接 Muse。說明寫道，可程式化現成的 ESP32 開發板，或用樹莓派（Raspberry Pi）搭配軟體開發套件，再把螢幕、按鈕、感測器、致動器接到 Muse。專案提供 Discord 與 GitHub 連結。頁面強調裝置由使用者自己組，把工作台上的零件接進 Muse。本則依該站公開說明整理；個別零件清單與韌體步驟以官方文件為準。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 6
+    },
+    {
+      "id": "colbymchenry/codegraph",
+      "name": "colbymchenry/codegraph",
+      "url": "https://github.com/colbymchenry/codegraph",
+      "language": "C",
+      "starsToday": 163,
+      "stars": 72942,
+      "summary": "CodeGraph 是本機的程式碼知識圖譜工具，核心用 Rust，用來幫寫程式代理程式找到相關程式，而不必每次用很多工具呼叫去翻檔。說明寫道，可先為專案建立索引，程式變更時自動同步；資料百分之百留在本機。安裝可用官方腳本，說明強調不必另裝 Node.js；也可用 npm。codegraph install 可接上 Claude Code、Cursor、Codex、Gemini、GitHub Copilot 等。授權為 MIT。它適合常在大型儲存庫裡讓代理程式找脈絡、又希望索引留在自己電腦的開發者。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-03/colbymchenry/codegraph.svg",
+        "alt": "專案程式進入 CodeGraph 建成關係圖，再交給代理程式查詢；下方比喻成先畫地圖。",
+        "caption": "CodeGraph 在本機預先建立程式關係圖，再供代理程式查詢相關程式。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 7
+    },
+    {
+      "id": 49925184,
+      "title": "Mike Tomlin spent 12 years building a Minecraft city",
+      "titleZh": "Mike Tomlin 花十二年在 Minecraft 蓋一座城",
+      "url": "https://www.nytimes.com/athletic/7648198/2026/10/01/mike-tomlin-minecraft-nfl-coach/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49925184",
+      "score": 171,
+      "comments": 45,
+      "summary": "紐約時報 The Athletic 原文抓取回傳禁止存取，因此改依衛報（The Guardian）2026 年 10 月 1 日報導與 Hacker News 討論整理。報導寫道，前匹茲堡鋼鐵人（Pittsburgh Steelers）總教練 Mike Tomlin 公開一段影片，展示他花約十二年在 Minecraft 建造的城市；他說這對高壓工作有療癒作用，也用來與孩子連結。城市以水域為中心向外展開，並有飯店、棒球場與足球場等建築。留言補充他長期執教且少有敗季等背景。細節以影片與報導為準。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 7
+    },
+    {
+      "id": "cursor/plugins",
+      "name": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins",
+      "language": "TypeScript",
+      "starsToday": 168,
+      "stars": 9491,
+      "summary": "cursor/plugins 是 Cursor 官方外掛規格與外掛集合。每個外掛是根目錄下一份獨立目錄，並帶 .cursor-plugin/plugin.json。說明列出的外掛包含 Teaching、Continual Learning、Cursor Team Kit、Thermos（分支審查與正確性稽核）、Create Plugin、Ralph Loop、Agent Compatibility、CLI for Agents、PR Review Canvas、Docs Canvas、Cursor SDK 等，涵蓋學習、團隊流程、審查畫布與軟體開發套件。它適合在 Cursor 裡安裝官方或範例外掛、或依規格做自己外掛的開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 8
+    },
+    {
+      "id": 49926411,
+      "title": "Loss of cell identity drives human aging: Two new papers",
+      "titleZh": "細胞身分喪失與人類老化：兩篇新論文介紹",
+      "url": "https://erictopol.substack.com/p/loss-of-cell-identity-drives-human",
+      "hnUrl": "https://news.ycombinator.com/item?id=49926411",
+      "score": 140,
+      "comments": 32,
+      "summary": "Eric Topol 在 Ground Truths（Substack）介紹兩篇論文：一篇由 Vadim Gladyshev 等人發表於 Nature，一篇由 Juan Carlos Izpisua Belmonte 團隊發表於 Cell。文章寫道，過去常把細胞老化看成耗損；新模型互補提出「細胞身分喪失」，並連結間葉漂移（纖維疤痕與發炎）等概念。文中說明表觀遺傳結構（例如甲基化）維持細胞類型身分，並描述分層調控。本則依該文整理；相對貢獻與可否逆轉等結論，文章也標為仍待釐清，細節以論文原文為準。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 8
+    },
+    {
+      "id": "Effect-TS/effect",
+      "name": "Effect-TS/effect",
+      "url": "https://github.com/Effect-TS/effect",
+      "language": "TypeScript",
+      "starsToday": 76,
+      "stars": 16527,
+      "summary": "Effect 是用 TypeScript 寫應用程式的函式庫，用來處理型別化錯誤、相依注入、結構化並行、排程、追蹤與統一的資料綱要驗證。說明寫道，Effect 4.x 是長期支援版本；從 3.x 升級請看遷移指南。需求包含 TypeScript 5.9 或更新（建議 TypeScript 7）、Node.js 18 或更新，以及 tsconfig 開啟 strict。安裝指令為 npm install effect。文件與社群在 effect.website。它適合要用 TypeScript 組較大型後端或服務、並想把錯誤與並行寫得較明確的開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 9
+    },
+    {
+      "id": 49936575,
+      "title": "From the creator of Redis; run LLM locally with ds4",
+      "titleZh": "Redis 創造者推出 ds4：本機跑大型語言模型",
+      "url": "https://dwarfstar.sh/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49936575",
+      "score": 111,
+      "comments": 31,
+      "summary": "dwarfstar.sh 介紹 DwarfStar 4（ds4），是用 C 寫成、偏窄範圍的本機推論引擎，目標跑在高記憶體的 Mac、CUDA 與 ROCm 機器。說明寫道，支援 DeepSeek V4 與 V4.1 Flash、GLM 5.x 與 Qwen3.8 等，含文字與影像模型，並提供命令列、本機應用程式介面與內建代理程式。設計重點包含對專家路由模型做不對稱量化、把鍵值快取存到磁碟並依提示雜湊續跑。授權標示為 MIT。它適合有高記憶體本機、想跑所列開源權重的開發者；不是通用的任意 GGUF 載入器。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 9
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-10-03/agent-glasses.svg",
+      "alt": "圓頭小人看不見推文；右側寫裝上 Agent Reach 像多戴眼鏡。",
+      "caption": "代理程式說看不見推文；裝上 Agent Reach 像多戴一副眼鏡。",
+      "relatedItemId": "Panniantong/Agent-Reach"
+    },
+    {
+      "src": "data/humor/2026-10-03/few-token.svg",
+      "alt": "左側長篇說明、右側短訊重點，下方寫少字也能說清楚。",
+      "caption": "Caveman：說明變短，答案仍在；程式碼與路徑不縮短。",
+      "relatedItemId": "JuliusBrussee/caveman"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
+  <rect width="360" height="300" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="20" y="30" width="90" height="64" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="65" y="56" text-anchor="middle">代理程式</text>
+  <text x="65" y="76" text-anchor="middle" class="sub">會寫程式</text>
+  <line x1="110" y1="62" x2="138" y2="62" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="140" y="30" width="100" height="64" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="190" y="56" text-anchor="middle">Agent Reach</text>
+  <text x="190" y="76" text-anchor="middle" class="sub">裝好再體檢</text>
+  <line x1="240" y1="62" x2="268" y2="62" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="270" y="20" width="70" height="84" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="305" y="42" text-anchor="middle">推特</text>
+  <text x="305" y="62" text-anchor="middle">Reddit</text>
+  <text x="305" y="82" text-anchor="middle" class="sub">等平台</text>
+  <rect x="30" y="130" width="300" height="56" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="154" text-anchor="middle">像先幫機器人戴上眼鏡與網路通行證</text>
+  <text x="180" y="174" text-anchor="middle" class="sub">各平台有備援接法，失效就換下一條</text>
+  <rect x="30" y="206" width="300" height="64" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="234" text-anchor="middle">Cookie 留在本機，可用 doctor 檢查</text>
+  <text x="180" y="254" text-anchor="middle" class="sub">給能跑命令列的代理程式使用</text>
+</svg>

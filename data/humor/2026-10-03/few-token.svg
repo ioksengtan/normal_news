@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220">
+  <rect width="360" height="220" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <rect x="24" y="36" width="150" height="100" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="99" y="70" text-anchor="middle">長篇說明</text>
+  <text x="99" y="96" text-anchor="middle" class="sub">字很多</text>
+  <text x="99" y="118" text-anchor="middle" class="sub">帳單也跟著高</text>
+  <rect x="186" y="36" width="150" height="100" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="261" y="70" text-anchor="middle">短訊重點</text>
+  <text x="261" y="96" text-anchor="middle" class="sub">字變少</text>
+  <text x="261" y="118" text-anchor="middle" class="sub">答案一樣</text>
+  <text x="180" y="180" text-anchor="middle">Caveman：少字也能說清楚</text>
+  <text x="180" y="200" text-anchor="middle" class="sub">程式碼與路徑不縮短</text>
+</svg>

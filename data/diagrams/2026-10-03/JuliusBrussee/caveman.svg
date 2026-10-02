@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280">
+  <rect width="360" height="280" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="24" y="28" width="140" height="90" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="94" y="58" text-anchor="middle">平常的回覆</text>
+  <text x="94" y="82" text-anchor="middle" class="sub">句子長、字多</text>
+  <text x="94" y="102" text-anchor="middle" class="sub">範例約 69 個單位</text>
+  <line x1="164" y1="73" x2="192" y2="73" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="196" y="28" width="140" height="90" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="266" y="58" text-anchor="middle">Caveman 後</text>
+  <text x="266" y="82" text-anchor="middle" class="sub">只留重點句子</text>
+  <text x="266" y="102" text-anchor="middle" class="sub">範例約 19 個單位</text>
+  <rect x="30" y="140" width="300" height="50" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="170" text-anchor="middle">程式、路徑、錯誤訊息維持原文</text>
+  <rect x="30" y="206" width="300" height="50" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="236" text-anchor="middle">像把長信改成短訊，意思不變</text>
+</svg>
