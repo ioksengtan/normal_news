@@ -1,0 +1,325 @@
+{
+  "date": "2026-10-04",
+  "issueNumber": 5,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-04T07:00:00+08:00",
+  "fetchedAt": "2026-10-03T22:51:04.892Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    }
+  },
+  "items": [
+    {
+      "id": "affaan-m/ECC",
+      "name": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "language": "JavaScript",
+      "starsToday": 954,
+      "stars": 272201,
+      "summary": "ECC 是開源的代理程式外殼與工具箱，用 JavaScript 寫成，授權為 MIT。說明寫道，它幫寫程式代理程式加上一套固定流程：先計畫、再測試、實作、審查、驗證、記住重點，並把重複做法收成可重用技能，像先畫施工圖再動工。官網與套件標示為 ecc.tools、ecc-universal、ecc-agentshield 與外掛 ecc@ecc；說明提醒只從官方管道安裝，避免不明鏡像。文件寫目前與 Claude Code 搭配最完整，並為 Cursor、OpenCode、Gemini、GitHub Copilot 等提供能力有限的轉接。它適合想把代理程式工作方式一次裝好、少在每次提示裡重寫流程的開發者。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-04/affaan-m/ECC.svg",
+        "alt": "代理程式經過計畫、測試、實作、審查、驗證到記住的流程，下方比喻成先畫施工圖再動工。",
+        "caption": "ECC 把計畫、測試、實作、審查與記憶收成固定流程，供寫程式代理程式使用。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 49946393,
+      "title": "Hole Punch: Sling your spaceship around gravitational fields",
+      "titleZh": "Hole Punch：繞重力場甩出太空船",
+      "url": "https://notoriousbfg.com/hole-punch/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49946393",
+      "score": 173,
+      "comments": 47,
+      "summary": "Hole Punch 是一款瀏覽器小遊戲。頁面說明寫道，玩家要在太空打出黑洞，再靠重力場把太空船甩回家；介面含地圖、發射、復原與重設，並提示在橫向螢幕操作。本則依遊戲頁標題與描述整理。Hacker News 討論約一百七十三分、四十多則留言，多在交換通關手感、關卡節奏與操作方式。它適合想用幾分鐘玩重力彈射解謎、又不必另外安裝軟體的人。分數與留言數以 Hacker News 當日頁面為準；細節以原文為準。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "pingdotgg/t3code",
+      "name": "pingdotgg/t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "language": "TypeScript",
+      "starsToday": 251,
+      "stars": 24655,
+      "summary": "T3 Code 是代理程式外殼的控制介面，可用手機應用程式、網頁與以 Electron 做成的桌面程式，遠端操控本機上的寫程式代理程式。說明寫道，若本機已安裝並登入 Claude Code、Codex、Cursor、Grok Build、OpenCode 或 Google Antigravity，就能由 T3 Code 接手控制。安裝可用官方腳本、npx t3@latest，或 Windows 的 winget、macOS 的 Homebrew 等套件；說明強調專案開源、目前不收費，並可在背景以服務方式常駐。它適合想用手機或另一台電腦監看、指揮本機代理程式的開發者。星數與語言以 GitHub 當日頁面為準；細節以專案說明為準。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 49923873,
+      "title": "Celebrating the 100th birthday of the kidney donated to him as a teenager",
+      "titleZh": "母親捐的腎臟滿一百歲，受贈者公開慶祝",
+      "url": "https://www.whec.com/top-news/webster-man-celebrating-the-100th-birthday-of-the-kidney-his-mom-donated-to-him-as-a-teenager/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49923873",
+      "score": 110,
+      "comments": 31,
+      "summary": "美國紐約州羅徹斯特地方媒體 WHEC 報導，Webster 居民 Ray Vetuskey 慶祝母親 Betty 捐給他的腎臟「滿一百歲」。報導寫道，一九七八年三月，十六歲的他在 Strong Hospital 接受移植；母親當時捐出約五十二歲的腎臟，加起來約一百歲。文中引述他對母親的回憶，以及這段移植故事被視為罕見長壽紀錄。本則依該報導整理，醫學統計與後續追蹤細節以原文為準。分數與留言數以 Hacker News 當日頁面為準；細節以原文為準。讀者可從連結自行核對。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "thedotmack/claude-mem",
+      "name": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "language": "TypeScript",
+      "starsToday": 218,
+      "stars": 95545,
+      "summary": "claude-mem 是跨工作階段的記憶壓縮系統，主要服務 Claude Code，也標示可接其他代理程式。說明寫道，它會自動記下代理程式在工作階段裡做過的事，用人工智慧壓成語意摘要，之後再開新工作階段時把相關內容注回，像幫代理人寫會議紀錄再帶到下次開會。安裝指令為 npx claude-mem install；說明另提到本機觀察者與託管選項、免費試用後的切換，以及可把重要觀察寫進日誌。它適合常開新對話、卻希望代理程式還記得專案脈絡的開發者。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-04/thedotmack/claude-mem.svg",
+        "alt": "左方工作階段的觀察寫入記憶，右方新工作階段再讀回；下方比喻成會議紀錄。",
+        "caption": "claude-mem 把工作階段內容壓縮成摘要，供之後的工作階段取用。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 49947631,
+      "title": "Reasons I didn't become an EMT, ranked",
+      "titleZh": "我遲遲沒考急診醫療技術員的理由，依荒謬程度排序",
+      "url": "https://ben.stolovitz.com/posts/reasons-not-emt-ranked/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49947631",
+      "score": 27,
+      "comments": 8,
+      "summary": "軟體工程師 Ben Stolovitz 在個人網站發文，標題為「我沒去當急診醫療技術員的二十一個理由，排序」。他寫道主業是寫程式，二〇二四年才請假一個月取得急診醫療技術員執照。文章把拖延原因分成「不太荒謬」到「很荒謬」，例如怕花時間、擔心現場文化、怕不合群，以及種種自我設限。文中也提到 NOLS 野外急診密集課約連續二十八天，並談到之後仍要實際出車。本則依原文整理，不是急救教學。分數與留言數以 Hacker News 當日頁面為準；細節以原文為準。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "cloudflare/cloudflare-os",
+      "name": "cloudflare/cloudflare-os",
+      "url": "https://github.com/cloudflare/cloudflare-os",
+      "language": "TypeScript",
+      "starsToday": 84,
+      "stars": 10548,
+      "summary": "Cloudflare OS 是建在 Cloudflare Workers 上的人工智慧生產力環境，公司內部工程到銷售等多種職位日常使用。說明寫道，它不是傳統電腦作業系統，而是給公司與人工智慧工作負載用的「作業系統」：提供帶公司脈絡的代理程式聊天介面、可在沙箱裡請代理程式做小應用並分享，以及名為 Gatekeepers 的安全框架。開源目的是讓其他公司複製後改成自己的版本。本機可用 pnpm run-local 試跑，也可部署到 Cloudflare 帳號。它適合想在公司環境裡安全地讓代理程式做事的團隊。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-04/cloudflare/cloudflare-os.svg",
+        "alt": "聊天、沙箱小應用與 Gatekeepers 安全框三塊組成 Cloudflare OS。",
+        "caption": "Cloudflare OS 提供代理聊天、沙箱應用與 Gatekeepers 安全框架。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 49946355,
+      "title": "Treachery in the Rodin Museum 3D scan verdict",
+      "titleZh": "羅丹美術館立體掃描公開案的判決與爭議",
+      "url": "https://cosmowenman.substack.com/p/rodin-museum-3d-scan-verdict",
+      "hnUrl": "https://news.ycombinator.com/item?id=49946355",
+      "score": 18,
+      "comments": 4,
+      "summary": "Cosmo Wenman 在 Substack 寫羅丹美術館立體掃描資訊公開案的判決感想。文章回顧二〇一七年起要求公開羅丹雕塑立體掃描；法國行政文件近用委員會曾認掃描屬行政文件應公開，美術館仍拒給，遂與 Communia、Wikimédia France、La Quadrature du Net 等上法院。作者批評最高行政法院論證把「文件」說得像不是文件，並預告十月十三日相關座談。本則依該文整理；判決全文與後續救濟以法院與原文為準。分數與留言數以 Hacker News 當日頁面為準；細節以原文為準。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "addyosmani/agent-skills",
+      "name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "language": "JavaScript",
+      "starsToday": 305,
+      "stars": 100817,
+      "summary": "agent-skills 是一組給寫程式代理程式用的工程技能與斜線命令，把規格、計畫、實作、測試、審查到上線的步驟寫成可重用流程。說明列出 /spec、/plan、/build、/test、/constraints、/review、/webperf、/code-simplify、/ship 等命令，並可用 /build auto 在核准計畫後連續實作各任務，失敗或風險步驟會暫停。安裝可用 npx skills add addyosmani/agent-skills，說明寫可裝進七十多種代理程式。技能也會依任務自動啟用，例如設計應用程式介面時觸發對應技能。它適合想讓代理程式照固定工程節奏做事的開發者。星數與語言以 GitHub 當日頁面為準；細節以專案說明為準。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 49948254,
+      "title": "Federal judge calls Flock 'indiscriminate mass surveillance'",
+      "titleZh": "聯邦法官稱 Flock 車牌搜尋為無差別大規模監控",
+      "url": "https://techcrunch.com/2026/10/03/federal-judge-calls-flock-indiscriminate-mass-surveillance/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49948254",
+      "score": 54,
+      "comments": 24,
+      "summary": "TechCrunch 報導，美國聯邦法官 Sara Hill 裁定，奧克拉荷馬州塔爾薩一名副警長在無令狀下用 Flock Safety 搜尋女子車牌，違反憲法第四修正案。法官寫道，僅因加州車牌就搜尋並無明顯理由，且之後依旅行紀錄搜車取得的證據應排除。法官並稱長時間被動彙整行蹤再隨時取用，屬無差別大規模監控。報導引 404 Media，並註明本案不構成有拘束力的判例。本則依該文整理。分數與留言數以 Hacker News 當日頁面為準；細節以原文為準。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    },
+    {
+      "id": "earendil-works/pi",
+      "name": "earendil-works/pi",
+      "url": "https://github.com/earendil-works/pi",
+      "language": "TypeScript",
+      "starsToday": 408,
+      "stars": 112131,
+      "summary": "Pi 是精簡、可擴充的代理程式外殼工具組，含統一的大型語言模型應用程式介面、代理迴圈、終端機介面與寫程式代理命令列。說明寫道，可用擴充、技能、提示範本與主題自訂，並打包成套件用 npm 或 git 分享；預設刻意不做子代理與計畫模式，要自己加或裝套件。安裝可用 pi.dev 腳本或 npm；需求為 Node.js 22.19 或更新。也可用 TypeScript 軟體開發套件、列印或遠端程序呼叫控制。它適合想自己組代理流程、而不是用功能很滿的現成外殼的開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 5
+    },
+    {
+      "id": 49946567,
+      "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
+      "titleZh": "在 Claude 與 Claude Code 裡怎麼用 Opus 5.5",
+      "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49946567",
+      "score": 118,
+      "comments": 80,
+      "summary": "Addy Osmani 在 claude.dev 部落格寫 Opus 5.5 使用指南，說明如何下提示、引導長時間執行，以及檢查結果。文章寫道，Opus 5.5 較能自己做完多步驟工作、會先思考再回覆，並把做過的事說清楚；建議一次講完「完成長什麼樣子」，少加「請仔細想」這類空話。文中也談 Claude Code 長跑時如何轉向、結束後先讀它需要你決定的地方，以及應用程式裡被標記訊息與速度等檢查清單。本則依該文整理。分數與留言數以 Hacker News 當日頁面為準；細節以原文為準。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 5
+    },
+    {
+      "id": "anthropics/claude-code",
+      "name": "anthropics/claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "language": "TypeScript",
+      "starsToday": 127,
+      "stars": 149206,
+      "summary": "Claude Code 是 Anthropic 的代理式寫程式工具，跑在終端機裡，可讀專案程式、執行例行任務、解釋複雜程式，並處理 git 工作流程，用自然語言下指令。官方說明建議用安裝腳本、Homebrew 或 WinGet 安裝，npm 全域安裝已標為過時。儲存庫含外掛目錄，可用自訂命令與代理擴充功能；也可用 /bug 回報問題。文件在 code.claude.com，另有開發者 Discord。說明並提到會蒐集使用回饋與相關對話資料，細節見資料使用政策。它適合想在終端機或整合開發環境裡，用對話方式請代理程式改程式與跑工作流程的開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 6
+    },
+    {
+      "id": 49947051,
+      "title": "We want you to build the next Git platform on Cloudflare",
+      "titleZh": "Cloudflare 邀請開發者在 Artifacts 上做下一套 Git 平台",
+      "url": "https://blog.cloudflare.com/next-git-platform-on-cloudflare/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49947051",
+      "score": 89,
+      "comments": 76,
+      "summary": "Cloudflare 部落格發文，邀請開發者用 Workers 與 Artifacts 打造下一套 Git 平台，並舉辦競賽。文章寫道，Artifacts 已進入開放測試，提供可程式建立與分叉的儲存庫、給程式與代理程式脈絡用的版本化儲存，以及代理程式已熟悉的 Git 操作。文中舉例：有人拿它存使用者專案、保存代理工作階段，或讓多個代理程式各用隔離儲存庫。重點是在上層做協調、審查與多人體驗。本則依官方文整理。分數與留言數以 Hacker News 當日頁面為準；細節以原文為準。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-04/49947051.svg",
+        "alt": "Artifacts 提供儲存庫與 Git 操作，上方由開發者自建協調與審查層。",
+        "caption": "Cloudflare 以 Artifacts 為基礎，邀請開發者自建 Git 平台上層體驗。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 6
+    },
+    {
+      "id": "jamwithai/production-agentic-rag-course",
+      "name": "jamwithai/production-agentic-rag-course",
+      "url": "https://github.com/jamwithai/production-agentic-rag-course",
+      "language": "Python",
+      "starsToday": 192,
+      "stars": 9389,
+      "summary": "本專案是以學習者為中心的課程與實作，教人從基礎建置可上線的檢索增強生成系統。檢索增強生成像先查資料室再答題，而不是只靠模型背誦。課程以 arXiv 論文策展助手為例：先用 Docker、FastAPI、PostgreSQL、OpenSearch 與 Airflow 搭基礎，再做關鍵字搜尋、切塊與混合搜尋，最後接上本地大型語言模型與介面，並加上監看與快取。說明強調先打穩搜尋再加向量，而不是一開始就只靠語意搜尋。它適合想動手學生產級檢索增強生成的工程學習者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 7
+    },
+    {
+      "id": 49940877,
+      "title": "New York City should carefully measure a new tree",
+      "titleZh": "紐約市該再仔細量一量誰是最高的樹",
+      "url": "https://blog.willmeye.rs/new-york-city-should-carefully-measure-a-new-tree/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49940877",
+      "score": 17,
+      "comments": 2,
+      "summary": "Will Meyers 在個人部落格寫道，維基百科記載的紐約市最高「仔細量過」的樹是 Queens Giant，二〇〇四年量得約四十點八公尺高、周長約五點八公尺，已超過二十年。作者用二〇二一年航空光達與影像，列出幾個公園候選樹，建議主管單位再實地量測，並強調這不是定論報告。光達像用不碰樹的雷射尺，先估樹冠高度。資料來源包括 Nature Conservancy、佛蒙特大學與紐約州地理資訊等。本則依該文整理。分數與留言數以 Hacker News 當日頁面為準；細節以原文為準。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 7
+    },
+    {
+      "id": "meituan-longcat/LongCat-Video",
+      "name": "meituan-longcat/LongCat-Video",
+      "url": "https://github.com/meituan-longcat/LongCat-Video",
+      "language": "Python",
+      "starsToday": 43,
+      "stars": 8720,
+      "summary": "LongCat-Video 是美團 LongCat 團隊開源的影片生成基礎模型，參數量約一百三十六億。說明寫道，同一套架構可做文字轉影片、圖片轉影片與影片接續；模型在接續任務上預訓練，可用來生成較長影片並減少顏色漂移。推論採由粗到細策略，說明提到可在數分鐘內生成約七百二十像素、每秒三十格的影片，並用區塊稀疏注意力降低計算量。權重可在 Hugging Face 取得，技術報告見 arXiv:2510.22200。它適合研究或試用開源長影片生成的開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 8
+    },
+    {
+      "id": 49942706,
+      "title": "Kolibri: A Sovereign Open-Weight Model",
+      "titleZh": "Aleph Alpha 釋出開源權重模型 Kolibri",
+      "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49942706",
+      "score": 467,
+      "comments": 281,
+      "summary": "德國公司 Aleph Alpha 在德國統一日記者會發文，發布 Kolibri：英德混合專家 Transformer，總參數約七百八十億、每次約三十億作用中，上下文最長約一百萬個字元單位，權重可在 Hugging Face 下載，授權為 Apache 2.0。文章寫道，先以較小的 Kolibri Origin 驗證訓練管線，再跑完整資料整理、消融、預訓練與後訓練，並監控硬體與資料中斷。Hacker News 討論另附技術報告連結。本則依官方文整理；效能數字以報告為準。分數與留言數以 Hacker News 當日頁面為準；細節以原文為準。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 8
+    },
+    {
+      "id": "OpenCut-app/OpenCut",
+      "name": "OpenCut-app/OpenCut",
+      "url": "https://github.com/OpenCut-app/OpenCut",
+      "language": "TypeScript",
+      "starsToday": 234,
+      "stars": 91585,
+      "summary": "OpenCut 是免費開源的影片編輯器，目標涵蓋網頁、桌面與手機。說明寫道，專案正在從頭重寫：計畫提供編輯器應用程式介面、外掛優先架構、以 Rust 為核心的跨平台、給代理程式用的模型情境協定伺服器、無介面批次渲染，以及編輯器內的腳本分頁。目前官網仍跑經典版；新版預覽在 new.opencut.app，經典版另有 opencut-classic 儲存庫。重寫期間說明暫不接受外部貢獻程式碼。授權為 MIT。它適合關注開源剪輯工具、或先用經典版剪片的使用者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 9
+    },
+    {
+      "id": 49946895,
+      "title": "The work by Valve's Timur Kristóf on improving old AMD GPUs on Linux",
+      "titleZh": "Valve 工程師改善舊款 AMD 顯示卡的 Linux 驅動",
+      "url": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU",
+      "hnUrl": "https://news.ycombinator.com/item?id=49946895",
+      "score": 36,
+      "comments": 2,
+      "summary": "Phoronix 報導，Valve Linux 顯示驅動團隊的 Timur Kristóf 過去一年多，為約十年前的 AMD GCN 1.0／1.1 顯示卡加強 AMDGPU 核心驅動，讓舊卡較能玩 Linux 遊戲與一般工作。文章寫道，他協助把這批卡從舊版 Radeon 驅動遷到較新的 AMDGPU，以便使用 RADV Vulkan，並處理顯示、電源管理與軟重設等問題；本週在多倫多會議分享。報導另提到去年核心版本曾測到舊卡效能明顯上升。本則依該文整理。分數與留言數以 Hacker News 當日頁面為準；細節以原文為準。讀者可從連結自行核對。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 9
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-10-04/plan-first.svg",
+      "alt": "左方小人急著寫程式；右方先看計畫再動手。",
+      "caption": "ECC 的流程是先計畫，再實作。",
+      "relatedItemId": "affaan-m/ECC"
+    },
+    {
+      "src": "data/humor/2026-10-04/session-notes.svg",
+      "alt": "新工作階段的小人找不到昨天做過什麼；旁邊是一疊會議紀錄。",
+      "caption": "claude-mem 把上次工作階段的重點帶進下一次。",
+      "relatedItemId": "thedotmack/claude-mem"
+    }
+  ]
+}

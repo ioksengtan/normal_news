@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280">
+  <rect width="360" height="280" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 13px; }
+    .sub { fill: #5e584e; font-size: 11px; }
+  </style>
+  <text x="180" y="28" text-anchor="middle" font-size="15">Cloudflare OS 三塊</text>
+  <rect x="16" y="48" width="100" height="90" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="66" y="88" text-anchor="middle">代理聊天</text>
+  <text x="66" y="110" text-anchor="middle" class="sub">帶公司脈絡</text>
+  <rect x="130" y="48" width="100" height="90" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="88" text-anchor="middle">沙箱應用</text>
+  <text x="180" y="110" text-anchor="middle" class="sub">小工具可分享</text>
+  <rect x="244" y="48" width="100" height="90" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="294" y="80" text-anchor="middle">Gatekeepers</text>
+  <text x="294" y="102" text-anchor="middle" class="sub">安全框架</text>
+  <text x="294" y="122" text-anchor="middle" class="sub">限制權限</text>
+  <rect x="30" y="170" width="300" height="80" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="204" text-anchor="middle">建在 Cloudflare Workers 上</text>
+  <text x="180" y="228" text-anchor="middle" class="sub">開源後可改成「自己公司的作業系統」</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <rect width="360" height="240" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 13px; }
+    .sub { fill: #5e584e; font-size: 11px; }
+  </style>
+  <circle cx="80" cy="60" r="26" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="60" y="88" width="40" height="40" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="80" y="66" text-anchor="middle" font-size="16">!</text>
+  <rect x="140" y="45" width="180" height="70" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="230" y="75" text-anchor="middle">先寫程式再說</text>
+  <text x="230" y="97" text-anchor="middle" class="sub">（容易返工）</text>
+  <circle cx="80" cy="175" r="26" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="60" y="203" width="40" height="24" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="80" y="181" text-anchor="middle" font-size="14">✓</text>
+  <rect x="140" y="155" width="180" height="60" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="230" y="180" text-anchor="middle">先計畫再動手</text>
+  <text x="230" y="200" text-anchor="middle" class="sub">ECC 的固定流程</text>
+</svg>

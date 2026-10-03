@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260">
+  <rect width="360" height="260" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 13px; }
+    .sub { fill: #5e584e; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="40" y="150" width="280" height="70" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="180" text-anchor="middle">Artifacts（開放測試）</text>
+  <text x="180" y="202" text-anchor="middle" class="sub">儲存庫 · 版本化儲存 · Git 操作</text>
+  <rect x="50" y="30" width="260" height="70" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="60" text-anchor="middle">你自建的 Git 平台上層</text>
+  <text x="180" y="82" text-anchor="middle" class="sub">協調 · 審查 · 多人體驗</text>
+  <line x1="180" y1="100" x2="180" y2="148" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+</svg>
