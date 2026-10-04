@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { pathToFileURL } from 'url';
+import { indexFromDirectory, mergeIndex } from './tech/archive.js';
 import { buildIssue } from './tech/issue.js';
 
 function arg(name, fallback) {
@@ -20,12 +21,13 @@ function main() {
   const allowPlaceholders = process.argv.includes('--allow-placeholders');
   const candidates = readJson(candidatesPath);
   const summaries = readJson(summariesPath);
-  const indexPath = path.join(issuesDir, 'index.json');
-  const existingIndex = fs.existsSync(indexPath) ? readJson(indexPath) : { issues: [] };
-  const { issue, index } = buildIssue({ candidates, summaries, existingIndex, allowPlaceholders });
   fs.mkdirSync(issuesDir, { recursive: true });
+  const existingIndex = mergeIndex(issuesDir);
+  const { issue } = buildIssue({ candidates, summaries, existingIndex, allowPlaceholders });
   const issuePath = path.join(issuesDir, `${issue.date}.json`);
   fs.writeFileSync(issuePath, `${JSON.stringify(issue, null, 2)}\n`);
+  const index = indexFromDirectory(issuesDir);
+  const indexPath = path.join(issuesDir, 'index.json');
   fs.writeFileSync(indexPath, `${JSON.stringify(index, null, 2)}\n`);
   console.log(`已寫入 ${path.relative(root, issuePath)}（第 ${issue.issueNumber} 期）`);
 }

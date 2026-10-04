@@ -10,6 +10,7 @@ import { fetchGithubSection } from '../scripts/fetch-tech.js';
 import { chooseGithub, createdAfterDate, parseTrendingHtml, searchUrl } from '../scripts/tech/github.js';
 import { isHiringPost, selectHnStories } from '../scripts/tech/hn.js';
 import { buildIssue } from '../scripts/tech/issue.js';
+import { indexFromDirectory } from '../scripts/tech/archive.js';
 import { interleaveByRank } from '../scripts/tech/combine.js';
 import { previousSectionIds, selectFresh } from '../scripts/tech/select.js';
 
@@ -196,6 +197,63 @@ test('ingest requires real summaries and still publishes a failed section', () =
   const written = JSON.parse(fs.readFileSync(path.join(directory, '2026-09-30.json'), 'utf8'));
   assert.equal(written.items[0].score, 8);
   assert.equal(written.items[0].sourceLabel, 'Hacker News');
+});
+
+test('ingest keeps older issue files when publishing a new day', () => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'normal-news-archive-'));
+  fs.writeFileSync(path.join(directory, '2026-09-29.json'), `${JSON.stringify({
+    date: '2026-09-29',
+    issueNumber: 4,
+    items: [{ id: 'kept' }],
+  })}\n`);
+  fs.writeFileSync(path.join(directory, 'index.json'), `${JSON.stringify({ issues: [] })}\n`);
+  const candidates = {
+    date: '2026-09-30',
+    fetchedAt: '2026-09-30T00:00:00.000Z',
+    github: { status: 'failed', fallback: false, error: 'down', items: [] },
+    hackernews: {
+      status: 'ok',
+      items: [{
+        id: 42,
+        title: 'Original title',
+        url: 'https://example.com/story',
+        hnUrl: 'https://news.ycombinator.com/item?id=42',
+        score: 8,
+        comments: 3,
+      }],
+    },
+  };
+  const summaries = {
+    date: '2026-09-30',
+    hackernews: { 42: { titleZh: '中文標題', summary: '這是一則足夠長度的中文摘要，說明今天的討論。' } },
+  };
+  const candidatesPath = path.join(directory, 'candidates.json');
+  const summariesPath = path.join(directory, 'summaries.json');
+  fs.writeFileSync(candidatesPath, JSON.stringify(candidates));
+  fs.writeFileSync(summariesPath, JSON.stringify(summaries));
+  const args = [
+    path.join(root, 'scripts/ingest-tech.js'),
+    '--candidates', candidatesPath,
+    '--summaries', summariesPath,
+    '--issues-dir', directory,
+  ];
+  const first = spawnSync(process.execPath, args, { cwd: root, encoding: 'utf8' });
+  assert.equal(first.status, 0, first.stderr);
+  const index = indexFromDirectory(directory);
+  assert.deepEqual(index.issues.map((entry) => entry.date), ['2026-09-29', '2026-09-30']);
+  assert.equal(index.issues[1].issueNumber, 5);
+  const kept = JSON.parse(fs.readFileSync(path.join(directory, '2026-09-29.json'), 'utf8'));
+  assert.equal(kept.items[0].id, 'kept');
+  const again = spawnSync(process.execPath, args, { cwd: root, encoding: 'utf8' });
+  assert.equal(again.status, 0, again.stderr);
+  const rewritten = JSON.parse(fs.readFileSync(path.join(directory, '2026-09-30.json'), 'utf8'));
+  assert.equal(rewritten.issueNumber, 5);
+  assert.equal(fs.existsSync(path.join(directory, '2026-09-29.json')), true);
+  const after = JSON.parse(fs.readFileSync(path.join(directory, 'index.json'), 'utf8'));
+  assert.deepEqual(after.issues.map((entry) => [entry.date, entry.issueNumber]), [
+    ['2026-09-29', 4],
+    ['2026-09-30', 5],
+  ]);
 });
 
 test('the combined feed leads with the first source and then alternates by rank', () => {

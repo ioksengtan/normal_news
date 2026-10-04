@@ -40,6 +40,15 @@ test('masthead uses the Taipei calendar date, weekday, and issue number', () => 
   assert.equal(publicationStart(new Date('2026-09-29T22:59:00.000Z')).toISOString(), '2026-09-28T23:00:00.000Z');
 });
 
+test('an archived issue prints its own date on the dateline', () => {
+  const model = buildPaper({
+    config,
+    issue: { date: '2026-10-02', issueNumber: 3, items: [] },
+    now,
+  });
+  assert.equal(model.dateline, '2026 年 10 月 2 日\u3000星期五\u3000第 3 期');
+});
+
 test('one tech section leads with the top story and tags each item', () => {
   const longSummary = '這是一段比較長的中文說明，'.repeat(8);
   const model = buildPaper({
