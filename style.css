@@ -95,12 +95,107 @@ a { color: inherit; }
   text-decoration: none;
 }
 
+.mast-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-top: var(--sp-2);
+}
+
 .dateline {
-  margin: var(--sp-1) 0 0;
+  margin: 0;
   font-size: var(--fs-meta);
   line-height: 1.4;
   letter-spacing: 0.02em;
-  white-space: nowrap;
+}
+
+.archive {
+  width: 308px;
+  max-width: 100%;
+  padding: 0 var(--sp-2) var(--sp-2);
+  border: 1px solid var(--rule);
+}
+
+.archive-month,
+.archive-jumps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.archive-label {
+  font-size: var(--fs-meta);
+  letter-spacing: 0.08em;
+}
+
+.archive-shift,
+.archive-jump,
+.archive-day {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.archive-shift,
+.archive-jump {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 var(--sp-2);
+  font-size: var(--fs-meta);
+}
+
+.archive-jump:disabled {
+  color: var(--muted);
+  cursor: default;
+}
+
+.archive-cal {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: var(--fs-meta);
+}
+
+.archive-cal th {
+  height: 28px;
+  color: var(--muted);
+  font-size: var(--fs-caption);
+  font-weight: 400;
+}
+
+.archive-cal td {
+  height: 44px;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.archive-day {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+
+.archive-day.has-issue {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.archive-day.is-selected {
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+}
+
+span.archive-day {
+  color: var(--muted);
+  cursor: default;
 }
 
 .section-nav {
@@ -405,6 +500,13 @@ button:focus-visible {
   }
 
   .masthead h1 { font-size: 56px; }
+
+  .mast-date {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--sp-6);
+  }
 
   .dateline { font-size: var(--fs-ui); }
 

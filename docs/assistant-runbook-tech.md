@@ -1,6 +1,6 @@
 # 科技版每日出刊
 
-每天台北時間 07:00 出一刊。科技版在這個時間抓一次，當天不再改，像印好的報紙。重跑同一天會覆寫該期內容，刊號不變。
+每天台北時間 07:00 出一刊。每一期寫成自己的檔案 `data/issues/YYYY-MM-DD.json`，並在 `data/issues/index.json` 登記日期與刊號。以前的期次檔留在原處。重跑同一天只換掉那一天的檔案，刊號不變。圖解與今日一笑跟那一期一起留著，讀過刊時才看得到。
 
 這個流程不呼叫模型。摘要由助手自己寫。不要把模型金鑰放進工作流程。
 
@@ -30,12 +30,18 @@ GITHUB_TOKEN="$(gh auth token)" node scripts/fetch-tech.js
 
 ```bash
 node scripts/ingest-tech.js
-git add data/issues
+git add data/issues data/diagrams data/humor
 git commit -m "issue: YYYY-MM-DD 科技版"
 git push
 ```
 
+入庫會依目錄裡每一份 `data/issues/YYYY-MM-DD.json` 重寫 `index.json`。新的一天多一個檔案、多一列日期。同一天再跑，只換掉該日檔案，並沿用檔案裡的刊號。
+
 把 `YYYY-MM-DD` 換成候選檔裡的 `date`。某一個來源抓取失敗時仍然執行入庫，該來源不出現在清單裡；兩個來源都失敗時，版面顯示「今日未能取得」。
+
+## 過刊
+
+首頁預設打開最新一期。網址加上 `?date=YYYY-MM-DD` 就打開那一天，例如 `?date=2026-10-02`，可以加入書籤。報頭日期旁邊的月曆會標出有出刊的日子；點日期、上一期或下一期都會換到那一期，網址跟著改。沒有出刊的日子不能點。
 
 ## 摘要規則
 

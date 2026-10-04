@@ -8,7 +8,7 @@
 
 ## 資料
 
-- `data/issues/`：網站讀的科技版。每一期是一份合併清單，每則有來源標籤與中文摘要。
+- `data/issues/`：網站讀的科技版。每一期一個 `YYYY-MM-DD.json`，`index.json` 列出日期與刊號。首頁預設最新一期，`?date=YYYY-MM-DD` 打開過刊。
 - `data/sections.json`：版名，以及 GitHub、Hacker News 各自的每日則數。
 
 GitHub Actions 只在 push 與 pull request 時跑測試與資料檢查，沒有排程，也不呼叫模型。
@@ -21,4 +21,4 @@ node scripts/fetch-tech.js
 node scripts/ingest-tech.js
 ```
 
-摘要由助手寫進 `data/tech/summaries.json`，格式見科技版步驟。出刊時把 `data/issues` 提交進 git。
+摘要由助手寫進 `data/tech/summaries.json`，格式見科技版步驟。出刊時把 `data/issues`、`data/diagrams`、`data/humor` 提交進 git。

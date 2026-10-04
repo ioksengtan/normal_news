@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { parseArgs } from './lib/args.js';
 import { readJson } from './lib/jsonio.js';
+import { archiveProblems } from './tech/archive.js';
 import { TECH_SOURCES } from './tech/combine.js';
 import { diagramProblems, humorProblems } from './lib/svg.js';
 
@@ -43,7 +44,9 @@ function main() {
     if (fs.existsSync(path.join(dataDir, name))) problems.push(`仍有 ${name}`);
   }
 
-  const index = readJson(path.join(dataDir, 'issues', 'index.json'));
+  const issuesDir = path.join(dataDir, 'issues');
+  problems.push(...archiveProblems(issuesDir));
+  const index = readJson(path.join(issuesDir, 'index.json'));
   if (!Array.isArray(index.issues)) problems.push('issues/index.json 必須包含 issues 陣列');
   let itemCount = 0;
   for (const entry of index.issues || []) {

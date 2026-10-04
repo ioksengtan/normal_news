@@ -1,3 +1,4 @@
+import { issueInstant, parseIssueDate } from './archive.js';
 import { formatDateline } from './time.js';
 
 function domId(id, index) {
@@ -120,9 +121,10 @@ export function buildPaper({ config, issue, now = new Date() }) {
     if (section.source === 'issue' || section.presentation === 'tech') return techSection(ready, issue);
     return inlineSection(ready);
   });
+  const issuedOn = parseIssueDate(issue?.date);
   return {
     siteName: config?.siteName || '正常新聞',
-    dateline: formatDateline(now, Number.isInteger(issue?.issueNumber) ? issue.issueNumber : null),
+    dateline: formatDateline(issuedOn ? issueInstant(issuedOn) : now, Number.isInteger(issue?.issueNumber) ? issue.issueNumber : null),
     sections,
   };
 }
