@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <rect width="360" height="240" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 13px; }
+    .sub { fill: #5e584e; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="20" y="30" width="320" height="70" fill="#fbf8f1" stroke="#5e584e" stroke-width="1"/>
+  <text x="30" y="48" class="sub">一般通道</text>
+  <rect x="40" y="58" width="44" height="34" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="94" y="58" width="44" height="34" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="148" y="58" width="44" height="34" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="202" y="58" width="44" height="34" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="300" y="80" text-anchor="middle" class="sub">大批資料</text>
+  <rect x="20" y="115" width="320" height="80" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="30" y="133" class="sub">快速結帳道：短訊息</text>
+  <circle cx="200" cy="150" r="14" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="188" y="164" width="24" height="24" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="218" y="168" width="16" height="11" fill="#fffdf8" stroke="#1c1915"/>
+  <line x1="245" y1="170" x2="300" y2="170" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="40" y="140" width="120" height="30" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="100" y="160" text-anchor="middle">我只有一封！</text>
+  <text x="180" y="222" text-anchor="middle" class="sub">Homa：短訊息先過，不必排在大箱子後面</text>
+</svg>

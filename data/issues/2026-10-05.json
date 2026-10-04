@@ -1,0 +1,325 @@
+{
+  "date": "2026-10-05",
+  "issueNumber": 6,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-05T07:00:00+08:00",
+  "fetchedAt": "2026-10-04T22:51:31.525Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": true,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    }
+  },
+  "items": [
+    {
+      "id": "CopilotKit/OpenDots",
+      "name": "CopilotKit/OpenDots",
+      "url": "https://github.com/CopilotKit/OpenDots",
+      "language": "TypeScript",
+      "starsToday": null,
+      "stars": 3182,
+      "summary": "OpenDots 是一套開源範本，用來打造一直在線上的人工智慧同事。開源範本就像一份公開的食譜，大家都能照著做，再改成自己的口味。說明文件寫道，每位人工智慧助手（專案稱為 Dot）可以設定名字、角色、指示與可用工具，還能配一台自己的電腦，裡面的瀏覽器資料和檔案在停止再啟動後仍會保留。使用者可以用文字、通話或 Slack 和它們溝通；助手存檔前可以先跳出審核卡片，讓人按「核准並儲存」或「拒絕」。專案說明它是範本而不是代管服務，需要自行架設，目前仍在早期開發。它以 CopilotKit 與 AG-UI 建成，給想自建人工智慧工作空間的開發者使用。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-05/CopilotKit/OpenDots.svg",
+        "alt": "使用者把任務交給一位 Dot，Dot 用自己的電腦做事，存檔前先經過人按核准。",
+        "caption": "Dot 有自己的電腦；存檔前，審核卡片讓人決定核准或拒絕。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 49953495,
+      "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
+      "titleZh": "在一般遊戲電腦上執行 1250 億參數的 Qwen 模型",
+      "url": "https://github.com/Niko1221/Strata",
+      "hnUrl": "https://news.ycombinator.com/item?id=49953495",
+      "score": 532,
+      "comments": 262,
+      "summary": "這則連到 GitHub 上的 Strata 專案，它讓人在自己的遊戲電腦上執行 Qwen3.8-Flash-Next，一個有 1250 億個參數的人工智慧模型。說明文件寫道，這個模型由 24,576 個小「專家」組成，每個字只需要其中 10 個；顯示卡放最常用的幾千個，主記憶體放全部，固態硬碟放一張大查詢表。作者的比喻是廚房：常用的東西放在流理台，其餘放在儲藏室。需要 12 GB 以上顯示記憶體的 NVIDIA 或 AMD 顯示卡、32 GB 以上主記憶體與約 80 GB 硬碟空間，資料不會離開電腦。作者在 RTX 5070 的電腦上測得，依模型大小每秒寫出 53 到 94 個詞元（模型計算文字的單位）。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-05/49953495.svg",
+        "alt": "廚房比喻：最常用的專家放在顯示卡這個流理台，全部專家放在主記憶體這個儲藏室，查詢表放在固態硬碟。",
+        "caption": "Strata 把模型的專家分放在顯示卡、主記憶體與固態硬碟。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "nanaism/yomiyasu",
+      "name": "nanaism/yomiyasu",
+      "url": "https://github.com/nanaism/yomiyasu",
+      "language": "Python",
+      "starsToday": null,
+      "stars": 1381,
+      "summary": "yomiyasu 是一份給人工智慧寫程式工具使用的「技能」，用來把人工智慧寫出的日文，修改成人讀起來較順、資訊較密的日文。技能就像交給助手的一張工作守則卡，助手照著卡上的步驟做事。說明文件寫道，它主要針對技術文章、設計書、規格書和公司內部報告，可以載入 Codex、Claude Code、Cursor 等工具。作者列出七條改寫原則，例如核對主詞和述語是否對得上、把替工具加上情感的擬人說法改成客觀描述、把比喻改成直白用語，並說明會保留原文的意思與原本的文體。專案標示在日本公司 ALGO ARTIS 製作，適合需要寫日文技術文件的人。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 49957116,
+      "title": "Turn off Apple Intelligence on macOS 27 and get its disk space back",
+      "titleZh": "關掉 macOS 27 的 Apple Intelligence 並收回磁碟空間",
+      "url": "https://github.com/omlahore/RemoveMacAI",
+      "hnUrl": "https://news.ycombinator.com/item?id=49957116",
+      "score": 236,
+      "comments": 134,
+      "summary": "這則連到 GitHub 上的 RemoveMacAI 工具。說明文件寫道，macOS 27 不再有單一開關可以關閉 Apple Intelligence（蘋果的人工智慧功能），而且功能關掉後，下載的模型仍留在磁碟上。這個工具會關閉 Siri、寫作工具、Genmoji 等功能，透過蘋果的資產服務移除模型，並把重新下載導向一個關閉的本機連接埠，就像在門口掛上「暫停投遞」的牌子。所有變更都能用 revert 指令還原，系統完整性保護也維持開啟。作者表示，這個工具不連網、不收集資料；需要蘋果自製晶片的電腦，已在 macOS 27.0 上測試。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "facebookincubator/muse-gadget-sdk",
+      "name": "facebookincubator/muse-gadget-sdk",
+      "url": "https://github.com/facebookincubator/muse-gadget-sdk",
+      "language": "C",
+      "starsToday": null,
+      "stars": 1154,
+      "summary": "muse-gadget-sdk 是 Meta 開源的軟體開發套件（Software Development Kit，SDK），讓人自己動手做能連上 Muse 的小裝置。軟體開發套件就像一盒附說明書的零件包，照著組，自己的裝置就能和服務對話。說明文件寫道，使用者可以替現成的 ESP32 開發板寫程式，或把樹莓派（Raspberry Pi）等 Linux 電腦設定好，再接上螢幕、按鈕、感測器等零件。每個裝置配對前都要先取得一組權杖，並透過 iOS 或 Android 上的 Muse 應用程式配對，配對前需開啟開發者模式。專案說明這是給動手玩家的業餘作品，並提醒改裝可能弄壞板子或讓保固失效，風險自負。授權為 Apache 2.0。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 49943637,
+      "title": "Infidel Goes Wild",
+      "titleZh": "《Infidel》遊戲裡亂寫記憶體的程式錯誤",
+      "url": "https://blog.zarfhome.com/2026/10/infidel-goes-wild",
+      "hnUrl": "https://news.ycombinator.com/item?id=49943637",
+      "score": 22,
+      "comments": 0,
+      "summary": "Infidel 是 Infocom 公司在 1983 年推出的文字冒險遊戲。作者 Andrew Plotkin 在部落格寫道，他用類似記憶體除錯器的工具檢查這款遊戲時，發現一個由編譯器造成的錯誤。遊戲用同一個房間代表無邊的沙漠，玩家丟下的物品會記在一張表裡；但程式把表的預設位置寫成了這個變數的編號 30，而不是表真正的位址，物品紀錄因此被寫到記憶體開頭附近。這就像把包裹寄到「第 30 號住戶」，而不是寫上真正的地址。作者實測，在沙漠丟下九件物品後，遊戲文字裡的「the」被換成「You」，另一次測試則讓直譯器當掉。他推測當年幾乎沒有玩家在沙漠丟超過八件物品，所以沒人發現。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "nykooi1/vibe-wise",
+      "name": "nykooi1/vibe-wise",
+      "url": "https://github.com/nykooi1/vibe-wise",
+      "language": "Python",
+      "starsToday": null,
+      "stars": 1023,
+      "summary": "VibeWise 是 Claude Code 的外掛程式，目標是讓人在人工智慧幫忙寫程式時，同時學會怎麼設計。外掛程式就像替工具加裝的配件，裝上後原本的工具會多出新功能。說明文件寫道，使用時 Claude 會先問你打算怎麼做，陪你比較不同做法的利弊、解釋不熟悉的概念；設計由你決定，確認後它才寫程式，寫完再說明改了什麼、為什麼。每一步都有「確認並繼續」或「討論」兩個選項。作者表示，它適合想邊做邊學的人，包括想成為工程師的人、初級開發者，以及正在探索陌生技術的資深工程師。使用前需要安裝 Claude Code 與 Python 3。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 49957068,
+      "title": "Improper redaction reveals Google Data Center water and electricity usage",
+      "titleZh": "遮蔽不當的文件透露 Google 資料中心的用水與用電量",
+      "url": "https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49957068",
+      "score": 162,
+      "comments": 219,
+      "summary": "原文網站的 robots.txt 禁止人工智慧代理程式抓取，本則未讀原文，改依 Hacker News 標題與討論整理。標題指出，一份遮蔽處理不當的文件，透露了 Google 資料中心的用水與用電量；連結網址顯示，報導與林肯市（Lincoln）的 Google 資料中心有關。留言者轉述，報導中這座資料中心用水約 1300 萬加侖，另一座超過 5 億加侖；另有留言者貼出其他報導，指 Google 自行申報的總用水量超過 7 億加侖。有留言者認為這個用量不算大，也有人提醒，不少報導把用水許可的上限誤當成實際用量。各項數字以原文為準。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "CAPCOM-TD-OSS/REDox",
+      "name": "CAPCOM-TD-OSS/REDox",
+      "url": "https://github.com/CAPCOM-TD-OSS/REDox",
+      "language": "C#",
+      "starsToday": null,
+      "stars": 1023,
+      "summary": "RE:Dox 是給 .NET 程式使用的結構化資料引擎，由 CAPCOM 開源，說明文件稱它是該公司新一代遊戲引擎技術 REX 的核心元件之一。它先把 JSON（JavaScript 物件表示法）等多種格式的資料，拆成固定大小的小標記並排成一份目錄，之後讀取、修改、轉換格式都靠這份目錄。這就像先替一本厚書做好索引，要找、要改都不必從頭翻。專案表示，在它列出的三組測試資料上，與 .NET 內建的 System.Text.Json 相比，依序讀入快約 1.36 到 1.77 倍，平行讀入快約 2.25 到 2.84 倍；測試環境為 .NET 10、AMD Ryzen Threadripper PRO 5975WX 與 Windows 11。專案也註明這些倍數不代表所有情況。授權為 Apache 2.0。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 49933461,
+      "title": "A map of every lighthouse",
+      "titleZh": "標出世界各地燈塔的地圖",
+      "url": "https://mapped.earth/lighthouses/world",
+      "hnUrl": "https://news.ycombinator.com/item?id=49933461",
+      "score": 150,
+      "comments": 66,
+      "summary": "原文網站的 robots.txt 禁止人工智慧代理程式抓取，本則未讀原文，改依 Hacker News 標題與討論整理。這是一張互動地圖，標題寫著要標出每一座燈塔。留言者提到，地圖上燈塔的光束會掃過畫面；一位曾在商船上值班的留言者說，這讓他想起夜裡在海上看見燈塔光暈的經驗。也有留言者回報問題：在手機上用兩指縮放時操作不順，還有人發現美國普吉特灣一帶的航道浮標也被標成燈塔。另有幾位留言者分享自己做過的類似地圖，例如只標美國燈塔的版本。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    },
+    {
+      "id": "QingYunA/answer-me-with-html",
+      "name": "QingYunA/answer-me-with-html",
+      "url": "https://github.com/QingYunA/answer-me-with-html",
+      "language": "JavaScript",
+      "starsToday": null,
+      "stars": 1018,
+      "summary": "Answer me with HTML 是一份給人工智慧代理程式用的技能：遇到複雜問題時，讓代理程式回傳一頁可閱讀的網頁，而不是一大段文字。HTML 是超文字標記語言，也就是排版網頁用的語言。說明文件寫道，代理程式只寫一份簡短的 Markdown 草稿，再交給技能附帶的命令列工具轉成網頁，約 50 毫秒完成。作者用同一個模型、三個題目各跑三次比較：直接要求寫 HTML，輸出量中位數為 6,873 個詞元（模型計算文字的單位），使用這個技能為 923 個，時間由 46 秒降為 13 秒；每次花費則約 0.22 與 0.26 美元。作者說明省下的是等待時間，不是費用。使用前需要 Node.js 20 以上。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 5
+    },
+    {
+      "id": 49957117,
+      "title": "Homa: The end of TCP for AI clusters [video]",
+      "titleZh": "演講影片：Homa 與人工智慧叢集的網路傳輸",
+      "url": "https://www.youtube.com/watch?v=eZ8WWZzoaR0",
+      "hnUrl": "https://news.ycombinator.com/item?id=49957117",
+      "score": 38,
+      "comments": 7,
+      "summary": "這是史丹佛大學教授 John Ousterhout 的演講影片，本則依影片說明整理。他說，早期人工智慧的網路流量多是大批資料，重視總量；現在的推論與代理程式應用，有很多需要快速送達的小訊息。小訊息和大流量擠在一起時會卡在佇列裡，讓昂貴的圖形處理器閒著等。他指出，傳輸控制協定（TCP）等做法由傳送端察覺壅塞，又把資料看成一長串位元組，很難讓短訊息先走。他介紹的 Homa 以訊息為單位、由接收端分配發送額度，並用交換器的優先佇列讓短訊息先過，像超市的少量商品快速結帳道。說明寫道，測試中短訊息最慢那一批的延遲比傳輸控制協定低十倍以上。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 5
+    },
+    {
+      "id": "chasmlol/SkyCraft",
+      "name": "chasmlol/SkyCraft",
+      "url": "https://github.com/chasmlol/SkyCraft",
+      "language": "C++",
+      "starsToday": null,
+      "stars": 859,
+      "summary": "SkyCraft 是一個讓人用《當個創世神》（Minecraft）的玩法玩《上古卷軸 5》（Skyrim）的粉絲模組。模組就像玩家自己做的遊戲擴充包。說明文件寫道，兩款遊戲都沒有被改寫：Minecraft 在背景執行自己的遊戲規則，Skyrim 負責世界、角色、任務與存檔，兩邊透過共享記憶體交換資料，畫面由 Skyrim 畫出。這就像兩個人共用一塊白板傳遞訊息。玩家可以在 Skyrim 的世界放置和挖掘方塊，用 Minecraft 的武器和遊戲角色戰鬥，對方也會反擊。專案標示仍在早期實驗階段，建議先備份存檔；它與兩款遊戲的公司沒有關係，玩家必須兩款遊戲都擁有。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 6
+    },
+    {
+      "id": 49934078,
+      "title": "Results from the ASIC puzzle",
+      "titleZh": "Jane Street 公布特定應用積體電路謎題的結果",
+      "url": "https://blog.janestreet.com/asic-puzzle-results/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49934078",
+      "score": 65,
+      "comments": 27,
+      "summary": "Jane Street 公司在部落格公布八月晶片謎題的答案。這次謎題只給一顆小晶片的實體佈局圖，沒有電路清單或訊號名稱，參加者要倒推出它在做什麼，就像只看施工圖，猜出房子的用途。公司表示，共收到來自 30 多個國家、約 400 份答案，參加者有高中生、研究人員、工程師和退休人士。答案是：這顆晶片是 11×11「星星對戰」謎題的檢查器，規則是每一列、每一行、每個色塊剛好放兩顆星，而且星星不能相鄰，斜對角也不行。晶片接收 121 次輸入，分別檢查列、行、色塊與相鄰條件，全部通過才輸出解答字串，否則多半輸出「TRY AGAIN」。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-05/49934078.svg",
+        "alt": "121 次輸入進入晶片，經過列、行、色塊與不相鄰四項檢查，全部通過才輸出解答，否則輸出 TRY AGAIN。",
+        "caption": "謎題晶片的四項檢查全部通過，才會輸出解答字串。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 6
+    },
+    {
+      "id": "Edwardxlai/easyread",
+      "name": "Edwardxlai/easyread",
+      "url": "https://github.com/Edwardxlai/easyread",
+      "language": "Python",
+      "starsToday": null,
+      "stars": 772,
+      "summary": "EasyRead 是一個在自己電腦上執行的論文閱讀工具，主要把英文論文的可攜式文件格式（PDF）檔翻成中文。說明文件寫道，匯入檔案後，它會在背景逐頁翻譯，公式和表格照原文排版，參考文獻保留原文；可以一鍵切換中英對照，右側也能打開原頁，並框出目前段落在原頁的位置。正文只放譯文，人工智慧的解釋與回答放在頁邊，像書本頁邊的手寫筆記，方便分清哪句是論文原文。使用者可以劃線、寫筆記、向人工智慧提問，可選的模型包括 Claude、GPT、DeepSeek、通義與本機的 Ollama，筆記可以匯出成 Markdown。文獻庫預設存在自己的電腦上。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 7
+    },
+    {
+      "id": 49956771,
+      "title": "Show HN: Build with Python – a beginner course where your code draws",
+      "titleZh": "自製作品：讓程式碼畫出圖的 Python 入門課",
+      "url": "https://scimigo.com/en/learn/build-with-python/01-draw-with-python",
+      "hnUrl": "https://news.ycombinator.com/item?id=49956771",
+      "score": 17,
+      "comments": 3,
+      "summary": "這是作者在 Hacker News 發表的自製作品：一套 Python 入門課，程式寫好後會畫出圖，而不是在命令列印出文字。作者說，他看到女兒學 Python 很吃力，所以做了這門課。課程全部在瀏覽器裡執行，靠 Pyodide 讓 Python 在網頁裡運作，像把整間電腦教室裝進網頁，不必安裝 Python 或設定套件。程式碼旁邊會直接顯示畫出的圖，改一行就能馬上看到變化。第一課要做機器人、一排圓圈和點一下就能畫的畫板。作者表示，課程共 13 個單元，前 6 個免費，第 7 到 13 單元的閱讀免費，引導練習則一次付費 49 美元；他也在做 C++ 版本。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 7
+    },
+    {
+      "id": "kargulstudio/sales-crm",
+      "name": "kargulstudio/sales-crm",
+      "url": "https://github.com/kargulstudio/sales-crm",
+      "language": "TypeScript",
+      "starsToday": null,
+      "stars": 762,
+      "summary": "sales-crm 這個專案沒有填寫簡介。它的說明文件標題是「Kargul Starter」，內容描述一套網站起始範本。起始範本就像已經打好地基、接好水電的毛胚屋，開發者可以直接在上面蓋自己的頁面。說明文件寫道，它使用 Next.js 16、React 19 與 Tailwind CSS 4，並要求寫任何元件之前先讀 CONVENTIONS.md 這份規則文件。說明文件也列出開新專案時要先設定的項目，例如網站名稱與網址、字級設定、社群分享圖片與字型。專案名稱中的 CRM 一般是客戶關係管理（Customer Relationship Management）的縮寫，但說明文件沒有提到相關功能。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 8
+    },
+    {
+      "id": 49916753,
+      "title": "Page Table Memory Consumption",
+      "titleZh": "分頁表會吃掉多少記憶體",
+      "url": "https://frn.sh/pagetables/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49916753",
+      "score": 33,
+      "comments": 2,
+      "summary": "這篇部落格文章談作業系統的分頁表會用掉多少記憶體。分頁表像一本地址簿，記下程式看到的位址對應到實體記憶體的哪裡，每個程式都有自己的一本。作者 Fernando Simões 說明，一般情況下分頁表約占所對應記憶體的 1/512；但如果 N 個程式對應同一塊共享記憶體，每個程式都要自己記一份，成本就變成約 N/512。他整理了多個案例，例如 Percona 在 2021 年重現的 Postgres 情況：192 GB 的機器、80 個連線，分頁表從 45 MiB 長到超過 25 GiB；改用大分頁後，同樣的工作量只用 61 MiB。作者也提到，大分頁需要連續的記憶體，有它的代價。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-05/49916753.svg",
+        "alt": "三個程式各有一本地址簿，都指向同一塊共享記憶體，地址簿的總量隨程式數量增加。",
+        "caption": "N 個程式對應同一塊記憶體，分頁表成本約為 N/512。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 8
+    },
+    {
+      "id": "openai/mcp-extensions",
+      "name": "openai/mcp-extensions",
+      "url": "https://github.com/openai/mcp-extensions",
+      "language": "TypeScript",
+      "starsToday": null,
+      "stars": 750,
+      "summary": "OpenAI MCP Extensions 是 OpenAI 發布的擴充規格與開發套件，讓開發者替 ChatGPT 做的外掛，用起來像 ChatGPT 原本就有的功能。它建立在模型上下文協定（Model Context Protocol，MCP）之上；這個協定像萬用插座的規格，讓人工智慧助手能接上各種外部工具。說明文件列出的功能包括：從側邊欄打開應用程式、為特定副檔名顯示自訂的檔案檢視器、在輸入框用提及功能搜尋外掛的資源，以及附縮圖選項的表單。示範外掛名為 Bits & Bolts，用來瀏覽電腦輔助設計的零件。開發套件有 TypeScript 與 Python 兩種版本，授權為 Apache 2.0。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 9
+    },
+    {
+      "id": 49951891,
+      "title": "How to scale intent, quality, and artistry with AI [video]",
+      "titleZh": "演講影片：用人工智慧時如何維持意圖、品質與設計感",
+      "url": "https://www.youtube.com/watch?v=GLvFTMtw4Jk",
+      "hnUrl": "https://news.ycombinator.com/item?id=49951891",
+      "score": 37,
+      "comments": 11,
+      "summary": "這是 Lenny's Podcast 頻道上的演講影片，本則依影片說明整理。講者是 Stripe 的 Katie Dill，影片在 2026 年 9 月 10 日於舊金山的 Lenny and Friends Summit 錄製。說明寫道，人工智慧讓做產品變得容易，她談的是如何避免產品變成千篇一律的「殭屍介面」。她認為好的設計仍然需要清楚的觀點、對使用者的理解，以及對細節的用心；她也分享如何把這些標準放進人工智慧工具、在第一版草稿之後繼續修改，以及用人工智慧做出更有原創性的產品。影片長約 22 分鐘。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 9
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-10-05/desert-items.svg",
+      "alt": "沙漠裡的小人丟下第九件物品，旁邊的告示牌把 the 寫成了 You。",
+      "caption": "在《Infidel》的沙漠丟下九件物品後，「the」變成了「You」。",
+      "relatedItemId": "49943637"
+    },
+    {
+      "src": "data/humor/2026-10-05/express-lane.svg",
+      "alt": "拿著一個小信封的小人走快速結帳道，旁邊推著大箱子的隊伍排得很長。",
+      "caption": "Homa 讓短訊息走快速道，不必排在大批資料後面。",
+      "relatedItemId": "49957117"
+    }
+  ]
+}

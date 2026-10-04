@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
+  <rect width="360" height="300" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 13px; }
+    .sub { fill: #5e584e; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="12" y="20" width="118" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="71" y="44" text-anchor="middle">使用者</text>
+  <text x="71" y="63" text-anchor="middle" class="sub">文字／通話／Slack</text>
+  <line x1="130" y1="48" x2="148" y2="48" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="150" y="20" width="190" height="56" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="245" y="44" text-anchor="middle">Dot（人工智慧助手）</text>
+  <text x="245" y="63" text-anchor="middle" class="sub">名字、角色、指示、工具</text>
+  <line x1="242" y1="76" x2="242" y2="103" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="145" y="105" width="195" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="242" y="129" text-anchor="middle">Dot 自己的電腦</text>
+  <text x="242" y="148" text-anchor="middle" class="sub">瀏覽器與檔案會保留</text>
+  <line x1="242" y1="161" x2="242" y2="188" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="100" y="190" width="240" height="56" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="220" y="214" text-anchor="middle">審核卡片</text>
+  <text x="220" y="233" text-anchor="middle" class="sub">核准並儲存　或　拒絕</text>
+  <path d="M100 218 L71 218 L71 78" fill="none" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <text x="30" y="150" class="sub">人來決定</text>
+  <rect x="20" y="258" width="320" height="32" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="279" text-anchor="middle">核准後才存成頁面</text>
+</svg>

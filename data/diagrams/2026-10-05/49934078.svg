@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320">
+  <rect width="360" height="320" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 13px; }
+    .sub { fill: #5e584e; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="80" y="15" width="200" height="44" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="35" text-anchor="middle">121 次輸入</text>
+  <text x="180" y="51" text-anchor="middle" class="sub">每一格放不放星星</text>
+  <line x1="180" y1="59" x2="180" y2="76" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="20" y="78" width="155" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="97" y="105" text-anchor="middle">每列剛好兩顆</text>
+  <rect x="185" y="78" width="155" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="262" y="105" text-anchor="middle">每行剛好兩顆</text>
+  <rect x="20" y="130" width="155" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="97" y="157" text-anchor="middle">每個色塊兩顆</text>
+  <rect x="185" y="130" width="155" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="262" y="157" text-anchor="middle">星星不相鄰</text>
+  <line x1="180" y1="174" x2="180" y2="196" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="80" y="198" width="200" height="36" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="221" text-anchor="middle">四項全部通過？</text>
+  <line x1="130" y1="234" x2="95" y2="261" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <line x1="230" y1="234" x2="265" y2="261" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="20" y="263" width="150" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="95" y="283" text-anchor="middle">是</text>
+  <text x="95" y="299" text-anchor="middle" class="sub">輸出解答字串</text>
+  <rect x="190" y="263" width="150" height="44" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="265" y="283" text-anchor="middle">否</text>
+  <text x="265" y="299" text-anchor="middle" class="sub">多半輸出 TRY AGAIN</text>
+</svg>

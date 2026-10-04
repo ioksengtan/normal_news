@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290">
+  <rect width="360" height="290" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 13px; }
+    .sub { fill: #5e584e; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="15" y="25" width="100" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="65" y="47" text-anchor="middle">程式一</text>
+  <text x="65" y="65" text-anchor="middle" class="sub">自己的地址簿</text>
+  <rect x="130" y="25" width="100" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="47" text-anchor="middle">程式二</text>
+  <text x="180" y="65" text-anchor="middle" class="sub">自己的地址簿</text>
+  <rect x="245" y="25" width="100" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="295" y="47" text-anchor="middle">程式 N</text>
+  <text x="295" y="65" text-anchor="middle" class="sub">自己的地址簿</text>
+  <line x1="65" y1="75" x2="130" y2="143" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <line x1="180" y1="75" x2="180" y2="143" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <line x1="295" y1="75" x2="230" y2="143" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="60" y="145" width="240" height="56" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="170" text-anchor="middle">同一塊共享記憶體</text>
+  <text x="180" y="189" text-anchor="middle" class="sub">資料只有一份</text>
+  <rect x="20" y="220" width="320" height="52" fill="#fbf8f1" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="242" text-anchor="middle">一個程式：約 1/512</text>
+  <text x="180" y="262" text-anchor="middle">N 個程式：約 N/512</text>
+</svg>
