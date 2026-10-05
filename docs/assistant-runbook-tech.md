@@ -18,7 +18,9 @@ node scripts/fetch-tech.js
 
 抓取使用使用者代理字串 `normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。
 
-這會寫出 `data/tech/candidates.json`，裡面仍分 `github` 與 `hackernews` 兩組候選，方便對照撰寫摘要。入庫時才合併成一份 `items`。GitHub 先解析 https://github.com/trending?since=daily ，失敗或少於 10 則時改走搜尋介面（過去 7 天新建、依星數排序），並在候選檔標記備援。Hacker News 讀官方的 `topstories.json` 與 `item/{id}.json`。每個來源每天最多 10 則。過去 3 期出現過的 GitHub 專案、前一期出現過的 Hacker News 討論、以及徵才貼文會自動跳過。
+這會寫出 `data/tech/candidates.json`，裡面仍分 `github` 與 `hackernews` 兩組候選，方便對照撰寫摘要。入庫時才合併成一份 `items`。每一期一共 10 則：GitHub 5 則、Hacker News 5 則。2026-10-05 與更早的期次維持當時各 10 則，不要重跑那些日期來改則數。
+
+GitHub 先解析 https://github.com/trending?since=daily 。扣掉近 3 期已刊出的專案後，若失敗或少於 5 則，改走搜尋介面（過去 7 天新建、依星數排序），並在候選檔標記備援。Hacker News 讀官方的 `topstories.json` 與 `item/{id}.json`。每個來源每天最多 5 則；候選或摘要若多於 5 則，入庫只留下名次較前的 5 則。過去 3 期出現過的 GitHub 專案、前一期出現過的 Hacker News 討論、以及徵才貼文會自動跳過。
 
 若備援搜尋遇到未登入的每小時次數上限，用 GitHub CLI 的權杖再抓一次。在 GitHub Actions 裡則帶工作流程內建的 `GITHUB_TOKEN`：
 
@@ -160,7 +162,7 @@ git push
 
 ## 圖解
 
-每一期為頭條，以及另外大約 2 到 3 則「有圖會比較懂」的項目，手寫一張簡單的向量圖。格式是 SVG（用文字描述圖形的檔案）。其餘項目不加圖。
+每一期為頭條，以及另外大約 2 到 3 則「有圖會比較懂」的項目，手寫一張簡單的向量圖。格式是 SVG（用文字描述圖形的檔案）。其餘項目不加圖。每期改為 10 則之後，圖解仍是頭條再加大約 2 到 3 則，今日一笑仍是 1 到 2 張。
 
 - 只用方框、箭頭，以及圓、矩形這類基本形狀組成的小圖示。
 - 標籤用繁體中文。字型用系統字型：`"Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif`。

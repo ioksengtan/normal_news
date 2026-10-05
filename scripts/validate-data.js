@@ -5,6 +5,7 @@ import { readJson } from './lib/jsonio.js';
 import { archiveProblems } from './tech/archive.js';
 import { TECH_SOURCES } from './tech/combine.js';
 import { diagramProblems, humorProblems } from './lib/svg.js';
+import { ITEMS_PER_SOURCE, sourceCountProblems } from './tech/limits.js';
 
 const USAGE = `用法：npm run validate-data -- [--data-dir data]
 
@@ -39,6 +40,9 @@ function main() {
   }
   for (const source of config.techSources || []) {
     if (!ALLOWED.has(source.id)) problems.push(`techSources 含有未允許的來源 ${source.id}`);
+    if (ALLOWED.has(source.id) && source.dailyCount !== ITEMS_PER_SOURCE) {
+      problems.push(`${source.id} 的每日則數應為 ${ITEMS_PER_SOURCE}`);
+    }
   }
   for (const name of REMOVED_FILES) {
     if (fs.existsSync(path.join(dataDir, name))) problems.push(`仍有 ${name}`);
@@ -63,6 +67,7 @@ function main() {
     }
     if (issue.sections) problems.push(`${entry.date} 仍按來源拆版`);
     if (issue.items[0] && issue.items[0].rank !== 0) problems.push(`${entry.date} 的頭條不是來源第一名`);
+    problems.push(...sourceCountProblems(issue));
     for (const item of issue.items) {
       itemCount += 1;
       const label = `${entry.date} ${item.source || '?'} ${item.id || '?'}`;

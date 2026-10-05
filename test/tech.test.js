@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { USER_AGENT } from '../scripts/lib/http.js';
 import { fetchGithubSection } from '../scripts/fetch-tech.js';
 import { chooseGithub, createdAfterDate, parseTrendingHtml, searchUrl } from '../scripts/tech/github.js';
+import { ITEMS_PER_SOURCE, sourceCountProblems } from '../scripts/tech/limits.js';
 import { isHiringPost, selectHnStories } from '../scripts/tech/hn.js';
 import { buildIssue } from '../scripts/tech/issue.js';
 import { indexFromDirectory } from '../scripts/tech/archive.js';
@@ -38,7 +39,7 @@ test('tech fetcher uses the project user agent', async () => {
     return { ok: true, status: 200, text: async () => '', json: async () => ({ items: [] }) };
   };
   try {
-    await fetchGithubSection({ seenIds: [], date: '2026-09-30', token: '', limit: 10 });
+    await fetchGithubSection({ seenIds: [], date: '2026-09-30', token: '', limit: ITEMS_PER_SOURCE });
   } finally {
     globalThis.fetch = original;
   }
@@ -61,18 +62,28 @@ test('trending HTML keeps page order, today stars, and language', () => {
   assert.deepEqual(items.map((item) => item.id), ['octo/hello', 'octo/next']);
 });
 
-test('GitHub uses trending until dedupe leaves fewer than ten, then switches to search', () => {
+test('GitHub uses trending until dedupe leaves fewer than five, then switches to search', () => {
   const trending = Array.from({ length: 12 }, (_, index) => ({ id: `octo/repo-${index}`, name: `octo/repo-${index}` }));
   const search = Array.from({ length: 10 }, (_, index) => ({ id: `new/repo-${index}`, name: `new/repo-${index}` }));
-  const direct = chooseGithub({ trendingItems: trending, searchItems: search, seenIds: [], limit: 10 });
+  const direct = chooseGithub({ trendingItems: trending, searchItems: search, seenIds: [] });
   assert.equal(direct.fallback, false);
-  assert.equal(direct.items.length, 10);
+  assert.equal(direct.items.length, ITEMS_PER_SOURCE);
   assert.equal(direct.items[0].id, 'octo/repo-0');
 
-  const seen = trending.slice(0, 5).map((item) => item.id);
-  const fallback = chooseGithub({ trendingItems: trending, searchItems: search, seenIds: seen, limit: 10 });
+  const stillTrending = chooseGithub({
+    trendingItems: trending,
+    searchItems: search,
+    seenIds: trending.slice(0, 7).map((item) => item.id),
+  });
+  assert.equal(stillTrending.fallback, false);
+  assert.equal(stillTrending.items.length, ITEMS_PER_SOURCE);
+  assert.equal(stillTrending.items[0].id, 'octo/repo-7');
+
+  const seen = trending.slice(0, 8).map((item) => item.id);
+  const fallback = chooseGithub({ trendingItems: trending, searchItems: search, seenIds: seen });
   assert.equal(fallback.fallback, true);
   assert.equal(fallback.status, 'ok');
+  assert.equal(fallback.items.length, ITEMS_PER_SOURCE);
   assert.equal(fallback.items[0].id, 'new/repo-0');
 
   const failed = chooseGithub({
@@ -80,7 +91,6 @@ test('GitHub uses trending until dedupe leaves fewer than ten, then switches to 
     trendingError: 'HTTP 500',
     searchItems: null,
     searchError: 'HTTP 403',
-    limit: 10,
   });
   assert.equal(failed.status, 'failed');
   assert.equal(failed.items.length, 0);
@@ -254,6 +264,73 @@ test('ingest keeps older issue files when publishing a new day', () => {
     ['2026-09-29', 4],
     ['2026-09-30', 5],
   ]);
+});
+
+test('ingest keeps five items from each source', () => {
+  function githubItem(index) {
+    return {
+      id: `octo/repo-${index}`,
+      name: `octo/repo-${index}`,
+      url: `https://github.com/octo/repo-${index}`,
+      description: `Project ${index} does a concrete job.`,
+    };
+  }
+  function hnItem(index) {
+    return {
+      id: 100 + index,
+      title: `Original title ${index}`,
+      url: `https://example.com/story-${index}`,
+      hnUrl: `https://news.ycombinator.com/item?id=${100 + index}`,
+      score: 10,
+      comments: 1,
+    };
+  }
+  const candidates = {
+    date: '2026-10-06',
+    fetchedAt: '2026-10-06T00:00:00.000Z',
+    github: { status: 'ok', fallback: false, items: Array.from({ length: 7 }, (_, index) => githubItem(index)) },
+    hackernews: { status: 'ok', items: Array.from({ length: 6 }, (_, index) => hnItem(index)) },
+  };
+  const summaries = {
+    date: '2026-10-06',
+    github: Object.fromEntries(Array.from({ length: 7 }, (_, index) => [
+      `octo/repo-${index}`,
+      { summary: `這是第 ${index} 個專案的中文摘要，說明它做什麼、給誰用。` },
+    ])),
+    hackernews: Object.fromEntries(Array.from({ length: 6 }, (_, index) => [
+      100 + index,
+      { titleZh: `中文標題 ${index}`, summary: `這是第 ${index} 則討論的中文摘要，說明貼文在講什麼。` },
+    ])),
+    humor: [{
+      src: 'data/humor/2026-10-06/panel.svg',
+      alt: '一台流汗的電腦',
+      caption: '背景還在載入。',
+      relatedItemId: 'octo/repo-0',
+    }],
+  };
+  const { issue } = buildIssue({ candidates, summaries });
+  assert.equal(issue.items.length, ITEMS_PER_SOURCE * 2);
+  assert.equal(issue.items.filter((item) => item.source === 'github').length, ITEMS_PER_SOURCE);
+  assert.equal(issue.items.filter((item) => item.source === 'hackernews').length, ITEMS_PER_SOURCE);
+  assert.equal(issue.items[0].id, 'octo/repo-0');
+  assert.equal(issue.items.some((item) => item.id === 'octo/repo-5'), false);
+  assert.equal(issue.items.some((item) => item.id === 105), false);
+  assert.equal(issue.humor.length, 1);
+  assert.deepEqual(sourceCountProblems(issue), []);
+  assert.deepEqual(sourceCountProblems({
+    date: '2026-10-05',
+    items: Array.from({ length: 10 }, (_, index) => ({ source: 'github', id: `old/${index}` })),
+  }), []);
+  assert.ok(sourceCountProblems({
+    date: '2026-10-06',
+    items: Array.from({ length: 6 }, () => ({ source: 'github' })),
+  }).length > 0);
+
+  const stray = {
+    ...summaries,
+    github: { ...summaries.github, 'other/repo': { summary: '這則摘要沒有對應的候選項目，不應該入庫。' } },
+  };
+  assert.throws(() => buildIssue({ candidates, summaries: stray }), /摘要多了/);
 });
 
 test('the combined feed leads with the first source and then alternates by rank', () => {

@@ -7,13 +7,13 @@
     {
       "id": "github",
       "label": "GitHub",
-      "dailyCount": 10,
+      "dailyCount": 5,
       "skipPreviousIssues": 3
     },
     {
       "id": "hackernews",
       "label": "Hacker News",
-      "dailyCount": 10,
+      "dailyCount": 5,
       "skipPreviousIssues": 1
     }
   ],

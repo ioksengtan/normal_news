@@ -1,4 +1,5 @@
 import { decodeHtml } from './html.js';
+import { ITEMS_PER_SOURCE } from './limits.js';
 import { selectFresh } from './select.js';
 
 export function parseTrendingHtml(html) {
@@ -70,7 +71,7 @@ export function chooseGithub({
   searchItems = null,
   searchError = null,
   seenIds = [],
-  limit = 10,
+  limit = ITEMS_PER_SOURCE,
 }) {
   const trending = trendingSelection(trendingItems, trendingError, seenIds, limit);
   if (trending) {
