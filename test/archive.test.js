@@ -51,6 +51,13 @@ test('the month calendar starts on Sunday and marks days that have an issue', ()
   assert.deepEqual(shiftMonth(2026, 12, 1), { year: 2027, month: 1 });
 
   const html = renderArchive({ issues, selectedDate: '2026-10-02', year: 2026, month: 10 });
+  assert.match(html, /aria-expanded="false"/);
+  assert.match(html, /aria-label="看往期"/);
+  assert.match(html, /archive-panel" role="dialog" aria-label="往期月曆" hidden/);
+  assert.match(html, /上一期/);
+  const opened = renderArchive({ issues, selectedDate: '2026-10-02', year: 2026, month: 10, open: true });
+  assert.match(opened, /aria-expanded="true"/);
+  assert.equal(opened.includes('往期月曆" hidden'), false);
   assert.match(html, /2026 年 10 月/);
   assert.match(html, /<th scope="col">日<\/th>/);
   assert.match(html, /data-date="2026-10-02"[^>]*aria-current="date"/);
