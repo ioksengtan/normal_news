@@ -22,6 +22,8 @@ function presentTech(item) {
     stars: item.stars ?? null,
     score: item.score ?? 0,
     comments: item.comments ?? 0,
+    votesCount: item.votesCount ?? null,
+    dailyRank: item.dailyRank ?? null,
     links: Array.isArray(item.links) ? item.links : [],
     placeholder: item.placeholder === true,
     diagram: presentDiagram(item.diagram),

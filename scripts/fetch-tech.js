@@ -4,6 +4,7 @@ import { pathToFileURL } from 'url';
 import { chooseGithub, mapSearchItem, parseTrendingHtml, searchUrl, trendingSelection } from './tech/github.js';
 import { ITEMS_PER_SOURCE } from './tech/limits.js';
 import { selectHnStories } from './tech/hn.js';
+import { fetchProductHuntSection, productHuntLog } from './tech/producthunt.js';
 import { previousSectionIds } from './tech/select.js';
 import { taipeiDateString } from '../js/time.js';
 import { USER_AGENT } from './lib/http.js';
@@ -112,6 +113,7 @@ async function main() {
   const techSources = Array.isArray(config.techSources) ? config.techSources : [];
   const githubConfig = techSources.find((source) => source.id === 'github') || {};
   const hnConfig = techSources.find((source) => source.id === 'hackernews') || {};
+  const phConfig = techSources.find((source) => source.id === 'producthunt') || {};
   const date = arg('--date', taipeiDateString(new Date()));
   const issuesDir = path.resolve(root, arg('--issues-dir', 'data/issues'));
   const outPath = path.resolve(root, arg('--out', 'data/tech/candidates.json'));
@@ -120,9 +122,24 @@ async function main() {
   const hnSeen = previousSectionIds(issues, 'hackernews', hnConfig.skipPreviousIssues ?? 1, date);
   const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
 
-  const [github, hackernews] = await Promise.all([
+  const phSeen = previousSectionIds(issues, 'producthunt', phConfig.skipPreviousIssues ?? 1, date);
+  const [github, hackernews, producthunt] = await Promise.all([
     fetchGithubSection({ seenIds: githubSeen, date, token, limit: githubConfig.dailyCount || ITEMS_PER_SOURCE }),
     fetchHnSection({ seenIds: hnSeen, limit: hnConfig.dailyCount || ITEMS_PER_SOURCE }),
+    fetchProductHuntSection({
+      issueDate: date,
+      now: new Date(),
+      token: process.env.PRODUCT_HUNT_TOKEN || '',
+      limit: phConfig.dailyCount || ITEMS_PER_SOURCE,
+    }).then((section) => {
+      if (section.status !== 'ok') return section;
+      const seen = new Set(phSeen.map((id) => String(id)));
+      const items = (section.items || []).filter((item) => !seen.has(String(item.id)));
+      if (items.length === 0) {
+        return { ...section, status: 'failed', error: '都在近期刊出過', items: [] };
+      }
+      return { ...section, items };
+    }),
   ]);
 
   const candidates = {
@@ -131,12 +148,14 @@ async function main() {
     fetchedAt: new Date().toISOString(),
     github,
     hackernews,
+    producthunt,
   };
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, `${JSON.stringify(candidates, null, 2)}\n`);
   console.log(`已寫入 ${path.relative(root, outPath)}`);
   console.log(`GitHub：${github.status}，${github.items.length} 則，備援=${github.fallback ? '是' : '否'}${github.error ? `（${github.error}）` : ''}`);
   console.log(`Hacker News：${hackernews.status}，${hackernews.items.length} 則${hackernews.error ? `（${hackernews.error}）` : ''}`);
+  console.log(productHuntLog(producthunt));
 }
 
 const invoked = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;

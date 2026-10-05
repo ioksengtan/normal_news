@@ -20,6 +20,15 @@ function hackerNewsMeta(item) {
   return `分數 ${score} · 留言 ${comments}`;
 }
 
+function productHuntMeta(item) {
+  const parts = [];
+  if (Number.isInteger(item.dailyRank)) parts.push(`當日第 ${item.dailyRank} 名`);
+  if (item.votesCount != null) parts.push(`${Number(item.votesCount).toLocaleString('zh-TW')} 票`);
+  return parts.join(' · ');
+}
+
+const SOURCE_ORDER = ['github', 'hackernews', 'producthunt'];
+
 function sourceTag(item) {
   const label = item.sourceLabel || item.source;
   if (!label) return '';
@@ -36,6 +45,9 @@ function techLinks(item) {
   if (item.source === 'hackernews') {
     if (url) links.push(`<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">原文</a>`);
     if (discussion) links.push(`<a href="${escapeHtml(discussion)}" target="_blank" rel="noopener noreferrer">討論</a>`);
+  }
+  if (item.source === 'producthunt' && url) {
+    links.push(`<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Product Hunt</a>`);
   }
   for (const link of item.links || []) {
     const href = safeUrl(link.url);
@@ -69,7 +81,14 @@ function renderTech(item, lead) {
   const original = item.source === 'hackernews' && item.title
     ? `<p class="original-title">${escapeHtml(item.title)}</p>`
     : '';
-  const meta = item.source === 'hackernews' ? hackerNewsMeta(item) : githubMeta(item);
+  const meta = item.source === 'hackernews'
+    ? hackerNewsMeta(item)
+    : item.source === 'producthunt'
+      ? productHuntMeta(item)
+      : githubMeta(item);
+  const credit = item.source === 'producthunt'
+    ? '<p class="via-credit">via Product Hunt</p>'
+    : '';
   const anchor = /^story-[A-Za-z0-9_-]+$/.test(item.anchor || '') ? ` id="${item.anchor}"` : '';
   return `<article${anchor} class="item${lead ? ' is-lead' : ''}" data-source="${escapeHtml(item.source)}">
     ${sourceTag(item)}
@@ -77,8 +96,9 @@ function renderTech(item, lead) {
     ${original}
     ${renderSummary(item.summary)}
     ${renderDiagram(item, lead)}
-    <p class="meta">${escapeHtml(meta)}</p>
+    ${meta ? `<p class="meta">${escapeHtml(meta)}</p>` : ''}
     ${techLinks(item)}
+    ${credit}
   </article>`;
 }
 
@@ -114,6 +134,11 @@ function renderFilters(section) {
     seen.add(item.source);
     sources.push({ id: item.source, label: item.sourceLabel || item.source });
   }
+  sources.sort((a, b) => {
+    const ai = SOURCE_ORDER.indexOf(a.id);
+    const bi = SOURCE_ORDER.indexOf(b.id);
+    return (ai < 0 ? SOURCE_ORDER.length : ai) - (bi < 0 ? SOURCE_ORDER.length : bi);
+  });
   if (sources.length < 2) return '';
   const buttons = [
     '<button type="button" class="source-filter is-active" data-source="" aria-pressed="true">全部</button>',

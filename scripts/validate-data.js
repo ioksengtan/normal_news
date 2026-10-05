@@ -38,11 +38,16 @@ function main() {
   if ((config.sections || []).some((section) => section.id !== 'tech' && section.source === 'issue')) {
     problems.push('科技內容仍拆成多個來源版');
   }
+  const configured = new Set();
   for (const source of config.techSources || []) {
+    configured.add(source.id);
     if (!ALLOWED.has(source.id)) problems.push(`techSources 含有未允許的來源 ${source.id}`);
     if (ALLOWED.has(source.id) && source.dailyCount !== ITEMS_PER_SOURCE) {
       problems.push(`${source.id} 的每日則數應為 ${ITEMS_PER_SOURCE}`);
     }
+  }
+  for (const source of TECH_SOURCES) {
+    if (!configured.has(source.id)) problems.push(`techSources 缺少 ${source.id}`);
   }
   for (const name of REMOVED_FILES) {
     if (fs.existsSync(path.join(dataDir, name))) problems.push(`仍有 ${name}`);
@@ -82,6 +87,13 @@ function main() {
         if (!/^https:\/\/news\.ycombinator\.com\/item\?id=\d+$/.test(item.hnUrl || '')) {
           problems.push(`${label} 的討論連結無效`);
         }
+      }
+      if (item.source === 'producthunt') {
+        if (item.sourceLabel !== 'Product Hunt') problems.push(`${label} 的來源標籤應為 Product Hunt`);
+        if (!/^https:\/\/(www\.)?producthunt\.com\//.test(item.url || '')) {
+          problems.push(`${label} 必須連到 Product Hunt 貼文`);
+        }
+        if ('tagline' in item || 'description' in item) problems.push(`${label} 不應刊出標語或原文說明`);
       }
       for (const key of FORBIDDEN_KEYS) {
         if (key in item) problems.push(`${label} 含有 ${key}`);
