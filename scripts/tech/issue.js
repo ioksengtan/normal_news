@@ -1,4 +1,5 @@
 import { TECH_SOURCES, interleaveByRank } from './combine.js';
+import { ITEMS_PER_SOURCE } from './limits.js';
 
 const PLACEHOLDER_RE = /【(?:占位摘要|待譯)/u;
 
@@ -24,7 +25,13 @@ function fail(errors) {
   throw error;
 }
 
-export function buildIssue({ candidates, summaries, existingIndex = { issues: [] }, allowPlaceholders = false }) {
+export function buildIssue({
+  candidates,
+  summaries,
+  existingIndex = { issues: [] },
+  allowPlaceholders = false,
+  perSourceLimit = ITEMS_PER_SOURCE,
+}) {
   const errors = [];
   if (!candidates?.date || !/^\d{4}-\d{2}-\d{2}$/.test(candidates.date)) {
     errors.push('候選檔缺少日期');
@@ -38,6 +45,7 @@ export function buildIssue({ candidates, summaries, existingIndex = { issues: []
     const built = publicSection(source.id, candidates[source.id], summaries[source.id], {
       allowPlaceholders,
       errors,
+      limit: perSourceLimit,
       toPublic: source.id === 'hackernews' ? toHackerNews : toGithub,
     });
     return { source, built };
@@ -127,7 +135,7 @@ function withDiagram(item, entry) {
   return { ...item, diagram: entry.diagram };
 }
 
-function publicSection(name, block, summaryTable, { toPublic, errors, allowPlaceholders }) {
+function publicSection(name, block, summaryTable, { toPublic, errors, allowPlaceholders, limit }) {
   if (!block || (block.status !== 'ok' && block.status !== 'failed')) {
     errors.push(`${name} 候選資料缺少 status`);
     return { status: 'failed', fallback: false, error: '候選資料不完整', items: [] };
@@ -142,7 +150,9 @@ function publicSection(name, block, summaryTable, { toPublic, errors, allowPlace
   }
   const items = [];
   const seen = new Set();
-  for (const item of block.items || []) {
+  const kept = (block.items || []).slice(0, limit);
+  const dropped = new Set((block.items || []).slice(limit).map((item) => String(item.id)));
+  for (const item of kept) {
     const entry = lookup(summaryTable, item.id);
     if (entry == null) {
       errors.push(`${name} ${item.id} 沒有摘要`);
@@ -154,7 +164,7 @@ function publicSection(name, block, summaryTable, { toPublic, errors, allowPlace
     }
     items.push(toPublic(item, entry, errors, allowPlaceholders));
   }
-  const extra = summaryKeys(summaryTable).filter((id) => !seen.has(String(id)));
+  const extra = summaryKeys(summaryTable).filter((id) => !seen.has(String(id)) && !dropped.has(String(id)));
   for (const id of extra) errors.push(`${name} 摘要多了候選檔沒有的項目 ${id}`);
   return {
     status: 'ok',

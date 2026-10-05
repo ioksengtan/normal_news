@@ -81,7 +81,14 @@ function rowsOf(cells) {
   return rows;
 }
 
-export function renderArchive({ issues, selectedDate = '', year, month }) {
+function calendarIcon() {
+  return `<svg class="archive-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+    <rect x="3.5" y="5" width="17" height="15.5" fill="none" stroke="currentColor" stroke-width="1.6"></rect>
+    <path d="M3.5 10h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.6"></path>
+  </svg>`;
+}
+
+export function renderArchive({ issues, selectedDate = '', year, month, open = false }) {
   const list = sortIssues(issues);
   const byDate = new Map(list.map((entry) => [entry.date, entry]));
   const selected = parseIssueDate(selectedDate);
@@ -106,14 +113,25 @@ export function renderArchive({ issues, selectedDate = '', year, month }) {
   const nextButton = next
     ? `<button type="button" class="archive-jump" data-date="${escapeHtml(next.date)}">下一期</button>`
     : '<button type="button" class="archive-jump" disabled>下一期</button>';
-  return `<div class="archive-month">
-    <button type="button" class="archive-shift" data-shift="-1" aria-label="上個月">‹</button>
-    <span class="archive-label">${label}</span>
-    <button type="button" class="archive-shift" data-shift="1" aria-label="下個月">›</button>
+  const expanded = open ? 'true' : 'false';
+  const hidden = open ? '' : ' hidden';
+  return `<div class="archive-bar">
+    ${previousButton}
+    <button type="button" class="archive-toggle" aria-expanded="${expanded}" aria-controls="archive-panel" aria-haspopup="dialog" aria-label="看往期">
+      ${calendarIcon()}
+      <span class="archive-toggle-label">看往期</span>
+    </button>
+    ${nextButton}
   </div>
-  <table class="archive-cal">
-    <thead><tr>${head}</tr></thead>
-    <tbody>${body}</tbody>
-  </table>
-  <div class="archive-jumps">${previousButton}${nextButton}</div>`;
+  <div id="archive-panel" class="archive-panel" role="dialog" aria-label="往期月曆"${hidden}>
+    <div class="archive-month">
+      <button type="button" class="archive-shift" data-shift="-1" aria-label="上個月">‹</button>
+      <span class="archive-label">${label}</span>
+      <button type="button" class="archive-shift" data-shift="1" aria-label="下個月">›</button>
+    </div>
+    <table class="archive-cal">
+      <thead><tr>${head}</tr></thead>
+      <tbody>${body}</tbody>
+    </table>
+  </div>`;
 }

@@ -44,6 +44,7 @@ async function main() {
   let config = { sections: [] };
   let issues = [];
   let viewMonth = null;
+  let calendarOpen = false;
   let paintToken = 0;
   let shownDate = '';
 
@@ -76,8 +77,22 @@ async function main() {
     paint();
   }
 
+  function closeCalendar({ focusToggle = false } = {}) {
+    if (!calendarOpen) return;
+    calendarOpen = false;
+    paintCalendar();
+    if (focusToggle) archive?.querySelector('.archive-toggle')?.focus();
+  }
+
   if (archive) {
     archive.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const toggle = event.target.closest('.archive-toggle');
+      if (toggle) {
+        calendarOpen = !calendarOpen;
+        paintCalendar();
+        return;
+      }
       const shift = event.target.closest('[data-shift]');
       if (shift && viewMonth) {
         viewMonth = shiftMonth(viewMonth.year, viewMonth.month, Number(shift.dataset.shift));
@@ -88,21 +103,37 @@ async function main() {
       if (!jump || jump.disabled) return;
       const date = parseIssueDate(jump.dataset.date);
       if (!date) return;
+      calendarOpen = false;
       openDate(date);
     });
   }
+
+  document.addEventListener('click', (event) => {
+    if (!calendarOpen || archive?.contains(event.target)) return;
+    closeCalendar();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    closeCalendar({ focusToggle: true });
+  });
 
   function paintCalendar() {
     const selection = selectIssue({ issues, requestedDate: requestedDate() });
     const anchor = selection.entry?.date || selection.requested;
     if (!viewMonth && anchor) viewMonth = monthOf(anchor);
     if (archive && viewMonth) {
+      const active = archive.contains(document.activeElement) ? document.activeElement : null;
+      const activeShift = active?.dataset?.shift || '';
+      const activeToggle = Boolean(active?.closest?.('.archive-toggle'));
       archive.innerHTML = renderArchive({
         issues,
         selectedDate: selection.entry?.date || '',
         year: viewMonth.year,
         month: viewMonth.month,
+        open: calendarOpen,
       });
+      if (activeToggle) archive.querySelector('.archive-toggle')?.focus();
+      if (activeShift) archive.querySelector(`[data-shift="${activeShift}"]`)?.focus();
     }
     return selection;
   }

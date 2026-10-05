@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { pathToFileURL } from 'url';
 import { chooseGithub, mapSearchItem, parseTrendingHtml, searchUrl, trendingSelection } from './tech/github.js';
+import { ITEMS_PER_SOURCE } from './tech/limits.js';
 import { selectHnStories } from './tech/hn.js';
 import { previousSectionIds } from './tech/select.js';
 import { taipeiDateString } from '../js/time.js';
@@ -120,8 +121,8 @@ async function main() {
   const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
 
   const [github, hackernews] = await Promise.all([
-    fetchGithubSection({ seenIds: githubSeen, date, token, limit: githubConfig.dailyCount || 10 }),
-    fetchHnSection({ seenIds: hnSeen, limit: hnConfig.dailyCount || 10 }),
+    fetchGithubSection({ seenIds: githubSeen, date, token, limit: githubConfig.dailyCount || ITEMS_PER_SOURCE }),
+    fetchHnSection({ seenIds: hnSeen, limit: hnConfig.dailyCount || ITEMS_PER_SOURCE }),
   ]);
 
   const candidates = {
