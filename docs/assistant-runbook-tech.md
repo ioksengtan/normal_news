@@ -18,9 +18,9 @@ node scripts/fetch-tech.js
 
 抓取使用使用者代理字串 `normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。
 
-這會寫出 `data/tech/candidates.json`，裡面分 `github`、`hackernews` 與 `producthunt` 三組候選，方便對照撰寫摘要。這個檔案只供當天工作，不要提交。入庫時才合併成一份 `items`。有 Product Hunt 的一天一共 15 則：GitHub 5 則、Hacker News 5 則、Product Hunt 5 則。Product Hunt 當天略過時，該期是 10 則。2026-10-05 與更早的期次維持當時各來源 10 則，不要重跑那些日期來改則數。
+這會寫出 `data/tech/candidates.json`，裡面分 `github`、`hackernews` 與 `producthunt` 三組候選，方便對照撰寫摘要。這個檔案只供當天工作，不要提交。入庫時才合併成一份 `items`。每一期一共 10 則。Product Hunt 有資料時是 GitHub 4 則、Hacker News 3 則、Product Hunt 3 則；當天略過 Product Hunt 時是 GitHub 5 則、Hacker News 5 則。則數寫在 `data/sections.json`：`dailyCount` 是沒有 Product Hunt 時的則數，GitHub 與 Hacker News 的 `withProductHunt` 是有 Product Hunt 時的則數。2026-10-05 與更早的期次維持當時各來源 10 則，不要重跑那些日期來改則數。
 
-GitHub 先解析 https://github.com/trending?since=daily 。扣掉近 3 期已刊出的專案後，若失敗或少於 5 則，改走搜尋介面（過去 7 天新建、依星數排序），並在候選檔標記備援。Hacker News 讀官方的 `topstories.json` 與 `item/{id}.json`。Product Hunt 只對 `https://api.producthunt.com/v2/api/graphql` 發一次 POST，查詢前一個已經結束的美國太平洋日、`featured: true`、依 `RANKING` 排序的 5 則。時區用 `America/Los_Angeles`：日光節約時間到 2026-11-01 為止是 -07:00，之後是 -08:00。權杖放在執行這支程式的機器的環境變數 `PRODUCT_HUNT_TOKEN`，不要寫進檔案，也不要放到 GitHub Actions。沒有權杖、或 API 出錯、或速率限制用盡時，日誌會寫 `Product Hunt：略過（…）`，當天不刊 Product Hunt。每個來源每天最多 5 則；候選或摘要若多於 5 則，入庫只留下名次較前的 5 則。過去 3 期出現過的 GitHub 專案、前一期出現過的 Hacker News 討論或 Product Hunt 產品、以及徵才貼文會自動跳過。
+先向 Product Hunt 查一次，再依結果決定 GitHub 與 Hacker News 要幾則。GitHub 先解析 https://github.com/trending?since=daily 。扣掉近 3 期已刊出的專案後，若失敗或少於當天要的則數，改走搜尋介面（過去 7 天新建、依星數排序），並在候選檔標記備援。Hacker News 讀官方的 `topstories.json` 與 `item/{id}.json`。Product Hunt 只對 `https://api.producthunt.com/v2/api/graphql` 發一次 POST，查詢前一個已經結束的美國太平洋日、`featured: true`、依 `RANKING` 排序，`first` 用它的 `dailyCount`（目前是 3）。時區用 `America/Los_Angeles`：日光節約時間到 2026-11-01 為止是 -07:00，之後是 -08:00。權杖放在執行這支程式的機器的環境變數 `PRODUCT_HUNT_TOKEN`，不要寫進檔案，也不要放到 GitHub Actions。沒有權杖、或 API 出錯、或速率限制用盡時，日誌會寫 `Product Hunt：略過（…）`，當天不刊 Product Hunt，GitHub 與 Hacker News 各取 5 則。候選或摘要若多於當天的則數，入庫只留下名次較前的那些。過去 3 期出現過的 GitHub 專案、前一期出現過的 Hacker News 討論或 Product Hunt 產品、以及徵才貼文會自動跳過。
 
 若備援搜尋遇到未登入的每小時次數上限，用 GitHub CLI 的權杖再抓一次。在 GitHub Actions 裡則帶工作流程內建的 `GITHUB_TOKEN`：
 

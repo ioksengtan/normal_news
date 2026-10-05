@@ -2,7 +2,7 @@
 
 公開頁面只顯示我們自己寫的中文標題與摘要，以及原文連結。不顯示被標記的原文。
 
-首頁是一份報紙，只有一個科技版。有 Product Hunt 的一天是 15 則：GitHub trending 5 則、Hacker News 5 則、Product Hunt 5 則，合在同一份清單，每則帶來源標籤。Product Hunt 當天略過時，該期是 10 則。頭條是 GitHub 當日第一名，其餘依來源名次交錯排列。Lobsters 依抓取規範不收錄；Product Hunt 只走官方 API，見 [docs/crawling-policy.md](docs/crawling-policy.md)。科技版沒有模型金鑰，步驟見 [docs/assistant-runbook-tech.md](docs/assistant-runbook-tech.md)。
+首頁是一份報紙，只有一個科技版。每一期 10 則，合在同一份清單，每則帶來源標籤。Product Hunt 有資料時是 GitHub 4 則、Hacker News 3 則、Product Hunt 3 則；當天略過時是 GitHub 5 則、Hacker News 5 則。則數在 `data/sections.json`。頭條是 GitHub 當日第一名，其餘依來源名次交錯排列。Lobsters 依抓取規範不收錄；Product Hunt 只走官方 API，見 [docs/crawling-policy.md](docs/crawling-policy.md)。科技版沒有模型金鑰，步驟見 [docs/assistant-runbook-tech.md](docs/assistant-runbook-tech.md)。
 
 科技版抓取使用 `normal-news-bot/0.2 (+https://github.com/ioksengtan/normal_news)`。抓取前先讀 robots.txt。只遵守 `normal-news-bot` 與 `*` 的規則。訓練爬蟲的規則不適用。robots.txt 回傳 401 或 403 視為全部禁止。重新導向到新主機時，先檢查該主機的 robots.txt。內容請求若收到 403，不換 User-Agent、不換 IP。啟用來源前會由人閱讀 robots.txt 註解與使用條款，明確反對就停用。
 

@@ -5,7 +5,7 @@ import { readJson } from './lib/jsonio.js';
 import { archiveProblems } from './tech/archive.js';
 import { TECH_SOURCES } from './tech/combine.js';
 import { diagramProblems, humorProblems } from './lib/svg.js';
-import { ITEMS_PER_SOURCE, sourceCountProblems } from './tech/limits.js';
+import { sourceCountProblems } from './tech/limits.js';
 
 const USAGE = `用法：npm run validate-data -- [--data-dir data]
 
@@ -42,8 +42,12 @@ function main() {
   for (const source of config.techSources || []) {
     configured.add(source.id);
     if (!ALLOWED.has(source.id)) problems.push(`techSources 含有未允許的來源 ${source.id}`);
-    if (ALLOWED.has(source.id) && source.dailyCount !== ITEMS_PER_SOURCE) {
-      problems.push(`${source.id} 的每日則數應為 ${ITEMS_PER_SOURCE}`);
+    if (ALLOWED.has(source.id) && (!Number.isInteger(source.dailyCount) || source.dailyCount < 1)) {
+      problems.push(`${source.id} 的 dailyCount 必須是正整數`);
+    }
+    if ((source.id === 'github' || source.id === 'hackernews')
+      && (!Number.isInteger(source.withProductHunt) || source.withProductHunt < 1)) {
+      problems.push(`${source.id} 缺少 withProductHunt`);
     }
   }
   for (const source of TECH_SOURCES) {
@@ -72,7 +76,7 @@ function main() {
     }
     if (issue.sections) problems.push(`${entry.date} 仍按來源拆版`);
     if (issue.items[0] && issue.items[0].rank !== 0) problems.push(`${entry.date} 的頭條不是來源第一名`);
-    problems.push(...sourceCountProblems(issue));
+    problems.push(...sourceCountProblems(issue, { techSources: config.techSources }));
     for (const item of issue.items) {
       itemCount += 1;
       const label = `${entry.date} ${item.source || '?'} ${item.id || '?'}`;

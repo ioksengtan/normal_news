@@ -31,6 +31,7 @@ export function buildIssue({
   existingIndex = { issues: [] },
   allowPlaceholders = false,
   perSourceLimit = ITEMS_PER_SOURCE,
+  perSourceLimits = null,
 }) {
   const errors = [];
   if (!candidates?.date || !/^\d{4}-\d{2}-\d{2}$/.test(candidates.date)) {
@@ -48,7 +49,7 @@ export function buildIssue({
     const built = publicSection(source.id, block, summaries?.[source.id], {
       allowPlaceholders,
       errors,
-      limit: perSourceLimit,
+      limit: perSourceLimits?.[source.id] ?? perSourceLimit,
       toPublic: publishers[source.id] || toGithub,
     });
     return { source, built };

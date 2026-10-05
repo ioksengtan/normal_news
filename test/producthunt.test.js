@@ -7,6 +7,7 @@ import { buildPaper } from '../js/paper.js';
 import { renderSections } from '../js/render.js';
 import { buildIssue } from '../scripts/tech/issue.js';
 import { interleaveByRank } from '../scripts/tech/combine.js';
+import { limitsFromConfig, sourceCountProblems } from '../scripts/tech/limits.js';
 import { productHuntWindow } from '../scripts/tech/pacific.js';
 import {
   PRODUCT_HUNT_ENDPOINT,
@@ -86,6 +87,7 @@ test('Product Hunt uses one official API call and skips when the token or the AP
     issueDate: '2026-10-06',
     token: 'test-token',
     wait: false,
+    limit: 3,
     fetchImpl: async (url, options) => {
       calls += 1;
       assert.equal(url, PRODUCT_HUNT_ENDPOINT);
@@ -100,7 +102,7 @@ test('Product Hunt uses one official API call and skips when the token or the AP
       assert.match(body.query, /topics\(first: 3\)/);
       assert.equal(body.variables.postedAfter, '2026-10-04T00:00:00-07:00');
       assert.equal(body.variables.postedBefore, '2026-10-05T00:00:00-07:00');
-      assert.equal(body.variables.first, 5);
+      assert.equal(body.variables.first, 3);
       return response({
         data: {
           posts: {
@@ -112,7 +114,7 @@ test('Product Hunt uses one official API call and skips when the token or the AP
   });
   assert.equal(calls, 1);
   assert.equal(limited.status, 'ok');
-  assert.deepEqual(limited.items.map((item) => item.dailyRank), [1, 2, 3, 4, 5]);
+  assert.deepEqual(limited.items.map((item) => item.dailyRank), [1, 2, 3]);
   assert.equal(limited.items[0].tagline, 'Tagline for 1');
   assert.equal(limited.rateLimit['x-rate-limit-remaining'], '0');
   assert.match(productHuntLog(limited), /太平洋日 2026-10-04/);
@@ -238,4 +240,80 @@ test('a Product Hunt summary cannot copy the tagline or description, and a skipp
   assert.ok(githubAt >= 0 && githubAt < hnAt && hnAt < phAt);
   assert.equal(fs.readFileSync(path.join(root, '.gitignore'), 'utf8').includes('data/tech/'), true);
   assert.equal(fs.readFileSync(path.join(root, 'scripts/tech/producthunt.js'), 'utf8').includes('PRODUCT_HUNT_TOKEN='), false);
+});
+
+test('a day with Product Hunt is 4 GitHub, 3 Hacker News, and 3 Product Hunt', () => {
+  const withHunt = limitsFromConfig(config.techSources, { withProductHunt: true });
+  const withoutHunt = limitsFromConfig(config.techSources, { withProductHunt: false });
+  assert.deepEqual(withHunt, { github: 4, hackernews: 3, producthunt: 3 });
+  assert.deepEqual(withoutHunt, { github: 5, hackernews: 5, producthunt: 3 });
+
+  function githubItem(index) {
+    return {
+      id: `octo/repo-${index}`,
+      name: `octo/repo-${index}`,
+      url: `https://github.com/octo/repo-${index}`,
+      description: `Project ${index} does a concrete job.`,
+    };
+  }
+  function hnItem(index) {
+    return {
+      id: 200 + index,
+      title: `Original title ${index}`,
+      url: `https://example.com/story-${index}`,
+      hnUrl: `https://news.ycombinator.com/item?id=${200 + index}`,
+      score: 4,
+      comments: 1,
+    };
+  }
+  function phItem(index) {
+    return {
+      id: `ph-${index}`,
+      name: `Product ${index}`,
+      tagline: `Tagline ${index} stays out`,
+      description: `Description ${index} stays out of the summary.`,
+      url: `https://www.producthunt.com/posts/product-${index}`,
+      votesCount: 10 + index,
+      dailyRank: index + 1,
+    };
+  }
+  const candidates = {
+    date: '2026-10-06',
+    github: { status: 'ok', items: Array.from({ length: 6 }, (_, index) => githubItem(index)) },
+    hackernews: { status: 'ok', items: Array.from({ length: 5 }, (_, index) => hnItem(index)) },
+    producthunt: { status: 'ok', items: Array.from({ length: 4 }, (_, index) => phItem(index)) },
+  };
+  const summaries = {
+    date: '2026-10-06',
+    github: Object.fromEntries(Array.from({ length: 6 }, (_, index) => [
+      `octo/repo-${index}`,
+      { summary: `這是第 ${index} 個專案的中文摘要，說明它做什麼、給誰用。` },
+    ])),
+    hackernews: Object.fromEntries(Array.from({ length: 5 }, (_, index) => [
+      200 + index,
+      { titleZh: `中文標題 ${index}`, summary: `這是第 ${index} 則討論的中文摘要，說明貼文在講什麼。` },
+    ])),
+    producthunt: Object.fromEntries(Array.from({ length: 4 }, (_, index) => [
+      `ph-${index}`,
+      { summary: `這是第 ${index} 個產品的中文摘要，說明它做什麼、給誰用。` },
+    ])),
+  };
+  const { issue } = buildIssue({ candidates, summaries, perSourceLimits: withHunt });
+  assert.equal(issue.items.filter((item) => item.source === 'github').length, 4);
+  assert.equal(issue.items.filter((item) => item.source === 'hackernews').length, 3);
+  assert.equal(issue.items.filter((item) => item.source === 'producthunt').length, 3);
+  assert.equal(issue.items.length, 10);
+  assert.deepEqual(sourceCountProblems(issue, { techSources: config.techSources }), []);
+  const tooMany = {
+    date: '2026-10-06',
+    items: [
+      ...Array.from({ length: 5 }, (_, index) => ({ source: 'github', id: `g${index}` })),
+      { source: 'producthunt', id: 'ph' },
+    ],
+  };
+  assert.ok(sourceCountProblems(tooMany, { techSources: config.techSources }).some((problem) => problem.includes('github')));
+  assert.deepEqual(sourceCountProblems({
+    date: '2026-10-06',
+    items: Array.from({ length: 5 }, (_, index) => ({ source: 'github', id: `g${index}` })),
+  }, { techSources: config.techSources }), []);
 });
