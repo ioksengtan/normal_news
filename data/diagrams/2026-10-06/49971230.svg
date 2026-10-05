@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 350">
+  <rect width="360" height="350" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="26" text-anchor="middle">少走路，還是少爬坡？</text>
+  <path d="M40,190 L130,190 C150,120 210,120 230,190 L320,190" fill="#ebe4d4" stroke="#5e584e" stroke-width="1"/>
+  <text x="180" y="168" text-anchor="middle" class="sub">山坡</text>
+  <circle cx="40" cy="190" r="9" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="40" y="215" text-anchor="middle">起點</text>
+  <circle cx="320" cy="190" r="9" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="320" y="215" text-anchor="middle">終點</text>
+  <path d="M48,184 C120,184 140,112 180,112 C220,112 240,184 310,184" fill="none" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <text x="180" y="62" text-anchor="middle">最短：路短、坡多</text>
+  <line x1="180" y1="70" x2="180" y2="104" stroke="#5e584e" stroke-width="1" stroke-dasharray="3 3"/>
+  <path d="M48,196 C90,240 140,240 180,240 C220,240 270,240 312,197" fill="none" stroke="#1c1915" stroke-width="2" stroke-dasharray="7 4" marker-end="url(#箭頭)"/>
+  <text x="180" y="264" text-anchor="middle">最平坦：繞遠一點、坡少</text>
+  <line x1="50" y1="304" x2="310" y2="304" stroke="#1c1915" stroke-width="3"/>
+  <rect x="160" y="292" width="24" height="24" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="50" y="292" class="sub">最短</text>
+  <text x="310" y="292" text-anchor="end" class="sub">最平坦</text>
+  <text x="180" y="338" text-anchor="middle" class="sub">往右：路線不會變短，爬升也不會增加</text>
+</svg>

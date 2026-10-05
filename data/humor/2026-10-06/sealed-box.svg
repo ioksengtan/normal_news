@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260">
+  <rect width="360" height="260" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="150" y="96" width="60" height="52" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <line x1="150" y1="110" x2="210" y2="110" stroke="#1c1915" stroke-width="1"/>
+  <text x="180" y="134" text-anchor="middle" class="sub">備份</text>
+  <rect x="172" y="88" width="16" height="10" fill="#fffdf8" stroke="#1c1915" stroke-width="1.2"/>
+  <circle cx="70" cy="80" r="18" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="52" y="100" width="36" height="52" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <line x1="88" y1="112" x2="146" y2="98" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="290" cy="80" r="18" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="272" y="100" width="36" height="52" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="236" y="150" width="50" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="261" y="175" text-anchor="middle" class="sub">新箱</text>
+  <rect x="14" y="16" width="150" height="34" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="89" y="38" text-anchor="middle">封條沒被拆過！</text>
+  <rect x="210" y="16" width="136" height="34" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="278" y="38" text-anchor="middle">那換新的一箱</text>
+  <text x="180" y="225" text-anchor="middle" class="sub">每 1 到 3 年交接一次</text>
+</svg>

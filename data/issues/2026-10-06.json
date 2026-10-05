@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-06",
+  "issueNumber": 7,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-06T07:00:00+08:00",
+  "fetchedAt": "2026-10-05T22:52:49.585Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "tester-army/e2e",
+      "name": "tester-army/e2e",
+      "url": "https://github.com/tester-army/e2e",
+      "language": "TypeScript",
+      "starsToday": 1430,
+      "stars": 4685,
+      "summary": "e2e 是一套給網頁與手機應用程式用的端對端測試框架。端對端測試就像請一位試用員從進門一路走到結帳，確認整趟流程都順。說明文件寫道，開發者可以用一般英文寫下目標，例如「把工作區升級成 Pro 方案」，由人工智慧代理程式自己操作應用程式去完成，再用同一份測試裡的檢查條件確認結果。代理程式的步驟若通過後面的檢查，動作會被錄下來，下一次直接重播，在應用程式改變之前不必再呼叫模型；沒有代理程式步驟的測試完全不需要模型。網頁部分透過 Playwright 支援 Chromium、Firefox 與 WebKit 三種瀏覽器，手機部分支援 iOS 與 Android 的模擬器。專案由 TesterArmy 開發，採 Apache-2.0 授權，目前仍在邁向 1.0 版，介面與設定可能還會改變。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-06/tester-army/e2e.svg",
+        "alt": "流程圖：寫下目標，代理程式操作應用程式，檢查通過後錄下動作，下一次直接重播不呼叫模型。",
+        "caption": "e2e 的代理程式步驟通過檢查後會被錄下，下一次照著重播。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 49969183,
+      "title": "Beam: Reflection's 501B open-weight model",
+      "titleZh": "Reflection 發表 5010 億參數的開放權重模型 Beam",
+      "url": "https://reflection.ai/blog/introducing-beam",
+      "hnUrl": "https://news.ycombinator.com/item?id=49969183",
+      "score": 234,
+      "comments": 63,
+      "summary": "人工智慧公司 Reflection 在 10 月 5 日發表第一個開放權重模型 Beam。開放權重是把訓練好的模型檔公開讓人下載，就像公開一道做好的菜，讓大家帶回家自己加熱。Beam 採用混合專家架構，總共有 5010 億個參數，每次只啟用 230 億個，像一間有很多專科醫師的醫院，每位病人只看其中幾位。該公司表示，模型先用 23.8 兆個詞元（模型計算文字的單位）預先訓練，再用 10,500 張 NVIDIA GB300 顯示卡進行 4 週的強化學習，也就是讓模型反覆做題、做對給分，共產生超過 1 億回練習。該公司表示，在進階推理測試中，Beam 的分數與 GLM-5.2 相當，推理計算量少 3 到 4 倍；Kimi K3 等模型在整體能力上仍領先。模型還在做最後的安全測試，權重與技術報告預定本月稍晚公開。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "earthtojake/text-to-cad",
+      "name": "earthtojake/text-to-cad",
+      "url": "https://github.com/earthtojake/text-to-cad",
+      "language": "Python",
+      "starsToday": 456,
+      "stars": 17377,
+      "summary": "text-to-cad 是一個外掛程式，讓人工智慧代理程式在使用者自己的電腦上做出 3D 模型。外掛程式就像幫工具箱多裝一格新工具。電腦輔助設計（CAD）是工程師用來畫零件的軟體，這個專案讓代理程式依文字要求產生 STEP、GLB、STL 或 3MF 格式的模型檔。說明文件寫道，它也能檢查零件是否適合製造、產生工程圖，並連接 3D 列印、鈑金與電腦數值控制（CNC）加工等製造服務。支援外掛或 skills 框架的代理程式都能使用，例如 Claude Code、Codex、Cursor、Gemini 與 Grok。安裝前需要先有 uv 這個工具，第一次啟動會下載執行所需的元件，所以要連上網路。專案採 MIT 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 49970871,
+      "title": "Dust: Pretraining Transformers Without Backpropagation",
+      "titleZh": "Dust：不用反向傳播來預先訓練 Transformer 模型",
+      "url": "https://qlabs.sh/research/dust",
+      "hnUrl": "https://news.ycombinator.com/item?id=49970871",
+      "score": 52,
+      "comments": 4,
+      "summary": "這篇研究由 Samip Dahal 等四位作者發表在 qlabs 網站上，提出一種叫 Dust 的方法來訓練語言模型。現在的模型多半用「反向傳播」學習：答錯之後，從答案一路往回算出每個零件該怎麼調，像老師逐題往回批改。Dust 不往回算，而是在每個詞元上輕推模型內部的訊號，看哪個方向讓錯誤變少，再把結果平均起來，像一群人各自試走不同的路，最後採用大家回報的方向。作者說明，每個詞元都算一位試走者，一次往前計算就能同時試完。作者的實驗顯示，在 10 萬與 100 萬個詞元的訓練量下，Dust 的測試誤差低於反向傳播；在 1000 萬與 2000 萬個詞元時，差距隨試走人數增加而縮小。作者也寫道，Dust 的計算效率還要提高好幾個數量級，才能在實際規模上取代反向傳播。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-06/49970871.svg",
+        "alt": "上方是反向傳播：從答案往回算每個零件怎麼調；下方是 Dust：每個詞元輕推一下，看錯誤是否變少，再把結果平均。",
+        "caption": "反向傳播往回批改；Dust 讓每個詞元各試一次，再平均結果。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "boykopovar/AnyPS5",
+      "name": "boykopovar/AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "language": "C++",
+      "starsToday": 994,
+      "stars": 4903,
+      "summary": "AnyPS5 是一個工具，用來把 PlayStation 5（PS5）遊戲主機的執行檔自動移植到 Linux 與 Windows 電腦上執行。移植就像把一台機器專用的插頭，改成家裡插座能直接插的樣子。說明文件寫道，它包含一個重新連結器，把執行檔轉成目標系統原生的格式，並自行實作 PS5 的系統函式庫供程式連結；它不使用模擬，也不另外開一個執行環境。已驗證的遊戲之一是 2D 平台遊戲 Dreaming Sarah，在 GTX 1050 Ti 顯示卡與 i5-7500 處理器的電腦上以每秒 60 格穩定執行。專案表示，它不包含也不需要受版權保護的軟體、韌體或金鑰，使用者要自行確認所用檔案的取得方式合法。專案採 GNU 通用公共授權第 2 版。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 49971230,
+      "title": "Find the flattest route between any two points in SF",
+      "titleZh": "在舊金山找出任兩點之間最平坦的路線",
+      "url": "https://flattensf.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49971230",
+      "score": 39,
+      "comments": 8,
+      "summary": "Flatten SF 是一個網頁工具，幫人在舊金山找出爬坡較少的步行或單車路線。它在「少走路」和「少爬坡」之間放了一個滑桿，像在手搖飲店選甜度一樣，讓人自己挑一個平衡點。網站說明，路線在使用者的瀏覽器裡計算，涵蓋 16 萬段街道；高度資料來自美國地質調查局的 1 公尺光達測量，光達是用雷射量距離的儀器，街道圖則來自 Overture 與 OpenStreetMap。滑桿往右，路線不會變短，爬升也不會增加；最平坦的一端以「爬 1 英尺相當於多走 200 英尺」為界。爬升算的是一路累積的上坡，不只是起點與終點的高度差。步行可以走階梯，騎車則不走階梯；地點搜尋的資料已內建在網頁裡，不必連網查詢。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-06/49971230.svg",
+        "alt": "從起點到終點有兩條路：最短的一條翻過山坡，最平坦的一條繞路但坡少，下方是連接兩端的滑桿。",
+        "caption": "滑桿往右：路線不會變短，爬升也不會增加。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "calesthio/OpenMontage",
+      "name": "calesthio/OpenMontage",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "language": "Python",
+      "starsToday": 758,
+      "stars": 63974,
+      "summary": "OpenMontage 是一套開源的影片製作系統，讓人工智慧程式助手照著固定流程做出完整影片。開源的意思是程式碼公開，大家都能拿來用和修改。說明文件寫道，使用者用一般文字描述想要的影片，代理程式就依序進行研究、提案、腳本、分鏡、素材、剪輯與合成，像一個攝製團隊按照工作表分工。每個階段都有一份說明檔教代理程式怎麼做；代理程式做完會自我檢查、存下進度，遇到需要做創意決定的地方會請人同意。專案提供解說動畫、紀錄片蒙太奇、配音翻譯、播客剪輯等十多種流程，其中紀錄片流程可以從 Pexels、Archive.org 等免費素材庫找真實影片片段來剪。專案採 GNU Affero 通用公共授權第 3 版。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 49970667,
+      "title": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
+      "titleZh": "Opus 5.5 代理程式找到兩種室溫磁性半導體候選材料",
+      "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
+      "hnUrl": "https://news.ycombinator.com/item?id=49970667",
+      "score": 131,
+      "comments": 109,
+      "summary": "這篇文章由 Vals AI 的 Geby Jaff 撰寫，介紹一組 Claude Opus 5.5 人工智慧代理程式協助找出的兩種磁性材料候選。電腦記憶體可以利用電子的「自旋」存資料，自旋就像每顆電子身上一根朝上或朝下的小指針。作者說明，他們想找淨磁性為零、又能依自旋把電子分開的半導體，這類材料幾乎不外漏磁場，比較不會干擾旁邊的元件。第一種是代理程式設計的新化合物 YBaMnFeO₅，但模擬顯示它的原子排列在約 950 K（絕對溫度）會被打亂，可能很難做出可用的晶體。第二種是 1999 年就做出來的 KV[Cr(CN)₆]，屬於普魯士藍家族，當年的樣品到 376 K（攝氏 103 度）仍保持磁性排列。這些都是電腦計算的預測，自旋分離還沒有實際量測；作者已把計算檔與程式碼公開在 GitHub。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "caddyserver/caddy",
+      "name": "caddyserver/caddy",
+      "url": "https://github.com/caddyserver/caddy",
+      "language": "Go",
+      "starsToday": 526,
+      "stars": 77084,
+      "summary": "Caddy 是一套用 Go 語言寫的網頁伺服器。網頁伺服器就像餐廳的出餐櫃台，負責把網頁送到訪客的瀏覽器。說明文件寫道，它預設自動啟用超文字傳輸安全協定（HTTPS）：對外的網址會向 ZeroSSL 與 Let's Encrypt 申請憑證，內部名稱與網路位址則由它自己管理的本地憑證機構發給。憑證就像店門口的營業登記證，讓訪客確認沒有走錯店。設定可以寫在格式簡單的 Caddyfile，也可以用 JavaScript 物件表示法（JSON），還能透過應用程式介面在執行中修改。它預設支援超文字傳輸協定（HTTP）的 1.1、2 與 3 版，不依賴外部程式庫，能在多種平台上執行。Caddy 是 ZeroSSL 旗下的專案。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 49951693,
+      "title": "Using Blu-ray M-Disk as Backup of Last Resort",
+      "titleZh": "用藍光 M-Disc 光碟當最後一道備份",
+      "url": "https://smyck.net/2026/10/03/holocron-the-backup-of-last-resort/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49951693",
+      "score": 25,
+      "comments": 20,
+      "summary": "部落客 John-Paul Bader 分享他把重要資料燒進藍光 M-Disc 光碟，交給朋友保管的做法。這個想法像把家裡的備用鑰匙交給信任的朋友：萬一火災讓電腦和備份硬碟一起毀掉，朋友手上還有一份。他把整理好的文件、音樂收藏、旅行相簿，以及從零重建數位生活需要的東西燒成 3 片光碟，最重要的資料先壓縮並設定密碼。光碟放進防潮防塵的硬殼箱，墊上不會隨時間變黏的聚乙烯泡棉，再用有序號和條碼、一拆就斷的塑膠封條封好，箱裡還放一包會變色的乾燥劑。他打算每 1 到 3 年換新一次，交接時先檢查封條有沒有被拆過。他把這個箱子取名為 Holocron。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-10-06/sealed-box.svg",
+      "alt": "兩個小人交接備份箱，一人指著封條說封條還在，另一人遞上新的箱子。",
+      "caption": "交接時先檢查封條有沒有被拆過，再換上新的一箱。",
+      "relatedItemId": "49951693"
+    },
+    {
+      "src": "data/humor/2026-10-06/replay.svg",
+      "alt": "左邊的方塊機器人第一次操作時頭上冒出思考泡泡，右邊第二次只按下重播鍵。",
+      "caption": "e2e：第一次請模型想，檢查通過後，下一次照著錄好的動作重播。",
+      "relatedItemId": "tester-army/e2e"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260">
+  <rect width="360" height="260" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <line x1="180" y1="20" x2="180" y2="200" stroke="#5e584e" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="90" y="30" text-anchor="middle" class="sub">第一次</text>
+  <text x="270" y="30" text-anchor="middle" class="sub">下一次</text>
+  <ellipse cx="90" cy="70" rx="66" ry="24" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="90" y="75" text-anchor="middle">嗯…怎麼升級？</text>
+  <circle cx="84" cy="102" r="4" fill="#fffdf8" stroke="#1c1915"/>
+  <rect x="62" y="112" width="44" height="36" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="76" cy="128" r="4" fill="#1c1915"/>
+  <circle cx="92" cy="128" r="4" fill="#1c1915"/>
+  <rect x="66" y="150" width="36" height="40" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="236" y="54" width="68" height="36" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="270" y="78" text-anchor="middle">照錄好的</text>
+  <rect x="248" y="112" width="44" height="36" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <line x1="260" y1="128" x2="268" y2="128" stroke="#1c1915" stroke-width="2"/>
+  <line x1="274" y1="128" x2="282" y2="128" stroke="#1c1915" stroke-width="2"/>
+  <rect x="252" y="150" width="36" height="40" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="320" cy="168" r="16" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <path d="M314,159 L314,177 L328,168 Z" fill="#1c1915"/>
+  <line x1="288" y1="168" x2="302" y2="168" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="235" text-anchor="middle" class="sub">檢查通過後，下一次不必再呼叫模型</text>
+</svg>

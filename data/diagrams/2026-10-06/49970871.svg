@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380">
+  <rect width="360" height="380" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="26" text-anchor="middle">兩種讓模型學習的方法</text>
+  <rect x="14" y="40" width="332" height="140" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="26" y="62">反向傳播：老師往回批改</text>
+  <rect x="30" y="82" width="74" height="40" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="67" y="107" text-anchor="middle">輸入</text>
+  <rect x="143" y="82" width="74" height="40" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="107" text-anchor="middle">模型</text>
+  <rect x="256" y="82" width="74" height="40" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="293" y="107" text-anchor="middle">答案</text>
+  <line x1="104" y1="96" x2="139" y2="96" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <line x1="217" y1="96" x2="252" y2="96" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <path d="M293,124 C293,160 180,160 180,128" fill="none" stroke="#1c1915" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#箭頭)"/>
+  <text x="180" y="172" text-anchor="middle" class="sub">答錯後往回算：每個零件該怎麼調</text>
+  <rect x="14" y="196" width="332" height="170" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="26" y="218">Dust：一群人各自試走</text>
+  <circle cx="60" cy="252" r="14" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="120" cy="252" r="14" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="180" cy="252" r="14" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="240" cy="252" r="14" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="300" cy="252" r="14" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="284" text-anchor="middle" class="sub">每個詞元輕推一下：錯誤有沒有變少？</text>
+  <line x1="60" y1="292" x2="166" y2="318" stroke="#1c1915" stroke-width="1.2"/>
+  <line x1="120" y1="292" x2="172" y2="316" stroke="#1c1915" stroke-width="1.2"/>
+  <line x1="180" y1="292" x2="180" y2="314" stroke="#1c1915" stroke-width="1.2"/>
+  <line x1="240" y1="292" x2="188" y2="316" stroke="#1c1915" stroke-width="1.2"/>
+  <line x1="300" y1="292" x2="194" y2="318" stroke="#1c1915" stroke-width="1.2"/>
+  <rect x="110" y="318" width="140" height="36" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="341" text-anchor="middle">平均出調整方向</text>
+</svg>

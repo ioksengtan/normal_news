@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400">
+  <rect width="360" height="400" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="26" text-anchor="middle">e2e：先讓代理程式做，通過後錄下來</text>
+  <rect x="40" y="42" width="280" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="64" text-anchor="middle">1. 用一般英文寫下目標</text>
+  <text x="180" y="83" text-anchor="middle" class="sub">例如：把工作區升級成 Pro 方案</text>
+  <line x1="180" y1="92" x2="180" y2="114" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="40" y="118" width="280" height="50" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="140" text-anchor="middle">2. 代理程式操作應用程式</text>
+  <text x="180" y="159" text-anchor="middle" class="sub">網頁或手機模擬器</text>
+  <line x1="180" y1="168" x2="180" y2="190" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="40" y="194" width="280" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="216" text-anchor="middle">3. 用檢查條件確認結果</text>
+  <text x="180" y="235" text-anchor="middle" class="sub">通過了，就把動作錄下來</text>
+  <line x1="180" y1="244" x2="180" y2="266" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="40" y="270" width="280" height="50" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="292" text-anchor="middle">4. 下一次直接重播</text>
+  <text x="180" y="311" text-anchor="middle" class="sub">應用程式改變前，不必再呼叫模型</text>
+  <path d="M320,295 C352,295 352,143 324,143" fill="none" stroke="#5e584e" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#箭頭)"/>
+  <text x="180" y="350" text-anchor="middle" class="sub">應用程式改了，代理程式再重新操作一次</text>
+  <text x="180" y="380" text-anchor="middle" class="sub">沒有代理程式步驟的測試，完全不需要模型</text>
+</svg>
