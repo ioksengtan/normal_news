@@ -5,7 +5,7 @@ import { readJson } from './lib/jsonio.js';
 import { archiveProblems } from './tech/archive.js';
 import { TECH_SOURCES } from './tech/combine.js';
 import { diagramProblems, humorProblems } from './lib/svg.js';
-import { ITEMS_PER_SOURCE, sourceCountProblems } from './tech/limits.js';
+import { sourceCountProblems } from './tech/limits.js';
 
 const USAGE = `用法：npm run validate-data -- [--data-dir data]
 
@@ -38,11 +38,20 @@ function main() {
   if ((config.sections || []).some((section) => section.id !== 'tech' && section.source === 'issue')) {
     problems.push('科技內容仍拆成多個來源版');
   }
+  const configured = new Set();
   for (const source of config.techSources || []) {
+    configured.add(source.id);
     if (!ALLOWED.has(source.id)) problems.push(`techSources 含有未允許的來源 ${source.id}`);
-    if (ALLOWED.has(source.id) && source.dailyCount !== ITEMS_PER_SOURCE) {
-      problems.push(`${source.id} 的每日則數應為 ${ITEMS_PER_SOURCE}`);
+    if (ALLOWED.has(source.id) && (!Number.isInteger(source.dailyCount) || source.dailyCount < 1)) {
+      problems.push(`${source.id} 的 dailyCount 必須是正整數`);
     }
+    if ((source.id === 'github' || source.id === 'hackernews')
+      && (!Number.isInteger(source.withProductHunt) || source.withProductHunt < 1)) {
+      problems.push(`${source.id} 缺少 withProductHunt`);
+    }
+  }
+  for (const source of TECH_SOURCES) {
+    if (!configured.has(source.id)) problems.push(`techSources 缺少 ${source.id}`);
   }
   for (const name of REMOVED_FILES) {
     if (fs.existsSync(path.join(dataDir, name))) problems.push(`仍有 ${name}`);
@@ -67,7 +76,7 @@ function main() {
     }
     if (issue.sections) problems.push(`${entry.date} 仍按來源拆版`);
     if (issue.items[0] && issue.items[0].rank !== 0) problems.push(`${entry.date} 的頭條不是來源第一名`);
-    problems.push(...sourceCountProblems(issue));
+    problems.push(...sourceCountProblems(issue, { techSources: config.techSources }));
     for (const item of issue.items) {
       itemCount += 1;
       const label = `${entry.date} ${item.source || '?'} ${item.id || '?'}`;
@@ -82,6 +91,13 @@ function main() {
         if (!/^https:\/\/news\.ycombinator\.com\/item\?id=\d+$/.test(item.hnUrl || '')) {
           problems.push(`${label} 的討論連結無效`);
         }
+      }
+      if (item.source === 'producthunt') {
+        if (item.sourceLabel !== 'Product Hunt') problems.push(`${label} 的來源標籤應為 Product Hunt`);
+        if (!/^https:\/\/(www\.)?producthunt\.com\//.test(item.url || '')) {
+          problems.push(`${label} 必須連到 Product Hunt 貼文`);
+        }
+        if ('tagline' in item || 'description' in item) problems.push(`${label} 不應刊出標語或原文說明`);
       }
       for (const key of FORBIDDEN_KEYS) {
         if (key in item) problems.push(`${label} 含有 ${key}`);

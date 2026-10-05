@@ -1,6 +1,7 @@
 export const TECH_SOURCES = [
   { id: 'github', label: 'GitHub' },
   { id: 'hackernews', label: 'Hacker News' },
+  { id: 'producthunt', label: 'Product Hunt' },
 ];
 
 export function interleaveByRank(groups) {

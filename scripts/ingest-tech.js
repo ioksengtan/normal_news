@@ -3,6 +3,7 @@ import path from 'path';
 import { pathToFileURL } from 'url';
 import { indexFromDirectory, mergeIndex } from './tech/archive.js';
 import { buildIssue } from './tech/issue.js';
+import { limitsFromConfig, productHuntIncluded } from './tech/limits.js';
 
 function arg(name, fallback) {
   const index = process.argv.indexOf(name);
@@ -21,9 +22,20 @@ function main() {
   const allowPlaceholders = process.argv.includes('--allow-placeholders');
   const candidates = readJson(candidatesPath);
   const summaries = readJson(summariesPath);
+  const sectionsPath = path.resolve(root, arg('--sections', 'data/sections.json'));
+  const sections = readJson(sectionsPath);
+  const perSourceLimits = limitsFromConfig(sections.techSources, {
+    withProductHunt: productHuntIncluded(candidates.producthunt),
+  });
   fs.mkdirSync(issuesDir, { recursive: true });
   const existingIndex = mergeIndex(issuesDir);
-  const { issue } = buildIssue({ candidates, summaries, existingIndex, allowPlaceholders });
+  const { issue } = buildIssue({
+    candidates,
+    summaries,
+    existingIndex,
+    allowPlaceholders,
+    perSourceLimits,
+  });
   const issuePath = path.join(issuesDir, `${issue.date}.json`);
   fs.writeFileSync(issuePath, `${JSON.stringify(issue, null, 2)}\n`);
   const index = indexFromDirectory(issuesDir);

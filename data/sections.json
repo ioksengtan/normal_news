@@ -8,12 +8,20 @@
       "id": "github",
       "label": "GitHub",
       "dailyCount": 5,
+      "withProductHunt": 4,
       "skipPreviousIssues": 3
     },
     {
       "id": "hackernews",
       "label": "Hacker News",
       "dailyCount": 5,
+      "withProductHunt": 3,
+      "skipPreviousIssues": 1
+    },
+    {
+      "id": "producthunt",
+      "label": "Product Hunt",
+      "dailyCount": 3,
       "skipPreviousIssues": 1
     }
   ],

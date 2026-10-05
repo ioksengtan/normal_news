@@ -340,6 +340,13 @@ span.archive-day {
 .fallback-note,
 .section-notice { margin: var(--sp-2) 0 0; }
 
+.via-credit {
+  margin: var(--sp-1) 0 0;
+  color: var(--muted);
+  font-size: var(--fs-caption);
+  letter-spacing: 0.04em;
+}
+
 .empty {
   margin: var(--sp-3) 0;
   color: var(--muted);

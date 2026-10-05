@@ -31,6 +31,7 @@ export function buildIssue({
   existingIndex = { issues: [] },
   allowPlaceholders = false,
   perSourceLimit = ITEMS_PER_SOURCE,
+  perSourceLimits = null,
 }) {
   const errors = [];
   if (!candidates?.date || !/^\d{4}-\d{2}-\d{2}$/.test(candidates.date)) {
@@ -42,11 +43,14 @@ export function buildIssue({
   if (errors.length) fail(errors);
 
   const blocks = TECH_SOURCES.map((source) => {
-    const built = publicSection(source.id, candidates[source.id], summaries[source.id], {
+    const block = candidates[source.id] || (source.id === 'producthunt'
+      ? { status: 'failed', fallback: false, error: '今日未取得 Product Hunt', items: [] }
+      : undefined);
+    const built = publicSection(source.id, block, summaries?.[source.id], {
       allowPlaceholders,
       errors,
-      limit: perSourceLimit,
-      toPublic: source.id === 'hackernews' ? toHackerNews : toGithub,
+      limit: perSourceLimits?.[source.id] ?? perSourceLimit,
+      toPublic: publishers[source.id] || toGithub,
     });
     return { source, built };
   });
@@ -88,6 +92,12 @@ export function buildIssue({
   return { issue, index: { issues } };
 }
 
+const publishers = {
+  github: toGithub,
+  hackernews: toHackerNews,
+  producthunt: toProductHunt,
+};
+
 function toGithub(item, entry, errors, allowPlaceholders) {
   const summary = summaryText(entry);
   validateSummary(summary, item.description, `GitHub ${item.id}`, errors, allowPlaceholders);
@@ -127,6 +137,23 @@ function toHackerNews(item, entry, errors, allowPlaceholders) {
     comments: item.comments ?? 0,
     summary,
     placeholder: PLACEHOLDER_RE.test(summary) || PLACEHOLDER_RE.test(titleZh),
+  }, entry);
+}
+
+function toProductHunt(item, entry, errors, allowPlaceholders) {
+  const summary = summaryText(entry);
+  validateSummary(summary, [item.tagline, item.description], `Product Hunt ${item.id}`, errors, allowPlaceholders);
+  if (!/^https:\/\/(www\.)?producthunt\.com\//.test(item.url || '')) {
+    errors.push(`Product Hunt ${item.id} 必須連到 Product Hunt 貼文`);
+  }
+  return withDiagram({
+    id: item.id,
+    name: item.name,
+    url: item.url,
+    votesCount: item.votesCount ?? null,
+    dailyRank: item.dailyRank ?? null,
+    summary,
+    placeholder: PLACEHOLDER_RE.test(summary),
   }, entry);
 }
 
@@ -180,13 +207,26 @@ function summaryKeys(table) {
   return Object.keys(table);
 }
 
+function normalizeCopy(value) {
+  return String(value || '').replace(/\s+/g, ' ').trim();
+}
+
+function copiesOriginal(summary, original) {
+  const left = normalizeCopy(summary);
+  const right = normalizeCopy(original);
+  if (!right) return false;
+  if (left === right) return true;
+  return right.length >= 12 && left.includes(right);
+}
+
 function validateSummary(summary, original, label, errors, allowPlaceholders) {
   if (!summary) {
     errors.push(`${label} 的摘要是空的`);
     return;
   }
   if (hanCount(summary) < 8) errors.push(`${label} 的摘要太短`);
-  if (original && summary === String(original).trim()) errors.push(`${label} 的摘要不能照抄原文`);
+  const originals = Array.isArray(original) ? original : [original];
+  if (originals.some((text) => copiesOriginal(summary, text))) errors.push(`${label} 的摘要不能照抄原文`);
   if (!allowPlaceholders && PLACEHOLDER_RE.test(summary)) errors.push(`${label} 的摘要仍是占位`);
 }
 
