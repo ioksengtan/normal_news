@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-07",
+  "issueNumber": 8,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-07T07:00:00+08:00",
+  "fetchedAt": "2026-10-06T22:50:58.851Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "mattpocock/skills",
+      "name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "language": "Shell",
+      "starsToday": 972,
+      "stars": 278074,
+      "summary": "mattpocock/skills 是一組給人工智慧程式助手用的「技能」檔案，由 Matt Pocock 整理他每天寫程式時用的做法。技能就像一張張工作小卡，助手遇到對應的工作就拿出來照著做。說明文件寫道，這些技能刻意做得小、容易修改，也能互相搭配，適用於任何模型。作者列出四個常見問題和對應的技能：助手做出的東西不是使用者要的，就用 /grill-me 讓助手先把細節問清楚；助手講太多字，就建立專案共用的詞彙表；程式跑不起來，就用 /tdd 先寫一個會失敗的測試，再改程式讓它通過；程式越寫越亂，就定期用 /improve-codebase-architecture 檢查結構。可以用 Claude Code 外掛或 skills.sh 安裝，專案採 MIT 授權。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-07/mattpocock/skills.svg",
+        "alt": "四列對照圖：左邊是四個常見問題，箭頭指向右邊對應的技能指令。",
+        "caption": "說明文件列出的四個問題，各自對應一個技能。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 49984923,
+      "title": "Sharing AI Progress in Mathematics",
+      "titleZh": "OpenAI 公開人工智慧產生的一批數學新成果",
+      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49984923",
+      "score": 87,
+      "comments": 34,
+      "summary": "OpenAI 在 10 月 6 日發表一批由內部前沿模型產生的新數學結果，放在 GitHub 儲存庫公開。儲存庫就像一個公開的資料夾，大家都能看到內容和修改紀錄。OpenAI 表示，發表方式參考了高等研究院（Institute for Advanced Study）一個獨立的數學與人工智慧顧問小組的建議，並訂出論文修訂與引用的規則。儲存庫也收錄許多證明的 Lean 版本；Lean 是一種程式語言，讓電腦逐步檢查證明有沒有錯，像一位自動批改的老師。OpenAI 另外公開 10 份模型推理過程的摘要、運算量估計和嘗試題數的統計，平均每個結果用了大約相當於 ChatGPT Pro 思考三小時的運算量。OpenAI 表示，正在研究如何以負責任的方式釋出產生這些結果的模型。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "pbakaus/impeccable",
+      "name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "language": "JavaScript",
+      "starsToday": 609,
+      "stars": 77652,
+      "summary": "Impeccable 是給人工智慧程式助手用的設計指引，目的是讓助手做出的網頁介面少一點千篇一律。說明文件寫道，許多模型是用相同的網站範本學習的，沒有指引時常出現同樣的特徵，例如全部使用 Inter 字型、紫色到藍色的漸層、卡片裡面再放卡片。它包含 1 個技能和 24 個指令，例如 polish（最後修飾）、audit（品質檢查）、critique（設計評論）；第一次使用時用 /impeccable init 記下產品的對象與用途，寫進 PRODUCT.md 檔案。另外有 60 條固定的檢查規則，命令列工具和瀏覽器擴充功能執行這些規則時，不需要模型，也不需要應用程式介面（API）金鑰，就像拿一把固定的尺來量。專案從 Anthropic 的 frontend-design 技能出發，採 Apache-2.0 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 49977979,
+      "title": "Mistral Large 4",
+      "titleZh": "Mistral 推出 Mistral Large 4 預覽版",
+      "url": "https://mistral.ai/news/mistral-large-4/\\",
+      "hnUrl": "https://news.ycombinator.com/item?id=49977979",
+      "score": 1500,
+      "comments": 931,
+      "summary": "Mistral 公司在 10 月 6 日推出新模型 Large 4 的公開預覽版，開發者可以透過 Mistral Studio 的應用程式介面（API）試用，模型權重預計在本月底公開。權重就像模型學到的全部記憶，公開以後，別人可以下載到自己的機器上執行。Mistral 表示，這個模型共有 1 兆個參數，每次運算實際用到其中 490 億個，可以處理文字和影像，並在自家位於歐洲的資料中心，用 3,800 顆 NVIDIA Grace Blackwell 圖形處理器從頭訓練。Mistral 公布的成績包括 DeepSWE v1.1 得分 61.7%、Terminal-Bench 4 得分 28.3%，以及在 40 道資安競賽題組成的 Cybench 解出 93%；原文未說明測試條件。公司表示，公開權重之前，會先和資安業者、經過審核的合作夥伴和政府機關一起做實際測試。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "ayghri/i-have-adhd",
+      "name": "ayghri/i-have-adhd",
+      "url": "https://github.com/ayghri/i-have-adhd",
+      "language": "Python",
+      "starsToday": 318,
+      "stars": 54367,
+      "summary": "i-have-adhd 是給程式助手用的一個技能，目的是讓助手不要把答案埋在長篇回覆裡。名稱裡的注意力不足過動症（ADHD）是一種影響專注力的狀況；說明文件寫道，使用者不需要有這個診斷也能用。它列出 10 條規則，例如第一句就說下一步要做什麼、多步驟的工作要編號、最後只給一個具體的下一步、清單最多 5 項、不寫開場白和結尾的客套話。說明文件用前後對照示範：原本一大段說明，改成先給一行指令，再列出三個編號步驟。這就像問路時，對方直接說「直走兩個路口再右轉」，而不是先介紹整座城市。作者表示，這些規則大致參考《The Adult ADHD Tool Kit》這本書，再改寫成適合語言模型回答的方式。專案採 MIT 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 49984025,
+      "title": "Decisions API is in public beta",
+      "titleZh": "OpenAI 的 Decisions 應用程式介面開放公開測試",
+      "url": "https://developers.openai.com/api/docs/guides/decisions",
+      "hnUrl": "https://news.ycombinator.com/item?id=49984025",
+      "score": 53,
+      "comments": 23,
+      "summary": "OpenAI 的 Decisions 應用程式介面（API）進入公開測試。應用程式介面就像餐廳的點菜單，程式照格式點菜，服務就送回結果。依照說明文件，它讀進文字、圖片或兩者，回傳程式可以直接使用的答案，分成三種題型：predicate 估計某個條件成立的機率，例如商品照片有沒有凹痕；choice 從開發者給的選項中選一個，例如客訴該轉給哪個部門；score 依照排好順序的等級打分，例如問題有多嚴重。OpenAI 表示，它比 Responses 應用程式介面快大約 10 倍，原文未說明測試條件。目前只能使用 gpt-6-luna 模型，輸入每 100 萬個詞元收費 0.10 美元，不收輸出的費用；詞元是模型計算文字長度的小單位。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-07/49984025.svg",
+        "alt": "流程圖：文字或圖片加上問題送進 Decisions，分成機率、選項、等級三種答案回傳。",
+        "caption": "Decisions 的三種題型：估機率、選一項、打等級。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "morluto/rea",
+      "name": "morluto/rea",
+      "url": "https://github.com/morluto/rea",
+      "language": "TypeScript",
+      "starsToday": 2963,
+      "stars": 9071,
+      "summary": "REA 的全名是 Reverse Engineer Anything，是一套讓人工智慧代理程式做逆向工程的工具。逆向工程就像拿到一台沒有說明書的機器，打開來看它是怎麼運作的。說明文件寫道，使用者看到某個應用程式的功能，可以請代理程式在沒有原始碼的情況下檢查它、說明功能怎麼做到、列出證據，再在自己的專案裡做出類似的版本。它可以檢查原生執行檔、JavaScript 與 Electron 應用程式、.NET 組件和網站，分析在使用者自己的電腦上執行，結果會附上證據與限制。它透過模型上下文協定（Model Context Protocol，MCP）連接 Claude Code、Codex、Cursor 等代理程式；深入分析原生程式時，需要另外準備 Hopper、Ghidra 或 IDA Pro 其中一套分析軟體。專案採 MIT 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 49980487,
+      "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
+      "titleZh": "Google 推出開放的多模態嵌入模型 EmbeddingGemma 2",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49980487",
+      "score": 165,
+      "comments": 25,
+      "summary": "Google DeepMind 推出 EmbeddingGemma 2，是可以在手機等裝置上執行的開放模型。嵌入模型會把內容換成一串數字，意思相近的內容，數字也相近，就像圖書館替每本書標上座標，找書時看哪本離得近。這一版除了文字，還能把程式碼、圖片、聲音和影片放進同一套座標。Google 表示，模型有 7.4 億個參數，採 Apache 2.0 授權；只處理文字時最少只要 2.7 億個參數，看圖和聽聲音的部分可以另外加上。輸出的 768 個數字可以截短成 512、256 或 128 個，最多省下 6 倍儲存空間。Google 表示，在 Pixel 11 Pro 手機上把數字存得精簡後，純文字版本約需 191MB 記憶體，完整版本約需 567MB；程式碼測驗 MTEB Code 的分數從 68.76 提高到 78.68。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "deepseek-ai/DeepGEMM",
+      "name": "deepseek-ai/DeepGEMM",
+      "url": "https://github.com/deepseek-ai/DeepGEMM",
+      "language": "Cuda",
+      "starsToday": 363,
+      "stars": 8676,
+      "summary": "DeepGEMM 是 DeepSeek 公開的一套圖形處理器運算程式庫，專門做大型語言模型裡最常用的矩陣乘法。矩陣乘法就像把兩張大表格的數字一格一格相乘再加總，模型每產生一個字都要做很多次。說明文件寫道，它支援 8 位元與 4 位元浮點數（FP8、FP4）和 BF16 等數字格式，也包含混合專家模型（Mixture of Experts，MoE）需要的分組運算。數字格式就像尺上的刻度，刻度粗一點，算得快但沒那麼細。所有運算核心在執行時才由 DeepJIT 編譯，安裝時不必先編譯。使用時需要 NVIDIA SM90 或 SM100 架構的顯示卡、CUDA 12.9 以上與 PyTorch 2.3 以上。DeepSeek 表示，程式庫刻意只保留少數核心函式，也適合用來學習 NVIDIA 圖形處理器的最佳化技巧。專案採 MIT 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 49976265,
+      "title": "Nobel Prize in Physics 2026: Francis Halzen",
+      "titleZh": "2026 年諾貝爾物理學獎頒給 Francis Halzen",
+      "url": "https://www.nobelprize.org/prizes/physics/2026/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49976265",
+      "score": 495,
+      "comments": 166,
+      "summary": "瑞典皇家科學院在 10 月 6 日宣布，2026 年諾貝爾物理學獎頒給美國威斯康辛大學麥迪遜分校的 Francis Halzen，表彰他對冰立方微中子天文台（IceCube）的貢獻，以及發現來自宇宙的高能微中子。微中子是一種到處都有的微小粒子，很少跟其他東西碰撞，可以直接穿過地球和人體。新聞稿寫道，Halzen 在 1988 年提出用南極冰層捕捉微中子的構想：微中子偶爾撞上原子核時會發出閃光，冰裡的感測器可以記錄下來，像在一大塊透明果凍裡放滿小攝影機等閃光。冰立方天文台涵蓋一立方公里的冰，2011 年完工。因為微中子一路飛來不會轉彎，也不會損失能量，可以帶回其他方法得不到的宇宙資訊。獎金是 1,200 萬瑞典克朗。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-07/49976265.svg",
+        "alt": "示意圖：微中子從宇宙飛進南極冰層，撞上原子核發出閃光，冰裡的感測器記錄下來。",
+        "caption": "冰立方天文台在一立方公里的冰裡放感測器，等微中子撞出的閃光。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-10-07/answer-first.svg",
+      "alt": "兩格漫畫：左邊機器人遞出一長串紙卷，右邊同一個機器人只遞出一行指令和三個編號步驟。",
+      "caption": "裝上技能以後：先給一行指令，再列出編號步驟。",
+      "relatedItemId": "ayghri/i-have-adhd"
+    },
+    {
+      "src": "data/humor/2026-10-07/pass-through.svg",
+      "alt": "一個人站在地上，一顆小點從他身上直線穿過，他頭上冒出問號。",
+      "caption": "微中子可以直接穿過地球和人體。",
+      "relatedItemId": "49976265"
+    }
+  ]
+}

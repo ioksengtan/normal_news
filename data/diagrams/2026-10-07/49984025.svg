@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 350">
+  <rect width="360" height="350" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="26" text-anchor="middle">Decisions：把問題換成能用的答案</text>
+  <rect x="20" y="44" width="140" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="90" y="68" text-anchor="middle">文字或圖片</text>
+  <text x="90" y="88" text-anchor="middle" class="sub">要判斷的內容</text>
+  <rect x="200" y="44" width="140" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="270" y="68" text-anchor="middle">問題</text>
+  <text x="270" y="88" text-anchor="middle" class="sub">要問什麼</text>
+  <line x1="90" y1="102" x2="160" y2="138" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <line x1="270" y1="102" x2="200" y2="138" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="110" y="140" width="140" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="167" text-anchor="middle">Decisions</text>
+  <line x1="180" y1="186" x2="60" y2="224" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="6" y="226" width="108" height="76" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="60" y="250" text-anchor="middle">predicate</text>
+  <text x="60" y="272" text-anchor="middle">估機率</text>
+  <text x="60" y="292" text-anchor="middle" class="sub">有凹痕？0.92</text>
+  <line x1="180" y1="186" x2="180" y2="224" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="126" y="226" width="108" height="76" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="250" text-anchor="middle">choice</text>
+  <text x="180" y="272" text-anchor="middle">選一項</text>
+  <text x="180" y="292" text-anchor="middle" class="sub">轉給帳務</text>
+  <line x1="180" y1="186" x2="300" y2="224" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="246" y="226" width="108" height="76" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="300" y="250" text-anchor="middle">score</text>
+  <text x="300" y="272" text-anchor="middle">打等級</text>
+  <text x="300" y="292" text-anchor="middle" class="sub">嚴重度 1.1</text>
+  <text x="180" y="334" text-anchor="middle" class="sub">回傳的答案，程式可以直接拿來分類或轉送</text>
+</svg>

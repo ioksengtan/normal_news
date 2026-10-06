@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380">
+  <rect width="360" height="380" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="26" text-anchor="middle">四個問題，四張工作小卡</text>
+  <text x="80" y="50" text-anchor="middle" class="sub">常見問題</text>
+  <text x="270" y="50" text-anchor="middle" class="sub">對應技能</text>
+  <rect x="10" y="62" width="140" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="80" y="92" text-anchor="middle">做的不是我要的</text>
+  <line x1="152" y1="87" x2="196" y2="87" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="200" y="62" width="140" height="50" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="270" y="84" text-anchor="middle">/grill-me</text>
+  <text x="270" y="102" text-anchor="middle" class="sub">先問清楚</text>
+  <rect x="10" y="134" width="140" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="80" y="164" text-anchor="middle">講太多字</text>
+  <line x1="152" y1="159" x2="196" y2="159" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="200" y="134" width="140" height="50" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="270" y="156" text-anchor="middle">詞彙表</text>
+  <text x="270" y="174" text-anchor="middle" class="sub">共用說法</text>
+  <rect x="10" y="206" width="140" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="80" y="236" text-anchor="middle">程式跑不起來</text>
+  <line x1="152" y1="231" x2="196" y2="231" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="200" y="206" width="140" height="50" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="270" y="228" text-anchor="middle">/tdd</text>
+  <text x="270" y="246" text-anchor="middle" class="sub">先寫測試</text>
+  <rect x="10" y="278" width="140" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="80" y="308" text-anchor="middle">程式越寫越亂</text>
+  <line x1="152" y1="303" x2="196" y2="303" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="200" y="278" width="140" height="50" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="270" y="300" text-anchor="middle">檢查結構</text>
+  <text x="270" y="318" text-anchor="middle" class="sub">定期體檢</text>
+  <text x="180" y="365" text-anchor="middle" class="sub">每張卡都小、可修改、能互相搭配</text>
+</svg>

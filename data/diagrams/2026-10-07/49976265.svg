@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 366">
+  <rect width="360" height="366" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="26" text-anchor="middle">在南極冰裡等微中子的閃光</text>
+  <text x="40" y="56" class="sub">宇宙</text>
+  <circle cx="60" cy="74" r="6" fill="#1c1915"/>
+  <text x="76" y="78" class="sub">微中子：不轉彎、不減速</text>
+  <line x1="10" y1="120" x2="350" y2="120" stroke="#1c1915" stroke-width="2"/>
+  <text x="300" y="112" text-anchor="middle" class="sub">南極地面</text>
+  <rect x="20" y="124" width="320" height="200" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <line x1="66" y1="82" x2="172" y2="220" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <text x="332" y="144" text-anchor="end" class="sub">一立方公里的冰</text>
+  <circle cx="60" cy="170" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="60" cy="220" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="60" cy="270" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="60" cy="310" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="120" cy="170" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="120" cy="220" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="120" cy="270" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="120" cy="310" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="240" cy="170" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="240" cy="220" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="240" cy="270" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="240" cy="310" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="300" cy="170" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="300" cy="220" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="300" cy="270" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="300" cy="310" r="5" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="180" cy="230" r="9" fill="#1c1915"/>
+  <text x="180" y="180" text-anchor="middle" class="sub">撞上原子核</text>
+  <circle cx="180" cy="230" r="26" fill="none" stroke="#1c1915" stroke-dasharray="3 3"/>
+  <circle cx="180" cy="230" r="42" fill="none" stroke="#5e584e" stroke-dasharray="3 4"/>
+  <text x="180" y="300" text-anchor="middle">閃光</text>
+  <text x="180" y="350" text-anchor="middle" class="sub">小圓點是感測器，記錄閃光從哪裡來</text>
+</svg>
