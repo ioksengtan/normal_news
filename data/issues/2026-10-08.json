@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-08",
+  "issueNumber": 9,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-08T07:00:00+08:00",
+  "fetchedAt": "2026-10-07T22:58:07.646Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "cathrynlavery/diagram-design",
+      "name": "cathrynlavery/diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "language": "HTML",
+      "starsToday": 828,
+      "stars": 44913,
+      "summary": "diagram-design 是給人工智慧程式助手用的一個技能，讓助手畫出風格一致的說明圖。技能就像交給助手的一本作圖手冊，助手照著手冊選版型、排位置。說明文件寫道，它支援 Claude Code、Codex、GitHub Copilot、Factory Droid 與 Pi，提供 42 種圖表類型，例如架構圖、流程圖、桑基圖、魚骨圖和看板。每種圖都有淺色、深色與完整編排三種版本，輸出成單一的超文字標記語言（HTML）網頁，圖形用可縮放向量圖形（SVG）畫成；不需要建置步驟，也不需要 JavaScript，用瀏覽器就能直接打開。作者表示，技能會讀取使用者的網站，讓圖的配色和字型跟網站一致。專案採 MIT 授權。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-08/cathrynlavery/diagram-design.svg",
+        "alt": "流程圖：使用者的要求和使用者網站的配色一起交給程式助手與作圖手冊，產出有淺色、深色、完整編排三種版本的網頁檔，再用瀏覽器打開。",
+        "caption": "助手照著手冊從 42 種版型挑一種，輸出一個瀏覽器就能打開的網頁檔。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 49996437,
+      "title": "Claude Haiku 5.5",
+      "titleZh": "Anthropic 推出小型模型 Claude Haiku 5.5",
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
+      "hnUrl": "https://news.ycombinator.com/item?id=49996437",
+      "score": 588,
+      "comments": 283,
+      "summary": "Anthropic 在 10 月 7 日發表 Claude 系列的小型語言模型 Haiku 5.5，用在量大、要省成本的工作，例如摘要、資料庫查詢和分類。小型模型就像店裡負責快速跑腿的店員，大案子仍交給資深同事；Anthropic 表示，它可以搭配 Opus 5.5 與 Sonnet 5.5，在寫程式的工作中當子代理程式。模型用「詞元」計算文字，像把句子切成小塊。提示在 10 萬個詞元以內時，每百萬個輸入詞元 0.10 美元、輸出詞元 0.50 美元，Haiku 4.5 分別是 1 美元與 5 美元；Anthropic 估計平均執行成本約低 75%。Anthropic 公布的 OSWorld 2.1 離線子集成績是 72.4%，Haiku 4.5 是 15.7%。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "addyosmani/agent-skills",
+      "name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "language": "JavaScript",
+      "starsToday": 693,
+      "stars": 102760,
+      "summary": "agent-skills 是 Addy Osmani 整理的一組技能，讓人工智慧程式助手照著資深工程師的流程做事。說明文件把開發分成六個階段：定義、規劃、建置、驗證、審查、上線，就像做菜時先寫菜單、備料、下鍋、試吃、請主廚檢查，最後才出餐。它提供 9 個斜線指令，例如 /spec 先寫規格、/plan 把工作拆成小任務、/test 用測試證明程式可以運作、/review 在合併前檢查程式品質。使用者不下指令時，技能也會依工作內容自動啟用，例如設計應用程式介面（API）時，就會用上對應的技能。可以用 skills 命令列工具一次安裝全部 25 個技能，或只裝其中一個。專案採 MIT 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 49996425,
+      "title": "GPT‑6 and Intelligent UI for everyone",
+      "titleZh": "OpenAI 讓更多 ChatGPT 使用者用上 GPT-6 與「智慧介面」",
+      "url": "https://openai.com/index/gpt-6-for-everyone/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49996425",
+      "score": 424,
+      "comments": 216,
+      "summary": "OpenAI 在 10 月 7 日宣布，ChatGPT 的聊天功能改用新的 GPT-6 模型，並加入名為 Intelligent UI（智慧介面）的功能。過去的回答大多是一段文字；智慧介面讓模型依照問題，在回答裡放進圖表、按鈕、表單或互動圖解，就像老師不只口頭說明，還順手畫一張可以動手調整的圖。OpenAI 表示，做法是準備一套現成的介面元件，再用編譯器（把模型產生的內容轉成畫面的程式）邊產生邊顯示。OpenAI 也表示，根據內部評估，需要網路搜尋的問題，GPT-6 Instant 平均比 GPT-5.6 Instant 早 44% 開始回答。付費方案從 10 月 7 日開始推出，免費與 Go 方案從隔天開始。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "EpicGames/raddebugger",
+      "name": "EpicGames/raddebugger",
+      "url": "https://github.com/EpicGames/raddebugger",
+      "language": "C",
+      "starsToday": 82,
+      "stars": 7843,
+      "summary": "RAD Debugger 是 Epic Games 公開的除錯器，用圖形介面檢查程式在執行時哪裡出錯。除錯器就像修車時打開引擎蓋，讓引擎慢慢轉，一步一步看每個零件當下的狀態。說明文件寫道，它目前只支援在本機對 Windows x64 程式除錯，讀取 PDB（Program Database）除錯資訊，未來計畫支援 Linux 與 DWARF 格式；目前仍是 alpha 測試版。專案另外包含自訂的 RAD Debug Info（RDI）除錯資訊格式，以及 RAD Linker 連結器；連結器是把許多程式碼零件組裝成一個執行檔的工具。團隊表示，在他們除錯資訊達數十億位元組（GB）的測試案例中，連結時間快了 50%。專案採 MIT 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 49998895,
+      "title": "Margaret Hamilton, who led software development for the Apollo program, has died",
+      "titleZh": "帶領阿波羅計畫軟體開發的 Margaret Hamilton 辭世",
+      "url": "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007",
+      "hnUrl": "https://news.ycombinator.com/item?id=49998895",
+      "score": 210,
+      "comments": 18,
+      "summary": "麻省理工學院新聞 10 月 7 日報導，帶領阿波羅登月計畫軟體團隊的電腦科學家 Margaret Hamilton 於 9 月 30 日過世，享年 90 歲。她在 1965 年加入麻省理工學院儀器實驗室，是阿波羅計畫在該校的第一位程式設計師；到 1968 年，參與阿波羅軟體的人數超過 400 人。1969 年阿波羅 11 號的登月小艇降落前，電腦發出 1202 警報，表示負荷過重。她的團隊設計的軟體會依優先順序運作，先停下不必要的背景工作，保留降落需要的運算，就像忙不過來的廚房先暫停甜點、專心出主菜。任務因此繼續，兩名太空人首次踏上月球。她也推動「軟體工程」成為獨立學科，2016 年獲頒美國總統自由勳章。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-08/49998895.svg",
+        "alt": "流程圖：登月小艇電腦負荷過重，發出 1202 警報，軟體停下背景工作、保留降落運算，任務繼續並降落月球。",
+        "caption": "1202 警報響起時，軟體先停下背景工作，保留降落需要的運算。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "thedotmack/claude-mem",
+      "name": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "language": "TypeScript",
+      "starsToday": 578,
+      "stars": 97677,
+      "summary": "claude-mem 是給人工智慧程式助手用的記憶外掛，讓助手在不同工作階段之間記得先前做過的事。平常助手每開一個新對話，就像換了一位新同事，要重新交代一次；這個外掛像一本交接筆記。說明文件寫道，它會記錄助手在工作階段中的操作，用人工智慧壓縮成摘要，下次開新階段時再把相關內容放回去。它支援 Claude Code、Codex、Gemini、Copilot、OpenCode 等工具，可以用 npx claude-mem install 安裝，也提供搜尋記憶的技能與網頁檢視介面。安裝時登入帳號，可以試用 30 天的託管記憶服務；也可以改用自己的 OpenRouter 或 Gemini 金鑰。專案採 Apache-2.0 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 49996259,
+      "title": "Docker Agent",
+      "titleZh": "Docker Agent：用設定檔建立與執行人工智慧代理程式",
+      "url": "https://github.com/docker/docker-agent",
+      "hnUrl": "https://news.ycombinator.com/item?id=49996259",
+      "score": 149,
+      "comments": 59,
+      "summary": "docker-agent 是 Docker 公開的工具，讓使用者用一份 YAML 設定檔建立、執行和分享人工智慧代理程式，不必寫程式。代理程式就像能自己拿工具完成任務的小幫手；YAML 設定檔像一張填空表，寫上要用哪個模型、要做什麼和可以用哪些工具。說明文件寫道，它是 docker 命令列的外掛，用 docker agent run 執行；可以讓多個代理程式組成團隊、互相分派工作，也能接上模型上下文協定（Model Context Protocol，MCP）伺服器。它支援 OpenAI、Anthropic、Gemini 等模型供應商，也能用 Docker Model Runner 在自己的電腦上跑模型。做好的代理程式可以推送到開放容器倡議（OCI）格式的倉庫分享。專案採 Apache-2.0 授權。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "manaflow-ai/cmux",
+      "name": "manaflow-ai/cmux",
+      "url": "https://github.com/manaflow-ai/cmux",
+      "language": "Swift",
+      "starsToday": 96,
+      "stars": 27821,
+      "summary": "cmux 是一個 macOS 終端機程式，以 Ghostty 為基礎，設計給同時開著多個人工智慧程式助手的使用者。終端機是用打字跟電腦對話的視窗。說明文件寫道，當某個助手需要使用者處理時，它所在的窗格會出現藍色外框，分頁也會亮起；所有待處理的通知集中在一個面板，可以直接跳到最新一則未讀。這就像餐廳的取餐呼叫器，輪到你時才會亮。它有垂直和水平分頁，側欄顯示 git 分支、連結的合併請求狀態、工作目錄與正在監聽的連接埠，也內建一個可以用程式控制的瀏覽器。專案是開源的，提供 macOS 安裝檔下載。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 49994443,
+      "title": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
+      "titleZh": "展示作品：Bigwords.page，把任何螢幕變成告示牌",
+      "url": "https://bigwords.page/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49994443",
+      "score": 296,
+      "comments": 97,
+      "summary": "Bigwords.page 是一個網頁工具，把文字放大成全螢幕的告示、計時器或訊息。網站寫道，可以在接機處舉起手機、在電視上顯示倒數，或在櫃檯顯示 Wi-Fi 密碼。它不需要帳號或應用程式，也不在伺服器儲存資料：整個畫面的內容都寫在網址裡，所以分享網址或加入書籤就等於保存。網址井字號後面的部分叫「片段」，瀏覽器不會把它傳給伺服器，就像寫在自己手心的筆記，不會跟著信一起寄出。使用者可以在網址裡設定背景色和字型，用 || 把訊息分成輪播的投影片，或用 {countdown} 加入倒數；文字會自動放大到填滿螢幕。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-08/49994443.svg",
+        "alt": "示意圖：網址分成前段與井字號後的片段，前段送到伺服器取得網頁，片段留在瀏覽器，顯示成填滿螢幕的大字。",
+        "caption": "畫面上的字寫在網址的片段裡，瀏覽器不把這一段傳給伺服器。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-10-08/blue-ring.svg",
+      "alt": "三個終端機窗格，第三個外面多了一圈粗框；圓頭方身的人端著杯子說：好，輪到 3 號了。",
+      "caption": "助手需要人處理時，窗格會出現藍色外框，像取餐呼叫器。",
+      "relatedItemId": "manaflow-ai/cmux"
+    },
+    {
+      "src": "data/humor/2026-10-08/pickup-sign.svg",
+      "alt": "一個人舉著寫有「接機」大字的手機，遠處的人說：字好大，看到了！",
+      "caption": "在接機處舉起手機，文字放大到填滿整個螢幕。",
+      "relatedItemId": "49994443"
+    }
+  ]
+}

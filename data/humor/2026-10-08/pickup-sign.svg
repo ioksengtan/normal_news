@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280">
+  <rect width="360" height="280" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 15px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+    .box { fill: #fffdf8; stroke: #1c1915; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <circle cx="80" cy="110" r="20" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="74" cy="106" r="2.5" fill="#1c1915"/>
+  <circle cx="86" cy="106" r="2.5" fill="#1c1915"/>
+  <rect x="58" y="132" width="44" height="80" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <line x1="102" y1="150" x2="120" y2="96" stroke="#1c1915" stroke-width="2"/>
+  <rect x="104" y="40" width="64" height="58" fill="#1c1915"/>
+  <text x="136" y="78" text-anchor="middle" style="fill:#f4f0e6;font-size:24px">接機</text>
+  <circle cx="290" cy="130" r="14" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="286" cy="128" r="2" fill="#1c1915"/>
+  <circle cx="294" cy="128" r="2" fill="#1c1915"/>
+  <rect x="276" y="146" width="28" height="56" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="306" y="176" width="22" height="26" fill="#fffdf8" stroke="#1c1915"/>
+  <line x1="10" y1="214" x2="350" y2="214" stroke="#1c1915" stroke-width="2"/>
+  <ellipse cx="262" cy="70" rx="72" ry="22" class="box"/>
+  <text x="262" y="75" text-anchor="middle">字好大，看到了！</text>
+  <text x="180" y="244" text-anchor="middle" class="sub">在接機處舉起手機，</text>
+  <text x="180" y="264" text-anchor="middle" class="sub">文字放大到填滿整個螢幕。</text>
+</svg>

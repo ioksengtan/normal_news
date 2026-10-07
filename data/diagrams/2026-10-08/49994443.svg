@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380">
+  <rect width="360" height="380" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 15px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+    .box { fill: #fffdf8; stroke: #1c1915; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">畫面內容就寫在網址裡</text>
+  <rect x="14" y="48" width="140" height="44" class="box"/>
+  <text x="84" y="76" text-anchor="middle">bigwords.page/</text>
+  <rect x="160" y="48" width="186" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="253" y="76" text-anchor="middle">#接機</text>
+  <text x="84" y="112" text-anchor="middle" class="sub">網址前段</text>
+  <text x="253" y="112" text-anchor="middle" class="sub">井字號後面：片段</text>
+  <line x1="84" y1="120" x2="84" y2="170" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="24" y="174" width="120" height="56" class="box"/>
+  <text x="84" y="200" text-anchor="middle">伺服器</text>
+  <text x="84" y="219" text-anchor="middle" class="sub">只送來網頁本身</text>
+  <line x1="253" y1="120" x2="253" y2="170" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="180" y="174" width="146" height="56" class="box"/>
+  <text x="253" y="200" text-anchor="middle">留在瀏覽器</text>
+  <text x="253" y="219" text-anchor="middle" class="sub">不傳給伺服器</text>
+  <line x1="253" y1="232" x2="253" y2="262" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="150" y="266" width="206" height="78" fill="#1c1915"/>
+  <text x="253" y="318" text-anchor="middle" style="fill:#f4f0e6;font-size:34px">接機</text>
+  <text x="76" y="300" text-anchor="middle" class="sub">文字自動放大</text>
+  <text x="76" y="318" text-anchor="middle" class="sub">填滿整個螢幕</text>
+  <text x="180" y="368" text-anchor="middle" class="sub">分享網址或加入書籤，就等於保存</text>
+</svg>

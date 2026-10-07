@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280">
+  <rect width="360" height="280" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 15px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+    .box { fill: #fffdf8; stroke: #1c1915; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="20" y="30" width="90" height="70" class="box"/>
+  <text x="65" y="70" text-anchor="middle" class="sub">助手 1</text>
+  <rect x="135" y="30" width="90" height="70" class="box"/>
+  <text x="180" y="70" text-anchor="middle" class="sub">助手 2</text>
+  <rect x="244" y="24" width="102" height="82" fill="none" stroke="#1c1915" stroke-width="4"/>
+  <rect x="250" y="30" width="90" height="70" class="box"/>
+  <text x="295" y="62" text-anchor="middle">助手 3</text>
+  <text x="295" y="84" text-anchor="middle" class="sub">需要你處理</text>
+  <text x="295" y="124" text-anchor="middle" class="sub">（藍色外框亮起）</text>
+  <circle cx="110" cy="170" r="20" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="104" cy="166" r="2.5" fill="#1c1915"/>
+  <circle cx="116" cy="166" r="2.5" fill="#1c1915"/>
+  <rect x="88" y="192" width="44" height="60" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="136" y="206" width="16" height="20" fill="#fffdf8" stroke="#1c1915"/>
+  <line x1="10" y1="254" x2="350" y2="254" stroke="#1c1915" stroke-width="2"/>
+  <ellipse cx="220" cy="180" rx="78" ry="24" class="box"/>
+  <text x="220" y="185" text-anchor="middle">好，輪到 3 號了</text>
+  <text x="180" y="274" text-anchor="middle" class="sub">像取餐呼叫器：輪到你時才會亮</text>
+</svg>

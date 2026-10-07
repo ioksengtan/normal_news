@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400">
+  <rect width="360" height="400" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 15px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+    .box { fill: #fffdf8; stroke: #1c1915; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">助手照著作圖手冊畫圖</text>
+  <rect x="20" y="48" width="150" height="56" class="box"/>
+  <text x="95" y="74" text-anchor="middle">使用者</text>
+  <text x="95" y="93" text-anchor="middle" class="sub">「幫我畫一張流程圖」</text>
+  <rect x="190" y="48" width="150" height="56" class="box"/>
+  <text x="265" y="74" text-anchor="middle">使用者的網站</text>
+  <text x="265" y="93" text-anchor="middle" class="sub">讀取配色與字型</text>
+  <line x1="95" y1="106" x2="150" y2="144" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <line x1="265" y1="106" x2="210" y2="144" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="60" y="148" width="240" height="84" class="box"/>
+  <text x="180" y="174" text-anchor="middle">程式助手 ＋ 作圖手冊</text>
+  <rect x="84" y="188" width="44" height="30" fill="#ebe4d4" stroke="#1c1915"/>
+  <rect x="136" y="188" width="44" height="30" fill="#ebe4d4" stroke="#1c1915"/>
+  <rect x="188" y="188" width="44" height="30" fill="#ebe4d4" stroke="#1c1915"/>
+  <text x="256" y="208" text-anchor="middle" class="sub">…共 42 種</text>
+  <line x1="180" y1="234" x2="180" y2="262" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="20" y="266" width="320" height="76" class="box"/>
+  <text x="180" y="290" text-anchor="middle">一個網頁檔（HTML ＋ SVG）</text>
+  <rect x="36" y="302" width="88" height="28" fill="#fffdf8" stroke="#1c1915"/>
+  <text x="80" y="321" text-anchor="middle" class="sub">淺色</text>
+  <rect x="136" y="302" width="88" height="28" fill="#1c1915" stroke="#1c1915"/>
+  <text x="180" y="321" text-anchor="middle" class="sub" style="fill:#f4f0e6">深色</text>
+  <rect x="236" y="302" width="88" height="28" fill="#ebe4d4" stroke="#1c1915"/>
+  <text x="280" y="321" text-anchor="middle" class="sub">完整編排</text>
+  <line x1="180" y1="344" x2="180" y2="364" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <text x="180" y="388" text-anchor="middle">用瀏覽器直接打開，不必建置</text>
+</svg>

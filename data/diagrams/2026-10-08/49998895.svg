@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400">
+  <rect width="360" height="400" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 15px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+    .box { fill: #fffdf8; stroke: #1c1915; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">1969 年登月前的 1202 警報</text>
+  <rect x="60" y="46" width="240" height="56" class="box"/>
+  <text x="180" y="70" text-anchor="middle">登月小艇的電腦</text>
+  <text x="180" y="90" text-anchor="middle" class="sub">工作太多，負荷過重</text>
+  <line x1="180" y1="104" x2="180" y2="132" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="100" y="136" width="160" height="40" fill="#1c1915"/>
+  <text x="180" y="162" text-anchor="middle" style="fill:#f4f0e6">1202 警報</text>
+  <line x1="180" y1="178" x2="180" y2="200" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <text x="180" y="218" text-anchor="middle" class="sub">軟體依優先順序分配</text>
+  <line x1="140" y1="226" x2="96" y2="252" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <line x1="220" y1="226" x2="264" y2="252" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="16" y="256" width="156" height="66" fill="#ebe4d4" stroke="#5e584e" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="94" y="282" text-anchor="middle">背景工作</text>
+  <text x="94" y="304" text-anchor="middle" class="sub">先停下來</text>
+  <line x1="30" y1="266" x2="158" y2="312" stroke="#5e584e" stroke-width="1.2"/>
+  <rect x="188" y="256" width="156" height="66" class="box" style="stroke-width:2.5"/>
+  <text x="266" y="282" text-anchor="middle">降落要用的運算</text>
+  <text x="266" y="304" text-anchor="middle" class="sub">保留下來</text>
+  <line x1="266" y1="324" x2="266" y2="350" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <text x="266" y="372" text-anchor="middle">任務繼續，降落月球</text>
+  <text x="94" y="372" text-anchor="middle" class="sub">像廚房先停甜點、專心出主菜</text>
+</svg>
