@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280">
+  <rect width="360" height="280" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 15px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+    .box { fill: #fffdf8; stroke: #1c1915; stroke-width: 1.5; }
+  </style>
+  <rect x="40" y="36" width="120" height="100" class="box"/>
+  <text x="100" y="78" text-anchor="middle">口袋</text>
+  <text x="100" y="100" text-anchor="middle" class="sub">16.9 MB 模型</text>
+  <rect x="200" y="36" width="120" height="100" class="box"/>
+  <text x="260" y="78" text-anchor="middle">雲端機房</text>
+  <text x="260" y="100" text-anchor="middle" class="sub">（這次不用）</text>
+  <circle cx="100" cy="180" r="18" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="94" cy="176" r="2.5" fill="#1c1915"/>
+  <circle cx="106" cy="176" r="2.5" fill="#1c1915"/>
+  <rect x="80" y="200" width="40" height="48" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <ellipse cx="230" cy="190" rx="95" ry="26" class="box"/>
+  <text x="230" y="196" text-anchor="middle">聲音留在這台手機</text>
+  <text x="180" y="268" text-anchor="middle" class="sub">Whistle：語音轉文字，音訊不離開裝置</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400">
+  <rect width="360" height="400" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 15px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+    .box { fill: #fffdf8; stroke: #1c1915; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">語音在裝置上變成文字</text>
+  <rect x="30" y="48" width="120" height="70" class="box"/>
+  <text x="90" y="78" text-anchor="middle">麥克風</text>
+  <text x="90" y="98" text-anchor="middle" class="sub">最多約 30 秒</text>
+  <line x1="154" y1="83" x2="196" y2="83" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="200" y="48" width="130" height="70" class="box"/>
+  <text x="265" y="78" text-anchor="middle">Whistle</text>
+  <text x="265" y="98" text-anchor="middle" class="sub">約 16.9 MB</text>
+  <line x1="265" y1="120" x2="265" y2="156" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="40" y="160" width="280" height="88" class="box"/>
+  <text x="180" y="188" text-anchor="middle">同一中央處理器引擎</text>
+  <text x="180" y="210" text-anchor="middle" class="sub">七種語言 · 第一次輸出約 11 毫秒</text>
+  <text x="180" y="232" text-anchor="middle" class="sub">音訊不離開這台裝置</text>
+  <line x1="100" y1="250" x2="100" y2="286" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <line x1="180" y1="250" x2="180" y2="286" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <line x1="260" y1="250" x2="260" y2="286" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="20" y="290" width="100" height="56" class="box"/>
+  <text x="70" y="324" text-anchor="middle" class="sub">轉錄文字</text>
+  <rect x="130" y="290" width="100" height="56" class="box"/>
+  <text x="180" y="324" text-anchor="middle" class="sub">詞級時間</text>
+  <rect x="240" y="290" width="100" height="56" class="box"/>
+  <text x="290" y="324" text-anchor="middle" class="sub">語音嵌入</text>
+  <text x="180" y="380" text-anchor="middle" class="sub">可與 Needle 同載，再接工具呼叫</text>
+</svg>

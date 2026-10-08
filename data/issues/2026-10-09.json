@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-09",
+  "issueNumber": 10,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-09T07:00:00+08:00",
+  "fetchedAt": "2026-10-08T23:41:58.612Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": true,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "openai/math",
+      "name": "openai/math",
+      "url": "https://github.com/openai/math",
+      "language": "Lean",
+      "starsToday": null,
+      "stars": 12049,
+      "summary": "openai/math 是 OpenAI 公開的數學手稿與證明材料庫，內容來自該公司內部尚未對外發表的模型。說明文件寫道，評估模型時若既有數學題目已不夠難，就改用尚未解出的研究問題；目前收錄 719 份手稿、分成 372 個家族，並依數學領域分類。部分結果已用 Lean 形式化語言寫成可檢查的證明，說明文件寫目前約有百分之四十二的主要結果完成形式化。多數結果平均使用約三小時的 ChatGPT Pro 思考運算；整個評估大約提出四千道題。授權為 Apache-2.0。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-09/openai/math.svg",
+        "alt": "流程圖：內部模型解約四千題，整理成 372 個手稿家族，部分再寫成 Lean 形式化證明後公開。",
+        "caption": "未解研究題先寫成手稿，再把部分結果轉成可檢查的 Lean 證明。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50008427,
+      "title": "Whistle: Speech to Text in 16.9 MB",
+      "titleZh": "Whistle：十六點九百萬位元組的語音轉文字模型",
+      "url": "https://cactuscompute.com/blog/whistle",
+      "hnUrl": "https://news.ycombinator.com/item?id=50008427",
+      "score": 462,
+      "comments": 105,
+      "summary": "Cactus 在 10 月 2 日發表開源語音辨識模型 Whistle，單一檔案約十六點九百萬位元組（MB），在中央處理器上執行、不必額外依賴。文章寫道，它支援英語、德語、法語、西班牙語、義大利語、荷蘭語與波蘭語，第一次輸出約十一毫秒，可與同一引擎的 Needle 模型同載。音訊留在裝置上；可做轉錄、詞級時間戳，以及語音嵌入。目標裝置包括手機、穿戴裝置、機器人與微控制器。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-09/50008427.svg",
+        "alt": "流程圖：麥克風音訊進入約 16.9 MB 的 Whistle 模型，在裝置上輸出文字、詞級時間與語音嵌入。",
+        "caption": "約 16.9 MB 的模型在裝置上把語音轉成文字，音訊不離開本機。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "alchaincyf/huashu-art-motion",
+      "name": "alchaincyf/huashu-art-motion",
+      "url": "https://github.com/alchaincyf/huashu-art-motion",
+      "language": "JavaScript",
+      "starsToday": null,
+      "stars": 2422,
+      "summary": "huashu-art-motion 是給程式助手用的技能，用程式碼把畫面做成會動的藝術動畫。技能就像交給助手的一本分鏡手冊，助手照著手冊選風格與解說方式。說明文件寫道，它提供 35 種藝術風格、9 種解說語法，以及可用參數調整的片段；可用 npx skills add alchaincyf/huashu-art-motion 安裝。樣片包括把自己畫成像素主角跑關、穿越名畫等；場景用程式畫，角色用生成畫面合成。專案採 MIT 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50009295,
+      "title": "Theranos.world",
+      "titleZh": "Theranos World：用法庭文件還原的互動辦公桌",
+      "url": "https://www.theranos.world/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50009295",
+      "score": 221,
+      "comments": 100,
+      "summary": "Theranos World 是一個互動模擬網站，重現 Elizabeth Holmes 的辦公桌。網站說明寫道，使用者可打開筆記型電腦、滑手機，或操作 Edison 機器；其中簡訊與電子郵件皆來自法庭審判公開資料，並由 Extend 解析。像走進博物館的還原場景，桌上的信件都是真的展品說明。畫面中的電腦不需密碼即可登入。網站由 bolau_ 相關作者釋出。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "kargulstudio/sales-crm",
+      "name": "kargulstudio/sales-crm",
+      "url": "https://github.com/kargulstudio/sales-crm",
+      "language": "TypeScript",
+      "starsToday": null,
+      "stars": 1657,
+      "summary": "sales-crm 倉庫提供名為 Kargul Starter 的網站起始樣板，採用 Next.js 16、React 19 與 Tailwind CSS 4。樣板就像蓋房子前先搭好的骨架，之後再依需求換門窗與裝潢。說明文件要求先讀 CONVENTIONS.md，再寫元件或頁面；其中規定搜尋引擎優化（SEO）設定、字型與區塊間距，以及把圖片轉成 AVIF 等腳本。可用 npm run dev 在本機開啟預覽。專案採 MIT 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50000488,
+      "title": "Why isn't the industry freaking out about DeepSeek 4.1 Flash?",
+      "titleZh": "為什麼業界沒有為 DeepSeek 4.1 Flash 大驚小怪？",
+      "url": "https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50000488",
+      "score": 335,
+      "comments": 291,
+      "summary": "作者 Jono 在 10 月 7 日的文章寫道，自己約一個月大量使用 DeepSeek 4.1 Flash，覺得能力接近他使用的前沿模型，但費用低很多。他以 OpenCode Go 每月十美元訂閱為例，表示單次工作階段預期費用很少超過一美元。作者寫道，DeepSeek 把鍵值快取（KV cache，像模型短時間記住對話的倉庫）縮小到約為第一代的四百三十七分之一，因此長時間寫程式仍能壓低成本。文章是個人使用心得，並附上基準測試連結。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "Jakeschincariol/replica-skill",
+      "name": "Jakeschincariol/replica-skill",
+      "url": "https://github.com/Jakeschincariol/replica-skill",
+      "language": "Python",
+      "starsToday": null,
+      "stars": 1071,
+      "summary": "replica-skill 是一組十一個免費技能，讓 Claude 依步驟仿製應用程式的功能與流程。說明文件強調只重建功能與流程，不複製原作的程式碼、標誌或文案，像用自己的積木照著公開說明重組一台機器。流程依序包括勘察、架構、設計、建置、後端、測試、對照、創業定位、品牌、上架與部署；每一步會讀取上一步寫進專案的檔案。可用插件安裝，或把資料夾複製到技能目錄。專案採 MIT 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50010470,
+      "title": "The value of not getting to the point (2015)",
+      "titleZh": "不直接切入正題的價值（2015）",
+      "url": "https://ken.arneson.name/2015/11/the-value-of-not-getting-to-the-point/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50010470",
+      "score": 95,
+      "comments": 32,
+      "summary": "Ken Arneson 在 2015 年的文章寫道，飯局裡的食物與飲料，讓人不必全程都要想好要說什麼。他原本以為自己不善交談是因為內向；後來發現女兒想先聊無關緊要的事，約半小時後才談真正想說的。作者把閒聊比作熱身：話說出口有脆弱感，文化用寒暄降低這份負擔。文章討論為何有人需要先暖場，才願意談敏感話題。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "nullmoth/nvidia-macos-driver",
+      "name": "nullmoth/nvidia-macos-driver",
+      "url": "https://github.com/nullmoth/nvidia-macos-driver",
+      "language": "Rust",
+      "starsToday": null,
+      "stars": 1042,
+      "summary": "nvidia-macos-driver 是 NullMoth Systems 公開的驅動程式，讓搭載 NVIDIA Turing 之後顯示卡的 Intel Mac 或 OpenCore 電腦，在 macOS 15 Sequoia 上使用 Metal 繪圖介面。說明文件寫道，應用程式經 Metal 外掛與著色器轉譯，再到 Mesa 的 Vulkan 後端與核心擴充，最後驅動顯示卡。作者表示在 RTX 5060、macOS 15.7.x 與 15.8.1 上測試過；裝置表涵蓋較廣，但實機驗證範圍較窄。提供預先編譯安裝包與 1401 輔助應用程式。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-09/nullmoth/nvidia-macos-driver.svg",
+        "alt": "流程圖：Metal 應用經驅動外掛與著色器轉譯，再到 Vulkan 後端與核心擴充，最後驅動 NVIDIA 顯示卡。",
+        "caption": "在 macOS 15 上，Metal 畫面經外掛與 Vulkan 後端送到 NVIDIA 顯示卡。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 49995495,
+      "title": "Man discovers his parents' coffee machine used 1TB of data in 10 days",
+      "titleZh": "有人發現父母的咖啡機十天產生一兆位元組流量",
+      "url": "https://www.dexerto.com/entertainment/man-discovers-his-parents-coffee-machine-used-1tb-of-data-in-10-days-3416399/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49995495",
+      "score": 317,
+      "comments": 197,
+      "summary": "Dexerto 報導，網名 Nomad 的人發現父母的智慧咖啡機在十天內產生約一兆位元組（TB）的網路流量。他在社群平台公開後表示，自己做資訊工作超過十年；進一步查看後發現，多數流量留在家中區域網路，沒有全部送出網際網路。他認為可能是該機故障，流量塞滿無線基地台。他決定換新咖啡機，並表示不值得讓會這樣出錯的物聯網裝置繼續連網。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-10-09/coffee-flood.svg",
+      "alt": "咖啡機把約一兆位元組流量送往家中基地台；圓頭方身的人說先拔掉、換一台。",
+      "caption": "咖啡機十天產生約一兆位元組流量，多數留在家中網路仍塞滿基地台。",
+      "relatedItemId": "49995495"
+    },
+    {
+      "src": "data/humor/2026-10-09/whistle-pocket.svg",
+      "alt": "口袋裡放著約 16.9 MB 的模型；圓頭方身的人說聲音留在這台手機，雲端機房這次不用。",
+      "caption": "Whistle 把語音轉文字留在裝置上，音訊不離開本機。",
+      "relatedItemId": "50008427"
+    }
+  ]
+}

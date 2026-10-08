@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420">
+  <rect width="360" height="420" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 15px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+    .box { fill: #fffdf8; stroke: #1c1915; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">Metal 應用 → NVIDIA 顯示卡</text>
+  <rect x="50" y="48" width="260" height="44" class="box"/>
+  <text x="180" y="76" text-anchor="middle">Metal 應用程式</text>
+  <line x1="180" y1="94" x2="180" y2="118" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="50" y="122" width="260" height="52" class="box"/>
+  <text x="180" y="146" text-anchor="middle">NVMTLDriver 外掛</text>
+  <text x="180" y="166" text-anchor="middle" class="sub">著色器轉成 SPIR-V</text>
+  <line x1="180" y1="176" x2="180" y2="200" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="50" y="204" width="260" height="52" class="box"/>
+  <text x="180" y="228" text-anchor="middle">Mesa Vulkan（NVK）</text>
+  <text x="180" y="248" text-anchor="middle" class="sub">編譯後交給核心擴充</text>
+  <line x1="180" y1="258" x2="180" y2="282" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="50" y="286" width="260" height="52" class="box"/>
+  <text x="180" y="310" text-anchor="middle">核心擴充與韌體</text>
+  <text x="180" y="330" text-anchor="middle" class="sub">顯示與加速合成</text>
+  <line x1="180" y1="340" x2="180" y2="364" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="50" y="368" width="260" height="40" class="box"/>
+  <text x="180" y="394" text-anchor="middle">NVIDIA 顯示卡（macOS 15）</text>
+</svg>

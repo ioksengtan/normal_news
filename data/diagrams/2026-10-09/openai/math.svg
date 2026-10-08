@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420">
+  <rect width="360" height="420" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 15px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+    .box { fill: #fffdf8; stroke: #1c1915; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">未解數學題 → 手稿 → 可檢查證明</text>
+  <rect x="40" y="48" width="280" height="56" class="box"/>
+  <text x="180" y="74" text-anchor="middle">內部模型解題</text>
+  <text x="180" y="93" text-anchor="middle" class="sub">約四千題 · 平均約三小時思考</text>
+  <line x1="180" y1="106" x2="180" y2="132" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="20" y="136" width="150" height="70" class="box"/>
+  <text x="95" y="164" text-anchor="middle">手稿家族</text>
+  <text x="95" y="186" text-anchor="middle" class="sub">372 族 · 719 份</text>
+  <rect x="190" y="136" width="150" height="70" class="box"/>
+  <text x="265" y="164" text-anchor="middle">依學科分類</text>
+  <text x="265" y="186" text-anchor="middle" class="sub">預印本與說明</text>
+  <line x1="95" y1="208" x2="140" y2="246" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <line x1="265" y1="208" x2="220" y2="246" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="50" y="250" width="260" height="70" class="box"/>
+  <text x="180" y="278" text-anchor="middle">Lean 形式化證明</text>
+  <text x="180" y="300" text-anchor="middle" class="sub">說明文件：約 42% 主要結果已完成</text>
+  <line x1="180" y1="322" x2="180" y2="350" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="40" y="354" width="280" height="48" class="box"/>
+  <text x="180" y="384" text-anchor="middle">公開倉庫供人閱讀與核對</text>
+</svg>
