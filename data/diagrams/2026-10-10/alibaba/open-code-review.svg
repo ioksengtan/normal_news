@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 308">
+  <rect width="360" height="308" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 15px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+    .box { fill: #fffdf8; stroke: #1c1915; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">Open Code Review 的審查流程</text>
+  <rect x="40" y="44" width="280" height="46" class="box"/>
+  <text x="180" y="64" text-anchor="middle">Git 差異（diff）</text>
+  <text x="180" y="82" text-anchor="middle" class="sub">讀出有改動的檔案</text>
+  <line x1="180" y1="91" x2="180" y2="104" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="40" y="106" width="280" height="46" class="box"/>
+  <text x="180" y="126" text-anchor="middle">確定性流程</text>
+  <text x="180" y="144" text-anchor="middle" class="sub">挑檔案、相關檔案打包、比對規則</text>
+  <line x1="180" y1="153" x2="180" y2="166" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="40" y="168" width="280" height="46" class="box"/>
+  <text x="180" y="188" text-anchor="middle">LLM 代理程式</text>
+  <text x="180" y="206" text-anchor="middle" class="sub">可讀全檔、搜尋程式碼</text>
+  <line x1="180" y1="215" x2="180" y2="228" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="40" y="230" width="280" height="46" class="box"/>
+  <text x="180" y="250" text-anchor="middle">逐行審查意見</text>
+  <text x="180" y="268" text-anchor="middle" class="sub">標出所在行號</text>
+</svg>

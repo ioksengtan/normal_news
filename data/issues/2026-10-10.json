@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-10",
+  "issueNumber": 11,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-10T07:00:00+08:00",
+  "fetchedAt": "2026-10-10T00:31:31.877Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "failed",
+      "fallback": false,
+      "error": "fetch failed"
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "boykopovar/AnyPS5",
+      "name": "boykopovar/AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "language": "C++",
+      "starsToday": 5868,
+      "stars": 22310,
+      "summary": "AnyPS5 是一套把 PS5 執行檔移植到 Linux 與 Windows 的工具。說明文件寫道，它包含一個重新連結器（relinker），把執行檔轉成目標系統的原生格式，另有可動態連結的系統函式庫實作，不使用模擬，也沒有另外的執行程序。作者列出已驗證的遊戲清單；其中 2D 平台遊戲 Dreaming Sarah 在 GTX 1050 Ti 與 i5-7500 上以每秒 60 格穩定執行。遇到不支援的狀態時程式會丟出錯誤並結束。授權為 GPL 第二版。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-10/boykopovar/AnyPS5.svg",
+        "alt": "流程圖：PS5 執行檔經重新連結器與系統函式庫實作，轉成 Linux 或 Windows 可直接執行的程式。",
+        "caption": "重新連結器把執行檔轉成目標系統的原生格式，不經模擬。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": "alibaba/open-code-review",
+      "name": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "language": "Go",
+      "starsToday": 326,
+      "stars": 45202,
+      "summary": "Open Code Review 是阿里巴巴開源的命令列程式碼審查工具。它讀取 Git 差異，交給可設定的大型語言模型（LLM）代理程式，產生精確到行的審查意見。流程中挑選檔案、把相關檔案打包、比對規則等步驟由固定的程式邏輯處理，需要判斷與查找上下文時才交給代理程式。專案自述，在 200 個真實合併請求的測試中，相較通用代理程式 Claude Code，精確率與 F1 較高，耗用的詞元（token）約九分之一，但召回率較低。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-10/alibaba/open-code-review.svg",
+        "alt": "流程圖：Git 差異經確定性流程與 LLM 代理程式，產生逐行審查意見。",
+        "caption": "固定流程負責挑檔與比對規則，代理程式負責判斷與查找。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": "anthropics/knowledge-work-plugins",
+      "name": "anthropics/knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "language": "Python",
+      "starsToday": 709,
+      "stars": 28248,
+      "summary": "knowledge-work-plugins 是 Anthropic 開源的外掛集合，主要給知識工作者在 Claude Cowork 使用，也相容 Claude Code。每個外掛把某個職務會用到的技能、連接器、斜線指令與子代理程式打包在一起。目前收錄 11 個外掛，例如生產力、業務、客戶支援、產品管理、行銷、法務與財務。使用者可以依自己公司的工具、術語與流程調整外掛內容。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": "BerriAI/litellm",
+      "name": "BerriAI/litellm",
+      "url": "https://github.com/BerriAI/litellm",
+      "language": "Python",
+      "starsToday": 95,
+      "stars": 60658,
+      "summary": "LiteLLM 是開源的 AI 閘道（gateway），像一個萬用插座轉接頭：程式只要用 OpenAI 格式送出請求，就能呼叫 OpenAI、Anthropic、Gemini、Bedrock、Azure 等 100 多家模型供應商。可當 Python 軟體開發套件（SDK）直接使用，也能架成代理伺服器供團隊共用，內建虛擬金鑰、花費追蹤、護欄、負載平衡與管理介面。專案表示，每秒 1,000 個請求時第 95 百分位延遲為 8 毫秒。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-10/BerriAI/litellm.svg",
+        "alt": "流程圖：你的程式以 OpenAI 格式送出請求，經 LiteLLM 轉給 100 多家模型供應商。",
+        "caption": "同一種請求格式，經 LiteLLM 轉給不同供應商。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": "storytold/artcraft",
+      "name": "storytold/artcraft",
+      "url": "https://github.com/storytold/artcraft",
+      "language": "Rust",
+      "starsToday": 3752,
+      "stars": 11463,
+      "summary": "ArtCraft 是給藝術家、設計師與影像創作者的 AI 圖像與影片創作桌面程式，自稱「藝術家的整合開發環境（IDE）」。使用者可在 2D 畫布上構圖、在 3D 中安排場景，再選擇要用的模型，而不是只靠文字提示。說明文件列出可用模型：圖像 16 個、影片 25 個、音樂與音效 5 個、3D 網格 11 個，以及世界與高斯點雲 5 個。提供 Windows 與 macOS 的穩定版，Linux 需自行從原始碼建置。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    }
+  ]
+}

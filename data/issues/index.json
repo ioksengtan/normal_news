@@ -49,6 +49,11 @@
       "date": "2026-10-09",
       "issueNumber": 10,
       "path": "data/issues/2026-10-09.json"
+    },
+    {
+      "date": "2026-10-10",
+      "issueNumber": 11,
+      "path": "data/issues/2026-10-10.json"
     }
   ]
 }
