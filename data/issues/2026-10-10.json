@@ -3,7 +3,7 @@
   "issueNumber": 11,
   "timezone": "Asia/Taipei",
   "publishedAt": "2026-10-10T07:00:00+08:00",
-  "fetchedAt": "2026-10-10T00:31:31.877Z",
+  "fetchedAt": "2026-10-10T00:50:45.702Z",
   "sources": {
     "github": {
       "status": "ok",
@@ -11,9 +11,9 @@
       "error": null
     },
     "hackernews": {
-      "status": "failed",
+      "status": "ok",
       "fallback": false,
-      "error": "fetch failed"
+      "error": null
     },
     "producthunt": {
       "status": "failed",
@@ -28,7 +28,7 @@
       "url": "https://github.com/boykopovar/AnyPS5",
       "language": "C++",
       "starsToday": 5868,
-      "stars": 22310,
+      "stars": 22372,
       "summary": "AnyPS5 是一套把 PS5 執行檔移植到 Linux 與 Windows 的工具。說明文件寫道，它包含一個重新連結器（relinker），把執行檔轉成目標系統的原生格式，另有可動態連結的系統函式庫實作，不使用模擬，也沒有另外的執行程序。作者列出已驗證的遊戲清單；其中 2D 平台遊戲 Dreaming Sarah 在 GTX 1050 Ti 與 i5-7500 上以每秒 60 格穩定執行。遇到不支援的狀態時程式會丟出錯誤並結束。授權為 GPL 第二版。",
       "placeholder": false,
       "diagram": {
@@ -41,12 +41,26 @@
       "rank": 0
     },
     {
+      "id": 50019911,
+      "title": "Cloudflare acquires Deno",
+      "titleZh": "Cloudflare 收購 Deno",
+      "url": "https://deno.com/blog/cloudflare",
+      "hnUrl": "https://news.ycombinator.com/item?id=50019911",
+      "score": 1048,
+      "comments": 546,
+      "summary": "Hacker News 討論串引用 Deno 公告寫道：Cloudflare 收購 Deno，Deno 執行環境（runtime，執行 JavaScript 程式的軟體）還會再支援一年，期間每月釋出修正錯誤與資安更新的版本；一年後 Deno 團隊不再開發，但專案維持開源，也歡迎其他人接手。留言者提到，近來開發工具公司陸續被收購，並列出多個例子。本則因原文網站無法連線，改依 Hacker News 討論整理。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
       "id": "alibaba/open-code-review",
       "name": "alibaba/open-code-review",
       "url": "https://github.com/alibaba/open-code-review",
       "language": "Go",
       "starsToday": 326,
-      "stars": 45202,
+      "stars": 45213,
       "summary": "Open Code Review 是阿里巴巴開源的命令列程式碼審查工具。它讀取 Git 差異，交給可設定的大型語言模型（LLM）代理程式，產生精確到行的審查意見。流程中挑選檔案、把相關檔案打包、比對規則等步驟由固定的程式邏輯處理，需要判斷與查找上下文時才交給代理程式。專案自述，在 200 個真實合併請求的測試中，相較通用代理程式 Claude Code，精確率與 F1 較高，耗用的詞元（token）約九分之一，但召回率較低。",
       "placeholder": false,
       "diagram": {
@@ -59,16 +73,44 @@
       "rank": 1
     },
     {
+      "id": 50022292,
+      "title": "Triple-A Minesweeper",
+      "titleZh": "三A級踩地雷",
+      "url": "https://minesweeper.mikelacher.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50022292",
+      "score": 601,
+      "comments": 111,
+      "summary": "這是一個網頁小遊戲，把經典的踩地雷（Minesweeper）做成「三A級大型遊戲」的樣子。依 Hacker News 留言，遊戲有開場商標、劇情對話與製作人員名單，其中商標畫面可以跳過；留言者也提到，有人做過同樣風格的瑪利歐版本影片。遊戲本身的規則細節，留言沒有說明。本則因原文網站無法連線，改依 Hacker News 討論整理。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
       "id": "anthropics/knowledge-work-plugins",
       "name": "anthropics/knowledge-work-plugins",
       "url": "https://github.com/anthropics/knowledge-work-plugins",
       "language": "Python",
       "starsToday": 709,
-      "stars": 28248,
+      "stars": 28257,
       "summary": "knowledge-work-plugins 是 Anthropic 開源的外掛集合，主要給知識工作者在 Claude Cowork 使用，也相容 Claude Code。每個外掛把某個職務會用到的技能、連接器、斜線指令與子代理程式打包在一起。目前收錄 11 個外掛，例如生產力、業務、客戶支援、產品管理、行銷、法務與財務。使用者可以依自己公司的工具、術語與流程調整外掛內容。",
       "placeholder": false,
       "source": "github",
       "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50020014,
+      "title": "Our $445M Series D",
+      "titleZh": "Oxide 完成 4.45 億美元 D 輪募資",
+      "url": "https://oxide.computer/blog/our-445m-series-d",
+      "hnUrl": "https://news.ycombinator.com/item?id=50020014",
+      "score": 580,
+      "comments": 255,
+      "summary": "Oxide 是一家製造伺服器的公司，文章標題寫明完成 4.45 億美元的 D 輪募資。Hacker News 留言者討論這家公司的招募流程，以及為何選擇增資而非貸款；有留言者提問是否與 AMD 等供應商有超出現有訂單的採購安排，串內沒有看到官方答覆。本則因原文網站無法連線，改依 Hacker News 討論整理。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
       "rank": 2
     },
     {
@@ -77,7 +119,7 @@
       "url": "https://github.com/BerriAI/litellm",
       "language": "Python",
       "starsToday": 95,
-      "stars": 60658,
+      "stars": 60664,
       "summary": "LiteLLM 是開源的 AI 閘道（gateway），像一個萬用插座轉接頭：程式只要用 OpenAI 格式送出請求，就能呼叫 OpenAI、Anthropic、Gemini、Bedrock、Azure 等 100 多家模型供應商。可當 Python 軟體開發套件（SDK）直接使用，也能架成代理伺服器供團隊共用，內建虛擬金鑰、花費追蹤、護欄、負載平衡與管理介面。專案表示，每秒 1,000 個請求時第 95 百分位延遲為 8 毫秒。",
       "placeholder": false,
       "diagram": {
@@ -90,16 +132,44 @@
       "rank": 3
     },
     {
+      "id": 50024499,
+      "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded",
+      "titleZh": "Carrier-Explode：解碼 iPhone、Pixel 與 Galaxy 的電信業者設定",
+      "url": "https://carrierexplode.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50024499",
+      "score": 206,
+      "comments": 18,
+      "summary": "Carrier-Explode 是作者的個人專案，持續封存各大手機品牌的電信業者設定（carrier settings），並附上常見基頻（baseband，負責行動通訊的晶片）設定的解碼器與說明。作者表示，部分假設仍待查證，但工具已被一些愛好者社群用上。留言者提到，網站也列出美國以外國家的電信業者。本則依作者在 Hacker News 的貼文與留言整理，原文網站無法連線。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
       "id": "storytold/artcraft",
       "name": "storytold/artcraft",
       "url": "https://github.com/storytold/artcraft",
       "language": "Rust",
       "starsToday": 3752,
-      "stars": 11463,
+      "stars": 11504,
       "summary": "ArtCraft 是給藝術家、設計師與影像創作者的 AI 圖像與影片創作桌面程式，自稱「藝術家的整合開發環境（IDE）」。使用者可在 2D 畫布上構圖、在 3D 中安排場景，再選擇要用的模型，而不是只靠文字提示。說明文件列出可用模型：圖像 16 個、影片 25 個、音樂與音效 5 個、3D 網格 11 個，以及世界與高斯點雲 5 個。提供 Windows 與 macOS 的穩定版，Linux 需自行從原始碼建置。",
       "placeholder": false,
       "source": "github",
       "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50027167,
+      "title": "Japan's Most Famous Tuna Buyer Says He Turned Somali Pirates into Fishermen",
+      "titleZh": "日本知名鮪魚採購員自稱讓索馬利亞海盜轉當漁夫",
+      "url": "https://www.japaninsides.com/the-sushi-king-who-went-to-somalia-how-japans-most-famous-tuna-buyer-says-he-turned-pirates-into-fishermen-55344",
+      "hnUrl": "https://news.ycombinator.com/item?id=50027167",
+      "score": 53,
+      "comments": 28,
+      "summary": "文章報導一位日本知名鮪魚採購員，他自稱讓索馬利亞海盜轉為漁夫。Hacker News 留言者指出，文章引用的是他在日文訪談中的說法，沒有附上來源。有留言者表示，他實際設點在鄰國吉布地，做法是提供漁具與技術訓練；也有留言者質疑，海盜減少不能只歸因於幾艘漁船。這些說法都是留言者的看法，未經查證。本則因原文網站無法連線，改依 Hacker News 討論整理。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
       "rank": 4
     }
   ]
