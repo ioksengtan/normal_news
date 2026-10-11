@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340">
+  <rect width="360" height="340" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 15px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+    .box { fill: #fffdf8; stroke: #1c1915; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">只准選 A 到 E，一次就答完</text>
+  <rect x="90" y="46" width="180" height="50" class="box"/>
+  <text x="180" y="76" text-anchor="middle">題目與五個選項</text>
+  <line x1="180" y1="98" x2="180" y2="128" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="60" y="132" width="240" height="60" class="box"/>
+  <text x="180" y="158" text-anchor="middle">語言模型算一次</text>
+  <text x="180" y="178" text-anchor="middle" class="sub">只留 A B C D E 五個字的分數</text>
+  <line x1="180" y1="194" x2="180" y2="224" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="60" y="228" width="240" height="50" class="box"/>
+  <text x="180" y="258" text-anchor="middle">分數最高的字就是答案</text>
+  <text x="180" y="308" text-anchor="middle" class="sub">答案一定在選項內，但不保證答對</text>
+</svg>

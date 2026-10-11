@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-11",
+  "issueNumber": 11,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-11T07:00:00+08:00",
+  "fetchedAt": "2026-10-11T00:31:29.861Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "boykopovar/AnyPS5",
+      "name": "boykopovar/AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "language": "C++",
+      "starsToday": 5805,
+      "stars": 26830,
+      "summary": "AnyPS5 是一套把 PS5 可執行檔自動移植到 Linux 與 Windows 的工具。說明文件寫道，它內含 relinker（重新連結工具），能把執行檔轉成目標系統的原生格式，就像把同一份樂高說明書改成另一種盒子的零件規格；另有可動態連結的系統函式庫實作，不用模擬器，也沒有另外的執行程序。作者表示，2D 平台遊戲 Dreaming Sarah 在 GTX 1050 Ti 與 i5-7500 上可穩定以每秒 60 格執行。專案採 GNU GPL v2 授權，說明文件稱不含也不需要受版權保護的軟體、韌體或金鑰。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-11/boykopovar/AnyPS5.svg",
+        "alt": "流程圖：PS5 可執行檔經 relinker 轉成 Linux 或 Windows 的原生格式，不經模擬器。",
+        "caption": "relinker 把執行檔換成目標系統的原生格式，不使用模擬器。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50037949,
+      "title": "Build your own decision model",
+      "titleZh": "自己做一個決策模型",
+      "url": "https://nishtahir.com/build-your-own-decision-model/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50037949",
+      "score": 68,
+      "comments": 9,
+      "summary": "Nish Tahir 在 10 月 10 日的文章說明所謂「系統一」決策模型：答案只能從固定選項裡挑，一次運算就出結果。一般語言模型要產生 11 個符元（token，文字的小片段）的輸出，得算 11 次。做法是遮住 A 到 E 以外的字，取機率最高者；作者以 Qwen3-1.7B 示範並附程式碼。文章提醒，限制選項不保證答案正確，輸出機率也未必等於答對的真實機率。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-11/50037949.svg",
+        "alt": "流程圖：題目與選項進入語言模型，只比較 A 到 E 的分數，最高者為答案。",
+        "caption": "限制輸出只能是 A 到 E，模型算一次就得到答案。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "storytold/artcraft",
+      "name": "storytold/artcraft",
+      "url": "https://github.com/storytold/artcraft",
+      "language": "Rust",
+      "starsToday": 3222,
+      "stars": 14479,
+      "summary": "ArtCraft 是給藝術家、設計師與影像創作者用的桌面軟體，自稱是互動式人工智慧圖像與影片創作的整合開發環境（IDE）。整合開發環境就像一間工具齊全的工作室，所有工具放在同一張桌子上。說明文件寫道，使用者可在 2D 畫布上構圖、在 3D 中安排場景，再選擇要用的模型；先搭好畫面再生成，以控制構圖、角色一致與鏡頭位置。專案以 Rust 寫成，說明文件列出 62 種模型，涵蓋圖像、影片、音樂與音效、3D 網格等。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50038383,
+      "title": "Anthropic Bans Cruelty to Claude, Still Won't Say What It Protects",
+      "titleZh": "Anthropic 禁止對 Claude 殘酷行為，但未說明保護的是什麼",
+      "url": "https://rews.cc/a/anthropic-bans-cruelty-to-claude-still-won-t-say-what-it-pro-bd99f6",
+      "hnUrl": "https://news.ycombinator.com/item?id=50038383",
+      "score": 12,
+      "comments": 2,
+      "summary": "Rews 報導，Anthropic 10 月 8 日公布的使用政策更新，自 11 月 12 日起禁止對 Claude「持續且不必要的虐待或殘酷行為」。報導引述政策，規則只適用於極端情況；一般的挫折、反駁、黑暗創作題材與模型測試與研究不在其內。執行方式沿用 2025 年 8 月賦予 Claude Opus 4 與 4.1 的結束對話功能。報導指出，Anthropic 沒有公布這項功能的實際觸發頻率。同一次更新也調整武器軟體、監控、選舉鎖定與人工智慧控制硬體的規定。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "mksglu/context-mode",
+      "name": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "language": "TypeScript",
+      "starsToday": 178,
+      "stars": 26312,
+      "summary": "context-mode 是給人工智慧程式助手用的模型脈絡協定（MCP）伺服器，目的是節省對話視窗（context window，助手一次能讀的文字量）。說明文件指出，工具回傳的原始資料會占用大量空間，例如一份 Playwright 快照約 56 KB，並表示該工具把 315 KB 縮成 5.4 KB。做法有兩種：原始資料留在沙盒裡，只回傳結果；檔案修改、git 操作與錯誤等事件記在 SQLite 資料庫，對話壓縮後再用搜尋取回相關部分。授權為 ELv2。原文未說明縮減數字的測試條件。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 49991852,
+      "title": "2D Vehicles",
+      "titleZh": "2D 載具：GTA 載具系統的 1996 年原型",
+      "url": "https://patkerr.co.uk/2d-vehicles/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49991852",
+      "score": 338,
+      "comments": 78,
+      "summary": "Pat Kerr 表示，他在 1996 年 8 月底的一個週末，用 Atari ST 上的 GFA BASIC 寫了一個 2D 物理模擬，後來成為《俠盜獵車手》載具系統的基礎。為紀念 30 週年，他用 JavaScript 重製成可在網頁遊玩的版本，有汽車、太空船與磚塊三種模式，也支援手機觸控。他說明，核心是含扭矩的 2D 剛體動力學，上面再加一層簡化的車輛模型；他認為當時多數遊戲載具只用簡單的點物理。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "flutter/flutter",
+      "name": "flutter/flutter",
+      "url": "https://github.com/flutter/flutter",
+      "language": "Dart",
+      "starsToday": 88,
+      "stars": 179517,
+      "summary": "Flutter 是 Google 的軟體開發套件（SDK），讓開發者用同一份程式碼做出手機、網頁與桌面應用程式，就像用同一份食譜在不同廚房煮出同一道菜。說明文件表示它免費且開源，可搭配既有程式碼。首次執行時，工具會從 Google 伺服器下載 Dart SDK，升級時也會下載。說明文件並提供安裝教學、文件網站、貢獻指南，以及追蹤不相容變更的頁面，使用者下載或使用即視為同意 Google 服務條款。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50036864,
+      "title": "A city-building game in which the city would prefer you didn't",
+      "titleZh": "一款城市比你更不想你蓋房子的建城遊戲",
+      "url": "https://housing.over.pizza/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50036864",
+      "score": 144,
+      "comments": 53,
+      "summary": "Discretionary Review 是一款舊金山住宅模擬網頁遊戲，場景設在 2015 年 1 月。頁面上有地圖、限高、市議員選區、屋主政治、聯盟政治與房價等選項，也有名為 The Fog City Ledger 的新聞欄與規則手冊。標題指出，玩家想蓋房子，遊戲中的城市卻會阻擋。原文頁面沒有更多文字說明，以上依頁面介面與 Hacker News 標題整理。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "tensorflow/tensorflow",
+      "name": "tensorflow/tensorflow",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "language": "C++",
+      "starsToday": 26,
+      "stars": 200725,
+      "summary": "TensorFlow 是端到端的開源機器學習平台，由 Google Brain 的機器智慧團隊研究人員與工程師最初開發。機器學習就像讓電腦看大量範例後自己找出規律，而不是由人逐條寫規則。說明文件寫道，平台提供穩定的 Python 與 C++ 應用程式介面（API），其他語言的介面則不保證向下相容。它附有工具、函式庫與社群資源，供研究者與開發者建立並部署機器學習應用。專案文件另列有安全修補與行為準則。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50029487,
+      "title": "The Lightbulb Computer",
+      "titleZh": "燈泡電腦：用投影機做環境運算",
+      "url": "https://lightbulbcomputer.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50029487",
+      "score": 202,
+      "comments": 41,
+      "summary": "Guillaume Ardaud 在 2026 年 9 月發表設計構想「燈泡電腦」（Lightbulb Computer），主張用投影機加電腦視覺，取代智慧眼鏡與頭戴裝置。這是大燈泡形狀的假想裝置，可放在電池底座上帶著走，也可旋入牆面或天花板的燈座。它能聽語音指令、看使用者指向何處，並把內容投影到真實空間，例如在廚房釘上食譜與計時器，或在桌上顯示大張地圖供兩人一起看。作者稱這是推測性的設計原型，並附有影片版本。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
