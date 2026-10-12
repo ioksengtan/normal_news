@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-12",
+  "issueNumber": 12,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-12T07:00:00+08:00",
+  "fetchedAt": "2026-10-12T00:32:06.483Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "morluto/rea",
+      "name": "morluto/rea",
+      "url": "https://github.com/morluto/rea",
+      "language": "TypeScript",
+      "starsToday": 25599,
+      "stars": 104106,
+      "summary": "REA（Reverse Engineer Anything）是一套給程式助手使用的逆向工程工具。逆向工程就像把一台做好的玩具拆開，看裡面零件怎麼運作。說明文件寫道，助手透過 MCP（模型情境協定）呼叫 REA，檢查目標並追蹤相關程式碼，REA 再把發現連同證據回傳。可分析原生執行檔、應用程式與執行時的行為；分析原生執行檔需要 Hopper、Ghidra 或 IDA 其中之一。專案採 MIT 授權，需要 Node.js。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-12/morluto/rea.svg",
+        "alt": "流程圖：助手透過 MCP 呼叫 REA，REA 檢查並追蹤程式碼，回傳附證據的結果。",
+        "caption": "助手呼叫 REA 查程式，REA 回傳發現與證據。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50049411,
+      "title": "Whatever became of holography? (2011)",
+      "titleZh": "全像攝影後來怎麼了？（2011 年文章）",
+      "url": "https://www.americanscientist.org/article/whatever-became-of-holography",
+      "hnUrl": "https://news.ycombinator.com/item?id=50049411",
+      "score": 25,
+      "comments": 5,
+      "summary": "原文來自美國科學人（American Scientist），本站這次沒能取得原文，以下依 Hacker News 討論整理。討論中，有人推薦《Holographic Visions》一書，也有人提到 3Blue1Brown 的全像攝影影片。一位留言者說，業餘全像攝影用的底片與耗材曾由 Integraf 販售，該公司已停售，原因是供應鏈有一部分來自俄羅斯，戰爭使材料無法取得。這是留言者的說法，本站未查證。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "bilawalsidhu/gods-eye-view",
+      "name": "bilawalsidhu/gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "language": "JavaScript",
+      "starsToday": 886,
+      "stars": 51675,
+      "summary": "God's Eye View 是在瀏覽器裡執行的 3D 地球，把公開資料放在同一個畫面上，像一張可以放大縮小的即時地圖。說明文件列出的資料有飛機、船、衛星、地震、交通與公開攝影機，並說資料來源都是公開的。它也提供由即時 AI 代理程式驅動的語音操作。不用應用程式介面金鑰就能開始，選用的金鑰可以在程式內加入。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-12/bilawalsidhu/gods-eye-view.svg",
+        "alt": "流程圖：公開資料來源進入 God's Eye View，在瀏覽器顯示 3D 地球，使用者可用語音操作。",
+        "caption": "公開資料放上同一顆 3D 地球，也能用語音操作。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50045984,
+      "title": "Total Annihilation, rebuilt for modern computers",
+      "titleZh": "《終極動員令》（Total Annihilation）為現代電腦重建",
+      "url": "https://nanolathe.gg",
+      "hnUrl": "https://news.ycombinator.com/item?id=50045984",
+      "score": 332,
+      "comments": 144,
+      "summary": "Nanolathe 是開源的 2.5D 即時戰略（RTS）遊戲引擎，以《Total Annihilation》作為起點，程式碼採 MIT 授權。官網提供瀏覽器試玩版，有三個原版試玩任務，不需遊戲資料夾或安裝，建議用桌面版 Chrome、Edge 或 Safari。完整遊戲則有 Windows、Mac、Linux 的原生測試版，需要使用者已有的遊戲檔。畫面可選現代 GPU 渲染或回到 Classic 外觀。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-12/50045984.svg",
+        "alt": "流程圖：瀏覽器試玩版與原生測試版都建立在 MIT 授權的 Nanolathe 引擎上。",
+        "caption": "Nanolathe 有瀏覽器試玩版與原生測試版兩種玩法。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "pytorch/pytorch",
+      "name": "pytorch/pytorch",
+      "url": "https://github.com/pytorch/pytorch",
+      "language": "Python",
+      "starsToday": 315,
+      "stars": 104483,
+      "summary": "PyTorch 是 Python 的機器學習套件，說明文件列出兩項主要功能：一是類似 NumPy 的張量（tensor，可想成多維度的數字表格）運算，並能用 GPU（顯示卡）加速；二是建立在「帶式自動微分」（tape-based autograd）上的深度神經網路。使用者可以搭配 NumPy、SciPy 與 Cython 等 Python 套件來擴充。說明文件提供二進位安裝檔、原始碼編譯與 Docker 映像檔等安裝方式。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50047091,
+      "title": "Cartographers of North Korea",
+      "titleZh": "北韓的地圖繪製者",
+      "url": "https://cartographers-nk.wonyoung.so/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50047091",
+      "score": 165,
+      "comments": 28,
+      "summary": "原文是一個需要 JavaScript 才能顯示內容的網頁，本站這次沒能取得內文，以下依 Hacker News 討論整理。標題指向繪製北韓地區 OpenStreetMap（開放街圖，大家共同編輯的網路地圖）的志願者。留言提到，網頁收錄了編輯者的回覆，其中一位自稱 P791 的編輯說，他沿著圖們江兩岸繪製圍籬、道路與城鎮。這是該編輯的自述，本站未查證。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "lyogavin/airllm",
+      "name": "lyogavin/airllm",
+      "url": "https://github.com/lyogavin/airllm",
+      "language": "Jupyter Notebook",
+      "starsToday": 548,
+      "stars": 36477,
+      "summary": "AirLLM 是一個 Python 套件，目標是降低大型語言模型推論時用掉的記憶體。作者表示，它能讓 700 億參數的模型在單張 4GB 顯示卡上執行，且不使用量化、蒸餾或剪枝。說明文件也列出其他模型所需的顯示記憶體，例如 DeepSeek-V3 約 12GB，原文未說明測試條件。2026 年 9 月的更新加入訓練支援：一次載入一層凍結的權重，把轉接層留在 GPU 上。專案採 Apache 2.0 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50049302,
+      "title": "Governments are mishandling the affordability crisis",
+      "titleZh": "各國政府對生活負擔危機處理不當",
+      "url": "https://www.economist.com/finance-and-economics/2026/10/08/governments-are-mishandling-the-affordability-crisis",
+      "hnUrl": "https://news.ycombinator.com/item?id=50049302",
+      "score": 14,
+      "comments": 3,
+      "summary": "原文是經濟學人（The Economist）2026 年 10 月 8 日的文章。該網站的 robots.txt 不允許人工智慧代理程式抓取，因此本站沒有讀原文，只能說明標題的主張：各國政府在處理生活負擔（affordability）問題上有失誤。Hacker News 上這則貼文有 14 分、3 則留言，留言多為個人看法，沒有補充文章內容。詳細論點請直接閱讀原文。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "chrislgarry/Apollo-11",
+      "name": "chrislgarry/Apollo-11",
+      "url": "https://github.com/chrislgarry/Apollo-11",
+      "language": "Assembly",
+      "starsToday": 466,
+      "stars": 74249,
+      "summary": "Apollo-11 這個專案存放阿波羅 11 號導引電腦（AGC）的原始程式碼，包含指令艙的 Comanche055 與登月艙的 Luminary099。導引電腦就像太空船上負責算位置與航向的小電腦。說明文件寫道，程式碼由 Virtual AGC 與 MIT 博物館數位化，專案目標是保存原始的程式碼，歡迎提交修正與原始文件不符之處的變更請求。專案的主要語言是組合語言。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50048522,
+      "title": "Recursive self-improvement through collective intelligence",
+      "titleZh": "透過集體智慧達成遞迴式自我改進",
+      "url": "https://pub.sakana.ai/mass/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50048522",
+      "score": 38,
+      "comments": 11,
+      "summary": "這是 Sakana AI 與加州大學柏克萊分校研究者的文章，介紹 MASS（Multi-Agent Self-Supervision，多代理自我監督）。作者提出：模型本身可以同時當被改進的對象、改進者與評審。MASS 反覆最佳化多個代理程式組成的工作流程，再把這些集體工作的成果當作訓練訊號。作者表示，它在研究類基準測試上，每個輸出符元的得分高於基礎模型。文中附有論文與程式碼連結。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
