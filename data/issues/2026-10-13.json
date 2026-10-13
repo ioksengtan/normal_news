@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-13",
+  "issueNumber": 13,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-13T07:00:00+08:00",
+  "fetchedAt": "2026-10-13T00:32:04.115Z",
+  "sources": {
+    "github": {
+      "status": "failed",
+      "fallback": false,
+      "error": "https://api.github.com/search/repositories?q=created%3A%3E2026-10-06&sort=stars&order=desc&per_page=40 HTTP 401"
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": 50064536,
+      "title": "Blood cells from 80-year-old donor become stem cells with molecular age under 20",
+      "titleZh": "80 歲捐贈者的血液細胞變成幹細胞，分子年齡低於 20 歲",
+      "url": "https://doi.org/10.1111/acel.70751",
+      "hnUrl": "https://news.ycombinator.com/item?id=50064536",
+      "score": 46,
+      "comments": 16,
+      "summary": "這篇是發表在學術期刊的研究論文，標題指出：取自 80 歲捐贈者的血液細胞，被轉變成幹細胞（可以變成多種細胞的原始細胞，像一團還沒定型的黏土）後，分子層面的年齡低於 20 歲。論文網站要求瀏覽器驗證，無法取得內文，因此這則依 Hacker News 討論與標題整理，細節請看原文。討論中有人提到，若這類技術未來用在整個人身上，可能引發的疑慮；也有人提到生物電與細胞重新編程的相關研究。討論串共 16 則留言，原文未提供更多可在此引用的數據。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": 50064318,
+      "title": "GPT-6 Astra Helped Me Jailbreak My Kindle",
+      "titleZh": "GPT-6 Astra 協助我破解（越獄）自己的 Kindle",
+      "url": "https://nirajrajgor.com/blog/kindle-photo-frame-with-ai",
+      "hnUrl": "https://news.ycombinator.com/item?id=50064318",
+      "score": 38,
+      "comments": 10,
+      "summary": "作者想替閒置的第 10 代 Kindle Basic 找新用途，請程式代理人（能自己寫程式、執行指令的人工智慧）透過 Wi-Fi 連到電子書閱讀器。作者表示，試過的幾個模型裡，GPT-5.6 Sol 無法解決資料儲存的錯誤，Fable 5.1 與 Opus 5.5 在兩次提問後被 Anthropic 的資安防護擋下，GPT-6 Astra 則參考現有的開源越獄程式，做出名為 KindleCTL 的工具，並裝上每張照片顯示四分鐘、共十張照片輪播的程式。作者指出，程式在 Mac 上通過自動檢查，但在 Kindle 上換圖時會殘留前一張的痕跡，因為測試沒有涵蓋螢幕實際的更新方式。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": 50058507,
+      "title": "GLM-Legal",
+      "titleZh": "GLM-Legal：法律領域的模型",
+      "url": "https://z.ai/blog/glm-legal",
+      "hnUrl": "https://news.ycombinator.com/item?id=50058507",
+      "score": 408,
+      "comments": 235,
+      "summary": "這則連到z.ai 網站的部落格頁面，標題為 GLM-Legal。該頁面需要執行網頁程式碼才會顯示內文，無法直接擷取，因此這則依 Hacker News 討論整理，細節請看原文。討論中，有留言者表示這看起來不是開放模型，也有人指出它似乎依靠修訂追蹤（記錄每處修改的功能）與人工覆核，但沒看到對模型捏造不存在案例的處理。另有留言提出，律師使用人工智慧時是否該揭露的問題。這串討論有 408 分、235 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": 50063138,
+      "title": "Who Is Vfmaddrnd231pd?",
+      "titleZh": "誰是 vfmaddrnd231pd？",
+      "url": "https://purplesyringa.moe/blog/who-is-vfmaddrnd231pd/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50063138",
+      "score": 90,
+      "comments": 8,
+      "summary": "作者 purplesyringa 在 2026 年 10 月 12 日的文章中，討論英特爾軟體開發手冊（SDM）裡一個名為 vfmaddrnd231pd 的指令。手冊說明它能讓每條指令各自控制捨入方式（數字取近似值的規則），像是讓每道菜各自決定四捨五入。作者表示，GNU 組譯器與 Clang 都不認得它，在支援 FMA 指令集的 Haswell 處理器上執行會出現未定義指令錯誤，而且 2026 年版手冊已經沒有這個指令，2024 年版仍有。作者推測是英特爾在最後一刻發現問題而從處理器移除，但表示無法證實。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": 50058528,
+      "title": "A Modern Web App in C",
+      "titleZh": "用 C 語言寫的現代網路應用程式",
+      "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
+      "hnUrl": "https://news.ycombinator.com/item?id=50058528",
+      "score": 366,
+      "comments": 158,
+      "summary": "這篇文章的 robots.txt 不允許自動抓取，因此這則依 Hacker News 討論整理，細節請看原文。標題談的是用 C 語言寫網路應用程式。討論中有留言者指出，文章使用 CGI（每次請求就啟動一個新程式來回應，像每位客人都請一位新店員）；有人提到 FastCGI 讓程式常駐，以避免每次重新啟動；也有人問多個程式同時寫入 SQLite 資料庫的情形，另有人認為 Go、Rust 也能得到文中的多數好處，並多了記憶體安全。討論串共 158 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
