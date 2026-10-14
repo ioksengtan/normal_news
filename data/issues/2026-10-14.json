@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-14",
+  "issueNumber": 14,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-14T07:00:00+08:00",
+  "fetchedAt": "2026-10-14T00:31:54.318Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": true,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "wheresryan22/anatomy",
+      "name": "wheresryan22/anatomy",
+      "url": "https://github.com/wheresryan22/anatomy",
+      "language": "JavaScript",
+      "starsToday": null,
+      "stars": 8187,
+      "summary": "Anatomy 是一個給程式助手使用的技能（Agent Skill，就像給助手的一本操作手冊）。說明文件寫道，它能把一個概念做成可以操作的等角圖（用斜角方式畫出立體感的圖），零件細小，格式有 SVG（用文字描述圖形的檔案）、WebGL（在瀏覽器裡畫 3D 的技術）與 3D。專案描述提到它用來畫真實世界的機器和複雜系統，也可以加上 WebGL 著色效果。它可在 Claude Code 使用，也能在 OpenCode 與 Codex 執行，需要 Node 20.10 以上，採 MIT 授權，沒有其他依賴套件。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-14/wheresryan22/anatomy.svg",
+        "alt": "流程圖：想說明的概念交給 Anatomy 技能，產出可互動的等角圖。",
+        "caption": "概念交給技能，由助手產出互動等角圖。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50073879,
+      "title": "Gemini 4 Argon",
+      "titleZh": "Google 發表新模型 Gemini 4 Argon",
+      "url": "https://deepmind.google/models/gemini/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50073879",
+      "score": 943,
+      "comments": 729,
+      "summary": "Google DeepMind 的頁面介紹新模型，名稱為 Gemini 4 的 Argon 版，頁面稱可在 Gemini 應用程式、Google AI Studio 與 Google Antigravity 使用，目前開放給 Google AI Pro 與 Ultra 訂閱者。Google 表示它支援 100 萬個詞元（token，模型處理文字的最小單位）的輸出長度。Google 公布的自家測試中，Vals Index 為 68.9%（次高 67.0%），DeepSWE v1.1 為 77.9%（次高 74.2%）；Terminal-bench 4.0 為 57.4%，低於 Claude Opus 5.5 的 66.4%。這些成績為 Google 自行公布，頁面未詳述測試條件，也沒有列出價格。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "mhtsec/ARTEX",
+      "name": "mhtsec/ARTEX",
+      "url": "https://github.com/mhtsec/ARTEX",
+      "language": "Go",
+      "starsToday": null,
+      "stars": 3871,
+      "summary": "ARTEX 是一套由人工智慧自動進行滲透測試的系統，後端用 Go，前端用 Next.js。滲透測試就像請人模擬壞人，試著找出門鎖哪裡有洞，好讓屋主先補起來。專案描述稱它是百度「agent+」攻防挑戰賽的冠軍專案。說明文件指出，這個儲存庫是最後一個版本的原始碼備份，原本的 Docker 映像檔已失效，改由此處維護新的映像檔，也可以自己從原始碼建置。文件另附一個使用模擬資料的線上展示。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50077020,
+      "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
+      "titleZh": "Show HN：Guitoro，用鍵盤彈奏的虛擬吉他",
+      "url": "https://guitoro.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50077020",
+      "score": 232,
+      "comments": 78,
+      "summary": "Guitoro 是在瀏覽器裡使用的免費虛擬吉他，作者用真實樂器的錄音製作聲音。使用者可以用鍵盤、滑鼠或觸控螢幕彈奏，並選擇木吉他、古典吉他、電吉他或貝斯，畫面會顯示和弦指法與每一次撥弦。練習歌曲時可以把速度降到 20%，網站也提供免費的和弦工具與調音器。不需要註冊或下載。作者在貼文中請大家回饋彈奏的手感與聲音。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "t4t5/omdrop-owl",
+      "name": "t4t5/omdrop-owl",
+      "url": "https://github.com/t4t5/omdrop-owl",
+      "language": "Shell",
+      "starsToday": null,
+      "stars": 2586,
+      "summary": "omdrop-owl 讓 iPhone 與 Linux 筆電之間可以使用 AirDrop（蘋果裝置之間互傳檔案的功能），條件是筆電的 Wi-Fi 晶片不是蘋果用的博通（Broadcom）晶片。它要搭配另一個專案 omdrop 一起用，要先安裝 omdrop-owl，再安裝 omdrop 0.16.0 以上版本。說明文件提供 Arch 的 AUR 套件，也提供在 Debian、Ubuntu 與 Fedora 從原始碼建置的步驟，並列出支援的硬體。文件說明有「共用」模式（Wi-Fi 保持連線）與「獨佔」模式（傳輸時 Wi-Fi 會關閉）。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50054092,
+      "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+      "titleZh": "Ledger 證實錢包被盜與間諜晶片植入有關",
+      "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50054092",
+      "score": 397,
+      "comments": 307,
+      "summary": "BleepingComputer 報導，Ledger 證實，透過東南亞經銷商 CryptoBilis 販售的部分硬體錢包，被裝了未授權的硬體植入物。Ledger 表示 10 月 9 日開始調查並要求該經銷商停售，10 月 10 日確認至少一台裝置含有植入物，並稱受影響數量「有限」；文章未給出裝置數量或被盜金額。研究人員表示，植入物會擷取畫面與按鍵以取得助記詞，再透過 LTE 傳出。Ledger 建議尚未設定者不要設定，已設定者把資產移到新裝置與新助記詞，並向授權經銷商購買。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-14/50054092.svg",
+        "alt": "流程圖：10 月 9 日開始調查，10 月 10 日確認植入物，之後 Ledger 提出建議。",
+        "caption": "Ledger 10 月 9 日調查、10 月 10 日確認，並提出建議。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "ARahim3/DigUp",
+      "name": "ARahim3/DigUp",
+      "url": "https://github.com/ARahim3/DigUp",
+      "language": "Swift",
+      "starsToday": null,
+      "stars": 2370,
+      "summary": "DigUp 是一個 Mac 應用程式，讓使用者用一般的話描述想找的內容，就能搜尋電腦裡的照片、PDF、錄音、影片與程式碼。它用的是 Google DeepMind 的 EmbeddingGemma 2 模型，說明文件表示這個模型能把文字、圖片、聲音和影片放進同一個空間，像把意思相近的東西放在圖書館同一個書架。文件寫明所有處理都在使用者的 Mac 上進行。需要 Apple Silicon 與 macOS 14 以上，免費並開源，Windows 與 Linux 版本文件稱仍在準備。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50073633,
+      "title": "Redesigning source control at Anthropic",
+      "titleZh": "重新設計 Anthropic 的原始碼版本控制",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "hnUrl": "https://news.ycombinator.com/item?id=50073633",
+      "score": 499,
+      "comments": 496,
+      "summary": "Anthropic 的工程文章表示，公司單一程式庫每天的合併次數，從 2026 年 5 月約 2,500 次，增加到 9 月超過 3 萬次，Git 成為瓶頸。公司因此自建版本控制系統 Scion，由七人團隊在五個月內完成遷移。Scion 由伺服器保存完整歷史，使用者端只保留需要的檔案，並分成節點、區域快取與權威伺服器三層，像郵件從社區信箱、區域分局到總局逐層取件。文章表示快取命中率超過 99%，基礎設施的處理器與記憶體用量約小 200 倍。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-14/50073633.svg",
+        "alt": "流程圖：每個節點的 scion-daemon、區域的 scion-cache、權威的 scion-server 三層。",
+        "caption": "Scion 分成節點、區域快取與權威伺服器三層。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "storytold/craft-launcher",
+      "name": "storytold/craft-launcher",
+      "url": "https://github.com/storytold/craft-launcher",
+      "language": "Rust",
+      "starsToday": null,
+      "stars": 2299,
+      "summary": "ArtCraft Launcher 是 Craft App Suite 的啟動器，用 Rust 重寫。啟動器像一個應用程式商店的櫃台，負責替使用者安裝、更新與開啟套件裡的各個程式，例如 PhotoCraft、FilmCraft、WordCraft、CADCraft 等十三個。說明文件稱它會為使用者的電腦選對版本並保持更新，支援 macOS、Windows、Linux、FreeBSD 與網頁。專案目前標示為早期 alpha 階段，採 MIT 或 Apache-2.0 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50071017,
+      "title": "Apple HomeView",
+      "titleZh": "蘋果發表智慧家庭顯示器 HomeView",
+      "url": "https://www.apple.com/apple-homeview/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50071017",
+      "score": 642,
+      "comments": 766,
+      "summary": "Apple 發表智慧家庭顯示器 HomeView，搭載 7 吋 Liquid Retina 螢幕與 A18 晶片，有桌上型與壁掛型兩種，都需要有線供電。頁面稱它有 12MP Center Stage 相機、四個波束成形麥克風，可辨識最多六位使用者，並可作為智慧家庭中樞。頁面表示以 Apple Intelligence 為基礎的 Siri 在 27.2 版軟體中為測試版，初期支援英文。頁面寫明 11 月 13 日起供貨，現已開放預購，沒有列出價格。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
