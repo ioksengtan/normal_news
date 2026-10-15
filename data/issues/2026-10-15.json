@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-15",
+  "issueNumber": 15,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-15T07:00:00+08:00",
+  "fetchedAt": "2026-10-15T00:31:32.617Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "debpalash/VoiceStudio",
+      "name": "debpalash/VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "language": "Python",
+      "starsToday": 3538,
+      "stars": 66311,
+      "summary": "VoiceStudio 是開源（原始碼公開，像公開的食譜，誰都能看、能改）的語音工具，專案描述稱它可完全在本機執行，是 ElevenLabs 的替代品。說明文件列出的功能有聲音複製、聲音設計、影片配音、語音聽寫、逐字稿轉錄與有聲書製作，語言涵蓋 646 種。預設使用 k2-fsa/OmniVoice 引擎，也可換成其他引擎。作業系統支援 macOS、Windows 與 Linux，採 AGPL-3.0 授權，也提供給程式助手呼叫的本機應用程式介面（API）與 MCP。文件說遠端服務是選用的，使用數據分析需要使用者同意。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-15/debpalash/VoiceStudio.svg",
+        "alt": "流程圖：聲音或影片交給在本機執行的 VoiceStudio，產出語音成品。",
+        "caption": "聲音或影片在本機處理，產出配音、聽寫與有聲書等成品。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50093568,
+      "title": "Things to know when you get cancer – 2026 Edition",
+      "titleZh": "罹癌時該知道的事（2026 年版）",
+      "url": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50093568",
+      "score": 679,
+      "comments": 178,
+      "summary": "作者 JJ Maxwell 說他在 2026 年 5 月被診斷出口腔鱗狀細胞癌，文章整理他自己的經驗。他建議排約診時要持續打電話，詢問是否有人取消而能提前；他在家人催促下回電，因此在同一週看到耳鼻喉科。他表示醫師不一定及時安排完整基因檢測，也提到 AI 聊天模型一開始多半往「沒有癌症」的方向回答。他還建議查看 NCCN 的標準治療流程圖、手術前和做過同一種手術的人談談、詢問外科醫師每年的手術量與併發症比例，並盡早到大型癌症中心取得第二意見。這些是個人經驗，不是醫療建議。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "mksglu/context-mode",
+      "name": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "language": "TypeScript",
+      "starsToday": 947,
+      "stars": 29113,
+      "summary": "context-mode 是給 AI 程式助手用的 MCP（模型情境協定，讓助手呼叫外部工具的共同規格）伺服器，處理的是「情境視窗」（助手一次能讀進腦中的內容量，像書桌的桌面大小）被工具回傳資料塞滿的問題。說明文件寫道，它把工具的原始輸出留在沙盒，不放進對話；專案表示 315 KB 可縮成 5.4 KB，減少 98%，原文未說明測試條件。它也把檔案編輯、git 操作等事件記在 SQLite 資料庫，對話被壓縮後再用 BM25 搜尋取回相關內容。授權為 ELv2，可作為 Claude Code 外掛安裝。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-15/mksglu/context-mode.svg",
+        "alt": "流程圖：大量原始資料留在沙盒，只把精簡結果送回對話。",
+        "caption": "原始資料留在沙盒，只送回精簡結果。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50094994,
+      "title": "OpenCode 2.0",
+      "titleZh": "OpenCode 2.0 發表：伺服器改為自動執行",
+      "url": "https://anoma.ly/notes/opencode-2-0/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50094994",
+      "score": 249,
+      "comments": 90,
+      "summary": "OpenCode 是程式助手工具，開發團隊 Anomaly 發表 2.0 版，並稱這是大幅改寫。文章說，過去就採用用戶端與伺服器分開的架構（像餐廳的櫃檯與廚房分工），但多半只有進階使用者用到；2.0 起伺服器會在本機自動以單一背景程序執行，終端機介面、網頁介面與桌面版都連到這個程序。應用程式介面（API）也從頭重寫，另有 @opencode/client 可寫指令稿，並能用 opencode api 指令呼叫。使用者可用 /pair 或 opencode pair 把它開放給其他主機，團隊也說原生應用程式正在開發。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-15/50094994.svg",
+        "alt": "流程圖：終端機、網頁與桌面版三種介面連到同一個背景程序。",
+        "caption": "三種介面連到同一個本機背景程序。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "nvm-sh/nvm",
+      "name": "nvm-sh/nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "language": "Shell",
+      "starsToday": 52,
+      "stars": 95451,
+      "summary": "nvm 是 Node Version Manager 的縮寫，中文可說是 Node.js 的版本管理員。專案描述稱它是符合 POSIX（類 Unix 系統共通標準）的 bash 指令稿，用來管理同時存在的多個 Node.js 版本，就像在同一個工具箱裡放好幾把不同尺寸的扳手，需要哪把就換哪把。說明文件提供安裝與更新指令稿，也列出 Git 安裝與手動安裝的方式，另有在 Docker 中安裝的說明。使用方式包含列出可用版本、設定預設的 Node 版本、使用長期支援（LTS）版本，以及從鏡像站下載。目前說明文件標示的版本為 v0.40.8。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50096142,
+      "title": "Tiny Little Office",
+      "titleZh": "Tiny Little Office：用連結當文件的迷你辦公室",
+      "url": "https://tinylittleoffice.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50096142",
+      "score": 95,
+      "comments": 17,
+      "summary": "這個網站是在瀏覽器裡使用的小型辦公軟體組合，特色是文件的內容直接放進網址，把網址傳給別人，對方就能打開同一份文件，像把整份稿子折成一張紙條遞過去。使用不需要帳號，除非使用者自己選擇，內容不會存到任何地方。網站列出的工具有文書處理、大綱、簡報、試算表、計算機、繪圖、流程圖、動畫、行事曆與旅行規劃。頁面原始碼的註解說，網址「#」後面的部分不會送到伺服器。網站需要開啟 JavaScript，也提供 llms.txt 給 AI 代理人參考。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "K-Dense-AI/scientific-agent-skills",
+      "name": "K-Dense-AI/scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "language": "Python",
+      "starsToday": 163,
+      "stars": 49321,
+      "summary": "Scientific Agent Skills 是一組給 AI 程式助手使用的科學技能庫，「技能」就像交給助手的一本本操作手冊。專案原名 Claude Scientific Skills，說明文件寫道，現在改成支援任何採用開放 Agent Skills 標準的助手，不再只限 Claude。內容包含 177 項技能，以及 100 多個科學資料庫，涵蓋生物、化學、醫學與藥物探索。專案列出可搭配 Cursor、Claude Code、Codex 與 Google Antigravity。採 MIT 授權。同一團隊另有 K-Dense BYOK，是自備金鑰的桌面研究工作區。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50095353,
+      "title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
+      "titleZh": "TypeSafe AI 發表 Jev 1.14.0 與實驗功能",
+      "url": "https://typesafe.ai/blog/jev-1-14",
+      "hnUrl": "https://news.ycombinator.com/item?id=50095353",
+      "score": 151,
+      "comments": 53,
+      "summary": "TypeSafe AI 在部落格發表改良版的 Jev 1.14.0，同時推出放在「danger zone」（危險區）旗標後面的實驗功能，包含圖片、一種新型別與更長的情境長度。公司表示，這些功能會保留給之後的模型，但目前不穩定，不建議用在正式環境。圖片可以放進 JSON 介面支援的位置，公司也說目前的 jev-1.13.0 本來就支援多模態（能同時處理文字與圖片）。新型別名為 box，會回傳單一個邊界框。公司還提醒，所有模型處理圖片的表現都比處理純文字差，建議把問題拆成最簡單的小問題。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "HKUDS/CLI-Anything",
+      "name": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "language": "Python",
+      "starsToday": 103,
+      "stars": 52481,
+      "summary": "CLI-Anything 的標題是「讓所有軟體都適合 AI 助手使用」。CLI 是命令列介面，就是用打字下指令代替點滑鼠的操作方式，對助手來說比點按畫面更容易呼叫。專案提供 CLI-Hub，可用 pip install cli-anything-hub 安裝，再用 cli-hub install 加上名稱，瀏覽並安裝社群做的命令列工具。說明文件的新聞欄列出已加入的項目，例如 Obsidian、QGIS、Kdenlive 與 Zoom。想貢獻的人可以提交 PR（合併請求），審核通過後加入。專案列出可搭配 Pi、OpenClaw、nanobot、Cursor 與 Claude Code。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50097369,
+      "title": "LFM2.5-24B-A2B: Built for fast on-device agents",
+      "titleZh": "Liquid AI 發表適合裝置端執行的 LFM2.5-24B-A2B",
+      "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b",
+      "hnUrl": "https://news.ycombinator.com/item?id=50097369",
+      "score": 19,
+      "comments": 1,
+      "summary": "Liquid AI 在 10 月 13 日發表 LFM2.5-24B-A2B，這是有 240 億個參數的推理模型，每個詞元（token，模型處理文字的最小單位）只啟用其中 20 億個參數，像一間大公司每次只派少數幾位員工處理工作。公司表示基礎版與後訓練版都是開放權重，可在 Hugging Face 取得。Liquid AI 表示，它在八項代理與工具使用測試中的五項，與參數較多的 Qwen3.6-35B-A3B 相當，例如 LiveClaw 為 48.09 對 38.19。公司也表示在 Apple M5 Max 上每秒 184 個詞元。這些數字都是公司自己公布的。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
