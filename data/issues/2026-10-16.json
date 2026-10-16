@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-16",
+  "issueNumber": 16,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-16T07:00:00+08:00",
+  "fetchedAt": "2026-10-16T00:31:48.450Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "morluto/rea",
+      "name": "morluto/rea",
+      "url": "https://github.com/morluto/rea",
+      "language": "TypeScript",
+      "starsToday": 32314,
+      "stars": 269831,
+      "summary": "REA 是一組讓程式助手使用的逆向工程工具（逆向工程就像不看食譜、把成品拆開來弄懂做法），透過 MCP（模型上下文協定，程式助手與工具之間的連接規格）提供。說明文件稱它可分析原生執行檔、JavaScript 與 Electron 應用程式、.NET 組件和網站，分析在本機執行，結果附上依據與限制。原生分析可使用已安裝的 Hopper、Ghidra 或 IDA，採 MIT 授權。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-16/morluto/rea.svg",
+        "alt": "流程圖：程式助手透過 REA 在本機分析，得到附有依據與限制的結果。",
+        "caption": "程式助手透過 REA 在本機分析程式，結果附上依據與限制。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50107379,
+      "title": "Muse Spark Open",
+      "titleZh": "Muse Spark Open 開放權重模型",
+      "url": "https://research.meta.ai/blog/muse-spark-open",
+      "hnUrl": "https://news.ycombinator.com/item?id=50107379",
+      "score": 586,
+      "comments": 329,
+      "summary": "Meta 在 10 月 15 日釋出名為 Muse Spark 的開放版模型權重（權重像模型學到的經驗數字，公開後別人可自行執行）。Meta 表示它共有 8160 億參數、每次啟動 420 億，支援 100 萬詞元的上下文，並稱這是美國目前能力最強的開放權重模型；原文未說明比較的測試條件。Meta 表示，用兩台 Apple M5 Ultra 的 Mac Studio 可在桌上執行。模型可從 Hugging Face 等平台下載。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-16/50107379.svg",
+        "alt": "流程圖：兩台 Mac Studio 合起來約 1 TB 記憶體，執行 Muse Spark Open。",
+        "caption": "Meta 表示，兩台 Mac Studio 的記憶體合起來可放下整個模型。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "anthropics/claude-plugins-official",
+      "name": "anthropics/claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "language": "Python",
+      "starsToday": 307,
+      "stars": 39080,
+      "summary": "這是 Anthropic 管理的 Claude Code 外掛目錄（外掛像手機的附加程式，替工具增加功能）。目錄分兩部分：`/plugins` 放 Anthropic 開發的外掛，`/external_plugins` 放合作夥伴與社群提供的外掛。使用者可用 `/plugin install 外掛名稱@claude-plugins-official` 安裝。說明文件提醒，安裝前要先確認信任該外掛，Anthropic 無法查核外掛內容。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50109715,
+      "title": "What I Self-Host",
+      "titleZh": "我自己架設了什麼",
+      "url": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50109715",
+      "score": 220,
+      "comments": 122,
+      "summary": "作者說明自己自架（把服務放在自己的機器上，而不是用雲端公司的服務）哪些軟體、哪些不自架，以及原因。他退訂串流服務後改用自架的 Jellyfin，之後陸續自架更多服務。他訂下規則：除了路由器上的 VPN（虛擬私人網路）伺服器，不把任何服務直接開放到公開網路。他也自己決定要不要升級軟體。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "JuliusBrussee/caveman",
+      "name": "JuliusBrussee/caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "language": "Go",
+      "starsToday": 433,
+      "stars": 112531,
+      "summary": "caveman 是給程式助手用的技能（skill，一份教助手如何做事的說明）加代理程式，目的是讓助手少說話、少讀內容，以減少詞元（token，模型計費與處理文字的單位）用量，程式碼維持原樣。說明文件稱，在 54 次 Claude Code 執行中，整段工作的輸入詞元少 33.2%，18 題答案全對；這些數字來自專案自己的測試。採 Apache-2.0 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50105647,
+      "title": "Neural networks are clean",
+      "titleZh": "神經網路本來就很清楚",
+      "url": "https://already-clean.goodfire.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50105647",
+      "score": 475,
+      "comments": 184,
+      "summary": "Goodfire 的研究員 Nick Cammarata 發表一篇非正式研究文章，提出一個工作假說：早期被認為由「疊加」造成的神經元多重功能，主要是幾個普通且多半可修正的原因。他寫道，現在已能理解參數多達數兆的模型中大部分的神經元（神經網路裡負責計算的小單元），因此可直接研究網路本身。文章標示為假說，閱讀約需 65 分鐘。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "obra/superpowers",
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "language": "Shell",
+      "starsToday": 582,
+      "stars": 299886,
+      "summary": "Superpowers 是給程式助手用的軟體開發方法，由一組可組合的技能（skill，教助手如何做事的說明）構成。說明文件寫道，助手發現使用者要開發東西時，會先詢問目標、分段呈現規格，經使用者同意後擬定實作計畫，再交給子代理（subagent，被派去做單項工作的助手）逐項完成與檢查。內含測試驅動開發、系統化除錯等技能，並支援 Claude Code、Codex CLI、Cursor 等多種工具。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50108872,
+      "title": "Someone on Torrent Sites Kept Fucking with My Sonarr",
+      "titleZh": "有人在種子網站上一直搞我的 Sonarr",
+      "url": "https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup",
+      "hnUrl": "https://news.ycombinator.com/item?id=50108872",
+      "score": 206,
+      "comments": 80,
+      "summary": "作者在 NAS 上執行 Sonarr（自動下載影集的軟體），發現新一集《南方公園》的下載其實是 .exe 檔，並在種子網站上有 2,392 個做種者。他把檔案重新下載分析：真正的程式只有 118 KB，後面接了約 886 MB 的雜訊，據他說是為了讓掃描器放棄；程式會解密藏在其中的內容並只在記憶體中執行。作者最後把種子列入黑名單。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-16/50108872.svg",
+        "alt": "流程圖：小程式、後面接的大量雜訊、藏在其中的酬載。",
+        "caption": "作者分析：118 KB 的程式後面接約 886 MB 雜訊，內含隱藏內容。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "ruvnet/ruflo",
+      "name": "ruvnet/ruflo",
+      "url": "https://github.com/ruvnet/ruflo",
+      "language": "TypeScript",
+      "starsToday": 147,
+      "stars": 75117,
+      "summary": "Ruflo 是給 Claude Code 與 Codex 使用的「代理程式外殼」（meta-harness，在多個程式助手外再包一層，統一調度）。專案描述稱它可協調多個代理程式的工作流程，並具有記憶、聯邦與向量檢索增強生成（RAG）整合。說明文件提供在 Claude Code 內用 `/plugin` 安裝的指令，也可用 `npx ruflo@latest init wizard` 設定，採 MIT 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50103338,
+      "title": "Wayland desktop for Linux with skeuomorphic design",
+      "titleZh": "擬真擬物風格的 Linux Wayland 桌面",
+      "url": "https://github.com/fyzugx/DEsk",
+      "hnUrl": "https://news.ycombinator.com/item?id=50103338",
+      "score": 478,
+      "comments": 194,
+      "summary": "DEsk 是給 Linux 用的 Wayland（一種顯示視窗的系統）桌面環境，目前是 v0.1.2 測試版。它採用擬物設計（把畫面畫得像真實物品），整個桌面就是一張書桌：視窗是桌上的紙，Dock 是抽屜，應用程式收在書架的活頁夾，通知放進郵筒。作者說房間用光線追蹤繪製，並提供 Debian、Ubuntu、Arch、Fedora 的安裝腳本。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
