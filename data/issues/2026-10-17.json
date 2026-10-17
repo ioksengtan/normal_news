@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-17",
+  "issueNumber": 17,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-17T07:00:00+08:00",
+  "fetchedAt": "2026-10-17T00:31:50.307Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "affaan-m/ECC",
+      "name": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "language": "JavaScript",
+      "starsToday": 1057,
+      "stars": 281507,
+      "summary": "ECC 是給程式助手用的外層系統，專案描述稱它處理技能、直覺、記憶、安全與先研究再開發這幾件事（外層系統就像球隊的教練團，不上場比賽，負責整理球員的訓練與紀律）。專案描述列出的支援對象包括 Claude Code、Codex、Opencode 與 Cursor。說明文件提供多種語言版本，包含繁體中文。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-17/affaan-m/ECC.svg",
+        "alt": "三個方框由上往下，從技能、記憶、安全，到 ECC，再到 Claude Code、Codex 等程式助手。",
+        "caption": "ECC 的描述列出技能、記憶與安全，支援 Claude Code、Codex 等。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50112657,
+      "title": "Tesla Roadster",
+      "titleZh": "特斯拉 Roadster",
+      "url": "https://www.tesla.com/roadster",
+      "hnUrl": "https://news.ycombinator.com/item?id=50112657",
+      "score": 1138,
+      "comments": 2050,
+      "summary": "這則 Hacker News 貼文只有兩個連結，分別指向 YouTube 影片與特斯拉官方推特的貼文。特斯拉官網擋下了本站的讀取，所以不抓原文，改依 Hacker News 討論整理：截至抓取時，貼文有 1138 分、2050 則留言。本站無法確認影片或推文的內容，因此不寫車款的規格或價格。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "android/skills",
+      "name": "android/skills",
+      "url": "https://github.com/android/skills",
+      "language": "Kotlin",
+      "starsToday": 36,
+      "stars": 8066,
+      "summary": "android/skills 是 Android 的「技能」資料庫。技能是用 Markdown 檔（SKILL.md）寫成的任務說明，供程式助手照著做，就像給新同事的作業手冊。說明文件稱，這個專案把重點放在評測顯示大型語言模型表現不佳的情境，不處理模型已經熟悉的領域。用法上，可以用 Android 命令列工具把指定的技能加到專案目錄，或一次加入全部技能。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50122431,
+      "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
+      "titleZh": "在越獄的 PS5 上執行 Llama.cpp：直接在主機上跑任何 GGUF 模型",
+      "url": "https://github.com/cobanov/PS5LM",
+      "hnUrl": "https://news.ycombinator.com/item?id=50122431",
+      "score": 168,
+      "comments": 44,
+      "summary": "PS5LM 是給已越獄 PS5 的使用者用的私人模型伺服器（越獄是解除主機的出廠限制）。它把 GGUF 格式的模型載入主機的繪圖處理器，再提供給同一網路上的筆電、手機與寫程式工具使用。說明文件稱，執行時不需要電腦、雲端或帳號，並提供與 OpenAI 和 Anthropic 相容的應用程式介面（API），也有為電視設計的畫面。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "cursor/plugins",
+      "name": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins",
+      "language": "TypeScript",
+      "starsToday": 278,
+      "stars": 11947,
+      "summary": "cursor/plugins 收錄 Cursor 的外掛規格與官方外掛（外掛就像手機的附加程式，替編輯器多加一種功能）。每個外掛是儲存庫根目錄下的獨立資料夾，內含自己的 plugin.json 說明檔。清單中的外掛涵蓋教學、持續學習、團隊流程、程式碼審查、建立新外掛與程式庫相容性檢查等類型。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50122800,
+      "title": "Claude reveals ECDSA curve origins",
+      "titleZh": "Claude 找出 ECDSA 曲線種子的來源",
+      "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+      "hnUrl": "https://news.ycombinator.com/item?id=50122800",
+      "score": 629,
+      "comments": 259,
+      "summary": "Anthropic 發表研究稱，美國國家標準與技術研究院（NIST）在 2000 年採用的 ECDSA（橢圓曲線數位簽章演算法）標準曲線，附有國家安全局提供、但沒有說明來源的「種子」數字。Anthropic 表示，內部研究模型在不到半小時內找出，這些種子是 C 函式庫的 lrand48 亂數產生器用 Unix 時間戳記啟動後的輸出，不是雜湊（把資料壓成固定長度數字的運算）的結果。文章說，這不是密碼學上的破解或新攻擊，也沒有弱點。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-17/50122800.svg",
+        "alt": "三個方框由上往下：Unix 時間戳記、lrand48 亂數產生器、20 位元組的種子。",
+        "caption": "Anthropic 稱種子由時間戳記啟動的 lrand48 產生，P-256 用了 1842 次。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "MadsLorentzen/ai-job-search",
+      "name": "MadsLorentzen/ai-job-search",
+      "url": "https://github.com/MadsLorentzen/ai-job-search",
+      "language": "Python",
+      "starsToday": 898,
+      "stars": 48506,
+      "summary": "ai-job-search 是建立在 Claude Code 上的求職流程框架，使用者複製專案、填入個人資料後，由 AI 評估職缺、修改履歷、撰寫求職信並準備面試。作者在說明文件中表示，他在 2025 年底失去職位後做了這套流程，並自己使用。專案聲明與 Anthropic 沒有關係，也沒有任何相關的加密貨幣或付費贊助計畫。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50123580,
+      "title": "FLUX 3 Image Klein",
+      "titleZh": "FLUX 3 Image Klein 開放權重圖像模型",
+      "url": "https://bfl.ai/blog/flux-3-image-klein",
+      "hnUrl": "https://news.ycombinator.com/item?id=50123580",
+      "score": 98,
+      "comments": 24,
+      "summary": "Black Forest Labs 在 10 月 15 日推出新的圖像模型 Klein（FLUX 3 系列），有 56 億個參數，權重公開供下載（參數就像模型裡的旋鈕，數量越多，模型通常越大）。它能依文字畫圖、修改圖片，也能參考最多 10 張圖來作畫。該公司表示，在公司內部評測中，它在這三項排名第一。BF16 格式的權重為 11.2 GB；該公司稱 INT8 版本最低只要 8GB 顯示記憶體就能跑。授權為 FLUX Kommunity License。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "hmjz100/LinkSwift",
+      "name": "hmjz100/LinkSwift",
+      "url": "https://github.com/hmjz100/LinkSwift",
+      "language": "JavaScript",
+      "starsToday": 538,
+      "stars": 23676,
+      "summary": "LinkSwift 是一個用 JavaScript 寫的使用者腳本，用來取得網路硬碟檔案的下載位址（使用者腳本就像瀏覽器的小外掛，在網頁上多加功能）。專案描述稱它由「網盤直鏈下載助手」修改而來，支援百度網盤、阿里雲盤、中國移動雲盤、天翼雲盤、迅雷雲盤、夸克網盤、UC 網盤與 123 雲盤共八種。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50118981,
+      "title": "Waymo in Toronto",
+      "titleZh": "Waymo 進入多倫多",
+      "url": "https://waymo.com/blog/2026/10/waymo-in-toronto/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50118981",
+      "score": 255,
+      "comments": 353,
+      "summary": "Waymo 於 10 月 16 日宣布，正在為加拿大多倫多的全自動叫車服務做準備，目標是在 2028 年迎來第一批乘客。接下來幾天，Waymo 的車輛會開始在多倫多街頭以人工駕駛行駛，並採取分階段的作法：先做高精地圖，再由受訓的專員坐在駕駛座測試。Waymo 將與總部在多倫多的 Element Fleet Management 合作車隊管理，並表示會陸續增加數百個職缺。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
