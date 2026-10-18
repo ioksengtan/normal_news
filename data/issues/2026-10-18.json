@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-18",
+  "issueNumber": 18,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-18T07:00:00+08:00",
+  "fetchedAt": "2026-10-18T00:31:52.745Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "akitaonrails/ai-memory",
+      "name": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "language": "Rust",
+      "starsToday": 178,
+      "stars": 9916,
+      "summary": "ai-memory 是給程式助手用的長期記憶工具，用 Rust 語言寫成。說明文件指出，使用者在 Claude Code 做到一半時離開，可以在同一個目錄打開 OpenAI Codex，接著做，不必重新交代架構、失敗過的做法和還沒解決的問題（這就像換班時留下一本交接筆記）。它也提供「ai-memory run」指令，讓下一個助手取得共用的工作紀錄。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-18/akitaonrails/ai-memory.svg",
+        "alt": "三個方框由上往下，從 Claude Code 做到一半，到 ai-memory 的共用記憶與交接，再到 Codex 在同一個目錄接著做。",
+        "caption": "說明文件寫的情境：離開 Claude Code 後，由 Codex 接著做。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50126253,
+      "title": "Bleached corals thrive within days when touching healthy neighbour",
+      "titleZh": "白化的珊瑚碰到健康的鄰居後，幾天內恢復",
+      "url": "https://www.nature.com/articles/d41586-026-03266-x",
+      "hnUrl": "https://news.ycombinator.com/item?id=50126253",
+      "score": 283,
+      "comments": 60,
+      "summary": "這則貼文連到《自然》（Nature）的新聞，標題指出白化的珊瑚在接觸健康的鄰居後，幾天內就恢復。白化是珊瑚失去身上的共生藻而變白的現象。文章內文在抓取時沒有取得，因此本站不寫實驗做法或數據。截至抓取時，貼文有 283 分、60 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "stablyai/orca",
+      "name": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "language": "TypeScript",
+      "starsToday": 830,
+      "stars": 95402,
+      "summary": "Orca 是管理多個程式助手的應用程式。說明文件稱，使用者可以讓 Codex、Claude Code、OpenCode 或 Pi 並排執行，各自放在獨立的工作樹（worktree，就像每個人各用一張工作桌，檔案不會混在一起），並在同一處追蹤。專案提供桌面版與手機配套程式，手機可以在助手完成時收到通知，並傳送後續指示。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-18/stablyai/orca.svg",
+        "alt": "三個方框由上往下，從各自獨立工作樹的程式助手，到 Orca 集中追蹤，再到桌面與手機。",
+        "caption": "Orca 把各助手的進度放在同一處，並提供桌面與手機版。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50126312,
+      "title": "Dam removals are bringing fish back across the northeastern United States",
+      "titleZh": "拆除水壩，讓東北美國各地的魚回來",
+      "url": "https://www.smithsonianmag.com/science-nature/dam-removals-are-bringing-fish-back-across-the-northeastern-united-states-striking-down-one-tiny-barrier-at-a-time-180989679/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50126312",
+      "score": 169,
+      "comments": 48,
+      "summary": "這則貼文連到《史密森尼》雜誌的報導，標題指出拆除水壩正讓美國東北部各地的魚回來，一次拆掉一道小小的阻隔。報導內文在抓取時沒有取得，因此本站不寫魚種、水壩數量或地點。截至抓取時，貼文有 169 分、48 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "anthropics/claude-code",
+      "name": "anthropics/claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "language": "TypeScript",
+      "starsToday": 179,
+      "stars": 151741,
+      "summary": "Claude Code 是跑在終端機裡的程式助手。專案描述稱，它能讀懂使用者的程式碼，用自然語言指令完成例行工作、解釋複雜的程式碼，並處理 git（記錄程式修改歷史的版本控制工具）流程。說明文件列出在終端機、整合開發環境或 GitHub 上使用的方式，並提供 macOS、Linux 與 Windows 的安裝指令。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50100994,
+      "title": "Furifont, a Japanese font that shows furigana",
+      "titleZh": "Furifont：內建振假名的日文字型",
+      "url": "https://furifont.antfu.me/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50100994",
+      "score": 241,
+      "comments": 50,
+      "summary": "Furifont 是一款日文字型，網站標題寫著振假名內建在字型裡。振假名是標在漢字旁邊的小假名，用來告訴讀者怎麼唸。網站其餘說明在抓取時沒有取得，因此本站不寫使用方式。截至抓取時，貼文有 241 分、50 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "anomalyco/opencode",
+      "name": "anomalyco/opencode",
+      "url": "https://github.com/anomalyco/opencode",
+      "language": "TypeScript",
+      "starsToday": 438,
+      "stars": 215309,
+      "summary": "OpenCode 的專案描述只有一句：開源的程式助手。開源就像把食譜公開，任何人都能看到做法。專案的說明文件在本次抓取時沒有取得，因此這裡不寫更多功能。截至抓取時，專案有 215309 顆星，今天新增 438 顆。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50129045,
+      "title": "DeepSeek-v4.1-Flash-1017",
+      "titleZh": "DeepSeek 發布 V4.1-Flash-1017 模型",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "hnUrl": "https://news.ycombinator.com/item?id=50129045",
+      "score": 672,
+      "comments": 572,
+      "summary": "這則貼文連到 Hugging Face（公開放置 AI 模型的網站）上 deepseek-ai 發布的模型頁面，名稱是 DeepSeek-V4.1-Flash-1017。貼文內文附上 DeepSeek 的 API 文件公告與 OpenRouter 的模型頁面連結。模型頁面在抓取時沒有取得可讀的內容，因此本站不寫規格或測試成績。截至抓取時，貼文有 672 分、572 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "xerj-org/xerj",
+      "name": "xerj-org/xerj",
+      "url": "https://github.com/xerj-org/xerj",
+      "language": "Rust",
+      "starsToday": 1160,
+      "stars": 7791,
+      "summary": "XERJ 是用 Rust 寫的搜尋工具，專案描述稱它讓程式助手搜尋資料。它的「autoindex」功能用一個指令替程式碼、文件、日誌和 PDF 建立索引（索引就像書後面的詞條表，查起來不必逐頁翻），可用於搜尋、RAG、資安稽核和助手記憶。專案稱 token 用量比 grep 少 40 倍，原文未說明測試條件。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50132193,
+      "title": "Pele – Mermaid diagrams as themeable SVG",
+      "titleZh": "Pele：把 Mermaid 圖表變成可換主題的 SVG",
+      "url": "https://pele.run/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50132193",
+      "score": 210,
+      "comments": 24,
+      "summary": "Pele 的網站標題寫著：把 Mermaid 圖表轉成可換主題的 SVG。Mermaid 是用文字描述流程圖的寫法，SVG 是一種放大也不會變模糊的向量圖格式。網站其餘說明在抓取時沒有取得，因此本站不寫更多功能。截至抓取時，貼文有 210 分、24 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
