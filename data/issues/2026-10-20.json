@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-20",
+  "issueNumber": 19,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-20T07:00:00+08:00",
+  "fetchedAt": "2026-10-20T00:31:44.467Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "Comfy-Org/ComfyUI",
+      "name": "Comfy-Org/ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "language": "Python",
+      "starsToday": 1011,
+      "stars": 139711,
+      "summary": "ComfyUI 是用 Python 寫成的擴散模型（diffusion model，一種能依文字或圖片產生新圖像的人工智慧模型）操作介面，同時提供應用程式介面（API）和後端。使用者在畫面上用「節點」和連線組出流程，就像用積木把工序一個個接起來。專案描述寫它主打模組化，並稱自己是全世界最快的本機推論引擎，但原文未說明測試條件。截至抓取時，專案有約 13.9 萬顆星。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-20/Comfy-Org/ComfyUI.svg",
+        "alt": "三個方框由上往下，從節點，到連線成圖，再到擴散模型在本機執行。",
+        "caption": "專案描述寫的做法：以節點和連線組成流程，在本機執行擴散模型。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50159616,
+      "title": "France's Supermarket Fridges Were Vulnerable Online for Months",
+      "titleZh": "法國超市冷藏櫃的控制器數月來都暴露在網路上",
+      "url": "https://ipinfo.io/blog/france-fridges-hack",
+      "hnUrl": "https://news.ycombinator.com/item?id=50159616",
+      "score": 17,
+      "comments": 7,
+      "summary": "網路資料公司 IPinfo 發表文章，說明他們的掃描結果。文章摘要指出，在 2026 年 10 月的網路攻擊之前，暴露在網路上的法國冷藏設備控制器中，有 85% 已有已知的安全漏洞。控制器就像冰箱的大腦，連上網路後，不相干的人也可能找得到它。Hacker News 上目前有 17 分、7 則留言。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-20/50159616.svg",
+        "alt": "三個方框由上往下，從 IPinfo 掃描，到 85% 的暴露控制器有已知漏洞，再到漏洞在 10 月攻擊前就存在。",
+        "caption": "IPinfo 文章摘要：攻擊之前，多數暴露的控制器已有已知漏洞。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "headroomlabs-ai/headroom",
+      "name": "headroomlabs-ai/headroom",
+      "url": "https://github.com/headroomlabs-ai/headroom",
+      "language": "Python",
+      "starsToday": 310,
+      "stars": 76238,
+      "summary": "headroom 是用 Python 寫成的工具，能在工具輸出、日誌、檔案和檢索增強生成（RAG）的文字片段送進大型語言模型（LLM）之前先壓縮。專案描述寫道，對寫程式的助手可少用約 20% 的詞元（token，模型計算文字量的單位），對 JSON 格式資料可少用 60% 至 95%，答案相同。這就像出門前先把行李壓縮打包。它提供程式庫、代理伺服器與 MCP 伺服器三種用法；原文未說明測試條件。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-20/headroomlabs-ai/headroom.svg",
+        "alt": "三個方框由上往下，從工具輸出與日誌，到 headroom 壓縮，再到語言模型收到較短的內容。",
+        "caption": "專案描述寫的做法：內容在到達語言模型之前先被壓縮。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50154540,
+      "title": "MiniMax M3.1 Flash",
+      "titleZh": "MiniMax 推出 M3.1 Flash 模型",
+      "url": "https://www.minimax.io/blog/minimax-m31f",
+      "hnUrl": "https://news.ycombinator.com/item?id=50154540",
+      "score": 362,
+      "comments": 156,
+      "summary": "MiniMax 在官方部落格發表語言模型 M3.1 Flash。公司表示，這個版本在代理程式任務、寫程式、電腦操作和資安方面有進步，線上推論速度約快三倍，使用成本降低 70%。公司公布的成績包括：DeepSWE v1.1 得 73.7%、OSWorld V2 得 61.7 分、CyberGym 得 82%。以上數字皆為公司自己公布，原文未在此說明完整測試條件。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "withmarbleapp/os-taxonomy",
+      "name": "withmarbleapp/os-taxonomy",
+      "url": "https://github.com/withmarbleapp/os-taxonomy",
+      "language": "JavaScript",
+      "starsToday": 284,
+      "stars": 6114,
+      "summary": "os-taxonomy 是 Marble 公司公開的資料集，整理小學階段孩子要學的內容。說明文件寫道，第一版有 1,591 個「微主題」，每個是一個可以教的小概念，例如「造句」。另有 3,225 條先備關係，標明學某個概念前要先會哪一個，就像蓋樓要先打地基。每個微主題也對應到美國共同核心標準等課程標準。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50150089,
+      "title": "I built a drone with only one motor [video]",
+      "titleZh": "我做了一台只有一個馬達的無人機（影片）",
+      "url": "https://www.youtube.com/watch?v=Ndftcft6XhU",
+      "hnUrl": "https://news.ycombinator.com/item?id=50150089",
+      "score": 362,
+      "comments": 76,
+      "summary": "這是 YouTube 上的影片，標題是「我做了一台只有一個馬達的無人機」。Hacker News 上這則貼文有 362 分、76 則留言。影片內容為作者自製只用一個馬達的無人機。因為影片無法由本站直接摘要，這裡只整理貼文標題與討論數據，詳細做法請看原片。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "Kruk2/jasna",
+      "name": "Kruk2/jasna",
+      "url": "https://github.com/Kruk2/jasna",
+      "language": "Python",
+      "starsToday": 498,
+      "stars": 2884,
+      "summary": "Jasna 是影片修復工具，說明文件寫它能找出影片中的馬賽克並還原，畫面其餘部分不會被動到。它免費，有簡單的應用程式和命令列，在使用者的圖形處理器（GPU）上執行。文件列出兩種修復模型：免費、較快的 BasicVSR++，以及較慢、細節較多的 LTX，後者給支持者使用，且只支援 NVIDIA 顯示卡。使用者也可以在編輯器裡預覽，並只修復自己選的片段。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50152307,
+      "title": "Wine ported to OpenBSD",
+      "titleZh": "Wine 移植到 OpenBSD",
+      "url": "https://marc.info/?l=openbsd-ports&m=179236125692175",
+      "hnUrl": "https://news.ycombinator.com/item?id=50152307",
+      "score": 488,
+      "comments": 162,
+      "summary": "OpenBSD 的郵件列表出現一份新移植的提案，要把 Wine 帶到 OpenBSD。Wine 是讓 Windows 程式能在其他作業系統上執行的軟體，就像一位即時口譯。作者寫道，已測試數十款 64 位元 Windows 軟體，多數成功，其中包含《巫師 3》重製版。最大限制是 WoW64 不能用，所以 32 位元 Windows 軟體還不能執行，內建測試也暫時停用。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "HKUDS/CLI-Anything",
+      "name": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "language": "Python",
+      "starsToday": 606,
+      "stars": 55231,
+      "summary": "CLI-Anything 是 HKUDS 發表的專案，目標是讓各種軟體都能被人工智慧代理程式（AI agent，會自己操作工具的程式）直接使用。命令列介面（CLI）是用打字下指令操作軟體的方式，就像用文字點菜，而不是用手指點圖示。專案另有 CLI-Hub，使用者可以用 pip 安裝後，再用 cli-hub 指令瀏覽、安裝並管理社群做的命令列工具，也歡迎別人送出自己的作品。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50158138,
+      "title": "OpenBSD 8.0 release will have inteldrm/radeondrm/amdgpu drivers from Linux 6.18",
+      "titleZh": "OpenBSD 8.0 將帶來 Linux 6.18 的顯示驅動程式",
+      "url": "https://bsd.network/@brynet/117407035545900963",
+      "hnUrl": "https://news.ycombinator.com/item?id=50158138",
+      "score": 69,
+      "comments": 10,
+      "summary": "OpenBSD 開發者 Bryan Steele 在貼文中整理 OpenBSD 的近況。貼文寫道，OpenBSD 8.0 的 inteldrm、radeondrm 和 amdgpu 顯示驅動程式，將來自 Linux 6.18。這些驅動程式就像讓作業系統和顯示卡溝通的翻譯。貼文也提到 Clang/LLVM 22 成為基本編譯器，sparc64 預設改用 Clang，並新增對 Intel Arc A 系列的驅動支援。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
