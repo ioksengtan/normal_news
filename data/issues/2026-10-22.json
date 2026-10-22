@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-22",
+  "issueNumber": 20,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-22T07:00:00+08:00",
+  "fetchedAt": "2026-10-22T00:31:42.962Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "cloudflare/security-audit-skill",
+      "name": "cloudflare/security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "language": "JavaScript",
+      "starsToday": 2012,
+      "stars": 36456,
+      "summary": "這是 Cloudflare 提供的程式代理人技能，讓代理人當資安稽核員。它把一次稽核分成六個階段：偵察、找漏洞、驗證候選漏洞、輸出結構化結果、獨立核對，最後產生報告。每個候選漏洞都交給新的驗證者，試著推翻它。給想檢查單一程式庫安全的開發者使用。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-22/cloudflare/security-audit-skill.svg",
+        "alt": "三個方框由上往下：偵察與搜尋、驗證與輸出、獨立核對與報告。",
+        "caption": "說明文件列出的六個階段，這裡合成三組。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50188228,
+      "title": "Railway Security Disclosure",
+      "titleZh": "Railway 資安事件通報",
+      "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+      "hnUrl": "https://news.ycombinator.com/item?id=50188228",
+      "score": 259,
+      "comments": 118,
+      "summary": "雲端部署平台 Railway 表示，10 月 21 日早上偵測到儲存客戶環境變數的系統有異常活動。環境變數就像放在保險箱裡的鑰匙，可能含有 API 金鑰或資料庫密碼。該公司表示，第三方可能存取了加密的變數，部分已被解密，初步影響可能限於部分使用者。部署暫停，並建議使用者更換所有變數。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-22/50188228.svg",
+        "alt": "三個方框由上往下：偵測到異常、可能有第三方存取、使用者更換變數。",
+        "caption": "Railway 通報：建議更換所有環境變數，部署暫停。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "vllm-project/vllm",
+      "name": "vllm-project/vllm",
+      "url": "https://github.com/vllm-project/vllm",
+      "language": "Python",
+      "starsToday": 441,
+      "stars": 94862,
+      "summary": "vLLM 是執行大型語言模型的函式庫，負責收到請求後算出回答，也就是推論與服務。它像餐廳的出菜窗口，讓很多客人的點單同時處理。專案方表示它用 PagedAttention 管理記憶體，並支援連續批次處理與多種量化格式。專案源自加州大學柏克萊分校。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50189232,
+      "title": "mitmproxy adds --emudhra option",
+      "titleZh": "mitmproxy 新增 --emudhra 選項",
+      "url": "https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b",
+      "hnUrl": "https://news.ycombinator.com/item?id=50189232",
+      "score": 46,
+      "comments": 10,
+      "summary": "網路流量檢視工具 mitmproxy 的更新紀錄寫道，新增 --emudhra 選項，用已遭洩漏的 eMudhra 中繼憑證機構金鑰簽發 TLS 憑證。TLS 憑證像網站的身分證。另一項更新把 eMudhra 的憑證機構從預先編譯的程式中移除。因提交內容無法取得，本則依更新紀錄與 Hacker News 討論整理。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "DietrichGebert/ponytail",
+      "name": "DietrichGebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "language": "JavaScript",
+      "starsToday": 2079,
+      "stars": 171615,
+      "summary": "Ponytail 是一段提示詞，要求程式代理人只寫任務需要的程式，並且不刪掉驗證、錯誤處理、資安與無障礙功能。說明文件舉例：做日期選擇器時，沒有它是 335 行，有它是 10 行。專案方表示，在六項資安任務的 30 次測試中全部通過。支援 20 種代理人。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50188948,
+      "title": "There isn't an easy exploit for this PHP vulnerability",
+      "titleZh": "這個 PHP 漏洞沒有簡單的攻擊方式",
+      "url": "https://eliastaylor.com/noexploit/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50188948",
+      "score": 60,
+      "comments": 10,
+      "summary": "作者 Elias Taylor 認為 PHP 這次的漏洞確實有問題，但不容易被利用，不像 Log4Shell 或 Heartbleed。他表示，GitHub 上有上千個攻擊範例，但在標準 PHP 環境中都無法成功。他認為部分範例是由大型語言模型產生，並指出其中有的先改動了測試用伺服器。以上是作者個人看法。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "supabase/supabase",
+      "name": "supabase/supabase",
+      "url": "https://github.com/supabase/supabase",
+      "language": "TypeScript",
+      "starsToday": 504,
+      "stars": 112994,
+      "summary": "Supabase 是以 Postgres 資料庫為核心的開發平台，專案方表示它用開源工具做出 Firebase 的功能。內容包含託管資料庫、帳號驗證與授權、自動產生的應用程式介面（API）、函式、檔案儲存，以及向量與嵌入工具。給要做網站、行動應用程式或人工智慧應用程式的開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50182987,
+      "title": "Today's PHP security release, and how we're strengthening security",
+      "titleZh": "PHP 本日資安更新，與如何加強資安",
+      "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50182987",
+      "score": 657,
+      "comments": 326,
+      "summary": "PHP 基金會表示，PHP 專案發布 8.5.12、8.4.27、8.3.36 與 8.2.35，修補兩個重大漏洞，可讓未經登入的攻擊者執行程式碼。一個與記憶體上限被觸及有關，另一個與前一次請求留下的記憶體狀態有關。基金會呼籲使用者立即更新，也說明了近兩年資安工作的變化。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-22/50182987.svg",
+        "alt": "三個方框由上往下：兩個漏洞、發布修補版本、使用者更新。",
+        "caption": "PHP 基金會：發布四個修補版本，呼籲立即更新。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "twentyhq/twenty",
+      "name": "twentyhq/twenty",
+      "url": "https://github.com/twentyhq/twenty",
+      "language": "TypeScript",
+      "starsToday": 112,
+      "stars": 59159,
+      "summary": "Twenty 是開源的客戶關係管理（CRM）系統，就像一本大家都能自己改裝的客戶通訊錄。專案方表示，它讓技術團隊能依需求打造 CRM，並像管理其他程式一樣建置與管理版本。可使用雲端版，也可以自行安裝。給需要客製客戶管理流程的技術團隊。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50185869,
+      "title": "GitLab Critical Patch Release",
+      "titleZh": "GitLab 重大修補版本",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50185869",
+      "score": 231,
+      "comments": 58,
+      "summary": "GitLab 於 10 月 21 日發布 19.5.1、19.4.3 等七個版本的修補，並強烈建議自行架設的使用者立即升級。公告列出一項嚴重漏洞：編譯特製的正規表示式時發生整數溢位，可能讓未登入者在伺服器上執行程式碼。另有兩項高風險、數項中低風險修補。GitLab.com 已更新。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
