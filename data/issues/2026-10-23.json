@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-23",
+  "issueNumber": 21,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-23T07:00:00+08:00",
+  "fetchedAt": "2026-10-23T00:31:43.590Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "php/php-src",
+      "name": "php/php-src",
+      "url": "https://github.com/php/php-src",
+      "language": "C",
+      "starsToday": 287,
+      "stars": 41149,
+      "summary": "php/php-src 是 PHP 直譯器的原始碼，主要用 C 語言寫成。直譯器就像一位翻譯，把人寫的 PHP 程式一行行翻成電腦能執行的動作。說明文件稱 PHP 是適合網頁開發的通用腳本語言，採用修改版 BSD 授權。文件也列出 Windows 與其他系統的安裝方式，以及從原始碼自行建置所需的工具，例如 autoconf、bison 與 re2c。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-23/php/php-src.svg",
+        "alt": "三個方框由上往下：原始碼、編譯建置、執行 PHP 程式。",
+        "caption": "說明文件列出自行建置所需的工具，建置後即可執行 PHP 程式。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50195959,
+      "title": "Quad9 (DNS Resolver) to Exit France",
+      "titleZh": "Quad9（DNS 解析服務）將退出法國",
+      "url": "https://quad9.net/news/blog/au-revoir-france/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50195959",
+      "score": 968,
+      "comments": 349,
+      "summary": "非營利的 DNS 解析服務 Quad9 宣布，11 月 24 日起不再向法國使用者提供免費服務。DNS 就像網際網路的電話簿，把網站名稱查成數字位址。Quad9 表示，法國法院判決它須封鎖 beIN 主張侵害轉播權的一批網域，罰款由每天 58 萬歐元降到 1,000 歐元。Quad9 說判決與保護隱私、不竄改回應的使命相衝突，所以選擇退出，並表示不認同盜版。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-23/50195959.svg",
+        "alt": "三個方框由上往下：法國法院判決、Quad9 不照辦、11 月 24 日停止服務。",
+        "caption": "Quad9 表示無法長期遵守判決，決定退出法國。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "anthropics/knowledge-work-plugins",
+      "name": "anthropics/knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "language": "Python",
+      "starsToday": 303,
+      "stars": 31587,
+      "summary": "這是 Anthropic 公開的外掛集合，主要給知識工作者在 Claude Cowork 使用，也相容 Claude Code。外掛就像給助手的一份職務手冊，寫明這個角色怎麼做事、要連哪些工具。每個外掛包含技能、連接器、斜線指令與子代理，對應一種職務。說明文件列出 11 個外掛，例如生產力、銷售、客戶支援，並說明可以依公司的工具與流程自行調整。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50202217,
+      "title": "LLMs are making formal software verification feasible at a much larger scale",
+      "titleZh": "大型語言模型讓大規模的形式化軟體驗證變得可行",
+      "url": "https://www.anthropic.com/research/formal-verification",
+      "hnUrl": "https://news.ycombinator.com/item?id=50202217",
+      "score": 45,
+      "comments": 13,
+      "summary": "Anthropic 與 Theorem 合作，讓 Claude 替 123 個開源程式庫寫出安全性證明。形式化驗證就像用數學證明一座橋不會垮，而不只是開車測試。文章表示，在單執行緒、固定記憶體等假設下，這些程式對小於 64 MB 的任何輸入都會正常結束。作者稱這是首次大規模在組合語言層級做這件事，過程中也發現多年未被找到的錯誤。文章同時列出限制。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "Graphify-Labs/graphify",
+      "name": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "language": "Python",
+      "starsToday": 1408,
+      "stars": 132935,
+      "summary": "Graphify 能把整個程式庫連同文件、SQL 資料庫結構、設定檔與 PDF，轉成可查詢的知識圖譜。知識圖譜就像一張地圖，標出各個部分之間的關係。它以技能形式提供給 Claude Code、Cursor、Codex 與 Gemini CLI 使用。專案說明指出，解析在本機進行，使用確定性的抽象語法樹（AST），每條關聯都有說明，也不使用向量資料庫。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-23/Graphify-Labs/graphify.svg",
+        "alt": "三個方框由上往下：程式碼與文件、本機解析、可查詢的知識圖譜。",
+        "caption": "專案說明列出的輸入、本機解析與圖譜輸出。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50198675,
+      "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+      "titleZh": "OpenShell：給自主 AI 代理群使用的安全、私密執行環境",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "hnUrl": "https://news.ycombinator.com/item?id=50198675",
+      "score": 285,
+      "comments": 144,
+      "summary": "OpenShell 是 NVIDIA 公開的執行環境，目標是安全、私密地運行一群自主運作的 AI 代理。沙盒就像給代理的隔離工作間，限制它能碰哪些東西。本摘要依 Hacker News 討論整理，未讀取原始頁面。討論中有人說在 GTC Europe 的示範多用到它，也有人指出預設會收集匿名遙測資料，可用 OPENSHELL_TELEMETRY_ENABLED=false 關閉。另有人認為權限控制細，適合企業需求。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "fastapi/fastapi",
+      "name": "fastapi/fastapi",
+      "url": "https://github.com/fastapi/fastapi",
+      "language": "Python",
+      "starsToday": 101,
+      "stars": 103736,
+      "summary": "FastAPI 是用 Python 建立應用程式介面（API）的網頁框架，依靠 Python 的型別提示來運作。框架就像蓋房子用的預製骨架，先備好常用的結構，開發者只要填入內容。說明文件寫明，它建立在 Starlette 與 Pydantic 之上，並稱效能與 NodeJS、Go 相近。說明文件另列開發速度與減少錯誤的百分比，原文未說明測試條件。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50202681,
+      "title": "Docker Is Weird",
+      "titleZh": "Docker 很奇怪",
+      "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
+      "hnUrl": "https://news.ycombinator.com/item?id=50202681",
+      "score": 17,
+      "comments": 6,
+      "summary": "作者為了好玩自己寫容器執行環境，並整理 Docker 的幾個奇特之處。他說容器不是虛擬機，只是被加上限制的行程，由命名空間、cgroups 與網路隔離等多項 Linux 核心功能組合而成。映像檔則是資料夾，Docker 用 chroot 或 pivot_root 把它換成行程的根目錄。作者也提到 runc 用 Go 寫成帶來的困難，以及 Docker 通常需要 root 權限。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "luongnv89/claude-howto",
+      "name": "luongnv89/claude-howto",
+      "url": "https://github.com/luongnv89/claude-howto",
+      "language": "Python",
+      "starsToday": 177,
+      "stars": 43193,
+      "summary": "claude-howto 是一份 Claude Code 的圖文教學，內容從基本概念到進階的代理、掛鉤、技能與 MCP 伺服器。MCP 是讓助手連到外部工具的一種介面規格。專案提供可直接複製的範本，並附有學習路徑，標題寫著「一個週末學會 Claude Code」，另有 15 分鐘的入門章節。授權為 MIT，說明文件另有越南文、中文、烏克蘭文與日文版本。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50194833,
+      "title": "Woman faces six years in prison over Cash App account she never opened",
+      "titleZh": "女子因從未開設的 Cash App 帳戶面臨六年刑期",
+      "url": "https://www.techspot.com/news/114296-woman-spends-three-nights-jail-faces-six-years.html",
+      "hnUrl": "https://news.ycombinator.com/item?id=50194833",
+      "score": 458,
+      "comments": 466,
+      "summary": "TechSpot 報導，一名女子被關了三晚，並因一個她說從未開設的 Cash App 帳戶面臨最高六年刑期。本摘要依 Hacker News 討論整理，原文因網站驗證而無法讀取，細節請見原文。討論中的留言者多表達憤怒，有人詢問如何避免自己的社會安全號碼被拿去開戶，也有人認為檢察官與警方應為重大疏失負責。這些是網友意見，並非原文內容。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
