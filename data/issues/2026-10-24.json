@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-24",
+  "issueNumber": 22,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-24T07:00:00+08:00",
+  "fetchedAt": "2026-10-24T00:31:29.466Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "NVIDIA/OpenShell",
+      "name": "NVIDIA/OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "language": "Rust",
+      "starsToday": 1119,
+      "stars": 18788,
+      "summary": "NVIDIA/OpenShell 是給自動執行工作的人工智慧代理程式用的執行環境，主要用 Rust 寫成。沙盒就像把孩子放進有圍欄的遊戲區：代理程式可以在裡面讀檔案、裝套件、呼叫應用程式介面（API），但只能碰到政策允許的資源。說明文件表示，它在作業系統核心層級管制檔案存取、系統呼叫與網路連線，並用形式驗證檢查政策變更會多開放什麼，有風險的變更要等人工審查。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-24/NVIDIA/OpenShell.svg",
+        "alt": "三個方框由上往下：先寫政策、沙盒內執行、核准才放行。",
+        "caption": "說明文件表示，代理程式在沙盒內執行，政策變更先經檢查，有風險的交給人審查。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50212065,
+      "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+      "titleZh": "Kimi K3.1 Pro 與 K3.1 Pro Highspeed 發表",
+      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "hnUrl": "https://news.ycombinator.com/item?id=50212065",
+      "score": 678,
+      "comments": 433,
+      "summary": "月之暗面的 Kimi 團隊發表 Kimi K3.1 Pro，這是 K3.1 系列的第一個模型，上下文視窗為 100 萬個詞元。詞元就像模型讀文字時切成的小片段。團隊表示它比 K3 在程式撰寫、3D 創作與財務研究等代理能力上有進步，另有速度為 2 到 3 倍的 Highspeed 版。兩者已可在 Kimi.ai 與 Kimi API 使用，完整模型權重預計 11 月 4 日前釋出。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "Renhuai123/ziwei-doushu",
+      "name": "Renhuai123/ziwei-doushu",
+      "url": "https://github.com/Renhuai123/ziwei-doushu",
+      "language": "TypeScript",
+      "starsToday": 546,
+      "stars": 6855,
+      "summary": "Renhuai123/ziwei-doushu 是用 TypeScript 寫的紫微斗數排盤程式，依倪海廈《天紀》的教學體系，包含排盤演算法、四化系統、格局知識庫與古籍原文資料。排盤就是依出生時間算出命盤。專案另外公開一份解讀資料集，說明文件寫明 v4.0 有 674,976 張命盤、8,774,688 段解讀，解壓後 56.6 GB。說明文件也提醒，六親（父母、兄弟、子女）的判斷有局限，僅供參考。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50207910,
+      "title": "Apple Music 404 Not Found",
+      "titleZh": "Apple Music 的 404 頁面藏著可操作的 iPod",
+      "url": "https://music.apple.com/this-url-doesnt-exist",
+      "hnUrl": "https://news.ycombinator.com/item?id=50207910",
+      "score": 534,
+      "comments": 180,
+      "summary": "MacRumors 報導，Apple Music 網頁版在載入不存在的頁面時，會出現一台可操作的初代 iPod。使用者可用點按轉盤操作，聆聽部分歌曲的 90 秒試聽。在 iPod 的「設定→關於」長按中央按鈕，最後可玩 Breakout 遊戲。報導指出這個彩蛋只在網頁瀏覽器中出現，App 內看不到，發現者是 Kian 與 Alex Greenland。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-24/50207910.svg",
+        "alt": "三個方框由上往下：開啟不存在的網頁、出現 iPod、設定關於長按後玩 Breakout。",
+        "caption": "報導說，開啟不存在的網頁會出現 iPod，在設定的關於頁長按可玩 Breakout。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "SnailSploit/Claude-Red",
+      "name": "SnailSploit/Claude-Red",
+      "url": "https://github.com/SnailSploit/Claude-Red",
+      "language": "Python",
+      "starsToday": 226,
+      "stars": 8481,
+      "summary": "SnailSploit/Claude-Red 是一批給 Claude 技能系統使用的資安技能檔，每個技能是一份 SKILL.md 說明檔，記錄某一類攻擊面的方法，像是 SQL 注入、shellcode 到 EDR（端點偵測與回應）規避。技能檔就像給助手的專題筆記，需要時才讀進來。說明文件列出 78 項技能、23 個類別，並寫明用途是經授權的紅隊演練、漏洞賞金、資安研究、奪旗競賽（CTF）準備與操作員訓練。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50215530,
+      "title": "CVE Tracker",
+      "titleZh": "CVE 追蹤器",
+      "url": "https://cve.0xosprey.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50215530",
+      "score": 81,
+      "comments": 22,
+      "summary": "這是一個查看 CVE 數量變化的網頁。CVE 是公開的資安漏洞編號，像漏洞的身分證字號。頁面可用日、週、月、年切換，並有已發布與已保留的選項，另有「NSA 0-Days」等模式。頁面註明資料來自 CVEProject/cvelistV5，也顯示最近 90 天每日的數量，並可下載 CSV。頁面需要執行 JavaScript 才會顯示圖表，本篇未取得實際數字。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "OpenBMB/VoxCPM",
+      "name": "OpenBMB/VoxCPM",
+      "url": "https://github.com/OpenBMB/VoxCPM",
+      "language": "Python",
+      "starsToday": 150,
+      "stars": 40253,
+      "summary": "OpenBMB/VoxCPM 是文字轉語音系統，最新版 VoxCPM2 有 20 億參數。參數就像模型內可調整的旋鈕，數量越多，能記下的細節越多。說明文件表示，它以超過 200 萬小時的多語言語音訓練，支援 30 種語言，可只用文字描述設計新聲音，也能用一小段參考錄音複製聲音，輸出 48kHz 音訊。程式碼與權重採 Apache-2.0 授權。說明文件稱在 NVIDIA RTX 4090 上即時率約 0.3。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-24/OpenBMB/VoxCPM.svg",
+        "alt": "三個方框由上往下：輸入文字、描述或提供聲音、輸出 48kHz 語音。",
+        "caption": "說明文件表示，輸入文字後可用描述或參考錄音決定聲音，輸出 48kHz 音訊。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50211474,
+      "title": "Today, we hacked what we'd set out to hack: the iPhone",
+      "titleZh": "Calif 在 Hexacon 展示 iPhone 攻擊示範",
+      "url": "https://blog.calif.io/p/iphone",
+      "hnUrl": "https://news.ycombinator.com/item?id=50211474",
+      "score": 725,
+      "comments": 469,
+      "summary": "資安公司 Calif 的電子報寫道，他們在巴黎的 Hexacon 研討會上展示一系列示範，目標是 iPhone，其中提到 Signal 一鍵攻擊與 iMessage。文章說所有內容「到時會公開」，目前沒有技術細節、受影響版本或修補狀態。電子報的發布日期是 10 月 16 日。因為原文只有示範標題，本摘要另參考 Hacker News 上的討論。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "nodejs/node",
+      "name": "nodejs/node",
+      "url": "https://github.com/nodejs/node",
+      "language": "JavaScript",
+      "starsToday": 66,
+      "stars": 122860,
+      "summary": "nodejs/node 是 Node.js 的原始碼，Node.js 是開源、跨平台的 JavaScript 執行環境，讓 JavaScript 能在瀏覽器以外的電腦上執行。說明文件寫明專案採開放治理模式，由 OpenJS 基金會提供支持。文件也說明版本分成 Alpha、Current 與 LTS（長期支援）：新的主版本每年 4 月發布，Current 版維持 6 個月後，在 10 月轉為 LTS。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50216791,
+      "title": "Evolving Threat: http2shell is an RCE in node, Python, and more",
+      "titleZh": "http2shell：影響 Node 與 Python 等的遠端程式碼執行漏洞",
+      "url": "https://nitter.click/AikidoSecurity/status/2113759110625906950?__galadriel=lPmlGl9id4oAd5UeBwMhlYKArHyr6lR2IDGujPwB5HV2kQ1aLoPWFd5A9sGuzNcmrp8fUso8qygmHcKTDZ8MNHWqQ3bDJcycV87xp_0VypzQLYj6O_RRHlZuQqj33oASGY2YLSoAiMjeOZN40h7Stf8AG7DPrGZbAPVKUXy36HoMudRbvwF3_r2uYNmfJMhpKzywQDM6Ab8",
+      "hnUrl": "https://news.ycombinator.com/item?id=50216791",
+      "score": 21,
+      "comments": 5,
+      "summary": "Aikido Security 的貼文把 http2shell 稱為影響 Node、Python 等的遠端程式碼執行（RCE）漏洞，也就是對方可在別人的電腦上執行程式。原文連結是推特鏡像頁，本摘要依 Hacker News 討論整理。留言者提到可能的緩解方式是兩端都停用 brotli 內容編碼，並指出 brotli 專案早在 2 月就有相關修正提交。另有留言表示 Rust 伺服器應該不受影響。這些都是留言者的說法。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
