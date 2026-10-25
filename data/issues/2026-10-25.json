@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-25",
+  "issueNumber": 23,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-25T07:00:00+08:00",
+  "fetchedAt": "2026-10-25T00:32:12.234Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "aws/agent-toolkit-for-aws",
+      "name": "aws/agent-toolkit-for-aws",
+      "url": "https://github.com/aws/agent-toolkit-for-aws",
+      "language": "Python",
+      "starsToday": 13,
+      "stars": 3126,
+      "summary": "aws/agent-toolkit-for-aws 是亞馬遜雲端運算服務（AWS）提供的工具包，讓負責寫程式的人工智慧代理程式能在 AWS 上建置、部署與管理應用程式。代理程式就像請來幫忙的助手，工具包則是替助手備好的工具箱與規則手冊。說明文件表示，它可搭配 Claude Code、Codex、Cursor 等工具，以外掛形式安裝，主題包含服務選擇、無伺服器、容器、儲存與計費。專案以 Python 為主。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-25/aws/agent-toolkit-for-aws.svg",
+        "alt": "三個方框由上往下：代理程式、裝上外掛、在 AWS 上工作。",
+        "caption": "說明文件表示，代理程式裝上工具包的外掛後，可在 AWS 上建置、部署與管理應用程式。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50226419,
+      "title": "America Has Lost 200k of Jobs in Media, Film and the Arts. How Much Is AI?",
+      "titleZh": "美國媒體、影視與藝術業流失 20 萬個工作，人工智慧占多少？",
+      "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
+      "hnUrl": "https://news.ycombinator.com/item?id=50226419",
+      "score": 64,
+      "comments": 30,
+      "summary": "經濟專欄作者 Joseph Politano 在 Apricitas Economics 寫道，美國「創意」產業四年來減少超過 20 萬個工作，最近一年約減少 5 萬個。他說影視業減少超過 10 萬個，出版業減少超過 7 萬個。他也寫道，要證明其中多少由人工智慧造成非常困難，因為媒體公司很少公開使用狀況，且同時有影視業整併、製作外移等其他因素。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "Nutlope/hallmark",
+      "name": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "language": "CSS",
+      "starsToday": 455,
+      "stars": 32133,
+      "summary": "Nutlope/hallmark 是給 Claude Code、Codex、Cursor 與 OpenCode 使用的網頁設計技能，由 Together AI 製作。技能就像交給助手的一本設計規範。說明文件表示，它從 48 種主題中挑出 3 種來排版，並在真實瀏覽器裡檢查成品，目標是避開看起來像機器生成的樣式，例如每個標題上方都放一個小標籤。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50225695,
+      "title": "We should be more ambitious with the software we build",
+      "titleZh": "我們應該對自己寫的軟體更有野心",
+      "url": "https://danluu.com/ambitious/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50225695",
+      "score": 113,
+      "comments": 73,
+      "summary": "Dan Luu 認為，開發者可以對軟體更有野心。他以朋友 Michael Malis 的資料庫專案 pgrust 為例：他寫道，Malis 的測試做得很徹底，過程中還找到 Postgres 的真實錯誤。他說，現在雖有許多低品質的人工智慧生成專案，但只要認真做測試與效能比較，過去太大而做不了的專案如今可行。他舉自己的例子：用數小時做出正規表示式（用規則描述要找的文字樣式）引擎等工具，並說這些只到「對我可用」的程度。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "pbakaus/impeccable",
+      "name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "language": "Rust",
+      "starsToday": 619,
+      "stars": 86402,
+      "summary": "pbakaus/impeccable 是給人工智慧寫程式助手用的前端設計指引。說明文件表示，內容包含 1 個技能、24 個指令，以及 62 條不需要模型和金鑰就能執行的偵測規則，用來找出機器生成頁面常見的樣式，例如所有地方都用同一種字型、紫色到藍色的漸層。使用時先在專案目錄執行 npx impeccable install，再在工具內執行 /impeccable init。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50224100,
+      "title": "The Goose Programming Language",
+      "titleZh": "Goose 程式語言",
+      "url": "https://aardappel.github.io/goose/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50224100",
+      "score": 208,
+      "comments": 152,
+      "summary": "Goose 是一種新的程式語言，網站稱它是記憶體安全的系統語言，沒有堆積配置器、垃圾回收或生命週期標註。堆積是程式向系統借用記憶體的區域。Goose 的記憶體像一疊盤子：用時往上放，離開範圍就整疊拿走。網站表示，在其儲存庫的 16 項基準測試中，速度是慣用寫法 C++ 的 3.3 倍，是最佳安全 Rust 寫法的 1.12 倍，記憶體用量則少 1.2 倍。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-25/50224100.svg",
+        "alt": "三個方框由上往下：往上放、離開範圍、不用垃圾回收。",
+        "caption": "網站表示，資料放在編譯器管理的資料堆疊上，離開範圍時記憶體隨之釋放。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "pollen-robotics/microduck",
+      "name": "pollen-robotics/microduck",
+      "url": "https://github.com/pollen-robotics/microduck",
+      "language": "Rust",
+      "starsToday": 319,
+      "stars": 10991,
+      "summary": "pollen-robotics/microduck 是一隻小型雙足機器鴨的控制程式，機器約 25 公分高、800 公克，主要用 Rust 寫成。它跑在 Rockchip RK3566 晶片上，以每秒 50 次的控制迴圈驅動 15 顆伺服馬達。動作由強化學習訓練出的類神經網路策略決定，強化學習就像讓機器反覆練習、做對就給分。說明文件表示，它能走路、換上輪子後滾動、撿東西，倒下後會自己站起來。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-25/pollen-robotics/microduck.svg",
+        "alt": "三個方框由上往下：模擬中訓練、匯出成 ONNX、機器鴨載入。",
+        "caption": "說明文件表示，策略在 MuJoCo 模擬中訓練，匯出成 ONNX 後由機器鴨載入執行。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50222622,
+      "title": "Roku developer repositories moved from GitHub to GitLab",
+      "titleZh": "Roku 開發者程式庫從 GitHub 搬到 GitLab",
+      "url": "https://blog.roku.com/developer/gitlab-move",
+      "hnUrl": "https://news.ycombinator.com/item?id=50222622",
+      "score": 247,
+      "comments": 164,
+      "summary": "Roku 的部落格文章標題指出，該公司的開發者程式庫已從 GitHub 搬到 GitLab。兩者都是存放專案程式碼的雲端倉庫。原文頁面需要 JavaScript 才能顯示，無法取得，以下依 Hacker News 討論整理。有留言指出，搬家後 README.md 仍寫著歡迎來到 GitHub 儲存庫；多位留言者希望 Roku 說明搬遷原因；也有人表示自己曾多次受 GitHub 服務問題影響，或說團隊也做過同樣的搬遷。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "google-gemini/gemini-cli",
+      "name": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "language": "TypeScript",
+      "starsToday": 44,
+      "stars": 108049,
+      "summary": "google-gemini/gemini-cli 是開源的人工智慧代理程式，讓人在終端機（輸入文字指令的視窗）直接使用 Google 的 Gemini 模型。可用 npx、npm 或 Homebrew 等方式安裝。說明文件註明，它沒有針對最新的 Gemini 模型調整，建議改用 Antigravity CLI，並表示免費方案與 Google One 使用者的 Gemini CLI 已在 2026 年 6 月 18 日由 Antigravity CLI 取代。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50224916,
+      "title": "Show HN: Steal My Bitcoin",
+      "titleZh": "Show HN：來偷我的比特幣",
+      "url": "https://stealmybitcoin.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50224916",
+      "score": 370,
+      "comments": 218,
+      "summary": "作者在 Hacker News 貼出一個挑戰網站：伺服器上藏有一把價值約 502 美元的比特幣金鑰，第一個取得錢包的人獲勝。作者說，他想知道有沒有人真的會利用最近那個 PHP 遠端程式碼執行（RCE）漏洞。遠端程式碼執行就像陌生人隔著門替你的電腦下指令。留言轉貼的頁面文字寫著，所有流量都會被記錄。網站頁面需要 JavaScript，本則依貼文與留言整理。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
