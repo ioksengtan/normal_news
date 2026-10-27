@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-27",
+  "issueNumber": 25,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-27T07:00:00+08:00",
+  "fetchedAt": "2026-10-27T00:32:22.101Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "affaan-m/ECC",
+      "name": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "language": "JavaScript",
+      "starsToday": 896,
+      "stars": 289836,
+      "summary": "ECC 是替人工智慧代理程式（AI agent）打造的工程系統，可搭配 Claude Code、Codex、Opencode、Cursor 等工具。代理程式就像受託寫程式的助手，ECC 則像給助手的一套工作流程與工具箱。說明文件寫道，它讓代理程式動手前先規劃，用測試驗證修改，從新的上下文審查自己的成果，記住重要的事，並把重複有效的做法整理成可重複使用的技能。專案採 MIT 授權，另有付費的私有儲存庫版本。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-27/affaan-m/ECC.svg",
+        "alt": "四個方框由上往下：先規劃、用測試驗證、換個視角審查、留下可重複使用的技能。",
+        "caption": "說明文件表示，ECC 讓代理程式先規劃、再用測試驗證，並把有效做法留成技能。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50251344,
+      "title": "Announcing three new discoveries in mathematics, computer science, and physics",
+      "titleZh": "宣布數學、電腦科學與物理三項新發現",
+      "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50251344",
+      "score": 301,
+      "comments": 121,
+      "summary": "OpenAI 發表文章，宣布與學術社群合作取得的三項新發現，涵蓋數學、電腦科學與物理。原文無法取得，以下依 Hacker News 討論整理。討論中提到，其中一項是電腦科學論文，主張「指數時間假說」（ETH）不成立；也有留言指出文章多次提到 Lean 程式，卻沒有說明 Lean 是什麼。這些結果是否正確，討論串中尚無定論。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "NVIDIA/SkillSpector",
+      "name": "NVIDIA/SkillSpector",
+      "url": "https://github.com/NVIDIA/SkillSpector",
+      "language": "Python",
+      "starsToday": 214,
+      "stars": 22174,
+      "summary": "SkillSpector 是 NVIDIA 發布的安全掃描工具，檢查人工智慧代理程式的「技能」。技能就像裝進助手的外掛小工具，會用很高的信任度執行。說明文件表示，它在安裝前找出漏洞、可疑模式、提示注入、資料外洩與供應鏈風險，涵蓋 Claude Code、Codex 與 MCP 技能。文件引用研究資料集：在分析的 31,132 個技能中，26.1% 含有漏洞，5.2% 疑似有惡意。使用 Python 撰寫，採 Apache 2.0 授權。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-27/NVIDIA/SkillSpector.svg",
+        "alt": "三個方框由上往下：代理程式技能、SkillSpector 掃描、產生報告。",
+        "caption": "說明文件表示，SkillSpector 在安裝技能之前先掃描，協助判斷能否安裝。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50251661,
+      "title": "The Exponential Time Hypothesis Is False [pdf]",
+      "titleZh": "指數時間假說不成立 [PDF]",
+      "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+      "hnUrl": "https://news.ycombinator.com/item?id=50251661",
+      "score": 176,
+      "comments": 81,
+      "summary": "這是 OpenAI 放在 GitHub 的預印本論文，標題主張指數時間假說（ETH）不成立。原文無法取得，以下依 Hacker News 討論整理。留言引用摘要：作者提出確定性演算法，用多項式空間精確計算 k-CNF 公式有多少組滿足的賦值，時間約為 2 的 n／(log n)^(1/2+o(1)) 次方，仍高於多項式、但低於指數。有留言引用論文說明，這不代表所有 NP 問題都能在次指數時間內解決。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "nightly-labs/openbot",
+      "name": "nightly-labs/openbot",
+      "url": "https://github.com/nightly-labs/openbot",
+      "language": "TypeScript",
+      "starsToday": 176,
+      "stars": 1466,
+      "summary": "OpenBot 是在自己電腦上執行的桌面工作空間，讓多個人工智慧助手長期運作。說明文件表示，它支援 Codex 與 Claude Code，也能透過代理通訊協定（ACP）接上 Grok、OpenCode、Gemini、Cursor 與 Cline。每個助手有自己的工作空間與對話，並提供訊息佇列、檔案傳送、內嵌瀏覽器，以及助手之間的訊息往來。文件警告這是開發預覽版，助手可不經逐項確認就讀寫檔案與執行指令。採 PolyForm Noncommercial 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50251127,
+      "title": "CorridorKey 2.0",
+      "titleZh": "綠幕與藍幕去背軟體第二版",
+      "url": "https://corridorkey.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50251127",
+      "score": 180,
+      "comments": 56,
+      "summary": "CorridorKey 第 2 版是影片後製的綠幕與藍幕去背軟體。去背就像把人物從背景布幕前剪下來，換到別的畫面上。官網表示，它能推算半透明前景物的顏色並去除背景色，也會分析整段影片以減少遮罩閃爍，使用者可提供一張黑白提示圖。官網寫明目前為測試版，測試版價格 49.50 美元、買斷，11 月 21 日起恢復 99 美元；支援 Resolve、Nuke、After Effects、Premiere 與 Blender。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "Panniantong/Agent-Reach",
+      "name": "Panniantong/Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "language": "Python",
+      "starsToday": 746,
+      "stars": 103567,
+      "summary": "Agent Reach 讓人工智慧代理程式用一個命令列工具讀取它平常到不了的網路內容。代理程式就像上網查資料的助手，這個工具替它備好各平台的入口。說明文件列出登入後才能用的功能、影片字幕與語音轉文字、中文平台，以及整理好的結構化資料，平台包括 Bilibili、V2EX、GitHub 與小紅書。需要登入的網站使用專用瀏覽器，並複製使用者在 Chrome 裡的登入狀態，原瀏覽器不變。採 MIT 授權。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-27/Panniantong/Agent-Reach.svg",
+        "alt": "三個方框由上往下：人工智慧代理程式、Agent Reach、網站與平台。",
+        "caption": "說明文件表示，代理程式用一條指令，由 Agent Reach 依連結選擇渠道讀取內容。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50245138,
+      "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
+      "titleZh": "Sebastian Raschka 從零打造推理模型的影片課程",
+      "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+      "hnUrl": "https://news.ycombinator.com/item?id=50245138",
+      "score": 531,
+      "comments": 79,
+      "summary": "Sebastian Raschka 在他的電子報文章中，介紹一套教人從零打造推理模型的完整影片課程。推理模型是會先一步步想過再回答的語言模型。原文內容無法完整取得，以下依 Hacker News 討論整理。有留言說，這類從零開始的教學目的是看懂模型如何做成，並不是訓練出實用的大型語言模型，因為真正的訓練需要大量算力與資料。也有人推薦他的另一本書《Build a Large Language Model (From Scratch)》。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "gitroomhq/postiz-app",
+      "name": "gitroomhq/postiz-app",
+      "url": "https://github.com/gitroomhq/postiz-app",
+      "language": "TypeScript",
+      "starsToday": 188,
+      "stars": 38444,
+      "summary": "Postiz 是社群媒體管理平台，用來排程、自動化與分析貼文。排程就像先把信寫好、約定時間再寄出。說明文件表示，它可以排程發到多個社群平台，提供數據分析，讓團隊成員一起留言、排程，並有公開應用程式介面（API）可接上 n8n、Make.com、Zapier 等自動化工具。使用者可選擇託管的雲端版，或部署在自己的伺服器。技術上使用 NextJS、NestJS、Prisma 與 PostgreSQL，採 AGPL 3.0 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50248371,
+      "title": "Type Server Protocol",
+      "titleZh": "型別伺服器協定",
+      "url": "https://github.com/microsoft/pylance-release/blob/main/docs/tsp/type-server-protocol.md",
+      "hnUrl": "https://news.ycombinator.com/item?id=50248371",
+      "score": 179,
+      "comments": 134,
+      "summary": "這是微軟 Pylance 儲存庫裡的文件，介紹「型別伺服器」通訊協定（簡稱 TSP）。原文無法取得，以下依 Hacker News 討論整理。討論提到，Astral 的型別檢查器 ty 將支援 TSP，basedpyright 的維護者先前提出過批評。也有留言認為名稱應加上 Python，因為它只支援 Python，並詢問既有的語言伺服器協定（LSP）是否不足以查詢 Python 型別。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
