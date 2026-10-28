@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-28",
+  "issueNumber": 26,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-28T07:00:00+08:00",
+  "fetchedAt": "2026-10-28T00:31:46.931Z",
+  "sources": {
+    "github": {
+      "status": "failed",
+      "fallback": false,
+      "error": "https://api.github.com/search/repositories?q=created%3A%3E2026-10-21&sort=stars&order=desc&per_page=40 HTTP 401"
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": 50261319,
+      "title": "Genie 4",
+      "titleZh": "Genie 4 世界模擬模型發表",
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50261319",
+      "score": 693,
+      "comments": 418,
+      "summary": "Google DeepMind 在官方部落格發表「Genie 4」，文章標題稱它是新一代的世界模擬（world simulation）。世界模擬可以想成電腦替一個虛擬場景排演接下來會發生什麼事，就像在腦中預演一段劇情。本站今天無法讀取原文內容，所以只確認標題與出處；這則在 Hacker News 有 693 分、418 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": 50261998,
+      "title": "Ghostty 1.4",
+      "titleZh": "Ghostty 1.4 版",
+      "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
+      "hnUrl": "https://news.ycombinator.com/item?id=50261998",
+      "score": 705,
+      "comments": 219,
+      "summary": "終端機程式 Ghostty 發表 1.4.0 版，發布日期是 2026 年 10 月 27 日。官方版本說明表示，這個版本包含效能與記憶體用量的改進、Kitty 圖形協定（Kitty graphics）實作的完整支援、SSH 整合的改進，另有數百項改進與修正。官方也表示，這個版本集結 172 位貢獻者、2,889 次提交，並列出兩項安全性修正，其一是貼上保護沒有把歸位字元（carriage return）當成換行處理。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": 50264857,
+      "title": "Tailscale SSH: Investigation and remediation update",
+      "titleZh": "Tailscale SSH：調查與補救進度更新",
+      "url": "https://tailscale.com/ssh-investigation-update",
+      "hnUrl": "https://news.ycombinator.com/item?id=50264857",
+      "score": 174,
+      "comments": 99,
+      "summary": "網路服務公司 Tailscale 發布文章，標題為 Tailscale SSH 的調查與補救進度更新。Tailscale SSH 是讓使用者透過 Tailscale 網路，以安全外殼協定（SSH）遠端登入機器的功能。本站今天無法讀取原文內容，所以不寫受影響範圍與細節，請讀者直接閱讀原文；這則在 Hacker News 有 99 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": 50265609,
+      "title": "Early progress on accelerating drug development with Claude",
+      "titleZh": "用 Claude 加速藥物開發的初步進展",
+      "url": "https://www.anthropic.com/research/early-progress-drug-development",
+      "hnUrl": "https://news.ycombinator.com/item?id=50265609",
+      "score": 99,
+      "comments": 89,
+      "summary": "Anthropic 發表研究文章，標題為「用 Claude 加速藥物開發的初步進展」，Claude 是該公司的人工智慧模型。本站今天無法讀取原文內容，所以不寫文中的做法、數據與結論，請讀者直接閱讀原文。這則在 Hacker News 有 99 分、89 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": 50264853,
+      "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+      "titleZh": "Survival LLM：在自己電腦上執行的 AI 助手與緊急資料庫",
+      "url": "https://www.brangus.io/survival-llm",
+      "hnUrl": "https://news.ycombinator.com/item?id=50264853",
+      "score": 154,
+      "comments": 93,
+      "summary": "Brangus 網站介紹「Survival LLM」，標題說明它是在使用者自己的電腦上執行的人工智慧助手，同時是一個緊急情況用的資料庫。大型語言模型（LLM）可以想成讀過大量文字、能用文字回答問題的程式。本站今天無法完整讀取原文，所以不寫功能與規格細節；這則在 Hacker News 有 154 分、93 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
