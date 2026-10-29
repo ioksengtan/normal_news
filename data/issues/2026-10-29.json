@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-29",
+  "issueNumber": 27,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-29T07:00:00+08:00",
+  "fetchedAt": "2026-10-29T00:32:08.660Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "elayadesign/ai-design-skills",
+      "name": "elayadesign/ai-design-skills",
+      "url": "https://github.com/elayadesign/ai-design-skills",
+      "language": null,
+      "starsToday": 2139,
+      "stars": 11105,
+      "summary": "ai-design-skills 是一組設計「技能」的集合，給 Claude Code、Cursor、Codex、Windsurf 這類會讀 markdown 規則檔的人工智慧寫程式工具使用。技能就像一份寫好步驟的工作手冊，每項技能是一個獨立資料夾，需要哪項就裝哪項。目前收錄的 landing-page-design 會從零做出一個登陸頁（讓訪客先看到的產品介紹網頁），內容包含提問、頁面結構、轉換文案，以及字型、間距、圓角和動態的視覺規則。專案以 MIT 授權釋出，字型與色彩等設計值集中在檔案靠近底部的一段，可自行修改。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-29/elayadesign/ai-design-skills.svg",
+        "alt": "一個技能資料夾被複製到 AI 寫程式工具的規則資料夾，工具再依規則做出登陸頁。",
+        "caption": "技能資料夾像一份工作手冊，複製進工具後，工具照著做登陸頁。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50276998,
+      "title": "Why is this fingerprinting script creating bioweapons?",
+      "titleZh": "為什麼這支指紋辨識腳本在製造生物武器？",
+      "url": "https://nullpt.rs/fingerprinting-bioweapons",
+      "hnUrl": "https://news.ycombinator.com/item?id=50276998",
+      "score": 770,
+      "comments": 176,
+      "summary": "作者 veritas 用 Playwright 瀏覽自動化工具爬了 Tranco 排名前 10,000 個網站，攔截網頁畫布（canvas）指紋辨識的呼叫。畫布指紋是讓網頁畫一張圖，再靠圖在不同裝置上的細微差異辨認瀏覽器。他挑出一支來自 servicepipe.tech 的腳本，裡面的函式名稱像在計算致命劑量。作者推測這是刻意放的誤導名稱，用來讓語言模型拒絕協助反混淆。他還解出一段以隱形 Unicode 字元藏起來的提示詞；其中一個模型拒絕處理這支腳本，另一個模型 GLM-5.3 則照做。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "obra/superpowers",
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "language": "Shell",
+      "starsToday": 1095,
+      "stars": 307433,
+      "summary": "Superpowers 是給程式代理（能自己動手寫程式的人工智慧工具）使用的軟體開發方法，由一組可組合的技能和初始指示構成。依說明文件，代理在看到你要做東西時，會先問你真正想做什麼，再把規格分成短段落給你確認。核准設計後，代理寫出實作計畫，強調先寫測試的紅綠測試驅動開發（TDD）、YAGNI（不做用不到的功能）與 DRY（不重複寫同樣的東西）。你說「go」之後，由子代理逐項完成任務並互相檢查。說明文件列出 Claude Code、Cursor、Codex CLI 等十多種工具的安裝方式。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-29/obra/superpowers.svg",
+        "alt": "四個方框依序是問需求、確認規格、寫計畫、子代理執行並檢查。",
+        "caption": "說明文件描述的流程：先問、再確認規格、寫計畫，最後由子代理執行並互相檢查。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50282544,
+      "title": "GitLab Security Incident: Attempted Exploitation of CVE-2026-97229",
+      "titleZh": "GitLab 資安事件：有人嘗試利用 CVE-2026-97229",
+      "url": "https://alpinelinux.org/posts/GitLab-security-incident-CVE-2026-97229.html",
+      "hnUrl": "https://news.ycombinator.com/item?id=50282544",
+      "score": 39,
+      "comments": 3,
+      "summary": "Alpine Linux 公布一起資安事件。10 月 20 日與 21 日，攻擊者對他們尚未套用修補的 GitLab 送出特製的 CI（持續整合）設定，嘗試利用 CVE-2026-97229（CVSS 分數 10.0）。Alpine 表示攻擊讓工作程序當機 8 次，沒有證據顯示成功，但無法排除，因此把主機當成已被入侵並重建。aports、套件與 10 月 21 日的版本經核對沒有被竄改，全部密碼已重設。修補在 Ruby 而非 GitLab 本身，自行搭配 Ruby 的人需要 3.3.13、3.4.12、4.0.9 或更新版本。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-29/hn/gitlab.svg",
+        "alt": "時間軸：10 月 12 日修補釋出，10 月 21 日攻擊，10 月 26 日發現仍有漏洞，10 月 28 日重建完成。",
+        "caption": "Alpine 公布的時間軸：10 月 12 日修補釋出，10 月 28 日重建完成。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "HKUDS/DeepTutor",
+      "name": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "language": "Python",
+      "starsToday": 2371,
+      "stars": 47958,
+      "summary": "DeepTutor 是一個以 Python 寫成的開源專案，定位是「終身個人化家教」。它的說明文件列出聊天、閱讀文件、知識庫（把資料整理起來供查詢的資料集）、練習題庫與學習路徑等功能，前端採用 Next.js，授權為 Apache 2.0。專案在 2026 年 10 月 28 日發布 v1.7.0，說明文件列出的新增項目包括模組化安裝、更新後的學習工作區、區塊式筆記本，以及有旁白的影片課程。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50282454,
+      "title": "StackOverflow now gets fewer than 1000 questions a month",
+      "titleZh": "Stack Overflow 現在每月不到 1000 個問題",
+      "url": "https://data.stackexchange.com/stackoverflow/query/1926661#graph?t=1",
+      "hnUrl": "https://news.ycombinator.com/item?id=50282454",
+      "score": 25,
+      "comments": 17,
+      "summary": "這則 Hacker News 貼文連到一份 Stack Exchange 資料查詢頁（Data Explorer），標題指出 Stack Overflow（程式問答網站）現在每月新問題不到 1000 個。本站無法讀取該查詢頁的內容，只能確認標題與出處，不確認其中的數字。留言中有人表示，過去一年的問題數比 2024 年平均每個月還少。另有留言提到三個月前一則相關討論，主題是人工智慧對 Stack Overflow 的影響。這則貼文有 25 分、17 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "macro-inc/macro",
+      "name": "macro-inc/macro",
+      "url": "https://github.com/macro-inc/macro",
+      "language": "Rust",
+      "starsToday": 117,
+      "stars": 5414,
+      "summary": "Macro 是一套給團隊用的整合式工作空間，把電子郵件、訊息、文件、任務、代理與客戶關係管理（CRM）放進同一個介面。專案說明表示，各項內容之間可以用 @ 互相連結並可搜尋，並共用團隊層級的人工智慧記憶，也就是讓工具記住團隊先前的資料。官方說明這個專案用 SolidJS 與 Rust 寫成，由位於紐約和多倫多的團隊開發，團隊內部使用了兩年。各個功能區塊像樂高積木一樣可以組合，彼此的交叉參照以雙向圖的形式儲存。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50274409,
+      "title": "CNC Stone Carving",
+      "titleZh": "數控石材雕刻",
+      "url": "https://carmelitegothic.com/cnc-stone-carving/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50274409",
+      "score": 392,
+      "comments": 115,
+      "summary": "這是美國懷俄明州加爾默羅會修士（Carmelite Monks of Wyoming）網站上的一頁，介紹他們用數控（CNC）機器雕刻哥德式教堂石材。數控是用電腦依 XYZ 座標指令控制機器移動，就像照著地圖一步步走。文中表示，過去熟練雕刻師要花數月完成的繁複石件，現在可在幾天內完成。修士把工作時間花在建造上，網頁展示了哥德式尖塔的雕刻與電腦編程照片。網站也表示，從小熟悉電腦的年輕人，即使沒用過鎚子和鑿子，也能參與雕刻工作。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "Nutlope/hallmark",
+      "name": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "language": "CSS",
+      "starsToday": 2110,
+      "stars": 40694,
+      "summary": "Hallmark 是給 Claude Code、Codex、Cursor 和 OpenCode 使用的設計技能，目標是讓產出的網頁看起來不像人工智慧隨手生成的。依說明文件，它從五十種主題中挑出三種，再依訪客來這個頁面要做的事來安排版面，並在真實瀏覽器裡檢查，例如標題前多餘的小標、整頁空白框或只有照片的版面。檢查分成三級：絕不能出貨的底線項目（如對比度與手機版面）、預設習慣、以及不會擋住出貨的細節。專案由 Together AI 製作。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50280974,
+      "title": "A Health Update",
+      "titleZh": "健康近況更新",
+      "url": "https://furbo.org/2026/10/28/a-health-update/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50280974",
+      "score": 60,
+      "comments": 4,
+      "summary": "作者 Craig Hockenberry 在 furbo.org 寫下自己的健康近況，文章開頭說他正躺在醫院病床上，而且感到很開心。他回顧自己的化學治療：先是每週一次的腰椎穿刺，抽出 5 毫克脊髓液並換入 5 毫克的甲氨蝶呤（methotrexate），六週療程在一月底結束；之後改為苯達莫司汀（Bendamustine）與利妥昔單抗（Rituximab）的輸注。他提到副作用包括口中有金屬味，飲食改為清淡，早晨咖啡換成了茶。本站只讀到文章前半，不涉及其餘內容。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
