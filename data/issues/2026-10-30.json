@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-30",
+  "issueNumber": 28,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-30T07:00:00+08:00",
+  "fetchedAt": "2026-10-30T00:32:06.226Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "pbakaus/impeccable",
+      "name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "language": "Rust",
+      "starsToday": 2870,
+      "stars": 95298,
+      "summary": "Impeccable 是給寫程式代理（能自己動手寫程式的人工智慧工具）用的一套設計詞彙。它像一本設計師的詞典：你說「polish」或「bolder」，代理就知道要往哪個方向改。另有 critique 與 audit 兩個指令，前者依使用性原則評分，後者檢查無障礙、效能等項目，問題從 P0（必須修）排到 P3（小修飾）。專案內建 62 條固定規則，用來找出常見的千篇一律設計，不需要模型或金鑰。安裝指令為 npx impeccable install，支援 Claude Code、Cursor、Codex CLI 等多種工具。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-30/pbakaus/impeccable.svg",
+        "alt": "四個方框：用詞下指令、代理改設計、critique 審查、偵測器檢查。",
+        "caption": "說明文件描述的用法：先用設計詞彙下指令，再用 critique 審查，並以 62 條規則檢查。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50296470,
+      "title": "Binance-hacker-1029 – $5.6B stolen from Binance",
+      "titleZh": "Binance 駭客 1029：Binance 被盜 56 億美元",
+      "url": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
+      "hnUrl": "https://news.ycombinator.com/item?id=50296470",
+      "score": 595,
+      "comments": 354,
+      "summary": "這則貼文連到區塊鏈分析平台 Arkham 的頁面，標題寫著 Binance 被盜 56 億美元。原文頁面被驗證機制擋住，無法取得，以下依 Hacker News 討論整理。一位留言者表示，其中約 24 億美元已被 Circle 與 Tether 凍結。另一位留言者指出，Binance 的使用者保護基金約 10 億美元的比特幣。也有人質疑消息的真實性，並引用一位研究者認為此事為真的貼文。討論中的數字尚未見到官方說明。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "JetBrains/thinkrail",
+      "name": "JetBrains/thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "language": "TypeScript",
+      "starsToday": 1117,
+      "stars": 5997,
+      "summary": "ThinkRail 是 JetBrains 孵化專案，是一個給程式代理使用的整合開發環境（IDE，寫程式用的工作台）。它在名為 pi 的程式代理外面包了一層介面，並把每項工作放進獨立的工作區。工作區就像一人一張的工作桌，彼此不會弄亂。工作區用 git worktree 從專案切出，做完的會收到「已完成」架上。專案還提供「活規格」，讓代理記得專案的長期知識。說明文件表示，完整的擴充功能支援還在開發中。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-30/JetBrains/thinkrail.svg",
+        "alt": "一個專案切出兩個工作區，完成的工作區放上收納架。",
+        "caption": "每項工作各用一個 git worktree 工作區，做完的收到架上。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50289418,
+      "title": "We're releasing the weights of Mistral Large 4",
+      "titleZh": "我們釋出 Mistral Large 4 的權重",
+      "url": "https://mistral.ai/news/mistral-large-4-oss/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50289418",
+      "score": 1160,
+      "comments": 331,
+      "summary": "Mistral 公布旗艦模型 Mistral Large 4（代號 Le Chonk）的權重，也就是讓人下載後自己架設執行的模型參數。Mistral 表示這是一個 1 兆參數、原生支援多模態的模型，且在歐洲基礎設施上從頭訓練。依 Mistral 的說法，在 Cognition 的私有測試 FrontierCode 2.0 上得分 19.7%，是開放權重模型中最高；第二名為 19.3%。這些成績由 Mistral 公布，文中也提供三種推理模式，可在成本與表現之間調整。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "milind-soni/OpenMausBot",
+      "name": "milind-soni/OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "language": "TypeScript",
+      "starsToday": 1199,
+      "stars": 7467,
+      "summary": "OpenMausBot 是開源的桌面程式，介面像聊天軟體，側邊欄的每個機器人都是一個代理。依說明文件，這些代理在本機執行 Claude 或 Codex，各自有個性、模型、雲端電腦和連接的應用程式。使用者像和聯絡人說話一樣下指令，可以看它們工作，並核准重要的動作。作者表示這是受 Grok Bot 啟發的獨立專案，與 xAI、Meta、OpenAI 沒有隸屬關係。程式以 TypeScript 撰寫，提供 macOS、Windows 與 Ubuntu 版本。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50296486,
+      "title": "We ran AI agent swarms in Minecraft and Mindustry",
+      "titleZh": "我們讓人工智慧代理群在 Minecraft 與 Mindustry 中運作",
+      "url": "https://labs.ycombinator.com/projects/games/index.html",
+      "hnUrl": "https://news.ycombinator.com/item?id=50296486",
+      "score": 123,
+      "comments": 46,
+      "summary": "Y Combinator 的實驗室與 Olam Labs 合作，讓多個代理在遊戲裡一起行動，研究它們如何協調。他們自己做了一套讓代理長時間玩 Minecraft 的工具並開源。其中一項實驗讓 50 個代理在生存世界待 3 小時，目標是「建立繁榮的文明」。代理共傳了約 5,900 則訊息，建立配給紀錄、規則與許可制度，並依名單順序形成領導者。他們也提供自己執行代理群的方式。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "thedotmack/claude-mem",
+      "name": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "language": "TypeScript",
+      "starsToday": 336,
+      "stars": 104782,
+      "summary": "claude-mem 讓程式代理在不同工作階段之間保留記憶。它像一本工作日誌：記下代理做過的事，用人工智慧壓縮成重點，下次開工時再放回上下文（代理當下讀得到的資料）。說明文件列出可搭配 Claude Code、Gemini、Copilot、OpenCode 等工具，用 npx claude-mem install 安裝。安裝後會請使用者在瀏覽器登入並提供 30 天免費試用；說明文件也寫了可用 --provider 參數略過登入，改用自己的 OpenRouter 或 Gemini 金鑰。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50295450,
+      "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
+      "titleZh": "在 Raspberry Pi Pico 2 W 上執行遊戲的迷你世界模型",
+      "url": "https://github.com/SheepSeb/tinyworldformer",
+      "hnUrl": "https://news.ycombinator.com/item?id=50295450",
+      "score": 100,
+      "comments": 7,
+      "summary": "tinyworldformer 在 Raspberry Pi Pico 2 W（一種便宜的微控制器小板子）上，同時生成並玩小遊戲。第一個小型神經網路是「世界模型」，看目前畫面和動作，預測下一格畫面與獎勵；第二個網路挑選動作。世界模型把同一個 transformer 區塊重複套用 1 到 4 次，以節省記憶體。作者列出 Breakout 用 2.6 萬個參數，Pac-Man lite 用 13.1 萬個。表格中各遊戲的畫面準確度為 83.6% 到 100%。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-30/50295450.svg",
+        "alt": "目前畫面與動作進入世界模型，產生新畫面與獎勵，行動網路再挑下一個動作。",
+        "caption": "兩個小網路輪流工作：一個預測下一格畫面，一個挑選動作。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "CopilotKit/OpenBot",
+      "name": "CopilotKit/OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "language": "TypeScript",
+      "starsToday": 247,
+      "stars": 8139,
+      "summary": "OpenBot 是 CopilotKit 的開源專案，目標是讓公司把人工智慧助理跑在自己的機器上。每位「同事」是一個代理，有自己的瀏覽器、登入帳號、檔案，以及只有被授權的工具，就像給每位新進員工一台專屬電腦。代理做的每個動作會先決定、事後記錄。使用者可以看它工作，遇到不該單獨處理的事就接手。它可接上任何支援 AG-UI 協定的代理，採 MIT 授權，目前標示為測試版（beta）。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50296602,
+      "title": "Proton goes all in on using AI",
+      "titleZh": "Proton 全力投入使用人工智慧",
+      "url": "https://convo.casa/@b/117525936178835007",
+      "hnUrl": "https://news.ycombinator.com/item?id=50296602",
+      "score": 53,
+      "comments": 23,
+      "summary": "這則貼文連到一則社群貼文，內容轉引 404 Media 關於 Proton 內部使用人工智慧的報導。引文指出，執行長 Yen 設了一個電子郵件信箱，讓員工回報阻礙 Proton 採用人工智慧的事情。Proton 也在員工電腦上安裝軟體，追蹤公司產出多少由人工智慧寫的程式碼。引文另寫道，Yen 表示今年是 Proton 最後一次僱用工程師，之後只聘請用人工智慧做東西的人。貼文本身未附其他說明。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
