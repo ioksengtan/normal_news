@@ -137,7 +137,7 @@
       "summary": "tinyworldformer 在 Raspberry Pi Pico 2 W（一種便宜的微控制器小板子）上，同時生成並玩小遊戲。第一個小型神經網路是「世界模型」，看目前畫面和動作，預測下一格畫面與獎勵；第二個網路挑選動作。世界模型把同一個 transformer 區塊重複套用 1 到 4 次，以節省記憶體。作者列出 Breakout 用 2.6 萬個參數，Pac-Man lite 用 13.1 萬個。表格中各遊戲的畫面準確度為 83.6% 到 100%。",
       "placeholder": false,
       "diagram": {
-        "src": "data/diagrams/2026-10-30/hn/tinyworldformer.svg",
+        "src": "data/diagrams/2026-10-30/50295450.svg",
         "alt": "目前畫面與動作進入世界模型，產生新畫面與獎勵，行動網路再挑下一個動作。",
         "caption": "兩個小網路輪流工作：一個預測下一格畫面，一個挑選動作。"
       },
