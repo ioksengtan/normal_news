@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-31",
+  "issueNumber": 29,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-10-31T07:00:00+08:00",
+  "fetchedAt": "2026-10-31T00:31:59.118Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "Renhuai123/ziwei-doushu",
+      "name": "Renhuai123/ziwei-doushu",
+      "url": "https://github.com/Renhuai123/ziwei-doushu",
+      "language": "TypeScript",
+      "starsToday": 1126,
+      "stars": 11197,
+      "summary": "紫微斗數是中國傳統命理學，用出生時間排出一張命盤（像依生辰填好的表格）。ziwei-doushu 是開源的排盤引擎，依倪海廈《天紀》體系，內含排盤演算法、四化系統、格局知識庫與古籍原文資料。README 提到 v4.0 解讀資料集有 674,976 張命盤、8,774,688 段解讀，解壓後 56.6 GB。程式碼採 MIT 授權，資料集採 CC BY 4.0 授權。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-31/Renhuai123/ziwei-doushu.svg",
+        "alt": "四個方框：輸入資料、排盤演算法、四化與格局、古籍原文。",
+        "caption": "專案內容：排盤演算法、四化系統、格局知識庫與古籍原文資料。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50307190,
+      "title": "My favourite PowerMac is a Nintendo Wii",
+      "titleZh": "我最愛的 PowerMac 是任天堂 Wii",
+      "url": "https://virtuallyfun.com/2026/10/29/my-favourite-powermac-is-a-nintendo-wii/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50307190",
+      "score": 227,
+      "comments": 59,
+      "summary": "作者 Rairii 把舊版 Mac OS 移植到任天堂 GameCube 與 Wii 等採用 ArtX 晶片組的主機，並首次開機到桌面。作者表示，Mac OS 7.6 與 9.2.2 都已在 Wii 上開到桌面。第一步是移植 OpenBIOS（開機時的底層程式，像大樓的總機），再讓 Trampoline 開機程式執行。作者說專案尚未能公開釋出，也沒有使用程式代理或大型語言模型。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-31/50307190.svg",
+        "alt": "四個方框：OpenBIOS、Trampoline、Mac OS 7.6、Mac OS 9.2.2。",
+        "caption": "作者的順序：先移植 OpenBIOS，再用 Trampoline 開機，兩個版本都到達桌面。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "expo/skills",
+      "name": "expo/skills",
+      "url": "https://github.com/expo/skills",
+      "language": "Shell",
+      "starsToday": 38,
+      "stars": 3893,
+      "summary": "expo/skills 是 Expo 團隊提供的一組 AI 代理技能（給寫程式的人工智慧工具讀的操作說明），用於建置、部署、升級與除錯 Expo 應用程式。技能像一本工具手冊，告訴代理何時用哪個 Expo 介面。Expo 文件與命令列工具仍是依據。可用 npx skills@latest add expo/skills 安裝，也有 Claude Code 與 Codex 的外掛安裝方式。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50277379,
+      "title": "Cloudflare Turnstile solver library (no headless browser required)",
+      "titleZh": "不需無頭瀏覽器的 Cloudflare Turnstile 解題函式庫",
+      "url": "https://github.com/chris124567/cfsolve",
+      "hnUrl": "https://news.ycombinator.com/item?id=50277379",
+      "score": 41,
+      "comments": 11,
+      "summary": "cfsolve 是用 Rust 寫的函式庫與命令列工具，不用無頭瀏覽器（沒有畫面的瀏覽器）就能處理 Cloudflare Turnstile 驗證元件與挑戰頁面。對元件回傳權杖，對挑戰頁面回傳 cf_clearance cookie。它依「瀏覽器設定檔」模擬特定瀏覽器，目前內附 Safari iPhone 的設定檔，支援 Safari 與 Chrome 類型。建置需要 Rust、CMake、C/C++ 編譯器、libclang 與 Git。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "mattpocock/skills",
+      "name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "language": "Shell",
+      "starsToday": 876,
+      "stars": 307476,
+      "summary": "mattpocock/skills 是作者 Matt Pocock 每天使用的代理技能集合（給 AI 寫程式工具讀的指引），他稱之為「真正的工程」而非憑感覺寫程式。README 表示這些技能小、容易改，並可搭配任何模型。作者說，GSD、BMAD、Spec-Kit 等方法會接管流程，讓問題難以排除，這套技能則讓使用者保有控制。Claude Code 可用外掛指令安裝，並有 Codex、GitHub Copilot 等安裝方式。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50300683,
+      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+      "titleZh": "Cursor 市集上的 Claude Code 擴充功能被植入後門",
+      "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50300683",
+      "score": 747,
+      "comments": 469,
+      "summary": "資安公司 Phorion 表示，Cursor 市集上的 Claude Code for VS Code 擴充功能 2.1.313 版被植入程式，載入檔案就會執行，並把攻擊者的 SSH 公開金鑰（像一把複製的門鑰匙）寫進使用者的授權檔。Phorion 說，Cursor 已下架該版本。Anthropic 的員工在留言中表示，這不是 Anthropic 系統遭入侵，官方管道的版本不受影響，只影響 Cursor 使用者。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-10-31/50300683.svg",
+        "alt": "四個方框：安裝擴充功能、注入程式執行、加入 SSH 金鑰、通報並下架。",
+        "caption": "Phorion 描述的過程：擴充功能一載入就執行，寫入 SSH 金鑰，Cursor 其後下架該版本。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "pingdotgg/t3code",
+      "name": "pingdotgg/t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "language": "TypeScript",
+      "starsToday": 930,
+      "stars": 32731,
+      "summary": "T3 Code 是一個「代理控制介面」，讓使用者在手機、網頁或桌面應用程式上操控自己電腦裡的 AI 寫程式代理（能自己動手寫程式的工具）。它可搭配已登入的 Claude Code、Codex、Cursor、Grok Build、OpenCode 與 Google Antigravity。作者表示這個專案不販售任何東西。安裝可用 curl 指令、桌面版安裝檔，或先用 npx t3@latest 試用。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50311686,
+      "title": "Show HN: To Honor Sir Patrick Stewart, Enjoy the TNG Episode Guessing Game",
+      "titleZh": "Show HN：向派屈克·史都華致敬，玩《星艦迷航記：銀河飛龍》猜集數遊戲",
+      "url": "https://tng.episodle.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50311686",
+      "score": 14,
+      "comments": 4,
+      "summary": "這是一個網頁遊戲，玩家要猜《星艦迷航記：銀河飛龍》（TNG）的某一集是哪一集，網站名稱為 TNG: Episodle，有猜測次數限制，也可略過與分享結果。作者以此向派屈克·史都華致敬。原文頁面沒有更多說明，以下依 Hacker News 討論整理：有留言者表示遊戲可能偏難，也有人依劇情線索猜出是第二季。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "anthropics/skills",
+      "name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "language": "Python",
+      "starsToday": 295,
+      "stars": 185313,
+      "summary": "anthropics/skills 是 Anthropic 公開的代理技能儲存庫。技能是一個資料夾，裡面有指令、腳本與資源，Claude 會在需要時載入，像是一本放在抽屜裡的作業手冊，用來重複完成特定工作，例如依品牌規範製作文件。儲存庫涵蓋設計、測試網頁應用程式、產生 MCP 伺服器等範例，並附上 docx、pdf、pptx、xlsx 技能。官方說明這些僅供示範與教育，實際行為可能與 Claude 不同。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50305025,
+      "title": "Northflank Breached",
+      "titleZh": "Northflank 遭入侵",
+      "url": "https://status.northflank.com",
+      "hnUrl": "https://news.ycombinator.com/item?id=50305025",
+      "score": 347,
+      "comments": 268,
+      "summary": "這則貼文連到雲端平台 Northflank 的狀態頁面，標題寫著該公司遭入侵。頁面內容無法取得，以下依 Hacker News 討論整理。留言者提到，有人需要更換自己在該平台上的後端所用的各種金鑰。也有人表示，這類事件之後，客戶可能轉回大型雲端業者。入侵範圍與原因，討論中沒有官方說明。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
