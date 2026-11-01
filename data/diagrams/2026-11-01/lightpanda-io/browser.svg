@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280">
+  <rect width="360" height="280" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 13px; }
+    .sub { fill: #5e584e; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="20" y="30">讀取 100 個網頁（README 的數字）</text>
+  <text x="20" y="62" class="sub">記憶體（峰值）</text>
+  <rect x="20" y="70" width="14" height="22" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="44" y="86">Lightpanda 123MB</text>
+  <rect x="20" y="100" width="320" height="22" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="28" y="116">Headless Chrome 2GB</text>
+  <text x="20" y="160" class="sub">執行時間</text>
+  <rect x="20" y="168" width="35" height="22" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="64" y="184">Lightpanda 5 秒</text>
+  <rect x="20" y="198" width="320" height="22" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="28" y="214">Headless Chrome 46 秒</text>
+  <text x="20" y="255" class="sub">專案自己的測試，環境為 AWS EC2 m5.large</text>
+</svg>
