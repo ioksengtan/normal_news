@@ -1,0 +1,171 @@
+{
+  "date": "2026-11-01",
+  "issueNumber": 30,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-01T07:00:00+08:00",
+  "fetchedAt": "2026-11-01T00:31:52.354Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "Donchitos/Claude-Code-Game-Studios",
+      "name": "Donchitos/Claude-Code-Game-Studios",
+      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+      "language": "Shell",
+      "starsToday": 742,
+      "stars": 31163,
+      "summary": "Claude Code Game Studios 是開源專案，採 MIT 授權，目標是替單一 Claude Code 工作階段加上遊戲工作室的分工。README 列出 49 個代理（agent，像分工的員工）和 74 個技能（skill，像寫好的標準作業流程），並模仿真實工作室的層級來協調。它給想用人工智慧獨力做遊戲的人，補上設計文件與審查這些步驟。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-01/Donchitos/Claude-Code-Game-Studios.svg",
+        "alt": "一個 Claude Code 工作階段連到 49 個代理與 74 個技能。",
+        "caption": "專案內容：49 個代理與 74 個技能，模仿遊戲工作室的分工。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50319510,
+      "title": "HackerTube: YouTube built from videos recommended by HN",
+      "titleZh": "HackerTube：用 HN 推薦的影片做成的 YouTube",
+      "url": "https://karpathy.bearblog.dev/hacker-tube/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50319510",
+      "score": 599,
+      "comments": 215,
+      "summary": "作者在文中說，他不滿意 YouTube 的推薦，請 Opus 5.5 用 Hacker News 留言推薦過的影片做一個類似的網站。流程是下載全部 HN 留言，過濾垃圾與低品質內容，剩下約 4 萬則推薦 YouTube 影片的留言，共 6,454 部影片、150 個主題。網站不需帳號，推薦結果存在瀏覽器的暫存狀態裡，也提供資料匯出。作者表示整個過程約兩小時。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "lightpanda-io/browser",
+      "name": "lightpanda-io/browser",
+      "url": "https://github.com/lightpanda-io/browser",
+      "language": "Zig",
+      "starsToday": 929,
+      "stars": 39241,
+      "summary": "Lightpanda 是用 Zig 語言從頭寫的無頭瀏覽器（沒有畫面、由程式操控的瀏覽器），給人工智慧代理與自動化使用，不是 Chromium 的分支。README 表示，在 AWS EC2 m5.large 上讀取 933 個真實網頁的測試中，讀 100 頁的記憶體峰值是 123MB，Headless Chrome 為 2GB；執行時間 5 秒，Headless Chrome 為 46 秒。Puppeteer、Playwright 等自動化工具可以連上它的 CDP 伺服器。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-01/lightpanda-io/browser.svg",
+        "alt": "兩組長條，比較 Lightpanda 與 Headless Chrome 的記憶體和執行時間。",
+        "caption": "README 的測試：讀 100 頁，記憶體 123MB 對 2GB，時間 5 秒對 46 秒。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50320963,
+      "title": "An Italian farmer found some unknown seeds in his attic and planted them",
+      "titleZh": "義大利農夫在閣樓找到不明種子，種下後有了成果",
+      "url": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50320963",
+      "score": 69,
+      "comments": 27,
+      "summary": "原文無法取得（網站以驗證頁面擋下），以下依 Hacker News 討論整理，細節請以原文為準。討論中有人整理文章重點：農夫 Gross 在 1990 年於閣樓發現這批小麥種子，種出的小麥長得很高，乾旱時表現較好，也不需要肥料或除草劑。缺點是莖太高，遇到強風、大雨或冰雹容易倒伏。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "Orkas-AI/Orkas",
+      "name": "Orkas-AI/Orkas",
+      "url": "https://github.com/Orkas-AI/Orkas",
+      "language": "JavaScript",
+      "starsToday": 1044,
+      "stars": 6183,
+      "summary": "Orkas 是開源（MIT 授權）的桌面應用程式，資料留在使用者自己的電腦。使用者把目標交給「指揮官」（Commander），它拆成待辦事項，再分派給內建的專長代理，也能調度 Claude Code、Codex 等工具。專案可保存目標、規則與記憶，也能設定每小時到每月的排程自動化。有 macOS 與 Windows 版本，可用內建模型或自己的金鑰。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50319143,
+      "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
+      "titleZh": "TCP 釋放後使用漏洞：CVE-2026-98432，CVSS 9.8",
+      "url": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
+      "hnUrl": "https://news.ycombinator.com/item?id=50319143",
+      "score": 292,
+      "comments": 143,
+      "summary": "Atlas 的資安公告說明 Linux 核心 IPv4 TCP 握手流程中的 CVE-2026-98432，是釋放後使用（use-after-free，程式用到已經還給系統的記憶體）漏洞，核心的 CVE 編號機構評為 CVSS 9.8。上游已在 10 月 11 日與 15 日釋出修正版，包含 6.12.113、6.18.56、7.2.10 與 7.3。截至 10 月 31 日，文中說 Ubuntu 與 RHEL 尚未提供修正核心；暫時無法更新時，文中建議丟棄帶有 IPv4 選項的 TCP 封包，並關閉不用的多路徑 TCP。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "THU-MAIC/OpenMAIC",
+      "name": "THU-MAIC/OpenMAIC",
+      "url": "https://github.com/THU-MAIC/OpenMAIC",
+      "language": "TypeScript",
+      "starsToday": 116,
+      "stars": 42182,
+      "summary": "OpenMAIC 的全名是 Open Multi-Agent Interactive Classroom，意思是多代理互動式教室，採 MIT 授權。使用者提出主題後，由多個人工智慧代理（像分工的助教）產生課堂，README 稱之為沉浸式的學習體驗，並提供線上展示。2026-10-29 發布 v1.3.0，更新知識庫與進階工作台。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50320995,
+      "title": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
+      "titleZh": "Memdoor：5 個 Qwen3.8-27B 模型組成的團隊，在 LiveCodeBench Hard 勝過 Fable 5",
+      "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
+      "hnUrl": "https://news.ycombinator.com/item?id=50320995",
+      "score": 33,
+      "comments": 12,
+      "summary": "Memdoor 是單一命令列程式形式的程式與自動化代理。這個範例 team-solve 重現 GVS5H 論文的方法：規劃者、兩位發想者、解題者與管理者等角色各自從空白脈絡開始，只透過磁碟上的檔案溝通，由執行範例的腳本而不是模型判定成功。作者在 LiveCodeBench Hard 前 10 題跑 5 輪，平均 9.8 題通過，論文作者的程式為 9.6，Fable 5 單獨為 8.0。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "bregman-arie/devops-exercises",
+      "name": "bregman-arie/devops-exercises",
+      "url": "https://github.com/bregman-arie/devops-exercises",
+      "language": "Python",
+      "starsToday": 342,
+      "stars": 85981,
+      "summary": "devops-exercises 是一個題庫型儲存庫，收錄與技術主題相關的問題和練習，涵蓋 Linux、Docker、Kubernetes、AWS、SQL 等。README 寫目前有 2624 題，可用來準備面試，但多數題目不代表真實面試題目。任何人都可以送出 pull request（請求把修改併入專案）新增題目。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50321130,
+      "title": "When electric cars were for women",
+      "titleZh": "電動車曾是女性的車",
+      "url": "https://spectrum.ieee.org/early-electric-vehicles",
+      "hnUrl": "https://news.ycombinator.com/item?id=50321130",
+      "score": 19,
+      "comments": 2,
+      "summary": "原文無法完整取得，以下依 Hacker News 討論整理，細節請以原文為準。標題來自 IEEE Spectrum 的歷史專欄。討論中有留言者提到 Detroit Electric 這款早期電動車，車內附花瓶，用搖桿式的舵柄取代方向盤，主要客群是富裕的女性。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
