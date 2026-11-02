@@ -1,0 +1,171 @@
+{
+  "date": "2026-11-02",
+  "issueNumber": 31,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-02T07:00:00+08:00",
+  "fetchedAt": "2026-11-02T00:32:05.481Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "shiyu-coder/Kronos",
+      "name": "shiyu-coder/Kronos",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "language": "Python",
+      "starsToday": 630,
+      "stars": 45372,
+      "summary": "Kronos 是一組專門處理金融市場 K 線（記錄開盤、最高、最低、收盤價與成交量的圖表資料）的基礎模型。專案說明，它先把連續的 K 線數據切成一個個離散的代碼，就像把一段旋律記成音符，再用 Transformer 這種預測序列的模型學習。README 稱它用超過 45 個全球交易所的資料訓練，模型有多種大小，放在 Hugging Face 上，也提供微調腳本與 BTC/USDT 的線上展示。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-02/shiyu-coder/Kronos.svg",
+        "alt": "K 線資料先經分詞器變成離散代碼，再交給 Transformer 模型預測。",
+        "caption": "專案做法：先把 K 線切成代碼，再讓模型學習預測。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50326821,
+      "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
+      "titleZh": "Show HN：HackerBooks，收錄 HN 上被提到的書",
+      "url": "https://hackerbooks.org",
+      "hnUrl": "https://news.ycombinator.com/item?id=50326821",
+      "score": 856,
+      "comments": 170,
+      "summary": "作者看到 Karpathy 的 HackerTube 後，請 Claude（Opus 5.5）做出同類的書籍網站。網站收錄約 1 萬 6500 本書，每本都至少被兩位不同的 HN 留言者提過，時間從 2007 年至今，並連回提到它的留言。作者表示程式與資料處理幾乎都由 Claude 寫成，他負責指揮與決定。作者也說明，統計只計提及次數，稱讚與批評都算一次，資料可從關於頁下載。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "public-apis/public-apis",
+      "name": "public-apis/public-apis",
+      "url": "https://github.com/public-apis/public-apis",
+      "language": "Python",
+      "starsToday": 324,
+      "stars": 494591,
+      "summary": "public-apis 是由社群人工整理的清單，收錄各種免費的公開應用程式介面（API，像是餐廳的點餐窗口，程式用固定格式向它要資料）。清單涵蓋許多領域，讓開發者找資料來源時可以直接查。README 開頭另外介紹 APILayer 的整合服務，並說明這份清單由社群成員與 APILayer 的工作人員共同維護。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50299811,
+      "title": "Nibnib: Image compression with extreme decompression speed",
+      "titleZh": "Nibnib：解壓縮速度極快的圖片格式",
+      "url": "https://github.com/raphlinus/nibnib",
+      "hnUrl": "https://news.ycombinator.com/item?id=50299811",
+      "score": 83,
+      "comments": 10,
+      "summary": "nibnib 是一種強調解壓縮速度的圖片格式，起初是為了在 RP2350 微控制器上輸出 DVI 影像所做的實驗。它以調色盤為核心，但調色盤存的是與前一個像素的差值，而不是顏色本身。解碼時每讀一個位元組，就一次還原兩個像素，約等於每像素 4 位元。作者說明，編碼要搜尋最佳組合，比解碼慢上幾個數量級。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "cjpais/Handy",
+      "name": "cjpais/Handy",
+      "url": "https://github.com/cjpais/Handy",
+      "language": "Rust",
+      "starsToday": 339,
+      "stars": 36537,
+      "summary": "Handy 是免費、開源的語音轉文字桌面程式，可在 Windows、macOS 與 Linux 使用，完全在自己的電腦上離線運作。使用者按下快捷鍵說話，放開後，辨識出的文字會貼進目前使用的程式。它先用 Silero 過濾靜音，再用 Whisper 或 Parakeet V3 模型辨識。作者表示聲音不會傳到雲端。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-02/cjpais/Handy.svg",
+        "alt": "按快捷鍵說話，在本機辨識後把文字貼進程式。",
+        "caption": "Handy 的流程：說話、本機辨識、貼上文字。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50328896,
+      "title": "Ask HN: Which TV do you recommend for privacy?",
+      "titleZh": "問 HN：注重隱私，該買哪一款電視？",
+      "url": null,
+      "hnUrl": "https://news.ycombinator.com/item?id=50328896",
+      "score": 100,
+      "comments": 175,
+      "summary": "發文者多年沒買電視，想找一台尊重隱私的電視，尺寸 60 至 80 吋，4K 解析度，更新率至少 60 赫茲，預算可以高一些。他聽說 Apple TV 比多數電視內建的應用程式更好，想知道哪些電視搭配它的效果較好。他只想讓電視當顯示器使用，並詢問大家的經驗。這篇貼文有 175 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "kornia/kornia",
+      "name": "kornia/kornia",
+      "url": "https://github.com/kornia/kornia",
+      "language": "Python",
+      "starsToday": 101,
+      "stars": 11782,
+      "summary": "Kornia 是建立在 PyTorch 上的可微分電腦視覺函式庫。「可微分」是指運算過程能被自動求導，像是把每個步驟都寫成可回溯的算式，讓人工智慧模型能一路學習調整。它提供影像轉換、資料擴增與幾何視覺的演算法，支援批次處理與圖形處理器（GPU）加速，使用 Apache 2.0 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50271106,
+      "title": "Tips for more effective fuzz testing with AFL++",
+      "titleZh": "用 AFL++ 做更有效模糊測試的訣竅",
+      "url": "https://nullprogram.com/blog/2025/02/05/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50271106",
+      "score": 67,
+      "comments": 10,
+      "summary": "作者整理了用 AFL++ 對 C 與 C++ 程式做模糊測試（fuzz testing，用大量隨機輸入去試探程式會不會出錯）的檢查清單，並說明這來自他測試約 1,000 個專案的經驗。第一項是同時開啟 Address Sanitizer 與 UBSan 這類檢查工具，並調整 ASan 的環境變數；第二項是優先使用持續模式（persistent mode），作者說它通常快一個數量級。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "beenuar/AiSOC",
+      "name": "beenuar/AiSOC",
+      "url": "https://github.com/beenuar/AiSOC",
+      "language": "Python",
+      "starsToday": 446,
+      "stars": 6213,
+      "summary": "AiSOC 是開源、可自行架設的人工智慧資安維運中心（Security Operations Center，像是二十四小時盯著警報的值班室）。README 說明，它匯入資安紀錄，依規則偵測並歸納成事件，再由 AI 代理調查，每個提示與工具呼叫都會被記錄，建議的處置要經人員核准才會送出。專案採 MIT 授權，README 稱不需要 API 金鑰也能執行。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50303088,
+      "title": "Keeping Up Appearances – The women taking over the funeral industry",
+      "titleZh": "〈維持體面〉：接手殯葬業的女性",
+      "url": "https://lareviewofbooks.org/article/death-industry-mortuary-programs-women-andie-eisen-quarterly/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50303088",
+      "score": 12,
+      "comments": 1,
+      "summary": "這篇發表於洛杉磯書評（Los Angeles Review of Books）的文章，由 Andie Eisen 撰寫，採訪一位殯葬防腐學徒。文中寫到，過去四十年來，殯葬學程的女性入學比例從 5% 升到近期畢業班的約 75%。作者以訪談與觀察，描述這個多半不為外界所見的轉變。這是 LARB Quarterly 第 50 期的文章預覽。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
