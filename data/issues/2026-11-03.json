@@ -1,0 +1,166 @@
+{
+  "date": "2026-11-03",
+  "issueNumber": 32,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-03T07:00:00+08:00",
+  "fetchedAt": "2026-11-03T00:32:04.176Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "vercel-labs/agent-desktop",
+      "name": "vercel-labs/agent-desktop",
+      "url": "https://github.com/vercel-labs/agent-desktop",
+      "language": "Rust",
+      "starsToday": 2275,
+      "stars": 9636,
+      "summary": "agent-desktop 是 Vercel Labs 推出的命令列工具（在終端機輸入指令操作的程式），也提供 C 語言程式庫，可在 macOS、Windows 與 Linux 上使用。它讓人工智慧代理程式透過作業系統的無障礙樹狀結構（把畫面上每個按鈕、欄位整理成清單的資訊）來讀取並操作桌面應用程式。每次拍下快照，會得到一份 JSON 資料，為每個可操作的元素編上參照編號。代理程式依編號動作，再拍一次快照確認結果，不用比對畫面像素。專案說明提醒，快照與截圖可能含有私人內容，不要放進公開日誌。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-03/vercel-labs/agent-desktop.svg",
+        "alt": "三個方框由上而下：拍快照、依編號動作、再拍快照確認。",
+        "caption": "代理程式拍快照、依編號動作，再拍快照確認結果。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50341174,
+      "title": "Astra can read and write weights to improve Qwen",
+      "titleZh": "Astra 能讀寫權重，用來改進 Qwen",
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50341174",
+      "score": 1787,
+      "comments": 566,
+      "summary": "這篇部落格文章題為〈Weight-Space Programming 的初步跡象〉。作者表示，他們發現前沿大型語言模型能直接讀取與寫入神經網路的權重（模型內部決定它如何反應的數字，好比食譜裡的份量）。作者稱這樣的表現超出人類或傳統演算法的預期。文章以 Astra 為例，說明如何用這種方式改進 Qwen 模型。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "thedotmack/claude-mem",
+      "name": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "language": "TypeScript",
+      "starsToday": 1803,
+      "stars": 110736,
+      "summary": "claude-mem 想解決的問題是：人工智慧代理程式每次開新工作階段，就忘了上次做過什麼，像每天上班都要重新自我介紹。專案說明，它會記錄代理程式在工作階段中做的事，用人工智慧壓縮成精簡內容，再在之後的工作階段把相關部分放回去。說明文件列出可搭配 Claude Code、Codex、Gemini、Copilot、OpenCode 等工具使用。專案以 TypeScript 撰寫。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50340088,
+      "title": "Show HN: Subvocal – Talk to your computer without making noise",
+      "titleZh": "Show HN：Subvocal——不出聲就能對電腦說話",
+      "url": null,
+      "hnUrl": "https://news.ycombinator.com/item?id=50340088",
+      "score": 515,
+      "comments": 280,
+      "summary": "Subvocal 公司（YC F26）兩位創辦人在貼文中介紹他們做的智慧眼鏡，讓人不出聲、只用嘴形或內心默念的方式對電腦輸入文字。他們表示，系統用射頻（無線電波）感測口腔內部，再把動作解碼成文字，速度和說話相當。創辦人說靈感來自在圖書館或辦公室不方便出聲使用語音輸入工具。貼文附有示範影片。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "D4Vinci/Scrapling",
+      "name": "D4Vinci/Scrapling",
+      "url": "https://github.com/D4Vinci/Scrapling",
+      "language": "Python",
+      "starsToday": 706,
+      "stars": 92830,
+      "summary": "Scrapling 是 Python 寫的網頁爬取框架，也就是讓程式自動讀取網頁並整理資料的工具，好比請一位助手替你翻書、抄重點。專案描述指出，它能處理從單一請求到大規模爬取的各種情況。專案附有說明文件網站與多種語言的 README。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50339397,
+      "title": "US boy names that became girl names and vice versa",
+      "titleZh": "美國名字中，男名變女名與女名變男名的例子",
+      "url": "https://namedaisy.com/blog/boy-names-that-became-girl-names",
+      "hnUrl": "https://news.ycombinator.com/item?id=50339397",
+      "score": 270,
+      "comments": 294,
+      "summary": "這是 namedaisy.com 網站的一篇文章，整理美國人的名字中，原本多給男孩使用、後來多給女孩使用，以及相反的例子。原文網站啟用了安全檢查頁面，本站未能讀取全文，因此本則依 Hacker News 的標題與討論串整理。這則貼文有 270 分、294 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "hyprwm/Hyprland",
+      "name": "hyprwm/Hyprland",
+      "url": "https://github.com/hyprwm/Hyprland",
+      "language": "C++",
+      "starsToday": 509,
+      "stars": 39922,
+      "summary": "Hyprland 是用 C++ 寫的視窗合成器（負責在螢幕上擺放與繪製各個視窗的程式），採用 Wayland 這套 Linux 圖形協定。它屬於平鋪式：視窗會像磁磚一樣自動排滿畫面，不會互相重疊。專案說明它獨立開發，沒有用 wlroots、libweston、kwin 或 mutter。功能包括漸層邊框、模糊、動畫、外掛、特殊工作區（暫存桌面）與用 socket 溝通的行程間通訊介面，設定檔存檔後會立刻重新載入。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50336518,
+      "title": "If you love a website, back it up",
+      "titleZh": "如果你喜歡一個網站，就把它備份下來",
+      "url": "https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50336518",
+      "score": 375,
+      "comments": 93,
+      "summary": "作者在網路封存領域工作。他提到自己常看的舊同人網站 teapuppies.com 已下線，網域現在被用來放線上賭博廣告。他呼籲讀者主動替喜愛的網站與資料做備份，不要只等大型機構處理。文章說，他介紹的工具使用 WARC 這類標準網頁封存格式（把網頁完整存成一個檔案，像替網頁拍一張存檔照片）。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "FlashML-org/FreeToken",
+      "name": "FlashML-org/FreeToken",
+      "url": "https://github.com/FlashML-org/FreeToken",
+      "language": "Python",
+      "starsToday": 653,
+      "stars": 16052,
+      "summary": "FreeToken 是專為個人電腦設計的混合專家（Mixture-of-Experts，MoE）模型服務引擎，MoE 就像一間有許多專科醫師的診所，每次只請其中幾位看診。專案說明，它把 GPU、CPU、記憶體等資源當成同一個推論平台，讓大型開放權重模型能在家用硬體上執行。README 稱可在遊戲電腦上執行 2900 億參數以上的模型，但原文未說明測試條件。專案附有論文連結，使用 Python 撰寫。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50339913,
+      "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+      "titleZh": "Launch HN：Momentic——用你的應用程式找出錯誤的代理程式",
+      "url": "https://momentic.ai/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50339913",
+      "score": 116,
+      "comments": 75,
+      "summary": "Momentic（YC W24）的兩位創辦人介紹他們做的品質測試代理程式，能自動規劃、探索網頁、iOS 與 Android 應用程式（桌面版稱即將推出）的操作流程並找出錯誤。他們表示，現有的 Playwright、Selenium 等開源工具需要寫死 XPath、文字等實作細節，維護費時。貼文附有示範影片。貼文中引用 DeepSWE v1.1 的數字，但原文未說明完整測試條件。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
