@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280">
+  <rect width="360" height="280" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 13px; }
+    .sub { fill: #5e584e; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="30" y="30" width="300" height="200" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="22" text-anchor="middle" class="sub">天花板四個角落各一顆馬達</text>
+  <circle cx="30" cy="30" r="9" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <line x1="30" y1="30" x2="180" y2="130" stroke="#1c1915" stroke-width="1.2"/>
+  <circle cx="330" cy="30" r="9" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <line x1="330" y1="30" x2="180" y2="130" stroke="#1c1915" stroke-width="1.2"/>
+  <circle cx="30" cy="230" r="9" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <line x1="30" y1="230" x2="180" y2="130" stroke="#1c1915" stroke-width="1.2"/>
+  <circle cx="330" cy="230" r="9" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <line x1="330" y1="230" x2="180" y2="130" stroke="#1c1915" stroke-width="1.2"/>
+  <rect x="165" y="115" width="30" height="30" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="165" text-anchor="middle">夾爪</text>
+  <text x="180" y="262" text-anchor="middle" class="sub">四條線共同吊住夾爪（俯視圖）</text>
+</svg>

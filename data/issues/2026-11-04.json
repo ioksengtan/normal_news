@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-04",
+  "issueNumber": 33,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-04T07:00:00+08:00",
+  "fetchedAt": "2026-11-04T00:31:54.993Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "max-sixty/worktrunk",
+      "name": "max-sixty/worktrunk",
+      "url": "https://github.com/max-sixty/worktrunk",
+      "language": "Rust",
+      "starsToday": 438,
+      "stars": 10477,
+      "summary": "Worktrunk 是用 Rust 寫的命令列工具（在終端機輸入指令操作的程式），用來管理 Git 的工作樹（worktree）。工作樹好比同一本食譜影印出幾份，讓好幾個人各自在自己那份上修改，不會互相弄亂。專案說明表示，它是為了讓多個人工智慧代理程式並行工作而設計。授權為 MIT 或 Apache-2.0，文件放在 worktrunk.dev。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-04/max-sixty/worktrunk.svg",
+        "alt": "三個方框由上而下：一個 Git 儲存庫、Worktrunk 管理工作樹、多個 AI 代理程式並行。",
+        "caption": "Worktrunk 管理同一個儲存庫的多個工作樹，讓多個代理程式並行工作。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50358582,
+      "title": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer",
+      "titleZh": "《生成式 AI 基礎小書》：直覺的數學入門",
+      "url": "https://arxiv.org/abs/2605.29713",
+      "hnUrl": "https://news.ycombinator.com/item?id=50358582",
+      "score": 177,
+      "comments": 29,
+      "summary": "這是一份 arXiv 上的預印本，作者是 Tianhua Chen，共 195 頁，2026 年 9 月更新到第二版。書中帶讀者推導現代生成式人工智慧背後的數學，路線從主成分分析（PCA）、變分自編碼器、擴散模型，到正規化流、生成對抗網路（GAN）與能量模型。作者表示，目標讀者是對數學有興趣的研究者、實務工作者與學生，修訂版加入了更多視覺化說明。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "JustVugg/colibri",
+      "name": "JustVugg/colibri",
+      "url": "https://github.com/JustVugg/colibri",
+      "language": "C",
+      "starsToday": 802,
+      "stars": 47240,
+      "summary": "colibri 是用 C 語言寫的推論引擎（讓已訓練好的模型實際運算出答案的程式），目標是在一般電腦上執行很大的開放模型。這類混合專家（mixture-of-experts）模型每處理一個字，只會用到自己的一小部分，好比一間大圖書館每次只翻幾本書。專案說明表示，熱門的專家放在 GPU，其餘放在記憶體，不常用的才從 NVMe 固態硬碟讀取，且不一定需要 GPU。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-04/JustVugg/colibri.svg",
+        "alt": "三個方框由上而下：熱門專家放在 GPU、溫的專家放在記憶體、冷的專家從 NVMe 串流讀取。",
+        "caption": "colibri 依使用頻率，把模型的專家分放在 GPU、記憶體與 NVMe。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50358562,
+      "title": "Safari introduces Adaptive Dark Mode in 27.3",
+      "titleZh": "Safari 27.3 推出自適應深色模式",
+      "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50358562",
+      "score": 240,
+      "comments": 151,
+      "summary": "WebKit 團隊在部落格宣布，Safari 27.3 測試版加入「自適應深色模式」。使用者開啟後，Safari 會把淺色背景的網站轉成深色，好比替每個網頁自動戴上一副深色濾鏡。文章指出，近 40% 的網頁載入來自深色模式使用者，但只有約 10% 的網頁支援深色。已用 color-scheme 宣告支援深色的網站不會被更動；其餘網頁會先分析顏色，再決定是否轉換。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "mattpocock/skills",
+      "name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "language": "Shell",
+      "starsToday": 1164,
+      "stars": 311444,
+      "summary": "mattpocock/skills 是作者 Matt Pocock 公開的技能（skills）集合，內容取自他每天使用的 .agents 目錄。技能就像一張張寫好步驟的小抄，讓人工智慧代理程式照著做事。作者表示這些技能小而易改、可以組合使用，適用於任何模型。安裝方式包括 Claude Code 外掛，以及用 skills.sh 把檔案複製到自己的專案。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50358702,
+      "title": "The Internals of PostgreSQL",
+      "titleZh": "PostgreSQL 的內部運作",
+      "url": "https://www.interdb.jp/pg/index.html",
+      "hnUrl": "https://news.ycombinator.com/item?id=50358702",
+      "score": 70,
+      "comments": 2,
+      "summary": "這是日本工程師 Hironobu Suzuki 在 InterDB 網站上公開的線上教材，說明開源資料庫 PostgreSQL 的內部構造。網站列出的更新紀錄包含 TOAST（超大欄位的儲存技術）、清理膨脹空間、非同步輸入輸出，以及邏輯複寫等章節。最近一次更新是 2026 年 10 月 6 日，合併了第 10 章的兩個小節。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "p-e-w/heretic",
+      "name": "p-e-w/heretic",
+      "url": "https://github.com/p-e-w/heretic",
+      "language": "Python",
+      "starsToday": 701,
+      "stars": 38782,
+      "summary": "Heretic 是 Python 工具，用來修改大型語言模型，不需要重新訓練。專案說明表示，它預設會抑制模型拒絕回答的行為（移除審查），也能減少囉嗦的套話、減少一味附和使用者的傾向，或調整情緒表現。這些做法好比不重寫整本書，只調整幾個設定。專案說明指出，社群已用它發布數千個模型，並引用外部的基準測試（MMLU、GSM8K）比較結果。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50339288,
+      "title": "Jailbreaking my car's navigation system just so I can change the time",
+      "titleZh": "為了改時間，我破解了車上的導航系統",
+      "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50339288",
+      "score": 587,
+      "comments": 235,
+      "summary": "作者開的是 2014 年的 Renault Latitude。愛沙尼亞改回冬令時間後，儀表板的時間慢了一小時，但設定選單裡找不到「設定時間」。作者取得韌體逆向分析後發現，這台 TomTom Carminat LIVE 的設定選單定義存放在導航地圖 SD 卡上；沒有卡，系統就不知道如何開啟設定程式，而且卡片還有依卡片識別碼（CID）簽章的版權保護檢查。文章記錄了作者如何繞過這個限制。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "spotify/portal-ai-plugins",
+      "name": "spotify/portal-ai-plugins",
+      "url": "https://github.com/spotify/portal-ai-plugins",
+      "language": "TypeScript",
+      "starsToday": 91,
+      "stars": 3034,
+      "summary": "portal-ai-plugins 是 Spotify 提供的外掛集合，把 Spotify Portal 接進 Claude Code、Codex、Cursor 與 pi 等程式設計代理程式。外掛透過 Portal 命令列工具，提供設定登入、用自然語言搜尋軟體目錄與技術文件、產生服務簡報、執行唯讀診斷，以及呼叫 Portal 動作等流程。呼叫動作時附有說明、試跑與確認的防護。專案另外附有 shunt 外掛，目前只支援 Claude Code。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50354358,
+      "title": "Stringman, an $800 open-source room scale gripper robot",
+      "titleZh": "Stringman：800 美元的開源房間尺度夾爪機器人",
+      "url": "https://neufangled.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50354358",
+      "score": 341,
+      "comments": 132,
+      "summary": "Stringman 是 Neufangled Robotics 販售的開源纜繩機器人，售價 795 美元。它用四顆馬達，把夾爪吊在天花板四個角落拉出的線上，從上方在整個房間移動。廠商表示，在 7×7×3 公尺的房間、線張力上限 28 牛頓的條件下，平均承重 1.9 公斤；同條件下，廠商拿一組七顆同款馬達的機械手臂比較，數字是 0.32 公斤。廠商也表示它可以斷網使用。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-04/hn/stringman.svg",
+        "alt": "俯視圖：房間四個角落各有一顆馬達，四條線吊住中間的夾爪。",
+        "caption": "廠商說明：四顆馬達從天花板角落拉線，吊起夾爪。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
