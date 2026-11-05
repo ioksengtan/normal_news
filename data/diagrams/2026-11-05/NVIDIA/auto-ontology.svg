@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280">
+  <rect width="360" height="280" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 13px; }
+    .sub { fill: #5e584e; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="20" y="20" width="320" height="55" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="45" text-anchor="middle">企業資料的中繼資料</text>
+  <text x="180" y="63" text-anchor="middle" class="sub">資料放哪裡、各系統怎麼定義</text>
+  <line x1="180" y1="75" x2="180" y2="103" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="20" y="105" width="320" height="55" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="130" text-anchor="middle">Auto Ontology 整理成一層</text>
+  <text x="180" y="148" text-anchor="middle" class="sub">對照定義、建立知識圖譜</text>
+  <line x1="180" y1="160" x2="180" y2="188" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="20" y="190" width="320" height="55" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="215" text-anchor="middle">透過 MCP、CLI、API 提供</text>
+  <text x="180" y="233" text-anchor="middle" class="sub">給任何 AI 代理程式使用</text>
+</svg>

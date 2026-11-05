@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-05",
+  "issueNumber": 34,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-05T07:00:00+08:00",
+  "fetchedAt": "2026-11-05T00:31:42.445Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "NVIDIA/auto-ontology",
+      "name": "NVIDIA/auto-ontology",
+      "url": "https://github.com/NVIDIA/auto-ontology",
+      "language": "Python",
+      "starsToday": 2050,
+      "stars": 4955,
+      "summary": "Auto Ontology 是 NVIDIA 的開源函式庫，用 Python 寫成，授權為 Apache 2.0。它從企業的中繼資料（描述資料放在哪裡、代表什麼的資料）建立一層「語意層」，好比替一座大圖書館編目錄，讓人工智慧代理程式知道每筆資料的意思。專案說明表示，它能對照不同系統裡不一致的定義、檢查查詢是否符合認證過的定義，並透過 MCP、命令列與應用程式介面（API）提供給代理程式使用。目前不接受外部貢獻。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-05/NVIDIA/auto-ontology.svg",
+        "alt": "三個方框由上而下：企業資料的中繼資料、Auto Ontology 整理成一層、透過 MCP、CLI、API 提供給 AI 代理程式。",
+        "caption": "Auto Ontology 把中繼資料整理成一層，再提供給 AI 代理程式使用。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50371246,
+      "title": "Residential proxies detected on White House network",
+      "titleZh": "白宮網路上偵測到住宅代理",
+      "url": "https://layer3intel.com/blog/residential-proxies-white-house-network",
+      "hnUrl": "https://news.ycombinator.com/item?id=50371246",
+      "score": 548,
+      "comments": 160,
+      "summary": "資安公司 Layer3 Intel 在部落格表示，2026 年 10 月 5 日到 11 月 3 日，他們的偵測流程經由白宮網路（自治系統 AS2650，登記在總統行政辦公室名下）出口了 236 次，來自 6 個位址，30 天中有 26 天出現。住宅代理就像租用別人家的信箱寄信，讓流量看起來來自那戶人家。該公司表示，另有 Spur 與 Synthient 的公開資料也把這些位址列為住宅代理出口。該公司指出，資料只顯示出口，看不出是哪台裝置或哪個人。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-05/50371246.svg",
+        "alt": "三個方框由上而下：付費使用住宅代理服務、代理軟體裝在某台裝置上、白宮網路出現 6 個出口位址。",
+        "caption": "Layer3 Intel 表示，30 天內觀察到經白宮網路出口 236 次。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "floci-io/floci",
+      "name": "floci-io/floci",
+      "url": "https://github.com/floci-io/floci",
+      "language": "Java",
+      "starsToday": 1090,
+      "stars": 29602,
+      "summary": "Floci 是用 Java 寫的免費開源工具，在自己的電腦上模擬 AWS（亞馬遜的雲端服務）。這好比在家裡擺一個小型的練習用模型，不必連到真正的雲端。專案說明表示，使用者不需要帳號或授權權杖，用 docker compose up 啟動後，把 AWS SDK、命令列、Terraform 或測試程式指向 localhost:4566 即可。它也自稱可直接取代 LocalStack，換掉映像檔就能繼續使用。授權為 MIT。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-05/floci-io/floci.svg",
+        "alt": "三個方框由上而下：你的程式或測試、送到 localhost:4566、Floci 在本機模擬 AWS 服務。",
+        "caption": "把程式指向 localhost:4566，由 Floci 在本機模擬 AWS 服務。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50372945,
+      "title": "Introducing Images 2.6",
+      "titleZh": "OpenAI 發表 Images 2.6",
+      "url": "https://openai.com/index/introducing-images-2-6/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50372945",
+      "score": 32,
+      "comments": 10,
+      "summary": "這則連結是 OpenAI 的產品公告，但該網站回應 403，無法讀取原文，以下依 Hacker News 討論整理。討論中有留言者提到新版支援輸出 SVG（向量圖，用文字描述圖形的檔案），並提到用格狀圖逐格產生動畫畫面的做法。有留言者表示，範例中各畫格之間有雜訊，也有人指出圖片上仍看得到浮水印痕跡。這些都是留言者的看法，本站未查證。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "github/spec-kit",
+      "name": "github/spec-kit",
+      "url": "https://github.com/github/spec-kit",
+      "language": "Python",
+      "starsToday": 808,
+      "stars": 147296,
+      "summary": "Spec Kit 是 GitHub 的開源工具包，給 AI 寫程式的代理程式提供有結構的流程、可重複使用的範本與紀錄。專案列出三種流程：規格驅動開發（先寫規格再實作，像先畫好藍圖再蓋房子）、修復錯誤，以及評估一個點子值不值得投入。規格驅動開發內建在核心，後兩者是需要時再安裝的擴充。使用者也可以改寫現成流程或自建流程，並連接不同的程式代理程式。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50364336,
+      "title": "AI is forcing us to pay off 40 years of technical debt",
+      "titleZh": "AI 逼我們還清 40 年的技術債",
+      "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+      "hnUrl": "https://news.ycombinator.com/item?id=50364336",
+      "score": 1030,
+      "comments": 620,
+      "summary": "IEEE Spectrum 報導 PHP2Shell 漏洞。報導指出，這個漏洞讓使用 WordPress、Drupal 等的網站，包括 NASA、維基百科與白宮的網站，面臨可讀取敏感資料並執行惡意程式碼的風險。報導表示，研究人員通報 PHP 基金會後已釋出修補程式，就目前所知，漏洞被利用前已修補。資安公司 Tolmo 的 Matt Suiche 表示，過去 40 年人類寫的舊軟體正被揭露，技術債（舊程式累積的問題，像欠著沒還的帳）該還了。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "The-PR-Agent/pr-agent",
+      "name": "The-PR-Agent/pr-agent",
+      "url": "https://github.com/The-PR-Agent/pr-agent",
+      "language": "Python",
+      "starsToday": 280,
+      "stars": 14749,
+      "summary": "PR-Agent 是用 Python 寫的開源程式碼審查代理程式，會替程式碼合併請求（pull request，即請別人檢查並合併修改的申請）做 AI 審查。專案說明表示，它是 Qodo 社群維護的舊專案，並不是 Qodo 的免費版本。每個指令（/review、/improve、/ask）只呼叫一次大型語言模型，支援 GitHub、GitLab、Bitbucket、Azure DevOps 與 Gitea，也可接上多種模型供應商。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50369925,
+      "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+      "titleZh": "Ripple-65B 預覽版：美國開放權重模型在程式代理任務的最高分",
+      "url": "https://www.ricursive.com/ripple",
+      "hnUrl": "https://news.ycombinator.com/item?id=50369925",
+      "score": 204,
+      "comments": 72,
+      "summary": "Ricursive Intelligence 發表 Ripple-65B Preview，是在 12 兆個詞元上預訓練、支援最長 100 萬詞元脈絡的開放權重模型。該公司表示，它在 TerminalBench 2.1 得 80.52 分，高於 Reflection Beam 501B 的 80.1 與 Meta Muse Spark Open 816B 的 76.4，並稱這是美國開放權重模型的最高成績。該公司另表示，研發總成本為 3,200 萬美元，約為前一個最高成績模型的十分之一，此為該公司自行估計。模型可在 Hugging Face 等平台取得。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "harry0703/MoneyPrinterTurbo",
+      "name": "harry0703/MoneyPrinterTurbo",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "language": "Python",
+      "starsToday": 617,
+      "stars": 138946,
+      "summary": "MoneyPrinterTurbo 是用 Python 寫的開源工具。使用者只要輸入影片主題或關鍵字，它就依專案說明自動產生影片腳本、配對素材、生成字幕與背景音樂，並合成高畫質短影片，好比一條自動化的剪輯流水線。專案提供網頁介面與應用程式介面（API），支援 Windows、macOS 與 Linux，需要 Python 3.11 以上。說明文件以簡體中文為主，另有英文與日文版。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50372929,
+      "title": "Local privilege escalation vulnerabilities in Linux",
+      "titleZh": "Linux 的本地提權漏洞",
+      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50372929",
+      "score": 30,
+      "comments": 18,
+      "summary": "這則連結是 OpenAI 的文章，但該網站回應 403，無法讀取原文，以下依 Hacker News 討論整理。討論中引用的文章段落表示，OpenAI 的自動化流程在一次執行中，驗證並產生了 948 個 Linux 本地提權漏洞（讓低權限帳號取得最高權限的漏洞）的修補，API 費用為 120 萬美元。發文者自稱是該團隊成員。部分留言者質疑這類文章偏向行銷，這是留言者的看法，本站未查證。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
