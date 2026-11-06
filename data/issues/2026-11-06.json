@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-06",
+  "issueNumber": 35,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-06T07:00:00+08:00",
+  "fetchedAt": "2026-11-06T00:31:50.955Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "garrytan/gstack",
+      "name": "garrytan/gstack",
+      "url": "https://github.com/garrytan/gstack",
+      "language": "TypeScript",
+      "starsToday": 612,
+      "stars": 139930,
+      "summary": "gstack 是 Y Combinator 總裁暨執行長 Garry Tan 公開的開源工具組，採 MIT 授權，內容是一批 Markdown 寫成的斜線指令，給 Claude Code 等寫程式的 AI 代理程式使用。它把代理程式分成不同角色，好比一間公司的各個部門：有重新思考產品的 CEO、鎖定架構的工程經理、檢查設計的設計師、找錯誤的審查者，以及開真實瀏覽器測試的 QA。安裝需要 Claude Code、Git 與 Bun。作者表示這是他每天使用的流程。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-06/garrytan/gstack.svg",
+        "alt": "三個方框由上而下：輸入指令、gstack 技能扮演各角色、/ship 跑測試並開 PR。",
+        "caption": "gstack 讓 Claude Code 依指令扮演不同角色，最後用 /ship 開出 PR。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50385272,
+      "title": "Claude Code sends your email address to websites",
+      "titleZh": "Claude Code 會把你的電子郵件位址送給網站",
+      "url": "https://github.com/anthropics/claude-code/issues/107757",
+      "hnUrl": "https://news.ycombinator.com/item?id=50385272",
+      "score": 363,
+      "comments": 119,
+      "summary": "這則連結是 Claude Code 的 GitHub 議題頁，但本站無法讀取原文，以下依 Hacker News 討論整理。有留言者表示，Claude Code 上網搜尋或請求資料時，會在 User-Agent（請求中自報身分的標頭）裡帶上包含電子郵件位址的字串，並說自己之後收到大量詐騙信。另有留言者說他檢查後，Codex CLI 的標頭沒有電子郵件。這些都是留言者的說法，本站未查證。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "Usagi-org/ai-goofish-monitor",
+      "name": "Usagi-org/ai-goofish-monitor",
+      "url": "https://github.com/Usagi-org/ai-goofish-monitor",
+      "language": "Python",
+      "starsToday": 240,
+      "stars": 17515,
+      "summary": "這個專案用 Playwright（自動操作瀏覽器的工具）和 AI，監控中國的二手交易平台閒魚。使用者可以用自然語言建立任務，設定關鍵字、價格、包郵與地區等條件，再由多模態模型（能同時看文字與圖片的 AI）分析商品。它有網頁管理介面，可定時執行，也能把結果推送到 ntfy.sh、企業微信、Telegram 等管道。專案說明建議用 Docker（把程式連同環境打包執行的方式）部署，預設網址是 127.0.0.1:8000。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50383740,
+      "title": "Search for everyone",
+      "titleZh": "Kagi 搜尋開放所有人試用",
+      "url": "https://kagi.com/changelog#11820",
+      "hnUrl": "https://news.ycombinator.com/item?id=50383740",
+      "score": 459,
+      "comments": 222,
+      "summary": "Kagi 在 2026 年 11 月 5 日的更新日誌表示，現在任何人到 kagi.com 都能搜尋，不需要帳號，前 50 次搜尋免費，註冊後再多 100 次。Kagi 說明自己不放廣告，靠口耳相傳，並請使用者向親友推薦。同一則日誌也提到 Android 應用程式改版，新增導覽、重做的語音搜尋與主畫面小工具，並發表一封談學校教育與 Google 的公開信。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-06/50383740.svg",
+        "alt": "三個方框由上而下：以前要先建立帳號、11 月 5 日起直接搜尋、前 50 次免費註冊後再加 100 次。",
+        "caption": "Kagi 表示，不需帳號的前 50 次搜尋免費。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "lz4/lz4",
+      "name": "lz4/lz4",
+      "url": "https://github.com/lz4/lz4",
+      "language": "C",
+      "starsToday": 23,
+      "stars": 12379,
+      "summary": "LZ4 是一種無損壓縮演算法，也就是壓縮後能完整還原的方法，好比把衣服真空打包再原樣取出。專案說明表示，每個核心的壓縮速度超過每秒 500 MB，解壓速度可達每秒數 GB。說明文件列出的測試條件是 lzbench 2.4.1、GCC 13.3.0、Linux 64 位元、Core i7-9700K，以 Silesia 資料集單執行緒測得：LZ4 預設模式壓縮 770 MB/s、解壓 4950 MB/s，壓縮比 2.112。另有壓縮比較高的 LZ4_HC 版本。函式庫採 BSD 2-Clause 授權，命令列工具採 GPL-2.0 以上授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50384233,
+      "title": "MS Paint Remote Code Execution Vulnerability",
+      "titleZh": "微軟小畫家的遠端程式碼執行弱點",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
+      "hnUrl": "https://news.ycombinator.com/item?id=50384233",
+      "score": 267,
+      "comments": 83,
+      "summary": "這則連結是 CVE 編號 CVE-2026-83844 的紀錄頁，該頁需要 JavaScript 才能顯示，本站讀不到內容，以下依 Hacker News 討論整理。標題指出弱點類型是遠端程式碼執行，也就是攻擊者可能讓別人的電腦執行程式。有留言者貼出微軟安全回應中心的資料，表示已有官方修補，修正版本為 11.2609.401.0，利用程式成熟度為「未證實」。這些是留言者轉述，本站未查證。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "google/skills",
+      "name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "language": "Python",
+      "starsToday": 211,
+      "stars": 22365,
+      "summary": "google/skills 是 Google 提供的 Agent Skills 儲存庫。Agent Skills 是一份份寫給 AI 代理程式看的說明，好比給新同事的作業手冊，告訴它某項產品該怎麼用。內容涵蓋 Google 的產品與技術，包括 Google Cloud，例如驗證與授權、入門設定，以及架構設計與部署 AI 代理程式的流程。使用者執行 npx skills add google/skills，選擇要裝的技能、目標代理程式和安裝範圍；更新則執行 npx skills update。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50378228,
+      "title": "sshole",
+      "titleZh": "sshole：OpenSSH 的長密碼問題",
+      "url": "https://sshhole.com",
+      "hnUrl": "https://news.ycombinator.com/item?id=50378228",
+      "score": 2262,
+      "comments": 562,
+      "summary": "sshhole.com 的作者表示，在使用 musl（Alpine 等系統使用的 C 函式庫）的 Linux 上，OpenSSH 自 2016 年起有個問題：密碼欄位為 * 的帳號，也就是設計成不能用密碼登入的帳號，如 root 或只用金鑰的使用者，會接受任何長度超過 256 個字元的密碼。頁面按年份說明成因，包括 musl 在 2012 年讓 crypt() 失敗時回傳 * 這個字元。作者並說明自己是如何碰上這個問題的。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "vercel-labs/agent-browser",
+      "name": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "language": "Rust",
+      "starsToday": 150,
+      "stars": 45876,
+      "summary": "agent-browser 是 Vercel Labs 的開源命令列工具，用 Rust 寫成，授權為 Apache-2.0，讓 AI 代理程式一次下一個 shell 命令來操作瀏覽器。snapshot 命令會把頁面變成精簡的文字，每個元素附上 @e1 這類參照，好比給每個按鈕貼上編號。代理程式對編號下指令，再讀一次頁面確認結果，並重複這個流程。可用 npm 或 Homebrew 安裝，並下載 Chrome for Testing。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-06/vercel-labs/agent-browser.svg",
+        "alt": "三個方框由上而下：AI 代理程式下命令、agent-browser 回傳帶參照的文字、對參照操作後再讀一次。",
+        "caption": "代理程式對 @e1 這類參照操作，再讀頁面確認結果。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50379704,
+      "title": "Alpine Linux Security Advisory: OpenSSH-server password authentication bypass",
+      "titleZh": "Alpine Linux 資安公告：openssh-server 可繞過密碼驗證",
+      "url": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50379704",
+      "score": 568,
+      "comments": 120,
+      "summary": "Alpine Linux 在 2026 年 11 月 5 日公告：攻擊者只要連得到 SSH 連接埠，就可能不知道密碼而登入。條件包括：機器上有密碼欄位為 * 的帳號，且至少有一個帳號使用 $5$ 或 $6$ 雜湊，再送出 257 到 1024 位元組的長密碼。公告建議更新 openssh 並重新啟動 sshd，無法更新時先設定 PasswordAuthentication no。公告指出，寫稿時尚未取得 CVE 編號，細節見 OpenSSH 10.6p2 發行說明。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
