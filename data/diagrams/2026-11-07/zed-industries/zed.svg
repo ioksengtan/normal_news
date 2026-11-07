@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 265">
+  <rect width="360" height="265" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 13px; }
+    .sub { fill: #5e584e; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="20" y="20" width="320" height="55" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="45" text-anchor="middle">下載或用套件管理員安裝</text>
+  <text x="180" y="63" text-anchor="middle" class="sub">macOS、Linux、Windows</text>
+  <line x1="180" y1="75" x2="180" y2="103" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="20" y="105" width="320" height="55" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="130" text-anchor="middle">Zed 程式碼編輯器</text>
+  <text x="180" y="148" text-anchor="middle" class="sub">用 Rust 寫成</text>
+  <line x1="180" y1="160" x2="180" y2="188" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="20" y="190" width="320" height="55" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="215" text-anchor="middle">多人一起編輯</text>
+  <text x="180" y="233" text-anchor="middle" class="sub">multiplayer 協作</text>
+</svg>
