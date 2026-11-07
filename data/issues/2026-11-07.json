@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-07",
+  "issueNumber": 36,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-07T07:00:00+08:00",
+  "fetchedAt": "2026-11-07T00:32:18.226Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "zed-industries/zed",
+      "name": "zed-industries/zed",
+      "url": "https://github.com/zed-industries/zed",
+      "language": "Rust",
+      "starsToday": 306,
+      "stars": 93619,
+      "summary": "Zed 是一款程式碼編輯器，也就是工程師用來寫程式的軟體，好比作家用的文書軟體。專案說明稱它效能高，並支援多人（multiplayer）一起編輯，作者是 Atom 與 Tree-sitter 的原班人馬。目前可在 macOS、Linux 與 Windows 下載或用套件管理員安裝，網頁版尚未提供。今日在 GitHub 新增 306 顆星，總星數為 93,619。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-07/zed-industries/zed.svg",
+        "alt": "三個方框由上而下：安裝、Zed 編輯器、多人一起編輯。",
+        "caption": "Zed 可在三種系統安裝，支援多人一起編輯。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50399657,
+      "title": "CATL Sodium Battery Hits LFP Cost Parity in 2026: 15,000 Cycles, 30-Year Life",
+      "titleZh": "寧德時代鈉電池 2026 年成本追平磷酸鐵鋰：15,000 次循環、30 年壽命",
+      "url": "https://ievchina.com/energy-storage/catl-sodium-battery-cost-parity-lfp-2026-15000-cycles/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50399657",
+      "score": 87,
+      "comments": 35,
+      "summary": "這篇文章的標題指出，寧德時代（CATL）的鈉離子電池在 2026 年成本與磷酸鐵鋰（LFP）電池持平，並標示 15,000 次充放電循環與 30 年壽命。我們取得原文時網站顯示資料庫連線錯誤，無法讀取內文，因此以上只是標題上的說法，未經查證，細節與測試條件請看原文。Hacker News 上這則有 87 分與 35 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "rails/rails",
+      "name": "rails/rails",
+      "url": "https://github.com/rails/rails",
+      "language": "Ruby",
+      "starsToday": 142,
+      "stars": 59024,
+      "summary": "Rails 是用 Ruby 語言寫成的網頁開發框架，框架就像蓋房子時先備好的骨架與工具。它專門用來建立有資料庫的網站，採用「模型、視圖、控制器」（MVC）三層分工：模型管資料與商業規則，視圖負責畫面，控制器串起兩者。今日新增 142 顆星，總星數為 59,024。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50397429,
+      "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+      "titleZh": "會向 Opus 求助的 Jev，以四分之一以下成本達到 Opus 的準確度",
+      "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+      "hnUrl": "https://news.ycombinator.com/item?id=50397429",
+      "score": 295,
+      "comments": 65,
+      "summary": "資料整合公司 Hightouch 測試快速、便宜的決策模型 Jev 與 Luna，能否評分「身分比對」，也就是判斷多筆紀錄是否屬於同一個真人。他們表示，兩者單獨使用的準確度為 88.8% 至 97.3%，每 1,000 筆約 0.05 至 0.10 美元，但比 Opus 低約 6 個百分點。Jev 搭配 Opus 的混合做法，據該公司說法可用低於四分之一的成本接近前沿模型的準確度。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-07/50397429.svg",
+        "alt": "三個方框：Jev 先判斷、需要時問 Opus、接近 Opus 準確度且成本較低。",
+        "caption": "Hightouch 表示 Jev 搭配 Opus 可在較低成本下接近 Opus 的準確度。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "mpv-player/mpv",
+      "name": "mpv-player/mpv",
+      "url": "https://github.com/mpv-player/mpv",
+      "language": "C",
+      "starsToday": 37,
+      "stars": 37873,
+      "summary": "mpv 是免費的命令列媒體播放器，也就是用打字下指令、而不是點按鈕來播放影音的程式。它支援多種影音檔格式、音訊與視訊編碼，以及字幕類型。系統需求為較新的 Linux、Windows 10 1607 以上，或 macOS 10.15 以上。專案說明提到，CPU 跟不上時可用硬體解碼協助。今日新增 37 顆星。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50399569,
+      "title": "ChatGPT silently passes data between connectors and the bounty wants an ID card",
+      "titleZh": "ChatGPT 在連接器之間默默傳遞資料",
+      "url": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053",
+      "hnUrl": "https://news.ycombinator.com/item?id=50399569",
+      "score": 58,
+      "comments": 18,
+      "summary": "一名開發者在 OpenAI 開發者社群回報：同一個對話啟用兩個指向同一台 MCP 伺服器的連接器時，ChatGPT 的後續工具呼叫，改走另一個連接器，且沒有通知使用者。呼叫帶著第一個連接器小工具產生的一次性確認代碼。因代碼綁定第一個連接器的 OAuth 用戶端，伺服器拒絕了每次嘗試。作者認為連接器的界線應以 OAuth 用戶端而非網址判斷。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-07/50399569.svg",
+        "alt": "三個方框：在連接器 A 確認、後續呼叫改走 B、伺服器拒絕。",
+        "caption": "回報者描述的流程：後續呼叫改走另一個連接器，代碼被伺服器拒絕。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "rust-lang/rust",
+      "name": "rust-lang/rust",
+      "url": "https://github.com/rust-lang/rust",
+      "language": "Rust",
+      "starsToday": 192,
+      "stars": 121442,
+      "summary": "這是 Rust 程式語言的主要原始碼儲存庫，內容包含編譯器、標準函式庫與文件。編譯器就像翻譯員，把人寫的程式翻成電腦能執行的指令。專案的標語是讓每個人都能打造可靠又有效率的軟體，說明文件列出的特點包括效能與記憶體使用效率。今日新增 192 顆星，總星數為 121,442。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50391456,
+      "title": "Tesla to wind down Cybertruck production",
+      "titleZh": "Tesla 將收掉 Cybertruck 生產",
+      "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+      "hnUrl": "https://news.ycombinator.com/item?id=50391456",
+      "score": 810,
+      "comments": 1649,
+      "summary": "路透社報導，Tesla 執行長馬斯克在 X 上表示，德州超級工廠的 Cybertruck 生產將在 2027 年年中前後收尾，好讓產能給新推出的 Cybercab。報導指出，Kelley Blue Book 的資料顯示，去年 Cybertruck 在美國賣出 20,237 輛，比 2024 年的 38,965 輛少 48%。Tesla 尚未回應是否轉移到其他工廠，也未回覆置評請求。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "react/react",
+      "name": "react/react",
+      "url": "https://github.com/react/react",
+      "language": "JavaScript",
+      "starsToday": 248,
+      "stars": 252252,
+      "summary": "React 是用來建立使用者介面的 JavaScript 程式庫，程式庫就像一盒大家都能拿來組東西的積木。專案說明列出的特色有：宣告式，也就是只描述每種狀態下畫面該長什麼樣，資料改變時由 React 更新對應的部分；以及元件式。採 MIT 授權。今日新增 248 顆星，總星數為 252,252。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50397219,
+      "title": "Firecracker VM Escape: PwnEscape Part 2",
+      "titleZh": "Firecracker 虛擬機逃逸：PwnEscape 第二部",
+      "url": "https://pwn.ai/blog/firecracker-escape",
+      "hnUrl": "https://news.ycombinator.com/item?id=50397219",
+      "score": 153,
+      "comments": 70,
+      "summary": "安全研究團隊 PWN Research 發表文章，說明如何從 Firecracker 微型虛擬機內部，取得宿主機上的 root 權限。Firecracker 本來要把不受信任的程式關在虛擬機裡。作者表示，他們改寫虛擬 CPU 執行緒從 KVM 返回時的暫存器紀錄，讓程式跳去執行自選的呼叫。文章引用的編號為 CVE-2026-99999，並接續第一部提到的宿主機記憶體存取手法。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
