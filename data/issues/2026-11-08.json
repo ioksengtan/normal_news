@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-08",
+  "issueNumber": 37,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-08T07:00:00+08:00",
+  "fetchedAt": "2026-11-08T00:31:31.276Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "cloudflare/security-audit-skill",
+      "name": "cloudflare/security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "language": "JavaScript",
+      "starsToday": 2085,
+      "stars": 65715,
+      "summary": "這是給程式開發用的人工智慧代理程式（coding agent）使用的「技能」，也就是一份教代理程式如何做事的說明加工具，好比給新進員工的作業手冊。它讓代理程式分六個階段做資安稽核：偵察、依覆蓋範圍找問題、驗證候選問題、輸出結構化結果、獨立核對紀錄、產生報告。每個候選問題都交給新的驗證者嘗試推翻。專案說明表示，Cloudflare 的弱點發現流程是由這個技能發展而來。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-08/cloudflare/security-audit-skill.svg",
+        "alt": "三個方框由上而下：偵察、獵找與驗證、輸出與報告。",
+        "caption": "稽核分階段進行，每個候選問題都有驗證者嘗試推翻。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50406563,
+      "title": "The end of Microsoft Research's AI Frontiers group",
+      "titleZh": "微軟研究院 AI Frontiers 小組走到終點",
+      "url": "https://hunch.net/?p=13764006",
+      "hnUrl": "https://news.ycombinator.com/item?id=50406563",
+      "score": 341,
+      "comments": 197,
+      "summary": "作者 John Langford 在部落格說明，微軟研究院（MSR）的 AI Frontiers 小組約 50 人，2023 年 ChatGPT 發表後成立，目標是讓研究更有組織地進行。小組的工作包括 Autogen 協調框架與 Fara 電腦操作代理程式，紐約團隊則研究 Next Latent 目標、Dion3 與 Full Bandwidth Transformer 等基礎能力。文章標題指出這個小組已結束。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "mattpocock/skills",
+      "name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "language": "Shell",
+      "starsToday": 1100,
+      "stars": 317698,
+      "summary": "這是作者 Matt Pocock 每天使用的一組代理程式技能（agent skills），也就是教人工智慧代理程式處理工程工作的小型說明檔。專案說明稱這些技能小而容易修改，可以自由組合，並可搭配任何模型。可用 Claude Code 的外掛指令安裝，也可用 skills.sh 把檔案複製進自己的專案後手動更新。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50408931,
+      "title": "GitHub New pull request overview page in public preview",
+      "titleZh": "GitHub 推出新的拉取請求總覽頁面（公開預覽）",
+      "url": "https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50408931",
+      "score": 28,
+      "comments": 18,
+      "summary": "GitHub 在更新日誌中表示，長篇拉取請求（pull request，也就是請別人審查並合併程式修改的申請）常要捲過大量留言才找得到合併區。新的 Overview 頁面是選用的公開預覽，把合併狀態與下一步動作放到頁面頂端，並把合併區縮小到不到一半的空間。使用者也可以只看未解決的對話，或先讀最新留言。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-08/50408931.svg",
+        "alt": "三個方框由上而下：長篇拉取請求、Overview 頁面、下一步。",
+        "caption": "Overview 頁面把合併準備度與下一步放到頂端。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "anthropics/skills",
+      "name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "language": "Python",
+      "starsToday": 390,
+      "stars": 188783,
+      "summary": "這是 Anthropic 公開的 Agent Skills 儲存庫。技能是一個個資料夾，裡面有指示、腳本與資源，讓 Claude 在特定工作上載入使用，好比把做事步驟寫成一本可以反覆翻閱的手冊。範例涵蓋創作、測試網頁應用程式、產生 MCP 伺服器，以及企業溝通與品牌等工作。每個技能自成一個資料夾，內有 SKILL.md 檔。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50406670,
+      "title": "What I run on my $10 USD OpenStick homelab",
+      "titleZh": "我在 10 美元 OpenStick 家用伺服器上跑什麼",
+      "url": "https://blog.bosscher.ch/posts/openstick/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50406670",
+      "score": 301,
+      "comments": 75,
+      "summary": "作者花 10 美元買了一支 OpenStick，規格是 512 MB 記憶體、4 顆 1 GHz 的 ARM 核心、4 GB 儲存空間，並跑 Debian 系統。他說這台機器可當耗電低、沒有噪音的家用伺服器，並介紹自己在上面跑的軟體，例如跳過 YouTube 贊助片段的 CastSponsorSkip，以及在網域名稱層級封鎖惡意網域的 AdGuard Home。作者表示封鎖清單擋下了約 60% 的查詢。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "meta/astryx",
+      "name": "meta/astryx",
+      "url": "https://github.com/meta/astryx",
+      "language": "TypeScript",
+      "starsToday": 96,
+      "stars": 14512,
+      "summary": "Astryx 是開源的設計系統，也就是一套統一網頁與應用程式外觀的現成元件，好比一盒規格一致的積木。專案說明表示，它在 Meta 內部發展了八年，用於 13,000 個以上的應用程式，提供 150 個以上的無障礙元件，以 React 19 以上與 StyleX 建構，目前為測試版。設計上可完全自訂，也方便人與代理程式一起使用。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50408713,
+      "title": "Making any integer with four 2s (2025)",
+      "titleZh": "用四個 2 做出任何整數",
+      "url": "https://eli.thegreenplace.net/2025/making-any-integer-with-four-2s/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50408713",
+      "score": 36,
+      "comments": 8,
+      "summary": "這篇 2025 年的文章介紹一個數學謎題：只能用四個數字 2 和任意數學運算，做出指定的自然數。例如 1 等於 (2+2)/(2+2)，3 等於 2×2−2/2。國中學到次方與階乘後可做出更多數字，把兩個 2 並排成 22 也算一種技巧。作者說 7 很難做，但允許使用 Gamma 函數就變得容易。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "prometheus/prometheus",
+      "name": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus",
+      "language": "Go",
+      "starsToday": 322,
+      "stars": 67446,
+      "summary": "Prometheus 是雲端原生運算基金會（CNCF）旗下的監控系統與時間序列資料庫，用來定時從設定的目標收集指標，好比定期去各處抄水表。它會評估規則、顯示結果，條件成立時發出警報。專案說明列出的特色包括多維度資料模型、查詢語言 PromQL、單一伺服器節點可獨立運作，以及以 HTTP 拉取資料的方式。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-08/prometheus/prometheus.svg",
+        "alt": "三個方框由上而下：監控目標、Prometheus 伺服器、查詢與警報。",
+        "caption": "Prometheus 定時收集指標，供查詢、圖表與警報使用。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50407882,
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "titleZh": "Claude Code「不再詢問」設定在 1,122 個公開 GitHub 檔案中暴露密碼",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "hnUrl": "https://news.ycombinator.com/item?id=50407882",
+      "score": 125,
+      "comments": 94,
+      "summary": "這篇文章標題指出，Claude Code 的「不再詢問」（Don't Ask Again）選項，讓 1,122 個公開的 GitHub 檔案暴露了密碼。我們取得原文時，網站要求啟用 JavaScript，無法讀取內文，因此以上只是標題上的說法，未經查證，細節與調查方法請看原文。Hacker News 上這則有 125 分與 94 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
