@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-09",
+  "issueNumber": 38,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-09T07:00:00+08:00",
+  "fetchedAt": "2026-11-09T00:32:00.521Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "sherlock-project/sherlock",
+      "name": "sherlock-project/sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "language": "Python",
+      "starsToday": 2373,
+      "stars": 103470,
+      "summary": "Sherlock 是一個依使用者名稱，在許多社群網站上尋找帳號的開源工具，主要用 Python 寫成。使用者輸入一個帳號名稱，它就去各個網站查，看該名稱是否已有人註冊，好比拿同一個名字去各家店問有沒有登記過。專案頁面顯示，今天新增約 2,373 顆星，累計約 10 萬 3 千顆星。專案名稱保留原文，適合想整理公開帳號資訊的人使用。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-09/sherlock-project/sherlock.svg",
+        "alt": "三個方框由上而下：輸入使用者名稱、逐一查詢各社群網站、列出找到的帳號。",
+        "caption": "輸入一個使用者名稱，逐一到各社群網站查詢。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50418176,
+      "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
+      "titleZh": "KetchUp：用 Rust 與 WebGPU 打造的開源 SketchUp 替代品",
+      "url": "https://ketchup3d.github.io/app/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50418176",
+      "score": 113,
+      "comments": 17,
+      "summary": "KetchUp 是免費的開源三維建模程式，用來做木工與家具設計。使用者可以先畫線、矩形、圓形，再用推拉（Push/Pull）把平面拉成立體，並用精確的長度規劃架子、桌子或櫃子，好比先用紙模型確認尺寸再動手裁木頭。它支援 Windows、macOS、Linux，也能在桌面瀏覽器使用，並可匯入 SketchUp 的幾何資料、匯出 OBJ 格式。官網寫明不需要帳號。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "dsx-ai-factory/nvke",
+      "name": "dsx-ai-factory/nvke",
+      "url": "https://github.com/dsx-ai-factory/nvke",
+      "language": "Go",
+      "starsToday": 345,
+      "stars": 844,
+      "summary": "NVKE 是 NVIDIA Kubernetes Engine 的縮寫，用 Go 語言寫成，讓平台團隊在自己的 NVIDIA 圖形處理器（GPU）機器上，提供託管的 Kubernetes 服務。Kubernetes 是管理大量程式如何分配到多台電腦執行的系統，好比餐廳的調度主管。每個工作負載叢集有自己的控制平面、etcd 與節點群，客戶用 Kubernetes 應用程式介面與 kubectl 操作。專案說明表示目前是預覽版，不建議用於正式環境。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-09/dsx-ai-factory/nvke.svg",
+        "alt": "三個方框由上而下：NVKE 管理平面、工作負載叢集、客戶。",
+        "caption": "平台團隊操作管理平面，客戶使用各自的叢集。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50418818,
+      "title": "Herb Sutter: When a language's creator and its owners strongly disagree [pdf]",
+      "titleZh": "Herb Sutter：當語言的創造者與持有者強烈意見不合",
+      "url": "https://isocpp.org/files/papers/P4454R0.pdf",
+      "hnUrl": "https://news.ycombinator.com/item?id=50418818",
+      "score": 27,
+      "comments": 2,
+      "summary": "原文是 C++ 標準委員會文件 P4454R0（作者 Herb Sutter），因網站擋下自動抓取而無法讀取，本則改依 Hacker News 討論整理。標題指出，文件談的是一門語言的創造者與持有者之間的強烈分歧。討論串中有留言質疑「持有者」一詞，認為沒有人擁有一門語言，開發者會依實際需要做選擇。討論目前只有 2 則留言，文件細節請看原文。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "milind-soni/OpenMausBot",
+      "name": "milind-soni/OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "language": "TypeScript",
+      "starsToday": 1439,
+      "stars": 18238,
+      "summary": "OpenMausBot 是一個開源的聊天程式，用 TypeScript 寫成，專案說明稱它是受 Grok Bot 啟發、獨立開發的替代品，與 xAI 沒有關係。側邊欄的每個機器人實際上是在本機執行的 Claude 或 Codex 代理程式，各有自己的個性、模型、雲端電腦與連接的應用程式。使用者像和聯絡人對話一樣與它們交談，並可以核准重要動作。桌面版支援 macOS、Windows 與 Ubuntu。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50418182,
+      "title": "Chimera Vocal Synth",
+      "titleZh": "Chimera 聲音合成器",
+      "url": "https://chimera-vocal-synth.vercel.app/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50418182",
+      "score": 52,
+      "comments": 10,
+      "summary": "這是一個可在瀏覽器執行的人聲合成程式，網頁標題為 CHIMERA。依 Hacker News 討論整理：有留言者表示它可調整假聲帶與發聲器官的位置，並成功產生喉音歌唱（Khoomei）的泛音，另有人說它像 Pink Trombone 的現代版本。也有人回報在手機上只聽到雜音，載入超過 100% 仍未完成。原文頁面需要執行程式才會顯示內容，故未摘要網頁本身。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "anthropics/claude-quickstarts",
+      "name": "anthropics/claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "language": "Python",
+      "starsToday": 32,
+      "stars": 19410,
+      "summary": "這是 Anthropic 提供的範例專案集合，幫助開發者用 Claude 應用程式介面（API，程式之間交換資料的約定，好比餐廳的點餐單）做出可部署的應用。目前列出的範例包括客服代理程式、財務資料分析師、電腦操作示範、電腦操作最佳實務與瀏覽器操作示範。使用前需要 Claude API 金鑰。每個範例都是一個起點，讓開發者依自己的需求修改。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50417407,
+      "title": "Ask HN: What are you working on? (November 2026)",
+      "titleZh": "Ask HN：你最近在做什麼？（2026 年 11 月）",
+      "url": null,
+      "hnUrl": "https://news.ycombinator.com/item?id=50417407",
+      "score": 100,
+      "comments": 384,
+      "summary": "這是 Hacker News 每月固定的討論帖。發問者詢問大家最近在做什麼專案，或最近對什麼事情感到好奇。貼文本身只有這兩個問題，沒有附連結。目前已有 384 則留言，每位讀者可以回覆自己的近況，也可以閱讀別人分享的作品。這類貼文是了解社群成員各自在做什麼的方式，內容完全由留言者提供。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "google-deepmind/mujoco",
+      "name": "google-deepmind/mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "language": "C++",
+      "starsToday": 41,
+      "stars": 16407,
+      "summary": "MuJoCo 是「帶接觸的多關節動力學」（Multi-Joint dynamics with Contact）的縮寫，是一套通用的物理模擬引擎，由 Google DeepMind 維護。它用來模擬機器人、生物力學、動畫與機器學習中，多個關節的物體如何與環境互動，好比在電腦裡搭一個可以推拉的玩具實驗室。它提供 C 語言介面，也有 Python 綁定與 Unity 外掛，並可在瀏覽器試用。對象是研究人員與開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50416053,
+      "title": "Dux: Free, open-source Wayland desktop shell with file manager and theming",
+      "titleZh": "Dux：免費開源的 Wayland 桌面外殼，附檔案管理與主題",
+      "url": "https://duxlabs.dev/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50416053",
+      "score": 178,
+      "comments": 57,
+      "summary": "Dux 是免費的開源桌面套件，適用於 niri、Hyprland、Sway 等 Wayland 視窗環境（Wayland 是 Linux 顯示畫面的方式之一）。桌面外殼好比房子的內裝，決定面板與設定長什麼樣子。官網列出的元件有檔案管理員、系統與程序監控、檔案搜尋、登入畫面與日曆。外殼可為 GTK 與 Qt 應用程式、終端機等自動產生配色，並支援外掛。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-09/50416053.svg",
+        "alt": "三個方框由上而下：Dux Modular Shell、搭配的工具、Wayland 桌面。",
+        "caption": "桌面外殼加上檔案管理等工具，用在 Wayland 桌面。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
