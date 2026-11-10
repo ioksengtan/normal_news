@@ -1,0 +1,171 @@
+{
+  "date": "2026-11-10",
+  "issueNumber": 39,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-10T07:00:00+08:00",
+  "fetchedAt": "2026-11-10T00:32:09.901Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "garrytan/gbrain",
+      "name": "garrytan/gbrain",
+      "url": "https://github.com/garrytan/gbrain",
+      "language": "TypeScript",
+      "starsToday": 216,
+      "stars": 32135,
+      "summary": "GBrain 是給 AI 代理程式（能自己動手做事的 AI 助手）用的記憶工具。它把明確的事實連同出處存下來，可以更正或撤回，並讓多個代理程式共用同一份記憶。這就像一本大家都能翻、每條記錄都註明來源的筆記本。專案採 MIT 授權，可自己架設；官網另有付費的代管服務。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-10/garrytan/gbrain.svg",
+        "alt": "多個代理程式共用一份記憶，每條事實附有出處。",
+        "caption": "GBrain 讓多個代理程式共用一份附出處的記憶。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50429906,
+      "title": "Claude Fable 5.2 and Mythos 5.2",
+      "titleZh": "Claude Fable 5.2 與 Mythos 5.2 發表",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "hnUrl": "https://news.ycombinator.com/item?id=50429906",
+      "score": 879,
+      "comments": 526,
+      "summary": "Anthropic 發表 Claude Fable 5.2 與 Mythos 5.2 兩款模型。官方頁面無法取得，本則依 Hacker News 討論整理。討論中有人引述官方說法：兩者在多數評估項目上高於 Opus 5.5。有留言者提到價格為每百萬輸入詞元 8 美元、每百萬輸出詞元 40 美元，詞元就像計價用的字數單位。也有人表示已能在 Claude Code 使用。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "vercel-labs/agent-browser",
+      "name": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "language": "Rust",
+      "starsToday": 916,
+      "stars": 48454,
+      "summary": "agent-browser 是用 Rust 寫成的命令列工具，讓 AI 代理程式一次下一個指令來操作瀏覽器。「snapshot」指令會把網頁整理成精簡文字，每個元素帶一個編號，例如 @e1。代理程式依編號操作元素，再讀一次頁面確認結果，如此反覆進行。專案採 Apache-2.0 授權。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-10/vercel-labs/agent-browser.svg",
+        "alt": "讀取頁面、依編號操作、再讀一次確認的循環。",
+        "caption": "代理程式讀頁面、操作元素、再讀一次確認。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50431058,
+      "title": "USPS now offers official ZIP Code boundary polygons",
+      "titleZh": "美國郵政提供官方郵遞區號邊界多邊形資料",
+      "url": "https://postalpro.usps.com/zcb",
+      "hnUrl": "https://news.ycombinator.com/item?id=50431058",
+      "score": 420,
+      "comments": 209,
+      "summary": "美國郵政（USPS）的 PostalPro 網站推出郵遞區號邊界（ZIP Code Boundaries）資料，也就是用多邊形畫出各區號的範圍。官方頁面內容無法完整取得，本則依 Hacker News 討論整理。留言者表示價格從 1 萬美元起。也有從事地理資訊工作的留言者指出，郵遞區號原本不是正式的地理邊界。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "ruvnet/RuView",
+      "name": "ruvnet/RuView",
+      "url": "https://github.com/ruvnet/RuView",
+      "language": "Rust",
+      "starsToday": 172,
+      "stars": 103436,
+      "summary": "RuView 是一個專案，說明它能把一般的 WiFi 訊號轉成即時的空間資訊，用在生命徵象監測與有無人在場的偵測，而且不需要任何影像。專案附有硬體（ESP32 晶片節點）說明、預訓練模型與智慧家庭整合文件，使用 Rust 撰寫。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50432831,
+      "title": "TPU 8tx and TPU 8i Max",
+      "titleZh": "Google 發表 TPU 8tx 與 TPU 8i Max",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50432831",
+      "score": 175,
+      "comments": 29,
+      "summary": "Google 在 2026 年 11 月 9 日的部落格文章中，為第八代 TPU（Google 自行設計、專做 AI 運算的晶片）新增 TPU 8tx 與 TPU 8i Max。文章寫明，這讓一年內共有四個新的 TPU 系統。文章作者是 Amin Vahdat。Hacker News 上有留言者提到，文章沒有說明開發者如何使用這些晶片。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "ZhuLinsen/daily_stock_analysis",
+      "name": "ZhuLinsen/daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "language": "Python",
+      "starsToday": 506,
+      "stars": 68831,
+      "summary": "daily_stock_analysis 是用大型語言模型（LLM，能讀寫文字的 AI）做多市場股票分析的系統。它整合多來源行情與即時新聞，產生決策看板並自動推送通知。專案說明可用 GitHub Actions（程式託管平台的自動排程功能）定時執行，並提供 Docker 版本。使用 Python 撰寫，採 MIT 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50429426,
+      "title": "Google Gemini routes personal Drive files and emails to human annotators",
+      "titleZh": "指稱 Gemini 會把雲端硬碟檔案與電子郵件送交人工標註者",
+      "url": "https://github.com/thisisme6598/gemini_files/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50429426",
+      "score": 344,
+      "comments": 87,
+      "summary": "GitHub 上一份由個人撰寫的文件指出，Google 更新說明頁後，已連結的雲端硬碟與電子郵件內容會進入人工審查流程。文件說，Google 在 2023 年曾表示個人內容不會被人工審閱者看到，並在 10 月 16 日修改了當年的部落格文章。文件作者表示，測試顯示背景對話也會觸發資料讀取，結果不一定每次相同。這是作者的測試結果，Hacker News 上有許多使用者回應。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "homeassistant-ai/ha-mcp",
+      "name": "homeassistant-ai/ha-mcp",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "language": "Python",
+      "starsToday": 31,
+      "stars": 5958,
+      "summary": "ha-mcp 讓人用 Claude、ChatGPT 等 AI 助手來設定與自動化 Home Assistant（開源的智慧家庭平台）。它是一個 MCP 伺服器，MCP 是讓 AI 助手連到外部工具的一種通用接口。README 標示共有 87 個工具。7.3.0 版把 ha_config_set_yaml 移到測試功能。使用 Python 撰寫。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50433659,
+      "title": "Fable 5.2 one-shotted my nephew's dream game",
+      "titleZh": "Fable 5.2 一次做出外甥的夢想遊戲",
+      "url": "https://notesbylex.com/fable-5-2-one-shotted-my-nephews-dream-game",
+      "hnUrl": "https://news.ycombinator.com/item?id=50433659",
+      "score": 39,
+      "comments": 14,
+      "summary": "作者 Lex Toumbourou 在個人部落格寫道，他的外甥 Aiden 畫好遊戲設計稿，希望為生日做一款清版動作遊戲。設計稿有 5 位可選英雄，包含家裡的狗 Doggo，還有 12 個頭目與大略的故事。作者表示，Fable 5.2 依這些圖畫一次就做出一款多關卡遊戲，並說玩起來很有趣。這是作者的個人說法。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
