@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <rect width="360" height="240" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 13px; }
+    .sub { fill: #5e584e; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="20" y="32">Anthropic 帳本（截至 11 月 2 日）</text>
+  <text x="20" y="68">全部發現</text>
+  <rect x="20" y="76" width="320" height="24" fill="#1c1915"/>
+  <text x="340" y="68" text-anchor="end">37,966 筆</text>
+  <text x="20" y="128">已公開</text>
+  <rect x="20" y="136" width="62" height="24" fill="#5e584e"/>
+  <text x="340" y="128" text-anchor="end">7,349 筆</text>
+  <text x="20" y="188">標示已修補</text>
+  <rect x="20" y="196" width="3" height="24" fill="#1c1915"/>
+  <text x="340" y="188" text-anchor="end">217 筆</text>
+  <text x="340" y="214" text-anchor="end" class="sub">長條依數量比例</text>
+</svg>

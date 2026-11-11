@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
+  <rect width="360" height="300" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 13px; }
+    .sub { fill: #5e584e; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="100" y="15" width="160" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="38" text-anchor="middle">自己的遊戲副本</text>
+  <text x="180" y="55" text-anchor="middle" class="sub">Switch 2 版本</text>
+  <line x1="140" y1="65" x2="90" y2="98" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <line x1="220" y1="65" x2="270" y2="98" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <text x="90" y="118" text-anchor="middle" class="sub">模擬器</text>
+  <text x="270" y="118" text-anchor="middle">Hookshot</text>
+  <rect x="15" y="128" width="150" height="80" fill="#fffdf8" stroke="#5e584e" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="90" y="153" text-anchor="middle">執行時</text>
+  <text x="90" y="174" text-anchor="middle">邊跑邊即時轉換</text>
+  <text x="90" y="197" text-anchor="middle" class="sub">像請口譯員</text>
+  <rect x="195" y="128" width="150" height="80" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="270" y="153" text-anchor="middle">事先整本翻成 C</text>
+  <text x="270" y="174" text-anchor="middle">再編成電腦程式</text>
+  <text x="270" y="197" text-anchor="middle" class="sub">像先譯好整本書</text>
+  <line x1="270" y1="208" x2="270" y2="236" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="165" y="238" width="180" height="52" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="255" y="261" text-anchor="middle">Windows／Linux 程式</text>
+  <text x="255" y="280" text-anchor="middle" class="sub">畫面用 Vulkan 繪製</text>
+</svg>
