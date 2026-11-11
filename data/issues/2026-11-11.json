@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-11",
+  "issueNumber": 40,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-11T07:00:00+08:00",
+  "fetchedAt": "2026-11-11T00:32:33.718Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": true,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "NotRexed/Hookshot",
+      "name": "NotRexed/Hookshot",
+      "url": "https://github.com/NotRexed/Hookshot",
+      "language": "C++",
+      "starsToday": null,
+      "stars": 6528,
+      "summary": "Hookshot 讓《薩爾達傳說 時之笛》的 Nintendo Switch 2 版本不靠模擬器，直接在 Windows 與 Linux 電腦上執行。它用的是「靜態重新編譯」：把遊戲程式碼事先整本翻成 C 語言，再編成電腦程式，就像把外文書先譯好成冊，而不是每次閱讀都請口譯員即時翻譯。主機的系統軟體由專案重新實作，畫面改用 Vulkan 繪製。儲存庫不含遊戲、金鑰或執行檔，使用者要用自己的遊戲副本在自己的電腦上建置。說明文件標示專案仍屬實驗階段，第一次進入新區域時仍會卡頓。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-11/NotRexed/Hookshot.svg",
+        "alt": "比較模擬器即時轉換，與事先把遊戲程式碼譯成 C 再編成電腦程式的兩條路。",
+        "caption": "Hookshot 事先把遊戲程式碼翻成 C，再編成電腦程式。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50445401,
+      "title": "Scion is back and is going to sell a kei truck in America",
+      "titleZh": "Scion 品牌回歸，將在美國販售輕型小貨車",
+      "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50445401",
+      "score": 292,
+      "comments": 209,
+      "summary": "原文網站回應請求過多，未能取得，本則依 Hacker News 討論整理。討論的文章標題說 Scion 品牌回歸，將在美國販售一款輕型小貨車，也就是日本規格的 kei truck，像是車身與引擎都比一般貨車小一號的小卡車。多位留言者提到這款車有每小時 25 英里的限速裝置，並認為這會限制它在一般道路上的用途。也有在農場使用小貨車的留言者分享，這類車在泥土與碎石路上好用，零件也容易取得。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "huamidev/GestaltX",
+      "name": "huamidev/GestaltX",
+      "url": "https://github.com/huamidev/GestaltX",
+      "language": "Swift",
+      "starsToday": null,
+      "stars": 4738,
+      "summary": "GestaltX 是給 iPhone 與 iPad 用的 MobileGestalt 編輯器。MobileGestalt 是系統裡記錄裝置型號與功能開關的設定表，就像一張寫著「這台機器能做什麼」的身分卡。這個工具可以改裝置區域代碼、顯示與 iPad 功能的設定，並在每次寫入前自動備份，之後可還原原本的值。說明文件寫明支援 iOS 與 iPadOS 27.x，不支援 26.x，介面提供 7 種語言，採 GPLv3 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50447074,
+      "title": "After 7 months, Glasswing overwelms maintainers with underwhelming findings",
+      "titleZh": "Glasswing 計畫七個月：漏洞回報多、修補少",
+      "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+      "hnUrl": "https://news.ycombinator.com/item?id=50447074",
+      "score": 125,
+      "comments": 42,
+      "summary": "VulnCheck 的 Patrick Garrity 發文整理 Anthropic 的 Project Glasswing 漏洞計畫七個月來的數字。他表示自己追蹤到 442 個可歸於 Anthropic 的 CVE（通用漏洞披露編號，就像每個漏洞的身分證號碼），約占今年所有 CVE 的 0.5%，其中 2 個已被發現在實際攻擊中遭利用。他引用 Anthropic 截至 11 月 2 日的公開帳本：37,966 筆發現中，19.4% 已公開，217 筆標示已修補。文中也提到，curl 維護者已公開的 34 份 Anthropic 回報中，19 份被判定不是漏洞，6 份確認為低嚴重度。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-11/50447074.svg",
+        "alt": "長條示意：37,966 筆發現，7,349 筆公開，217 筆修補。",
+        "caption": "依 VulnCheck 引用的 Anthropic 帳本，截至 11 月 2 日的發現、公開與修補數。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "tangerineturtle1/NX2navi",
+      "name": "tangerineturtle1/NX2navi",
+      "url": "https://github.com/tangerineturtle1/NX2navi",
+      "language": "C",
+      "starsToday": null,
+      "stars": 2871,
+      "summary": "NX2navi 也是把《薩爾達傳說 時之笛》Nintendo Switch 2 版（1.1.1 版）靜態重新編譯的專案，產出可在 Windows 執行的 x86-64 程式，畫面用 Vulkan 繪製。說明文件列出的功能包括預設每秒 60 格畫面、寬螢幕，以及 NVIDIA DLSS 與 AMD FSR 等放大畫質與補幀選項。專案不附遊戲檔案，使用者要用從自己主機取出的合法副本建置。作者說明專案仍在早期開發，可以遊玩，但仍可能有畫面錯誤與當機。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50442736,
+      "title": ".name Grandfathered",
+      "titleZh": ".name 網域保留：既有網域與郵件轉寄不會終止",
+      "url": "https://neil.fraser.name/news/2026/11/10/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50442736",
+      "score": 650,
+      "comments": 150,
+      "summary": "Neil Fraser 在個人網站宣布，管理 .name 網域的 Verisign 撤回原本要終止 22,000 個網域名稱與郵件轉寄的計畫。網域名稱就像網站的門牌地址。依他的說明，第三層的 .name 網域將不再開放新註冊，但現有網域（包括他自己的網站）與郵件轉寄會無限期保留。他說這是經過長期而且花費不少的爭取，並列出向網際網路名稱與數字位址分配機構（ICANN）提出重新審議請求、寄送支持信的人，以及他的律師。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "jhaizhou-ops/S2Arm",
+      "name": "jhaizhou-ops/S2Arm",
+      "url": "https://github.com/jhaizhou-ops/S2Arm",
+      "language": "C#",
+      "starsToday": null,
+      "stars": 2376,
+      "summary": "S2Arm 讓使用者把自己的 Switch 遊戲移植到 iPhone、iPad 與 Mac 上原生執行。它在建置時把遊戲的 ARM64 程式碼改寫，直接交給裝置的處理器執行，中間沒有中央處理器模擬器；繪圖指令則轉成 Apple 的 Metal 圖形介面。所有匯入的遊戲放在同一個應用程式裡。Mac 與 Windows 各有圖形化啟動器，把流程整理成準備電腦、加入金鑰、加入遊戲三步。專案採 Apache-2.0 授權，使用者要自備遊戲與金鑰。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50441707,
+      "title": "Smart home devices should work without the internet",
+      "titleZh": "智慧家電應該在沒有網路時也能運作",
+      "url": "https://docodethatmatters.com/home-automation-overnight-success/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50441707",
+      "score": 665,
+      "comments": 238,
+      "summary": "一位作者整理自己約十年的居家自動化經驗，第一條規則是：網路斷線時，家裡的核心設備仍要能運作。他說自己的 Nest 整合在 Google 改掉應用程式介面後就失效，這是他現在設計時要防範的狀況。他的設備跑在自己擁有的硬體上：ESP 開發板上的 Tasmota、MQTT 訊息中轉站，以及樹莓派上的 Node-RED。MQTT 的作法像公布欄：感測器把數值貼上去，誰需要誰來看。文中也列出其他規則，例如加入新的控制方式時，不要拿掉原本的開關。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "DIYgod/pinky",
+      "name": "DIYgod/pinky",
+      "url": "https://github.com/DIYgod/pinky",
+      "language": "Go",
+      "starsToday": null,
+      "stars": 1672,
+      "summary": "Pinky 讓 AI 代理程式（能自己動手做事的 AI 助手）透過 MCP 操作真實的 iPhone 或 Android 手機。MCP 是模型情境協定（Model Context Protocol），像一個讓不同 AI 工具都插得上的共用插座。使用者在電腦上看著代理程式操作，付款、轉帳這類步驟會先停住，等人按下允許。說明文件寫明，這些規則由 Pinky 的閘道執行，代理程式無法自己批准；銀行、錢包與密碼管理應用程式預設對代理程式隱藏。專案支援 macOS、Windows 與 Linux，採 Apache-2.0 授權。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-11/DIYgod/pinky.svg",
+        "alt": "代理程式送出操作，經過 Pinky 閘道，付款等步驟先等使用者允許，再到手機。",
+        "caption": "付款、轉帳等步驟要等使用者按下允許，才會送到手機。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50446246,
+      "title": "Six Math Essentials by Terence Tao",
+      "titleZh": "陶哲軒新書《Six Math Essentials》",
+      "url": "https://teorth.github.io/tao-web/six-math-essentials.html",
+      "hnUrl": "https://news.ycombinator.com/item?id=50446246",
+      "score": 101,
+      "comments": 23,
+      "summary": "數學家陶哲軒（Terence Tao）的網站列出他的新書《Six Math Essentials》。這本書由 Quanta Books 出版，精裝 128 頁，2026 年 11 月 10 日開賣；英國版早兩週由 Pelican 出版，書名不同。依書籍介紹，書中說明六個核心概念：數字是量化思考的入口，代數通往抽象，幾何用來計算看不見的東西，機率用來面對不確定，分析處理極大或極小的量，動力學則是描述變化的數學。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}
