@@ -1,0 +1,181 @@
+{
+  "date": "2026-11-12",
+  "issueNumber": 41,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-12T07:00:00+08:00",
+  "fetchedAt": "2026-11-12T00:32:27.765Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "meta/astryx",
+      "name": "meta/astryx",
+      "url": "https://github.com/meta/astryx",
+      "language": "TypeScript",
+      "starsToday": 2776,
+      "stars": 24955,
+      "summary": "Astryx 是 Meta 開源的設計系統。設計系統就像一套統一規格的積木加上說明書，讓不同的人做出的按鈕、顏色與版面都一致。說明文件表示，它在 Meta 內部發展了八年，用在超過一萬三千個應用程式裡。它提供超過 150 個網頁元件，支援更換主題與深色模式，並附命令列工具，讓人和人工智慧程式助手照同一份參考文件來組畫面。使用時需要 React 19 以上版本，目前仍是測試版（Beta）。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-12/meta/astryx.svg",
+        "alt": "一份共同的元件與說明文件，同時交給人和人工智慧程式助手，兩邊組出一致的畫面。",
+        "caption": "Astryx 讓人和程式助手照同一份參考文件組畫面。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50456631,
+      "title": "AWS emulator",
+      "titleZh": "AWS 推出本機模擬器 AWS Emulator",
+      "url": "https://github.com/aws/aws-emulator",
+      "hnUrl": "https://news.ycombinator.com/item?id=50456631",
+      "score": 623,
+      "comments": 208,
+      "summary": "AWS Emulator 是 Amazon Web Services（AWS）放在 GitHub 上的本機模擬器，模擬 AWS 雲端服務的應用程式介面（API）。它像飛行模擬器：開發者可以在自己的電腦、開發伺服器或持續整合（CI）環境中測試程式，請求送到模擬器而不是真正的 AWS，也不需要 AWS 帳號。說明文件寫明，它不收額外費用，只用於開發與測試，不應用於正式服務或資安測試。它預設會回傳使用資料，可以用 --telemetry off 關閉。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-12/50456631.svg",
+        "alt": "程式的請求改送到本機的模擬器，不送到 AWS 雲端。",
+        "caption": "測試時，請求送到自己電腦上的模擬器，不送到 AWS。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "GoogleChrome/modern-web-guidance-src",
+      "name": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "language": "TypeScript",
+      "starsToday": 159,
+      "stars": 1737,
+      "summary": "這是 Modern Web Guidance 的原始碼儲存庫。Modern Web Guidance 是一組給程式碼代理程式用的「技能」；代理程式就像會自己寫程式的助手，技能則是交給它的工作手冊。說明文件指出，這類助手常沿用舊的網頁寫法，因為訓練資料裡舊程式碼很多；這套指南會把較新的瀏覽器功能、效能與無障礙做法，以及各瀏覽器的支援情況，直接放進助手參考的內容。說明文件表示，專案由 Google Chrome、Microsoft Edge、Mozilla Firefox 與 MDN 團隊共同維護。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50459745,
+      "title": "93% of Paint Splatters Are Valid Perl Programs (2019)",
+      "titleZh": "93% 的油漆潑痕是合法的 Perl 程式（2019）",
+      "url": "https://www.mcmillen.dev/sigbovik/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50459745",
+      "score": 79,
+      "comments": 16,
+      "summary": "這是 Colin McMillen 在 2019 年愚人節投到 SIGBOVIK 的論文，SIGBOVIK 是一場專門刊登搞笑研究的研討會。作者用光學字元辨識（OCR）軟體，也就是把圖片裡的字讀成文字的程式，去讀 100 張油漆潑痕的圖片，再看讀出來的字串能不能被 Perl 程式語言當成程式解析。結果有 93% 可以。作者也舉例，有一張潑痕被讀成一串符號，在 Perl 裡算出的結果是數字 0。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "shadcn/improve",
+      "name": "shadcn/improve",
+      "url": "https://github.com/shadcn/improve",
+      "language": null,
+      "starsToday": 361,
+      "stars": 10865,
+      "summary": "improve 是一個給人工智慧程式代理程式用的技能，會檢查整個程式碼庫，再寫出修改計畫交給其他代理程式執行。作者的做法是分工：能力較強、費用較高的模型負責理解程式碼、判斷該做什麼並寫規格；較便宜的模型照計畫實作，就像總工程師先畫好施工圖，再交給施工隊照圖施工。這個技能本身不改程式碼。計畫以一般文字檔存在 plans 資料夾，人或其他代理程式都能接手，合併與否仍由使用者決定。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-12/shadcn/improve.svg",
+        "alt": "費用較高的模型檢查程式碼並寫計畫，計畫存成檔案，再交給較便宜的模型實作。",
+        "caption": "improve 只寫計畫，實作交給較便宜的模型。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50450488,
+      "title": "Tim Peters has died",
+      "titleZh": "Python 核心開發者 Tim Peters 辭世",
+      "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
+      "hnUrl": "https://news.ycombinator.com/item?id=50450488",
+      "score": 814,
+      "comments": 86,
+      "summary": "Python 創始人 Guido van Rossum 在 Python 官方討論區宣布，Tim Peters 已於今年 7 月 15 日過世。Guido 寫道，Tim Peters 最為人知的是寫下「Python 之禪」（PEP 20），一份描述 Python 設計理念的短文。他在 2002 年為 Python 設計了排序演算法 Timsort；排序演算法就像把一疊撲克牌排好的固定步驟，後來 Java 與 Android 也採用。他長期在郵件清單上耐心回答使用者問題，因此被稱為「Timbot」。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "addyosmani/agent-skills",
+      "name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "language": "JavaScript",
+      "starsToday": 787,
+      "stars": 115936,
+      "summary": "agent-skills 是一組給人工智慧程式代理程式用的工程技能，把資深工程師的工作流程與品質檢查整理成固定步驟，讓代理程式每次都照著做。它把開發分成定義、規劃、實作、驗證、審查、上線六個階段，提供 9 個斜線指令，例如 /spec、/plan、/test 與 /ship。這就像廚房的標準作業卡，每道菜從備料到出餐都照同一張卡片進行。說明文件表示，可以用一行指令把全部 25 個技能裝進 Claude Code、Cursor 等多種代理程式。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50458900,
+      "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+      "titleZh": "聯合航空禁止人工智慧代理程式代旅客訂機票",
+      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50458900",
+      "score": 306,
+      "comments": 282,
+      "summary": "據 CBS News 報導，聯合航空（United Airlines）週三表示，將禁止人工智慧代理程式代替旅客訂機票。代理程式就像替你跑腿的助理，但要訂票就得拿到你的帳號與付款資料。聯合航空表示，把帳號交給第三方人工智慧助理可能讓資料外洩，也可能造成非預期的購買或里程使用；代旅客報到也可能違反聯邦規定。Atmosphere Research Group 分析師 Henry Harteveldt 認為，聯合航空想保有訂票流程的控制權。報導也提到，西南航空讓 ChatGPT 使用者可以查看其航班。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "we-promise/sure",
+      "name": "we-promise/sure",
+      "url": "https://github.com/we-promise/sure",
+      "language": "Ruby",
+      "starsToday": 1078,
+      "stars": 12948,
+      "summary": "Sure 是一款個人理財應用程式，可以架設在自己的電腦或伺服器上。自己架設就像在家自己煮飯，而不是到餐廳吃：程式和資料都在自己手上。它是社群從 Maybe Finance 專案分出來的版本；說明文件指出，原團隊花了將近 100 萬美元開發，停止經營後把程式碼開源，原儲存庫已封存。Sure 可以用 Docker 架設，能從瀏覽器、macOS 桌面程式與手機程式使用，授權條款是 AGPLv3。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50459485,
+      "title": "Lock Your GitHub Actions",
+      "titleZh": "為 GitHub Actions 加上鎖定檔",
+      "url": "https://hugovk.dev/blog/2026/lock-github-actions/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50459485",
+      "score": 88,
+      "comments": 17,
+      "summary": "Hugo van Kemenade 在部落格說明，GitHub Actions 現在支援工作流程鎖定檔。GitHub Actions 是在程式碼推上去時自動跑測試等工作的服務。以前的建議是用完整的提交雜湊值指定要用的動作版本，因為版本標籤可以被改指到別的程式碼，有供應鏈攻擊的風險。鎖定檔就像購物清單旁附上每件商品的條碼：工作流程寫版本號，實際對應的提交記在 actions.lock 檔裡。作者示範用 gh actions-lock 產生鎖定檔，並在持續整合中用 --verify 檢查。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-12/50459485.svg",
+        "alt": "工作流程只寫版本號，鎖定檔記下每個版本號對應的提交，檢查時兩者要相符。",
+        "caption": "工作流程寫版本號，鎖定檔記下實際的提交。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ]
+}

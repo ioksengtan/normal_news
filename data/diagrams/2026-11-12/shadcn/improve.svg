@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
+  <rect width="360" height="300" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 13px; }
+    .sub { fill: #5e584e; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="20" y="15" width="320" height="60" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="40" text-anchor="middle">能力較強的模型</text>
+  <text x="180" y="60" text-anchor="middle" class="sub">檢查程式碼、判斷該做什麼、寫規格</text>
+  <line x1="180" y1="75" x2="180" y2="108" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="90" y="110" width="180" height="60" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="135" text-anchor="middle">plans 資料夾</text>
+  <text x="180" y="155" text-anchor="middle" class="sub">一份計畫一個檔案</text>
+  <line x1="180" y1="170" x2="180" y2="203" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="20" y="205" width="320" height="60" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="180" y="230" text-anchor="middle">較便宜的模型</text>
+  <text x="180" y="250" text-anchor="middle" class="sub">照計畫實作；合併由使用者決定</text>
+  <text x="180" y="288" text-anchor="middle" class="sub">施工圖 → 施工隊</text>
+</svg>
