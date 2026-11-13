@@ -1,0 +1,184 @@
+{
+  "date": "2026-11-13",
+  "issueNumber": 42,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-13T07:00:00+08:00",
+  "fetchedAt": "2026-11-13T00:32:01.639Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "openai/codex-security",
+      "name": "openai/codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "language": "TypeScript",
+      "starsToday": 643,
+      "stars": 12409,
+      "summary": "Codex Security 是 OpenAI 放在 GitHub 上的資安工具，包含命令列工具（CLI）與 TypeScript 軟體開發套件（SDK），用來找出、確認並修補程式碼裡的安全漏洞。漏洞就像房子沒鎖好的門窗，這個工具像巡房的人：先列出可疑的地方，再確認是不是真的有問題，最後提出修補方法。說明文件寫明，它可以掃描整個儲存庫、指定的資料夾或某次變更，結果可匯出成 SARIF、JSON、CSV，或送到 Linear、Jira、GitHub 追蹤。使用時需要 Node.js 與 Python 3.10 以上版本，並先登入帳號。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-13/openai/codex-security.svg",
+        "alt": "程式碼依序經過找出可疑處、確認是否為真、產生修補三個步驟。",
+        "caption": "Codex Security 先找、再確認、最後提出修補。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50467087,
+      "title": "Jensen Huang resigns",
+      "titleZh": "輝達宣布執行長黃仁勳辭職",
+      "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
+      "hnUrl": "https://news.ycombinator.com/item?id=50467087",
+      "score": 2835,
+      "comments": 2690,
+      "summary": "輝達（NVIDIA）董事會 11 月 12 日發布新聞稿，宣布黃仁勳辭去總裁、執行長與董事職務，立即生效。財務長 Colette Kress 擔任暫代執行長，並繼續兼任財務長；董事會將從公司內外尋找正式的執行長。新聞稿也宣布，Harvey C. Jones 成為輝達第一位董事長。輝達表示，第三季財報仍照原定時間在 11 月 17 日公布。本則連結的美聯社網站，robots.txt 不允許本站抓取，因此依 Hacker News 貼文所附的輝達新聞稿整理；新聞稿沒有說明辭職原因。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "nvm-sh/nvm",
+      "name": "nvm-sh/nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "language": "Shell",
+      "starsToday": 63,
+      "stars": 96010,
+      "summary": "nvm 是 Node Version Manager 的縮寫，用來在同一台電腦上安裝並切換不同版本的 Node.js。Node.js 讓 JavaScript 程式能在瀏覽器以外執行；不同專案常需要不同版本，nvm 就像一個鞋櫃，要穿哪一雙就換哪一雙。說明文件示範，輸入 nvm install 24 安裝第 24 版，再輸入 nvm use 22 換成第 22 版。它是一支指令稿，裝在個別使用者的帳號下，可在 bash、zsh 等符合可攜式作業系統介面（POSIX）標準的命令列環境使用，支援 Unix、macOS 與 Windows 的 Linux 子系統（WSL）。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50472038,
+      "title": "Rust 1.100",
+      "titleZh": "Rust 1.100 版發布",
+      "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50472038",
+      "score": 361,
+      "comments": 149,
+      "summary": "Rust 團隊 11 月 12 日發布程式語言 Rust 的 1.100.0 版。官方部落格寫道，經過 10 年、5 次嘗試，「never 型別」正式可用，它代表永遠不會產生值的運算，例如直接 return 或結束程式。這一版也正式提供自訂記憶體配置器的核心介面，以及函式結束時一定會執行指定程式的 DropGuard。套件管理工具 Cargo 會提醒沒用到的相依套件，並新增「冷卻期」設定，只採用發布超過指定天數的版本，像新貨上架先等幾天，確認沒被回收再買。官方說明，惡意版本常在發布後幾小時到幾天內被發現。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-13/50472038.svg",
+        "alt": "時間軸上，冷卻期內剛發布的新版本被跳過，Cargo 改用發布較久的版本。",
+        "caption": "設了 3 天冷卻期，Cargo 會先跳過 3 天內發布的版本。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "pookjw/HermesEnabler",
+      "name": "pookjw/HermesEnabler",
+      "url": "https://github.com/pookjw/HermesEnabler",
+      "language": "Objective-C",
+      "starsToday": 218,
+      "stars": 1533,
+      "summary": "HermesEnabler 2 是一個 Apple Watch 應用程式，專案說明寫著它能讓任何 Apple Watch 使用愛馬仕（Hermès）錶面。錶面就是手錶螢幕上顯示時間的畫面樣式，像替手錶換一張桌布。說明文件寫明，它只支援 watchOS 27.0 到 27.3 beta 1。安裝方式有兩種：用 Sideloadly 側載 IPA 安裝檔，或自己用 Xcode 編譯；側載是指不經過 App Store，自己把程式裝到裝置上。作者提醒，刪除程式前要先在程式裡還原 MobileGestalt 備份，並寫明使用風險自負。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50472260,
+      "title": "Gemini 4 Hydrogen and Orchestrator",
+      "titleZh": "Google Antigravity 推出 Gemini 4 Hydrogen 與 Orchestrator",
+      "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50472260",
+      "score": 272,
+      "comments": 61,
+      "summary": "Google 11 月 12 日宣布，在程式開發工具 Antigravity 推出模型 Gemini 4 Hydrogen 與新選項 Orchestrator。Orchestrator 讓兩個模型輪流處理同一個任務：Gemini 4 Carbon 先讀程式碼、擬計畫，Hydrogen 接手改程式、跑測試，卡住再交回 Carbon，像主廚定菜單、助手備料。Google 表示，在 Terminal-Bench 4.1 測試中，它的成功率接近只用 Carbon，平均少用 24% 額度、快 19% 完成。Hydrogen 先開放給付費的 Google AI Pro 與 Ultra 訂閱者。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-13/50472260.svg",
+        "alt": "Carbon 擬定計畫交給 Hydrogen 執行，Hydrogen 遇到困難時交回 Carbon。",
+        "caption": "Orchestrator：Carbon 定計畫，Hydrogen 動手，卡住再交回。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "QwenLM/qwen-code",
+      "name": "QwenLM/qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "language": "TypeScript",
+      "starsToday": 151,
+      "stars": 29802,
+      "summary": "Qwen Code 是開源的人工智慧程式代理程式，可在終端機、程式編輯器、桌面程式、瀏覽器與聊天軟體中使用。代理程式就像能自己動手的助手：你交代工作，它會讀程式碼、修改並執行。說明文件表示，它的框架與 Qwen 模型都是開源的，也能接 OpenAI、Anthropic、Gemini 的應用程式介面（API），或用 Ollama、vLLM 在自己的電腦上跑模型，執行中可以切換。它提供 VS Code、Zed、JetBrains 外掛，以及 Telegram、釘釘、微信、飛書的整合。用 npm 安裝需要 Node.js 22 以上版本。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50474361,
+      "title": "Foundation Models framework",
+      "titleZh": "Apple 介紹 Foundation Models 框架",
+      "url": "https://developer.apple.com/foundation-models-framework/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50474361",
+      "score": 104,
+      "comments": 13,
+      "summary": "Apple 開發者網站介紹了 Foundation Models 框架。框架像一套現成的工具箱，開發者用 Swift 呼叫它，就能在應用程式裡使用大型語言模型。頁面寫道，它能用 Apple Intelligence 在裝置上執行的模型，也能用同一套介面接 Claude、Gemini 等伺服器上的模型。新功能包括圖文一起交給模型、在對話中切換模型的 Dynamic Profiles，以及 macOS 27 的 fm 命令列工具。Apple 表示，加入 App Store 小型企業計畫、首次下載不到兩百萬次者，使用 Private Cloud Compute 上的 Apple 模型不必付雲端費用。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "ashhart/TensorFold",
+      "name": "ashhart/TensorFold",
+      "url": "https://github.com/ashhart/TensorFold",
+      "language": "Zig",
+      "starsToday": 54,
+      "stars": 1934,
+      "summary": "TensorFold 是用 Zig 程式語言寫成的大型語言模型推論引擎，可在 Apple Silicon 晶片與 NVIDIA 顯示卡上執行模型。推論是讓已經訓練好的模型實際回答問題；如果模型是一份寫好的樂譜，推論引擎就是照譜演奏的樂手。說明文件寫明，它直接讀取模型檔、處理請求並執行 Metal 或 CUDA 運算，不需要安裝 Python 或 MLX。啟動後會在本機提供與 OpenAI 聊天介面相容的網址，也支援 Anthropic Messages 格式。Mac 可用 Homebrew 安裝；Linux 需要 NVIDIA 驅動程式 R580 以上（CUDA 13.0）。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50472490,
+      "title": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
+      "titleZh": "冥王星外發現可能的新矮行星，繞太陽一圈約 280 年",
+      "url": "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50472490",
+      "score": 183,
+      "comments": 89,
+      "summary": "《史密森尼》雜誌報導，史密森尼天體物理台的 Matthew Holman 在智利 Vera C. Rubin 天文台的資料中，發現名為 2026 ED138 的天體。研究人員在過去十年的照片、甚至 1937 年的照相底片中都找到它，確認了軌道：它與太陽的距離是地球的 46 倍，繞一圈 281.1 年。目前估計直徑約 370 到 930 英里，若大到接近圓球，就可能成為第六顆矮行星。只看亮度無法判斷大小，因為小而反光的天體和大而暗的天體可能一樣亮；天文學家打算用紅外線，或量它遮住星光的時間來測量。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-11-13/nvm-shoes.svg",
+      "alt": "一個圓頭方身的小人腳穿寫著 22 的鞋，旁邊鞋櫃放著 24 與 20 的鞋。",
+      "caption": "nvm use 22：今天換穿第 22 號。",
+      "relatedItemId": "nvm-sh/nvm"
+    }
+  ]
+}

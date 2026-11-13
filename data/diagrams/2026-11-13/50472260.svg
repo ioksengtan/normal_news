@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
+  <rect width="360" height="300" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <g transform="translate(0,25)">
+  <rect x="20" y="20" width="140" height="80" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="90" y="50" text-anchor="middle">Carbon</text>
+  <text x="90" y="72" text-anchor="middle" class="sub">讀程式碼、擬計畫</text>
+  <text x="90" y="90" text-anchor="middle" class="sub">（主廚定菜單）</text>
+  <rect x="200" y="20" width="140" height="80" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="270" y="50" text-anchor="middle">Hydrogen</text>
+  <text x="270" y="72" text-anchor="middle" class="sub">改程式、跑測試</text>
+  <text x="270" y="90" text-anchor="middle" class="sub">（助手備料）</text>
+  <path d="M110,100 C110,170 250,170 250,108" fill="none" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <text x="180" y="185" text-anchor="middle">交出計畫</text>
+  <path d="M290,20 C290,0 70,0 70,14" fill="none" stroke="#5e584e" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#箭頭)"/>
+  <text x="180" y="230" text-anchor="middle" class="sub">虛線：Hydrogen 卡住時交回 Carbon</text>
+  <text x="180" y="255" text-anchor="middle" class="sub">同一個任務，兩個模型輪流</text>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330">
+  <rect width="360" height="330" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="100" y="12" width="160" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="40" text-anchor="middle">你的程式碼</text>
+  <line x1="180" y1="56" x2="180" y2="80" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="60" y="84" width="240" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="108" text-anchor="middle">1. 找出可疑處</text>
+  <text x="180" y="128" text-anchor="middle" class="sub">像巡房，列出沒鎖好的門窗</text>
+  <line x1="180" y1="140" x2="180" y2="164" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="60" y="168" width="240" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="192" text-anchor="middle">2. 確認是否真的有問題</text>
+  <text x="180" y="212" text-anchor="middle" class="sub">逐一檢查可疑處</text>
+  <line x1="180" y1="224" x2="180" y2="248" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="60" y="252" width="240" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="276" text-anchor="middle">3. 提出修補方法</text>
+  <text x="180" y="296" text-anchor="middle" class="sub">結果可匯出或送去追蹤</text>
+</svg>

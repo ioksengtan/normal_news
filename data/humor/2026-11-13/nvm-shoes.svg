@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260">
+  <rect width="360" height="260" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="190" y="40" width="150" height="190" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <line x1="190" y1="103" x2="340" y2="103" stroke="#1c1915" stroke-width="1.5"/>
+  <line x1="190" y1="166" x2="340" y2="166" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="235" y="72" width="60" height="24" rx="10" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="265" y="90" text-anchor="middle">24</text>
+  <rect x="235" y="135" width="60" height="24" rx="10" fill="#fffdf8" stroke="#5e584e" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="265" y="153" text-anchor="middle" class="sub">（空）</text>
+  <rect x="235" y="198" width="60" height="24" rx="10" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="265" y="216" text-anchor="middle">20</text>
+  <circle cx="80" cy="120" r="22" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="73" cy="116" r="2" fill="#1c1915"/>
+  <circle cx="87" cy="116" r="2" fill="#1c1915"/>
+  <path d="M72,128 Q80,134 88,128" fill="none" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="58" y="142" width="44" height="60" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <line x1="68" y1="202" x2="68" y2="225" stroke="#1c1915" stroke-width="2"/>
+  <line x1="92" y1="202" x2="92" y2="225" stroke="#1c1915" stroke-width="2"/>
+  <rect x="78" y="226" width="44" height="16" rx="7" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="100" y="239" text-anchor="middle" font-size="12">22</text>
+  <rect x="15" y="20" width="160" height="56" rx="8" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <path d="M70,76 L78,96 L90,76" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <line x1="72" y1="76" x2="88" y2="76" stroke="#fffdf8" stroke-width="2"/>
+  <text x="95" y="44" text-anchor="middle">nvm use 22</text>
+  <text x="95" y="64" text-anchor="middle" class="sub">今天換穿第 22 號</text>
+</svg>
