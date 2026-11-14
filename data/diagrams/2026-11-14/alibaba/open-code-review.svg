@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 350">
+  <rect width="360" height="350" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="100" y="12" width="160" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="32" text-anchor="middle">Git 變更內容</text>
+  <text x="180" y="48" text-anchor="middle" class="sub">或用 ocr scan 看整個資料夾</text>
+  <line x1="180" y1="56" x2="180" y2="80" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="40" y="84" width="280" height="60" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="108" text-anchor="middle">固定的程式邏輯</text>
+  <text x="180" y="128" text-anchor="middle" class="sub">決定要看哪些檔案、套用哪些規則</text>
+  <line x1="180" y1="144" x2="180" y2="168" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="40" y="172" width="280" height="60" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="196" text-anchor="middle">大型語言模型</text>
+  <text x="180" y="216" text-anchor="middle" class="sub">判斷問題、查找上下文</text>
+  <line x1="180" y1="232" x2="180" y2="256" stroke="#1c1915" stroke-width="1.5" marker-end="url(#箭頭)"/>
+  <rect x="40" y="260" width="280" height="60" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="284" text-anchor="middle">在有問題的那一行留言</text>
+  <text x="180" y="304" text-anchor="middle" class="sub">像同學幫你挑出作業的錯字</text>
+</svg>

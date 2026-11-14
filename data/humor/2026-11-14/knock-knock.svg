@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260">
+  <rect width="360" height="260" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 14px; }
+    .sub { fill: #5e584e; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="230" y="70" width="100" height="160" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="268" y="140" width="26" height="90" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="288" cy="186" r="3" fill="#1c1915"/>
+  <text x="280" y="60" text-anchor="middle" class="sub">伺服器</text>
+  <circle cx="100" cy="120" r="22" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="93" cy="116" r="2" fill="#1c1915"/>
+  <circle cx="107" cy="116" r="2" fill="#1c1915"/>
+  <path d="M92,128 Q100,134 108,128" fill="none" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="78" y="142" width="44" height="60" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <line x1="122" y1="160" x2="262" y2="170" stroke="#1c1915" stroke-width="2"/>
+  <line x1="88" y1="202" x2="88" y2="230" stroke="#1c1915" stroke-width="2"/>
+  <line x1="112" y1="202" x2="112" y2="230" stroke="#1c1915" stroke-width="2"/>
+  <rect x="20" y="20" width="150" height="56" rx="8" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="95" y="44" text-anchor="middle">叩叩，還在嗎？</text>
+  <text x="95" y="64" text-anchor="middle" class="sub">20 秒後再來一次</text>
+  <rect x="200" y="12" width="140" height="36" rx="8" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="270" y="35" text-anchor="middle">在！</text>
+</svg>
