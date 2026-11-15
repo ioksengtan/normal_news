@@ -1,0 +1,184 @@
+{
+  "date": "2026-11-15",
+  "issueNumber": 44,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-15T07:00:00+08:00",
+  "fetchedAt": "2026-11-15T00:32:26.279Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "tradermonty/claude-trading-skills",
+      "name": "tradermonty/claude-trading-skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "language": "Python",
+      "starsToday": 553,
+      "stars": 4805,
+      "summary": "Claude Trading Skills 是一組給 Claude 用的「技能」（Skills），對象是時間有限、以長期投資、指數股票型基金（ETF）和配息股票為主的個人投資者。技能就像一張張寫好步驟的工作單，讓助手照著做固定的檢查。說明文件列出幾條建議的流程，例如每天 15 分鐘看市場狀況、每週檢查投資組合、每筆交易結束後寫紀錄並回顧。作者寫明，目標不是讓人工智慧代替使用者決定買賣，而是整理市場檢視、風險管理和交易紀錄；它也不是投資建議或訊號服務。部分流程需要付費資料服務，也有不需要付費 API 的入門路線。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-15/tradermonty/claude-trading-skills.svg",
+        "alt": "流程圖：看市場狀況、管理風險、規劃交易、寫交易紀錄、回顧改進，最後由人自己決定。",
+        "caption": "Claude Trading Skills：技能整理檢查步驟，買賣決定仍由使用者自己做。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50500963,
+      "title": "SpaceX catches the Starship to end Flight 15",
+      "titleZh": "SpaceX 星艦第 15 次試飛，以發射塔接住星艦結束",
+      "url": "https://www.spacex.com/launches/starship-flight-15",
+      "hnUrl": "https://news.ycombinator.com/item?id=50500963",
+      "score": 576,
+      "comments": 375,
+      "summary": "SpaceX 的官方頁面需要瀏覽器執行程式才能顯示，未能取得內容，本則依 Hacker News 討論整理。星艦（Starship）是 SpaceX 的大型火箭，分成下方的推進器和上方的星艦本體。討論中多位網友表示，這次第 15 次試飛最後由發射塔的機械臂接住星艦本體，就像用一雙大筷子夾住落下的物體。推進器這次沒有被接住，網友引述 Elon Musk 的貼文說法是燃料偏低，為了避免損壞發射塔，改落在墨西哥灣。也有網友指出，加上這次，推進器和星艦本體被發射塔接住都已經各自做到過。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "ChromeDevTools/chrome-devtools-mcp",
+      "name": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "language": "TypeScript",
+      "starsToday": 664,
+      "stars": 56298,
+      "summary": "chrome-devtools-mcp 讓寫程式的人工智慧助手（例如 Claude、Cursor 或 Copilot）能控制並檢查一個正在執行的 Chrome 瀏覽器。開發者工具（DevTools）就像汽車的儀表板和診斷儀，能看出網頁哪裡慢、哪裡出錯。它以模型上下文協定（MCP）伺服器的形式提供，也有命令列工具（CLI），可以錄製效能紀錄、查看網路請求、截圖和讀取主控台訊息。說明文件提醒，瀏覽器裡的內容會讓 MCP 用戶端看到，敏感資料不要放進去；Google 預設會收集使用統計，可用 --no-usage-statistics 關閉。執行需要 Node.js 與 Chrome。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50499017,
+      "title": "Lovable apps expose passport details and more than 200K private messages",
+      "titleZh": "研究：許多用 Lovable 做的應用程式，不登入就能讀到護照資料與 20 多萬則私訊",
+      "url": "https://www.crissyfield.de/research/lovable-en/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50499017",
+      "score": 599,
+      "comments": 250,
+      "summary": "德國資安公司 Crissy Field 與德國《商報》（Handelsblatt）合作，調查用 Lovable 打造的網頁應用程式。Lovable 是瑞典公司，使用者用一般文字描述需求，它就產生網頁程式。研究團隊從公開網頁備份 Common Crawl 找出 159,041 個專案，其中 24,664 個網站一載入就送出資料庫內容；團隊再做唯讀查詢，在 7,403 個網站中找到含電子郵件的資料表。報告列出的案例包括一個論壇的 8 萬多筆個人資料與 20 多萬則聊天訊息，以及 1,000 多筆護照號碼等證件資料。研究團隊表示，無法確認資料是否已被濫用；《商報》已把結果告知 Lovable。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-15/50499017.svg",
+        "alt": "漏斗圖：159,041 個專案、24,664 個網站一載入就送出資料、7,403 個網站有含電子郵件的資料表。",
+        "caption": "Crissy Field 報告的數字：從 159,041 個專案一路篩到 7,403 個網站。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "dream-num/univer",
+      "name": "dream-num/univer",
+      "url": "https://github.com/dream-num/univer",
+      "language": "TypeScript",
+      "starsToday": 495,
+      "stars": 24486,
+      "summary": "Univer 是一套開發工具包（SDK），讓開發者把試算表、文件等辦公功能放進自己的產品裡。SDK 就像一箱已經做好的零件，工程師不用從頭打造編輯器。這個儲存庫以 Apache-2.0 授權開源網頁端的核心，包括內容模型、公式計算、畫面繪製，以及試算表與文件的編輯功能，例如合併儲存格、篩選、排序和註解。說明文件寫明，即時協作、檔案匯入匯出等伺服器功能，以及部分人工智慧擴充，是另外授權的商業版本。人工智慧代理程式也能呼叫同樣的開源介面，模型由使用的應用程式自己提供。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50501594,
+      "title": "How did Woz write the Apple 1 BASIC before building the computer?",
+      "titleZh": "Woz 為什麼能在電腦造好之前，就寫出 Apple 1 的 BASIC？",
+      "url": "https://retrocomputing.stackexchange.com/questions/17957",
+      "hnUrl": "https://news.ycombinator.com/item?id=50501594",
+      "score": 56,
+      "comments": 17,
+      "summary": "原文是問答網站 Retrocomputing Stack Exchange 上的提問，該網站的 robots.txt 禁止自動程式抓取，所以本則依 Hacker News 討論整理。提問的是 Apple 共同創辦人 Steve Wozniak（暱稱 Woz）如何在 Apple 1 電腦做好之前，先寫出 BASIC 程式語言。多位網友說，當年 8 位元電腦的愛好者常先在紙上寫組合語言，自己查表把指令換成數字碼，再輸入機器測試，就像先在紙上打草稿再謄寫。也有網友提到「監視程式」（monitor），它能查看和修改記憶體，常放在唯讀記憶體裡。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "ag-ui-protocol/ag-ui",
+      "name": "ag-ui-protocol/ag-ui",
+      "url": "https://github.com/ag-ui-protocol/ag-ui",
+      "language": "TypeScript",
+      "starsToday": 9,
+      "stars": 17362,
+      "summary": "AG-UI（代理程式與使用者互動協定）是一套開放的規則，規定人工智慧代理程式怎樣和使用者看到的應用程式畫面溝通。協定就像兩個人事先約好的手勢暗號，雙方照著做就能互相看懂。代理程式在執行時，送出大約 16 種標準事件，可以透過 SSE、WebSockets 等不同方式傳送。說明文件把它和另外兩種協定並列：MCP 讓代理程式使用工具，A2A 讓代理程式彼此溝通，AG-UI 把代理程式帶進應用程式畫面。功能包括串流聊天、雙向同步狀態，以及讓人在過程中參與決定。可用 npx create-ag-ui-app 建立新專案。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-15/ag-ui-protocol/ag-ui.svg",
+        "alt": "代理程式居中，左邊用 MCP 連到工具，右邊用 A2A 連到其他代理程式，下方用 AG-UI 連到使用者畫面。",
+        "caption": "說明文件的分工：MCP 接工具，A2A 接其他代理程式，AG-UI 接使用者畫面。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50499038,
+      "title": "A family tree of software job titles",
+      "titleZh": "軟體業職稱的家族樹",
+      "url": "https://zwischenzugs.com/2026/11/03/a-family-tree-of-software-job-titles/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50499038",
+      "score": 187,
+      "comments": 90,
+      "summary": "作者 Ian Miell 在部落格介紹他做的一張「軟體職稱家族樹」，在人工智慧助手 Claude 協助下完成。圖上有 104 個職稱，從 1940 年代指人的「計算員」，到約 2025 年出現的「人工智慧代理程式／上下文工程師」，依開發、維運、資料與人工智慧等七個類別分欄，實線箭頭代表由前一個職稱演變而來。作者說年份是他估計的大約普及時間，不是有出處的考證。他舉例說，1947 年的文件把「寫程式碼」當成較低階的抄寫工作；網站管理員後來拆成前端與後端，約 2008 年又合成「全端」。整張圖用 Graphviz 畫成。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "JuliusBrussee/caveman",
+      "name": "JuliusBrussee/caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "language": "Go",
+      "starsToday": 227,
+      "stars": 120063,
+      "summary": "caveman 是給寫程式的人工智慧代理程式用的技能與代理工具，目的是減少代幣（token）用量。代幣就像計程車的跳表，模型讀和寫的字越多，費用越高。它讓代理程式用很短的句子回答，程式碼本身不改；4.0 版另外會先壓縮記錄檔、測試輸出等內容，再交給模型讀。說明文件表示，同一個修正說明從 63 個代幣縮成 20 個，並引用 Adobe Research、JetBrains 和 Elastic 的測試，例如 JetBrains 用 86 個程式任務比較，沒有量到品質差異。安裝用 npx @caveman-ai/cli@latest，需要 Node.js 22.13 以上版本。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50496976,
+      "title": "KDE: The documentary [video]",
+      "titleZh": "紀錄片《KDE》：自由軟體桌面社群的故事",
+      "url": "https://tube.kockatoo.org/w/fFinNHfanLT7aBEb2B8y4c",
+      "hnUrl": "https://news.ycombinator.com/item?id=50496976",
+      "score": 365,
+      "comments": 78,
+      "summary": "這是 CultRepo 製作的紀錄片，長約 62 分鐘，介紹自由軟體社群 KDE。KDE 做的是 Linux 的桌面環境，就像替電腦換上一整套視窗、選單和應用程式的外觀與工具。影片說明寫道，故事從 1996 年開始，當時圖賓根大學學生 Matthias Ettrich 在網路論壇 Usenet 徵求程式設計師一起做 Linux 桌面。影片內容包括 Qt 授權爭議、與 GNOME 的競爭、KHTML 瀏覽器引擎後來成為 Apple WebKit 和 Google Chrome 的基礎，以及 KDE 4 的發布與之後的重建。影片採用創用 CC 姓名標示授權。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-11-15/few-words.svg",
+      "alt": "一個圓頭小人在對話框裡只說了幾個字，旁邊的計數器數字變小。",
+      "caption": "caveman：回答變短，代幣跳表跟著變少。",
+      "relatedItemId": "JuliusBrussee/caveman"
+    }
+  ]
+}
