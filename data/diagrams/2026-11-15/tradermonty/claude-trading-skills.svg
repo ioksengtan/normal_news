@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420">
+  <rect width="360" height="420" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="30" text-anchor="middle">技能照步驟幫忙整理</text>
+  <rect x="80" y="48" width="200" height="44" rx="6" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="76" text-anchor="middle">看市場狀況</text>
+  <line x1="180" y1="92" x2="180" y2="110" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="80" y="114" width="200" height="44" rx="6" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="142" text-anchor="middle">管理風險、規劃交易</text>
+  <line x1="180" y1="158" x2="180" y2="176" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="80" y="180" width="200" height="44" rx="6" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="208" text-anchor="middle">寫交易紀錄</text>
+  <line x1="180" y1="224" x2="180" y2="242" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="80" y="246" width="200" height="44" rx="6" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="274" text-anchor="middle">回顧、改進做法</text>
+  <line x1="180" y1="290" x2="180" y2="318" stroke="#1c1915" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#箭頭)"/>
+  <circle cx="180" cy="342" r="18" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="160" y="362" width="40" height="30" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="412" text-anchor="middle" class="sub">買不買，由使用者自己決定</text>
+</svg>

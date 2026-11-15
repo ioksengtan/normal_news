@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260">
+  <rect width="360" height="260" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <circle cx="90" cy="130" r="24" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <circle cx="82" cy="126" r="2" fill="#1c1915"/>
+  <circle cx="98" cy="126" r="2" fill="#1c1915"/>
+  <line x1="83" y1="139" x2="97" y2="139" stroke="#1c1915" stroke-width="1.5"/>
+  <rect x="66" y="156" width="48" height="60" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <line x1="78" y1="216" x2="78" y2="244" stroke="#1c1915" stroke-width="2"/>
+  <line x1="102" y1="216" x2="102" y2="244" stroke="#1c1915" stroke-width="2"/>
+  <rect x="20" y="20" width="160" height="62" rx="8" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="100" y="48" text-anchor="middle">換新參照。</text>
+  <text x="100" y="70" text-anchor="middle">用 useMemo。</text>
+  <rect x="220" y="110" width="120" height="90" rx="6" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="280" y="134" text-anchor="middle" class="sub">代幣跳表</text>
+  <text x="250" y="168" text-anchor="middle" class="sub">63</text>
+  <line x1="266" y1="163" x2="290" y2="163" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <text x="314" y="170" text-anchor="middle" font-size="22">20</text>
+  <text x="180" y="248" text-anchor="middle" class="sub">話變短，程式碼不變</text>
+</svg>
