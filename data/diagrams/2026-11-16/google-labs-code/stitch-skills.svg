@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330">
+  <rect width="360" height="330" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro 330ei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" marker330eight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">stitch-skills 做的轉換</text>
+  <rect x="20" y="46" width="320" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="72" text-anchor="middle">前端程式碼</text>
+  <text x="180" y="92" text-anchor="middle" class="sub">例如 React、Vue</text>
+  <line x1="180" y1="102" x2="180" y2="128" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <text x="192" y="120" class="sub">技能：轉成設計稿</text>
+  <rect x="60" y="132" width="240" height="56" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="158" text-anchor="middle">Stitch 設計稿</text>
+  <text x="180" y="178" text-anchor="middle" class="sub">也可用文字或圖片產生</text>
+  <line x1="180" y1="188" x2="180" y2="214" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <text x="192" y="206" class="sub">技能：轉成元件</text>
+  <rect x="20" y="218" width="320" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="244" text-anchor="middle">React／React Native 元件</text>
+  <text x="180" y="264" text-anchor="middle" class="sub">回到程式碼</text>
+  <text x="180" y="310" text-anchor="middle" class="sub">都要先設定 Stitch MCP 伺服器</text>
+</svg>

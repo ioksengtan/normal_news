@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400">
+  <rect width="360" height="400" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro 400ei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" marker400eight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">LoopForge 的標準作業程序</text>
+  <rect x="80" y="44" width="200" height="44" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="72" text-anchor="middle">需求</text>
+  <line x1="180" y1="88" x2="180" y2="106" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="80" y="110" width="200" height="44" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="138" text-anchor="middle">代理程式：規劃</text>
+  <line x1="180" y1="154" x2="180" y2="172" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="80" y="176" width="200" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="2.5"/>
+  <text x="180" y="204" text-anchor="middle">人工關卡：核准</text>
+  <line x1="180" y1="220" x2="180" y2="238" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="80" y="242" width="200" height="44" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="270" text-anchor="middle">代理程式：實作、審查</text>
+  <line x1="180" y1="286" x2="180" y2="304" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="80" y="308" width="200" height="44" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="336" text-anchor="middle">合併請求（PR）</text>
+  <text x="180" y="384" text-anchor="middle" class="sub">全部在 Docker 沙盒裡進行</text>
+</svg>
