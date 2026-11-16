@@ -1,0 +1,189 @@
+{
+  "date": "2026-11-16",
+  "issueNumber": 45,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-16T07:00:00+08:00",
+  "fetchedAt": "2026-11-16T00:31:48.508Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "google-labs-code/stitch-skills",
+      "name": "google-labs-code/stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "language": "TypeScript",
+      "starsToday": 247,
+      "stars": 9285,
+      "summary": "stitch-skills 是一組給寫程式的人工智慧助手使用的「技能」（Agent Skills），搭配 Google 的介面設計工具 Stitch。技能就像一張張寫好步驟的工作單，助手照著做就能完成固定的工作。這些技能分成設計、產生程式碼和輔助工具三類，例如把現有的前端程式碼轉成 Stitch 設計稿、用文字或圖片產生新畫面，以及把 Stitch 的畫面轉成 React 或 React Native 元件。說明文件寫明，使用前要先設定 Stitch 的模型上下文協定（MCP）伺服器；它可用在 Codex、Claude Code、Cursor、Gemini CLI 等工具。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-16/google-labs-code/stitch-skills.svg",
+        "alt": "流程圖：前端程式碼經過技能變成 Stitch 設計稿，設計稿再經過技能變成 React 元件；兩邊都要透過 Stitch MCP 伺服器。",
+        "caption": "stitch-skills：技能讓助手在程式碼與 Stitch 設計稿之間來回轉換。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50511395,
+      "title": "Old Bitly Links Are Being Hijacked",
+      "titleZh": "舊的 Bitly 短網址被人重新註冊，指向無關內容",
+      "url": "https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50511395",
+      "score": 129,
+      "comments": 61,
+      "summary": "資安新聞網站 Ransomnews 報導，漢堡王 2011 年推文裡的 Bitly 短網址，在 2026 年 11 月 15 日被別人重新註冊，改連到維基百科的納粹集中營列表；麥當勞 2011 年推文的短網址，18 分鐘前也以同樣方式被改。短網址就像門牌，門牌被別人重新登記，舊信封上的地址就會帶人到別的地方。報導寫明，兩家公司的帳號都沒有被入侵。Ransomnews 檢查川普 2009 至 2013 年推文中的 97 個 Bitly 連結，其中 7 個改連到其他地方、1 個被 Bitly 封鎖。Bitly 當天在 X 上表示已停權相關帳號，並停用受影響的連結。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-16/50511395.svg",
+        "alt": "流程圖：2011 年的推文含有短網址，原本連到餐廳查詢頁；2026 年同一個短網址被重新註冊，改連到無關頁面。",
+        "caption": "推文沒有改，改的是短網址背後的去處。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "Tencent/LoopForge",
+      "name": "Tencent/LoopForge",
+      "url": "https://github.com/Tencent/LoopForge",
+      "language": "Go",
+      "starsToday": 423,
+      "stars": 1467,
+      "summary": "LoopForge 是騰訊開源的工作平台，以 MIT 授權發布，團隊可以架在自己的伺服器上，讓寫程式的人工智慧代理程式交付軟體。使用者在對話中向「Main Bot」描述需求，它會開一個 Docker 沙盒（像一間隔離的工作室），取出程式碼儲存庫、分派給不同角色，最後開出合併請求（PR）。做法穩定後，可以存成標準作業程序（SOP），由代理程式、腳本和「人工關卡」依序執行；人工關卡就像蓋章核准，沒有人簽核就不往下走。說明文件列出可接上 CodeBuddy、Codex、Claude Code 等十種命令列工具，安裝需要 Docker 與 Python 3。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-16/Tencent/LoopForge.svg",
+        "alt": "流程圖：需求進入規劃、實作、審查三個代理程式步驟，中間有人工關卡，最後產生合併請求。",
+        "caption": "LoopForge 的標準作業程序：代理程式依序工作，人工關卡核准後才往下走。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50511806,
+      "title": "Preserving 30 Years of Salon Journalism",
+      "titleZh": "網際網路檔案館保存 Salon 三十年的報導",
+      "url": "https://blog.archive.org/2026/11/12/preserving-30-years-of-salon-journalism/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50511806",
+      "score": 45,
+      "comments": 9,
+      "summary": "網際網路檔案館（Internet Archive）在部落格上表示，1995 年創刊的線上刊物 Salon 已宣布停刊。網際網路檔案館的「時光機」（Wayback Machine）就像一座替網頁拍照存檔的圖書館，近 30 年來一直保存 Salon 的網站，包括 salon1999.com、salonmag.com，以及 1999 年起使用的 salon.com。文章寫道，目前可以在時光機裡找到超過 25 萬篇 Salon 文章。網際網路檔案館也推出實驗性的「Salon Explorer」介面，收錄超過 2 萬位作者的作品，讀者可以用篩選條件找文章。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "ggml-org/ggml",
+      "name": "ggml-org/ggml",
+      "url": "https://github.com/ggml-org/ggml",
+      "language": "C++",
+      "starsToday": 43,
+      "stars": 15903,
+      "summary": "ggml 是一個給機器學習用的張量程式庫，以 MIT 授權開源。張量可以想成一疊疊排好的數字表格，機器學習模型的計算大多是在這些表格之間做乘法和加法。說明文件寫明，它用純 C/C++ 寫成、不依賴其他套件，可在 x86、ARM、RISC-V、WebAssembly 等平台執行，也支援中央處理器、圖形處理器、神經網路處理器和瀏覽器。它支援 2 到 8 位元的整數量化，量化就像把照片壓縮成較小的檔案，讓模型占用較少記憶體。說明文件也寫明執行期間不另外配置記憶體，對核心程式庫的修改要送到 llama.cpp 專案。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50509837,
+      "title": "Protomaps: Self-hosting map tiles has gotten cheap and easy",
+      "titleZh": "用 Protomaps 自己架設地圖圖磚，成本變低",
+      "url": "https://bruceroettgers.eu/blog/protomaps/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50509837",
+      "score": 138,
+      "comments": 32,
+      "summary": "蘇黎世聯邦理工學院的學生 Bruce Röttgers 在部落格介紹 PMTiles。PMTiles 是 Protomaps 生態系的地圖圖磚格式，整張地圖存成一個檔案，瀏覽器用 HTTP 範圍請求只拿需要的那一段，就像只翻字典裡要查的那一頁。他寫道，Mapbox 在免費額度用完後每一千次載入收 5 美元。他把 139 GB 的世界地圖放到 Bunny.net，複製到多數洲時，儲存費用約每月 5 美元；在筆電上看歐洲地圖並放大到一個城市，約傳輸 5 MB。他估算每一千次載入約 0.05 美元，但也說明實際流量依使用者行為而不同。他建議限制下載速度，避免有人下載整個檔案。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-16/50509837.svg",
+        "alt": "示意圖：一個大的地圖檔放在 CDN 上，瀏覽器用範圍請求只取其中一小段。",
+        "caption": "PMTiles：整張地圖一個檔，瀏覽器只拿需要的那一段。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "elementalsouls/Claude-BugHunter",
+      "name": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "language": "Python",
+      "starsToday": 98,
+      "stars": 6427,
+      "summary": "Claude-BugHunter 是一組給 Claude Code 使用的技能包，用途是漏洞賞金（bug bounty）與對外的紅隊演練。漏洞賞金就像公司公開懸賞，請外部的人在允許範圍內找出系統弱點並回報。作者表示，它包含 83 項技能和 15 個斜線指令，整理了 681 份已公開的 HackerOne 漏洞報告中的偵測模式，涵蓋 24 類核心弱點，另有報告撰寫、嚴重程度評估和個人資料遮蔽等步驟。說明文件寫明，範圍只限從網際網路就能接觸到的外部系統，內部網域攻擊和規避防毒軟體等內容刻意不收錄；作者也表示它用於經授權的演練和公開練習平台。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50511718,
+      "title": "Show HN: The Last Complication, a Zachtronics-style watchmaking puzzle game",
+      "titleZh": "Show HN：The Last Complication，做鐘錶的解謎遊戲",
+      "url": "https://lastcomplication.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50511718",
+      "score": 21,
+      "comments": 4,
+      "summary": "這是在 Hacker News 上發表的網頁解謎遊戲，標題說它是 Zachtronics 風格；Zachtronics 是一家以工程類解謎遊戲聞名的遊戲公司。遊戲網站只有遊戲本身，所以本則依網站畫面與 Hacker News 討論整理。畫面上有齒輪、零件數、黃銅用量和尺寸等欄位，主題是做鐘錶，網站也寫明畫面是為直立的手機螢幕設計。發文者在討論中留言說，這是用 Fable 5.2 製作的。有網友表示，自己不懂齒輪比怎麼算，希望遊戲內有提示表幫助入門。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "GoogleChrome/modern-web-guidance-src",
+      "name": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "language": "TypeScript",
+      "starsToday": 1219,
+      "stars": 7154,
+      "summary": "這是 Modern Web Guidance 的原始碼儲存庫，裡面有撰寫、調整和評估指南內容的程式與文件。Modern Web Guidance 是一組給寫程式人工智慧助手使用的技能，把較新的網頁標準寫法、建議做法和瀏覽器支援資料，直接放進助手看得到的內容裡。說明文件寫道，語言模型的訓練資料有大量舊程式碼，所以助手常寫出舊式寫法；這套指南就像一本隨時更新的參考書，涵蓋版面、效能、表單、無障礙等主題，約 250 項網頁功能。專案由 Google Chrome、Microsoft Edge、Mozilla Firefox 和 MDN 團隊共同維護，可用 npx 指令搜尋或安裝。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50509308,
+      "title": "A short explainer on how El Niño works [video]",
+      "titleZh": "聖嬰現象如何運作的簡短解說影片",
+      "url": "https://www.youtube.com/watch?v=7_JF3etiAv8",
+      "hnUrl": "https://news.ycombinator.com/item?id=50509308",
+      "score": 161,
+      "comments": 61,
+      "summary": "這則連到 YouTube 上的影片，本站抓取時收到請求過多的回應，未能取得影片說明，所以本則依 Hacker News 討論整理。影片主題是聖嬰現象（El Niño）。有網友指出，影片的實際標題是「2026–27 年聖嬰冬季：飛行員應該預期什麼」，內容主要針對美國。也有網友分享巴西和法國的解說影片，以及一個每日海面溫度的圖表網站。這則貼文有 161 分、61 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-11-16/gear-ratio.svg",
+      "alt": "一個圓頭小人看著三個大小不同的齒輪，頭上冒出問號，旁邊寫著希望有提示表。",
+      "caption": "做鐘錶之前，先想請齒輪給一張提示表。",
+      "relatedItemId": "50511718"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
+  <rect width="360" height="300" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro 300ei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" marker300eight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">今日一笑</text>
+  <circle cx="70" cy="150" r="24" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <circle cx="62" cy="146" r="2.5" fill="#1c1915"/>
+  <circle cx="78" cy="146" r="2.5" fill="#1c1915"/>
+  <line x1="62" y1="160" x2="78" y2="160" stroke="#1c1915" stroke-width="2"/>
+  <rect x="48" y="176" width="44" height="60" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="70" y="112" text-anchor="middle" style="font-size:28px">?</text>
+  <circle cx="190" cy="130" r="42" fill="none" stroke="#1c1915" stroke-width="2" stroke-dasharray="8 4"/>
+  <circle cx="190" cy="130" r="5" fill="#1c1915"/>
+  <circle cx="262" cy="160" r="26" fill="none" stroke="#1c1915" stroke-width="2" stroke-dasharray="6 3"/>
+  <circle cx="262" cy="160" r="4" fill="#1c1915"/>
+  <circle cx="306" cy="122" r="16" fill="none" stroke="#1c1915" stroke-width="2" stroke-dasharray="4 3"/>
+  <circle cx="306" cy="122" r="3" fill="#1c1915"/>
+  <rect x="140" y="204" width="200" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="240" y="230" text-anchor="middle" style="font-size:15px">齒輪比……有提示表嗎？</text>
+  <line x1="140" y1="224" x2="96" y2="200" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="282" text-anchor="middle" class="sub">做鐘錶之前，先想要一張提示表</text>
+</svg>

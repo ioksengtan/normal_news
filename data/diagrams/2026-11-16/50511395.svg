@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340">
+  <rect width="360" height="340" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro 340ei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" marker340eight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">同一個短網址，換了去處</text>
+  <rect x="20" y="46" width="320" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="70" text-anchor="middle">2011 年的推文</text>
+  <text x="180" y="88" text-anchor="middle" class="sub">內容沒有改，帳號沒有被入侵</text>
+  <line x1="180" y1="96" x2="180" y2="118" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="100" y="122" width="160" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="150" text-anchor="middle">Bitly 短網址</text>
+  <line x1="150" y1="166" x2="95" y2="214" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <line x1="210" y1="166" x2="265" y2="214" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="16" y="218" width="156" height="70" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="94" y="244" text-anchor="middle">原本</text>
+  <text x="94" y="268" text-anchor="middle" class="sub">餐廳查詢頁</text>
+  <rect x="188" y="218" width="156" height="70" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="266" y="244" text-anchor="middle">2026-11-15 起</text>
+  <text x="266" y="268" text-anchor="middle" class="sub">別人選的無關頁面</text>
+  <text x="180" y="322" text-anchor="middle" class="sub">Bitly 表示已停用受影響的連結</text>
+</svg>
