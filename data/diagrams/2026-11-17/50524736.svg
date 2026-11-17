@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380">
+  <rect width="360" height="380" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">只看程式名稱，打一個勾</text>
+  <rect x="20" y="46" width="320" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="70" text-anchor="middle">執行的程式：codex.exe</text>
+  <text x="180" y="88" text-anchor="middle" class="sub">（測試時是 cmd.exe 改名而成）</text>
+  <line x1="180" y1="96" x2="180" y2="118" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="20" y="122" width="320" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="146" text-anchor="middle">比對名稱清單</text>
+  <text x="180" y="164" text-anchor="middle" class="sub">codex、claude、cursor、gcc……</text>
+  <line x1="180" y1="172" x2="180" y2="194" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="20" y="198" width="320" height="62" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="34" y="220" class="sub">每格代表一個工具：</text>
+  <rect x="160" y="208" width="26" height="26" fill="none" stroke="#5e584e"/>
+  <rect x="192" y="208" width="26" height="26" fill="none" stroke="#5e584e"/>
+  <rect x="224" y="208" width="26" height="26" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <path d="M229,221 L235,228 L246,213" fill="none" stroke="#1c1915" stroke-width="2.5"/>
+  <rect x="256" y="208" width="26" height="26" fill="none" stroke="#5e584e"/>
+  <text x="180" y="252" text-anchor="middle" class="sub">只記「有沒有用過」，沒有提示文字或程式碼</text>
+  <line x1="180" y1="260" x2="180" y2="282" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="20" y="286" width="320" height="50" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="310" text-anchor="middle">報告排進上傳佇列</text>
+  <text x="180" y="328" text-anchor="middle" class="sub">條件：「選用診斷資料」開啟</text>
+  <text x="180" y="364" text-anchor="middle" class="sub">此開關可以在設定中關閉</text>
+</svg>

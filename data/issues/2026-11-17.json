@@ -1,0 +1,189 @@
+{
+  "date": "2026-11-17",
+  "issueNumber": 46,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-17T07:00:00+08:00",
+  "fetchedAt": "2026-11-17T00:31:38.891Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "getarcaneapp/arcane",
+      "name": "getarcaneapp/arcane",
+      "url": "https://github.com/getarcaneapp/arcane",
+      "language": "Go",
+      "starsToday": 46,
+      "stars": 8712,
+      "summary": "Arcane 是用 Go 語言寫的 Docker 管理工具，專案描述是「給每個人用的 Docker 管理」。Docker 會把程式和它需要的東西裝進「容器」，就像把貨物裝進規格相同的貨櫃，方便搬到別台電腦執行；Arcane 則提供一個儀表板畫面，讓人管理這些容器。說明文件寫明，主分支是第 3 版，第 2 版放在另一個分支；安裝與設定步驟放在官方文件網站。專案以 BSD-3-Clause 授權發布，並公開軟體物料清單（SBOM），也就是列出它用到哪些元件的清單；介面翻譯在 Crowdin 平台上由志工協助。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-17/getarcaneapp/arcane.svg",
+        "alt": "示意圖：使用者透過 Arcane 的儀表板，管理一台電腦上的三個 Docker 容器，容器畫成貨櫃。",
+        "caption": "Arcane：用一個儀表板管理裝成「貨櫃」的 Docker 容器。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50522980,
+      "title": "Carnegie Mellon is putting computer science courses on YouTube for free",
+      "titleZh": "卡內基美隆大學把資訊科學課程免費放上 YouTube",
+      "url": "https://www.cs.cmu.edu/learn/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50522980",
+      "score": 531,
+      "comments": 89,
+      "summary": "美國卡內基美隆大學（Carnegie Mellon University）資訊科學學院開了一個叫 CS Learn 的網頁，標語是「免費、線上、照自己的步調學」。網頁寫明，課堂錄影現在免費放在 YouTube，免費的課程教材是下一步。課程來自學院的七個系，主題包括人工智慧、機器人、系統和生物等。網頁列出的課程中，「大型資料集的機器學習」和「計算原理」已經可以觀看；「軟體建構原理」與「機器學習系統」標示 11 月 17 日首播，「人工智慧代理程式」標示 11 月 19 日首播。網頁也提供訂閱通知的按鈕。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "DeanChensj/jiangshan-map",
+      "name": "DeanChensj/jiangshan-map",
+      "url": "https://github.com/DeanChensj/jiangshan-map",
+      "language": "JavaScript",
+      "starsToday": 288,
+      "stars": 6700,
+      "summary": "jiangshan-map（江山時序）是一份可以互動的中國歷史地圖，範圍從西元前 403 年到現在，分成 18 個時期。使用者拖動下方的時間軸，地圖上的疆域、河道和長城等工程就跟著年份改變，時間軸上方也會顯示當年在位的君主。點一座古城，會打開一張卡片，列出這個地方在各個朝代的名稱與行政區劃，以及在當地發生的事件。搜尋框可以輸入歷史人物，例如蘇軾或玄奘，地圖會依時間順序標出他們一生走過的地點。說明文件另外提到地名小測驗，以及可以分享特定年份與地點的網址。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50524736,
+      "title": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
+      "titleZh": "Windows 11 會記錄使用者用了哪些寫程式的人工智慧代理程式與開發工具",
+      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50524736",
+      "score": 98,
+      "comments": 47,
+      "summary": "研究者 Xusheng Li 在部落格說明，他反組譯 Windows 11 的元件 MissionControlAggregator.dll，發現裡面列了 codex.exe、claude.exe、cursor.exe 等代理程式，以及 python.exe、gcc.exe 等開發工具的檔名。反組譯就像把組好的機器拆開看零件。他寫道，這個元件比對執行中程式的名稱，用位元標記「有沒有用過」，沒有記錄提示文字或程式碼。他把 cmd.exe 改名成 codex.exe 測試，在上傳佇列中找到對應的報告。報告屬於「選用診斷資料」，他測試的美國區全新安裝預設開啟，使用者可以在設定中關閉。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-17/50524736.svg",
+        "alt": "流程圖：執行的程式名稱被比對，比對到就把一格打勾，再整理成報告；若選用診斷資料開啟，報告進入上傳佇列。",
+        "caption": "只看程式名稱，打一個勾；選用診斷資料開著，報告就排進上傳佇列。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "mvanhorn/last30days-skill",
+      "name": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "language": "Python",
+      "starsToday": 135,
+      "stars": 68116,
+      "summary": "last30days-skill 是給人工智慧代理程式用的「技能」，可以安裝在 Claude Code、Codex、Cursor 等工具。技能就像一張寫好步驟的工作單，助手照著做。使用者輸入一個主題，它會同時搜尋 Reddit、X、YouTube、Hacker News、Polymarket 等平台過去 30 天的內容，依按讚數、相關程度和新舊排序，把講同一件事的貼文合在一起，最後整理成一份註明來源的摘要。說明文件寫明，資料預設留在使用者自己的電腦；設定外部模型金鑰時，主題和搜尋到的片段會送到該服務重新排序。專案以 MIT 授權發布，需要 Python 3.12 以上。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50523601,
+      "title": "BugMeNot has closed",
+      "titleZh": "BugMeNot 網站關閉",
+      "url": "https://www.bugmenot.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50523601",
+      "score": 254,
+      "comments": 136,
+      "summary": "BugMeNot 的首頁換成一則公告，內容只有「BugMeNot 已經關閉」和一句感謝想像過更好網路的人，下方是一串大寫英文字母，沒有說明關閉原因。因為原文只有這幾句，以下依 Hacker News 討論整理：留言者說明，BugMeNot 是讓人分享各網站登入帳號的網站，想看要求註冊的網頁時，可以借用別人公開的帳號，不必自己註冊，就像共用一張借書證。有留言者表示常用它；也有幾位留言者說，近幾年網站上的帳號大多已經無法登入。這則討論有 254 分、136 則留言。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "NVIDIA/SkillEvaluator",
+      "name": "NVIDIA/SkillEvaluator",
+      "url": "https://github.com/NVIDIA/SkillEvaluator",
+      "language": "Python",
+      "starsToday": 873,
+      "stars": 2681,
+      "summary": "SkillEvaluator 是 NVIDIA 發布的工具，用來檢查人工智慧代理程式的「技能」，並量測技能對工作結果的影響。技能是一個資料夾，裡面放著指示和輔助檔案，像給助手看的操作手冊。檢查分三層：第一層確認格式正確、內容安全；第二層找出重複或重疊的說明；第三層在沙盒裡讓代理程式實際做題，比較有裝與沒裝技能時的結果。沙盒就像一間隔離的練習室。說明文件寫明，第一層可以不用模型金鑰執行，附帶的範例技能得到 88.8 分，及格線預設 70 分。它以 Apache 2.0 授權發布，可用 pip 安裝。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-17/NVIDIA/SkillEvaluator.svg",
+        "alt": "流程圖：一個技能資料夾依序經過第一層驗證、第二層找重複、第三層實際試做，最後產生報告。",
+        "caption": "SkillEvaluator 的三層檢查：先看格式與安全，再找重複，最後實際試做。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50523300,
+      "title": "World's Largest Brands Infected With Malware Via Optimizely",
+      "titleZh": "惡意程式透過 Optimizely 出現在 178 個組織的網站上",
+      "url": "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50523300",
+      "score": 134,
+      "comments": 24,
+      "summary": "資安公司 Report URI 的 Scott Helme 寫道，2026 年 11 月 16 日，178 個組織的網站透過網頁實驗平台 Optimizely Web 載入了惡意的 JavaScript 程式，名單包括 Zoom、BBC、CNN、GitLab 與 HSBC。這類平台會在網站放一小段共用程式碼，就像每家店都掛同一家廠商的看板，看板被換掉，每家店都受影響。文章寫明，惡意程式會替換網頁上的加密貨幣錢包地址、竊取信用卡資料與 Cookie，並對 iOS 18.6 以前的裝置嘗試攻擊。文章寫道，截至當天 19:25（世界協調時間），攻擊者錢包收到約 7,040 美元，多數網站在當晚清除。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-17/50523300.svg",
+        "alt": "示意圖：一個被改動的 Optimizely 共用程式碼，同時送到多個網站，訪客的瀏覽器再收到惡意程式。",
+        "caption": "共用的一段程式碼被改動，載入它的網站一起受影響。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "google-research/paper-orchestra",
+      "name": "google-research/paper-orchestra",
+      "url": "https://github.com/google-research/paper-orchestra",
+      "language": "Python",
+      "starsToday": 313,
+      "stars": 1499,
+      "summary": "PaperOrchestra 是 Google Cloud 人工智慧研究團隊發布的多代理程式框架，用來自動撰寫人工智慧研究論文。多代理程式就像一個分工的小組，每個成員負責一件事。它把研究者寫下的想法和實驗紀錄，交給負責大綱、文獻回顧、各章節寫作、內容修改和畫圖的代理程式，最後產出 LaTeX 格式的論文稿；LaTeX 是學術界常用的排版語言。說明文件寫明，使用時要自己提供 OpenAI 或 Gemini 等模型的金鑰，文獻搜尋會用到 Semantic Scholar 的金鑰；論文生成用的資料集沒有放在儲存庫裡，之後另外公開。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50524225,
+      "title": "How to Break into Security, Ptacek Edition (2012)",
+      "titleZh": "怎麼進入資安領域：Ptacek 篇（2012 年）",
+      "url": "https://krebsonsecurity.com/2012/06/how-to-break-into-security-ptacek-edition/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50524225",
+      "score": 60,
+      "comments": 16,
+      "summary": "這是資安記者 Brian Krebs 在 2012 年 6 月刊出的文章，是「怎麼進入資安領域」系列的第一篇，內容是 Matasano Security 創辦人 Thomas Ptacek 的建議。Ptacek 建議先學會寫程式，並認為應用程式安全是較好的工作方向；應用程式安全就是找出軟體的漏洞，或設計修補方法。他列出入門步驟：熟悉至少一種程式語言，讀《The Web Application Hacker's Handbook》，在雲端主機架設很舊版本的 WordPress，再用 Burp Suite 等免費工具找漏洞，就像在自己的練習場練習。他也建議資訊部門的人靠近公司內部的軟體開發。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-11-17/lecture-premiere.svg",
+      "alt": "一個圓頭小人抱著爆米花坐在螢幕前，螢幕上寫著課程首播倒數。",
+      "caption": "首播倒數中：「機器學習系統」標示 11 月 17 日首播。",
+      "relatedItemId": "50522980"
+    }
+  ]
+}

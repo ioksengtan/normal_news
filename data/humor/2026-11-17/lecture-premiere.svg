@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
+  <rect width="360" height="300" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="150" y="40" width="190" height="130" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="245" y="76" text-anchor="middle" class="sub">首播倒數</text>
+  <text x="245" y="106" text-anchor="middle">機器學習系統</text>
+  <text x="245" y="136" text-anchor="middle" class="sub">11 月 17 日</text>
+  <rect x="235" y="170" width="20" height="24" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="72" cy="150" r="22" fill="none" stroke="#1c1915" stroke-width="2"/>
+  <circle cx="80" cy="146" r="2.5" fill="#1c1915"/>
+  <circle cx="90" cy="146" r="2.5" fill="#1c1915"/>
+  <rect x="48" y="174" width="48" height="56" fill="none" stroke="#1c1915" stroke-width="2"/>
+  <path d="M96,196 L118,206 L136,214 L104,214 Z" fill="#ebe4d4" stroke="#1c1915"/>
+  <circle cx="110" cy="202" r="5" fill="#f4f0e6" stroke="#1c1915"/>
+  <circle cx="121" cy="205" r="5" fill="#f4f0e6" stroke="#1c1915"/>
+  <circle cx="116" cy="196" r="5" fill="#f4f0e6" stroke="#1c1915"/>
+  <rect x="34" y="230" width="76" height="10" fill="#5e584e"/>
+  <rect x="96" y="84" width="40" height="26" rx="8" fill="#fffdf8" stroke="#1c1915"/>
+  <text x="116" y="102" text-anchor="middle" class="sub">免費</text>
+  <text x="180" y="276" text-anchor="middle" class="sub">課堂錄影放上 YouTube，先準備好爆米花</text>
+</svg>

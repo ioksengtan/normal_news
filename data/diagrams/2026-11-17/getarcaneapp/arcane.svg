@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330">
+  <rect width="360" height="330" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">Arcane：一個畫面管理 Docker 容器</text>
+  <circle cx="60" cy="88" r="16" fill="none" stroke="#1c1915" stroke-width="2"/>
+  <rect x="44" y="106" width="32" height="34" fill="none" stroke="#1c1915" stroke-width="2"/>
+  <text x="60" y="162" text-anchor="middle" class="sub">使用者</text>
+  <line x1="84" y1="112" x2="146" y2="112" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="152" y="70" width="180" height="84" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="242" y="100" text-anchor="middle">Arcane 儀表板</text>
+  <rect x="170" y="114" width="40" height="24" fill="#ebe4d4" stroke="#5e584e"/>
+  <rect x="222" y="114" width="40" height="24" fill="#ebe4d4" stroke="#5e584e"/>
+  <rect x="274" y="114" width="40" height="24" fill="#ebe4d4" stroke="#5e584e"/>
+  <line x1="242" y1="160" x2="242" y2="200" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="20" y="206" width="320" height="82" fill="none" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="34" y="226" class="sub">一台電腦上的 Docker</text>
+  <rect x="36" y="236" width="88" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <line x1="58" y1="236" x2="58" y2="276" stroke="#5e584e"/><line x1="80" y1="236" x2="80" y2="276" stroke="#5e584e"/><line x1="102" y1="236" x2="102" y2="276" stroke="#5e584e"/>
+  <rect x="136" y="236" width="88" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <line x1="158" y1="236" x2="158" y2="276" stroke="#5e584e"/><line x1="180" y1="236" x2="180" y2="276" stroke="#5e584e"/><line x1="202" y1="236" x2="202" y2="276" stroke="#5e584e"/>
+  <rect x="236" y="236" width="88" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <line x1="258" y1="236" x2="258" y2="276" stroke="#5e584e"/><line x1="280" y1="236" x2="280" y2="276" stroke="#5e584e"/><line x1="302" y1="236" x2="302" y2="276" stroke="#5e584e"/>
+  <text x="180" y="314" text-anchor="middle" class="sub">容器像規格相同的貨櫃，裝著程式和它需要的東西</text>
+</svg>

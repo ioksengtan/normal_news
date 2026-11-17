@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340">
+  <rect width="360" height="340" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">一段共用程式碼被改動</text>
+  <rect x="90" y="46" width="180" height="56" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="70" text-anchor="middle">Optimizely 共用程式碼</text>
+  <text x="180" y="90" text-anchor="middle" class="sub">被加入惡意程式</text>
+  <line x1="130" y1="102" x2="64" y2="150" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <line x1="180" y1="102" x2="180" y2="150" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <line x1="230" y1="102" x2="296" y2="150" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="20" y="154" width="90" height="48" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="65" y="183" text-anchor="middle">網站 A</text>
+  <rect x="135" y="154" width="90" height="48" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="183" text-anchor="middle">網站 B</text>
+  <rect x="250" y="154" width="90" height="48" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="295" y="183" text-anchor="middle">網站 C</text>
+  <text x="180" y="224" text-anchor="middle" class="sub">文章寫明共 178 個組織的網站</text>
+  <line x1="180" y1="232" x2="180" y2="258" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="40" y="262" width="280" height="52" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="286" text-anchor="middle">訪客的瀏覽器</text>
+  <text x="180" y="305" text-anchor="middle" class="sub">錢包地址被換、信用卡資料被竊</text>
+</svg>
