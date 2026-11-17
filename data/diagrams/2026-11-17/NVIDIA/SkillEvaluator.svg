@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400">
+  <rect width="360" height="400" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">SkillEvaluator 的三層檢查</text>
+  <rect x="110" y="44" width="140" height="40" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="70" text-anchor="middle">技能資料夾</text>
+  <line x1="180" y1="84" x2="180" y2="104" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="30" y="108" width="300" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="46" y="132">第一層：驗證</text>
+  <text x="46" y="153" class="sub">格式正確嗎？內容安全嗎？（可不用金鑰）</text>
+  <line x1="180" y1="164" x2="180" y2="184" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="30" y="188" width="300" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="46" y="212">第二層：找重複</text>
+  <text x="46" y="233" class="sub">說明有沒有重複或重疊？</text>
+  <line x1="180" y1="244" x2="180" y2="264" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="30" y="268" width="300" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="46" y="292">第三層：實際試做</text>
+  <text x="46" y="313" class="sub">在沙盒裡比較有裝與沒裝技能</text>
+  <line x1="180" y1="324" x2="180" y2="344" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="130" y="348" width="100" height="38" fill="#ebe4d4" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="180" y="373" text-anchor="middle">報告</text>
+</svg>
