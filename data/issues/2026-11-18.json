@@ -1,0 +1,184 @@
+{
+  "date": "2026-11-18",
+  "issueNumber": 47,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-18T07:00:00+08:00",
+  "fetchedAt": "2026-11-18T00:31:56.744Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "alibaba/open-code-review",
+      "name": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "language": "Go",
+      "starsToday": 763,
+      "stars": 53718,
+      "summary": "Open Code Review 是阿里巴巴集團開源的程式碼審查命令列工具，用 Go 語言寫成，以 Apache-2.0 授權發布。程式碼審查就像交作業前請同學幫忙挑錯；這個工具讀取 Git 記下的改動，把改過的檔案交給可自行設定的大型語言模型（LLM）代理程式，產生標明「第幾行」的審查意見。說明文件寫明，它把工作分成兩半：選哪些檔案、怎麼分組、套用哪些規則，由固定的程式邏輯負責；需要臨場判斷和查找上下文的部分，交給模型代理程式。說明文件表示，它原本是阿里巴巴內部使用兩年的審查助手。它也能以技能形式在 Claude Code、Codex、Cursor 等工具裡使用。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-18/alibaba/open-code-review.svg",
+        "alt": "流程圖：Git 改動先經過固定程式邏輯選檔、分組、套規則，再交給模型代理程式，最後產生標明行號的審查意見。",
+        "caption": "Open Code Review：固定流程負責選檔與規則，模型負責判斷，最後寫出逐行意見。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50538240,
+      "title": "Java4Shell: RCE in OpenJDK when processing Base64",
+      "titleZh": "Java4Shell：OpenJDK 處理 Base64 時的遠端程式碼執行漏洞",
+      "url": "https://calif.io/java4shell/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50538240",
+      "score": 437,
+      "comments": 113,
+      "summary": "資安公司 Calif 公布 Java4Shell（CVE-2026-114938），是 OpenJDK  Base64 解碼器的記憶體損毀漏洞；Base64 是把二進位資料寫成文字的方式。Calif 表示，OpenJDK 在部分 x86-64 處理器上以手寫組合語言加速解碼；65 個字元的錯誤輸入會讓 50 位元組的陣列被寫入 64 位元組，超出結尾 62 位元組，像字寫出格子蓋到隔壁。該公司表示，已在 Jenkins、Jira 等軟體示範從遠端讓伺服器執行程式。受影響的是 OpenJDK 17.0.6 以後版本，ARM64 處理器不受影響；Oracle 已於 11 月 17 日發布修補程式。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-18/50538240.svg",
+        "alt": "示意圖：一個 50 位元組的格子被寫入 64 位元組，多出的 62 位元組蓋到隔壁的資料。",
+        "caption": "Java4Shell：配置 50 位元組，卻寫入 64 位元組，超出結尾 62 位元組。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "cursor/plugins",
+      "name": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins",
+      "language": "TypeScript",
+      "starsToday": 201,
+      "stars": 16894,
+      "summary": "cursor/plugins 是程式編輯器 Cursor 的外掛規格與官方外掛集合，以 MIT 授權發布。外掛就像替工具加裝的配件，裝上就多一種功能。說明文件寫明，每個外掛是儲存庫根目錄下的一個獨立資料夾，裡面有自己的 plugin.json 設定檔；根目錄的 marketplace.json 列出全部外掛，像商店的商品目錄。外掛可以包含代理程式技能、Cursor 規則，以及模型上下文協定（Model Context Protocol，MCP）伺服器設定。清單中的外掛用途包括教學、程式碼審查、把大任務分給多個雲端代理程式，以及建立新外掛，作者有 Cursor 官方，也有個別開發者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50535230,
+      "title": "GPT‑6.2 Astra and Sol",
+      "titleZh": "GPT-6.2 Astra 與 Sol",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50535230",
+      "score": 1053,
+      "comments": 664,
+      "summary": "OpenAI 的發表頁面標題是推出 GPT-6.2 Astra 與 Sol 兩款模型。官方頁面拒絕存取，無法取得，本則依 Hacker News 討論整理。有留言者表示，在他們自己的資料分析測驗中，Astra 每次花費從約 20 美元降到約 4 美元，Sol 從 2.6 美元降到 1.2 美元，正確率相近；他也提到，模型有時提早結束，沒找到預期的答案。另有留言者引述系統卡，也就是說明模型測試結果的文件，寫道 GPT-6.2 Astra 比 GPT-6 Astra 更常表示懷疑自己正在被測試。也有留言者認為，發表文中的投影片範例品質不佳。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "obra/superpowers",
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "language": "Shell",
+      "starsToday": 1917,
+      "stars": 319321,
+      "summary": "Superpowers 是給程式寫作代理程式用的一套軟體開發方法，由一組可以組合的「技能」構成，以 MIT 授權發布。技能就像貼在工作台上的步驟卡，代理程式遇到對應情況會自己拿來照做。說明文件寫明的基本流程是：先用提問釐清需求並寫成設計，經使用者同意後開新分支，把工作拆成每項 2 到 5 分鐘的小任務，再交給子代理程式逐項實作與審查。實作時採用測試驅動開發，也就是先寫一個會失敗的測試，再寫讓它通過的程式。它可安裝在 Claude Code、Codex、Cursor、Gemini CLI 等多種工具，作者是 Jesse Vincent 與 Prime Radiant 團隊。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50538994,
+      "title": "Quad9's withdrawal from France: A canary in the coal mine",
+      "titleZh": "Quad9 撤出法國：煤礦裡的金絲雀",
+      "url": "https://blog.cloudflare.com/quad9-withdrawal-from-france/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50538994",
+      "score": 199,
+      "comments": 49,
+      "summary": "Cloudflare 在部落格寫道，瑞士非營利基金會 Quad9 上個月宣布，將讓免費的公共網域名稱系統（Domain Name System，DNS）解析器撤出法國。DNS 就像網路的電話簿，解析器則像幫你查號碼的總機。文章寫道，法國法院因 Quad9 未封鎖涉嫌侵害著作權的網域，判處每日罰款。文章也提到，思科的 OpenDNS 先前曾撤出法國與葡萄牙；比利時法院則下令 Cloudflare、Google、思科在 2027 年 1 月初前透過公共解析器封鎖網站。Cloudflare 認為這類封鎖換一台解析器就能繞過，還會擋住整個網域，主張應要求存放盜版檔案的主機業者下架。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-18/50538994.svg",
+        "alt": "示意圖：電腦向 DNS 解析器查網址，解析器像總機回傳號碼；被要求封鎖時不回傳，但換一台解析器仍查得到。",
+        "caption": "DNS 解析器像查號總機。Cloudflare 認為，換一台總機就能繞過封鎖。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "backnotprop/plannotator",
+      "name": "backnotprop/plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "language": "TypeScript",
+      "starsToday": 691,
+      "stars": 13063,
+      "summary": "Plannotator 是在自己電腦的瀏覽器裡開啟的審閱介面，給使用人工智慧程式寫作代理程式的人用，可選 Apache 2.0 或 MIT 授權。說明文件寫明，它透過外掛、掛鉤與指令接上代理程式；代理程式提出計畫、決策，或完成一段工作時，畫面會在瀏覽器打開，使用者可以標註、留言，再把意見送回代理程式，就像老師用紅筆批改作文後交還學生。它也能審閱本機的程式改動，或 GitHub、GitLab 上的合併請求。新加入的 Inbox 是一個本機視窗，代理程式在工作時把問題和檔案留在這裡，使用者有空再回覆。支援的工具包括 Claude Code、Codex、Copilot CLI 等。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50539747,
+      "title": "Archive Team is archiving the Apple Support Community (closes November 20, 2026)",
+      "titleZh": "Archive Team 正在備份 Apple 支援社群（11 月 20 日關閉）",
+      "url": "https://wiki.archiveteam.org/index.php/Apple_Discussions",
+      "hnUrl": "https://news.ycombinator.com/item?id=50539747",
+      "score": 33,
+      "comments": 3,
+      "summary": "志工組織 Archive Team 的維基頁面寫明，他們正在備份 Apple Discussions，也就是 Apple 支援社群。這是 Apple 的線上論壇，使用者在上面提問、分享建議、排解 Apple 產品的問題。頁面引用的 Apple 公告寫道，社群即日起不再接受新貼文，只能閱讀，並將在 2026 年 11 月 20 日永久關閉，之後請改用 Apple 官方支援網站；頁面記載關閉消息是在 11 月 10 日公布。頁面列出英文、法文、中文、日文、韓文、德文、西班牙文、葡萄牙文等語言版本的網址。備份採分散方式進行，就像很多人各搬一箱書，任何人都能下載他們的 warrior 程式參與。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "sveltejs/svelte",
+      "name": "sveltejs/svelte",
+      "url": "https://github.com/sveltejs/svelte",
+      "language": "JavaScript",
+      "starsToday": 477,
+      "stars": 89587,
+      "summary": "Svelte 是用來做網頁應用程式的開源工具，以 MIT 授權發布。說明文件寫明，Svelte 是一個編譯器：開發者用宣告式的元件描述畫面該長什麼樣子，Svelte 再把它轉成 JavaScript，在畫面需要變動時，只更新文件物件模型（Document Object Model，DOM）裡相關的部分。編譯器就像翻譯員，先把設計圖翻成瀏覽器看得懂的指令；DOM 則像網頁的骨架，每個按鈕和段落都是骨架上的一節。說明文件也寫到，開發工作由志工推動，可以透過 Open Collective 贊助，款項用於主機等開銷；官方網站上公布了開發路線圖。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50534631,
+      "title": "Nvidia stopped disclosing Singapore sales as revenues hit $104B",
+      "titleZh": "營收達 1,040 億美元之際，輝達停止揭露新加坡銷售額",
+      "url": "https://www.ft.com/content/dbde7a30-548c-4f9d-a4be-7898a0c24dcf",
+      "hnUrl": "https://news.ycombinator.com/item?id=50534631",
+      "score": 367,
+      "comments": 179,
+      "summary": "原文刊在《金融時報》，該網站的 robots.txt 拒絕存取，依本站規則不抓取，本則依 Hacker News 討論整理。標題寫道，輝達（Nvidia）在營收達 1,040 億美元之際，停止揭露新加坡的銷售數字。有留言者表示，這筆 1,040 億美元是輝達新加坡子公司 2025 年的對外營收，經新加坡下單的訂單，客戶可能來自世界各地。另有留言者比對輝達向美國證券交易委員會提交的季報，指出 2025 年 7 月之後，地區營收的分法從「客戶帳單地點」改成「客戶總部所在地」。也有留言者認為，這只是營收如何歸類的會計問題。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-11-18/forum-boxes.svg",
+      "alt": "幾個圓頭小人各抱著一個紙箱，從掛著「11 月 20 日關閉」牌子的房子走出來。",
+      "caption": "趕在 11 月 20 日關閉前，志工一人搬一箱，把論壇備份帶走。",
+      "relatedItemId": "50539747"
+    }
+  ]
+}
