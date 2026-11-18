@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
+  <rect width="360" height="360" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">DNS 解析器像查號總機</text>
+  <rect x="20" y="52" width="110" height="52" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="75" y="84" text-anchor="middle">你的電腦</text>
+  <rect x="220" y="52" width="120" height="52" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="280" y="76" text-anchor="middle">解析器 A</text>
+  <text x="280" y="95" text-anchor="middle" class="sub">查號總機</text>
+  <line x1="130" y1="68" x2="216" y2="68" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <text x="174" y="60" text-anchor="middle" class="sub">查網址</text>
+  <line x1="220" y1="92" x2="134" y2="92" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <text x="174" y="122" text-anchor="middle" class="sub">回傳號碼</text>
+  <line x1="20" y1="148" x2="340" y2="148" stroke="#5e584e" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="180" y="176" text-anchor="middle">被要求封鎖某個網域時</text>
+  <rect x="220" y="196" width="120" height="52" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="280" y="228" text-anchor="middle">解析器 A</text>
+  <rect x="20" y="196" width="110" height="52" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="75" y="228" text-anchor="middle">你的電腦</text>
+  <line x1="130" y1="222" x2="216" y2="222" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <text x="174" y="214" text-anchor="middle" class="sub">不回傳</text>
+  <rect x="220" y="278" width="120" height="52" fill="#fffdf8" stroke="#1c1915" stroke-width="1.5"/>
+  <text x="280" y="310" text-anchor="middle">解析器 B</text>
+  <line x1="75" y1="248" x2="75" y2="304" stroke="#1c1915" stroke-width="2"/>
+  <line x1="75" y1="304" x2="216" y2="304" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <text x="145" y="296" text-anchor="middle" class="sub">換一台</text>
+  <text x="180" y="350" text-anchor="middle" class="sub">Cloudflare 認為：換解析器就能繞過</text>
+</svg>
