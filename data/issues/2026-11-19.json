@@ -1,0 +1,184 @@
+{
+  "date": "2026-11-19",
+  "issueNumber": 48,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-19T07:00:00+08:00",
+  "fetchedAt": "2026-11-19T00:31:49.126Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "HKUDS/CLI-Anything",
+      "name": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "language": "Python",
+      "starsToday": 389,
+      "stars": 59729,
+      "summary": "CLI-Anything 是用 Python 寫成的開源專案，目標是讓各種軟體都能交給人工智慧代理程式操作。命令列介面（CLI）就像用打字下指令的遙控器；代理程式是能自己一步步完成工作的人工智慧程式。說明文件寫明，它用七個階段的自動流程，從分析某個軟體的原始碼開始，設計並寫出這個軟體專用的命令列工具，再寫測試與文件，最後發布到 PyPI。產生的工具會呼叫真正的應用程式，例如用 LibreOffice 輸出 PDF、用 Blender 算出 3D 畫面，並附上一份 SKILL.md 說明檔，讓 Claude Code、Cursor 等代理程式知道怎麼使用。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-19/HKUDS/CLI-Anything.svg",
+        "alt": "流程圖：軟體原始碼經過七階段自動流程，產生命令列工具與 SKILL.md，代理程式再透過它呼叫真正的應用程式。",
+        "caption": "CLI-Anything：把軟體做成代理程式能用打字操作的遙控器。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50552424,
+      "title": "Gemini 4 Neon",
+      "titleZh": "Google 發表 Gemini 4 系列新模型 Neon",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50552424",
+      "score": 359,
+      "comments": 344,
+      "summary": "Google DeepMind 於 11 月 18 日發表 Gemini 4 系列的大型語言模型 Neon。Google 表示，它在最高思考等級 xhigh 下，於 Artificial Analysis 智慧指數以 61 分排第 3，在 Vals 指數排第 2（70.9%）；原文未完整說明各項測試條件。價格是每百萬個輸入詞元 3 美元、輸出詞元 15 美元；詞元（token）是模型計算文字的單位，像把句子切成小塊。重複使用的快取輸入為每百萬 0.15 美元。即日起在 Gemini API 與 Gemini app 付費方案等管道陸續開放。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "nvm-sh/nvm",
+      "name": "nvm-sh/nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "language": "Shell",
+      "starsToday": 237,
+      "stars": 96155,
+      "summary": "nvm（Node Version Manager）是用 shell 指令稿寫成的 Node.js 版本管理工具。Node.js 是讓 JavaScript 在電腦上執行的環境，不同專案常需要不同版本；nvm 就像一個鞋櫃，放好幾雙鞋，出門前挑一雙穿。使用者在命令列輸入「nvm install 24」安裝第 24 版，輸入「nvm use 22」就換成第 22 版。說明文件寫明，它裝在每個使用者自己的帳號下，並在每一個終端機視窗各自生效；可在符合可攜式作業系統介面（POSIX）標準的 sh、dash、ksh、zsh、bash 上使用，支援 Unix、macOS 與 Windows 的 WSL。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50554010,
+      "title": "Software companies are trying to kill home computing",
+      "titleZh": "部落格文章：軟體公司正試圖消滅家用電腦",
+      "url": "https://lateblt.livejournal.com/526188.html",
+      "hnUrl": "https://news.ycombinator.com/item?id=50554010",
+      "score": 32,
+      "comments": 7,
+      "summary": "這是部落格作者 lateblt 於 2026 年 7 月 14 日在 LiveJournal 發表的個人看法文章。作者認為，硬體公司靠產品品質換取回頭客，軟體公司不賣實體商品，因此想把軟體改成按期付費的訂閱，並把程式和資料移到「雲端」，也就是公司遠端的伺服器上。作者以「桌面即服務」為例：整台電腦變成遠端伺服器上的程式，畫面由伺服器傳來，使用者無法決定安裝哪些軟體。作者也提到，微軟已取消本地端 Exchange 郵件伺服器的永久授權，新版本只能用訂閱制。以上是作者的看法。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "astral-sh/uv",
+      "name": "astral-sh/uv",
+      "url": "https://github.com/astral-sh/uv",
+      "language": "Rust",
+      "starsToday": 258,
+      "stars": 92226,
+      "summary": "uv 是 Astral 公司用 Rust 語言寫成的 Python 套件與專案管理工具。套件就像別人做好的零件，寫程式時拿來組裝；uv 負責下載零件、記下版本，並準備獨立的工作環境。說明文件寫明，它想用一個工具取代 pip、pip-tools、pipx、poetry、pyenv、twine、virtualenv 等工具，也能安裝與切換 Python 版本，或執行單一檔案的程式並自動裝好它需要的套件。Astral 表示，uv 比 pip 快 10 到 100 倍；說明文件的示意以已有快取時安裝 Trio 專案的相依套件為例，詳細條件寫在專案的效能比較文件。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-19/astral-sh/uv.svg",
+        "alt": "示意圖：pip、pipx、poetry、pyenv、virtualenv 等多個工具的方塊，以箭頭合併到一個 uv 方塊。",
+        "caption": "uv：說明文件寫明，想用一個工具取代多個 Python 工具。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50547374,
+      "title": "Unauthenticated remote code execution in Nginx",
+      "titleZh": "NGINX 出現免登入即可遠端執行程式碼的漏洞",
+      "url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities",
+      "hnUrl": "https://news.ycombinator.com/item?id=50547374",
+      "score": 1097,
+      "comments": 493,
+      "summary": "資安公司 Wiz 於 11 月 18 日公布網頁伺服器軟體 NGINX 的兩個漏洞 CVE-2026-123633 與 CVE-2026-123007。NGINX 像大樓的接待櫃台，把連線轉給後面的網站或應用程式介面（API）；Wiz 表示它服務超過 2.25 億個網站。兩個漏洞都出在處理 HTTP/2 連線時的記憶體管理，開啟 HTTP/2 時，未登入的攻擊者可能在伺服器上執行程式。Wiz 列出的受影響版本分別是 1.19.7 至 1.31.8，以及 1.9.5 至 1.31.8。NGINX 的開發公司 F5 已同日發布安全更新；Wiz 建議無法立即更新時，先關閉 HTTP/2。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-19/50547374.svg",
+        "alt": "示意圖：網路連線經過 NGINX 接待櫃台再轉給後面的網站與應用程式介面，HTTP/2 處理處標示有漏洞，解法是更新或先關閉 HTTP/2。",
+        "caption": "NGINX 像接待櫃台；兩個漏洞都在 HTTP/2 的記憶體管理。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "jquery/jquery",
+      "name": "jquery/jquery",
+      "url": "https://github.com/jquery/jquery",
+      "language": "JavaScript",
+      "starsToday": 266,
+      "stars": 60009,
+      "summary": "jQuery 是給網頁開發者使用、以 JavaScript 寫成的程式庫。程式庫就像一盒大家都能拿來組東西的樂高積木，不用每次從頭做起。說明文件寫明，jQuery 4.0.0 已於 2026 年 1 月 17 日發布，目前 4.x 版由主要分支完整支援；3.x 版只接受重大更新，2.x 與 1.x 版不再支援，舊版本的商業支援可向 HeroDevs 或 TuxCare 取得。除了瀏覽器，jQuery 也支援 Node、瀏覽器擴充功能等其他環境。自己建置 jQuery 需要 Node.js、npm 與 git。專案會議在 matrix.org 平台舉行，會議紀錄公開在網站上。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50548021,
+      "title": "Seven new models at scalable price-performance",
+      "titleZh": "微軟 AI 部門發表七款新模型",
+      "url": "https://microsoft.ai/news/microsoft-ignite-2026/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50548021",
+      "score": 427,
+      "comments": 296,
+      "summary": "微軟 AI 部門（MAI）於 11 月 17 日在 Ignite 2026 大會發表新一批模型；模型是能讀寫文字、程式或處理圖片聲音的人工智慧程式。微軟表示，寫程式用的 MAI Code 2 以 GPT-6.1 Sol 約四成的價格，達到它 98% 的程式品質；資安用的 MAI Cyber 2 Flash 在 CyberGym-E2E 測試中，以不到 2% 的每項任務成本，品質超過 GPT-6 Astra。原文未完整說明測試條件。微軟也推出 MAI Licensed Weights，讓企業在自己的 Azure 環境執行並調整模型。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "appwrite/appwrite",
+      "name": "appwrite/appwrite",
+      "url": "https://github.com/appwrite/appwrite",
+      "language": "TypeScript",
+      "starsToday": 232,
+      "stars": 58234,
+      "summary": "Appwrite 是以 BSD 3-Clause 授權開源的後端平台，給開發者和人工智慧代理程式用來建置應用程式。後端就像餐廳的廚房，客人看不到，但登入、存資料、寄通知都在這裡完成。說明文件列出的服務包括：身分驗證、資料庫（也可用代管的 PostgreSQL 與 MySQL）、檔案儲存、無伺服器函式、網站部署、訊息推播、防火牆與即時事件。它內建模型情境協定（MCP）伺服器，讓 Cursor、Claude Code、Codex 等程式碼代理程式能直接操作執行中的 Appwrite 專案。使用者可以用官方的雲端服務，也可以用 Docker 架在自己的機器上。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50547620,
+      "title": "Inside Deutsche Bank",
+      "titleZh": "「Inside Deutsche Bank」：德意志銀行外洩文件調查",
+      "url": "https://www.inside-db.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50547620",
+      "score": 535,
+      "comments": 186,
+      "summary": "這是多家新聞媒體合作、以德意志銀行為題的調查報導網站。網站表示，調查依據的是超過 1500 萬份從德意志銀行外洩的檔案，內容涵蓋該銀行的反金融犯罪、制裁監控、內部稽核，以及決定是否保留高風險客戶的部門。合作媒體包括《金融時報》、《紐約時報》、荷蘭的 Follow The Money、西班牙的 elDiario.es 等，各自發表系列報導，題目包括該銀行與俄羅斯客戶、武器產業及個別客戶的往來。網站另設有「德意志銀行回應」頁面。本則只整理網站首頁列出的內容。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-11-19/shoe-rack.svg",
+      "alt": "一個圓頭小人站在鞋櫃前，鞋櫃裡有標著 24、22、20 的三雙鞋，小人拿起 22 號那雙。",
+      "caption": "nvm 像鞋櫃：輸入「nvm use 22」，今天就穿第 22 版出門。",
+      "relatedItemId": "nvm-sh/nvm"
+    }
+  ]
+}
