@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 440">
+  <rect width="360" height="440" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">把軟體做成打字遙控器</text>
+  <rect x="80" y="44" width="200" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="66" text-anchor="middle">某個軟體的原始碼</text>
+  <text x="180" y="85" text-anchor="middle" class="sub">例如 LibreOffice、Blender</text>
+  <line x1="180" y1="94" x2="180" y2="118" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="40" y="124" width="280" height="70" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="150" text-anchor="middle">七階段自動流程</text>
+  <text x="180" y="172" text-anchor="middle" class="sub">分析 → 設計 → 寫程式 → 測試 → 文件</text>
+  <text x="180" y="188" text-anchor="middle" class="sub">→ 發布到 PyPI</text>
+  <line x1="180" y1="194" x2="180" y2="218" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="20" y="224" width="150" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="95" y="250" text-anchor="middle">命令列工具</text>
+  <text x="95" y="270" text-anchor="middle" class="sub">打字下指令的遙控器</text>
+  <rect x="190" y="224" width="150" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="265" y="250" text-anchor="middle">SKILL.md</text>
+  <text x="265" y="270" text-anchor="middle" class="sub">告訴代理程式怎麼用</text>
+  <line x1="180" y1="284" x2="180" y2="308" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="60" y="314" width="240" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="341" text-anchor="middle">代理程式（Claude Code 等）</text>
+  <line x1="180" y1="358" x2="180" y2="382" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <text x="180" y="404" text-anchor="middle">呼叫真正的應用程式</text>
+  <text x="180" y="426" text-anchor="middle" class="sub">輸出 PDF、算出 3D 畫面</text>
+</svg>

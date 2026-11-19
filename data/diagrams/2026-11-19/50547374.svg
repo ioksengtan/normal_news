@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400">
+  <rect width="360" height="400" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">接待櫃台的 HTTP/2 窗口出問題</text>
+  <rect x="100" y="44" width="160" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="70" text-anchor="middle">網路上的連線</text>
+  <line x1="180" y1="84" x2="180" y2="108" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="40" y="114" width="280" height="96" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="140" text-anchor="middle">NGINX（接待櫃台）</text>
+  <rect x="80" y="152" width="200" height="44" fill="#fffdf8" stroke="#1c1915" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="180" y="172" text-anchor="middle">HTTP/2 記憶體管理</text>
+  <text x="180" y="189" text-anchor="middle" class="sub">兩個漏洞在這裡</text>
+  <line x1="120" y1="210" x2="95" y2="236" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <line x1="240" y1="210" x2="265" y2="236" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="20" y="242" width="150" height="44" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="95" y="270" text-anchor="middle">網站</text>
+  <rect x="190" y="242" width="150" height="44" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="265" y="270" text-anchor="middle">應用程式介面</text>
+  <text x="180" y="316" text-anchor="middle" class="sub">未登入的攻擊者可能在伺服器上執行程式</text>
+  <rect x="40" y="332" width="280" height="54" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="355" text-anchor="middle">F5 已發布安全更新</text>
+  <text x="180" y="376" text-anchor="middle" class="sub">Wiz 建議：不能立即更新就先關閉 HTTP/2</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320">
+  <rect width="360" height="320" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="190" y="60" width="150" height="210" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <line x1="190" y1="130" x2="340" y2="130" stroke="#1c1915" stroke-width="2"/>
+  <line x1="190" y1="200" x2="340" y2="200" stroke="#1c1915" stroke-width="2"/>
+  <rect x="215" y="98" width="40" height="22" rx="6" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <rect x="265" y="98" width="40" height="22" rx="6" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="265" y="88" text-anchor="middle">24</text>
+  <text x="265" y="158" text-anchor="middle" class="sub">（空位）</text>
+  <rect x="215" y="238" width="40" height="22" rx="6" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <rect x="265" y="238" width="40" height="22" rx="6" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="265" y="228" text-anchor="middle">20</text>
+  <circle cx="80" cy="120" r="24" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <circle cx="72" cy="116" r="2.5" fill="#1c1915"/>
+  <circle cx="88" cy="116" r="2.5" fill="#1c1915"/>
+  <path d="M72,128 Q80,134 88,128" fill="none" stroke="#1c1915" stroke-width="2"/>
+  <rect x="58" y="146" width="44" height="64" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <line x1="70" y1="210" x2="70" y2="262" stroke="#1c1915" stroke-width="2"/>
+  <line x1="90" y1="210" x2="90" y2="262" stroke="#1c1915" stroke-width="2"/>
+  <line x1="102" y1="160" x2="140" y2="178" stroke="#1c1915" stroke-width="2"/>
+  <rect x="132" y="172" width="40" height="22" rx="6" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="152" y="215" text-anchor="middle">22</text>
+  <rect x="14" y="20" width="164" height="54" rx="10" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="96" y="44" text-anchor="middle" style="font-size:14px">nvm use 22</text>
+  <text x="96" y="64" text-anchor="middle" style="font-size:14px">今天穿第 22 版</text>
+  <line x1="80" y1="74" x2="80" y2="94" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="300" text-anchor="middle" class="sub">鞋櫃裡還有第 24 版和第 20 版</text>
+</svg>
