@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400">
+  <rect width="360" height="400" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro 400ei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" marker400eight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">從零訓練一個小模型</text>
+  <rect x="80" y="44" width="200" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="70" text-anchor="middle">資料清理</text>
+  <line x1="180" y1="84" x2="180" y2="106" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="80" y="112" width="200" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="138" text-anchor="middle">預訓練</text>
+  <line x1="180" y1="152" x2="180" y2="174" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="80" y="180" width="200" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="206" text-anchor="middle">監督式微調（SFT）</text>
+  <line x1="180" y1="220" x2="180" y2="242" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="80" y="248" width="200" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="274" text-anchor="middle">強化學習</text>
+  <line x1="180" y1="288" x2="180" y2="310" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="60" y="316" width="240" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="344" text-anchor="middle">約 6400 萬參數的小模型</text>
+  <text x="180" y="386" text-anchor="middle" class="sub">單張 3090 跑一輪 SFT 約 2 小時</text>
+</svg>

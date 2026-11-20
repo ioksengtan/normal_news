@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320">
+  <rect width="360" height="320" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro 320ei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" marker320eight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <rect x="14" y="40" width="96" height="120" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <path d="M24,62 Q40,52 52,70 T84,60 T100,74" fill="none" stroke="#5e584e" stroke-width="2"/>
+  <path d="M24,92 Q36,110 56,90 T98,100" fill="none" stroke="#5e584e" stroke-width="2"/>
+  <rect x="30" y="112" width="26" height="20" fill="#ebe4d4" stroke="#5e584e" stroke-width="2"/>
+  <path d="M64,140 L98,118 M64,118 L98,140" stroke="#5e584e" stroke-width="2"/>
+  <text x="62" y="182" text-anchor="middle" class="sub">雜亂的網頁</text>
+  <line x1="114" y1="100" x2="140" y2="100" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="146" y="70" width="80" height="60" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="186" y="105" text-anchor="middle" style="font-size:13px">Firecrawl</text>
+  <line x1="230" y1="100" x2="256" y2="100" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="262" y="40" width="84" height="120" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <line x1="274" y1="62" x2="334" y2="62" stroke="#1c1915" stroke-width="2"/>
+  <line x1="274" y1="84" x2="334" y2="84" stroke="#1c1915" stroke-width="2"/>
+  <line x1="274" y1="106" x2="334" y2="106" stroke="#1c1915" stroke-width="2"/>
+  <line x1="274" y1="128" x2="320" y2="128" stroke="#1c1915" stroke-width="2"/>
+  <text x="304" y="182" text-anchor="middle" class="sub">乾淨的筆記</text>
+  <circle cx="186" cy="226" r="20" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <circle cx="179" cy="222" r="2.5" fill="#1c1915"/>
+  <circle cx="193" cy="222" r="2.5" fill="#1c1915"/>
+  <path d="M179,232 Q186,238 193,232" fill="none" stroke="#1c1915" stroke-width="2"/>
+  <rect x="168" y="248" width="36" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <line x1="204" y1="260" x2="256" y2="170" stroke="#1c1915" stroke-width="2"/>
+  <rect x="226" y="224" width="126" height="46" rx="10" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="289" y="244" text-anchor="middle" style="font-size:13px">代理程式：</text>
+  <text x="289" y="262" text-anchor="middle" style="font-size:13px">這樣好讀多了</text>
+</svg>

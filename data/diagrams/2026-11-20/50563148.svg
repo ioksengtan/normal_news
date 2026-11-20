@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320">
+  <rect width="360" height="320" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro 320ei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" marker320eight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">溫度升高，宇宙突然換樣子</text>
+  <rect x="20" y="56" width="140" height="130" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <circle cx="50" cy="90" r="6" fill="#5e584e"/>
+  <circle cx="90" cy="80" r="6" fill="#5e584e"/>
+  <circle cx="130" cy="100" r="6" fill="#5e584e"/>
+  <circle cx="60" cy="140" r="6" fill="#5e584e"/>
+  <circle cx="110" cy="150" r="6" fill="#5e584e"/>
+  <circle cx="140" cy="165" r="6" fill="#5e584e"/>
+  <circle cx="45" cy="170" r="6" fill="#5e584e"/>
+  <text x="90" y="210" text-anchor="middle">低溫：充滿氣體</text>
+  <rect x="200" y="56" width="140" height="130" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <circle cx="270" cy="121" r="36" fill="#1c1915"/>
+  <text x="270" y="210" text-anchor="middle">高溫：黑洞</text>
+  <line x1="164" y1="121" x2="194" y2="121" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <line x1="30" y1="250" x2="330" y2="250" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <text x="180" y="240" text-anchor="middle" class="sub">溫度</text>
+  <line x1="180" y1="256" x2="180" y2="270" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="290" text-anchor="middle">在某一點突然轉變</text>
+  <text x="180" y="310" text-anchor="middle" class="sub">像水到 100°C 突然沸騰</text>
+</svg>

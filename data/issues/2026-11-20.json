@@ -1,0 +1,184 @@
+{
+  "date": "2026-11-20",
+  "issueNumber": 49,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-20T07:00:00+08:00",
+  "fetchedAt": "2026-11-20T00:32:00.770Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "elementalsouls/Claude-BugHunter",
+      "name": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "language": "Python",
+      "starsToday": 1349,
+      "stars": 12510,
+      "summary": "Claude-BugHunter 是一組給 Claude Code 使用的技能包，主要語言是 Python，用途是漏洞獵捕與外部紅隊演練。漏洞獵捕是替網站找出安全漏洞並回報；紅隊演練像在取得授權後，請人扮演小偷來測試門鎖牢不牢。技能（skill）就像一本本工作手冊，使用者用平常的話描述要測試什麼，代理程式就會自動翻開相關的那本。說明文件寫明，它有 83 項技能與 15 個斜線指令，內容整理自 681 份已公開的 HackerOne 漏洞報告，涵蓋 24 類核心漏洞，並寫明會待在授權範圍內。可用 Claude Code 外掛安裝，也能裝到 OpenCode、Codex CLI 等其他代理程式。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-20/elementalsouls/Claude-BugHunter.svg",
+        "alt": "流程圖：使用者描述要測試的目標，Claude Code 自動翻開相關的技能手冊，手冊共 83 項技能與 15 個斜線指令。",
+        "caption": "Claude-BugHunter：83 項技能像一排工作手冊，整理自 681 份公開報告。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50562754,
+      "title": "Anthropic’s Nasdaq debut",
+      "titleZh": "Anthropic 在那斯達克掛牌上市",
+      "url": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50562754",
+      "score": 850,
+      "comments": 1660,
+      "summary": "這則連到路透社的報導，但該網站的 robots.txt 拒絕本站讀取，因此沒有抓原文，以下依 Hacker News 討論整理。首次公開募股（IPO）是公司第一次把股票賣給一般大眾，像把原本只有少數人能買的股份公開販售。討論中一則留言寫道，Anthropic 股票代號 ANT，承銷價 83 美元，開盤價 111.5 美元，上市首日收盤價 97.17 美元，比承銷價上漲 17.07%，比開盤價下跌 12.85%。另有留言者寫，市值一度約 1.5 兆美元，之後約 1.2 兆美元。這些數字來自留言，本站沒有另外查證。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "jingyaogong/minimind",
+      "name": "jingyaogong/minimind",
+      "url": "https://github.com/jingyaogong/minimind",
+      "language": "Python",
+      "starsToday": 238,
+      "stars": 66852,
+      "summary": "MiniMind 是用 Python 寫成的開源專案，教人從零開始訓練一個約 6400 萬個參數的小型語言模型。參數就像模型裡可以調整的旋鈕，數量越多，模型越大；說明文件寫明，主分支最小的模型約是 GPT-3 的兩千七百分之一。作者表示，在單張 NVIDIA 3090 顯示卡上跑一輪監督式微調（SFT）約需 2 小時，對應的顯示卡租用費約人民幣 3 元。專案提供資料清理、預訓練、微調到強化學習的完整流程，核心演算法直接用 PyTorch 寫成，採 Apache 2.0 授權，可當作學習大型語言模型怎麼做出來的教材。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-20/jingyaogong/minimind.svg",
+        "alt": "流程圖：資料清理、預訓練、監督式微調、強化學習依序往下，最後得到約 6400 萬參數的小模型。",
+        "caption": "MiniMind 的訓練流程；單張 3090 跑一輪 SFT 約 2 小時。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50563066,
+      "title": "Pancreatic cancer halted by virus injection in three patients",
+      "titleZh": "三名胰臟癌患者注射病毒後，癌症停止進展",
+      "url": "https://www.newscientist.com/article/2528235-pancreatic-cancer-halted-by-virus-injection-in-three-patients/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50563066",
+      "score": 509,
+      "comments": 71,
+      "summary": "這則連到《新科學人》（New Scientist）的報導，但該網站的 robots.txt 拒絕本站讀取，因此沒有抓原文，以下依標題與 Hacker News 討論整理。標題指出，三名胰臟癌患者接受病毒注射後，癌症停止進展。討論中有留言者說，這類做法屬於溶瘤病毒療法，也就是用病毒來治療腫瘤，並列出 25 項相關臨床試驗；臨床試驗是新療法在病人身上逐步測試的研究。該留言者也提到，腺病毒很容易改造裝入的內容。另有留言者認為這是很早期的結果，也有人問報導是否寫出總共有多少人接受治療。原文的試驗名稱與人數，本站無法確認。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "firecrawl/firecrawl",
+      "name": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "language": "TypeScript",
+      "starsToday": 825,
+      "stars": 204208,
+      "summary": "Firecrawl 是以 TypeScript 為主的開源專案，能把網頁轉成整齊的 Markdown 文字給人工智慧代理程式讀。Markdown 是一種純文字排版格式，就像把雜亂的網頁抄成乾淨的筆記。說明文件寫明有三種用法：在自己電腦上執行的 Firecrawl Local、官方託管的 Firecrawl Cloud，以及自行架設伺服器。Firecrawl Local 可以抓取單頁、爬整個網站、列出所有網址，也能解析 PDF 與 Office 文件；執行 init 指令後，會加進 Claude Code、Cursor 等工具，成為模型情境協定（MCP）伺服器。雲端版另有搜尋與逾 550 個資料提供者。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50567209,
+      "title": "Synology Security Advisory",
+      "titleZh": "Synology 發布 DSM 等系統的重大安全公告",
+      "url": "https://www.synology.com/en-uk/security/advisory/Synology_SA_26_21",
+      "hnUrl": "https://news.ycombinator.com/item?id=50567209",
+      "score": 80,
+      "comments": 47,
+      "summary": "Synology 於 11 月 19 日發布安全公告，說明漏洞 CVE-2026-120382，嚴重程度列為「重大」，通用漏洞評分系統（CVSS）第 3 版基本分數 9.8 分；CVSS 像替漏洞打的危險分數。公告寫明，問題出在其作業系統 DSM 的 OAuth 介面，遠端攻擊者可以讀寫任意檔案或讓服務停擺。DSM 7.4 與 7.3 要升級到 7.4.1-90080-2、7.3.2-86009-6 或更新版，預計 11 月 20 日前推出；DSM 7.2.2、7.2.1、7.1 與 BeeStation OS 1.5 仍在處理中。暫時做法是停用 OAuth Service 套件。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "nginx/nginx",
+      "name": "nginx/nginx",
+      "url": "https://github.com/nginx/nginx",
+      "language": "C",
+      "starsToday": 73,
+      "stars": 32328,
+      "summary": "這是 NGINX 開源版的官方程式碼庫，用 C 語言寫成。NGINX 是網頁伺服器，也能當負載平衡器、反向代理、應用程式介面（API）閘道與內容快取。網頁伺服器像餐廳櫃台，負責把客人要的網頁送出去；負載平衡器像帶位員，把客人分到不同的桌子。它以簡化的兩條款 BSD 類授權免費發布，F5 公司另外提供企業版、商業支援與訓練。說明文件寫明，這份說明是給新手的基本入門，介紹運作方式、模組與設定檔，以及在 Linux、FreeBSD、Windows 上安裝，和從原始碼編譯的步驟。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50563148,
+      "title": "Claude solves two open problems in the physics of black holes",
+      "titleZh": "Anthropic：Claude 解出兩道黑洞物理的未解問題",
+      "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+      "hnUrl": "https://news.ycombinator.com/item?id=50563148",
+      "score": 355,
+      "comments": 159,
+      "summary": "Anthropic 於 11 月 17 日發文表示，Claude 解出兩道與黑洞有關的理論物理未解問題。第一題是 2003 年就有物理學家列出、但沒人算完的計算：這類理論宇宙低溫時充滿氣體，溫度超過某一點就改成黑洞，就像水到 100°C 會突然沸騰；Claude 讓多個自己的複本分工，算出即使時空沒有明確形狀，這個轉變仍是突然的。第二題在二維空間的簡化宇宙中，Claude 找出「拔靴法」（靠找出內部矛盾來排除錯誤理論）最簡單版本的確切上限，並證明不能再降低。文章寫明，結果已用證明檢查器 Lean 驗證，也由物理學家檢查；兩者都沒有實際應用。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-20/50563148.svg",
+        "alt": "示意圖：左邊低溫的宇宙充滿氣體粒子，右邊高溫的宇宙中有一個黑洞，兩者沿溫度軸在某一點突然轉變。",
+        "caption": "低溫是氣體，高溫是黑洞；Claude 算出時空模糊時這個轉變仍是突然的。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "openvinotoolkit/openvino",
+      "name": "openvinotoolkit/openvino",
+      "url": "https://github.com/openvinotoolkit/openvino",
+      "language": "C++",
+      "starsToday": 246,
+      "stars": 11558,
+      "summary": "OpenVINO 是用 C++ 寫成的開源工具組，用來最佳化並部署深度學習模型的推論。推論是讓訓練好的模型實際做事，就像學生學完之後真正上場作答。說明文件寫明，它可用在電腦視覺、自動語音辨識、生成式人工智慧與自然語言處理等工作；支援 PyTorch、TensorFlow、ONNX、Keras、PaddlePaddle 與 JAX/Flax 訓練出的模型，轉換後不需要原本的框架也能部署。它可在 x86 與 ARM 中央處理器、Intel 圖形處理器與 Intel 神經處理單元（NPU）上執行，用 pip install -U openvino 指令安裝。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50568130,
+      "title": "Gemini 4 Neon is the new #1 on the Models Engineering Index",
+      "titleZh": "Models Engineering Index 排行：Gemini 4 Neon 列第一",
+      "url": "https://git-aarvin.github.io/mei/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50568130",
+      "score": 19,
+      "comments": 4,
+      "summary": "Models Engineering Index（Mei）是一個網頁，計算語言模型在工程工作上的表現。網頁列出 19 個模型：Google 的 Gemini 4 Neon 指數 69.5 分排第 1，Anthropic 的 Fable 5.2 為 65.8 分、Opus 5.5 為 63.1 分，OpenAI 的 6.2 Astra 為 60.5 分。指數綜合 CursorBench、Terminal-Bench、IOI 等 7 項測試（測試像考卷）；網頁寫明資料來自 Cognition、Cursor、Laude Institute 與 Vals AI。網頁另列成本與詞元用量的倍數，原文未說明測試條件與比較基準。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-11-20/clean-notes.svg",
+      "alt": "一張畫滿亂線的網頁經過標著 Firecrawl 的方框，變成一張整齊的條列筆記，旁邊一個圓頭小人指著筆記說這樣好讀多了。",
+      "caption": "Firecrawl 把雜亂的網頁抄成乾淨的筆記，給代理程式讀。",
+      "relatedItemId": "firecrawl/firecrawl"
+    }
+  ]
+}
