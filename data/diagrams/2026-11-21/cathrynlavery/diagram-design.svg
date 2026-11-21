@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
+  <rect width="360" height="360" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">一句話變成一張圖</text>
+  <rect x="50" y="44" width="260" height="44" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="72" text-anchor="middle">「幫我畫架構圖」</text>
+  <line x1="180" y1="88" x2="180" y2="110" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="50" y="116" width="260" height="44" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="144" text-anchor="middle">助手挑圖種、先說計畫</text>
+  <line x1="180" y1="160" x2="180" y2="182" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="50" y="188" width="260" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="216" text-anchor="middle">寫出一個 HTML 檔</text>
+  <text x="180" y="256" text-anchor="middle" class="sub">圖本身是 SVG，瀏覽器直接打開</text>
+  <rect x="40" y="272" width="80" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <rect x="140" y="272" width="80" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <rect x="240" y="272" width="80" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="80" y="298" text-anchor="middle" font-size="14">淺色</text><text x="180" y="298" text-anchor="middle" font-size="14">深色</text><text x="280" y="298" text-anchor="middle" font-size="14">完整版面</text>
+  <text x="180" y="342" text-anchor="middle" class="sub">51 種圖，每種三種樣式</text>
+</svg>

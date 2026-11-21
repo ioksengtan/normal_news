@@ -1,0 +1,184 @@
+{
+  "date": "2026-11-21",
+  "issueNumber": 50,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-21T07:00:00+08:00",
+  "fetchedAt": "2026-11-21T00:31:47.825Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "cathrynlavery/diagram-design",
+      "name": "cathrynlavery/diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "language": "HTML",
+      "starsToday": 636,
+      "stars": 69272,
+      "summary": "diagram-design 是一套給人工智慧程式助手用的技能，採 MIT 授權。技能就像交給助手的一本工作手冊，助手讀了就知道某件事該怎麼做。使用者用平常的話提出需求，例如「幫我畫出前端、後端、資料庫的架構圖」，助手會挑選圖的種類、先說明打算怎麼畫，再寫出一個超文字標記語言（HTML）檔，用瀏覽器就能打開，圖本身是可縮放向量圖形（SVG）。說明文件寫明有 51 種圖，每種有淺色、深色與完整版面三種樣式。它也能把 draw.io、Mermaid 等工具畫的舊圖重畫，並依使用者網站的配色與字型調整。可安裝在 Claude Code、Codex、Cursor 等工具。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-21/cathrynlavery/diagram-design.svg",
+        "alt": "流程圖：使用者說「幫我畫架構圖」，助手挑選圖種並說明計畫，最後寫出一個 HTML 檔，有淺色、深色、完整版面三種樣式。",
+        "caption": "diagram-design：一句話交給助手，產出一個用瀏覽器就能開的 HTML 圖檔。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50579568,
+      "title": "Hurried Announcement: Alessandro Masullo GRH",
+      "titleZh": "數學課程部落格緊急公布：Alessandro Masullo 提出廣義黎曼猜想的證明",
+      "url": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50579568",
+      "score": 1437,
+      "comments": 664,
+      "summary": "這則連到史丹佛大學代數幾何課程「Math 216」的部落格，張貼者署名 ravivakil。黎曼猜想是數論裡跟質數怎麼分布有關的問題；廣義黎曼猜想（GRH）把同樣的問題推到更多情況。貼文寫道，Alessandro Masullo 提出一份廣義黎曼猜想的證明，數學家 Brian Conrad 已仔細檢查了好幾個月並給了大量意見，作者正在修改，目前看起來沒有問題，而且全部由人完成，沒有使用人工智慧。張貼者表示，原本打算請 Masullo 到史丹佛花一年修飾文稿，給足夠多的人看過後再公布，現在決定先放出目前的草稿。他希望大家盡快檢查、做形式化驗證，也就是把證明寫成電腦能一步步檢查的格式，並補上可能存在的小漏洞。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "mvanhorn/last30days-skill",
+      "name": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "language": "Python",
+      "starsToday": 681,
+      "stars": 71445,
+      "summary": "last30days 是一套用 Python 寫成的人工智慧代理程式技能，採 MIT 授權。代理程式像一位會自己上網查資料的助理，技能則是交給它的工作手冊。使用者輸入一個主題，它會同時搜尋 Reddit、X、YouTube、Hacker News、Polymarket、GitHub 與一般網頁上過去 30 天的內容，依按讚數、留言數等互動數字排序，再整理成一份摘要。Polymarket 是讓人用錢押注事件結果的預測市場。說明文件寫明，Reddit、Hacker News、Polymarket 與 GitHub 不用設定就能搜尋，X、YouTube 等來源要另外設定帳號或金鑰。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50581260,
+      "title": "Inkling 2 Mini",
+      "titleZh": "Thinking Machines 推出可在筆電執行的小型模型 Inkling 2 Mini",
+      "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50581260",
+      "score": 595,
+      "comments": 96,
+      "summary": "這則連到 Thinking Machines Lab 的公告，介紹開放權重語言模型 Inkling 2 系列的 Mini 版。開放權重是把訓練好的模型檔案公開，任何人都能下載到自己的電腦執行。該公司表示，模型有 24 層，分成四組、每組六層，中間兩組在產生每個字詞時重複跑三次，像把一道題目在腦中多想幾遍再回答。模型總參數 264 億，每個字詞只用到其中一部分；參數像模型裡可調的旋鈕。大部分權重以 NVFP4 低位元格式儲存，總共約 20GB，可用 Ollama 在記憶體 32GB 以上的 Mac 上執行。該公司表示，它在 DeepSWE v1.1 程式測試中解出 48.2% 的題目，並註明各模型的評測設定不同。公司也寫道，重複跑不會讓模型記住更多知識。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-21/50581260.svg",
+        "alt": "示意圖：24 層分成四組，第一組與第四組各跑一次，中間兩組各跑三次，旁邊有虛線箭頭表示重跑。",
+        "caption": "Inkling 2 Mini 的迴圈設計：中間兩組在每個字詞上跑三次。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "google-labs-code/stitch-skills",
+      "name": "google-labs-code/stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "language": "TypeScript",
+      "starsToday": 315,
+      "stars": 11030,
+      "summary": "stitch-skills 是 GitHub 帳號 google-labs-code 名下的專案，收錄一組給程式助手用的技能，搭配 Google 的介面設計工具 Stitch 使用。技能就像交給助手的工作手冊。使用前要先設定 Stitch 的模型上下文協定（MCP）伺服器；MCP 像一個轉接頭，讓助手能直接操作 Stitch。技能分成三組：設計組可用文字或圖片產生新畫面；建置組可把 Stitch 畫面轉成 React 或 React Native 元件，或做成導覽影片；工具組可整理設計規範文件 DESIGN.md，或把模糊的需求改寫成較清楚的提示。說明文件列出可搭配 Codex、Gemini CLI、Claude Code、Cursor 等。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50574968,
+      "title": "Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]",
+      "titleZh": "Levent Alpöge 宣稱證明了廣義黎曼猜想",
+      "url": "https://alpo.ge/remark.pdf",
+      "hnUrl": "https://news.ycombinator.com/item?id=50574968",
+      "score": 2309,
+      "comments": 1564,
+      "summary": "這則連到 Levent Alpöge 網站上一份四頁的 PDF 文件。黎曼猜想是數論裡跟質數怎麼分布有關的問題。他寫道，自己和人工智慧模型 Claude 合作，找到黎曼猜想的證明，這個方法還能延伸到廣義黎曼猜想。他表示，證明已用 Lean 完成形式化，也就是寫成電腦可以一步步檢查的格式，檔案分成 14 個部分放在他的網站上。他寫道，目前的論證非常長，自己還沒完全掌握其中的數學，所以先只公開 Lean 檔案，之後會再寫正式的說明。文件附有一份由 Claude 整理的時間軸，從 2026 年 10 月 6 日開始。文件本身沒有附上其他數學家的檢查結果。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "mjmirza/app-store-compliance",
+      "name": "mjmirza/app-store-compliance",
+      "url": "https://github.com/mjmirza/app-store-compliance",
+      "language": "Shell",
+      "starsToday": 869,
+      "stars": 2732,
+      "summary": "app-store-compliance 是一份幫手機應用程式通過 App Store 與 Google Play 上架審查的公開手冊，附一支檢查程式。上架審查像參加比賽前的資格檢查，資料不齊就會被退件。專案簡介寫明，它整理了 117 種常見退件情形與修正方法，並追蹤 95 個法規期限，例如歐盟人工智慧法案。使用者用一行指令掃描自己的 iOS 或 Android 專案，最後一行顯示「BLOCKED.」代表有嚴重的退件風險，「CLEAR.」代表程式碼中沒有找到嚴重風險。它也能裝進 Claude Code、Codex 等程式助手，在送審前自動檢查。2026 年 8 月 27 日以後的版本採 OpenRoots Agent License 2.3 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50583274,
+      "title": "NINLIVE: The Nine Inch Nails live archive",
+      "titleZh": "NINLIVE：九吋釘樂團現場演出資料庫",
+      "url": "https://ninlive.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50583274",
+      "score": 78,
+      "comments": 20,
+      "summary": "這則連到 NINLIVE 網站，是樂團九吋釘（Nine Inch Nails）的現場演出資料庫。網站寫明由歌迷經營，跟樂團沒有關係。首頁列出 1,210 場演唱會、1,949 份錄音、4,675 張照片與媒體，並追蹤 363 首歌曲。網站在 2026 年 11 月 16 日的更新中說，現在可以線上串流 1988 年到 2026 年的現場錄音；串流就是邊下載邊播放，不用先把整個檔案存下來。站長也寫道，正在上傳自己收藏的票根、歌單掃描與通行證，並徵求攝影師提供過去演出的照片。近期更新包括 1994 年 4 月 28 日洛杉磯場的一份先前沒有流傳過的錄音。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "Tracer-Cloud/opensre",
+      "name": "Tracer-Cloud/opensre",
+      "url": "https://github.com/Tracer-Cloud/opensre",
+      "language": "Python",
+      "starsToday": 466,
+      "stars": 13607,
+      "summary": "OpenSRE 是 Tracer-Cloud 用 Python 寫成的開源命令列代理程式，採 Apache 2.0 授權。開源是把原始碼公開，任何人都能看、能改。持續整合與持續部署（CI/CD）像工廠裡自動檢查每件產品的輸送帶，程式一改就自動測試；測試失敗時，畫面通常只說壞了，不說原因。OpenSRE 會讀取失敗那次的執行紀錄、追查原因，分辨是測試環境的問題還是程式碼的問題，再推送一份修正讓人審查。說明文件寫明，它可以部署在使用者自己的機器上、使用自己的模型，也提供 Python 介面，讓團隊接進既有的自動化流程。作者標示目前是公開測試的早期版本，功能還不完全穩定。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-21/Tracer-Cloud/opensre.svg",
+        "alt": "流程圖：CI 執行失敗後，OpenSRE 讀取執行紀錄、追查原因，分成測試環境問題或程式碼問題，最後推送修正給人審查。",
+        "caption": "OpenSRE 處理一次失敗的測試：讀紀錄、找原因、交出修正給人審查。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50579331,
+      "title": "We promoted developers into architects without informing them",
+      "titleZh": "我們把開發者升成了架構師，卻沒告訴他們",
+      "url": "https://manidoraisamy.com/developer-to-architect.html",
+      "hnUrl": "https://news.ycombinator.com/item?id=50579331",
+      "score": 268,
+      "comments": 168,
+      "summary": "這則連到 Mani Doraisamy 的部落格文章。作者說，他在查一個 Google 表單外掛程式的效能問題，發現同事用人工智慧寫的紀錄程式，在安裝後會先試著取得使用者的電子郵件，失敗再取使用者編號，再失敗就記錄錯誤；每一步背後都要多次呼叫 Google 的伺服器，結果歡迎畫面要 15 秒才出現。架構師像蓋房子前畫藍圖的人，決定整體怎麼搭。作者認為，懂架構的人會只記錄安裝時間，或先顯示畫面再在背景記錄。他的看法是，人工智慧只照需求寫程式、不會反駁需求，所以開發者的新工作是先定好架構與資料模型，再讓人工智慧在這個範圍內寫程式。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-11-21/welcome-wait.svg",
+      "alt": "一台螢幕寫著先問信箱、再問編號、再記錯誤，旁邊的圓頭小人看著時鐘問歡迎畫面在哪，已經等了 15 秒。",
+      "caption": "安裝後的紀錄程式排在前面，歡迎畫面等了 15 秒。",
+      "relatedItemId": "50579331"
+    }
+  ]
+}

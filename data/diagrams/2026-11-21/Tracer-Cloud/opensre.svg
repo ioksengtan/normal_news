@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420">
+  <rect width="360" height="420" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="28" text-anchor="middle">測試失敗之後</text>
+  <rect x="70" y="44" width="220" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="72" text-anchor="middle">CI 執行失敗</text>
+  <line x1="180" y1="88" x2="180" y2="108" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="70" y="114" width="220" height="44" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="142" text-anchor="middle">讀取執行紀錄</text>
+  <line x1="180" y1="158" x2="180" y2="178" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="70" y="184" width="220" height="44" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="212" text-anchor="middle">追查原因</text>
+  <line x1="140" y1="228" x2="90" y2="256" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <line x1="220" y1="228" x2="270" y2="256" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="20" y="262" width="140" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="90" y="288" text-anchor="middle">測試環境問題</text>
+  <rect x="200" y="262" width="140" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="270" y="288" text-anchor="middle">程式碼問題</text>
+  <line x1="90" y1="302" x2="160" y2="330" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <line x1="270" y1="302" x2="200" y2="330" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="70" y="336" width="220" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="364" text-anchor="middle">推送修正給人審查</text>
+  <text x="180" y="406" text-anchor="middle" class="sub">可裝在自己的機器、用自己的模型</text>
+</svg>
