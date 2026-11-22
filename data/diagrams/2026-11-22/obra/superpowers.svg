@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420">
+  <rect width="360" height="420" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro 420ei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" marker420eight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="30" text-anchor="middle">先問清楚，再動手</text>
+  <rect x="60" y="46" width="240" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="71" text-anchor="middle">① 問需求</text>
+  <text x="180" y="91" text-anchor="middle" class="sub">你真正想做什麼？</text>
+  <line x1="180" y1="102" x2="180" y2="122" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="60" y="128" width="240" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="153" text-anchor="middle">② 分段確認規格</text>
+  <text x="180" y="173" text-anchor="middle" class="sub">一段一段給你看</text>
+  <line x1="180" y1="184" x2="180" y2="204" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="60" y="210" width="240" height="56" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="235" text-anchor="middle">③ 寫實作計畫</text>
+  <text x="180" y="255" text-anchor="middle" class="sub">先寫測試，再寫程式</text>
+  <line x1="180" y1="266" x2="180" y2="286" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="60" y="292" width="240" height="56" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="317" text-anchor="middle">④ 子助手逐項完成</text>
+  <text x="180" y="337" text-anchor="middle" class="sub">做完互相檢查</text>
+  <text x="180" y="390" text-anchor="middle" class="sub">每一步由技能自動觸發</text>
+</svg>
