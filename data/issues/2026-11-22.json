@@ -1,0 +1,184 @@
+{
+  "date": "2026-11-22",
+  "issueNumber": 51,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-22T07:00:00+08:00",
+  "fetchedAt": "2026-11-22T00:31:25.438Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "obra/superpowers",
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "language": "Shell",
+      "starsToday": 883,
+      "stars": 323721,
+      "summary": "Superpowers 是給人工智慧寫程式助手用的一套工作方法，由許多可以組合的「技能」構成，採 MIT 授權。技能就像交給助手的一本本工作手冊，助手讀了就知道某件事該怎麼做。說明文件寫道，助手看到使用者要做東西時，不會馬上寫程式，而是先問清楚使用者真正想做什麼，整理出規格，分成短段落給使用者確認。設計確認後，助手寫出實作計畫，強調先寫測試再寫程式的測試驅動開發（TDD）；使用者說開始後，再交給多個子助手逐項完成並互相檢查。技能庫包含測試、除錯、腦力激盪、撰寫計畫、程式碼審查等項目。它可安裝在 Claude Code、Codex、Cursor、Gemini CLI 等工具。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-22/obra/superpowers.svg",
+        "alt": "流程圖：先問清楚需求，再分段確認規格，接著寫實作計畫，最後由子助手逐項完成並檢查。",
+        "caption": "Superpowers 的基本流程：先問、再確認、寫計畫，最後交給子助手做並互相檢查。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50582069,
+      "title": "Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'",
+      "titleZh": "衛報：治療胰臟癌的口服藥 daraxonrasib",
+      "url": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib",
+      "hnUrl": "https://news.ycombinator.com/item?id=50582069",
+      "score": 528,
+      "comments": 129,
+      "summary": "原文無法取得（網站的 robots.txt 擋下本站的抓取程式），以下依 Hacker News 討論整理，細節請以原文為準。這則連到英國《衛報》的報導，主題是一種治療胰臟癌的口服藥 daraxonrasib。KRAS 是一個跟細胞生長有關的基因，出問題時就像油門卡住，細胞一直長；這類藥物叫 KRAS 抑制劑，目標是把這個油門踩住。討論中有留言者寫道，在臨床試驗裡，病人存活時間大約是 13 個月，對照約 6 個月，而且試驗對象多是已試過其他治療的晚期病人。另有留言者表示，這是這一代 KRAS 抑制劑中第一個獲得核准的藥物。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "cursor/plugins",
+      "name": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins",
+      "language": "TypeScript",
+      "starsToday": 260,
+      "stars": 18103,
+      "summary": "這個儲存庫放的是程式編輯器 Cursor 的外掛規格，以及官方整理的外掛。外掛就像幫編輯器加裝的配件，裝上後助手就多了某些本事。說明文件寫道，每個外掛是根目錄下的一個獨立資料夾，裡面有一份 plugin.json 說明檔，另外可以放給助手讀的技能（SKILL.md）、Cursor 規則檔，以及模型上下文協定（MCP）伺服器設定。說明文件的清單列出 140 多個外掛，內容包括教學、程式碼審查、把工作分給多個雲端助手平行處理、建立新外掛，以及連接各家開發工具與資料服務。這個儲存庫採 MIT 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50589618,
+      "title": "Lean verification of the Riemann Hypothesis",
+      "titleZh": "Lean 社群宣布：黎曼猜想的證明已用 Lean 驗證",
+      "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50589618",
+      "score": 794,
+      "comments": 634,
+      "summary": "這是 Lean 與 Mathlib 社群在 2026 年 11 月 21 日發表的聯合聲明。Lean 是一種能讓電腦一步步檢查數學證明的語言，就像一位不會漏看任何一步的閱卷老師；Mathlib 是用 Lean 寫成的共用數學資料庫。聲明寫道，Levent Alpöge 在 11 月 20 日公布一份黎曼猜想的證明，形式是 1,700 萬行的 Lean 程式庫。社群表示，已有數十人成功編譯並得到相同的證明輸出檔；他們用兩套獨立工具確認，證明的定理和 Mathlib 裡的黎曼猜想敘述完全相同；輸出的證明也由 Lean 官方核心與多個以不同語言寫成的檢查程式驗過。聲明宣布認證這份證明正確。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-22/50589618.svg",
+        "alt": "流程圖：1,700 萬行的證明程式庫先被數十人編譯，再和 Mathlib 的黎曼猜想敘述比對，最後交給多個檢查程式驗證。",
+        "caption": "Lean 社群列出的三道檢查：能編譯、證的是同一個敘述、多個檢查程式都通過。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "toeverything/AFFiNE",
+      "name": "toeverything/AFFiNE",
+      "url": "https://github.com/toeverything/AFFiNE",
+      "language": "TypeScript",
+      "starsToday": 574,
+      "stars": 76291,
+      "summary": "AFFiNE 是一個開源的工作空間，把文件、白板和表格放在同一個地方，用來寫筆記、畫圖和規劃工作。開源就像公開食譜，大家都能照著做，也能自己改。說明文件寫道，它可以把文字、便利貼、網頁嵌入、多種檢視的資料庫、圖形，甚至投影片，放在一張沒有邊界的畫布上。它採用「本機優先」的做法，資料先存在使用者自己的硬碟，也支援網頁與各平台用戶端的即時同步與共同編輯，並內建人工智慧助手，可以把大綱轉成投影片，或把文章整理成心智圖。社群版可依 MIT 授權免費自行架設；企業版尚未推出。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50591853,
+      "title": "Inkling-2-Mini in 5.4 GB Memory",
+      "titleZh": "把 Inkling-2-Mini 模型壓到 5.4 GB 記憶體",
+      "url": "https://github.com/ShinMegamiBoson/lookatmyquant",
+      "hnUrl": "https://news.ycombinator.com/item?id=50591853",
+      "score": 334,
+      "comments": 90,
+      "summary": "這則連到 GitHub 上的 LookAtMyQuant 專案，採 MIT 授權。它是一套量化編譯器。量化就像把高畫質照片存成較小的檔案，模型變小但會損失一點細節。說明文件寫道，它會量測模型每一塊資料被壓縮後對輸出的影響，再替每一塊挑選壓縮方式，讓整個模型在指定大小內損失最少。作者表示，Inkling-2-Mini 原本的文字權重是 18.89 GB，被壓成 5.38、8.87、11.18 與 12.76 GB 四個版本，可在 Apple Silicon 電腦上執行。依作者公布的測試，12.76 GB 版在 GSM8K 數學題 200 題答對 193 題、HumanEval 程式題 164 題答對 152 題，與原模型相同；5.38 GB 版分別答對 176 題與 116 題。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-22/50591853.svg",
+        "alt": "長條圖：原本 18.89 GB 的模型，被壓成 12.76、11.18、8.87、5.38 GB 四個版本。",
+        "caption": "作者公布的四種大小；越小的版本，作者測得的答對題數越少。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "XiaoYouChR/Ghost-Downloader-3",
+      "name": "XiaoYouChR/Ghost-Downloader-3",
+      "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+      "language": "Python",
+      "starsToday": 779,
+      "stars": 14439,
+      "summary": "Ghost-Downloader-3 是一款下載工具，可以在 Windows、macOS、Linux 和 Android 四種系統上使用，採 GPL v3.0 授權。說明文件寫道，它把檔案切成好幾塊同時下載，就像把一大箱貨分給幾個人一起搬，會自動偵測網路頻寬，完成後不需要另外合併檔案。它支援超文字傳輸協定（HTTP）、磁力連結與 BT、檔案傳輸協定（FTP）、串流影片格式 M3U8 與 MPEG-DASH 等，也能下載 YouTube 和 Bilibili 的影片與字幕。搭配瀏覽器擴充功能時，網頁上的影片旁會出現下載按鈕。它另提供與 aria2 相容的程式介面，讓其他工具呼叫，下載途中也能更換網址或代理伺服器。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50532613,
+      "title": "Brazil's tax authority open-sources its tax calculator on GitHub under MIT",
+      "titleZh": "巴西稅務局以 MIT 授權在 GitHub 公開稅額計算器原始碼",
+      "url": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/novembro/receita-federal-publica-primeiro-codigo-fonte-aberto-no-github-e-amplia-transparencia-da-reforma-tributaria",
+      "hnUrl": "https://news.ycombinator.com/item?id=50532613",
+      "score": 722,
+      "comments": 230,
+      "summary": "這則連到巴西聯邦稅務局 2026 年 11 月 16 日的公告。稅務局依 11 月 12 日發布的 Cotec 第 342 號命令，把「稅額計算器」的原始碼放上 GitHub，採 MIT 授權。原始碼就像一份寫給電腦看的食譜，公開後大家都看得到每一步怎麼算。公告寫道，這是稅務局第一次在公開的協作開發平台發布軟體專案。這個計算器把消費稅改革中 CBS 等新稅的計算規則寫成程式，企業與軟體廠商可以把同一套算法放進自己的開立發票、管理系統。命令也記錄了初始版本的雜湊值，讓人核對程式碼沒被改過。公告表示，原始碼自 2025 年起已能在 CBS 平台下載，這次由稅務局與 Serpro 共同發布三個儲存庫。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "zhouxiaoka/autoclip",
+      "name": "zhouxiaoka/autoclip",
+      "url": "https://github.com/zhouxiaoka/autoclip",
+      "language": "Python",
+      "starsToday": 683,
+      "stars": 12847,
+      "summary": "AutoClip 是一款開源的桌面剪輯工具，採 MIT 授權，可以把播客、訪談、課程等長影片自動剪成短影片。使用者貼上影片連結、選好平台，例如抖音、小紅書、TikTok、Reels、YouTube Shorts、B 站或 YouTube，它會依平台的畫面比例與長度要求，替每個平台產生最多 10 段片段，每段附封面、標題、簡介、話題和發布用的壓縮檔。說明文件寫道，剪輯與算圖在使用者自己的電腦上完成；分析內容用的語言模型由使用者自選，雲端模型按用量計費。作者公布的實測中，一段 1 小時 43 分鐘、已有字幕的影片，花 7.5 分鐘產出 10 段，文字模型費用估計約人民幣 0.09 元。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50588982,
+      "title": "Detonating a pile of lead azide",
+      "titleZh": "引爆一大堆疊氮化鉛",
+      "url": "https://www.science.org/content/blog-post/detonating-huge-pile-lead-azide-really",
+      "hnUrl": "https://news.ycombinator.com/item?id=50588982",
+      "score": 502,
+      "comments": 332,
+      "summary": "原文無法取得（Science 網站拒絕本站的抓取請求），以下依 Hacker News 討論整理，細節請以原文為準。這則連到 Science 網站上 Derek Lowe 的部落格文章。疊氮化鉛是一種很敏感的起爆藥，常用在雷管裡，輕微碰撞就可能爆炸。依討論中的留言，事情發生在美國愛荷華州的陸軍彈藥廠，那裡有一批疊氮化鉛，數量約 1 萬磅，裝在桶子裡、泡在液體中；有留言者表示，問題在 2026 年 3 月被發現。討論引用的文章段落寫道，用更多泥土與混凝土蓋住並放著不管，不是可行的做法。有留言者表示，處理方向是選定時間主動引爆。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-11-22/ask-first.svg",
+      "alt": "一個方塊身體的使用者說「幫我做個網站」，旁邊的機器人助手舉起問號牌回答「你真正想做的是什麼？」。",
+      "caption": "Superpowers 的助手：寫程式之前，先問清楚。",
+      "relatedItemId": "obra/superpowers"
+    }
+  ]
+}

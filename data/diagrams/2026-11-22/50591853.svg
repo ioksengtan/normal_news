@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380">
+  <rect width="360" height="380" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro 380ei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" marker380eight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="30" text-anchor="middle">Inkling-2-Mini 文字權重大小</text>
+  <rect x="40" y="52" width="220" height="34" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="268" y="75">18.89 GB</text>
+  <text x="40" y="104" class="sub">原本</text>
+  <rect x="40" y="120" width="149" height="34" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="197" y="143">12.76 GB</text>
+  <rect x="40" y="170" width="130" height="34" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="178" y="193">11.18 GB</text>
+  <rect x="40" y="220" width="103" height="34" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="151" y="243">8.87 GB</text>
+  <rect x="40" y="270" width="63" height="34" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="111" y="293">5.38 GB</text>
+  <text x="40" y="332" class="sub">LookAtMyQuant 壓縮後的四個版本</text>
+  <text x="40" y="354" class="sub">像把照片存成較小的檔案</text>
+</svg>
