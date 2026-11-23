@@ -1,0 +1,184 @@
+{
+  "date": "2026-11-23",
+  "issueNumber": 52,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-23T07:00:00+08:00",
+  "fetchedAt": "2026-11-23T00:32:02.412Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": true,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "ItsNotRexed/Leonida",
+      "name": "ItsNotRexed/Leonida",
+      "url": "https://github.com/ItsNotRexed/Leonida",
+      "language": "Python",
+      "starsToday": null,
+      "stars": 14960,
+      "summary": "Leonida 是一個「靜態重新編譯」專案，目標是讓 Xbox Series 版的《俠盜獵車手 VI》（Grand Theft Auto VI）直接在 Windows 電腦上執行。靜態重新編譯就像把一本書事先整本翻成另一種語言，而不是邊讀邊口譯。說明文件寫道，Xbox Series 的處理器和電腦一樣是 x86-64 架構，所以遊戲程式可以直接載入；主機的系統軟體重新寫一份，著色程式（決定畫面上每個點顏色的小程式）則翻成 Vulkan 繪圖介面用的 SPIR-V 格式。專案不含遊戲、金鑰或執行檔，使用者要用自己的 1.0.2.1 版遊戲，在自己的電腦上建置。說明文件寫明目前遊戲還無法啟動，26,503 個著色程式已全部翻譯完成。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-23/ItsNotRexed/Leonida.svg",
+        "alt": "示意圖：使用者自己的遊戲分成遊戲程式、著色程式、模型材質與聲音三部分，分別處理後在 Windows 電腦上組合。",
+        "caption": "Leonida 的做法：遊戲程式直接載入，著色程式翻成 SPIR-V，資料從使用者自己的遊戲讀出。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50605045,
+      "title": "Progress map for the Lean formalization of Alessandro Masullo's manuscript",
+      "titleZh": "Masullo 手稿的 Lean 形式化進度圖",
+      "url": "https://claude.ai/artifact/CtQyX8qfYAF822bgHJHHE3",
+      "hnUrl": "https://news.ycombinator.com/item?id=50605045",
+      "score": 98,
+      "comments": 54,
+      "summary": "原文網頁要執行程式才會顯示內容，本站無法取得，以下依 Hacker News 討論與討論中連到的專案說明文件整理。這張進度圖屬於 riemann-masullo 專案，該專案要把 Alessandro Maria Masullo 一份 940 頁的手稿，逐節寫成 Lean 4 證明語言。Lean 就像一位一步也不放過的閱卷老師，每一步推理都由電腦檢查。專案說明寫道，手稿聲稱證明了每一個數域的赫克 L 函數都滿足廣義黎曼猜想，但它是未經審查的草稿，作者也說還沒寫完。進度圖列出每一節哪些已寫成 Lean、哪些已經證明。討論中有留言者提醒，進度高不代表證明正確，並提到專案的勘誤表列出了漏洞。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "bookwjitchieni1986/blender-ai-mcp-addon",
+      "name": "bookwjitchieni1986/blender-ai-mcp-addon",
+      "url": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon",
+      "language": null,
+      "starsToday": null,
+      "stars": 2746,
+      "summary": "mcp-for-blender-pro 是 3D 繪圖軟體 Blender 的外掛，讓人工智慧助手檢查場景、建立物件、設定材質與匯出檔案。它內建模型情境協定（Model Context Protocol，MCP）伺服器；MCP 就像一個通用插座，讓不同的人工智慧工具都能接上 Blender。說明文件列出 21 個場景工具，可以接 OpenAI、Anthropic Claude、Google Gemini、Ollama 等服務，也能設定「經理、工人、審查者」分工的多助手流程。發行檔目前只支援 Windows x64 與 Blender 4.2 以上版本，採 MIT 授權。說明文件也寫道，它對 Python 程式的檢查並不是安全的隔離環境。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50605479,
+      "title": "Nespresso's project to reduce grams of coffee per capsule",
+      "titleZh": "Nespresso 減少每顆膠囊咖啡克數的計畫",
+      "url": "https://alvinbunk.wordpress.com/2026/11/01/nespresso-project-olympus/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50605479",
+      "score": 28,
+      "comments": 24,
+      "summary": "這是一位咖啡部落客的文章。作者寫道，2026 年 8 月有一位 Nespresso 員工告訴他一項名為「Project Olympus」的內部計畫，他在文中貼出自稱是內部文件的內容。這份文件寫道，從 2026 年第一季到第三季，部分 Vertuo 咖啡會改用新的研磨與烘焙方式，每顆膠囊用的咖啡略少，口味維持不變；文件列出兩組共 14 個品項，也提供客服回答顧客詢問時的說法。作者表示，依他的觀察，幾乎所有咖啡都減量了，只有 Original 系列的 Lungo 和 Vertuo 系列的 Alto XL 等大杯款看起來沒變。他整理了一份試算表，記錄各款膠囊的變化比例。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "iamajmeena/neonclipping",
+      "name": "iamajmeena/neonclipping",
+      "url": "https://github.com/iamajmeena/neonclipping",
+      "language": "Python",
+      "starsToday": null,
+      "stars": 2094,
+      "summary": "NeonClipping 把 YouTube、Twitch、Kick 上的長影片，或自己的 MP4 檔，剪成直式 9:16、附字幕的短片，每段還會配上標題。說明文件寫道，它全部在使用者自己的電腦上執行，不需要帳號，也不上傳影片。預設的快速模式先只下載聲音，找出音量突然變大、說話聲提高的片段，再用在本機執行的大型語言模型（Large Language Model，LLM）讀逐字稿、替片段打分數，最後只下載選中的那幾段畫面。大型語言模型就像讀過大量文字、很會接話的程式。作者表示，在一台裝有 RTX 2060 顯示卡的電腦上，85 分鐘的直播約 97 秒剪出 3 段。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50603845,
+      "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+      "titleZh": "新手指南：用 Unsloth 在家架設本機人工智慧",
+      "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+      "hnUrl": "https://news.ycombinator.com/item?id=50603845",
+      "score": 162,
+      "comments": 57,
+      "summary": "這篇是 GPU Partner 網站的新手教學，說明怎麼在自家的 Windows 電腦上跑人工智慧聊天模型，不必使用雲端服務。作者用一張有 32GB 顯示記憶體的 RTX 5090 顯示卡，安裝免費的 Unsloth Desktop 程式，下載 4 位元量化的 Qwen3.8-27B 模型。量化就像把照片存成較小的檔案，細節少一點，但放得進顯示卡。文中依顯示記憶體大小列出可以試的模型，也提到 Thinking Machines Lab 在 2026 年 11 月 17 日發表的 Inkling 2 Mini。最後一步是設定密碼、開啟區域網路分享，家裡其他人就能用瀏覽器連進來聊天。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-23/50603845.svg",
+        "alt": "示意圖：家裡一台裝有 Unsloth Desktop 的電腦，開啟區域網路分享後，三個瀏覽器連進來使用。",
+        "caption": "家裡的電腦跑量化模型，開啟區域網路分享後，其他人用瀏覽器連進來。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "EL4CTEO/fast-anything",
+      "name": "EL4CTEO/fast-anything",
+      "url": "https://github.com/EL4CTEO/fast-anything",
+      "language": "Rust",
+      "starsToday": null,
+      "stars": 1889,
+      "summary": "fast-anything 是一個命令列工具，替用 Python、Node、Ruby 等語言寫的程式加速。它先做效能分析，找出最花時間的函式，再交給寫程式的人工智慧助手，只把這幾個函式改寫成 Rust 語言。效能分析就像量出一條路上哪幾段最塞車，只拓寬那幾段，不用整條路重鋪。改寫後，它會重播最多 500 次錄下的真實呼叫，再加上邊界情況測試，結果全部相同才換上 Rust 版本，也可以隨時換回原本的程式。說明文件列出作者在 i5-10500 處理器與 Windows 11 上的測試，例如一個用 Python 去除重複名字的程式，從 4.91 秒變成 42 毫秒。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-23/EL4CTEO/fast-anything.svg",
+        "alt": "流程圖：效能分析、助手改寫慢的函式、重播真實呼叫比對、全部相同才換上，下方是 4.91 秒與 42 毫秒的長條比較。",
+        "caption": "fast-anything 只改寫最慢的函式，比對結果相同才換上。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50602843,
+      "title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
+      "titleZh": "《俠盜獵車手 VI》裡的鳥：遊戲世界賞鳥指南",
+      "url": "https://www.audubon.org/magazine/birds-of-gta-6-field-guide-vice-city-wildlife",
+      "hnUrl": "https://news.ycombinator.com/item?id=50602843",
+      "score": 318,
+      "comments": 135,
+      "summary": "這篇文章刊在美國奧杜邦學會（Audubon）的雜誌，作者在《俠盜獵車手 VI》發售後，到遊戲裡賞鳥。遊戲的地圖仿照美國南佛羅里達，玩家從第一個任務起就有望遠鏡，對著鳥按住按鈕「研究」，就能把牠記進進度選單。作者寫道，他找到了遊戲圖鑑 60 種鳥裡的 50 種，也發現一些和真實鳥類不符的地方。他表示，遊戲裡鳥的分布符合南佛羅里達的生態：南邊海岸多是鷺、鷗等水鳥，北邊有紅腹啄木鳥、林鸛等。他建議想集滿圖鑑的玩家依棲地去找，夜裡找貓頭鷹，動物園和農場裡的鳥也算在內。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "omonkeyz/xbox-emulator",
+      "name": "omonkeyz/xbox-emulator",
+      "url": "https://github.com/omonkeyz/xbox-emulator",
+      "language": "Rust",
+      "starsToday": null,
+      "stars": 1313,
+      "summary": "這個專案接續 drycheetah84/TomBox，目標是讓 Xbox Series X|S 的遊戲在電腦上執行。模擬器就像替遊戲搭一個假的主機環境，讓遊戲以為自己還在主機上。它用 Rust 語言重新實作主機的平台層，包括 Xbox 版的 Direct3D 12 與 RDNA2 著色程式，讓已解密的遊戲檔以一般 Windows 程式執行；說明文件寫道，專案本身不做解密，也不含遊戲檔案。目前測試的 Fortnite 可以啟動、登入私人伺服器並進入大廳，但 3D 畫面有錯誤、沒有聲音，還不能玩。專案的授權已改為 GPL-3.0 或更新版本。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50547698,
+      "title": "Cathedral floor emerges in Sudan, revealing one of the biggest medieval churches",
+      "titleZh": "蘇丹出土中世紀大教堂的地板",
+      "url": "https://apnews.com/article/sudan-antiquities-nubia-cathedral-1b16f67da881ee5592de4481ee55c527",
+      "hnUrl": "https://news.ycombinator.com/item?id=50547698",
+      "score": 70,
+      "comments": 1,
+      "summary": "原文無法取得（美聯社網站的 robots.txt 拒絕存取，本站視為禁止抓取），以下依 Hacker News 標題與討論整理，細節請以原文為準。標題寫道，蘇丹有一座中世紀教堂的地板出土，這座教堂是規模最大的中世紀教堂之一。這則討論目前只有一則留言。留言者引述報導說，這座建築比美國白宮還大，也有人把它比作伊斯坦堡的聖索菲亞大教堂；聖索菲亞大教堂是拜占庭皇帝查士丁尼在西元 537 年建成的。留言者接著談到，鄂圖曼帝國後來建造的清真寺，多半以聖索菲亞大教堂為範本。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-11-23/step-by-step.svg",
+      "alt": "一個圓頭方身體、名牌寫著 Lean 的閱卷老師，拿著筆對著一疊 940 頁的手稿說「第 1 步，檢查。第 2 步，檢查……」。",
+      "caption": "Lean 像一位一步也不放過的閱卷老師，而手稿有 940 頁。",
+      "relatedItemId": "50605045"
+    }
+  ]
+}
