@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400">
+  <rect width="360" height="400" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="30" text-anchor="middle">在家架設本機人工智慧</text>
+  <rect x="20" y="50" width="150" height="110" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="95" y="76" text-anchor="middle">家裡的電腦</text>
+  <text x="95" y="100" text-anchor="middle" class="sub">RTX 5090</text>
+  <text x="95" y="120" text-anchor="middle" class="sub">Unsloth Desktop</text>
+  <text x="95" y="140" text-anchor="middle" class="sub">4 位元 Qwen3.8-27B</text>
+  <rect x="200" y="50" width="140" height="110" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="270" y="80" text-anchor="middle">量化</text>
+  <text x="270" y="106" text-anchor="middle" class="sub">像把照片</text>
+  <text x="270" y="126" text-anchor="middle" class="sub">存成較小的檔案</text>
+  <line x1="95" y1="160" x2="95" y2="206" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="20" y="210" width="320" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="234" text-anchor="middle">設定密碼，開啟區域網路分享</text>
+  <text x="180" y="252" text-anchor="middle" class="sub">只在家裡的網路裡</text>
+  <line x1="80" y1="260" x2="70" y2="300" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <line x1="180" y1="260" x2="180" y2="300" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <line x1="280" y1="260" x2="290" y2="300" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="30" y="304" width="80" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="70" y="334" text-anchor="middle">瀏覽器</text>
+  <rect x="140" y="304" width="80" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="334" text-anchor="middle">瀏覽器</text>
+  <rect x="250" y="304" width="80" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="290" y="334" text-anchor="middle">瀏覽器</text>
+  <text x="180" y="384" text-anchor="middle" class="sub">家裡其他人連進來聊天</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 440">
+  <rect width="360" height="440" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="30" text-anchor="middle">Leonida：在你的電腦上建置</text>
+  <rect x="80" y="48" width="200" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="72" text-anchor="middle">你自己的遊戲</text>
+  <text x="180" y="90" text-anchor="middle" class="sub">Xbox Series 1.0.2.1 版</text>
+  <line x1="120" y1="98" x2="60" y2="140" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <line x1="180" y1="98" x2="180" y2="140" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <line x1="240" y1="98" x2="300" y2="140" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="10" y="144" width="104" height="96" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="62" y="170" text-anchor="middle">遊戲程式</text>
+  <text x="62" y="196" text-anchor="middle" class="sub">同為 x86-64</text>
+  <text x="62" y="216" text-anchor="middle" class="sub">直接載入</text>
+  <rect x="128" y="144" width="104" height="96" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="170" text-anchor="middle">著色程式</text>
+  <text x="180" y="196" text-anchor="middle" class="sub">翻成 SPIR-V</text>
+  <text x="180" y="216" text-anchor="middle" class="sub">給 Vulkan 用</text>
+  <rect x="246" y="144" width="104" height="96" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="298" y="170" text-anchor="middle">模型材質</text>
+  <text x="298" y="196" text-anchor="middle" class="sub">與聲音</text>
+  <text x="298" y="216" text-anchor="middle" class="sub">從遊戲讀出</text>
+  <line x1="62" y1="240" x2="150" y2="292" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <line x1="180" y1="240" x2="180" y2="292" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <line x1="298" y1="240" x2="210" y2="292" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="60" y="296" width="240" height="50" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="320" text-anchor="middle">Windows 電腦</text>
+  <text x="180" y="338" text-anchor="middle" class="sub">主機系統軟體重新寫一份</text>
+  <text x="180" y="384" text-anchor="middle" class="sub">專案不含遊戲、金鑰或執行檔</text>
+  <text x="180" y="408" text-anchor="middle" class="sub">目前狀態：遊戲還無法啟動</text>
+</svg>
