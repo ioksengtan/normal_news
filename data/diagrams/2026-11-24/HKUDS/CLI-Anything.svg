@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 385">
+  <rect width="360" height="385" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="30" text-anchor="middle">CLI-Anything：七個階段</text>
+  <rect x="60" y="45" width="240" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180.0" y="64" text-anchor="middle">軟體原始碼</text>
+  <text x="180.0" y="81" text-anchor="middle" class="sub">例如 GIMP</text>
+  <line x1="180" y1="89" x2="180" y2="111" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="30" y="115" width="140" height="36" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="100" y="139" text-anchor="middle">1 分析</text>
+  <rect x="190" y="115" width="140" height="36" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="260" y="139" text-anchor="middle">2 設計</text>
+  <rect x="30" y="161" width="140" height="36" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="100" y="185" text-anchor="middle">3 實作</text>
+  <rect x="190" y="161" width="140" height="36" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="260" y="185" text-anchor="middle">4 規劃測試</text>
+  <rect x="30" y="207" width="140" height="36" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="100" y="231" text-anchor="middle">5 撰寫測試</text>
+  <rect x="190" y="207" width="140" height="36" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="260" y="231" text-anchor="middle">6 記錄結果</text>
+  <rect x="30" y="253" width="140" height="36" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="100" y="277" text-anchor="middle">7 發布安裝</text>
+  <line x1="180" y1="295" x2="180" y2="317" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="60" y="321" width="240" height="44" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180.0" y="340" text-anchor="middle">命令列工具</text>
+  <text x="180.0" y="357" text-anchor="middle" class="sub">輸出 JSON，助手打字操作</text>
+</svg>

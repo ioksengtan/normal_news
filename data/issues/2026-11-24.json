@@ -1,0 +1,184 @@
+{
+  "date": "2026-11-24",
+  "issueNumber": 53,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-24T07:00:00+08:00",
+  "fetchedAt": "2026-11-24T00:31:58.837Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "elementalsouls/Claude-BugHunter",
+      "name": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "language": "Python",
+      "starsToday": 2029,
+      "stars": 19749,
+      "summary": "claude-bughunter 是一組給 Claude Code 用的「技能包」，幫資安研究人員找網站漏洞。技能包就像一本放在助手手邊的工作手冊，遇到某類問題時就翻到對應的那一頁。說明文件寫道，它有 83 個技能和 15 個斜線指令，內容整理自 681 份已公開的漏洞回報，涵蓋 24 類常見漏洞；流程分成偵察、排序、尋找、驗證、撰寫報告幾個階段，送出前要先通過 7 道問題的檢查。作者寫明，這些技能只能用在自己擁有、或已取得書面授權測試的系統，例如漏洞獎勵計畫允許的範圍、委託的滲透測試或練習用的靶場；它不涵蓋惡意程式開發與大規模攻擊。除了 Claude Code，這些技能也能裝進 OpenCode、Codex CLI 等其他助手工具。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-24/elementalsouls/Claude-BugHunter.svg",
+        "alt": "示意圖：先確認有授權，再依序經過偵察、排序、尋找、驗證、撰寫報告五個方框，報告前有 7 道問題的檢查。",
+        "caption": "claude-bughunter 的工作順序：先確認授權，最後經過 7 道問題檢查才送出報告。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50611576,
+      "title": "Nvidia Reinstates Jensen Huang as CEO",
+      "titleZh": "Nvidia 董事會恢復黃仁勳的執行長職務",
+      "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
+      "hnUrl": "https://news.ycombinator.com/item?id=50611576",
+      "score": 1981,
+      "comments": 3074,
+      "summary": "根據 CNBC 報導，Nvidia 董事會在 11 月 23 日宣布，黃仁勳即日起恢復執行長職務，董事會一致投票通過。黃仁勳在 11 月 13 日辭去執行長，報導寫道，起因是外界報導他有多段婚外情，其中一位女性據《紐約時報》報導曾與中國國家安全部官員聯繫。董事會表示，決定前聽取了美國政府高層的意見，並相信這項決定不構成國家安全風險。美國總統川普對 CNBC 表示，黃仁勳「沒有做錯事」。報導寫道，Nvidia 股價當天收盤上漲 31%；從 11 月 8 日黃仁勳承認婚外情到復職前，股價下跌將近 33%。代理執行長 Colette Kress 會繼續擔任財務長。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "HKUDS/CLI-Anything",
+      "name": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "language": "Python",
+      "starsToday": 790,
+      "stars": 63619,
+      "summary": "CLI-Anything 想讓人工智慧助手也能操作原本只給人用滑鼠點的軟體。做法是替軟體做一個命令列介面（Command Line Interface，CLI），也就是打字下指令的操作方式；這就像在只有按鈕的機器旁，加裝一個可以用文字點餐的窗口。說明文件寫道，給它一套軟體的原始碼，例如影像軟體 GIMP，它會分 7 個階段產生命令列工具：分析、設計、實作、規劃測試、撰寫測試、記錄結果、發布安裝。產生的工具可以輸出 JSON 格式，方便助手讀取。專案另有 CLI-Hub，可以用一行指令搜尋和安裝社群做好的工具，採 Apache 2.0 授權。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-24/HKUDS/CLI-Anything.svg",
+        "alt": "示意圖：軟體原始碼經過七個階段，變成人工智慧助手可以打字操作的命令列工具。",
+        "caption": "CLI-Anything 的七個階段：從原始碼到助手能用的命令列工具。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50620349,
+      "title": "Stalwart is now a drop-in replacement for Microsoft Exchange",
+      "titleZh": "Stalwart 郵件伺服器可直接取代 Microsoft Exchange",
+      "url": "https://stalw.art/blog/microsoft-exchange-replacement/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50620349",
+      "score": 141,
+      "comments": 83,
+      "summary": "Stalwart 是開源的郵件伺服器。開發團隊在部落格宣布推出 1.2.0 版，加入 Microsoft Exchange 用戶端使用的幾種通訊協定，包括 MAPI over HTTP、Exchange Web Services、Exchange ActiveSync 和自動探索。通訊協定就像兩台機器事先講好的對話規則。文章寫道，傳統版 Outlook、Apple Mail、手機上的郵件程式，都能像連 Exchange 一樣連到 Stalwart，郵件、行事曆和聯絡人放在同一個帳號裡，使用者不必換程式。這項功能屬於社群版，採 AGPL 授權。文章也列出還沒支援的部分，例如公用資料夾、封存信箱，以及只透過微軟雲端運作的新版 Outlook。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-24/50620349.svg",
+        "alt": "示意圖：傳統版 Outlook、Apple Mail 和手機郵件程式，透過 Exchange 的通訊協定連到 Stalwart，郵件、行事曆、聯絡人放在同一個帳號。",
+        "caption": "Stalwart 1.2.0 支援 Exchange 用戶端的通訊協定，使用者沿用原本的郵件程式。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "jingyaogong/minimind",
+      "name": "jingyaogong/minimind",
+      "url": "https://github.com/jingyaogong/minimind",
+      "language": "Python",
+      "starsToday": 828,
+      "stars": 69448,
+      "summary": "MiniMind 是一個教人從零開始訓練小型語言模型的開源專案。語言模型就像讀過大量文章、很會猜下一個字的程式；MiniMind 的主模型約有 6,400 萬個參數，說明文件寫道大約是 GPT-3 的兩千七百分之一。作者表示，在一張 NVIDIA 3090 顯示卡上，監督式微調階段跑一輪約 2 小時，租用顯示卡的費用約人民幣 3 元。專案從資料清理、預訓練、微調，到強化學習和工具呼叫，都用 PyTorch 直接寫出，不靠第三方框架包裝，也公開各階段的資料集。它採 Apache 2.0 授權，適合想了解大型語言模型怎麼做出來的人。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50614249,
+      "title": "Ladybird is now in alpha",
+      "titleZh": "Ladybird 瀏覽器進入 Alpha 測試",
+      "url": "https://ladybird.org/posts/alpha/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50614249",
+      "score": 1341,
+      "comments": 320,
+      "summary": "Ladybird 開發者 Andreas Kling 在 11 月 23 日宣布，Ladybird 瀏覽器進入 Alpha 測試，提供 macOS 和 Linux 版下載。文章寫道，Ladybird 的引擎是團隊從頭自己寫的，不是改自其他瀏覽器。瀏覽器引擎就像把網頁原始碼「排版成畫面」的印刷機。因為是 Alpha 版，有些網站會打不開，有時也會當掉；使用者可以在瀏覽器裡直接回報有問題的網站，當掉後也能先看過錯誤報告再決定要不要送出。作者表示目前不對安全性做保證，歡迎資安研究人員找漏洞並回報。Alpha 版會定期自動更新，也支援 WebDriver 自動化測試。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "firecrawl/firecrawl",
+      "name": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "language": "TypeScript",
+      "starsToday": 924,
+      "stars": 207916,
+      "summary": "Firecrawl 把網頁轉成人工智慧助手好讀的乾淨文字，也就是 Markdown 格式。這就像請人把一份排版雜亂的傳單，重新抄成條列清楚的筆記。說明文件寫道，它有三種用法：在自己電腦上執行的 Firecrawl Local、官方架設的雲端服務，以及自行架設完整伺服器。Firecrawl Local 是一個程式檔，可以抓單一網頁、爬整個網站，或列出網站的所有網址；需要執行網頁程式的頁面，會用電腦上已安裝的 Chrome 開啟。它也能用一行指令，替 Claude Code、Cursor 等工具加入模型情境協定（Model Context Protocol，MCP）伺服器，讓這些助手直接呼叫它。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50619103,
+      "title": "GPUI is getting its own repository",
+      "titleZh": "GPUI 將有自己的程式碼庫",
+      "url": "https://github.com/zed-industries/gpui",
+      "hnUrl": "https://news.ycombinator.com/item?id=50619103",
+      "score": 97,
+      "comments": 19,
+      "summary": "GPUI 是程式編輯器 Zed 的開發團隊做的圖形介面框架，用 Rust 語言寫成，用顯示卡來畫畫面。框架就像一套已經做好的骨架，開發者往上面掛自己的按鈕和視窗。這則連結指向 zed-industries 新開的 gpui 程式碼庫，目前只寫著「幾週後見」，並附上官方網站與套件頁面。GPUI 網站寫道，近期它仍與 Zed 綁在一起，貢獻要送到 Zed 的程式碼庫。原文內容很少，以下依 Hacker News 討論整理：有留言者表示，終於不用從編輯器的程式碼庫裡拿出來用；也有人提到社群已有分支版本，並討論 Zed 介面元件的授權限制。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "nginx/nginx",
+      "name": "nginx/nginx",
+      "url": "https://github.com/nginx/nginx",
+      "language": "C",
+      "starsToday": 174,
+      "stars": 33049,
+      "summary": "這是 NGINX 的官方開源程式碼庫。NGINX 是網頁伺服器軟體，負責把網頁送到瀏覽器；它也能當負載平衡器，把湧進來的請求分給好幾台伺服器，就像餐廳門口的帶位員把客人分到不同的桌子。說明文件也列出它可以做反向代理、應用程式介面（API）閘道和內容快取。程式採類似 BSD 的兩條款授權，免費使用；企業版、商業支援與訓練由 F5 公司提供。說明文件是寫給新手的入門，介紹模組與設定檔怎麼運作，以及在 Linux、FreeBSD、Windows 上安裝，或從原始碼自己編譯的步驟。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50617499,
+      "title": "Per Arm's request, this site will be discontinued on 4 December 2026 :(",
+      "titleZh": "應 Arm 要求，一個指令集參考網站將於 12 月 4 日關閉",
+      "url": "https://arm.jonpalmisc.com/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50617499",
+      "score": 805,
+      "comments": 162,
+      "summary": "Jon's Arm Reference 是一位名叫 Jon 的開發者架設的網站，提供 Armv8-A 與 Armv9-A 架構的 AArch64 指令集和系統暫存器參考資料，可以搜尋。指令集就像處理器聽得懂的指令字典。網站首頁寫道，Arm 的律師通知他撤下網站，否則將採取法律行動，網站會在 2026 年 12 月 4 日停止。站長在 Hacker News 留言補充，Arm 的理由是網站使用了 Arm 的商標與智慧財產、刊載了 Arm 的文件；他正在考慮幾種做法，包括讓別人架設鏡像網站，或公開不含 Arm 資料的產生程式，讓人自己產生相同內容。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-11-24/alpha-report.svg",
+      "alt": "一個圓頭方身的小人看著瀏覽器視窗裡的錯誤圖示，按下「回報網站」按鈕。",
+      "caption": "Alpha 版的網站打不開？在瀏覽器裡直接回報。",
+      "relatedItemId": "50614249"
+    }
+  ]
+}
