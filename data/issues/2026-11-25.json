@@ -1,0 +1,184 @@
+{
+  "date": "2026-11-25",
+  "issueNumber": 54,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-25T07:00:00+08:00",
+  "fetchedAt": "2026-11-25T00:32:23.886Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "openvinotoolkit/openvino",
+      "name": "openvinotoolkit/openvino",
+      "url": "https://github.com/openvinotoolkit/openvino",
+      "language": "C++",
+      "starsToday": 185,
+      "stars": 12462,
+      "summary": "OpenVINO 是 Intel 釋出的開源工具套件，用來把訓練好的深度學習模型最佳化，再放到實際裝置上執行。開源工具套件就像一盒大家都能拿來組東西的樂高積木，誰都可以取用、也可以自己加上新零件。說明文件寫道，它可以直接讀 PyTorch、TensorFlow、ONNX、Keras、PaddlePaddle 與 JAX/Flax 訓練出來的模型，轉換後不必再安裝原本的框架；支援的硬體包含 x86 與 ARM 處理器、Intel 內建與獨立顯示晶片，以及 Intel 的 NPU。文件列出的用途有電腦視覺、語音辨識、自然語言處理與生成式人工智慧。專案採 Apache 2.0 授權，安裝方式是 pip install -U openvino。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-25/openvinotoolkit/openvino.svg",
+        "alt": "一張流程圖：訓練好的模型先經過 OpenVINO 轉換與最佳化，再分別部署到處理器、顯示晶片與 NPU 三種裝置。",
+        "caption": "OpenVINO 把各種框架訓練好的模型轉換後，部署到處理器、Intel 顯示晶片或 NPU 上執行。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50633922,
+      "title": "Ternary Bonsai 2.5 27B",
+      "titleZh": "PrismML 發表 Ternary Bonsai 2.5 27B",
+      "url": "https://prismml.com/news/bonsai-2-5-27b",
+      "hnUrl": "https://news.ycombinator.com/item?id=50633922",
+      "score": 299,
+      "comments": 103,
+      "summary": "Prism ML 在 11 月 24 日發表 27B 規模的語言模型 Ternary Bonsai 2.5，定位是在個人裝置上執行、處理私人檔案與工具操作。公司表示，它以 Qwen3.8 27B 為基礎壓縮而成，佔用空間與前一版相同的 5.9 GB，並改善了前一版想太久、重複繞圈的情形，完成同樣的任務用的回合數與字詞更少。公司公布的測試成績中，SWE-bench Verified 從前一版的 60.8 提高到 75.6，AppWorld 從 51.2 提高到 90.5，LiveCodeBench v6 則從 83.8 略降到 83.0。公司表示，在一張 NVIDIA H100 上每秒產生 291 個詞元。權重以 Apache 2.0 授權釋出。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "cathrynlavery/diagram-design",
+      "name": "cathrynlavery/diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "language": "HTML",
+      "starsToday": 802,
+      "stars": 72023,
+      "summary": "diagram-design 是給人工智慧寫程式助手用的「技能」，讓助手把圖表畫成一個獨立的 HTML 檔案，裡面用 SVG 這種以文字描述圖形的格式。技能就像放在助手手邊的工作手冊，遇到某類工作就翻到那一頁照著做。說明文件寫道，它收了 52 種圖表類型，每一種都附淺色、深色與完整編輯三種版本，打開檔案不需要先建置，也不依賴外部圖片。使用者可以請助手讀自己網站的顏色與字型，之後畫出來的圖就沿用同一套樣式，並附上取樣網址與字型來源的紀錄。它支援 Claude Code、Cursor、Codex、Gemini CLI 等讀取 Agent Skills 標準的工具，採 MIT 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50634658,
+      "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "titleZh": "OpenAI：GPT-6 系列模型本身就能設計蛋白質",
+      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50634658",
+      "score": 134,
+      "comments": 29,
+      "summary": "OpenAI 在 11 月 24 日發表一篇預印本論文，表示 GPT-6 系列模型不呼叫專門的生物模型，只靠推理與寫程式，就能設計蛋白質的三維形狀與胺基酸序列。胺基酸像一串珠子，順序會影響蛋白質折成什麼形狀、能做什麼事。該公司寫道，在與研究夥伴 Onava 合作的實驗中，依 GPT-6.2 設計的形狀製作出 322 個小型結合蛋白，對 5 個目標測試後有 35 個（10.9%）出現結合跡象；另一組改寫既有序列的實驗，182 個設計中有 128 個（70%）顯示與 IL-4Rα 結合。該公司也寫明限制：候選篩選仍用了專門模型，因此尚未證明模型能全程獨力完成，而從序列預測完整結構這項任務仍明顯落後專門模型。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-25/50634658.svg",
+        "alt": "四個方框往下串成一列：GPT-6.2 寫程式設計形狀、專門模型補序列並挑候選、Onava 製作並測試、322 個中 35 個有結合跡象。",
+        "caption": "依該公司說明，模型先設計形狀，專門模型補上序列，再由 Onava 在實驗室製作與測試。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "mvanhorn/last30days-skill",
+      "name": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "language": "Python",
+      "starsToday": 703,
+      "stars": 74205,
+      "summary": "last30days 是一個助手技能，把一個主題在最近 30 天的公開討論一次查完，再整理成一份摘要。說明文件寫道，Reddit、Hacker News、Polymarket 與 GitHub 不需要金鑰就能用，X、YouTube、TikTok、arXiv、Techmeme 等來源要自己提供應用程式介面（Application Programming Interface，API）金鑰或瀏覽器登入狀態才會開啟；排序依據是各平台的讚數、推文數等互動數字。作者寫道，他做這個是為了跟上人工智慧領域的變化，因為模型的訓練資料往往落後社群好幾個月。執行環境需要 Python 3.12 以上。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50634426,
+      "title": "Launch HN: Versine (YC F26) – MCP to send and receive money",
+      "titleZh": "Launch HN：Versine（YC F26）用對話收付款",
+      "url": null,
+      "hnUrl": "https://news.ycombinator.com/item?id=50634426",
+      "score": 62,
+      "comments": 44,
+      "summary": "三位曾在 Stripe、Databricks 與 Amazon 工作的工程師在 Hacker News 介紹他們做的 Versine。貼文寫道，它是一個 MCP 服務，前面接著一個有餘額的錢包；MCP 就像人工智慧助手與外部服務之間的轉接頭，讓助手能直接操作該服務。依貼文說明，使用者可以用講話或打字請助手付款，付款前在自家 App 以通行密鑰確認，一次最多可向 100 人收付；收款人沒有 Versine 帳號時可提領到銀行，而對於自己設定為信任的聯絡人，可以不必每次確認。作者寫道，他們做這個是因為助手能幫忙算出帳單該怎麼分攤，最後卻還要使用者自己去轉帳。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-25/50634426.svg",
+        "alt": "四個方框往下串成一列：使用者對助手說要付款、助手透過 MCP 接上錢包、使用者在 App 用通行密鑰同意、從錢包餘額匯出。",
+        "caption": "依貼文說明，付款要求經助手與 MCP 轉接頭送到錢包，由使用者在 App 確認後付出。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "google-labs-code/stitch-skills",
+      "name": "google-labs-code/stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "language": "TypeScript",
+      "starsToday": 403,
+      "stars": 12648,
+      "summary": "stitch-skills 是 Google 放出的一組助手技能與外掛，搭配該公司的介面設計工具 Stitch 使用。說明文件寫道，它依照 Agent Skills 這個公開標準撰寫，因此可以裝進 Codex、Antigravity、Gemini CLI、Claude Code、Cursor 等寫程式助手，OpenCode 則要手動複製資料夾。內容分成三個外掛：stitch-design 負責建立與整理設計、stitch-build 負責建置與元件、stitch-utilities 是輔助工具；其中一項技能可以把 React、Vue 等前端程式碼轉成 Stitch 的設計檔。使用前要先依官方文件設定 Stitch 的 MCP 伺服器，MCP 就像助手與外部服務之間的轉接頭。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50636286,
+      "title": "Get in, friends, the Atmosphere is happening",
+      "titleZh": "作者談 AT Protocol 生態系近期的進展",
+      "url": "https://tropopause.pckt.blog/get-in-friends-the-atmosphere-is-happening-q8sf9a9",
+      "hnUrl": "https://news.ycombinator.com/item?id=50636286",
+      "score": 23,
+      "comments": 15,
+      "summary": "Bluesky 探索團隊的 Brittany Ellich 在個人部落格整理 AT Protocol（簡稱 atproto）近期的變化。atproto 是社群網站 Bluesky 使用的開放協定，協定就像大家講同一種語言的約定，照著做的不同應用程式就能共用同一份資料。文章寫道，存放私人資料的 Spaces 將於 12 月 1 日從測試前期進入公開測試；Atmosphere Groups 提案讓同一個社群的角色與權限能帶著走到其他應用程式，目前仍在徵求意見；Atgeo.org 把地點資料帶上協定。治理方面，文章寫道今年春天在網際網路工程任務組（IETF）成立了工作組，did:plc 身分所用的 PLC 目錄改由獨立組織營運，社群基金則轉為合作社。作者在文中說明自己任職於 Bluesky。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "mjmirza/app-store-compliance",
+      "name": "mjmirza/app-store-compliance",
+      "url": "https://github.com/mjmirza/app-store-compliance",
+      "language": "Shell",
+      "starsToday": 928,
+      "stars": 5849,
+      "summary": "app-store-compliance 是一份公開的手冊，加上一支在送審前先自我檢查的程式，用來找出 App Store 與 Google Play 常見的退審原因。說明文件寫道，它整理了 124 種退審情形與對應的修正方式、隱私宣告與資料安全檢查，以及 112 個已追蹤的法規期限，涵蓋歐盟人工智慧法、數位服務法、兒童線上隱私保護法與各地年齡相關法令。用法是把專案資料夾路徑交給它的檢查腳本，結果會印出風險項目與對應的條款編號，最後給出 BLOCKED 或 CLEAR 的結論。作者寫明，這只是檢查，不保證通過審核，有些項目仍要由人確認，例如可用的示範帳號。授權是 OpenRoots Agent License 2.3。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50630594,
+      "title": "Active intrusion campaign against Check Point security management servers",
+      "titleZh": "GreyNoise 報告：針對 Check Point 管理伺服器的入侵活動",
+      "url": "https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign",
+      "hnUrl": "https://news.ycombinator.com/item?id=50630594",
+      "score": 253,
+      "comments": 119,
+      "summary": "資安公司 GreyNoise 在 11 月 23 日發布報告，表示發現一波針對 Check Point 安全管理伺服器的入侵活動，確認的活動時間是 2026 年 10 月 17 日至 11 月 2 日，至少 22 個組織受影響。該公司把這組活動稱為 GreyNoise Threat 13，並表示目前不歸因於任何已知的團體，也沒有足夠資訊判斷動機或來源地。報告寫道，受影響的組織分布於英國、法國、德國、印度、南韓、美國等地，產業包含金融服務、能源、政府、運輸與製造；對方使用 99 個網路位址，並把一台被入侵的伺服器當作中繼點。報告列出多個被利用的漏洞編號，包含 CVE-2026-16232。該公司表示，11 月 2 日之後失去觀察視野，但研判活動仍在持續，正與各國政府單位及電腦緊急應變小組共享情報、通知受影響的組織。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-11-25/small-footprint.svg",
+      "alt": "一個圓頭方身的小人胸前貼著寫著 5.9 的標籤，旁邊是一台標示「本機」的電腦，上面寫著檔案都在這裡、不必上網。",
+      "caption": "模型只佔 5.9 GB，放得進口袋，資料留在自己的裝置上。",
+      "relatedItemId": "50633922"
+    }
+  ]
+}

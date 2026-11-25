@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400">
+  <rect width="360" height="400" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="30" text-anchor="middle">OpenVINO：模型到裝置</text>
+  <rect x="30" y="48" width="300" height="64" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="74" text-anchor="middle">訓練好的模型</text>
+  <text x="180" y="96" text-anchor="middle" class="sub">PyTorch、TensorFlow、ONNX、JAX 等</text>
+  <line x1="180" y1="112" x2="180" y2="140" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="60" y="144" width="240" height="64" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="170" text-anchor="middle">OpenVINO 轉換與最佳化</text>
+  <text x="180" y="192" text-anchor="middle" class="sub">不必再裝原本的框架</text>
+  <line x1="180" y1="208" x2="180" y2="236" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <text x="180" y="256" text-anchor="middle" class="sub">部署推論（模型上場做事）</text>
+  <rect x="20" y="272" width="100" height="70" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="70" y="302" text-anchor="middle">處理器</text>
+  <text x="70" y="324" text-anchor="middle" class="sub">x86、ARM</text>
+  <rect x="130" y="272" width="100" height="70" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="302" text-anchor="middle">顯示晶片</text>
+  <text x="180" y="324" text-anchor="middle" class="sub">Intel GPU</text>
+  <rect x="240" y="272" width="100" height="70" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="290" y="302" text-anchor="middle">NPU</text>
+  <text x="290" y="324" text-anchor="middle" class="sub">Intel</text>
+  <text x="180" y="374" text-anchor="middle" class="sub">用途：視覺、語音辨識、生成式人工智慧</text>
+</svg>
