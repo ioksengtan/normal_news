@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 418">
+  <rect width="360" height="418" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="30" text-anchor="middle">檢查失敗之後</text>
+  <rect x="40" y="48" width="280" height="60" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="74" text-anchor="middle">持續整合檢查失敗</text>
+  <text x="180" y="96" text-anchor="middle" class="sub">建置變紅</text>
+  <line x1="180" y1="108" x2="180" y2="134" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="40" y="138" width="280" height="60" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="164" text-anchor="middle">OpenSRE 讀失敗紀錄</text>
+  <text x="180" y="186" text-anchor="middle" class="sub">追查原因</text>
+  <line x1="180" y1="198" x2="180" y2="224" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="40" y="228" width="280" height="60" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="254" text-anchor="middle">分辨問題出在哪</text>
+  <text x="180" y="276" text-anchor="middle" class="sub">檢查環境或程式碼</text>
+  <line x1="180" y1="288" x2="180" y2="314" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="40" y="318" width="280" height="60" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="344" text-anchor="middle">推送一份修正</text>
+  <text x="180" y="366" text-anchor="middle" class="sub">由人審查決定</text>
+</svg>

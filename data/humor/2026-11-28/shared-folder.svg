@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320">
+  <rect width="360" height="320" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <text x="180" y="30" text-anchor="middle">今日一笑</text>
+  <rect x="20" y="46" width="200" height="40" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="120" y="72" text-anchor="middle">「我要用共用資料夾了！」</text>
+  <line x1="80" y1="86" x2="70" y2="100" stroke="#1c1915" stroke-width="2"/>
+  <circle cx="70" cy="122" r="20" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <circle cx="63" cy="118" r="2" fill="#1c1915"/>
+  <circle cx="77" cy="118" r="2" fill="#1c1915"/>
+  <ellipse cx="70" cy="131" rx="6" ry="4" fill="#1c1915"/>
+  <rect x="48" y="144" width="44" height="64" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <line x1="92" y1="152" x2="112" y2="118" stroke="#1c1915" stroke-width="2"/>
+  <rect x="100" y="170" width="60" height="40" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="130" y="195" text-anchor="middle" class="sub">電腦</text>
+  <circle cx="230" cy="142" r="18" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <circle cx="224" cy="139" r="2" fill="#1c1915"/>
+  <circle cx="236" cy="139" r="2" fill="#1c1915"/>
+  <line x1="224" y1="149" x2="236" y2="149" stroke="#1c1915" stroke-width="2"/>
+  <rect x="211" y="162" width="38" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <circle cx="300" cy="142" r="18" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <circle cx="294" cy="139" r="2" fill="#1c1915"/>
+  <circle cx="306" cy="139" r="2" fill="#1c1915"/>
+  <line x1="294" y1="149" x2="306" y2="149" stroke="#1c1915" stroke-width="2"/>
+  <rect x="281" y="162" width="38" height="50" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <rect x="20" y="238" width="320" height="64" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="262" text-anchor="middle">上傳之前，先大聲宣布。</text>
+  <text x="180" y="286" text-anchor="middle" class="sub">沒有版本控制時，用來避免互相覆蓋</text>
+</svg>
