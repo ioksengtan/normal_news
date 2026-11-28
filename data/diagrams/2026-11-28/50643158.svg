@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 418">
+  <rect width="360" height="418" fill="#f4f0e6"/>
+  <style>
+    text { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "WenQuanYi Micro Hei", "Droid Sans Fallback", serif; fill: #1c1915; font-size: 16px; }
+    .sub { fill: #5e584e; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="箭頭" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c1915"/>
+    </marker>
+  </defs>
+  <text x="180" y="30" text-anchor="middle">找出素描簿作者的步驟</text>
+  <rect x="40" y="48" width="280" height="60" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="74" text-anchor="middle">素描簿上的日期</text>
+  <text x="180" y="96" text-anchor="middle" class="sub">1808 年的旅程</text>
+  <line x1="180" y1="108" x2="180" y2="134" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="40" y="138" width="280" height="60" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="164" text-anchor="middle">對照蒙特婁的日記</text>
+  <text x="180" y="186" text-anchor="middle" class="sub">找到 Chabot 這個名字</text>
+  <line x1="180" y1="198" x2="180" y2="224" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="40" y="228" width="280" height="60" fill="#fffdf8" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="254" text-anchor="middle">調閱 Chabot 的日記</text>
+  <text x="180" y="276" text-anchor="middle" class="sub">微縮膠片</text>
+  <line x1="180" y1="288" x2="180" y2="314" stroke="#1c1915" stroke-width="2" marker-end="url(#箭頭)"/>
+  <rect x="40" y="318" width="280" height="60" fill="#ebe4d4" stroke="#1c1915" stroke-width="2"/>
+  <text x="180" y="344" text-anchor="middle">筆跡與行程相符</text>
+  <text x="180" y="366" text-anchor="middle" class="sub">「我畫了一張素描」</text>
+</svg>

@@ -1,0 +1,189 @@
+{
+  "date": "2026-11-28",
+  "issueNumber": 55,
+  "timezone": "Asia/Taipei",
+  "publishedAt": "2026-11-28T07:00:00+08:00",
+  "fetchedAt": "2026-11-28T00:32:13.120Z",
+  "sources": {
+    "github": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "hackernews": {
+      "status": "ok",
+      "fallback": false,
+      "error": null
+    },
+    "producthunt": {
+      "status": "failed",
+      "fallback": false,
+      "error": "沒有環境變數 PRODUCT_HUNT_TOKEN"
+    }
+  },
+  "items": [
+    {
+      "id": "obra/superpowers",
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "language": "Shell",
+      "starsToday": 922,
+      "stars": 328308,
+      "summary": "Superpowers 是一套給程式撰寫代理程式用的「技能」與開發方法。代理程式就像會自己動手寫程式的助手，技能則像貼在牆上的工作守則，助手看到情況就會照著做。說明文件寫道，它不會一開始就寫程式，而是先問使用者想做什麼，把規格分成短段落給人確認，再寫出實作計畫，之後交給多個子代理程式逐項完成並互相檢查。內建的技能包含測試驅動開發、有系統的除錯、寫計畫與請人審查程式碼。它可以裝在 Claude Code、Codex、Cursor、Gemini CLI 等多種工具上，採 MIT 授權。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-28/obra/superpowers.svg",
+        "alt": "一張由上往下的流程圖：先問清楚需求，再分段確認規格，接著寫實作計畫，最後由子代理程式逐項完成並審查。",
+        "caption": "Superpowers 讓代理程式先問、再確認規格、寫計畫，最後才交給子代理程式動手。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 0
+    },
+    {
+      "id": 50643158,
+      "title": "GPT 6.2 Astra Solves a Historical Mystery",
+      "titleZh": "GPT-6.2 Astra 找出一本 1808 年匿名素描簿的作者",
+      "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
+      "hnUrl": "https://news.ycombinator.com/item?id=50643158",
+      "score": 272,
+      "comments": 172,
+      "summary": "作者是一位研究加拿大毛皮貿易的歷史學者，他在部落格寫道，自己在發表前測試 OpenAI 的 GPT-6.2 Astra，請它找出耶魯大學拜內克圖書館一本 1808 年匿名素描簿的作者。作者表示，模型用了 22 分鐘，從公開資料推斷作者是法國貴族出身的英軍軍官 Chabot，並建議調閱一份微縮膠片日記來驗證。作者取得日記後，看到筆跡相同，日期與地點也和素描對得上，其中一天寫著「我畫了一張素描」。作者也用 Fable 5.2 測試，得到相同人選，但沒有找到那份日記。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-28/50643158.svg",
+        "alt": "一張流程圖：素描簿上的日期與地點，對照蒙特婁的日記找到 Chabot 這個名字，再調閱他的日記，比對筆跡與行程。",
+        "caption": "作者表示，模型先比對素描的日期，再從其他日記找到人選，最後由日記驗證。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 0
+    },
+    {
+      "id": "cursor/plugins",
+      "name": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins",
+      "language": "TypeScript",
+      "starsToday": 243,
+      "stars": 20011,
+      "summary": "這個儲存庫放的是 Cursor 官方外掛的規格與一批官方外掛。Cursor 是一款寫程式的編輯器，外掛就像手機上的應用程式，裝上去就多一項功能。說明文件寫道，每個外掛是儲存庫根目錄下的一個資料夾，裡面有一份 .cursor-plugin/plugin.json 清單檔，寫明名稱與用途。列出的外掛有建立新外掛的工具、把拉取請求差異畫成審查畫面的工具、把大工作分給多個雲端代理程式的工具，也有連接 Gmail、Google Drive 與 Google 日曆的外掛。給使用 Cursor 的開發者，以及想自己寫外掛的人。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 1
+    },
+    {
+      "id": 50668145,
+      "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
+      "titleZh": "購物網站上發現利用 WebRTC 傳送資料的信用卡盜刷程式",
+      "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
+      "hnUrl": "https://news.ycombinator.com/item?id=50668145",
+      "score": 404,
+      "comments": 209,
+      "summary": "原文網站的 robots.txt 不允許本站抓取，以下依 Hacker News 討論整理。討論中有人引述原文：這類盜刷程式偷偷放進購物網站的結帳頁，針對手機瀏覽器，伺服器只在結帳頁啟用它，所以只在電腦上檢查或只掃首頁可能看不到。WebRTC 是瀏覽器用來即時通話與傳資料的技術，程式用它把卡號送出去。有人引述原文的表格，列出放進網站的途徑，包括被改過的行銷追蹤碼、被改過的同意小視窗設定，以及零售商自己內容伺服器上被改過的檔案。也有人指出，支付卡產業資料安全標準第 11.6.1 條要求商家監控付款頁的程式。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-28/50668145.svg",
+        "alt": "一張流程圖：被改過的第三方程式進入結帳頁，手機上的使用者輸入卡號，程式經由 WebRTC 把卡號送到外部伺服器。",
+        "caption": "討論中引述原文：程式只在手機的結帳頁出現，經由 WebRTC 送出卡號。"
+      },
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 1
+    },
+    {
+      "id": "Tracer-Cloud/opensre",
+      "name": "Tracer-Cloud/opensre",
+      "url": "https://github.com/Tracer-Cloud/opensre",
+      "language": "Python",
+      "starsToday": 328,
+      "stars": 16128,
+      "summary": "OpenSRE 是一個在終端機執行的開源代理程式，處理持續整合與持續部署（CI/CD）失敗的問題。持續整合就像工廠出貨前的自動檢查站，每次改程式都要過關。說明文件寫道，檢查失敗時，它會讀取失敗紀錄、追查原因，分辨是檢查環境的問題還是程式碼的問題，再推送一份修正讓人審查。它也能接上 Kubernetes、Grafana、Datadog、Slack 等工具調查線上事故。專案可架在自己的機器上、使用自己的模型，採 Apache 2.0 授權，目前標示為公開測試版，介面仍可能變動。",
+      "placeholder": false,
+      "diagram": {
+        "src": "data/diagrams/2026-11-28/Tracer-Cloud/opensre.svg",
+        "alt": "一張流程圖：檢查失敗後，OpenSRE 讀紀錄、找原因、分辨是環境還是程式碼的問題，最後推送修正交給人審查。",
+        "caption": "檢查失敗時，OpenSRE 先找原因，再推送修正，由人決定要不要採用。"
+      },
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 2
+    },
+    {
+      "id": 50669765,
+      "title": "Convex skills send the user's app idea to a remote server without telling them",
+      "titleZh": "Convex 的技能未告知使用者，就把應用程式點子送到遠端伺服器",
+      "url": "https://github.com/convex/convex-backend-skill/issues/64",
+      "hnUrl": "https://news.ycombinator.com/item?id=50669765",
+      "score": 216,
+      "comments": 66,
+      "summary": "這是一則 GitHub 問題回報，對象是 Convex 的代理程式技能外掛。技能就像交給程式助手的工作說明書。回報者寫道，有三個技能出現同樣的疑慮：快速開始技能把使用者描述點子的一句話送到一個 convex.site 網址，程式註解標成遙測，卻沒有告訴使用者；另一個技能把同一網址的腳本直接交給 bash 執行；第三個技能把下載和執行拆成兩次呼叫，並寫明原因是避免被安全分類器擋下。回報者表示不認為這是惡意，建議先告知使用者、讓傳送變成可選，並把腳本放進外掛或以雜湊值固定版本。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 2
+    },
+    {
+      "id": "toeverything/AFFiNE",
+      "name": "toeverything/AFFiNE",
+      "url": "https://github.com/toeverything/AFFiNE",
+      "language": "TypeScript",
+      "starsToday": 474,
+      "stars": 79450,
+      "summary": "AFFiNE 是一套開源的筆記與工作空間軟體，把文件、白板和表格放在同一個地方。白板就像一張可以無限延伸的大桌面，上面能擺文字、便利貼、網頁、圖形甚至簡報。說明文件寫道，它採「本機優先」的做法，資料先存在自己的硬碟，不依賴雲端，也支援網頁與跨平台用戶端之間即時同步、多人協作。使用者可以自己架設伺服器或修改程式。文件也列出內建的人工智慧功能，例如把大綱轉成簡報、把文章整理成心智圖。社群版可免費自架，採 MIT 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 3
+    },
+    {
+      "id": 50672008,
+      "title": "9/UX: a Macintosh-inspired desktop for 9front",
+      "titleZh": "9/UX：在 9front 上做出仿麥金塔的桌面",
+      "url": "https://progrium.github.io/9ux/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50672008",
+      "score": 58,
+      "comments": 9,
+      "summary": "9/UX 是一個為作業系統 9front 做的桌面，外觀與操作參考早期麥金塔電腦和 A/UX。9front 是延續貝爾實驗室 Plan 9 的作業系統，它把幾乎所有東西都當成檔案來讀寫。作者 Jeff Lindsay 等人寫道，9/UX 有全域選單列、資料夾視窗、垃圾桶與一致的對話框，而且每個程式的按鈕和選單都以檔案公開，用指令寫入檔案就能按下按鈕。原有的 rio 程式可照常一起使用。網頁上可以在瀏覽器中直接試用，約需下載 23 MB。專案目前是 0.1 版，採 MIT 授權，介面可能變動。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 3
+    },
+    {
+      "id": "XiaoYouChR/Ghost-Downloader-3",
+      "name": "XiaoYouChR/Ghost-Downloader-3",
+      "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+      "language": "Python",
+      "starsToday": 836,
+      "stars": 19843,
+      "summary": "Ghost-Downloader-3 是一款跨平台的下載工具，支援 Windows、macOS、Linux 與 Android。說明文件列出它能處理的下載方式，包含 HTTP、磁力連結與 BT、FTP、M3U8、MPEG-DASH 與 eD2k，也能下載 YouTube 與 Bilibili 的影片，以及 GitHub 與 HuggingFace 上的檔案。它會把檔案切成小段同時下載，像幾個人分工搬同一批箱子。搭配瀏覽器擴充功能，可以列出網頁上的影音並交給桌面程式下載。它也提供與 aria2 相容的遠端呼叫介面，讓其他工具控制。專案採 GPL v3.0 授權。",
+      "placeholder": false,
+      "source": "github",
+      "sourceLabel": "GitHub",
+      "rank": 4
+    },
+    {
+      "id": 50672142,
+      "title": "Source Control from Hell",
+      "titleZh": "來自地獄的版本控制",
+      "url": "https://frantic.im/git/",
+      "hnUrl": "https://news.ycombinator.com/item?id=50672142",
+      "score": 41,
+      "comments": 28,
+      "summary": "作者 Alex Kotliarskyi 回憶第一份工作的經驗：公司替大型電信業者開發 Delphi 寫的服務台程式，卻沒有版本控制系統。版本控制就像替檔案自動存下每一版的相簿，可以回頭看、也能合併大家的修改。作者寫道，當時大家從共用資料夾下載程式碼，改好再傳回去，另外在工單裡手寫改了什麼，由技術主管花一整天把改動複製到自己的資料夾。為了避免互相覆蓋，上傳前要大聲宣布。作者做了一個鎖定資料夾的外掛，2009 年接觸 git 後也想推廣，但主管沒有採用。作者表示，多年後那裡仍沿用共用資料夾。",
+      "placeholder": false,
+      "source": "hackernews",
+      "sourceLabel": "Hacker News",
+      "rank": 4
+    }
+  ],
+  "humor": [
+    {
+      "src": "data/humor/2026-11-28/shared-folder.svg",
+      "alt": "一個圓頭方身的小人站在電腦前舉手大喊「我要用共用資料夾了！」，旁邊坐著兩個同事。",
+      "caption": "沒有版本控制的辦公室，上傳之前要先大聲宣布。",
+      "relatedItemId": "50672142"
+    }
+  ]
+}
